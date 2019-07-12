@@ -37,18 +37,16 @@ namespace MonCollection
 
         public static DrawConfig Draw = new DrawConfig();
 
-        public Dictionary<int,SaveInfo> gameDict;
+        public Dictionary<string,SaveInfo> gameDict;
 
         public class SaveInfo
         {
-            public string name;
             public string language;
             public GameVersion version;
 
 
-            public SaveInfo(string n, string l, GameVersion v)
+            public SaveInfo(string l, GameVersion v)
             {
-                name = n;
                 language = l;
                 version = v;
             }
@@ -60,7 +58,7 @@ namespace MonCollection
         {
             InitializeComponent();
             InitializeGameDict();
-            InitializeStrings("en",GameVersion.RD);
+            InitializeStrings("en",GameVersion.US);
             InitializeBinding();
             InitializePkxBoxes();
             PopulateFilteredDataSources(ver);
@@ -70,10 +68,10 @@ namespace MonCollection
 
         private void InitializeGameDict()
         {
-            gameDict = new Dictionary<int, SaveInfo>();
-            gameDict.Add(0, new SaveInfo("Red [Dustin]", "en", GameVersion.RD));
-            gameDict.Add(1, new SaveInfo("Blue [Yuuya]", "fr", GameVersion.GN));
-            gameDict.Add(2, new SaveInfo("Yellow [Juan]", "es", GameVersion.YW));
+            gameDict = new Dictionary<string, SaveInfo>();
+            gameDict.Add("Red [Dustin]", new SaveInfo("en", GameVersion.RD));
+            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN));
+            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW));
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -128,12 +126,6 @@ namespace MonCollection
             {
                 slot.DoubleClick += (sender, e) =>
                 {
-                    //if (ModifierKeys == Keys.Control)
-                    //    ClickView(sender, e);
-                    //else if (ModifierKeys == Keys.Alt)
-                    //    ClickDelete(sender, e);
-                    //else if (ModifierKeys == Keys.Shift)
-                    //    ClickSet(sender, e);
 
                     slotSelected = (int)slot.Tag;
                     OpenPKM(RawDB[(int)slot.Tag]);
@@ -184,9 +176,18 @@ namespace MonCollection
         {
             if (pk == null)
                 return false;
-            InitializeStrings("en",GameVersion.RD);
+            SetVersion(pk.Identifier);
             PopulateFields(pk);
             return true;
+        }
+
+        private void SetVersion(string identifier)
+        {
+            identifier = identifier.Split('\\')[1];
+            if (!gameDict.TryGetValue(identifier, out SaveInfo info))
+                InitializeStrings("en", GameVersion.US);
+            else
+                InitializeStrings(info.language, info.version);
         }
 
         private void PopulateFields(PKM pk)
