@@ -85,6 +85,8 @@ namespace MonCollection
             this.bpkx12 = new System.Windows.Forms.PictureBox();
             this.bpkx13 = new System.Windows.Forms.PictureBox();
             this.L_Count = new System.Windows.Forms.Label();
+            this.buttonGameLevelSort = new System.Windows.Forms.Button();
+            this.buttonGameSpeciesSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -749,12 +751,34 @@ namespace MonCollection
             this.L_Count.Text = "Num Mons: {0}";
             this.L_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // buttonGameLevelSort
+            // 
+            this.buttonGameLevelSort.Location = new System.Drawing.Point(583, 248);
+            this.buttonGameLevelSort.Name = "buttonGameLevelSort";
+            this.buttonGameLevelSort.Size = new System.Drawing.Size(95, 23);
+            this.buttonGameLevelSort.TabIndex = 116;
+            this.buttonGameLevelSort.Text = "Game-Level Sort";
+            this.buttonGameLevelSort.UseVisualStyleBackColor = true;
+            this.buttonGameLevelSort.Click += new System.EventHandler(this.ButtonGameLevelSort_Click);
+            // 
+            // buttonGameSpeciesSort
+            // 
+            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(714, 248);
+            this.buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
+            this.buttonGameSpeciesSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonGameSpeciesSort.TabIndex = 117;
+            this.buttonGameSpeciesSort.Text = "Game-Species Sort";
+            this.buttonGameSpeciesSort.UseVisualStyleBackColor = true;
+            this.buttonGameSpeciesSort.Click += new System.EventHandler(this.ButtonGameSpeciesSort_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 450);
+            this.Controls.Add(this.buttonGameSpeciesSort);
+            this.Controls.Add(this.buttonGameLevelSort);
             this.Controls.Add(this.L_Count);
             this.Controls.Add(this.bpkx30);
             this.Controls.Add(this.SCR_Box);
@@ -906,6 +930,8 @@ namespace MonCollection
         private PictureBox bpkx12;
         private PictureBox bpkx13;
         private Label L_Count;
+        private Button buttonGameLevelSort;
+        private Button buttonGameSpeciesSort;
     }
 }
 

@@ -2,3 +2,5 @@
 .vs
 MonCollection/bin/Debug/MonCollection.pdb
 MonCollection/obj/Debug/MonCollection.csprojAssemblyReference.cache
+MonCollection/obj/Debug/MonCollection.csproj.GenerateResource.cache
+MonCollection/obj/Debug/MonCollection.pdb

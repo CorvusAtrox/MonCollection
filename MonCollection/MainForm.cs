@@ -218,6 +218,22 @@ namespace MonCollection
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
             }
+
+            switch (ver.Generation)
+            {
+                case 1:
+                    labelGender.Visible = false;
+                    labelBall.Visible = false;
+                    comboBoxBalls.Visible = false;
+                    labelAbility.Visible = false;
+                    comboBoxAbility.Visible = false;
+                    labelNature.Visible = false;
+                    comboBoxNature.Visible = false;
+                    labelLanguage.Visible = false;
+                    comboBoxLanguage.Visible = false;
+                    break;
+            }
+
             statusItemNickname.Text = pk.Nickname;
             comboBoxBalls.SelectedValue = pk.Ball;
             comboBoxSpecies.SelectedValue = pk.Species;
@@ -264,7 +280,6 @@ namespace MonCollection
         private void LoadDatabase()
         {
             PkmData = LoadPKMSaves("mons");
-            //gameSpeciesSort();
 
             // Load stats for pkm who do not have any
             foreach (var pk in PkmData.Where(z => z.Stat_Level == 0))
@@ -320,7 +335,7 @@ namespace MonCollection
 
             slotSelected = 0; // reset the slot last viewed
             SCR_Box.Value = 0;
-            FillPKXBoxes(0);
+            gameSpeciesSort(0);
 
             L_Count.Text = string.Format(Counter, res.Count);
             OpenPKM(PkmData[0]);
@@ -391,20 +406,38 @@ namespace MonCollection
 
 
 
-        public void gameLevelSort()
+        public void gameLevelSort(int index)
         {
-            PkmData.OrderBy(mon => gameIndex(mon.Identifier))
-                   .ThenBy(mon => mon.CurrentLevel)
-                   .ThenBy(mon => mon.Species)
-                   .ThenBy(mon => mon.Nickname);
+            PkmData = PkmData.OrderBy(mon => gameIndex(mon.Identifier))
+                             .ThenBy(mon => mon.CurrentLevel)
+                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<PKM>();
+
+            FillPKXBoxes(index);
         }
 
-        public void gameSpeciesSort()
+        public void gameSpeciesSort(int index)
         {
-            PkmData.OrderBy(mon => gameIndex(mon.Identifier))
-                   .ThenBy(mon => mon.Species)
-                   .ThenBy(mon => mon.CurrentLevel)
-                   .ThenBy(mon => mon.Nickname);
+            PkmData = PkmData.OrderBy(mon => gameIndex(mon.Identifier))
+                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.CurrentLevel)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<PKM>();
+
+            FillPKXBoxes(index);
+        }
+
+        private void ButtonGameLevelSort_Click(object sender, EventArgs e)
+        {
+            gameLevelSort((int)bpkx1.Tag/RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void ButtonGameSpeciesSort_Click(object sender, EventArgs e)
+        {
+            gameSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
         }
     }
 }
