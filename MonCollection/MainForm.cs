@@ -28,7 +28,7 @@ namespace MonCollection
         private PictureBox[] PKXBOXES;
         private int slotSelected = -1; // = null;
         private LegalityAnalysis legal;
-        private List<PKM> RawDB;
+        private List<PKM> PkmData;
 
         private string Counter = "Num Mon: {0}";
 
@@ -43,12 +43,13 @@ namespace MonCollection
         {
             public string language;
             public GameVersion version;
+            public int index;
 
-
-            public SaveInfo(string l, GameVersion v)
+            public SaveInfo(string l, GameVersion v, int i)
             {
                 language = l;
                 version = v;
+                index = i;
             }
 
         }
@@ -69,9 +70,9 @@ namespace MonCollection
         private void InitializeGameDict()
         {
             gameDict = new Dictionary<string, SaveInfo>();
-            gameDict.Add("Red [Dustin]", new SaveInfo("en", GameVersion.RD));
-            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN));
-            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW));
+            gameDict.Add("Red [Dustin]", new SaveInfo("en", GameVersion.RD, 0));
+            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN, 1));
+            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW, 2));
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -128,7 +129,7 @@ namespace MonCollection
                 {
 
                     slotSelected = (int)slot.Tag;
-                    OpenPKM(RawDB[(int)slot.Tag]);
+                    OpenPKM(PkmData[(int)slot.Tag]);
                     FillPKXBoxes((int)(bpkx1.Tag)/RES_MIN);
                 };
             }
@@ -185,9 +186,28 @@ namespace MonCollection
         {
             identifier = identifier.Split('\\')[1];
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
-                InitializeStrings("en", GameVersion.US);
+            {
+                ver = SaveUtil.GetBlankSAV(GameVersion.US, "setMe");
+                ver.Language = GameLanguage.GetLanguageIndex("en");
+                InitializeStrings("en", ver.Version);
+            } 
             else
-                InitializeStrings(info.language, info.version);
+            {
+                ver = SaveUtil.GetBlankSAV(info.version, "setMe");
+                ver.Language = GameLanguage.GetLanguageIndex(info.language);
+                InitializeStrings(info.language, ver.Version);
+            }
+            PopulateFilteredDataSources(ver);
+
+        }
+
+        private int gameIndex(string identifier)
+        {
+            identifier = identifier.Split('\\')[1];
+            if (!gameDict.TryGetValue(identifier, out SaveInfo info))
+                return 0;
+            else
+                return info.index;
         }
 
         private void PopulateFields(PKM pk)
@@ -243,10 +263,11 @@ namespace MonCollection
 
         private void LoadDatabase()
         {
-            RawDB = LoadPKMSaves("mons");
+            PkmData = LoadPKMSaves("mons");
+            //gameSpeciesSort();
 
             // Load stats for pkm who do not have any
-            foreach (var pk in RawDB.Where(z => z.Stat_Level == 0))
+            foreach (var pk in PkmData.Where(z => z.Stat_Level == 0))
             {
                 pk.Stat_Level = pk.CurrentLevel;
                 pk.SetStats(pk.GetStats(pk.PersonalInfo));
@@ -254,7 +275,7 @@ namespace MonCollection
 
             try
             {
-                BeginInvoke(new MethodInvoker(() => SetResults(RawDB)));
+                BeginInvoke(new MethodInvoker(() => SetResults(PkmData)));
             }
             catch { /* Window Closed? */ }
         }
@@ -302,22 +323,22 @@ namespace MonCollection
             FillPKXBoxes(0);
 
             L_Count.Text = string.Format(Counter, res.Count);
-            OpenPKM(RawDB[0]);
+            OpenPKM(PkmData[0]);
         }
 
         private void FillPKXBoxes(int start)
         {
-            if (RawDB == null)
+            if (PkmData == null)
             {
                 for (int i = 0; i < RES_MAX; i++)
                     PKXBOXES[i].Image = null;
                 return;
             }
             int begin = start * RES_MIN;
-            int end = Math.Min(RES_MAX, RawDB.Count - begin);
+            int end = Math.Min(RES_MAX, PkmData.Count - begin);
             for (int i = 0; i < end; i++)
             {
-                PKXBOXES[i].Image = retrieveImage("img/icons/" + RawDB[i + begin].Species.ToString() + ".png");
+                PKXBOXES[i].Image = retrieveImage("img/icons/" + PkmData[i + begin].Species.ToString() + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
@@ -370,43 +391,20 @@ namespace MonCollection
 
 
 
-        //        //Game Level
+        public void gameLevelSort()
+        {
+            PkmData.OrderBy(mon => gameIndex(mon.Identifier))
+                   .ThenBy(mon => mon.CurrentLevel)
+                   .ThenBy(mon => mon.Species)
+                   .ThenBy(mon => mon.Nickname);
+        }
 
-
-
-        //        PkmData.OrderBy(mon=>gameIndex(mon.Identifier).ThenBy(mon=>mon.CurrentLevel).ThenBy(mon=>mon.Species).ThenBy(mon=>mon.Nickname);
-
-
-
-        //        //Game Species
-
-
-
-        //        private string[] games = {
-
-        //Red [Dustin],
-
-        //Blue [Yuuya],
-
-        //Yellow [Juan]
-
-        //};
-
-
-
-        //        private int GameIndex(string path)
-        //        {
-
-
-
-        //            string gName = path.Split('/')[1];
-
-
-
-        //            return Array.IndexOf(games, gName);
-
-
-
-        //        }
+        public void gameSpeciesSort()
+        {
+            PkmData.OrderBy(mon => gameIndex(mon.Identifier))
+                   .ThenBy(mon => mon.Species)
+                   .ThenBy(mon => mon.CurrentLevel)
+                   .ThenBy(mon => mon.Nickname);
+        }
     }
 }
