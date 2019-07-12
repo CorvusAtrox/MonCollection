@@ -1,0 +1,17 @@
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.csprojAssemblyReference.cache
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.MainForm.resources
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.Properties.Resources.resources
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.csproj.GenerateResource.cache
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.csproj.CoreCompileInputs.cache
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\MonCollection.exe.config
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\MonCollection.exe
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\MonCollection.pdb
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.Core.dll
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.Core.pdb
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.Core.dll.config
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.csproj.CopyComplete
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.exe
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\obj\Debug\MonCollection.pdb
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.exe
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.pdb
+C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\bin\Debug\PKHeX.exe.config
