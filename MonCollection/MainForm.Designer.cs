@@ -31,8 +31,6 @@ namespace MonCollection
         private void InitializeComponent()
         {
             this.labelNickname = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.statusItemNickname = new System.Windows.Forms.Label();
             this.labelBall = new System.Windows.Forms.Label();
             this.comboBoxBalls = new System.Windows.Forms.ComboBox();
             this.pictureBoxBall = new System.Windows.Forms.PictureBox();
@@ -87,6 +85,17 @@ namespace MonCollection
             this.L_Count = new System.Windows.Forms.Label();
             this.buttonGameLevelSort = new System.Windows.Forms.Button();
             this.buttonGameSpeciesSort = new System.Windows.Forms.Button();
+            this.buttonGenSpeciesSort = new System.Windows.Forms.Button();
+            this.pictureBoxGameSprite = new System.Windows.Forms.PictureBox();
+            this.labelHP = new System.Windows.Forms.Label();
+            this.labelAttack = new System.Windows.Forms.Label();
+            this.labelDefense = new System.Windows.Forms.Label();
+            this.labelSpAtk = new System.Windows.Forms.Label();
+            this.labelSpDef = new System.Windows.Forms.Label();
+            this.labelSpeed = new System.Windows.Forms.Label();
+            this.labelOT = new System.Windows.Forms.Label();
+            this.buttonReloadDB = new System.Windows.Forms.Button();
+            this.labelGame = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -119,6 +128,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -129,30 +139,9 @@ namespace MonCollection
             this.labelNickname.ForeColor = System.Drawing.Color.White;
             this.labelNickname.Location = new System.Drawing.Point(162, 32);
             this.labelNickname.Name = "labelNickname";
-            this.labelNickname.Size = new System.Drawing.Size(43, 13);
+            this.labelNickname.Size = new System.Drawing.Size(64, 13);
             this.labelNickname.TabIndex = 0;
-            this.labelNickname.Text = "Name:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(232, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // statusItemNickname
-            // 
-            this.statusItemNickname.AutoSize = true;
-            this.statusItemNickname.BackColor = System.Drawing.Color.Firebrick;
-            this.statusItemNickname.ForeColor = System.Drawing.Color.White;
-            this.statusItemNickname.Location = new System.Drawing.Point(211, 32);
-            this.statusItemNickname.Name = "statusItemNickname";
-            this.statusItemNickname.Size = new System.Drawing.Size(54, 13);
-            this.statusItemNickname.TabIndex = 2;
-            this.statusItemNickname.Text = "Text Here";
+            this.labelNickname.Text = "Name: {0}";
             // 
             // labelBall
             // 
@@ -226,7 +215,7 @@ namespace MonCollection
             this.labelLevel.BackColor = System.Drawing.Color.Firebrick;
             this.labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLevel.ForeColor = System.Drawing.Color.White;
-            this.labelLevel.Location = new System.Drawing.Point(282, 32);
+            this.labelLevel.Location = new System.Drawing.Point(302, 32);
             this.labelLevel.Name = "labelLevel";
             this.labelLevel.Size = new System.Drawing.Size(25, 13);
             this.labelLevel.TabIndex = 10;
@@ -236,7 +225,7 @@ namespace MonCollection
             // 
             this.textBoxLevel.BackColor = System.Drawing.Color.Firebrick;
             this.textBoxLevel.ForeColor = System.Drawing.Color.White;
-            this.textBoxLevel.Location = new System.Drawing.Point(313, 29);
+            this.textBoxLevel.Location = new System.Drawing.Point(333, 29);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(25, 20);
             this.textBoxLevel.TabIndex = 11;
@@ -247,7 +236,7 @@ namespace MonCollection
             this.labelGender.BackColor = System.Drawing.Color.Firebrick;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(344, 32);
+            this.labelGender.Location = new System.Drawing.Point(364, 32);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(11, 13);
             this.labelGender.TabIndex = 12;
@@ -260,7 +249,7 @@ namespace MonCollection
             this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
             this.comboBoxLanguage.FormattingEnabled = true;
-            this.comboBoxLanguage.Location = new System.Drawing.Point(439, 29);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(459, 29);
             this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(99, 21);
@@ -272,7 +261,7 @@ namespace MonCollection
             this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.Color.White;
-            this.labelLanguage.Location = new System.Drawing.Point(369, 32);
+            this.labelLanguage.Location = new System.Drawing.Point(389, 32);
             this.labelLanguage.Name = "labelLanguage";
             this.labelLanguage.Size = new System.Drawing.Size(67, 13);
             this.labelLanguage.TabIndex = 13;
@@ -336,7 +325,7 @@ namespace MonCollection
             this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove1.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove1.FormattingEnabled = true;
-            this.comboBoxMove1.Location = new System.Drawing.Point(414, 152);
+            this.comboBoxMove1.Location = new System.Drawing.Point(367, 185);
             this.comboBoxMove1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove1.Name = "comboBoxMove1";
             this.comboBoxMove1.Size = new System.Drawing.Size(115, 21);
@@ -349,7 +338,7 @@ namespace MonCollection
             this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoves.ForeColor = System.Drawing.Color.Black;
-            this.labelMoves.Location = new System.Drawing.Point(411, 131);
+            this.labelMoves.Location = new System.Drawing.Point(364, 164);
             this.labelMoves.Name = "labelMoves";
             this.labelMoves.Size = new System.Drawing.Size(48, 13);
             this.labelMoves.TabIndex = 19;
@@ -363,7 +352,7 @@ namespace MonCollection
             this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove2.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove2.FormattingEnabled = true;
-            this.comboBoxMove2.Location = new System.Drawing.Point(414, 173);
+            this.comboBoxMove2.Location = new System.Drawing.Point(367, 206);
             this.comboBoxMove2.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove2.Name = "comboBoxMove2";
             this.comboBoxMove2.Size = new System.Drawing.Size(115, 21);
@@ -378,7 +367,7 @@ namespace MonCollection
             this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove4.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove4.FormattingEnabled = true;
-            this.comboBoxMove4.Location = new System.Drawing.Point(414, 215);
+            this.comboBoxMove4.Location = new System.Drawing.Point(367, 248);
             this.comboBoxMove4.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove4.Name = "comboBoxMove4";
             this.comboBoxMove4.Size = new System.Drawing.Size(115, 21);
@@ -393,7 +382,7 @@ namespace MonCollection
             this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove3.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove3.FormattingEnabled = true;
-            this.comboBoxMove3.Location = new System.Drawing.Point(414, 194);
+            this.comboBoxMove3.Location = new System.Drawing.Point(367, 227);
             this.comboBoxMove3.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove3.Name = "comboBoxMove3";
             this.comboBoxMove3.Size = new System.Drawing.Size(115, 21);
@@ -771,12 +760,148 @@ namespace MonCollection
             this.buttonGameSpeciesSort.UseVisualStyleBackColor = true;
             this.buttonGameSpeciesSort.Click += new System.EventHandler(this.ButtonGameSpeciesSort_Click);
             // 
+            // buttonGenSpeciesSort
+            // 
+            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(646, 277);
+            this.buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
+            this.buttonGenSpeciesSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonGenSpeciesSort.TabIndex = 118;
+            this.buttonGenSpeciesSort.Text = "Gen-Species Sort";
+            this.buttonGenSpeciesSort.UseVisualStyleBackColor = true;
+            this.buttonGenSpeciesSort.Click += new System.EventHandler(this.ButtonGenSpeciesSort_Click);
+            // 
+            // pictureBoxGameSprite
+            // 
+            this.pictureBoxGameSprite.Location = new System.Drawing.Point(367, 71);
+            this.pictureBoxGameSprite.Name = "pictureBoxGameSprite";
+            this.pictureBoxGameSprite.Size = new System.Drawing.Size(57, 39);
+            this.pictureBoxGameSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxGameSprite.TabIndex = 119;
+            this.pictureBoxGameSprite.TabStop = false;
+            // 
+            // labelHP
+            // 
+            this.labelHP.AutoSize = true;
+            this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHP.ForeColor = System.Drawing.Color.Black;
+            this.labelHP.Location = new System.Drawing.Point(7, 173);
+            this.labelHP.Name = "labelHP";
+            this.labelHP.Size = new System.Drawing.Size(49, 13);
+            this.labelHP.TabIndex = 120;
+            this.labelHP.Text = "HP: {0}";
+            // 
+            // labelAttack
+            // 
+            this.labelAttack.AutoSize = true;
+            this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAttack.ForeColor = System.Drawing.Color.Black;
+            this.labelAttack.Location = new System.Drawing.Point(7, 194);
+            this.labelAttack.Name = "labelAttack";
+            this.labelAttack.Size = new System.Drawing.Size(69, 13);
+            this.labelAttack.TabIndex = 121;
+            this.labelAttack.Text = "Attack: {0}";
+            // 
+            // labelDefense
+            // 
+            this.labelDefense.AutoSize = true;
+            this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDefense.ForeColor = System.Drawing.Color.Black;
+            this.labelDefense.Location = new System.Drawing.Point(7, 215);
+            this.labelDefense.Name = "labelDefense";
+            this.labelDefense.Size = new System.Drawing.Size(79, 13);
+            this.labelDefense.TabIndex = 122;
+            this.labelDefense.Text = "Defense: {0}";
+            // 
+            // labelSpAtk
+            // 
+            this.labelSpAtk.AutoSize = true;
+            this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpAtk.ForeColor = System.Drawing.Color.Black;
+            this.labelSpAtk.Location = new System.Drawing.Point(7, 237);
+            this.labelSpAtk.Name = "labelSpAtk";
+            this.labelSpAtk.Size = new System.Drawing.Size(74, 13);
+            this.labelSpAtk.TabIndex = 123;
+            this.labelSpAtk.Text = "Sp. Atk: {0}";
+            // 
+            // labelSpDef
+            // 
+            this.labelSpDef.AutoSize = true;
+            this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpDef.ForeColor = System.Drawing.Color.Black;
+            this.labelSpDef.Location = new System.Drawing.Point(7, 258);
+            this.labelSpDef.Name = "labelSpDef";
+            this.labelSpDef.Size = new System.Drawing.Size(75, 13);
+            this.labelSpDef.TabIndex = 124;
+            this.labelSpDef.Text = "Sp. Def: {0}";
+            // 
+            // labelSpeed
+            // 
+            this.labelSpeed.AutoSize = true;
+            this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpeed.ForeColor = System.Drawing.Color.Black;
+            this.labelSpeed.Location = new System.Drawing.Point(7, 282);
+            this.labelSpeed.Name = "labelSpeed";
+            this.labelSpeed.Size = new System.Drawing.Size(68, 13);
+            this.labelSpeed.TabIndex = 125;
+            this.labelSpeed.Text = "Speed: {0}";
+            // 
+            // labelOT
+            // 
+            this.labelOT.AutoSize = true;
+            this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOT.ForeColor = System.Drawing.Color.Black;
+            this.labelOT.Location = new System.Drawing.Point(364, 281);
+            this.labelOT.Name = "labelOT";
+            this.labelOT.Size = new System.Drawing.Size(78, 13);
+            this.labelOT.TabIndex = 126;
+            this.labelOT.Text = "OT: {0} ({1})";
+            // 
+            // buttonReloadDB
+            // 
+            this.buttonReloadDB.Location = new System.Drawing.Point(653, 22);
+            this.buttonReloadDB.Name = "buttonReloadDB";
+            this.buttonReloadDB.Size = new System.Drawing.Size(95, 23);
+            this.buttonReloadDB.TabIndex = 127;
+            this.buttonReloadDB.Text = "Reload Mons";
+            this.buttonReloadDB.UseVisualStyleBackColor = true;
+            this.buttonReloadDB.Click += new System.EventHandler(this.ButtonReloadDB_Click);
+            // 
+            // labelGame
+            // 
+            this.labelGame.AutoSize = true;
+            this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGame.ForeColor = System.Drawing.Color.Black;
+            this.labelGame.Location = new System.Drawing.Point(364, 306);
+            this.labelGame.Name = "labelGame";
+            this.labelGame.Size = new System.Drawing.Size(64, 13);
+            this.labelGame.TabIndex = 128;
+            this.labelGame.Text = "Game: {0}";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(873, 450);
+            this.ClientSize = new System.Drawing.Size(873, 350);
+            this.Controls.Add(this.labelGame);
+            this.Controls.Add(this.buttonReloadDB);
+            this.Controls.Add(this.labelOT);
+            this.Controls.Add(this.labelSpeed);
+            this.Controls.Add(this.labelSpDef);
+            this.Controls.Add(this.labelSpAtk);
+            this.Controls.Add(this.labelDefense);
+            this.Controls.Add(this.labelAttack);
+            this.Controls.Add(this.labelHP);
+            this.Controls.Add(this.pictureBoxGameSprite);
+            this.Controls.Add(this.buttonGenSpeciesSort);
             this.Controls.Add(this.buttonGameSpeciesSort);
             this.Controls.Add(this.buttonGameLevelSort);
             this.Controls.Add(this.L_Count);
@@ -831,8 +956,6 @@ namespace MonCollection
             this.Controls.Add(this.pictureBoxBall);
             this.Controls.Add(this.comboBoxBalls);
             this.Controls.Add(this.labelBall);
-            this.Controls.Add(this.statusItemNickname);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelNickname);
             this.Name = "MainForm";
             this.Text = "Pokémon";
@@ -868,6 +991,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -876,8 +1000,6 @@ namespace MonCollection
         #endregion
 
         private System.Windows.Forms.Label labelNickname;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label statusItemNickname;
         private System.Windows.Forms.Label labelBall;
         private System.Windows.Forms.ComboBox comboBoxBalls;
         private System.Windows.Forms.PictureBox pictureBoxBall;
@@ -932,6 +1054,17 @@ namespace MonCollection
         private Label L_Count;
         private Button buttonGameLevelSort;
         private Button buttonGameSpeciesSort;
+        private Button buttonGenSpeciesSort;
+        private PictureBox pictureBoxGameSprite;
+        private Label labelHP;
+        private Label labelAttack;
+        private Label labelDefense;
+        private Label labelSpAtk;
+        private Label labelSpDef;
+        private Label labelSpeed;
+        private Label labelOT;
+        private Button buttonReloadDB;
+        private Label labelGame;
     }
 }
 

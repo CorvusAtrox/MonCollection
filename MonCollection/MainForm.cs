@@ -31,6 +31,16 @@ namespace MonCollection
         private List<PKM> PkmData;
 
         private string Counter = "Num Mon: {0}";
+        private string HP = "HP: {0}";
+        private string Attack = "Attack: {0}";
+        private string Defense = "Defense: {0}";
+        private string SpAtk = "Sp. Atk: {0}";
+        private string SpDef = "Sp. Def: {0}";
+        private string Speed = "Speed: {0}";
+
+        private string OT = "OT: {0} ({1})";
+        private string Game = "Game: {0}";
+        private string Nickname = "Name: {0}";
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -71,8 +81,14 @@ namespace MonCollection
         {
             gameDict = new Dictionary<string, SaveInfo>();
             gameDict.Add("Red [Dustin]", new SaveInfo("en", GameVersion.RD, 0));
-            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN, 1));
-            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW, 2));
+            gameDict.Add("Red [JOHANN]", new SaveInfo("en", GameVersion.RD, 1));
+            gameDict.Add("Blue [GARY]", new SaveInfo("en", GameVersion.GN, 2));
+            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN, 3));
+            gameDict.Add("Yellow [HERR J]", new SaveInfo("en", GameVersion.YW, 4));
+            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW, 5));
+            gameDict.Add("Gold [Dorothy]", new SaveInfo("en", GameVersion.GD, 6));
+            gameDict.Add("Silver [Yuna]", new SaveInfo("fr", GameVersion.SV, 7));
+            gameDict.Add("Crystal [Catria]", new SaveInfo("es", GameVersion.C, 8));
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -128,9 +144,13 @@ namespace MonCollection
                 slot.DoubleClick += (sender, e) =>
                 {
 
-                    slotSelected = (int)slot.Tag;
-                    OpenPKM(PkmData[(int)slot.Tag]);
-                    FillPKXBoxes((int)(bpkx1.Tag)/RES_MIN);
+                    if((int)slot.Tag != -1)
+                    {
+                        slotSelected = (int)slot.Tag;
+                        OpenPKM(PkmData[(int)slot.Tag]);
+                        FillPKXBoxes((int)(bpkx1.Tag) / RES_MIN);
+                    }
+                    
                 };
             }
         }
@@ -154,23 +174,6 @@ namespace MonCollection
             LegalMoveSource.ReloadMoves(source.Moves);
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            string path = "C:/Users/CorvusAtrox/Music/PKHeX/pkmdb/004 - Embi - 96EDA47AE9C1.pk6";
-
-            byte[] input;
-
-            try {
-                input = File.ReadAllBytes(path);
-            } catch (Exception) {
-                return;
-            }
-
-            PKM pk = PKMConverter.GetPKMfromBytes(input);
-
-            OpenPKM(pk);
         }
 
         private bool OpenPKM(PKM pk)
@@ -234,22 +237,68 @@ namespace MonCollection
                     break;
             }
 
-            statusItemNickname.Text = pk.Nickname;
+            labelNickname.Text = string.Format(Nickname, pk.Nickname);
             comboBoxBalls.SelectedValue = pk.Ball;
             comboBoxSpecies.SelectedValue = pk.Species;
             comboBoxLanguage.SelectedValue = pk.Language;
             comboBoxAbility.SelectedValue = pk.Ability;
             comboBoxNature.SelectedValue = pk.Nature;
+
             comboBoxMove1.SelectedValue = pk.Move1;
             comboBoxMove2.SelectedValue = pk.Move2;
             comboBoxMove3.SelectedValue = pk.Move3;
             comboBoxMove4.SelectedValue = pk.Move4;
+
+            labelHP.Text = string.Format(HP, pk.Stat_HPMax);
+            labelAttack.Text = string.Format(Attack, pk.Stat_ATK);
+            labelDefense.Text = string.Format(Defense, pk.Stat_DEF);
+            labelSpAtk.Text = string.Format(SpAtk, pk.Stat_SPA);
+            labelSpDef.Text = string.Format(SpDef, pk.Stat_SPD);
+            labelSpeed.Text = string.Format(Speed, pk.Stat_SPE);
+
+            labelOT.Text = string.Format(OT,pk.DisplayTID,pk.OT_Name);
+            labelGame.Text = string.Format(Game, pk.Identifier.Split('\\')[1]);
+
             textBoxLevel.Text = pk.CurrentLevel.ToString();
+
             pictureBoxBall.Image = retrieveImage("img/ball/" + pk.Ball + ".png");
             pictureBoxIcon.Image = retrieveImage("img/icons/" + pk.Species + ".png");
+            pictureBoxGameSprite.Image = getSprite(pk.Species,ver.Version);
+            pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             cryMaker = new SoundPlayer("cries/" + pk.Species + ".wav");
             cryMaker.Play();
+        }
+
+        private Image getSprite(int species, GameVersion version)
+        {
+            string game = "";
+            string ext = "";
+            switch (version)
+            {
+                case GameVersion.RD:
+                case GameVersion.GN:
+                    game = "rb";
+                    ext = ".png";
+                    break;
+                case GameVersion.YW:
+                    game = "yw";
+                    ext = ".png";
+                    break;
+                case GameVersion.GD:
+                    game = "gd";
+                    ext = ".png";
+                    break;
+                case GameVersion.SV:
+                    game = "sv";
+                    ext = ".png";
+                    break;
+                case GameVersion.C:
+                    game = "c";
+                    ext = ".png";
+                    break;
+            }
+            return retrieveImage("img/"+game+"/"+species.ToString()+ext);
         }
 
         private void ValidateMovePaint(object sender, DrawItemEventArgs e)
@@ -390,12 +439,16 @@ namespace MonCollection
 
 
 
-        //        //Gen Species
+        public void genSpeciesSort(int index)
+        {
+            PkmData = PkmData.OrderBy(mon => mon.Format)
+                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.CurrentLevel)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<PKM>();
 
-
-
-        //        PkmData.OrderBy(mon=>mon.GenNumber).ThenBy(mon=>mon.Species).ThenBy(mon=>mon.CurrentLevel).ThenBy(mon=>mon.Nickname);
-
+            FillPKXBoxes(index);
+        }
 
 
         //        //Gen Level
@@ -438,6 +491,18 @@ namespace MonCollection
         {
             gameSpeciesSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void ButtonGenSpeciesSort_Click(object sender, EventArgs e)
+        {
+            genSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void ButtonReloadDB_Click(object sender, EventArgs e)
+        {
+            LoadDatabase();
+            ButtonGameLevelSort_Click(sender,e);
         }
     }
 }
