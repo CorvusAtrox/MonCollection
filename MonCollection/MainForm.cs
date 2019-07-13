@@ -295,7 +295,7 @@ namespace MonCollection
                     break;
                 case GameVersion.C:
                     game = "c";
-                    ext = ".png";
+                    ext = ".gif";
                     break;
             }
             return retrieveImage("img/"+game+"/"+species.ToString()+ext);
