@@ -1,4 +1,4 @@
 
 .vs
-MonCollection/bin/Debug/MonCollection.pdb
-MonCollection/obj
+MonCollection/obj/Debug
+MonCollection/program/PKHeX.pdb
