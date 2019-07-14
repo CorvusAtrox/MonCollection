@@ -96,6 +96,9 @@ namespace MonCollection
             this.labelOT = new System.Windows.Forms.Label();
             this.buttonReloadDB = new System.Windows.Forms.Button();
             this.labelGame = new System.Windows.Forms.Label();
+            this.buttonGameMonTally = new System.Windows.Forms.Button();
+            this.buttonGameTally = new System.Windows.Forms.Button();
+            this.buttonSpeciesSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -407,7 +410,7 @@ namespace MonCollection
             this.SCR_Box.LargeChange = 1;
             this.SCR_Box.Location = new System.Drawing.Point(837, 72);
             this.SCR_Box.Name = "SCR_Box";
-            this.SCR_Box.Size = new System.Drawing.Size(24, 155);
+            this.SCR_Box.Size = new System.Drawing.Size(24, 156);
             this.SCR_Box.TabIndex = 60;
             this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
             // 
@@ -762,7 +765,7 @@ namespace MonCollection
             // 
             // buttonGenSpeciesSort
             // 
-            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(646, 277);
+            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(583, 282);
             this.buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
             this.buttonGenSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonGenSpeciesSort.TabIndex = 118;
@@ -885,12 +888,45 @@ namespace MonCollection
             this.labelGame.TabIndex = 128;
             this.labelGame.Text = "Game: {0}";
             // 
+            // buttonGameMonTally
+            // 
+            this.buttonGameMonTally.Location = new System.Drawing.Point(242, 336);
+            this.buttonGameMonTally.Name = "buttonGameMonTally";
+            this.buttonGameMonTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonGameMonTally.TabIndex = 129;
+            this.buttonGameMonTally.Text = "Game Mon Tally";
+            this.buttonGameMonTally.UseVisualStyleBackColor = true;
+            this.buttonGameMonTally.Click += new System.EventHandler(this.ButtonGameMonTally_Click);
+            // 
+            // buttonGameTally
+            // 
+            this.buttonGameTally.Location = new System.Drawing.Point(59, 336);
+            this.buttonGameTally.Name = "buttonGameTally";
+            this.buttonGameTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonGameTally.TabIndex = 130;
+            this.buttonGameTally.Text = "Game Tally";
+            this.buttonGameTally.UseVisualStyleBackColor = true;
+            this.buttonGameTally.Click += new System.EventHandler(this.ButtonGameTally_Click);
+            // 
+            // buttonSpeciesSort
+            // 
+            this.buttonSpeciesSort.Location = new System.Drawing.Point(714, 282);
+            this.buttonSpeciesSort.Name = "buttonSpeciesSort";
+            this.buttonSpeciesSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonSpeciesSort.TabIndex = 131;
+            this.buttonSpeciesSort.Text = "All Species Sort";
+            this.buttonSpeciesSort.UseVisualStyleBackColor = true;
+            this.buttonSpeciesSort.Click += new System.EventHandler(this.ButtonSpeciesSort_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(873, 350);
+            this.ClientSize = new System.Drawing.Size(873, 441);
+            this.Controls.Add(this.buttonSpeciesSort);
+            this.Controls.Add(this.buttonGameTally);
+            this.Controls.Add(this.buttonGameMonTally);
             this.Controls.Add(this.labelGame);
             this.Controls.Add(this.buttonReloadDB);
             this.Controls.Add(this.labelOT);
@@ -1065,6 +1101,9 @@ namespace MonCollection
         private Label labelOT;
         private Button buttonReloadDB;
         private Label labelGame;
+        private Button buttonGameMonTally;
+        private Button buttonGameTally;
+        private Button buttonSpeciesSort;
     }
 }
 

@@ -30,6 +30,9 @@ namespace MonCollection
         private LegalityAnalysis legal;
         private List<PKM> PkmData;
 
+        private List<ComboItem> PkmListAny;
+        private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
+
         private string Counter = "Num Mon: {0}";
         private string HP = "HP: {0}";
         private string Attack = "Attack: {0}";
@@ -69,6 +72,7 @@ namespace MonCollection
         {
             InitializeComponent();
             InitializeGameDict();
+            InitializeMonLists();
             InitializeStrings("en",GameVersion.US);
             InitializeBinding();
             InitializePkxBoxes();
@@ -89,6 +93,30 @@ namespace MonCollection
             gameDict.Add("Gold [Dorothy]", new SaveInfo("en", GameVersion.GD, 6));
             gameDict.Add("Silver [Yuna]", new SaveInfo("fr", GameVersion.SV, 7));
             gameDict.Add("Crystal [Catria]", new SaveInfo("es", GameVersion.C, 8));
+        }
+
+        private void InitializeMonLists()
+        {
+            GameInfo.Strings = GameInfo.GetStrings("en");
+            PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
+
+            monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
+            GameVersion[] versions = {GameVersion.RD,GameVersion.GN,GameVersion.YW,
+                                      GameVersion.GD, GameVersion.SV, GameVersion.C};
+            foreach (GameVersion v in versions)
+            {
+                SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
+                var f = new FilteredGameDataSource(sf, GameInfo.Sources).Species;
+                List<ComboItem> sp = new List<ComboItem>(f);
+
+                foreach (ComboItem ci in PkmListAny)
+                {
+                    if (sp.Contains(ci))
+                        monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value),true);
+                    else
+                        monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
+                }
+            }
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -235,6 +263,43 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     break;
+                case 2:
+                    labelGender.Visible = true;
+                    labelBall.Visible = false;
+                    comboBoxBalls.Visible = false;
+                    labelAbility.Visible = false;
+                    comboBoxAbility.Visible = false;
+                    labelNature.Visible = false;
+                    comboBoxNature.Visible = false;
+                    labelLanguage.Visible = false;
+                    comboBoxLanguage.Visible = false;
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    labelGender.Visible = true;
+                    labelBall.Visible = true;
+                    comboBoxBalls.Visible = true;
+                    labelAbility.Visible = true;
+                    comboBoxAbility.Visible = true;
+                    labelNature.Visible = true;
+                    comboBoxNature.Visible = true;
+                    labelLanguage.Visible = false;
+                    comboBoxLanguage.Visible = false;
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    labelGender.Visible = true;
+                    labelBall.Visible = true;
+                    comboBoxBalls.Visible = true;
+                    labelAbility.Visible = true;
+                    comboBoxAbility.Visible = true;
+                    labelNature.Visible = true;
+                    comboBoxNature.Visible = true;
+                    labelLanguage.Visible = true;
+                    comboBoxLanguage.Visible = true;
+                    break;
             }
 
             labelNickname.Text = string.Format(Nickname, pk.Nickname);
@@ -358,7 +423,6 @@ namespace MonCollection
                 if (!(pk?.Species > 0))
                     return;
                 pk.Identifier = file;
-                Console.WriteLine(pk.Identifier);
                 dbTemp.Add(pk);
             });
 
@@ -423,21 +487,16 @@ namespace MonCollection
                 FillPKXBoxes(e.NewValue);
         }
 
-        //        //All Species
+        public void speciesGameSort(int index)
+        {
+            PkmData = PkmData.OrderBy(mon => mon.Species)
+                             .ThenBy(mon => gameIndex(mon.Identifier))
+                             .ThenBy(mon => mon.CurrentLevel)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<PKM>();
 
-
-
-        //        PkmData.OrderBy(mon =>mon.Species).ThenBy(mon=>mon.CurrentLevel).ThenBy(mon=>mon.Nickname).ThenBy(mon=>mon.Generation);
-
-
-
-        //        //All Levels
-
-
-
-        //        PkmData.OrderBy(mon=>mon.CurrentLevel).ThenBy(mon=>mon.Species).ThenBy(mon=>mon.Nickname).ThenBy(mon=>mon.Generation);
-
-
+            FillPKXBoxes(index);
+        }
 
         public void genSpeciesSort(int index)
         {
@@ -503,6 +562,75 @@ namespace MonCollection
         {
             LoadDatabase();
             ButtonGameLevelSort_Click(sender,e);
+        }
+
+        private void ButtonGameTally_Click(object sender, EventArgs e)
+        {
+            var query = PkmData.GroupBy(
+                mon => mon.Identifier.Split('\\')[1],
+                mon => mon.Nickname,
+                (game, name) => new
+                {
+                    Key = game,
+                    Count = name.Count()
+                });
+            var results = new FormGameTally();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}: {1}",q.Key,q.Count));
+            results.Show();
+        }
+
+        private void ButtonSpeciesSort_Click(object sender, EventArgs e)
+        {
+            speciesGameSort((int)bpkx1.Tag / RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void ButtonGameMonTally_Click(object sender, EventArgs e)
+        {
+            ButtonSpeciesSort_Click(sender, e);
+            var SpeciesList = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            var query = PkmData.GroupBy(
+                mon => mon.Species,
+                mon => mon.Identifier.Split('\\')[1],
+                (species, game) => new
+                {
+                    Name = PkmListAny.Find(p => p.Value == species).Text,
+                    Counts = getGameCounts(species, game)
+                }) ;
+            var results = new FormGameTally();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+                
+            results.Show();
+        }
+
+        private string getGameCounts(int index, IEnumerable<string> game)
+        {
+            Dictionary<string, int> d = new Dictionary<string, int>();
+            foreach (var entry in gameDict)
+            {
+                if(getGameMons(entry.Value.version,index))
+                    d.Add(entry.Key, 0);
+                else
+                    d.Add(entry.Key, -1);
+            }
+            foreach(string s in game)
+                 d[s] = d[s]++;
+            string result = "";
+            foreach(var entry in d)
+            {
+                if (entry.Value < 0)
+                    result += "; ";
+                else
+                    result += entry.Key + ": " + entry.Value.ToString() + "; ";
+            }
+            return result;
+        }
+
+        private bool getGameMons(GameVersion version, int species)
+        {
+            return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
     }
 }
