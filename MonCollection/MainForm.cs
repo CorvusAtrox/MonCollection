@@ -48,6 +48,9 @@ namespace MonCollection
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
 
+        private int[] majorGenderDiff;
+        private int[] minorGenderDiff;
+
         public static DrawConfig Draw = new DrawConfig();
 
         public Dictionary<string,SaveInfo> gameDict;
@@ -93,6 +96,7 @@ namespace MonCollection
             gameDict.Add("Gold [Dorothy]", new SaveInfo("en", GameVersion.GD, 6));
             gameDict.Add("Silver [Yuna]", new SaveInfo("fr", GameVersion.SV, 7));
             gameDict.Add("Crystal [Catria]", new SaveInfo("es", GameVersion.C, 8));
+            gameDict.Add("Black [KONRAD]", new SaveInfo("en", GameVersion.B, 30));
         }
 
         private void InitializeMonLists()
@@ -101,8 +105,14 @@ namespace MonCollection
             PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
 
             monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
-            GameVersion[] versions = {GameVersion.RD,GameVersion.GN,GameVersion.YW,
-                                      GameVersion.GD, GameVersion.SV, GameVersion.C};
+            GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
+                                      GameVersion.GD, GameVersion.SV, GameVersion.C,
+                                      GameVersion.RS,GameVersion.FRLG,GameVersion.E,
+                                      //GameVersion.COLO, GameVersion.XD,
+                                      GameVersion.DP, GameVersion.Pt,GameVersion.HGSS,
+                                      GameVersion.BW, GameVersion.B2W2,
+                                      GameVersion.XY, GameVersion.ORAS,
+                                      GameVersion.SM, GameVersion.USUM, GameVersion.GG};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -117,6 +127,15 @@ namespace MonCollection
                         monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
                 }
             }
+            majorGenderDiff = new int[]{ 521, 592, 593, 668, 678 };
+            minorGenderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
+                                         111, 112, 118, 119, 123, 129, 130, 154, 165, 166, 178, 185,
+                                         186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214, 215,
+                                         217, 221, 224, 229, 232, 255, 256, 257, 267, 269, 272, 274,
+                                         275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369, 396,
+                                         397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
+                                         417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
+                                         457, 459, 460, 461, 464, 465, 473};
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -262,6 +281,7 @@ namespace MonCollection
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
+                    labelPkrs.Visible = false;
                     break;
                 case 2:
                     labelGender.Visible = true;
@@ -273,6 +293,7 @@ namespace MonCollection
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
+                    labelPkrs.Visible = true;
                     break;
                 case 3:
                 case 4:
@@ -286,6 +307,7 @@ namespace MonCollection
                     comboBoxNature.Visible = true;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
+                    labelPkrs.Visible = true;
                     break;
                 case 6:
                 case 7:
@@ -299,6 +321,7 @@ namespace MonCollection
                     comboBoxNature.Visible = true;
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
+                    labelPkrs.Visible = true;
                     break;
             }
 
@@ -327,15 +350,62 @@ namespace MonCollection
             textBoxLevel.Text = pk.CurrentLevel.ToString();
 
             pictureBoxBall.Image = retrieveImage("img/ball/" + pk.Ball + ".png");
-            pictureBoxIcon.Image = retrieveImage("img/icons/" + pk.Species + ".png");
-            pictureBoxGameSprite.Image = getSprite(pk.Species,ver.Version);
+            string spForm = pk.Species.ToString();
+            if (pk.AltForm > 0)
+                spForm += "-" + pk.AltForm.ToString();
+            else if (majorGenderDiff.Contains(pk.Species))
+            {
+                if (pk.Gender == 0)
+                    spForm += "m";
+                else if(pk.Gender == 1)
+                    spForm += "f";
+            }
+            pictureBoxIcon.Image = retrieveImage("img/icons/" + spForm + ".png");
+
+            if (minorGenderDiff.Contains(pk.Species))
+            {
+                if(pk.AltForm == 0 && pk.Format >= 4)
+                {
+                    if (pk.Gender == 0)
+                        spForm += "m";
+                    else if (pk.Gender == 1)
+                        spForm += "f";
+                }
+            }
+            pictureBoxGameSprite.Image = getSprite(spForm, ver.Version);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
+            Label_IsShiny.Visible = pk.IsShiny;
+            if (pk.PKRS_Infected)
+            {
+                pictureBoxPkrs.Visible = true;
+                if (pk.PKRS_Cured)
+                {
+                    labelPkrs.Text = "Cured";
+                    pictureBoxPkrs.Image = retrieveImage("img/pkrsCured.png");
+                }
+                else
+                {
+                    labelPkrs.Text = "Infected";
+                    pictureBoxPkrs.Image = retrieveImage("img/pkrsInfected.png");
+                }
+                labelPkrs.Text += " - " + pk.PKRS_Strain.ToString();
+            }
+            else
+            {
+                pictureBoxPkrs.Visible = false;
+                labelPkrs.Text = "";
+            }
+
+            var ds = PKX.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Format);
+            comboBoxForm.DataSource = ds;
+            comboBoxForm.SelectedIndex = pk.AltForm;
+
             cryMaker = new SoundPlayer("cries/" + pk.Species + ".wav");
             cryMaker.Play();
         }
 
-        private Image getSprite(int species, GameVersion version)
+        private Image getSprite(string species, GameVersion version)
         {
             string game = "";
             string ext = "";
@@ -362,8 +432,18 @@ namespace MonCollection
                     game = "c";
                     ext = ".gif";
                     break;
+                case GameVersion.B:
+                case GameVersion.W:
+                    game = "bw";
+                    ext = ".gif";
+                    break;
+                case GameVersion.B2:
+                case GameVersion.W2:
+                    game = "b2w2";
+                    ext = ".gif";
+                    break;
             }
-            return retrieveImage("img/"+game+"/"+species.ToString()+ext);
+            return retrieveImage("img/"+game+"/"+species+ext);
         }
 
         private void ValidateMovePaint(object sender, DrawItemEventArgs e)
@@ -466,7 +546,18 @@ namespace MonCollection
             int end = Math.Min(RES_MAX, PkmData.Count - begin);
             for (int i = 0; i < end; i++)
             {
-                PKXBOXES[i].Image = retrieveImage("img/icons/" + PkmData[i + begin].Species.ToString() + ".png");
+                PKM mon = PkmData[i + begin];
+                string spForm = mon.Species.ToString();
+                if(mon.AltForm > 0)
+                    spForm += "-" + mon.AltForm.ToString();
+                else if (majorGenderDiff.Contains(mon.Species))
+                {
+                    if (mon.Gender == 0)
+                        spForm += "m";
+                    else if (mon.Gender == 1)
+                        spForm += "f";
+                }
+                PKXBOXES[i].Image = retrieveImage("img/icons/" + spForm + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
