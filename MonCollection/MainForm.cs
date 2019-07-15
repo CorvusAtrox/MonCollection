@@ -96,6 +96,20 @@ namespace MonCollection
             gameDict.Add("Gold [Dorothy]", new SaveInfo("en", GameVersion.GD, 6));
             gameDict.Add("Silver [Yuna]", new SaveInfo("fr", GameVersion.SV, 7));
             gameDict.Add("Crystal [Catria]", new SaveInfo("es", GameVersion.C, 8));
+            gameDict.Add("Ruby [NICOLE]", new SaveInfo("en", GameVersion.R, 9));
+            gameDict.Add("Ruby [Phi]", new SaveInfo("en", GameVersion.R, 10));
+            gameDict.Add("Sapphire [Sigma]", new SaveInfo("en", GameVersion.S, 11));
+            gameDict.Add("Emerald [GrmCrpr]", new SaveInfo("en", GameVersion.E, 12));
+            gameDict.Add("Fire Red [Martha]", new SaveInfo("en", GameVersion.FR, 13));
+            gameDict.Add("Leaf Green [MARY]", new SaveInfo("en", GameVersion.LG, 14));
+            gameDict.Add("Leaf Green [Satoshi]", new SaveInfo("en", GameVersion.LG, 15));
+            gameDict.Add("Colosseum [HARRY]", new SaveInfo("en", GameVersion.COLO, 16));
+            gameDict.Add("Colosseum [SNAGEM]", new SaveInfo("en", GameVersion.COLO, 17));
+            gameDict.Add("XD [DAVID]", new SaveInfo("en", GameVersion.XD, 18));
+            gameDict.Add("XD [MirEgal]", new SaveInfo("en", GameVersion.XD, 19));
+            gameDict.Add("XD [NASP]", new SaveInfo("en", GameVersion.XD, 20));
+            gameDict.Add("XD [SMEDLY]", new SaveInfo("en", GameVersion.XD, 21));
+            gameDict.Add("XD [WILLY]", new SaveInfo("en", GameVersion.XD, 22));
             gameDict.Add("Black [KONRAD]", new SaveInfo("en", GameVersion.B, 30));
         }
 
