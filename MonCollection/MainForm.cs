@@ -103,14 +103,38 @@ namespace MonCollection
             gameDict.Add("Fire Red [Martha]", new SaveInfo("en", GameVersion.FR, 13));
             gameDict.Add("Leaf Green [MARY]", new SaveInfo("en", GameVersion.LG, 14));
             gameDict.Add("Leaf Green [Satoshi]", new SaveInfo("en", GameVersion.LG, 15));
-            gameDict.Add("Colosseum [HARRY]", new SaveInfo("en", GameVersion.COLO, 16));
-            gameDict.Add("Colosseum [SNAGEM]", new SaveInfo("en", GameVersion.COLO, 17));
-            gameDict.Add("XD [DAVID]", new SaveInfo("en", GameVersion.XD, 18));
-            gameDict.Add("XD [MirEgal]", new SaveInfo("en", GameVersion.XD, 19));
-            gameDict.Add("XD [NASP]", new SaveInfo("en", GameVersion.XD, 20));
-            gameDict.Add("XD [SMEDLY]", new SaveInfo("en", GameVersion.XD, 21));
-            gameDict.Add("XD [WILLY]", new SaveInfo("en", GameVersion.XD, 22));
+            gameDict.Add("Colosseum [HARRY]", new SaveInfo("en", GameVersion.CXD, 16));
+            gameDict.Add("Colosseum [SNAGEM]", new SaveInfo("en", GameVersion.CXD, 17));
+            gameDict.Add("XD [DAVID]", new SaveInfo("en", GameVersion.CXD, 18));
+            gameDict.Add("XD [MirEgal]", new SaveInfo("en", GameVersion.CXD, 19));
+            gameDict.Add("XD [NASP]", new SaveInfo("en", GameVersion.CXD, 20));
+            gameDict.Add("XD [SMEDLY]", new SaveInfo("en", GameVersion.CXD, 21));
+            gameDict.Add("XD [WILLY]", new SaveInfo("en", GameVersion.CXD, 22));
+            gameDict.Add("Snakewood [Pete]", new SaveInfo("en", GameVersion.R, 23));
+            gameDict.Add("Grand Day Out [Wanda]", new SaveInfo("en", GameVersion.LG, 24));
+            gameDict.Add("Diamond [JOHANN]", new SaveInfo("en", GameVersion.D, 25));
+            gameDict.Add("Pearl [Jake]", new SaveInfo("en", GameVersion.P, 26));
+            gameDict.Add("Platinum [Guess]", new SaveInfo("en", GameVersion.Pt, 27));
+            gameDict.Add("HeartGold [LIAKS]", new SaveInfo("en", GameVersion.HG, 28));
+            gameDict.Add("SoulSilver [WOLFI]", new SaveInfo("de", GameVersion.SS, 29));
             gameDict.Add("Black [KONRAD]", new SaveInfo("en", GameVersion.B, 30));
+            gameDict.Add("White [JnaBrta]", new SaveInfo("de", GameVersion.W, 31));
+            gameDict.Add("Black 2 [Crow]", new SaveInfo("en", GameVersion.B2, 32));
+            gameDict.Add("White 2 [Bow]", new SaveInfo("en", GameVersion.W2, 33));
+            gameDict.Add("X [だいすけ]", new SaveInfo("ja", GameVersion.X, 34));
+            gameDict.Add("Y [Fukurou]", new SaveInfo("de", GameVersion.Y, 35));
+            gameDict.Add("Omega Ruby [Akira]", new SaveInfo("es", GameVersion.OR, 36));
+            gameDict.Add("Alpha Sapphire [Dschohehn]", new SaveInfo("de", GameVersion.AS, 37));
+            gameDict.Add("Bank VI [corvusbrachy]", new SaveInfo("en", GameVersion.ORAS, 38));
+            gameDict.Add("Bank VI [corvusossi]", new SaveInfo("de", GameVersion.ORAS, 39));
+            gameDict.Add("Sun [Ramirez]", new SaveInfo("es", GameVersion.SN, 40));
+            gameDict.Add("Moon [Fina]", new SaveInfo("de", GameVersion.MN, 41));
+            gameDict.Add("Ultra Sun [Hibiki]", new SaveInfo("de", GameVersion.US, 42));
+            gameDict.Add("Ultra Moon [かなで]", new SaveInfo("ja", GameVersion.UM, 43));
+            gameDict.Add("Bank VII [corvusbrachy]: 90", new SaveInfo("en", GameVersion.USUM, 44));
+            gameDict.Add("Bank VII [corvusossi]", new SaveInfo("de", GameVersion.USUM, 45));
+            gameDict.Add("Let's Go Pikachu [Suzy]", new SaveInfo("en", GameVersion.GP, 46));
+            gameDict.Add("Let's Go Eevee [Dieter]", new SaveInfo("de", GameVersion.GE, 47));
         }
 
         private void InitializeMonLists()
@@ -121,8 +145,7 @@ namespace MonCollection
             monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
             GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
                                       GameVersion.GD, GameVersion.SV, GameVersion.C,
-                                      GameVersion.RS,GameVersion.FRLG,GameVersion.E,
-                                      //GameVersion.COLO, GameVersion.XD,
+                                      GameVersion.RS,GameVersion.FRLG,GameVersion.E, GameVersion.CXD,
                                       GameVersion.DP, GameVersion.Pt,GameVersion.HGSS,
                                       GameVersion.BW, GameVersion.B2W2,
                                       GameVersion.XY, GameVersion.ORAS,
