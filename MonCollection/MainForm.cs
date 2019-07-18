@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MonCollection.Properties;
 using PKHeX.Core;
 using PKHeX.WinForms;
 
@@ -125,16 +124,14 @@ namespace MonCollection
             gameDict.Add("Y [Fukurou]", new SaveInfo("de", GameVersion.Y, 35));
             gameDict.Add("Omega Ruby [Akira]", new SaveInfo("es", GameVersion.OR, 36));
             gameDict.Add("Alpha Sapphire [Dschohehn]", new SaveInfo("de", GameVersion.AS, 37));
-            gameDict.Add("Bank VI [corvusbrachy]", new SaveInfo("en", GameVersion.ORAS, 38));
-            gameDict.Add("Bank VI [corvusossi]", new SaveInfo("de", GameVersion.ORAS, 39));
+            gameDict.Add("Bank [corvusbrachy]", new SaveInfo("en", GameVersion.US, 38));
+            gameDict.Add("Bank [corvusossi]", new SaveInfo("de", GameVersion.UM, 39));
             gameDict.Add("Sun [Ramirez]", new SaveInfo("es", GameVersion.SN, 40));
             gameDict.Add("Moon [Fina]", new SaveInfo("de", GameVersion.MN, 41));
             gameDict.Add("Ultra Sun [Hibiki]", new SaveInfo("de", GameVersion.US, 42));
             gameDict.Add("Ultra Moon [かなで]", new SaveInfo("ja", GameVersion.UM, 43));
-            gameDict.Add("Bank VII [corvusbrachy]: 90", new SaveInfo("en", GameVersion.USUM, 44));
-            gameDict.Add("Bank VII [corvusossi]", new SaveInfo("de", GameVersion.USUM, 45));
-            gameDict.Add("Let's Go Pikachu [Suzy]", new SaveInfo("en", GameVersion.GP, 46));
-            gameDict.Add("Let's Go Eevee [Dieter]", new SaveInfo("de", GameVersion.GE, 47));
+            gameDict.Add("Let's Go Pikachu [Suzy]", new SaveInfo("en", GameVersion.GP, 44));
+            gameDict.Add("Let's Go Eevee [Dieter]", new SaveInfo("de", GameVersion.GE, 45));
         }
 
         private void InitializeMonLists()
@@ -479,6 +476,20 @@ namespace MonCollection
                     game = "b2w2";
                     ext = ".gif";
                     break;
+                case GameVersion.X:
+                case GameVersion.Y:
+                case GameVersion.OR:
+                case GameVersion.AS:
+                    game = "xyoras";
+                    ext = ".gif";
+                    break;
+                case GameVersion.SN:
+                case GameVersion.MN:
+                case GameVersion.US:
+                case GameVersion.UM:
+                    game = "smusum";
+                    ext = ".gif";
+                    break;
             }
             return retrieveImage("img/"+game+"/"+species+ext);
         }
@@ -628,7 +639,7 @@ namespace MonCollection
 
         public void genSpeciesSort(int index)
         {
-            PkmData = PkmData.OrderBy(mon => mon.Format)
+            PkmData = PkmData.OrderBy(mon => getGen(mon.Identifier))
                              .ThenBy(mon => mon.Species)
                              .ThenBy(mon => mon.CurrentLevel)
                              .ThenBy(mon => mon.Nickname)
@@ -759,6 +770,30 @@ namespace MonCollection
         private bool getGameMons(GameVersion version, int species)
         {
             return monInGame[new Tuple<GameVersion, int>(version, species)];
+        }
+
+        private int getGen(string identifier)
+        {
+            string sub = identifier.Substring(identifier.IndexOf(".p"));
+            return int.Parse(sub.Substring(3));
+        }
+
+        private void ButtonNiqCalc_Click(object sender, EventArgs e)
+        {
+            var results = new FormNiqCalc();
+
+            results.loadDB(PkmData, slotSelected);
+            results.showValues();
+            results.Show();
+        }
+
+        private void ButtonEggs_Click(object sender, EventArgs e)
+        {
+            var results = new FormEggCalc();
+
+            results.loadDB(PkmData, slotSelected);
+            results.showValues();
+            results.Show();
         }
     }
 }

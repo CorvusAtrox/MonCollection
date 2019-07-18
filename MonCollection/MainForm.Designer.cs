@@ -104,6 +104,8 @@ namespace MonCollection
             this.comboBoxForm = new System.Windows.Forms.ComboBox();
             this.labelPkrs = new System.Windows.Forms.Label();
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
+            this.buttonNiqCalc = new System.Windows.Forms.Button();
+            this.buttonEggs = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -147,7 +149,7 @@ namespace MonCollection
             this.labelNickname.BackColor = System.Drawing.Color.Firebrick;
             this.labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNickname.ForeColor = System.Drawing.Color.White;
-            this.labelNickname.Location = new System.Drawing.Point(162, 32);
+            this.labelNickname.Location = new System.Drawing.Point(176, 32);
             this.labelNickname.Name = "labelNickname";
             this.labelNickname.Size = new System.Drawing.Size(64, 13);
             this.labelNickname.TabIndex = 0;
@@ -175,7 +177,7 @@ namespace MonCollection
             this.comboBoxBalls.Location = new System.Drawing.Point(66, 29);
             this.comboBoxBalls.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxBalls.Name = "comboBoxBalls";
-            this.comboBoxBalls.Size = new System.Drawing.Size(93, 21);
+            this.comboBoxBalls.Size = new System.Drawing.Size(104, 21);
             this.comboBoxBalls.TabIndex = 5;
             // 
             // pictureBoxBall
@@ -226,7 +228,7 @@ namespace MonCollection
             this.labelLevel.BackColor = System.Drawing.Color.Firebrick;
             this.labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLevel.ForeColor = System.Drawing.Color.White;
-            this.labelLevel.Location = new System.Drawing.Point(302, 32);
+            this.labelLevel.Location = new System.Drawing.Point(316, 32);
             this.labelLevel.Name = "labelLevel";
             this.labelLevel.Size = new System.Drawing.Size(25, 13);
             this.labelLevel.TabIndex = 10;
@@ -236,7 +238,7 @@ namespace MonCollection
             // 
             this.textBoxLevel.BackColor = System.Drawing.Color.Firebrick;
             this.textBoxLevel.ForeColor = System.Drawing.Color.White;
-            this.textBoxLevel.Location = new System.Drawing.Point(333, 29);
+            this.textBoxLevel.Location = new System.Drawing.Point(347, 29);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(25, 20);
             this.textBoxLevel.TabIndex = 11;
@@ -247,7 +249,7 @@ namespace MonCollection
             this.labelGender.BackColor = System.Drawing.Color.Firebrick;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(364, 32);
+            this.labelGender.Location = new System.Drawing.Point(378, 32);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(11, 13);
             this.labelGender.TabIndex = 12;
@@ -260,7 +262,7 @@ namespace MonCollection
             this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
             this.comboBoxLanguage.FormattingEnabled = true;
-            this.comboBoxLanguage.Location = new System.Drawing.Point(453, 28);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(467, 28);
             this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(99, 21);
@@ -272,7 +274,7 @@ namespace MonCollection
             this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.Color.White;
-            this.labelLanguage.Location = new System.Drawing.Point(383, 32);
+            this.labelLanguage.Location = new System.Drawing.Point(397, 32);
             this.labelLanguage.Name = "labelLanguage";
             this.labelLanguage.Size = new System.Drawing.Size(67, 13);
             this.labelLanguage.TabIndex = 13;
@@ -336,7 +338,7 @@ namespace MonCollection
             this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove1.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove1.FormattingEnabled = true;
-            this.comboBoxMove1.Location = new System.Drawing.Point(367, 185);
+            this.comboBoxMove1.Location = new System.Drawing.Point(386, 274);
             this.comboBoxMove1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove1.Name = "comboBoxMove1";
             this.comboBoxMove1.Size = new System.Drawing.Size(115, 21);
@@ -349,7 +351,7 @@ namespace MonCollection
             this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoves.ForeColor = System.Drawing.Color.Black;
-            this.labelMoves.Location = new System.Drawing.Point(364, 164);
+            this.labelMoves.Location = new System.Drawing.Point(383, 253);
             this.labelMoves.Name = "labelMoves";
             this.labelMoves.Size = new System.Drawing.Size(48, 13);
             this.labelMoves.TabIndex = 19;
@@ -363,7 +365,7 @@ namespace MonCollection
             this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove2.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove2.FormattingEnabled = true;
-            this.comboBoxMove2.Location = new System.Drawing.Point(367, 206);
+            this.comboBoxMove2.Location = new System.Drawing.Point(386, 295);
             this.comboBoxMove2.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove2.Name = "comboBoxMove2";
             this.comboBoxMove2.Size = new System.Drawing.Size(115, 21);
@@ -378,7 +380,7 @@ namespace MonCollection
             this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove4.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove4.FormattingEnabled = true;
-            this.comboBoxMove4.Location = new System.Drawing.Point(367, 248);
+            this.comboBoxMove4.Location = new System.Drawing.Point(386, 337);
             this.comboBoxMove4.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove4.Name = "comboBoxMove4";
             this.comboBoxMove4.Size = new System.Drawing.Size(115, 21);
@@ -393,7 +395,7 @@ namespace MonCollection
             this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove3.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove3.FormattingEnabled = true;
-            this.comboBoxMove3.Location = new System.Drawing.Point(367, 227);
+            this.comboBoxMove3.Location = new System.Drawing.Point(386, 316);
             this.comboBoxMove3.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove3.Name = "comboBoxMove3";
             this.comboBoxMove3.Size = new System.Drawing.Size(115, 21);
@@ -868,7 +870,7 @@ namespace MonCollection
             this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOT.ForeColor = System.Drawing.Color.Black;
-            this.labelOT.Location = new System.Drawing.Point(364, 281);
+            this.labelOT.Location = new System.Drawing.Point(383, 370);
             this.labelOT.Name = "labelOT";
             this.labelOT.Size = new System.Drawing.Size(78, 13);
             this.labelOT.TabIndex = 126;
@@ -890,7 +892,7 @@ namespace MonCollection
             this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGame.ForeColor = System.Drawing.Color.Black;
-            this.labelGame.Location = new System.Drawing.Point(364, 306);
+            this.labelGame.Location = new System.Drawing.Point(383, 395);
             this.labelGame.Name = "labelGame";
             this.labelGame.Size = new System.Drawing.Size(64, 13);
             this.labelGame.TabIndex = 128;
@@ -898,7 +900,7 @@ namespace MonCollection
             // 
             // buttonGameMonTally
             // 
-            this.buttonGameMonTally.Location = new System.Drawing.Point(242, 336);
+            this.buttonGameMonTally.Location = new System.Drawing.Point(242, 335);
             this.buttonGameMonTally.Name = "buttonGameMonTally";
             this.buttonGameMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameMonTally.TabIndex = 129;
@@ -908,7 +910,7 @@ namespace MonCollection
             // 
             // buttonGameTally
             // 
-            this.buttonGameTally.Location = new System.Drawing.Point(59, 336);
+            this.buttonGameTally.Location = new System.Drawing.Point(34, 337);
             this.buttonGameTally.Name = "buttonGameTally";
             this.buttonGameTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameTally.TabIndex = 130;
@@ -973,12 +975,34 @@ namespace MonCollection
             this.pictureBoxPkrs.TabIndex = 135;
             this.pictureBoxPkrs.TabStop = false;
             // 
+            // buttonNiqCalc
+            // 
+            this.buttonNiqCalc.Location = new System.Drawing.Point(34, 370);
+            this.buttonNiqCalc.Name = "buttonNiqCalc";
+            this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
+            this.buttonNiqCalc.TabIndex = 136;
+            this.buttonNiqCalc.Text = "Unique Calc";
+            this.buttonNiqCalc.UseVisualStyleBackColor = true;
+            this.buttonNiqCalc.Click += new System.EventHandler(this.ButtonNiqCalc_Click);
+            // 
+            // buttonEggs
+            // 
+            this.buttonEggs.Location = new System.Drawing.Point(242, 370);
+            this.buttonEggs.Name = "buttonEggs";
+            this.buttonEggs.Size = new System.Drawing.Size(116, 23);
+            this.buttonEggs.TabIndex = 137;
+            this.buttonEggs.Text = "Breeding Calc";
+            this.buttonEggs.UseVisualStyleBackColor = true;
+            this.buttonEggs.Click += new System.EventHandler(this.ButtonEggs_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 441);
+            this.Controls.Add(this.buttonEggs);
+            this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
             this.Controls.Add(this.labelPkrs);
             this.Controls.Add(this.comboBoxForm);
@@ -1169,6 +1193,8 @@ namespace MonCollection
         private ComboBox comboBoxForm;
         private Label labelPkrs;
         private PictureBox pictureBoxPkrs;
+        private Button buttonNiqCalc;
+        private Button buttonEggs;
     }
 }
 

@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormEggCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEggCalc.Designer.cs">
+      <DependentUpon>FormEggCalc.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGameTally.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGameTally.Designer.cs">
       <DependentUpon>FormGameTally.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNiqCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNiqCalc.Designer.cs">
+      <DependentUpon>FormNiqCalc.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -60,8 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEggCalc.resx">
+      <DependentUpon>FormEggCalc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGameTally.resx">
       <DependentUpon>FormGameTally.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNiqCalc.resx">
+      <DependentUpon>FormNiqCalc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
