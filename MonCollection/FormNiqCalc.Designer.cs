@@ -127,36 +127,36 @@
             // 
             this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove1.FormattingEnabled = true;
-            this.comboBoxMove1.Location = new System.Drawing.Point(66, 134);
+            this.comboBoxMove1.Location = new System.Drawing.Point(40, 134);
             this.comboBoxMove1.Name = "comboBoxMove1";
-            this.comboBoxMove1.Size = new System.Drawing.Size(88, 21);
+            this.comboBoxMove1.Size = new System.Drawing.Size(114, 21);
             this.comboBoxMove1.TabIndex = 8;
             // 
             // comboBoxMove2
             // 
             this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove2.FormattingEnabled = true;
-            this.comboBoxMove2.Location = new System.Drawing.Point(68, 165);
+            this.comboBoxMove2.Location = new System.Drawing.Point(40, 165);
             this.comboBoxMove2.Name = "comboBoxMove2";
-            this.comboBoxMove2.Size = new System.Drawing.Size(88, 21);
+            this.comboBoxMove2.Size = new System.Drawing.Size(116, 21);
             this.comboBoxMove2.TabIndex = 9;
             // 
             // comboBoxMove3
             // 
             this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove3.FormattingEnabled = true;
-            this.comboBoxMove3.Location = new System.Drawing.Point(68, 195);
+            this.comboBoxMove3.Location = new System.Drawing.Point(40, 195);
             this.comboBoxMove3.Name = "comboBoxMove3";
-            this.comboBoxMove3.Size = new System.Drawing.Size(88, 21);
+            this.comboBoxMove3.Size = new System.Drawing.Size(116, 21);
             this.comboBoxMove3.TabIndex = 10;
             // 
             // comboBoxMove4
             // 
             this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove4.FormattingEnabled = true;
-            this.comboBoxMove4.Location = new System.Drawing.Point(68, 222);
+            this.comboBoxMove4.Location = new System.Drawing.Point(40, 222);
             this.comboBoxMove4.Name = "comboBoxMove4";
-            this.comboBoxMove4.Size = new System.Drawing.Size(88, 21);
+            this.comboBoxMove4.Size = new System.Drawing.Size(116, 21);
             this.comboBoxMove4.TabIndex = 11;
             // 
             // labelGame

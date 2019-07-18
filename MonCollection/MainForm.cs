@@ -97,9 +97,9 @@ namespace MonCollection
             gameDict.Add("Ruby [Phi]", new SaveInfo("en", GameVersion.R, 10));
             gameDict.Add("Sapphire [Sigma]", new SaveInfo("en", GameVersion.S, 11));
             gameDict.Add("Emerald [GrmCrpr]", new SaveInfo("en", GameVersion.E, 12));
-            gameDict.Add("Fire Red [Martha]", new SaveInfo("en", GameVersion.FR, 13));
-            gameDict.Add("Leaf Green [MARY]", new SaveInfo("en", GameVersion.LG, 14));
-            gameDict.Add("Leaf Green [Satoshi]", new SaveInfo("en", GameVersion.LG, 15));
+            gameDict.Add("FireRed [Martha]", new SaveInfo("en", GameVersion.FR, 13));
+            gameDict.Add("LeafGreen [MARY]", new SaveInfo("en", GameVersion.LG, 14));
+            gameDict.Add("LeafGreen [Satoshi]", new SaveInfo("en", GameVersion.LG, 15));
             gameDict.Add("Colosseum [HARRY]", new SaveInfo("en", GameVersion.CXD, 16));
             gameDict.Add("Colosseum [SNAGEM]", new SaveInfo("en", GameVersion.CXD, 17));
             gameDict.Add("XD [DAVID]", new SaveInfo("en", GameVersion.CXD, 18));
@@ -468,6 +468,36 @@ namespace MonCollection
                     game = "c";
                     ext = ".gif";
                     break;
+                case GameVersion.R:
+                case GameVersion.S:
+                    game = "rs";
+                    ext = ".png";
+                    break;
+                case GameVersion.FR:
+                case GameVersion.LG:
+                    game = "frlg";
+                    ext = ".png";
+                    break;
+                case GameVersion.E:
+                    game = "e";
+                    ext = ".gif";
+                    break;
+                case GameVersion.CXD:
+                    game = "cxd";
+                    ext = ".gif";
+                    break;
+                case GameVersion.DP:
+                    game = "dp";
+                    ext = ".png";
+                    break;
+                case GameVersion.Pt:
+                    game = "pt";
+                    ext = ".png";
+                    break;
+                case GameVersion.HGSS:
+                    game = "hgss";
+                    ext = ".png";
+                    break;
                 case GameVersion.B:
                 case GameVersion.W:
                     game = "bw";
@@ -491,6 +521,11 @@ namespace MonCollection
                 case GameVersion.UM:
                     game = "smusum";
                     ext = ".gif";
+                    break;
+                case GameVersion.GP:
+                case GameVersion.GE:
+                    game = "lgpe";
+                    ext = ".png";
                     break;
             }
             return retrieveImage("img/"+game+"/"+species+ext);
