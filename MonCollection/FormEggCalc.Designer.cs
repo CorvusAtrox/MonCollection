@@ -61,6 +61,12 @@
             this.bpkx11 = new System.Windows.Forms.PictureBox();
             this.bpkx12 = new System.Windows.Forms.PictureBox();
             this.bpkx13 = new System.Windows.Forms.PictureBox();
+            this.monIcon = new System.Windows.Forms.PictureBox();
+            this.labelMateName = new System.Windows.Forms.Label();
+            this.eggIcon = new System.Windows.Forms.PictureBox();
+            this.listMoves = new System.Windows.Forms.ListBox();
+            this.listMovesMon = new System.Windows.Forms.ListBox();
+            this.listMovesMate = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).BeginInit();
@@ -91,13 +97,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(13, 13);
+            this.labelName.Location = new System.Drawing.Point(60, 18);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(64, 13);
             this.labelName.TabIndex = 0;
@@ -132,6 +140,7 @@
             this.SCR_Box.Name = "SCR_Box";
             this.SCR_Box.Size = new System.Drawing.Size(24, 156);
             this.SCR_Box.TabIndex = 116;
+            this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
             // 
             // bpkx1
             // 
@@ -453,12 +462,79 @@
             this.bpkx13.TabIndex = 129;
             this.bpkx13.TabStop = false;
             // 
+            // monIcon
+            // 
+            this.monIcon.BackColor = System.Drawing.Color.Transparent;
+            this.monIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.monIcon.Location = new System.Drawing.Point(12, 12);
+            this.monIcon.Name = "monIcon";
+            this.monIcon.Size = new System.Drawing.Size(42, 32);
+            this.monIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.monIcon.TabIndex = 148;
+            this.monIcon.TabStop = false;
+            this.monIcon.Tag = "";
+            // 
+            // labelMateName
+            // 
+            this.labelMateName.AutoSize = true;
+            this.labelMateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMateName.Location = new System.Drawing.Point(324, 18);
+            this.labelMateName.Name = "labelMateName";
+            this.labelMateName.Size = new System.Drawing.Size(64, 13);
+            this.labelMateName.TabIndex = 149;
+            this.labelMateName.Text = "Name: {0}";
+            // 
+            // eggIcon
+            // 
+            this.eggIcon.BackColor = System.Drawing.Color.Transparent;
+            this.eggIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eggIcon.Location = new System.Drawing.Point(192, 127);
+            this.eggIcon.Name = "eggIcon";
+            this.eggIcon.Size = new System.Drawing.Size(42, 32);
+            this.eggIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.eggIcon.TabIndex = 150;
+            this.eggIcon.TabStop = false;
+            this.eggIcon.Tag = "";
+            // 
+            // listMoves
+            // 
+            this.listMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMoves.FormattingEnabled = true;
+            this.listMoves.Location = new System.Drawing.Point(192, 174);
+            this.listMoves.Name = "listMoves";
+            this.listMoves.Size = new System.Drawing.Size(109, 95);
+            this.listMoves.TabIndex = 151;
+            // 
+            // listMovesMon
+            // 
+            this.listMovesMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMovesMon.FormattingEnabled = true;
+            this.listMovesMon.Location = new System.Drawing.Point(63, 46);
+            this.listMovesMon.Name = "listMovesMon";
+            this.listMovesMon.Size = new System.Drawing.Size(109, 95);
+            this.listMovesMon.TabIndex = 152;
+            // 
+            // listMovesMate
+            // 
+            this.listMovesMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMovesMate.FormattingEnabled = true;
+            this.listMovesMate.Location = new System.Drawing.Point(327, 46);
+            this.listMovesMate.Name = "listMovesMate";
+            this.listMovesMate.Size = new System.Drawing.Size(109, 95);
+            this.listMovesMate.TabIndex = 153;
+            // 
             // FormEggCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listMovesMate);
+            this.Controls.Add(this.listMovesMon);
+            this.Controls.Add(this.listMoves);
+            this.Controls.Add(this.eggIcon);
+            this.Controls.Add(this.labelMateName);
+            this.Controls.Add(this.monIcon);
             this.Controls.Add(this.L_Count);
             this.Controls.Add(this.bpkx30);
             this.Controls.Add(this.SCR_Box);
@@ -524,6 +600,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,5 +642,11 @@
         private System.Windows.Forms.PictureBox bpkx11;
         private System.Windows.Forms.PictureBox bpkx12;
         private System.Windows.Forms.PictureBox bpkx13;
+        private System.Windows.Forms.PictureBox monIcon;
+        private System.Windows.Forms.Label labelMateName;
+        private System.Windows.Forms.PictureBox eggIcon;
+        private System.Windows.Forms.ListBox listMoves;
+        private System.Windows.Forms.ListBox listMovesMon;
+        private System.Windows.Forms.ListBox listMovesMate;
     }
 }

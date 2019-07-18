@@ -18,6 +18,9 @@ namespace MonCollection
         private int ind = 0;
         private int mate = 0;
         private string game;
+        private int gen;
+        private PKM mon;
+        private GameVersion version;
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -27,6 +30,9 @@ namespace MonCollection
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
 
+        private int[] eg;
+
+        List<ComboItem> moveNames;
 
         public FormEggCalc()
         {
@@ -49,7 +55,7 @@ namespace MonCollection
                     if ((int)slot.Tag != -1)
                     {
                         mate = (int)slot.Tag;
-                        //OpenPKM(PkmData[(int)slot.Tag]);
+                        SetMate(PkmData[(int)slot.Tag]);
                         FillPKXBoxes((int)(bpkx1.Tag) / RES_MIN);
                     }
 
@@ -67,21 +73,52 @@ namespace MonCollection
                                          457, 459, 460, 461, 464, 465, 473};
         }
 
-        public void loadDB(List<PKM> data, int index)
+        public void loadDB(List<PKM> data, int index, GameVersion vers)
         {
             PkmData = data;
             ind = index;
-            game = data[index].Identifier.Split('\\')[1];
+            mon = PkmData[ind];
+            game = mon.Identifier.Split('\\')[1];
+            gen = getGen(mon.Identifier);
+            version = vers;
         }
 
         public void showValues()
         {
-            PKM mon = PkmData[ind];
-            labelName.Text = String.Format("Name: {0}",mon.Nickname);
+            moveNames = new List<ComboItem>(GameInfo.FilteredSources.Moves);
 
-            PkmData = PkmData.Where(pk=> pk.Identifier.Split('\\')[1] == game)
-                               .Where(pk => (pk.Gender + mon.Gender == 1) 
-                               || (pk.Species == 132 ^ mon.Species == 132)).ToList();
+            foreach (int move in mon.Moves)
+                listMovesMon.Items.Add(moveName(move));
+
+            eg = mon.PersonalInfo.EggGroups;
+            labelName.Text = String.Format("Name: {0}",mon.Nickname);
+            if (mon.PersonalInfo.IsEggGroup(15))
+            {
+                PkmData = PkmData.Where(pk => false).ToList();
+            }
+            else
+            {
+                PkmData = PkmData.Where(pk => getGen(pk.Identifier) == gen)
+                               .Where(pk => ((pk.Gender + mon.Gender == 1) &&
+                               (pk.PersonalInfo.IsEggGroup(eg[0]) || pk.PersonalInfo.IsEggGroup(eg[1])))
+                               || ((pk.Species == 132 ^ mon.Species == 132) && (!pk.PersonalInfo.IsEggGroup(15))))
+                               .ToList();
+            }
+
+            string spForm = mon.Species.ToString();
+            if (mon.AltForm > 0)
+                spForm += "-" + mon.AltForm.ToString();
+            else if (majorGenderDiff.Contains(mon.Species))
+            {
+                if (mon.Gender == 0)
+                    spForm += "m";
+                else if (mon.Gender == 1)
+                    spForm += "f";
+            }
+            monIcon.Image = retrieveImage("img/icons/" + spForm + ".png");
+
+            FillPKXBoxes(0);
+            SetResults(PkmData);
         }
 
         private void FillPKXBoxes(int start)
@@ -128,6 +165,83 @@ namespace MonCollection
                 return Image.FromFile(path);
             else
                 return null;
+        }
+
+        private void SCR_Box_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (e.OldValue != e.NewValue)
+                FillPKXBoxes(e.NewValue);
+        }
+
+        private void SetResults(List<PKM> res)
+        {
+
+            SCR_Box.Maximum = (int)Math.Ceiling((decimal)res.Count / RES_MIN);
+            if (SCR_Box.Maximum > 0) SCR_Box.Maximum--;
+
+            mate = 0; // reset the slot last viewed
+            SCR_Box.Value = 0;
+
+            L_Count.Text = string.Format("Mates {0}", res.Count);
+            if(PkmData.Count != 0)
+                SetMate(PkmData[0]);
+        }
+
+        private void SetMate(PKM mate)
+        {
+            labelMateName.Text = String.Format("Name: {0}", mate.Nickname);
+            listMovesMate.Items.Clear();
+            foreach (int move in mate.Moves)
+                listMovesMate.Items.Add(moveName(move));
+            if (mon.Gender == 1 || mate.Species == 132)
+                makeEgg(mon, mate);
+            else
+                makeEgg(mate, mon);
+
+        }
+
+        private int getGen(string identifier)
+        {
+            string sub = identifier.Substring(identifier.IndexOf(".p"));
+            return int.Parse(sub.Substring(3));
+        }
+
+        private void makeEgg(PKM mon1, PKM mon2)
+        {
+            int sp = Legal.GetBaseEggSpecies(mon1);
+            int[] moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
+            eggIcon.Image = retrieveImage("img/icons/" + sp.ToString() + ".png");
+            listMoves.Items.Clear();
+            if (gen >= 6)
+            {
+                foreach(int move in moves.Intersect(mon1.Moves))
+                    listMoves.Items.Add(moveName(move));
+            }
+            foreach (int move in moves.Intersect(mon2.Moves))
+                listMoves.Items.Add(moveName(move));
+            if(gen <= 5)
+            {
+                moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
+                foreach (int move in moves.Intersect(mon2.Moves))
+                    listMoves.Items.Add(moveName(move));
+            }
+            if(version == GameVersion.C)
+            {
+                moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+                foreach (int move in moves.Intersect(mon2.Moves))
+                    listMoves.Items.Add(moveName(move));
+            }
+            if (Legal.GetCanInheritMoves(sp))
+            {
+                foreach (int move in mon1.Moves.Intersect(mon2.Moves))
+                    listMoves.Items.Add(moveName(move));
+            }
+        }
+
+        private string moveName(int index)
+        {
+            var result = moveNames.Where(move => move.Value == index).ToArray();
+            return result[0].Text;
         }
     }
 }

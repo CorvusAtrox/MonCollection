@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -316,6 +314,7 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     labelPkrs.Visible = false;
+                    buttonEggs.Visible = false;
                     break;
                 case 2:
                     labelGender.Visible = true;
@@ -328,6 +327,7 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     labelPkrs.Visible = true;
+                    buttonEggs.Visible = true;
                     break;
                 case 3:
                 case 4:
@@ -342,6 +342,7 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     labelPkrs.Visible = true;
+                    buttonEggs.Visible = true;
                     break;
                 case 6:
                 case 7:
@@ -356,6 +357,7 @@ namespace MonCollection
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     labelPkrs.Visible = true;
+                    buttonEggs.Visible = true;
                     break;
             }
 
@@ -791,7 +793,7 @@ namespace MonCollection
         {
             var results = new FormEggCalc();
 
-            results.loadDB(PkmData, slotSelected);
+            results.loadDB(PkmData, slotSelected,ver.Version);
             results.showValues();
             results.Show();
         }
