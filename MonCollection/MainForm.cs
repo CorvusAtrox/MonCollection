@@ -17,9 +17,7 @@ namespace MonCollection
     public partial class MainForm : Form
     {
         private SaveFile ver;
-        private SoundPlayer cryMaker;
         private string[] genders = { "♂", "♀️", "-" };
-        //private string[] genders = { "M", "F", "N" };
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private ComboBox[] moveBoxes;
         private PictureBox[] PKXBOXES;
@@ -47,6 +45,7 @@ namespace MonCollection
 
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
+        private int[] noDiff;
 
         public static DrawConfig Draw = new DrawConfig();
 
@@ -168,6 +167,7 @@ namespace MonCollection
                                          397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473};
+            noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
         }
 
         private void InitializeStrings(string spr, GameVersion gv)
@@ -379,15 +379,16 @@ namespace MonCollection
             labelSpAtk.Text = string.Format(SpAtk, pk.Stat_SPA);
             labelSpDef.Text = string.Format(SpDef, pk.Stat_SPD);
             labelSpeed.Text = string.Format(Speed, pk.Stat_SPE);
+            setStatText(pk.Nature,getGen(pk.Identifier));
 
             labelOT.Text = string.Format(OT,pk.DisplayTID,pk.OT_Name);
             labelGame.Text = string.Format(Game, pk.Identifier.Split('\\')[1]);
 
             textBoxLevel.Text = pk.CurrentLevel.ToString();
 
-            pictureBoxBall.Image = retrieveImage("img/ball/" + pk.Ball + ".png");
+            pictureBoxBall.Image = retrieveImage("Resources/img/ball/" + pk.Ball + ".png");
             string spForm = pk.Species.ToString();
-            if (pk.AltForm > 0)
+            if (pk.AltForm > 0 && !noDiff.Contains(pk.Species))
                 spForm += "-" + pk.AltForm.ToString();
             else if (majorGenderDiff.Contains(pk.Species))
             {
@@ -396,7 +397,7 @@ namespace MonCollection
                 else if(pk.Gender == 1)
                     spForm += "f";
             }
-            pictureBoxIcon.Image = retrieveImage("img/icons/" + spForm + ".png");
+            pictureBoxIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
 
             if (minorGenderDiff.Contains(pk.Species))
             {
@@ -408,7 +409,7 @@ namespace MonCollection
                         spForm += "f";
                 }
             }
-            pictureBoxGameSprite.Image = getSprite(spForm, ver.Version);
+            pictureBoxGameSprite.Image = getSprite(spForm, ver.Version,pk.IsShiny);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             Label_IsShiny.Visible = pk.IsShiny;
@@ -418,12 +419,12 @@ namespace MonCollection
                 if (pk.PKRS_Cured)
                 {
                     labelPkrs.Text = "Cured";
-                    pictureBoxPkrs.Image = retrieveImage("img/pkrsCured.png");
+                    pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsCured.png");
                 }
                 else
                 {
                     labelPkrs.Text = "Infected";
-                    pictureBoxPkrs.Image = retrieveImage("img/pkrsInfected.png");
+                    pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsInfected.png");
                 }
                 labelPkrs.Text += " - " + pk.PKRS_Strain.ToString();
             }
@@ -437,11 +438,28 @@ namespace MonCollection
             comboBoxForm.DataSource = ds;
             comboBoxForm.SelectedIndex = pk.AltForm;
 
-            cryMaker = new SoundPlayer("cries/" + pk.Species + ".wav");
-            cryMaker.Play();
+            playCry(pk.Species, pk.AltForm);
         }
 
-        private Image getSprite(string species, GameVersion version)
+        private void playCry(int sp, int form)
+        {
+            string spCry;
+            if (form > 0)
+            {
+                spCry = "resources/cries/" + sp.ToString() + "-" + form.ToString() + ".wav";
+                if(!File.Exists(spCry))
+                    spCry = "resources/cries/" + sp.ToString() + ".wav";
+            }    
+            else
+                spCry = "resources/cries/" + sp.ToString() + ".wav";
+            if (File.Exists(spCry))
+            {
+                SoundPlayer sound = new SoundPlayer(spCry);
+                sound.Play();
+            }
+        }
+
+        private Image getSprite(string species, GameVersion version, bool shiny)
         {
             string game = "";
             string ext = "";
@@ -468,13 +486,11 @@ namespace MonCollection
                     game = "c";
                     ext = ".gif";
                     break;
-                case GameVersion.R:
-                case GameVersion.S:
+                case GameVersion.RS:
                     game = "rs";
                     ext = ".png";
                     break;
-                case GameVersion.FR:
-                case GameVersion.LG:
+                case GameVersion.FRLG:
                     game = "frlg";
                     ext = ".png";
                     break;
@@ -528,7 +544,10 @@ namespace MonCollection
                     ext = ".png";
                     break;
             }
-            return retrieveImage("img/"+game+"/"+species+ext);
+            if(!shiny)
+                return retrieveImage("Resources/img/"+game+"/"+species+ext);
+            else
+                return retrieveImage("Resources/img/" + game + "/rare/" + species + ext);
         }
 
         private void ValidateMovePaint(object sender, DrawItemEventArgs e)
@@ -633,7 +652,7 @@ namespace MonCollection
             {
                 PKM mon = PkmData[i + begin];
                 string spForm = mon.Species.ToString();
-                if(mon.AltForm > 0)
+                if(mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                     spForm += "-" + mon.AltForm.ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
@@ -642,7 +661,7 @@ namespace MonCollection
                     else if (mon.Gender == 1)
                         spForm += "f";
                 }
-                PKXBOXES[i].Image = retrieveImage("img/icons/" + spForm + ".png");
+                PKXBOXES[i].Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
@@ -654,7 +673,7 @@ namespace MonCollection
             for (int i = 0; i < RES_MAX; i++)
                 PKXBOXES[i].BackgroundImage = null;
             if (slotSelected != -1 && slotSelected >= begin && slotSelected < begin + RES_MAX)
-                PKXBOXES[slotSelected - begin].BackgroundImage = Image.FromFile("img/slotView.png");
+                PKXBOXES[slotSelected - begin].BackgroundImage = Image.FromFile("Resources/img/slotView.png");
         }
 
         private void SCR_Box_Scroll(object sender, ScrollEventArgs e)
@@ -831,6 +850,85 @@ namespace MonCollection
             results.loadDB(PkmData, slotSelected,ver.Version);
             results.showValues();
             results.Show();
+        }
+
+        private void setStatText(int nature, int gen)
+        {
+
+            labelAttack.ForeColor = Color.Black;
+            labelDefense.ForeColor = Color.Black;
+            labelSpAtk.ForeColor = Color.Black;
+            labelSpDef.ForeColor = Color.Black;
+            labelSpeed.ForeColor = Color.Black;
+
+            if(gen >= 3)
+            {
+                int plus = (nature / 5);
+                int minus = nature % 5;
+
+                if (plus != minus)
+                {
+                    switch (plus)
+                    {
+                        case 0:
+                            labelAttack.ForeColor = Color.Red;
+                            break;
+                        case 1:
+                            labelDefense.ForeColor = Color.Red;
+                            break;
+                        case 2:
+                            labelSpeed.ForeColor = Color.Red;
+                            break;
+                        case 3:
+                            labelSpAtk.ForeColor = Color.Red;
+                            break;
+                        case 4:
+                            labelSpDef.ForeColor = Color.Red;
+                            break;
+                    }
+
+                    switch (minus)
+                    {
+                        case 0:
+                            labelAttack.ForeColor = Color.Blue;
+                            break;
+                        case 1:
+                            labelDefense.ForeColor = Color.Blue;
+                            break;
+                        case 2:
+                            labelSpeed.ForeColor = Color.Blue;
+                            break;
+                        case 3:
+                            labelSpAtk.ForeColor = Color.Blue;
+                            break;
+                        case 4:
+                            labelSpDef.ForeColor = Color.Blue;
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (plus)
+                    {
+                        case 0:
+                            labelAttack.ForeColor = Color.Purple;
+                            break;
+                        case 1:
+                            labelDefense.ForeColor = Color.Purple;
+                            break;
+                        case 2:
+                            labelSpeed.ForeColor = Color.Purple;
+                            break;
+                        case 3:
+                            labelSpAtk.ForeColor = Color.Purple;
+                            break;
+                        case 4:
+                            labelSpDef.ForeColor = Color.Purple;
+                            break;
+                    }
+                }
+            }
+
         }
     }
 }

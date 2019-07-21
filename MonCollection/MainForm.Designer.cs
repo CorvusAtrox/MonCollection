@@ -195,7 +195,7 @@ namespace MonCollection
             this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSpecies.FormattingEnabled = true;
-            this.comboBoxSpecies.Location = new System.Drawing.Point(90, 68);
+            this.comboBoxSpecies.Location = new System.Drawing.Point(100, 68);
             this.comboBoxSpecies.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
             this.comboBoxSpecies.Size = new System.Drawing.Size(115, 21);
@@ -207,7 +207,7 @@ namespace MonCollection
             this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpecies.ForeColor = System.Drawing.Color.Black;
-            this.labelSpecies.Location = new System.Drawing.Point(31, 71);
+            this.labelSpecies.Location = new System.Drawing.Point(41, 71);
             this.labelSpecies.Name = "labelSpecies";
             this.labelSpecies.Size = new System.Drawing.Size(56, 13);
             this.labelSpecies.TabIndex = 7;
@@ -785,7 +785,7 @@ namespace MonCollection
             // 
             // pictureBoxGameSprite
             // 
-            this.pictureBoxGameSprite.Location = new System.Drawing.Point(367, 71);
+            this.pictureBoxGameSprite.Location = new System.Drawing.Point(377, 71);
             this.pictureBoxGameSprite.Name = "pictureBoxGameSprite";
             this.pictureBoxGameSprite.Size = new System.Drawing.Size(57, 39);
             this.pictureBoxGameSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -933,7 +933,7 @@ namespace MonCollection
             this.Label_IsShiny.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label_IsShiny.Image = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.Image")));
             this.Label_IsShiny.InitialImage = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.InitialImage")));
-            this.Label_IsShiny.Location = new System.Drawing.Point(206, 69);
+            this.Label_IsShiny.Location = new System.Drawing.Point(216, 69);
             this.Label_IsShiny.Margin = new System.Windows.Forms.Padding(0, 2, 2, 0);
             this.Label_IsShiny.Name = "Label_IsShiny";
             this.Label_IsShiny.Size = new System.Drawing.Size(20, 20);
@@ -949,7 +949,7 @@ namespace MonCollection
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(228, 68);
+            this.comboBoxForm.Location = new System.Drawing.Point(238, 68);
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
