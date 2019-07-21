@@ -9,6 +9,7 @@ using System.Media;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MonCollection.Properties;
 using PKHeX.Core;
 using PKHeX.WinForms;
 
@@ -266,7 +267,7 @@ namespace MonCollection
 
         private void SetVersion(string identifier)
         {
-            identifier = identifier.Split('\\')[1];
+            identifier = getGame(identifier);
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
             {
                 ver = SaveUtil.GetBlankSAV(GameVersion.US, "setMe");
@@ -285,7 +286,7 @@ namespace MonCollection
 
         private int gameIndex(string identifier)
         {
-            identifier = identifier.Split('\\')[1];
+            identifier = getGame(identifier);
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
                 return 0;
             else
@@ -382,7 +383,7 @@ namespace MonCollection
             setStatText(pk.Nature,getGen(pk.Identifier));
 
             labelOT.Text = string.Format(OT,pk.DisplayTID,pk.OT_Name);
-            labelGame.Text = string.Format(Game, pk.Identifier.Split('\\')[1]);
+            labelGame.Text = string.Format(Game, getGame(pk.Identifier));
 
             textBoxLevel.Text = pk.CurrentLevel.ToString();
 
@@ -577,7 +578,7 @@ namespace MonCollection
 
         private void LoadDatabase()
         {
-            PkmData = LoadPKMSaves("mons");
+            PkmData = LoadPKMSaves(Settings.Default.mons);
 
             // Load stats for pkm who do not have any
             foreach (var pk in PkmData.Where(z => z.Stat_Level == 0))
@@ -762,7 +763,7 @@ namespace MonCollection
         private void ButtonGameTally_Click(object sender, EventArgs e)
         {
             var query = PkmData.GroupBy(
-                mon => mon.Identifier.Split('\\')[1],
+                mon => getGame(mon.Identifier),
                 mon => mon.Nickname,
                 (game, name) => new
                 {
@@ -787,7 +788,7 @@ namespace MonCollection
             var SpeciesList = new List<ComboItem>(GameInfo.SpeciesDataSource);
             var query = PkmData.GroupBy(
                 mon => mon.Species,
-                mon => mon.Identifier.Split('\\')[1],
+                mon => getGame(mon.Identifier),
                 (species, game) => new
                 {
                     Name = PkmListAny.Find(p => p.Value == species).Text,
@@ -826,6 +827,13 @@ namespace MonCollection
         private bool getGameMons(GameVersion version, int species)
         {
             return monInGame[new Tuple<GameVersion, int>(version, species)];
+        }
+
+        private string getGame(string identifier)
+        {
+            string[] strings = identifier.Split('\\');
+            int count = strings.Count();
+            return strings[count - 2];
         }
 
         private int getGen(string identifier)
