@@ -1,5 +1,14 @@
 
 .vs
-MonCollection/obj/Debug
-MonCollection/program/PKHeX.pdb
+MonCollection/bin
+MonCollection/obj
 MonCollection/program
+MonCollection/program/MonCollection.exe
+MonCollection/program/MonCollection.exe.config
+MonCollection/program/MonCollection.pdb
+MonCollection/program/PKHeX.Core.dll
+MonCollection/program/PKHeX.Core.dll.config
+MonCollection/program/PKHeX.Core.pdb
+MonCollection/program/PKHeX.exe
+MonCollection/program/PKHeX.exe.config
+MonCollection/program/PKHeX.pdb
