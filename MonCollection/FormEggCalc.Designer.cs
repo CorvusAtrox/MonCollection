@@ -67,6 +67,12 @@
             this.listMoves = new System.Windows.Forms.ListBox();
             this.listMovesMon = new System.Windows.Forms.ListBox();
             this.listMovesMate = new System.Windows.Forms.ListBox();
+            this.pictureBoxBall = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBall2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBall2a = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBalla = new System.Windows.Forms.PictureBox();
+            this.listMoves2 = new System.Windows.Forms.ListBox();
+            this.eggIcon2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).BeginInit();
@@ -99,6 +105,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -523,12 +534,71 @@
             this.listMovesMate.Size = new System.Drawing.Size(109, 95);
             this.listMovesMate.TabIndex = 153;
             // 
+            // pictureBoxBall
+            // 
+            this.pictureBoxBall.Location = new System.Drawing.Point(240, 134);
+            this.pictureBoxBall.Name = "pictureBoxBall";
+            this.pictureBoxBall.Size = new System.Drawing.Size(24, 25);
+            this.pictureBoxBall.TabIndex = 154;
+            this.pictureBoxBall.TabStop = false;
+            // 
+            // pictureBoxBall2
+            // 
+            this.pictureBoxBall2.Location = new System.Drawing.Point(277, 134);
+            this.pictureBoxBall2.Name = "pictureBoxBall2";
+            this.pictureBoxBall2.Size = new System.Drawing.Size(24, 25);
+            this.pictureBoxBall2.TabIndex = 155;
+            this.pictureBoxBall2.TabStop = false;
+            // 
+            // pictureBoxBall2a
+            // 
+            this.pictureBoxBall2a.Location = new System.Drawing.Point(277, 282);
+            this.pictureBoxBall2a.Name = "pictureBoxBall2a";
+            this.pictureBoxBall2a.Size = new System.Drawing.Size(24, 25);
+            this.pictureBoxBall2a.TabIndex = 159;
+            this.pictureBoxBall2a.TabStop = false;
+            // 
+            // pictureBoxBalla
+            // 
+            this.pictureBoxBalla.Location = new System.Drawing.Point(240, 282);
+            this.pictureBoxBalla.Name = "pictureBoxBalla";
+            this.pictureBoxBalla.Size = new System.Drawing.Size(24, 25);
+            this.pictureBoxBalla.TabIndex = 158;
+            this.pictureBoxBalla.TabStop = false;
+            // 
+            // listMoves2
+            // 
+            this.listMoves2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMoves2.FormattingEnabled = true;
+            this.listMoves2.Location = new System.Drawing.Point(192, 322);
+            this.listMoves2.Name = "listMoves2";
+            this.listMoves2.Size = new System.Drawing.Size(109, 95);
+            this.listMoves2.TabIndex = 157;
+            // 
+            // eggIcon2
+            // 
+            this.eggIcon2.BackColor = System.Drawing.Color.Transparent;
+            this.eggIcon2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.eggIcon2.Location = new System.Drawing.Point(192, 275);
+            this.eggIcon2.Name = "eggIcon2";
+            this.eggIcon2.Size = new System.Drawing.Size(42, 32);
+            this.eggIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.eggIcon2.TabIndex = 156;
+            this.eggIcon2.TabStop = false;
+            this.eggIcon2.Tag = "";
+            // 
             // FormEggCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBoxBall2a);
+            this.Controls.Add(this.pictureBoxBalla);
+            this.Controls.Add(this.listMoves2);
+            this.Controls.Add(this.eggIcon2);
+            this.Controls.Add(this.pictureBoxBall2);
+            this.Controls.Add(this.pictureBoxBall);
             this.Controls.Add(this.listMovesMate);
             this.Controls.Add(this.listMovesMon);
             this.Controls.Add(this.listMoves);
@@ -602,6 +672,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -648,5 +723,11 @@
         private System.Windows.Forms.ListBox listMoves;
         private System.Windows.Forms.ListBox listMovesMon;
         private System.Windows.Forms.ListBox listMovesMate;
+        private System.Windows.Forms.PictureBox pictureBoxBall;
+        private System.Windows.Forms.PictureBox pictureBoxBall2;
+        private System.Windows.Forms.PictureBox pictureBoxBall2a;
+        private System.Windows.Forms.PictureBox pictureBoxBalla;
+        private System.Windows.Forms.ListBox listMoves2;
+        private System.Windows.Forms.PictureBox eggIcon2;
     }
 }

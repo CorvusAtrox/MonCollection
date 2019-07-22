@@ -196,7 +196,8 @@ namespace MonCollection
         {
             ComboBox[] cbs =
             {
-                comboBoxBalls, comboBoxSpecies, comboBoxLanguage, comboBoxAbility, comboBoxNature
+                comboBoxBalls, comboBoxSpecies, comboBoxLanguage, comboBoxAbility, comboBoxNature,
+                comboBoxOrigin, comboBoxMet
             };
 
             moveBoxes = new []{comboBoxMove1, comboBoxMove2, comboBoxMove3, comboBoxMove4};
@@ -248,7 +249,7 @@ namespace MonCollection
             comboBoxSpecies.DataSource = new BindingSource(source.Species, null);
             comboBoxAbility.DataSource = new BindingSource(source.Abilities, null);
             comboBoxNature.DataSource = new BindingSource(source.Natures, null);
-            //CB_GameOrigin.DataSource = new BindingSource(source.Games, null);
+            comboBoxOrigin.DataSource = new BindingSource(source.Games, null);
 
             // Set the Move ComboBoxes too..
             LegalMoveSource.ReloadMoves(source.Moves);
@@ -302,6 +303,8 @@ namespace MonCollection
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
             }
 
+            comboBoxMet.DataSource = new BindingSource(GameInfo.GetLocationList(ver.Version,pk.Format), null);
+
             switch (ver.Generation)
             {
                 case 1:
@@ -312,6 +315,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = false;
                     labelNature.Visible = false;
                     comboBoxNature.Visible = false;
+                    labelMet.Visible = false;
+                    comboBoxMet.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     labelPkrs.Visible = false;
@@ -323,6 +328,8 @@ namespace MonCollection
                     comboBoxBalls.Visible = false;
                     labelAbility.Visible = false;
                     comboBoxAbility.Visible = false;
+                    labelMet.Visible = false;
+                    comboBoxMet.Visible = false;
                     labelNature.Visible = false;
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
@@ -340,6 +347,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
+                    //labelMet.Visible = true;
+                    //comboBoxMet.Visible = true;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     labelPkrs.Visible = true;
@@ -355,6 +364,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
+                    //labelMet.Visible = true;
+                    //comboBoxMet.Visible = true;
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     labelPkrs.Visible = true;
@@ -368,6 +379,9 @@ namespace MonCollection
             comboBoxLanguage.SelectedValue = pk.Language;
             comboBoxAbility.SelectedValue = pk.Ability;
             comboBoxNature.SelectedValue = pk.Nature;
+
+            comboBoxOrigin.SelectedValue = pk.Version;
+            comboBoxMet.SelectedValue = pk.Met_Location;
 
             comboBoxMove1.SelectedValue = pk.Move1;
             comboBoxMove2.SelectedValue = pk.Move2;
@@ -438,6 +452,10 @@ namespace MonCollection
             var ds = PKX.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Format);
             comboBoxForm.DataSource = ds;
             comboBoxForm.SelectedIndex = pk.AltForm;
+            if (comboBoxForm.Items.Count != 1)
+                comboBoxForm.Visible = true;
+            else
+                comboBoxForm.Visible = false;
 
             playCry(pk.Species, pk.AltForm);
         }

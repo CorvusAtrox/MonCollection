@@ -106,6 +106,10 @@ namespace MonCollection
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
             this.buttonNiqCalc = new System.Windows.Forms.Button();
             this.buttonEggs = new System.Windows.Forms.Button();
+            this.comboBoxOrigin = new System.Windows.Forms.ComboBox();
+            this.comboBoxMet = new System.Windows.Forms.ComboBox();
+            this.labelOrigin = new System.Windows.Forms.Label();
+            this.labelMet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -995,12 +999,66 @@ namespace MonCollection
             this.buttonEggs.UseVisualStyleBackColor = true;
             this.buttonEggs.Click += new System.EventHandler(this.ButtonEggs_Click);
             // 
+            // comboBoxOrigin
+            // 
+            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxOrigin.FormattingEnabled = true;
+            this.comboBoxOrigin.Location = new System.Drawing.Point(242, 207);
+            this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxOrigin.Name = "comboBoxOrigin";
+            this.comboBoxOrigin.Size = new System.Drawing.Size(115, 21);
+            this.comboBoxOrigin.TabIndex = 138;
+            // 
+            // comboBoxMet
+            // 
+            this.comboBoxMet.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMet.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMet.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxMet.FormattingEnabled = true;
+            this.comboBoxMet.Location = new System.Drawing.Point(242, 227);
+            this.comboBoxMet.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxMet.Name = "comboBoxMet";
+            this.comboBoxMet.Size = new System.Drawing.Size(115, 21);
+            this.comboBoxMet.TabIndex = 139;
+            // 
+            // labelOrigin
+            // 
+            this.labelOrigin.AutoSize = true;
+            this.labelOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrigin.ForeColor = System.Drawing.Color.Black;
+            this.labelOrigin.Location = new System.Drawing.Point(194, 210);
+            this.labelOrigin.Name = "labelOrigin";
+            this.labelOrigin.Size = new System.Drawing.Size(44, 13);
+            this.labelOrigin.TabIndex = 140;
+            this.labelOrigin.Text = "Origin:";
+            // 
+            // labelMet
+            // 
+            this.labelMet.AutoSize = true;
+            this.labelMet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelMet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMet.ForeColor = System.Drawing.Color.Black;
+            this.labelMet.Location = new System.Drawing.Point(192, 230);
+            this.labelMet.Name = "labelMet";
+            this.labelMet.Size = new System.Drawing.Size(48, 13);
+            this.labelMet.TabIndex = 141;
+            this.labelMet.Text = "Met At:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 441);
+            this.Controls.Add(this.labelMet);
+            this.Controls.Add(this.labelOrigin);
+            this.Controls.Add(this.comboBoxMet);
+            this.Controls.Add(this.comboBoxOrigin);
             this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
@@ -1195,6 +1253,10 @@ namespace MonCollection
         private PictureBox pictureBoxPkrs;
         private Button buttonNiqCalc;
         private Button buttonEggs;
+        private ComboBox comboBoxOrigin;
+        private ComboBox comboBoxMet;
+        private Label labelOrigin;
+        private Label labelMet;
     }
 }
 
