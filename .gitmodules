@@ -1,0 +1,3 @@
+[submodule "PKHex"]
+	path = PKHex
+	url = https://github.com/kwsch/PKHeX
