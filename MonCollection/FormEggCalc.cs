@@ -366,17 +366,17 @@ namespace MonCollection
 
         private IEnumerable<int> calcTMMoves(PKM mon, int species, int forme)
         {
-            Type tmType = pkAssembly.GetType("PkHeX.Core.MoveTechnicalMachine");
+            Type tmType = pkAssembly.GetType("PKHeX.Core.MoveTechnicalMachine");
             MethodInfo em = tmType.GetMethod("GetTMHM", BindingFlags.NonPublic | BindingFlags.Static);
-            object[] paramArray = new object[] { mon, species, forme, gen, version };
+            object[] paramArray = new object[] { mon, species, forme, gen, version, true};
             object val = em.Invoke(tmType, paramArray);
             return (IEnumerable<int>)val;
         }
 
         private LearnVersion calcLevelUpMoves(PKM mon, int species, int forme, int move)
         {
-            Type lUpType = pkAssembly.GetType("PkHeX.Core.MoveLevelUp");
-            MethodInfo em = lUpType.GetMethod("GetIsLevelUpMove", BindingFlags.NonPublic | BindingFlags.Static);
+            Type lUpType = pkAssembly.GetType("PKHeX.Core.MoveLevelUp");
+            MethodInfo em = lUpType.GetMethod("GetIsLevelUpMove", BindingFlags.Public | BindingFlags.Static);
             object[] paramArray = new object[] { mon, species, forme, 100, gen, move, 5, 5, version };
             object val = em.Invoke(lUpType, paramArray);
             return (LearnVersion)val;
