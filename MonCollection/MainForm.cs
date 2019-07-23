@@ -424,7 +424,8 @@ namespace MonCollection
                         spForm += "f";
                 }
             }
-            pictureBoxGameSprite.Image = getSprite(spForm, ver.Version,pk.IsShiny);
+            gameDict.TryGetValue(getGame(pk.Identifier), out SaveInfo si);
+            pictureBoxGameSprite.Image = getSprite(spForm, si.version,pk.IsShiny);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             Label_IsShiny.Visible = pk.IsShiny;
