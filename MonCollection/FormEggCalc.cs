@@ -244,7 +244,7 @@ namespace MonCollection
             }
             foreach (int move in mon1.Moves.Intersect(mon2.Moves))
             {
-                if (!listMoves.Items.Contains(move) && move != 0)
+                if (!listMoves.Items.Contains(move) && move != 0 && MoveLevelUp.GetIsLevelUpMove(mon1, sp, 0, 100, gen, move, 5 , 5, version).Level != -1)
                     listMoves.Items.Add(moveName(move));
             }
             int ball = 4;

@@ -50,7 +50,7 @@ namespace MonCollection
         {
             PkmDB = data;
             ind = index;
-            game = data[index].Identifier.Split('\\')[1];
+            game = getGame(data[index].Identifier);
         }
 
         public void showValues()
@@ -64,7 +64,7 @@ namespace MonCollection
 
             var query1 = PkmDB.Where(pk => pk.Species == mon.Species);
             var query2 = query1.Where(pk => getGen(pk.Identifier) == getGen(mon.Identifier));
-            var query3 = query1.Where(pk => pk.Identifier.Split('\\')[1] == game);
+            var query3 = query1.Where(pk => getGame(pk.Identifier) == game);
 
             labelSpVal.Text = String.Format("{0} {1} {2}",query1.Count(), query2.Count(), query3.Count());
 
@@ -85,7 +85,7 @@ namespace MonCollection
                 query1a = query1.Where(pk => pk.Species == mon.Species);
                 query2 = query1.Where(pk => getGen(pk.Identifier) == getGen(mon.Identifier));
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Identifier.Split('\\')[1] == game);
+                query3 = query1.Where(pk => getGame(pk.Identifier) == game);
                 query3a = query3.Where(pk => pk.Species == mon.Species);
 
                 labelMove1.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
@@ -99,7 +99,7 @@ namespace MonCollection
                 query1a = query1.Where(pk => pk.Species == mon.Species);
                 query2 = query1.Where(pk => getGen(pk.Identifier) == getGen(mon.Identifier));
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Identifier.Split('\\')[1] == game);
+                query3 = query1.Where(pk => getGame(pk.Identifier) == game);
                 query3a = query3.Where(pk => pk.Species == mon.Species);
 
                 labelMove2.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
@@ -113,7 +113,7 @@ namespace MonCollection
                 query1a = query1.Where(pk => pk.Species == mon.Species);
                 query2 = query1.Where(pk => getGen(pk.Identifier) == getGen(mon.Identifier));
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Identifier.Split('\\')[1] == game);
+                query3 = query1.Where(pk => getGame(pk.Identifier) == game);
                 query3a = query3.Where(pk => pk.Species == mon.Species);
 
                 labelMove3.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
@@ -127,7 +127,7 @@ namespace MonCollection
                 query1a = query1.Where(pk => pk.Species == mon.Species);
                 query2 = query1.Where(pk => getGen(pk.Identifier) == getGen(mon.Identifier));
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Identifier.Split('\\')[1] == game);
+                query3 = query1.Where(pk => getGame(pk.Identifier) == game);
                 query3a = query3.Where(pk => pk.Species == mon.Species);
 
                 labelMove4.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
@@ -140,6 +140,13 @@ namespace MonCollection
         {
             string sub = identifier.Substring(identifier.IndexOf(".p"));
             return int.Parse(sub.Substring(3));
+        }
+
+        private string getGame(string identifier)
+        {
+            string[] strings = identifier.Split('\\');
+            int count = strings.Count();
+            return strings[count - 2];
         }
     }
 }
