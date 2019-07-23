@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,11 +33,15 @@ namespace MonCollection
 
         private int[] eg;
 
-        List<ComboItem> moveNames;
+        private List<ComboItem> moveNames;
+
+        private Assembly pkAssembly;
 
         public FormEggCalc()
         {
             InitializeComponent();
+
+            pkAssembly = Assembly.LoadFile(Path.GetFullPath("PKHeX.Core.dll"));
 
             PKXBOXES = new[]
             {
@@ -208,145 +213,173 @@ namespace MonCollection
 
         private void makeEgg(PKM mon1, PKM mon2)
         {
-            //var eggs = EncounterEggGenerator.GenerateEggs(mon1);
-            //int sp = eggs.ToArray()[0].Species;
-            //int[] moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
-            //eggIcon.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
-            //listMoves.Items.Clear();
-            //if (gen >= 6)
-            //{
-            //    foreach(int move in moves.Intersect(mon1.Moves))
-            //        listMoves.Items.Add(moveName(move));
-            //}
-            //foreach (int move in moves.Intersect(mon2.Moves))
-            //{
-            //    if(!listMoves.Items.Contains(move))
-            //        listMoves.Items.Add(moveName(move));
-            //}
+            var eggs = EncounterEggGenerator.GenerateEggs(mon1);
+            int sp = eggs.ToArray()[0].Species;
+            int[] moves = calcEggMoves(sp, mon1.AltForm);
+            eggIcon.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+            listMoves.Items.Clear();
+            if (gen >= 6)
+            {
+                foreach(int move in moves.Intersect(mon1.Moves))
+                    listMoves.Items.Add(moveName(move));
+            }
+            foreach (int move in moves.Intersect(mon2.Moves))
+            {
+                if(!listMoves.Items.Contains(move))
+                    listMoves.Items.Add(moveName(move));
+            }
                 
-            //if(gen <= 5)
-            //{
-            //    moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
-            //    foreach (int move in moves.Intersect(mon2.Moves))
-            //    {
-            //        if (!listMoves.Items.Contains(move))
-            //            listMoves.Items.Add(moveName(move));
-            //    }
-            //}
-            //if(version == GameVersion.C)
-            //{
-            //    moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
-            //    foreach (int move in moves.Intersect(mon2.Moves))
-            //    {
-            //        if (!listMoves.Items.Contains(move))
-            //            listMoves.Items.Add(moveName(move));
-            //    }
-            //}
-            //foreach (int move in mon1.Moves.Intersect(mon2.Moves))
-            //{
-            //    if (!listMoves.Items.Contains(move) && move != 0 && MoveLevelUp.GetIsLevelUpMove(mon1, sp, 0, 100, gen, move, 5 , 5, version).Level != -1)
-            //        listMoves.Items.Add(moveName(move));
-            //}
-            //int ball = 4;
-            //int ball2 = 0;
-            //if(gen >= 7)
-            //{
+            if(gen <= 5)
+            {
+                moves = calcTMMoves(mon1,sp,mon1.AltForm).ToArray();
+                foreach (int move in moves.Intersect(mon2.Moves))
+                {
+                    if (!listMoves.Items.Contains(move))
+                        listMoves.Items.Add(moveName(move));
+                }
+            }
+            if(version == GameVersion.C)
+            {
+                moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+                foreach (int move in moves.Intersect(mon2.Moves))
+                {
+                    if (!listMoves.Items.Contains(move))
+                        listMoves.Items.Add(moveName(move));
+                }
+            }
+            foreach (int move in mon1.Moves.Intersect(mon2.Moves))
+            {
+                if (!listMoves.Items.Contains(move) && move != 0 && calcLevelUpMoves(mon1, sp, mon1.AltForm,move).Level != -1)
+                    listMoves.Items.Add(moveName(move));
+            }
+            int ball = 4;
+            int ball2 = 0;
+            if(gen >= 7)
+            {
 
-            //    if (mon2.Species == mon1.Species)
-            //        ball2 = mon2.Ball;
-            //}
-            //else if(gen == 6)
-            //{
-            //    if (mon1.Gender == 1)
-            //        ball = mon1.Ball;
-            //    else if (mon2.Gender == 1)
-            //        ball = mon2.Ball;
-            //}
-            //pictureBoxBall.Image = getBreedBall(ball);
-            //pictureBoxBall2.Image = getBreedBall(ball2);
+                if (mon2.Species == mon1.Species)
+                    ball2 = mon2.Ball;
+            }
+            else if(gen == 6)
+            {
+                if (mon1.Gender == 1)
+                    ball = mon1.Ball;
+                else if (mon2.Gender == 1)
+                    ball = mon2.Ball;
+            }
+            pictureBoxBall.Image = getBreedBall(ball);
+            pictureBoxBall2.Image = getBreedBall(ball2);
 
-            //if (eggs.Count() == 2)
-            //    sp = eggs.ToArray()[1].Species;
-            //else if (sp == 29)
-            //    sp = 32;
-            //else if (sp == 32 && gen >= 5)
-            //    sp = 29;
-            //else if (sp == 313 && gen >= 5)
-            //    sp = 314;
-            //else if (sp == 314)
-            //    sp = 313;
-            //else
-            //    sp = 0;
+            if (eggs.Count() == 2)
+                sp = eggs.ToArray()[1].Species;
+            else if (sp == 29)
+                sp = 32;
+            else if (sp == 32 && gen >= 5)
+                sp = 29;
+            else if (sp == 313 && gen >= 5)
+                sp = 314;
+            else if (sp == 314)
+                sp = 313;
+            else
+                sp = 0;
 
-            //if (sp > 0)
-            //{
-            //    moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
-            //    eggIcon2.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
-            //    listMoves2.Items.Clear();
-            //    if (gen >= 6)
-            //    {
-            //        foreach (int move in moves.Intersect(mon1.Moves))
-            //            listMoves2.Items.Add(moveName(move));
-            //    }
-            //    foreach (int move in moves.Intersect(mon2.Moves))
-            //    {
-            //        if (!listMoves2.Items.Contains(move))
-            //            listMoves2.Items.Add(moveName(move));
-            //    }
+            if (sp > 0)
+            {
+                moves = calcEggMoves(sp, mon1.AltForm);
+                eggIcon2.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+                listMoves2.Items.Clear();
+                if (gen >= 6)
+                {
+                    foreach (int move in moves.Intersect(mon1.Moves))
+                        listMoves2.Items.Add(moveName(move));
+                }
+                foreach (int move in moves.Intersect(mon2.Moves))
+                {
+                    if (!listMoves2.Items.Contains(move))
+                        listMoves2.Items.Add(moveName(move));
+                }
 
-            //    if (gen <= 5)
-            //    {
-            //        moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
-            //        foreach (int move in moves.Intersect(mon2.Moves))
-            //        {
-            //            if (!listMoves2.Items.Contains(move))
-            //                listMoves2.Items.Add(moveName(move));
-            //        }
-            //    }
-            //    if (version == GameVersion.C)
-            //    {
-            //        moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
-            //        foreach (int move in moves.Intersect(mon2.Moves))
-            //        {
-            //            if (!listMoves2.Items.Contains(move))
-            //                listMoves2.Items.Add(moveName(move));
-            //        }
-            //    }
-            //    foreach (int move in mon1.Moves.Intersect(mon2.Moves))
-            //    {
-            //        if (!listMoves2.Items.Contains(move) && move != 0)
-            //            listMoves2.Items.Add(moveName(move));
-            //    }
-            //    ball = 4;
-            //    ball2 = 0;
-            //    if (gen >= 7)
-            //    {
+                if (gen <= 5)
+                {
+                    moves = calcTMMoves(mon1, sp, mon1.AltForm).ToArray();
+                    foreach (int move in moves.Intersect(mon2.Moves))
+                    {
+                        if (!listMoves2.Items.Contains(move))
+                            listMoves2.Items.Add(moveName(move));
+                    }
+                }
+                if (version == GameVersion.C)
+                {
+                    moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+                    foreach (int move in moves.Intersect(mon2.Moves))
+                    {
+                        if (!listMoves2.Items.Contains(move))
+                            listMoves2.Items.Add(moveName(move));
+                    }
+                }
+                foreach (int move in mon1.Moves.Intersect(mon2.Moves))
+                {
+                    if (!listMoves2.Items.Contains(move) && move != 0 && calcLevelUpMoves(mon1, sp, mon1.AltForm, move).Level != -1)
+                        listMoves2.Items.Add(moveName(move));
+                }
+                ball = 4;
+                ball2 = 0;
+                if (gen >= 7)
+                {
 
-            //        if (mon2.Species == mon1.Species)
-            //            ball2 = mon2.Ball;
-            //    }
-            //    else if (gen == 6)
-            //    {
-            //        if (mon1.Gender == 1)
-            //            ball = mon1.Ball;
-            //        else if (mon2.Gender == 1)
-            //            ball = mon2.Ball;
-            //    }
-            //    pictureBoxBalla.Image = getBreedBall(ball);
-            //    pictureBoxBall2a.Image = getBreedBall(ball2);
+                    if (mon2.Species == mon1.Species)
+                        ball2 = mon2.Ball;
+                }
+                else if (gen == 6)
+                {
+                    if (mon1.Gender == 1)
+                        ball = mon1.Ball;
+                    else if (mon2.Gender == 1)
+                        ball = mon2.Ball;
+                }
+                pictureBoxBalla.Image = getBreedBall(ball);
+                pictureBoxBall2a.Image = getBreedBall(ball2);
 
-            //    eggIcon2.Visible = true;
-            //    pictureBoxBalla.Visible = true;
-            //    pictureBoxBall2a.Visible = true;
-            //    listMoves2.Visible = true;
-            //}
-            //else
-            //{
-            //    eggIcon2.Visible = false;
-            //    pictureBoxBalla.Visible = false;
-            //    pictureBoxBall2a.Visible = false;
-            //    listMoves2.Visible = false;
-            //}
+                eggIcon2.Visible = true;
+                pictureBoxBalla.Visible = true;
+                pictureBoxBall2a.Visible = true;
+                listMoves2.Visible = true;
+            }
+            else
+            {
+                eggIcon2.Visible = false;
+                pictureBoxBalla.Visible = false;
+                pictureBoxBall2a.Visible = false;
+                listMoves2.Visible = false;
+            }
+        }
+
+        private int[] calcEggMoves(int species, int forme)
+        {
+            Type eggType = pkAssembly.GetType("PKHeX.Core.MoveEgg");
+            MethodInfo em = eggType.GetMethod("GetEggMoves", BindingFlags.NonPublic | BindingFlags.Static, null,
+                                              new Type[] { typeof(int), typeof(int), typeof(int), typeof(GameVersion) }, null);
+            object[] paramArray = new object[] { gen, species, forme, version };
+            object val = em.Invoke(eggType, paramArray);
+            return (int[]) val;
+        }
+
+        private IEnumerable<int> calcTMMoves(PKM mon, int species, int forme)
+        {
+            Type tmType = pkAssembly.GetType("PkHeX.Core.MoveTechnicalMachine");
+            MethodInfo em = tmType.GetMethod("GetTMHM", BindingFlags.NonPublic | BindingFlags.Static);
+            object[] paramArray = new object[] { mon, species, forme, gen, version };
+            object val = em.Invoke(tmType, paramArray);
+            return (IEnumerable<int>)val;
+        }
+
+        private LearnVersion calcLevelUpMoves(PKM mon, int species, int forme, int move)
+        {
+            Type lUpType = pkAssembly.GetType("PkHeX.Core.MoveLevelUp");
+            MethodInfo em = lUpType.GetMethod("GetIsLevelUpMove", BindingFlags.NonPublic | BindingFlags.Static);
+            object[] paramArray = new object[] { mon, species, forme, 100, gen, move, 5, 5, version };
+            object val = em.Invoke(lUpType, paramArray);
+            return (LearnVersion)val;
         }
 
         private string moveName(int index)
