@@ -108,16 +108,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\xampp\htdocs\PKHeX\PKHeX.Core\PKHeX.Core.csproj">
-      <Project>{e0aab6c9-5327-42bd-a858-f959f341bcb4}</Project>
-      <Name>PKHeX.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\..\xampp\htdocs\PKHeX\PKHeX.WinForms\PKHeX.WinForms.csproj">
-      <Project>{d1b91861-a448-4762-a313-c7bc179f4415}</Project>
-      <Name>PKHeX.WinForms</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\cries\1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -9336,6 +9326,16 @@
     <Folder Include="Resources\img\pt\" />
     <Folder Include="Resources\img\rs\" />
     <Folder Include="Resources\img\sv\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PKHex\PKHeX.Core\PKHeX.Core.csproj">
+      <Project>{e2168dc0-db75-45ab-b625-eca675c0ade7}</Project>
+      <Name>PKHeX.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PKHex\PKHeX.WinForms\PKHeX.WinForms.csproj">
+      <Project>{d1b91861-a448-4762-a313-c7bc179f4415}</Project>
+      <Name>PKHeX.WinForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

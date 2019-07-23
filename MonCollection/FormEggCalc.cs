@@ -208,145 +208,145 @@ namespace MonCollection
 
         private void makeEgg(PKM mon1, PKM mon2)
         {
-            var eggs = EncounterEggGenerator.GenerateEggs(mon1);
-            int sp = eggs.ToArray()[0].Species;
-            int[] moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
-            eggIcon.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
-            listMoves.Items.Clear();
-            if (gen >= 6)
-            {
-                foreach(int move in moves.Intersect(mon1.Moves))
-                    listMoves.Items.Add(moveName(move));
-            }
-            foreach (int move in moves.Intersect(mon2.Moves))
-            {
-                if(!listMoves.Items.Contains(move))
-                    listMoves.Items.Add(moveName(move));
-            }
+            //var eggs = EncounterEggGenerator.GenerateEggs(mon1);
+            //int sp = eggs.ToArray()[0].Species;
+            //int[] moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
+            //eggIcon.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+            //listMoves.Items.Clear();
+            //if (gen >= 6)
+            //{
+            //    foreach(int move in moves.Intersect(mon1.Moves))
+            //        listMoves.Items.Add(moveName(move));
+            //}
+            //foreach (int move in moves.Intersect(mon2.Moves))
+            //{
+            //    if(!listMoves.Items.Contains(move))
+            //        listMoves.Items.Add(moveName(move));
+            //}
                 
-            if(gen <= 5)
-            {
-                moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
-                foreach (int move in moves.Intersect(mon2.Moves))
-                {
-                    if (!listMoves.Items.Contains(move))
-                        listMoves.Items.Add(moveName(move));
-                }
-            }
-            if(version == GameVersion.C)
-            {
-                moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
-                foreach (int move in moves.Intersect(mon2.Moves))
-                {
-                    if (!listMoves.Items.Contains(move))
-                        listMoves.Items.Add(moveName(move));
-                }
-            }
-            foreach (int move in mon1.Moves.Intersect(mon2.Moves))
-            {
-                if (!listMoves.Items.Contains(move) && move != 0 && MoveLevelUp.GetIsLevelUpMove(mon1, sp, 0, 100, gen, move, 5 , 5, version).Level != -1)
-                    listMoves.Items.Add(moveName(move));
-            }
-            int ball = 4;
-            int ball2 = 0;
-            if(gen >= 7)
-            {
+            //if(gen <= 5)
+            //{
+            //    moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
+            //    foreach (int move in moves.Intersect(mon2.Moves))
+            //    {
+            //        if (!listMoves.Items.Contains(move))
+            //            listMoves.Items.Add(moveName(move));
+            //    }
+            //}
+            //if(version == GameVersion.C)
+            //{
+            //    moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+            //    foreach (int move in moves.Intersect(mon2.Moves))
+            //    {
+            //        if (!listMoves.Items.Contains(move))
+            //            listMoves.Items.Add(moveName(move));
+            //    }
+            //}
+            //foreach (int move in mon1.Moves.Intersect(mon2.Moves))
+            //{
+            //    if (!listMoves.Items.Contains(move) && move != 0 && MoveLevelUp.GetIsLevelUpMove(mon1, sp, 0, 100, gen, move, 5 , 5, version).Level != -1)
+            //        listMoves.Items.Add(moveName(move));
+            //}
+            //int ball = 4;
+            //int ball2 = 0;
+            //if(gen >= 7)
+            //{
 
-                if (mon2.Species == mon1.Species)
-                    ball2 = mon2.Ball;
-            }
-            else if(gen == 6)
-            {
-                if (mon1.Gender == 1)
-                    ball = mon1.Ball;
-                else if (mon2.Gender == 1)
-                    ball = mon2.Ball;
-            }
-            pictureBoxBall.Image = getBreedBall(ball);
-            pictureBoxBall2.Image = getBreedBall(ball2);
+            //    if (mon2.Species == mon1.Species)
+            //        ball2 = mon2.Ball;
+            //}
+            //else if(gen == 6)
+            //{
+            //    if (mon1.Gender == 1)
+            //        ball = mon1.Ball;
+            //    else if (mon2.Gender == 1)
+            //        ball = mon2.Ball;
+            //}
+            //pictureBoxBall.Image = getBreedBall(ball);
+            //pictureBoxBall2.Image = getBreedBall(ball2);
 
-            if (eggs.Count() == 2)
-                sp = eggs.ToArray()[1].Species;
-            else if (sp == 29)
-                sp = 32;
-            else if (sp == 32 && gen >= 5)
-                sp = 29;
-            else if (sp == 313 && gen >= 5)
-                sp = 314;
-            else if (sp == 314)
-                sp = 313;
-            else
-                sp = 0;
+            //if (eggs.Count() == 2)
+            //    sp = eggs.ToArray()[1].Species;
+            //else if (sp == 29)
+            //    sp = 32;
+            //else if (sp == 32 && gen >= 5)
+            //    sp = 29;
+            //else if (sp == 313 && gen >= 5)
+            //    sp = 314;
+            //else if (sp == 314)
+            //    sp = 313;
+            //else
+            //    sp = 0;
 
-            if (sp > 0)
-            {
-                moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
-                eggIcon2.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
-                listMoves2.Items.Clear();
-                if (gen >= 6)
-                {
-                    foreach (int move in moves.Intersect(mon1.Moves))
-                        listMoves2.Items.Add(moveName(move));
-                }
-                foreach (int move in moves.Intersect(mon2.Moves))
-                {
-                    if (!listMoves2.Items.Contains(move))
-                        listMoves2.Items.Add(moveName(move));
-                }
+            //if (sp > 0)
+            //{
+            //    moves = MoveEgg.GetEggMoves(gen, sp, mon1.AltForm, version);
+            //    eggIcon2.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+            //    listMoves2.Items.Clear();
+            //    if (gen >= 6)
+            //    {
+            //        foreach (int move in moves.Intersect(mon1.Moves))
+            //            listMoves2.Items.Add(moveName(move));
+            //    }
+            //    foreach (int move in moves.Intersect(mon2.Moves))
+            //    {
+            //        if (!listMoves2.Items.Contains(move))
+            //            listMoves2.Items.Add(moveName(move));
+            //    }
 
-                if (gen <= 5)
-                {
-                    moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
-                    foreach (int move in moves.Intersect(mon2.Moves))
-                    {
-                        if (!listMoves2.Items.Contains(move))
-                            listMoves2.Items.Add(moveName(move));
-                    }
-                }
-                if (version == GameVersion.C)
-                {
-                    moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
-                    foreach (int move in moves.Intersect(mon2.Moves))
-                    {
-                        if (!listMoves2.Items.Contains(move))
-                            listMoves2.Items.Add(moveName(move));
-                    }
-                }
-                foreach (int move in mon1.Moves.Intersect(mon2.Moves))
-                {
-                    if (!listMoves2.Items.Contains(move) && move != 0)
-                        listMoves2.Items.Add(moveName(move));
-                }
-                ball = 4;
-                ball2 = 0;
-                if (gen >= 7)
-                {
+            //    if (gen <= 5)
+            //    {
+            //        moves = MoveTechnicalMachine.GetTMHM(mon1, sp, 0, gen, version).ToArray();
+            //        foreach (int move in moves.Intersect(mon2.Moves))
+            //        {
+            //            if (!listMoves2.Items.Contains(move))
+            //                listMoves2.Items.Add(moveName(move));
+            //        }
+            //    }
+            //    if (version == GameVersion.C)
+            //    {
+            //        moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+            //        foreach (int move in moves.Intersect(mon2.Moves))
+            //        {
+            //            if (!listMoves2.Items.Contains(move))
+            //                listMoves2.Items.Add(moveName(move));
+            //        }
+            //    }
+            //    foreach (int move in mon1.Moves.Intersect(mon2.Moves))
+            //    {
+            //        if (!listMoves2.Items.Contains(move) && move != 0)
+            //            listMoves2.Items.Add(moveName(move));
+            //    }
+            //    ball = 4;
+            //    ball2 = 0;
+            //    if (gen >= 7)
+            //    {
 
-                    if (mon2.Species == mon1.Species)
-                        ball2 = mon2.Ball;
-                }
-                else if (gen == 6)
-                {
-                    if (mon1.Gender == 1)
-                        ball = mon1.Ball;
-                    else if (mon2.Gender == 1)
-                        ball = mon2.Ball;
-                }
-                pictureBoxBalla.Image = getBreedBall(ball);
-                pictureBoxBall2a.Image = getBreedBall(ball2);
+            //        if (mon2.Species == mon1.Species)
+            //            ball2 = mon2.Ball;
+            //    }
+            //    else if (gen == 6)
+            //    {
+            //        if (mon1.Gender == 1)
+            //            ball = mon1.Ball;
+            //        else if (mon2.Gender == 1)
+            //            ball = mon2.Ball;
+            //    }
+            //    pictureBoxBalla.Image = getBreedBall(ball);
+            //    pictureBoxBall2a.Image = getBreedBall(ball2);
 
-                eggIcon2.Visible = true;
-                pictureBoxBalla.Visible = true;
-                pictureBoxBall2a.Visible = true;
-                listMoves2.Visible = true;
-            }
-            else
-            {
-                eggIcon2.Visible = false;
-                pictureBoxBalla.Visible = false;
-                pictureBoxBall2a.Visible = false;
-                listMoves2.Visible = false;
-            }
+            //    eggIcon2.Visible = true;
+            //    pictureBoxBalla.Visible = true;
+            //    pictureBoxBall2a.Visible = true;
+            //    listMoves2.Visible = true;
+            //}
+            //else
+            //{
+            //    eggIcon2.Visible = false;
+            //    pictureBoxBalla.Visible = false;
+            //    pictureBoxBall2a.Visible = false;
+            //    listMoves2.Visible = false;
+            //}
         }
 
         private string moveName(int index)
