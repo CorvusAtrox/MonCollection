@@ -42,6 +42,9 @@
             this.comboBoxMove4 = new System.Windows.Forms.ComboBox();
             this.labelGame = new System.Windows.Forms.Label();
             this.labelSpVal = new System.Windows.Forms.Label();
+            this.comboBoxMoveNew = new System.Windows.Forms.ComboBox();
+            this.labelMoveNew = new System.Windows.Forms.Label();
+            this.labelNewMove = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelName
@@ -179,12 +182,45 @@
             this.labelSpVal.TabIndex = 13;
             this.labelSpVal.Text = "0";
             // 
+            // comboBoxMoveNew
+            // 
+            this.comboBoxMoveNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMoveNew.FormattingEnabled = true;
+            this.comboBoxMoveNew.Location = new System.Drawing.Point(38, 272);
+            this.comboBoxMoveNew.Name = "comboBoxMoveNew";
+            this.comboBoxMoveNew.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxMoveNew.TabIndex = 14;
+            this.comboBoxMoveNew.SelectedIndexChanged += new System.EventHandler(this.ComboBoxMoveNew_SelectedIndexChanged);
+            // 
+            // labelMoveNew
+            // 
+            this.labelMoveNew.AutoSize = true;
+            this.labelMoveNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMoveNew.Location = new System.Drawing.Point(12, 256);
+            this.labelMoveNew.Name = "labelMoveNew";
+            this.labelMoveNew.Size = new System.Drawing.Size(36, 13);
+            this.labelMoveNew.TabIndex = 15;
+            this.labelMoveNew.Text = "New:";
+            // 
+            // labelNewMove
+            // 
+            this.labelNewMove.AutoSize = true;
+            this.labelNewMove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNewMove.Location = new System.Drawing.Point(162, 275);
+            this.labelNewMove.Name = "labelNewMove";
+            this.labelNewMove.Size = new System.Drawing.Size(13, 13);
+            this.labelNewMove.TabIndex = 16;
+            this.labelNewMove.Text = "0";
+            // 
             // FormNiqCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelNewMove);
+            this.Controls.Add(this.labelMoveNew);
+            this.Controls.Add(this.comboBoxMoveNew);
             this.Controls.Add(this.labelSpVal);
             this.Controls.Add(this.labelGame);
             this.Controls.Add(this.comboBoxMove4);
@@ -222,5 +258,8 @@
         private System.Windows.Forms.ComboBox comboBoxMove4;
         private System.Windows.Forms.Label labelGame;
         private System.Windows.Forms.Label labelSpVal;
+        private System.Windows.Forms.ComboBox comboBoxMoveNew;
+        private System.Windows.Forms.Label labelMoveNew;
+        private System.Windows.Forms.Label labelNewMove;
     }
 }
