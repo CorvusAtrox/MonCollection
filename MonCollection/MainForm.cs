@@ -508,11 +508,13 @@ namespace MonCollection
                     game = "c";
                     ext = ".gif";
                     break;
-                case GameVersion.RS:
+                case GameVersion.R:
+                case GameVersion.S:
                     game = "rs";
                     ext = ".png";
                     break;
-                case GameVersion.FRLG:
+                case GameVersion.FR:
+                case GameVersion.LG:
                     game = "frlg";
                     ext = ".png";
                     break;
@@ -524,7 +526,8 @@ namespace MonCollection
                     game = "cxd";
                     ext = ".gif";
                     break;
-                case GameVersion.DP:
+                case GameVersion.D:
+                case GameVersion.P:
                     game = "dp";
                     ext = ".png";
                     break;
@@ -532,7 +535,8 @@ namespace MonCollection
                     game = "pt";
                     ext = ".png";
                     break;
-                case GameVersion.HGSS:
+                case GameVersion.HG:
+                case GameVersion.SS:
                     game = "hgss";
                     ext = ".png";
                     break;
