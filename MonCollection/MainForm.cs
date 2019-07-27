@@ -58,10 +58,11 @@ namespace MonCollection
             public GameVersion version;
             public int index;
 
-            public SaveInfo(string l, GameVersion v, int i)
+            public SaveInfo(string l, string v, int i)
             {
                 language = l;
-                version = v;
+                Enum.TryParse(v, out GameVersion ver);
+                version = ver;
                 index = i;
             }
 
@@ -84,52 +85,20 @@ namespace MonCollection
         private void InitializeGameDict()
         {
             gameDict = new Dictionary<string, SaveInfo>();
-            gameDict.Add("Red [Dustin]", new SaveInfo("en", GameVersion.RD, 0));
-            gameDict.Add("Red [JOHANN]", new SaveInfo("en", GameVersion.RD, 1));
-            gameDict.Add("Blue [GARY]", new SaveInfo("en", GameVersion.GN, 2));
-            gameDict.Add("Blue [Yuuya]", new SaveInfo("fr", GameVersion.GN, 3));
-            gameDict.Add("Yellow [HERR J]", new SaveInfo("en", GameVersion.YW, 4));
-            gameDict.Add("Yellow [Juan]", new SaveInfo("es", GameVersion.YW, 5));
-            gameDict.Add("Gold [Dorothy]", new SaveInfo("en", GameVersion.GD, 6));
-            gameDict.Add("Silver [Yuna]", new SaveInfo("fr", GameVersion.SV, 7));
-            gameDict.Add("Crystal [Catria]", new SaveInfo("es", GameVersion.C, 8));
-            gameDict.Add("Ruby [NICOLE]", new SaveInfo("en", GameVersion.R, 9));
-            gameDict.Add("Ruby [Phi]", new SaveInfo("en", GameVersion.R, 10));
-            gameDict.Add("Sapphire [Sigma]", new SaveInfo("en", GameVersion.S, 11));
-            gameDict.Add("Emerald [GrmCrpr]", new SaveInfo("en", GameVersion.E, 12));
-            gameDict.Add("FireRed [Martha]", new SaveInfo("en", GameVersion.FR, 13));
-            gameDict.Add("LeafGreen [MARY]", new SaveInfo("en", GameVersion.LG, 14));
-            gameDict.Add("LeafGreen [Satoshi]", new SaveInfo("en", GameVersion.LG, 15));
-            gameDict.Add("Colosseum [HARRY]", new SaveInfo("en", GameVersion.CXD, 16));
-            gameDict.Add("Colosseum [SNAGEM]", new SaveInfo("en", GameVersion.CXD, 17));
-            gameDict.Add("XD [DAVID]", new SaveInfo("en", GameVersion.CXD, 18));
-            gameDict.Add("XD [MirEgal]", new SaveInfo("en", GameVersion.CXD, 19));
-            gameDict.Add("XD [NASP]", new SaveInfo("en", GameVersion.CXD, 20));
-            gameDict.Add("XD [SMEDLY]", new SaveInfo("en", GameVersion.CXD, 21));
-            gameDict.Add("XD [WILLY]", new SaveInfo("en", GameVersion.CXD, 22));
-            gameDict.Add("Snakewood [Pete]", new SaveInfo("en", GameVersion.R, 23));
-            gameDict.Add("Grand Day Out [Wanda]", new SaveInfo("en", GameVersion.LG, 24));
-            gameDict.Add("Diamond [JOHANN]", new SaveInfo("en", GameVersion.D, 25));
-            gameDict.Add("Pearl [Jake]", new SaveInfo("en", GameVersion.P, 26));
-            gameDict.Add("Platinum [Guess]", new SaveInfo("en", GameVersion.Pt, 27));
-            gameDict.Add("HeartGold [LIAKS]", new SaveInfo("en", GameVersion.HG, 28));
-            gameDict.Add("SoulSilver [WOLFI]", new SaveInfo("de", GameVersion.SS, 29));
-            gameDict.Add("Black [KONRAD]", new SaveInfo("en", GameVersion.B, 30));
-            gameDict.Add("White [JnaBrta]", new SaveInfo("de", GameVersion.W, 31));
-            gameDict.Add("Black 2 [Crow]", new SaveInfo("en", GameVersion.B2, 32));
-            gameDict.Add("White 2 [Bow]", new SaveInfo("en", GameVersion.W2, 33));
-            gameDict.Add("X [だいすけ]", new SaveInfo("ja", GameVersion.X, 34));
-            gameDict.Add("Y [Fukurou]", new SaveInfo("de", GameVersion.Y, 35));
-            gameDict.Add("Omega Ruby [Akira]", new SaveInfo("es", GameVersion.OR, 36));
-            gameDict.Add("Alpha Sapphire [Dschohehn]", new SaveInfo("de", GameVersion.AS, 37));
-            gameDict.Add("Bank [corvusbrachy]", new SaveInfo("en", GameVersion.US, 38));
-            gameDict.Add("Bank [corvusossi]", new SaveInfo("de", GameVersion.UM, 39));
-            gameDict.Add("Sun [Ramirez]", new SaveInfo("es", GameVersion.SN, 40));
-            gameDict.Add("Moon [Fina]", new SaveInfo("de", GameVersion.MN, 41));
-            gameDict.Add("Ultra Sun [Hibiki]", new SaveInfo("de", GameVersion.US, 42));
-            gameDict.Add("Ultra Moon [かなで]", new SaveInfo("ja", GameVersion.UM, 43));
-            gameDict.Add("Let's Go Pikachu [Suzy]", new SaveInfo("en", GameVersion.GP, 44));
-            gameDict.Add("Let's Go Eevee [Dieter]", new SaveInfo("de", GameVersion.GE, 45));
+
+            StreamReader dict = new StreamReader(Settings.Default.mons + "/mons.ini");
+            string l;
+            string[] split;
+            int ind = 0;
+
+            while (!dict.EndOfStream)
+            {
+                l = dict.ReadLine();
+                split = l.Split(',');
+                if(split.Count() == 3)
+                    gameDict.Add(split[0], new SaveInfo(split[2],split[1],ind));
+                ind++;
+            }
         }
 
         private void InitializeMonLists()
