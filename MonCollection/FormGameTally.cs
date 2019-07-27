@@ -20,13 +20,16 @@ namespace MonCollection
 
         public void addEntry(string data)
         {
-            listGames.Text += data + "\n";
+            listGames.Items.Add(data);
         }
 
         private void ListGames_DoubleClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(listGames.Text);
-            MessageBox.Show("Mon Collection","Data copied to clipboard");
+            string result = "";
+            foreach (string item in listGames.Items)
+                result += item + "\n";
+            Clipboard.SetText(result);
+            MessageBox.Show("Data copied to clipboard");
         }
     }
 }

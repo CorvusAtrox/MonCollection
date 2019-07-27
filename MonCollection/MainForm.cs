@@ -140,11 +140,13 @@ namespace MonCollection
             monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
             GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
                                       GameVersion.GD, GameVersion.SV, GameVersion.C,
-                                      GameVersion.RS,GameVersion.FRLG,GameVersion.E, GameVersion.CXD,
-                                      GameVersion.DP, GameVersion.Pt,GameVersion.HGSS,
-                                      GameVersion.BW, GameVersion.B2W2,
-                                      GameVersion.XY, GameVersion.ORAS,
-                                      GameVersion.SM, GameVersion.USUM, GameVersion.GG};
+                                      GameVersion.R, GameVersion.S, GameVersion.FR,  GameVersion.LG, GameVersion.E,
+                                      GameVersion.CXD,
+                                      GameVersion.D, GameVersion.P, GameVersion.Pt, GameVersion.HG, GameVersion.SS,
+                                      GameVersion.B, GameVersion.W, GameVersion.B2, GameVersion.W2,
+                                      GameVersion.X, GameVersion.Y, GameVersion.OR, GameVersion.AS,
+                                      GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
+                                      GameVersion.GP, GameVersion.GE};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -814,10 +816,9 @@ namespace MonCollection
                     Counts = getGameCounts(species, game)
                 }) ;
             var results = new FormGameTally();
+            results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
-                
-            results.Show();
         }
 
         private string getGameCounts(int index, IEnumerable<string> game)
@@ -830,8 +831,14 @@ namespace MonCollection
                 else
                     d.Add(entry.Key, -1);
             }
+            int count;
             foreach(string s in game)
-                 d[s] = d[s]++;
+            {
+                d.TryGetValue(s, out count);
+
+                d[s] = count + 1;
+            }
+                 
             string result = "";
             foreach(var entry in d)
             {

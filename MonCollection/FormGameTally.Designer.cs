@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listGames = new System.Windows.Forms.Label();
+            this.listGames = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // listGames
             // 
-            this.listGames.AutoSize = true;
-            this.listGames.Location = new System.Drawing.Point(12, 9);
+            this.listGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listGames.FormattingEnabled = true;
+            this.listGames.HorizontalScrollbar = true;
+            this.listGames.Location = new System.Drawing.Point(13, 13);
             this.listGames.Name = "listGames";
-            this.listGames.Size = new System.Drawing.Size(0, 13);
+            this.listGames.ScrollAlwaysVisible = true;
+            this.listGames.Size = new System.Drawing.Size(228, 251);
             this.listGames.TabIndex = 0;
             this.listGames.DoubleClick += new System.EventHandler(this.ListGames_DoubleClick);
             // 
@@ -50,12 +53,11 @@
             this.Name = "FormGameTally";
             this.Text = "FormGameTally";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label listGames;
+        private System.Windows.Forms.ListBox listGames;
     }
 }
