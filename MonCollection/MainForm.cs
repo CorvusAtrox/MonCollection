@@ -74,7 +74,7 @@ namespace MonCollection
             InitializeComponent();
             InitializeGameDict();
             InitializeMonLists();
-            InitializeStrings("en",GameVersion.US);
+            InitializeStrings("en",GameVersion.US,"blank");
             InitializeBinding();
             InitializePkxBoxes();
             PopulateFilteredDataSources(ver);
@@ -142,11 +142,11 @@ namespace MonCollection
             noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
         }
 
-        private void InitializeStrings(string spr, GameVersion gv)
+        private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
-
             GameInfo.Strings = GameInfo.GetStrings(spr);
-            ver = SaveUtil.GetBlankSAV(gv, "blank");
+            ver = SaveUtil.GetBlankSAV(gv, trainer);
+            PKMConverter.Trainer = ver;
             GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources);
 
             // Update Legality Strings
@@ -241,17 +241,10 @@ namespace MonCollection
         {
             identifier = getGame(identifier);
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
-            {
-                ver = SaveUtil.GetBlankSAV(GameVersion.US, "setMe");
-                ver.Language = GameLanguage.GetLanguageIndex("en");
-                InitializeStrings("en", ver.Version);
-            } 
+                InitializeStrings("en", GameVersion.US, "blank");
             else
-            {
-                ver = SaveUtil.GetBlankSAV(info.version, "setMe");
-                ver.Language = GameLanguage.GetLanguageIndex(info.language);
-                InitializeStrings(info.language, ver.Version);
-            }
+                InitializeStrings(info.language, info.version, getTrainer(identifier));
+
             PopulateFilteredDataSources(ver);
 
         }
@@ -839,6 +832,14 @@ namespace MonCollection
         {
             string sub = identifier.Substring(identifier.IndexOf(".p"));
             return int.Parse(sub.Substring(3));
+        }
+
+        private string getTrainer(string identifier)
+        {
+            int start = identifier.IndexOf("[");
+            int end = identifier.IndexOf("]");
+            string sub = identifier.Substring(start, end - start - 1);
+            return identifier;
         }
 
         private void ButtonNiqCalc_Click(object sender, EventArgs e)
