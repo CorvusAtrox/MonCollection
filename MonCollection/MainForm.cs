@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -659,9 +660,26 @@ namespace MonCollection
             }
 
             for (int i = 0; i < RES_MAX; i++)
-                PKXBOXES[i].BackgroundImage = null;
+                PKXBOXES[i].BackgroundImage = getSlotImg((int)PKXBOXES[i].Tag);
             if (slotSelected != -1 && slotSelected >= begin && slotSelected < begin + RES_MAX)
                 PKXBOXES[slotSelected - begin].BackgroundImage = Image.FromFile("Resources/img/slotView.png");
+
+        }
+
+        private Image getSlotImg(int slot)
+        {
+            Image img = null;
+
+            if (slot == -1)
+                return img;
+
+            gameDict.TryGetValue(getGame(PkmData[slot].Identifier), out SaveInfo si);
+
+            int verId = (int)si.version;
+
+            img = retrieveImage("Resources/img/slots/" + verId.ToString() + ".png");
+
+            return img;
         }
 
         private void SCR_Box_Scroll(object sender, ScrollEventArgs e)
@@ -830,7 +848,7 @@ namespace MonCollection
 
         private int getGen(string identifier)
         {
-            string sub = identifier.Substring(identifier.IndexOf(".p"));
+            string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
         }
 
