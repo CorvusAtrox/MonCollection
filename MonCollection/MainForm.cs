@@ -793,11 +793,11 @@ namespace MonCollection
             var SpeciesList = new List<ComboItem>(GameInfo.SpeciesDataSource);
             var query = PkmData.GroupBy(
                 mon => mon.Species,
-                mon => getGame(mon.Identifier),
-                (species, game) => new
+                mon => mon.Identifier,
+                (species, identifier) => new
                 {
                     Name = PkmListAny.Find(p => p.Value == species).Text,
-                    Counts = getGameCounts(species, game)
+                    Counts = getGameCounts(species, identifier)
                 }) ;
             var results = new FormGameTally();
             results.Show();
@@ -815,12 +815,39 @@ namespace MonCollection
                 else
                     d.Add(entry.Key, -1);
             }
+
+            Dictionary<string, GameVersion> gens = new Dictionary<string, GameVersion>();
+            gens.Add("Gen I", GameVersion.YW);
+            gens.Add("Gen II", GameVersion.C);
+            gens.Add("Gen III", GameVersion.LG);
+            gens.Add("Gen IV", GameVersion.Pt);
+            gens.Add("Gen V", GameVersion.B2);
+            gens.Add("Gen VI", GameVersion.AS);
+            gens.Add("Gen VII", GameVersion.US);
+            gens.Add("LG", GameVersion.GE);
+            foreach (var entry in gens)
+            {
+                if (getGameMons(entry.Value, index))
+                    d.Add(entry.Key, 0);
+                else
+                    d.Add(entry.Key, -1);
+            }
+
             int count;
+            string g;
+            string genString;
             foreach(string s in game)
             {
-                d.TryGetValue(s, out count);
+                g = getGame(s);
+                d.TryGetValue(g, out count);
 
-                d[s] = count + 1;
+                d[g] = count + 1;
+
+                genString = getGenString(s);
+
+                d.TryGetValue(genString, out count);
+
+                d[genString] = count + 1;
             }
                  
             string result = "";
@@ -850,6 +877,30 @@ namespace MonCollection
         {
             string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
+        }
+
+        private string getGenString(string identifier)
+        {
+            if (Regex.Match(identifier, @"\.pk1").Success)
+                return "Gen I";
+            else if (Regex.Match(identifier, @"\.pk2").Success)
+                return "Gen II";
+            else if (Regex.Match(identifier, @"\.[pcx]k3").Success)
+                return "Gen III";
+            else if (Regex.Match(identifier, @"\.pk4").Success)
+                return "Gen IV";
+            else if (Regex.Match(identifier, @"\.pk5").Success)
+                return "Gen V";
+            else if (Regex.Match(identifier, @"\.pk6").Success)
+                return "Gen VI";
+            else if (Regex.Match(identifier, @"\.pk7").Success)
+                return "Gen VII";
+            else if (Regex.Match(identifier, @"\.pb7").Success)
+                return "LG";
+            else if (Regex.Match(identifier, @"\.pk8").Success)
+                return "Gen VIII";
+            else
+                return null;
         }
 
         private string getTrainer(string identifier)
