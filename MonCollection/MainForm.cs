@@ -699,6 +699,18 @@ namespace MonCollection
             FillPKXBoxes(index);
         }
 
+        public void OTSpeciesSort(int index)
+        {
+            PkmData = PkmData.OrderBy(mon => mon.DisplayTID)
+                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => gameIndex(mon.Identifier))
+                             .ThenBy(mon => mon.CurrentLevel)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<PKM>();
+
+            FillPKXBoxes(index);
+        }
+
         public void genSpeciesSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => getGen(mon.Identifier))
@@ -784,6 +796,12 @@ namespace MonCollection
         private void ButtonSpeciesSort_Click(object sender, EventArgs e)
         {
             speciesGameSort((int)bpkx1.Tag / RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void ButtonOTSort_Click(object sender, EventArgs e)
+        {
+            OTSpeciesSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 

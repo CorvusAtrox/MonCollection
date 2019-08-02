@@ -110,6 +110,7 @@ namespace MonCollection
             this.comboBoxMet = new System.Windows.Forms.ComboBox();
             this.labelOrigin = new System.Windows.Forms.Label();
             this.labelMet = new System.Windows.Forms.Label();
+            this.buttonOTSort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1049,12 +1050,23 @@ namespace MonCollection
             this.labelMet.TabIndex = 141;
             this.labelMet.Text = "Met At:";
             // 
+            // buttonOTSort
+            // 
+            this.buttonOTSort.Location = new System.Drawing.Point(714, 314);
+            this.buttonOTSort.Name = "buttonOTSort";
+            this.buttonOTSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonOTSort.TabIndex = 142;
+            this.buttonOTSort.Text = "OT-Species Sort";
+            this.buttonOTSort.UseVisualStyleBackColor = true;
+            this.buttonOTSort.Click += new System.EventHandler(this.ButtonOTSort_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 441);
+            this.Controls.Add(this.buttonOTSort);
             this.Controls.Add(this.labelMet);
             this.Controls.Add(this.labelOrigin);
             this.Controls.Add(this.comboBoxMet);
@@ -1257,6 +1269,7 @@ namespace MonCollection
         private ComboBox comboBoxMet;
         private Label labelOrigin;
         private Label labelMet;
+        private Button buttonOTSort;
     }
 }
 
