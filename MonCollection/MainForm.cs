@@ -660,13 +660,13 @@ namespace MonCollection
             }
 
             for (int i = 0; i < RES_MAX; i++)
-                PKXBOXES[i].BackgroundImage = getSlotImg((int)PKXBOXES[i].Tag);
+                PKXBOXES[i].BackgroundImage = getSlotImg((int)PKXBOXES[i].Tag,false);
             if (slotSelected != -1 && slotSelected >= begin && slotSelected < begin + RES_MAX)
-                PKXBOXES[slotSelected - begin].BackgroundImage = Image.FromFile("Resources/img/slotView.png");
+                PKXBOXES[slotSelected - begin].BackgroundImage = getSlotImg((int)PKXBOXES[slotSelected - begin].Tag, true);
 
         }
 
-        private Image getSlotImg(int slot)
+        private Image getSlotImg(int slot, bool selected)
         {
             Image img = null;
 
@@ -677,7 +677,15 @@ namespace MonCollection
 
             int verId = (int)si.version;
 
-            img = retrieveImage("Resources/img/slots/" + verId.ToString() + ".png");
+            if (selected)
+            {
+                img = retrieveImage("Resources/img/slots/selected/" + verId.ToString() + ".png");
+
+                if (img == null)
+                    img = retrieveImage("Resources/img/slotView.png");
+            }
+            else
+                img = retrieveImage("Resources/img/slots/" + verId.ToString() + ".png");
 
             return img;
         }
@@ -858,6 +866,9 @@ namespace MonCollection
             {
                 g = getGame(s);
                 d.TryGetValue(g, out count);
+
+                if (count < 0)
+                    count = 0;
 
                 d[g] = count + 1;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using MonCollection.Properties;
 using PKHeX.Core;
@@ -171,7 +172,7 @@ namespace MonCollection
 
         private int getGen(string identifier)
         {
-            string sub = identifier.Substring(identifier.IndexOf(".p"));
+            string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
         }
 
