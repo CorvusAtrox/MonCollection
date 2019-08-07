@@ -324,6 +324,18 @@
     <Content Include="Resources\cries\72.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\cries\183.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\231.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\134.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\15.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\b2w2\013.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -2775,13 +2787,16 @@
     <Content Include="Resources\img\bw\rare\243.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\012.gif">
+    <Content Include="Resources\img\cxd\12.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\015.gif">
+    <Content Include="Resources\img\cxd\15.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\017.gif">
+    <Content Include="Resources\img\cxd\134.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\cxd\17.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\cxd\018.gif">
@@ -2799,7 +2814,10 @@
     <Content Include="Resources\img\cxd\024.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\025.gif">
+    <Content Include="Resources\img\cxd\183.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\cxd\25.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\cxd\027.gif">
@@ -2865,7 +2883,7 @@
     <Content Include="Resources\img\cxd\078.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\082.gif">
+    <Content Include="Resources\img\cxd\82.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\cxd\083.gif">
@@ -2874,25 +2892,25 @@
     <Content Include="Resources\img\cxd\085.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\086.gif">
+    <Content Include="Resources\img\cxd\86.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\087.gif">
+    <Content Include="Resources\img\cxd\87.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\088.gif">
+    <Content Include="Resources\img\cxd\88.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\089.gif">
+    <Content Include="Resources\img\cxd\89.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\090.gif">
+    <Content Include="Resources\img\cxd\90.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\091.gif">
+    <Content Include="Resources\img\cxd\91.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\cxd\097.gif">
+    <Content Include="Resources\img\cxd\97.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\cxd\100.gif">
@@ -4863,7 +4881,7 @@
     <Content Include="Resources\img\dp\rare\454m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\e\019.gif">
+    <Content Include="Resources\img\e\19.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\e\020.gif">
@@ -4878,7 +4896,7 @@
     <Content Include="Resources\img\e\023.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\e\024.gif">
+    <Content Include="Resources\img\e\24.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\e\028.gif">
@@ -4887,13 +4905,13 @@
     <Content Include="Resources\img\e\039.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\e\043.gif">
+    <Content Include="Resources\img\e\43.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\e\044.gif">
+    <Content Include="Resources\img\e\44.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\e\045.gif">
+    <Content Include="Resources\img\e\45.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\e\072.gif">
@@ -9846,13 +9864,13 @@
     <Content Include="Resources\img\rs\041.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\rs\043.png">
+    <Content Include="Resources\img\rs\43.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\rs\046.png">
+    <Content Include="Resources\img\rs\46.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\rs\052.png">
+    <Content Include="Resources\img\rs\52.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\rs\064.png">
@@ -9870,10 +9888,10 @@
     <Content Include="Resources\img\rs\075.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\rs\081.png">
+    <Content Include="Resources\img\rs\81.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\rs\088.png">
+    <Content Include="Resources\img\rs\88.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\rs\100.png">
