@@ -111,6 +111,8 @@ namespace MonCollection
             this.labelOrigin = new System.Windows.Forms.Label();
             this.labelMet = new System.Windows.Forms.Label();
             this.buttonOTSort = new System.Windows.Forms.Button();
+            this.buttonMoveMonTally = new System.Windows.Forms.Button();
+            this.buttonRanMon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -883,7 +885,7 @@ namespace MonCollection
             // 
             // buttonReloadDB
             // 
-            this.buttonReloadDB.Location = new System.Drawing.Point(653, 22);
+            this.buttonReloadDB.Location = new System.Drawing.Point(583, 22);
             this.buttonReloadDB.Name = "buttonReloadDB";
             this.buttonReloadDB.Size = new System.Drawing.Size(95, 23);
             this.buttonReloadDB.TabIndex = 127;
@@ -992,7 +994,7 @@ namespace MonCollection
             // 
             // buttonEggs
             // 
-            this.buttonEggs.Location = new System.Drawing.Point(242, 370);
+            this.buttonEggs.Location = new System.Drawing.Point(139, 406);
             this.buttonEggs.Name = "buttonEggs";
             this.buttonEggs.Size = new System.Drawing.Size(116, 23);
             this.buttonEggs.TabIndex = 137;
@@ -1060,12 +1062,34 @@ namespace MonCollection
             this.buttonOTSort.UseVisualStyleBackColor = true;
             this.buttonOTSort.Click += new System.EventHandler(this.ButtonOTSort_Click);
             // 
+            // buttonMoveMonTally
+            // 
+            this.buttonMoveMonTally.Location = new System.Drawing.Point(242, 370);
+            this.buttonMoveMonTally.Name = "buttonMoveMonTally";
+            this.buttonMoveMonTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonMoveMonTally.TabIndex = 143;
+            this.buttonMoveMonTally.Text = "Mon Move Tally";
+            this.buttonMoveMonTally.UseVisualStyleBackColor = true;
+            this.buttonMoveMonTally.Click += new System.EventHandler(this.ButtonMoveMonTally_Click);
+            // 
+            // buttonRanMon
+            // 
+            this.buttonRanMon.Location = new System.Drawing.Point(735, 22);
+            this.buttonRanMon.Name = "buttonRanMon";
+            this.buttonRanMon.Size = new System.Drawing.Size(95, 23);
+            this.buttonRanMon.TabIndex = 144;
+            this.buttonRanMon.Text = "Random Mon";
+            this.buttonRanMon.UseVisualStyleBackColor = true;
+            this.buttonRanMon.Click += new System.EventHandler(this.ButtonRanMon_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 441);
+            this.Controls.Add(this.buttonRanMon);
+            this.Controls.Add(this.buttonMoveMonTally);
             this.Controls.Add(this.buttonOTSort);
             this.Controls.Add(this.labelMet);
             this.Controls.Add(this.labelOrigin);
@@ -1270,6 +1294,8 @@ namespace MonCollection
         private Label labelOrigin;
         private Label labelMet;
         private Button buttonOTSort;
+        private Button buttonMoveMonTally;
+        private Button buttonRanMon;
     }
 }
 

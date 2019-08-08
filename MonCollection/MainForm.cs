@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using MonCollection.Properties;
 using PKHeX.Core;
 using PKHeX.WinForms;
+using TrueRandomGenerator;
 
 namespace MonCollection
 {
@@ -44,10 +45,12 @@ namespace MonCollection
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
+        private int maxIndex = 0;
 
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
         private int[] noDiff;
+
 
         public static DrawConfig Draw = new DrawConfig();
 
@@ -624,6 +627,7 @@ namespace MonCollection
             gameSpeciesSort(0);
 
             L_Count.Text = string.Format(Counter, res.Count);
+            maxIndex = res.Count - 1;
             OpenPKM(PkmData[0]);
         }
 
@@ -831,6 +835,39 @@ namespace MonCollection
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
         }
 
+
+        private void ButtonMoveMonTally_Click(object sender, EventArgs e)
+        {
+            ButtonSpeciesSort_Click(sender, e);
+
+            var SpeciesList = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            var query = PkmData.GroupBy(
+                mon => mon.Species,
+                mon => mon.Moves,
+                (species, moves) => new
+                {
+                    Name = PkmListAny.Find(p => p.Value == species).Text,
+                    Counts = getMoveCounts(species, moves)
+                });
+            var results = new FormGameTally();
+            results.Show();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+        }
+
+        private void ButtonRanMon_Click(object sender, EventArgs e)
+        {
+            int rnd = RandomNumberGenerator.GetRandomInt(0, maxIndex);
+            int val = (int)(rnd / RES_MIN) - 2;
+            if (val < 0)
+                val = 0;
+
+            SCR_Box.Value = val;
+            slotSelected = rnd;
+            FillPKXBoxes(val);
+            OpenPKM(PkmData[rnd]);
+        }
+
         private string getGameCounts(int index, IEnumerable<string> game)
         {
             Dictionary<string, int> d = new Dictionary<string, int>();
@@ -887,6 +924,29 @@ namespace MonCollection
                 else
                     result += entry.Key + ": " + entry.Value.ToString() + "; ";
             }
+            return result;
+        }
+
+        private string getMoveCounts(int index, IEnumerable<int[]> moves)
+        {
+            string g;
+            List<int> allMoves = new List<int>();
+            foreach (var m in moves)
+                foreach (int i in m)
+                    if(i != 0)
+                        allMoves.Add(i);
+
+            allMoves.Sort();
+
+            string result = "";
+
+            var moveGroups = allMoves.GroupBy(i => i);
+
+            var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
+
+            foreach (var mv in moveGroups)
+                result += moveNames.Find(p => p.Value == mv.Key).Text + ": " + mv.Count() + "; ";
+
             return result;
         }
 
