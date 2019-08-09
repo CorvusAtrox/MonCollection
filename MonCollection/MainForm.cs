@@ -929,7 +929,6 @@ namespace MonCollection
 
         private string getMoveCounts(int index, IEnumerable<int[]> moves)
         {
-            string g;
             List<int> allMoves = new List<int>();
             foreach (var m in moves)
                 foreach (int i in m)

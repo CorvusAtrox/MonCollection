@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PKHeX.Core;
@@ -207,7 +208,7 @@ namespace MonCollection
 
         private int getGen(string identifier)
         {
-            string sub = identifier.Substring(identifier.IndexOf(".p"));
+            string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
         }
 
