@@ -10153,10 +10153,10 @@
     <Content Include="Resources\img\slots\25.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\slots\26.png">
+    <Content Include="Resources\img\slots\27.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\slots\27.png">
+    <Content Include="Resources\img\slots\26.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\slots\3.png">
@@ -10246,10 +10246,10 @@
     <Content Include="Resources\img\slots\selected\25.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\slots\selected\26.png">
+    <Content Include="Resources\img\slots\selected\27.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\slots\selected\27.png">
+    <Content Include="Resources\img\slots\selected\26.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\slots\selected\3.png">
