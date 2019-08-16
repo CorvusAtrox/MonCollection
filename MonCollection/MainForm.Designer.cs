@@ -107,12 +107,19 @@ namespace MonCollection
             this.buttonNiqCalc = new System.Windows.Forms.Button();
             this.buttonEggs = new System.Windows.Forms.Button();
             this.comboBoxOrigin = new System.Windows.Forms.ComboBox();
-            this.comboBoxMet = new System.Windows.Forms.ComboBox();
             this.labelOrigin = new System.Windows.Forms.Label();
-            this.labelMet = new System.Windows.Forms.Label();
             this.buttonOTSort = new System.Windows.Forms.Button();
             this.buttonMoveMonTally = new System.Windows.Forms.Button();
             this.buttonRanMon = new System.Windows.Forms.Button();
+            this.buttonSaveMon = new System.Windows.Forms.Button();
+            this.buttonRevertMon = new System.Windows.Forms.Button();
+            this.textBoxNickname = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -148,6 +155,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label_IsShiny)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -156,11 +164,11 @@ namespace MonCollection
             this.labelNickname.BackColor = System.Drawing.Color.Firebrick;
             this.labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNickname.ForeColor = System.Drawing.Color.White;
-            this.labelNickname.Location = new System.Drawing.Point(176, 32);
+            this.labelNickname.Location = new System.Drawing.Point(176, 37);
             this.labelNickname.Name = "labelNickname";
-            this.labelNickname.Size = new System.Drawing.Size(64, 13);
+            this.labelNickname.Size = new System.Drawing.Size(43, 13);
             this.labelNickname.TabIndex = 0;
-            this.labelNickname.Text = "Name: {0}";
+            this.labelNickname.Text = "Name:";
             // 
             // labelBall
             // 
@@ -168,7 +176,7 @@ namespace MonCollection
             this.labelBall.BackColor = System.Drawing.Color.Firebrick;
             this.labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBall.ForeColor = System.Drawing.Color.White;
-            this.labelBall.Location = new System.Drawing.Point(31, 32);
+            this.labelBall.Location = new System.Drawing.Point(31, 37);
             this.labelBall.Name = "labelBall";
             this.labelBall.Size = new System.Drawing.Size(32, 13);
             this.labelBall.TabIndex = 4;
@@ -181,7 +189,7 @@ namespace MonCollection
             this.comboBoxBalls.BackColor = System.Drawing.Color.Firebrick;
             this.comboBoxBalls.ForeColor = System.Drawing.Color.White;
             this.comboBoxBalls.FormattingEnabled = true;
-            this.comboBoxBalls.Location = new System.Drawing.Point(66, 29);
+            this.comboBoxBalls.Location = new System.Drawing.Point(66, 34);
             this.comboBoxBalls.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxBalls.Name = "comboBoxBalls";
             this.comboBoxBalls.Size = new System.Drawing.Size(104, 21);
@@ -189,7 +197,7 @@ namespace MonCollection
             // 
             // pictureBoxBall
             // 
-            this.pictureBoxBall.Location = new System.Drawing.Point(1, 25);
+            this.pictureBoxBall.Location = new System.Drawing.Point(1, 30);
             this.pictureBoxBall.Name = "pictureBoxBall";
             this.pictureBoxBall.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxBall.TabIndex = 6;
@@ -202,7 +210,7 @@ namespace MonCollection
             this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSpecies.FormattingEnabled = true;
-            this.comboBoxSpecies.Location = new System.Drawing.Point(100, 68);
+            this.comboBoxSpecies.Location = new System.Drawing.Point(100, 73);
             this.comboBoxSpecies.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
             this.comboBoxSpecies.Size = new System.Drawing.Size(115, 21);
@@ -214,7 +222,7 @@ namespace MonCollection
             this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpecies.ForeColor = System.Drawing.Color.Black;
-            this.labelSpecies.Location = new System.Drawing.Point(41, 71);
+            this.labelSpecies.Location = new System.Drawing.Point(41, 76);
             this.labelSpecies.Name = "labelSpecies";
             this.labelSpecies.Size = new System.Drawing.Size(56, 13);
             this.labelSpecies.TabIndex = 7;
@@ -222,7 +230,7 @@ namespace MonCollection
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(1, 64);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(1, 69);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -235,7 +243,7 @@ namespace MonCollection
             this.labelLevel.BackColor = System.Drawing.Color.Firebrick;
             this.labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLevel.ForeColor = System.Drawing.Color.White;
-            this.labelLevel.Location = new System.Drawing.Point(316, 32);
+            this.labelLevel.Location = new System.Drawing.Point(316, 37);
             this.labelLevel.Name = "labelLevel";
             this.labelLevel.Size = new System.Drawing.Size(25, 13);
             this.labelLevel.TabIndex = 10;
@@ -245,7 +253,7 @@ namespace MonCollection
             // 
             this.textBoxLevel.BackColor = System.Drawing.Color.Firebrick;
             this.textBoxLevel.ForeColor = System.Drawing.Color.White;
-            this.textBoxLevel.Location = new System.Drawing.Point(347, 29);
+            this.textBoxLevel.Location = new System.Drawing.Point(347, 34);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(25, 20);
             this.textBoxLevel.TabIndex = 11;
@@ -256,7 +264,7 @@ namespace MonCollection
             this.labelGender.BackColor = System.Drawing.Color.Firebrick;
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(378, 32);
+            this.labelGender.Location = new System.Drawing.Point(378, 37);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(11, 13);
             this.labelGender.TabIndex = 12;
@@ -269,7 +277,7 @@ namespace MonCollection
             this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
             this.comboBoxLanguage.FormattingEnabled = true;
-            this.comboBoxLanguage.Location = new System.Drawing.Point(467, 28);
+            this.comboBoxLanguage.Location = new System.Drawing.Point(467, 33);
             this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxLanguage.Name = "comboBoxLanguage";
             this.comboBoxLanguage.Size = new System.Drawing.Size(99, 21);
@@ -281,7 +289,7 @@ namespace MonCollection
             this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.Color.White;
-            this.labelLanguage.Location = new System.Drawing.Point(397, 32);
+            this.labelLanguage.Location = new System.Drawing.Point(397, 37);
             this.labelLanguage.Name = "labelLanguage";
             this.labelLanguage.Size = new System.Drawing.Size(67, 13);
             this.labelLanguage.TabIndex = 13;
@@ -294,7 +302,7 @@ namespace MonCollection
             this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxAbility.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAbility.FormattingEnabled = true;
-            this.comboBoxAbility.Location = new System.Drawing.Point(55, 107);
+            this.comboBoxAbility.Location = new System.Drawing.Point(55, 112);
             this.comboBoxAbility.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxAbility.Name = "comboBoxAbility";
             this.comboBoxAbility.Size = new System.Drawing.Size(115, 21);
@@ -306,7 +314,7 @@ namespace MonCollection
             this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAbility.ForeColor = System.Drawing.Color.Black;
-            this.labelAbility.Location = new System.Drawing.Point(7, 110);
+            this.labelAbility.Location = new System.Drawing.Point(7, 115);
             this.labelAbility.Name = "labelAbility";
             this.labelAbility.Size = new System.Drawing.Size(45, 13);
             this.labelAbility.TabIndex = 15;
@@ -319,7 +327,7 @@ namespace MonCollection
             this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxNature.ForeColor = System.Drawing.Color.Black;
             this.comboBoxNature.FormattingEnabled = true;
-            this.comboBoxNature.Location = new System.Drawing.Point(59, 128);
+            this.comboBoxNature.Location = new System.Drawing.Point(59, 133);
             this.comboBoxNature.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxNature.Name = "comboBoxNature";
             this.comboBoxNature.Size = new System.Drawing.Size(115, 21);
@@ -331,7 +339,7 @@ namespace MonCollection
             this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNature.ForeColor = System.Drawing.Color.Black;
-            this.labelNature.Location = new System.Drawing.Point(7, 131);
+            this.labelNature.Location = new System.Drawing.Point(7, 136);
             this.labelNature.Name = "labelNature";
             this.labelNature.Size = new System.Drawing.Size(49, 13);
             this.labelNature.TabIndex = 17;
@@ -345,7 +353,7 @@ namespace MonCollection
             this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove1.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove1.FormattingEnabled = true;
-            this.comboBoxMove1.Location = new System.Drawing.Point(386, 274);
+            this.comboBoxMove1.Location = new System.Drawing.Point(386, 278);
             this.comboBoxMove1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove1.Name = "comboBoxMove1";
             this.comboBoxMove1.Size = new System.Drawing.Size(115, 21);
@@ -358,7 +366,7 @@ namespace MonCollection
             this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoves.ForeColor = System.Drawing.Color.Black;
-            this.labelMoves.Location = new System.Drawing.Point(383, 253);
+            this.labelMoves.Location = new System.Drawing.Point(383, 257);
             this.labelMoves.Name = "labelMoves";
             this.labelMoves.Size = new System.Drawing.Size(48, 13);
             this.labelMoves.TabIndex = 19;
@@ -372,7 +380,7 @@ namespace MonCollection
             this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove2.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove2.FormattingEnabled = true;
-            this.comboBoxMove2.Location = new System.Drawing.Point(386, 295);
+            this.comboBoxMove2.Location = new System.Drawing.Point(386, 299);
             this.comboBoxMove2.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove2.Name = "comboBoxMove2";
             this.comboBoxMove2.Size = new System.Drawing.Size(115, 21);
@@ -387,7 +395,7 @@ namespace MonCollection
             this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove4.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove4.FormattingEnabled = true;
-            this.comboBoxMove4.Location = new System.Drawing.Point(386, 337);
+            this.comboBoxMove4.Location = new System.Drawing.Point(386, 341);
             this.comboBoxMove4.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove4.Name = "comboBoxMove4";
             this.comboBoxMove4.Size = new System.Drawing.Size(115, 21);
@@ -402,7 +410,7 @@ namespace MonCollection
             this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove3.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove3.FormattingEnabled = true;
-            this.comboBoxMove3.Location = new System.Drawing.Point(386, 316);
+            this.comboBoxMove3.Location = new System.Drawing.Point(386, 320);
             this.comboBoxMove3.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove3.Name = "comboBoxMove3";
             this.comboBoxMove3.Size = new System.Drawing.Size(115, 21);
@@ -413,7 +421,7 @@ namespace MonCollection
             // 
             this.bpkx30.BackColor = System.Drawing.Color.Transparent;
             this.bpkx30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx30.Location = new System.Drawing.Point(788, 195);
+            this.bpkx30.Location = new System.Drawing.Point(788, 200);
             this.bpkx30.Name = "bpkx30";
             this.bpkx30.Size = new System.Drawing.Size(42, 32);
             this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -425,9 +433,9 @@ namespace MonCollection
             this.SCR_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SCR_Box.LargeChange = 1;
-            this.SCR_Box.Location = new System.Drawing.Point(837, 72);
+            this.SCR_Box.Location = new System.Drawing.Point(837, 77);
             this.SCR_Box.Name = "SCR_Box";
-            this.SCR_Box.Size = new System.Drawing.Size(24, 156);
+            this.SCR_Box.Size = new System.Drawing.Size(24, 155);
             this.SCR_Box.TabIndex = 60;
             this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
             // 
@@ -435,7 +443,7 @@ namespace MonCollection
             // 
             this.bpkx1.BackColor = System.Drawing.Color.Transparent;
             this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx1.Location = new System.Drawing.Point(583, 71);
+            this.bpkx1.Location = new System.Drawing.Point(583, 76);
             this.bpkx1.Name = "bpkx1";
             this.bpkx1.Size = new System.Drawing.Size(42, 32);
             this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -447,7 +455,7 @@ namespace MonCollection
             // 
             this.bpkx29.BackColor = System.Drawing.Color.Transparent;
             this.bpkx29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx29.Location = new System.Drawing.Point(747, 195);
+            this.bpkx29.Location = new System.Drawing.Point(747, 200);
             this.bpkx29.Name = "bpkx29";
             this.bpkx29.Size = new System.Drawing.Size(42, 32);
             this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -458,7 +466,7 @@ namespace MonCollection
             // 
             this.bpkx28.BackColor = System.Drawing.Color.Transparent;
             this.bpkx28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx28.Location = new System.Drawing.Point(706, 195);
+            this.bpkx28.Location = new System.Drawing.Point(706, 200);
             this.bpkx28.Name = "bpkx28";
             this.bpkx28.Size = new System.Drawing.Size(42, 32);
             this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -469,7 +477,7 @@ namespace MonCollection
             // 
             this.bpkx27.BackColor = System.Drawing.Color.Transparent;
             this.bpkx27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx27.Location = new System.Drawing.Point(665, 195);
+            this.bpkx27.Location = new System.Drawing.Point(665, 200);
             this.bpkx27.Name = "bpkx27";
             this.bpkx27.Size = new System.Drawing.Size(42, 32);
             this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -480,7 +488,7 @@ namespace MonCollection
             // 
             this.bpkx26.BackColor = System.Drawing.Color.Transparent;
             this.bpkx26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx26.Location = new System.Drawing.Point(624, 195);
+            this.bpkx26.Location = new System.Drawing.Point(624, 200);
             this.bpkx26.Name = "bpkx26";
             this.bpkx26.Size = new System.Drawing.Size(42, 32);
             this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -491,7 +499,7 @@ namespace MonCollection
             // 
             this.bpkx25.BackColor = System.Drawing.Color.Transparent;
             this.bpkx25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx25.Location = new System.Drawing.Point(583, 195);
+            this.bpkx25.Location = new System.Drawing.Point(583, 200);
             this.bpkx25.Name = "bpkx25";
             this.bpkx25.Size = new System.Drawing.Size(42, 32);
             this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -502,7 +510,7 @@ namespace MonCollection
             // 
             this.bpkx24.BackColor = System.Drawing.Color.Transparent;
             this.bpkx24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx24.Location = new System.Drawing.Point(788, 164);
+            this.bpkx24.Location = new System.Drawing.Point(788, 169);
             this.bpkx24.Name = "bpkx24";
             this.bpkx24.Size = new System.Drawing.Size(42, 32);
             this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -513,7 +521,7 @@ namespace MonCollection
             // 
             this.bpkx23.BackColor = System.Drawing.Color.Transparent;
             this.bpkx23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx23.Location = new System.Drawing.Point(747, 164);
+            this.bpkx23.Location = new System.Drawing.Point(747, 169);
             this.bpkx23.Name = "bpkx23";
             this.bpkx23.Size = new System.Drawing.Size(42, 32);
             this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -524,7 +532,7 @@ namespace MonCollection
             // 
             this.bpkx22.BackColor = System.Drawing.Color.Transparent;
             this.bpkx22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx22.Location = new System.Drawing.Point(706, 164);
+            this.bpkx22.Location = new System.Drawing.Point(706, 169);
             this.bpkx22.Name = "bpkx22";
             this.bpkx22.Size = new System.Drawing.Size(42, 32);
             this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -535,7 +543,7 @@ namespace MonCollection
             // 
             this.bpkx21.BackColor = System.Drawing.Color.Transparent;
             this.bpkx21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx21.Location = new System.Drawing.Point(665, 164);
+            this.bpkx21.Location = new System.Drawing.Point(665, 169);
             this.bpkx21.Name = "bpkx21";
             this.bpkx21.Size = new System.Drawing.Size(42, 32);
             this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -546,7 +554,7 @@ namespace MonCollection
             // 
             this.bpkx2.BackColor = System.Drawing.Color.Transparent;
             this.bpkx2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx2.Location = new System.Drawing.Point(624, 71);
+            this.bpkx2.Location = new System.Drawing.Point(624, 76);
             this.bpkx2.Name = "bpkx2";
             this.bpkx2.Size = new System.Drawing.Size(42, 32);
             this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -557,7 +565,7 @@ namespace MonCollection
             // 
             this.bpkx20.BackColor = System.Drawing.Color.Transparent;
             this.bpkx20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx20.Location = new System.Drawing.Point(624, 164);
+            this.bpkx20.Location = new System.Drawing.Point(624, 169);
             this.bpkx20.Name = "bpkx20";
             this.bpkx20.Size = new System.Drawing.Size(42, 32);
             this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -568,7 +576,7 @@ namespace MonCollection
             // 
             this.bpkx3.BackColor = System.Drawing.Color.Transparent;
             this.bpkx3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx3.Location = new System.Drawing.Point(665, 71);
+            this.bpkx3.Location = new System.Drawing.Point(665, 76);
             this.bpkx3.Name = "bpkx3";
             this.bpkx3.Size = new System.Drawing.Size(42, 32);
             this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -579,7 +587,7 @@ namespace MonCollection
             // 
             this.bpkx4.BackColor = System.Drawing.Color.Transparent;
             this.bpkx4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx4.Location = new System.Drawing.Point(706, 71);
+            this.bpkx4.Location = new System.Drawing.Point(706, 76);
             this.bpkx4.Name = "bpkx4";
             this.bpkx4.Size = new System.Drawing.Size(42, 32);
             this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -590,7 +598,7 @@ namespace MonCollection
             // 
             this.bpkx19.BackColor = System.Drawing.Color.Transparent;
             this.bpkx19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx19.Location = new System.Drawing.Point(583, 164);
+            this.bpkx19.Location = new System.Drawing.Point(583, 169);
             this.bpkx19.Name = "bpkx19";
             this.bpkx19.Size = new System.Drawing.Size(42, 32);
             this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -601,7 +609,7 @@ namespace MonCollection
             // 
             this.bpkx5.BackColor = System.Drawing.Color.Transparent;
             this.bpkx5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx5.Location = new System.Drawing.Point(747, 71);
+            this.bpkx5.Location = new System.Drawing.Point(747, 76);
             this.bpkx5.Name = "bpkx5";
             this.bpkx5.Size = new System.Drawing.Size(42, 32);
             this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -612,7 +620,7 @@ namespace MonCollection
             // 
             this.bpkx18.BackColor = System.Drawing.Color.Transparent;
             this.bpkx18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx18.Location = new System.Drawing.Point(788, 133);
+            this.bpkx18.Location = new System.Drawing.Point(788, 138);
             this.bpkx18.Name = "bpkx18";
             this.bpkx18.Size = new System.Drawing.Size(42, 32);
             this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -623,7 +631,7 @@ namespace MonCollection
             // 
             this.bpkx6.BackColor = System.Drawing.Color.Transparent;
             this.bpkx6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx6.Location = new System.Drawing.Point(788, 71);
+            this.bpkx6.Location = new System.Drawing.Point(788, 76);
             this.bpkx6.Name = "bpkx6";
             this.bpkx6.Size = new System.Drawing.Size(42, 32);
             this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -634,7 +642,7 @@ namespace MonCollection
             // 
             this.bpkx17.BackColor = System.Drawing.Color.Transparent;
             this.bpkx17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx17.Location = new System.Drawing.Point(747, 133);
+            this.bpkx17.Location = new System.Drawing.Point(747, 138);
             this.bpkx17.Name = "bpkx17";
             this.bpkx17.Size = new System.Drawing.Size(42, 32);
             this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -645,7 +653,7 @@ namespace MonCollection
             // 
             this.bpkx7.BackColor = System.Drawing.Color.Transparent;
             this.bpkx7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx7.Location = new System.Drawing.Point(583, 102);
+            this.bpkx7.Location = new System.Drawing.Point(583, 107);
             this.bpkx7.Name = "bpkx7";
             this.bpkx7.Size = new System.Drawing.Size(42, 32);
             this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -656,7 +664,7 @@ namespace MonCollection
             // 
             this.bpkx8.BackColor = System.Drawing.Color.Transparent;
             this.bpkx8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx8.Location = new System.Drawing.Point(624, 102);
+            this.bpkx8.Location = new System.Drawing.Point(624, 107);
             this.bpkx8.Name = "bpkx8";
             this.bpkx8.Size = new System.Drawing.Size(42, 32);
             this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -667,7 +675,7 @@ namespace MonCollection
             // 
             this.bpkx16.BackColor = System.Drawing.Color.Transparent;
             this.bpkx16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx16.Location = new System.Drawing.Point(706, 133);
+            this.bpkx16.Location = new System.Drawing.Point(706, 138);
             this.bpkx16.Name = "bpkx16";
             this.bpkx16.Size = new System.Drawing.Size(42, 32);
             this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -678,7 +686,7 @@ namespace MonCollection
             // 
             this.bpkx9.BackColor = System.Drawing.Color.Transparent;
             this.bpkx9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx9.Location = new System.Drawing.Point(665, 102);
+            this.bpkx9.Location = new System.Drawing.Point(665, 107);
             this.bpkx9.Name = "bpkx9";
             this.bpkx9.Size = new System.Drawing.Size(42, 32);
             this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -689,7 +697,7 @@ namespace MonCollection
             // 
             this.bpkx15.BackColor = System.Drawing.Color.Transparent;
             this.bpkx15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx15.Location = new System.Drawing.Point(665, 133);
+            this.bpkx15.Location = new System.Drawing.Point(665, 138);
             this.bpkx15.Name = "bpkx15";
             this.bpkx15.Size = new System.Drawing.Size(42, 32);
             this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -700,7 +708,7 @@ namespace MonCollection
             // 
             this.bpkx10.BackColor = System.Drawing.Color.Transparent;
             this.bpkx10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx10.Location = new System.Drawing.Point(706, 102);
+            this.bpkx10.Location = new System.Drawing.Point(706, 107);
             this.bpkx10.Name = "bpkx10";
             this.bpkx10.Size = new System.Drawing.Size(42, 32);
             this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -711,7 +719,7 @@ namespace MonCollection
             // 
             this.bpkx14.BackColor = System.Drawing.Color.Transparent;
             this.bpkx14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx14.Location = new System.Drawing.Point(624, 133);
+            this.bpkx14.Location = new System.Drawing.Point(624, 138);
             this.bpkx14.Name = "bpkx14";
             this.bpkx14.Size = new System.Drawing.Size(42, 32);
             this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -722,7 +730,7 @@ namespace MonCollection
             // 
             this.bpkx11.BackColor = System.Drawing.Color.Transparent;
             this.bpkx11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx11.Location = new System.Drawing.Point(747, 102);
+            this.bpkx11.Location = new System.Drawing.Point(747, 107);
             this.bpkx11.Name = "bpkx11";
             this.bpkx11.Size = new System.Drawing.Size(42, 32);
             this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -733,7 +741,7 @@ namespace MonCollection
             // 
             this.bpkx12.BackColor = System.Drawing.Color.Transparent;
             this.bpkx12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx12.Location = new System.Drawing.Point(788, 102);
+            this.bpkx12.Location = new System.Drawing.Point(788, 107);
             this.bpkx12.Name = "bpkx12";
             this.bpkx12.Size = new System.Drawing.Size(42, 32);
             this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -744,7 +752,7 @@ namespace MonCollection
             // 
             this.bpkx13.BackColor = System.Drawing.Color.Transparent;
             this.bpkx13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx13.Location = new System.Drawing.Point(583, 133);
+            this.bpkx13.Location = new System.Drawing.Point(583, 138);
             this.bpkx13.Name = "bpkx13";
             this.bpkx13.Size = new System.Drawing.Size(42, 32);
             this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -753,7 +761,7 @@ namespace MonCollection
             // 
             // L_Count
             // 
-            this.L_Count.Location = new System.Drawing.Point(665, 55);
+            this.L_Count.Location = new System.Drawing.Point(665, 60);
             this.L_Count.Name = "L_Count";
             this.L_Count.Size = new System.Drawing.Size(83, 13);
             this.L_Count.TabIndex = 115;
@@ -762,7 +770,7 @@ namespace MonCollection
             // 
             // buttonGameLevelSort
             // 
-            this.buttonGameLevelSort.Location = new System.Drawing.Point(583, 248);
+            this.buttonGameLevelSort.Location = new System.Drawing.Point(583, 252);
             this.buttonGameLevelSort.Name = "buttonGameLevelSort";
             this.buttonGameLevelSort.Size = new System.Drawing.Size(95, 23);
             this.buttonGameLevelSort.TabIndex = 116;
@@ -772,7 +780,7 @@ namespace MonCollection
             // 
             // buttonGameSpeciesSort
             // 
-            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(714, 248);
+            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(714, 252);
             this.buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
             this.buttonGameSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonGameSpeciesSort.TabIndex = 117;
@@ -782,7 +790,7 @@ namespace MonCollection
             // 
             // buttonGenSpeciesSort
             // 
-            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(583, 282);
+            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(583, 286);
             this.buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
             this.buttonGenSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonGenSpeciesSort.TabIndex = 118;
@@ -792,7 +800,7 @@ namespace MonCollection
             // 
             // pictureBoxGameSprite
             // 
-            this.pictureBoxGameSprite.Location = new System.Drawing.Point(377, 71);
+            this.pictureBoxGameSprite.Location = new System.Drawing.Point(377, 76);
             this.pictureBoxGameSprite.Name = "pictureBoxGameSprite";
             this.pictureBoxGameSprite.Size = new System.Drawing.Size(57, 39);
             this.pictureBoxGameSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -805,7 +813,7 @@ namespace MonCollection
             this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHP.ForeColor = System.Drawing.Color.Black;
-            this.labelHP.Location = new System.Drawing.Point(7, 193);
+            this.labelHP.Location = new System.Drawing.Point(7, 198);
             this.labelHP.Name = "labelHP";
             this.labelHP.Size = new System.Drawing.Size(49, 13);
             this.labelHP.TabIndex = 120;
@@ -817,7 +825,7 @@ namespace MonCollection
             this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAttack.ForeColor = System.Drawing.Color.Black;
-            this.labelAttack.Location = new System.Drawing.Point(7, 214);
+            this.labelAttack.Location = new System.Drawing.Point(7, 219);
             this.labelAttack.Name = "labelAttack";
             this.labelAttack.Size = new System.Drawing.Size(69, 13);
             this.labelAttack.TabIndex = 121;
@@ -829,7 +837,7 @@ namespace MonCollection
             this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDefense.ForeColor = System.Drawing.Color.Black;
-            this.labelDefense.Location = new System.Drawing.Point(7, 235);
+            this.labelDefense.Location = new System.Drawing.Point(7, 240);
             this.labelDefense.Name = "labelDefense";
             this.labelDefense.Size = new System.Drawing.Size(79, 13);
             this.labelDefense.TabIndex = 122;
@@ -841,7 +849,7 @@ namespace MonCollection
             this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpAtk.ForeColor = System.Drawing.Color.Black;
-            this.labelSpAtk.Location = new System.Drawing.Point(7, 257);
+            this.labelSpAtk.Location = new System.Drawing.Point(7, 261);
             this.labelSpAtk.Name = "labelSpAtk";
             this.labelSpAtk.Size = new System.Drawing.Size(74, 13);
             this.labelSpAtk.TabIndex = 123;
@@ -853,7 +861,7 @@ namespace MonCollection
             this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpDef.ForeColor = System.Drawing.Color.Black;
-            this.labelSpDef.Location = new System.Drawing.Point(7, 278);
+            this.labelSpDef.Location = new System.Drawing.Point(7, 282);
             this.labelSpDef.Name = "labelSpDef";
             this.labelSpDef.Size = new System.Drawing.Size(75, 13);
             this.labelSpDef.TabIndex = 124;
@@ -865,7 +873,7 @@ namespace MonCollection
             this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeed.ForeColor = System.Drawing.Color.Black;
-            this.labelSpeed.Location = new System.Drawing.Point(7, 302);
+            this.labelSpeed.Location = new System.Drawing.Point(7, 306);
             this.labelSpeed.Name = "labelSpeed";
             this.labelSpeed.Size = new System.Drawing.Size(68, 13);
             this.labelSpeed.TabIndex = 125;
@@ -877,7 +885,7 @@ namespace MonCollection
             this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOT.ForeColor = System.Drawing.Color.Black;
-            this.labelOT.Location = new System.Drawing.Point(383, 370);
+            this.labelOT.Location = new System.Drawing.Point(383, 374);
             this.labelOT.Name = "labelOT";
             this.labelOT.Size = new System.Drawing.Size(78, 13);
             this.labelOT.TabIndex = 126;
@@ -885,7 +893,7 @@ namespace MonCollection
             // 
             // buttonReloadDB
             // 
-            this.buttonReloadDB.Location = new System.Drawing.Point(583, 22);
+            this.buttonReloadDB.Location = new System.Drawing.Point(583, 27);
             this.buttonReloadDB.Name = "buttonReloadDB";
             this.buttonReloadDB.Size = new System.Drawing.Size(95, 23);
             this.buttonReloadDB.TabIndex = 127;
@@ -899,7 +907,7 @@ namespace MonCollection
             this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGame.ForeColor = System.Drawing.Color.Black;
-            this.labelGame.Location = new System.Drawing.Point(383, 395);
+            this.labelGame.Location = new System.Drawing.Point(383, 399);
             this.labelGame.Name = "labelGame";
             this.labelGame.Size = new System.Drawing.Size(64, 13);
             this.labelGame.TabIndex = 128;
@@ -907,7 +915,7 @@ namespace MonCollection
             // 
             // buttonGameMonTally
             // 
-            this.buttonGameMonTally.Location = new System.Drawing.Point(242, 335);
+            this.buttonGameMonTally.Location = new System.Drawing.Point(714, 347);
             this.buttonGameMonTally.Name = "buttonGameMonTally";
             this.buttonGameMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameMonTally.TabIndex = 129;
@@ -917,7 +925,7 @@ namespace MonCollection
             // 
             // buttonGameTally
             // 
-            this.buttonGameTally.Location = new System.Drawing.Point(34, 337);
+            this.buttonGameTally.Location = new System.Drawing.Point(583, 347);
             this.buttonGameTally.Name = "buttonGameTally";
             this.buttonGameTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameTally.TabIndex = 130;
@@ -927,7 +935,7 @@ namespace MonCollection
             // 
             // buttonSpeciesSort
             // 
-            this.buttonSpeciesSort.Location = new System.Drawing.Point(714, 282);
+            this.buttonSpeciesSort.Location = new System.Drawing.Point(714, 286);
             this.buttonSpeciesSort.Name = "buttonSpeciesSort";
             this.buttonSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonSpeciesSort.TabIndex = 131;
@@ -940,7 +948,7 @@ namespace MonCollection
             this.Label_IsShiny.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label_IsShiny.Image = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.Image")));
             this.Label_IsShiny.InitialImage = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.InitialImage")));
-            this.Label_IsShiny.Location = new System.Drawing.Point(216, 69);
+            this.Label_IsShiny.Location = new System.Drawing.Point(216, 86);
             this.Label_IsShiny.Margin = new System.Windows.Forms.Padding(0, 2, 2, 0);
             this.Label_IsShiny.Name = "Label_IsShiny";
             this.Label_IsShiny.Size = new System.Drawing.Size(20, 20);
@@ -956,7 +964,7 @@ namespace MonCollection
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(238, 68);
+            this.comboBoxForm.Location = new System.Drawing.Point(238, 73);
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
@@ -975,7 +983,7 @@ namespace MonCollection
             // 
             // pictureBoxPkrs
             // 
-            this.pictureBoxPkrs.Location = new System.Drawing.Point(86, 164);
+            this.pictureBoxPkrs.Location = new System.Drawing.Point(86, 169);
             this.pictureBoxPkrs.Name = "pictureBoxPkrs";
             this.pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxPkrs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -984,7 +992,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(34, 370);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(583, 380);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
             this.buttonNiqCalc.TabIndex = 136;
@@ -994,7 +1002,7 @@ namespace MonCollection
             // 
             // buttonEggs
             // 
-            this.buttonEggs.Location = new System.Drawing.Point(139, 406);
+            this.buttonEggs.Location = new System.Drawing.Point(638, 420);
             this.buttonEggs.Name = "buttonEggs";
             this.buttonEggs.Size = new System.Drawing.Size(116, 23);
             this.buttonEggs.TabIndex = 137;
@@ -1009,24 +1017,11 @@ namespace MonCollection
             this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
             this.comboBoxOrigin.FormattingEnabled = true;
-            this.comboBoxOrigin.Location = new System.Drawing.Point(242, 207);
+            this.comboBoxOrigin.Location = new System.Drawing.Point(242, 212);
             this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxOrigin.Name = "comboBoxOrigin";
             this.comboBoxOrigin.Size = new System.Drawing.Size(115, 21);
             this.comboBoxOrigin.TabIndex = 138;
-            // 
-            // comboBoxMet
-            // 
-            this.comboBoxMet.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxMet.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.comboBoxMet.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMet.FormattingEnabled = true;
-            this.comboBoxMet.Location = new System.Drawing.Point(242, 227);
-            this.comboBoxMet.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMet.Name = "comboBoxMet";
-            this.comboBoxMet.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxMet.TabIndex = 139;
             // 
             // labelOrigin
             // 
@@ -1034,27 +1029,15 @@ namespace MonCollection
             this.labelOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOrigin.ForeColor = System.Drawing.Color.Black;
-            this.labelOrigin.Location = new System.Drawing.Point(194, 210);
+            this.labelOrigin.Location = new System.Drawing.Point(194, 215);
             this.labelOrigin.Name = "labelOrigin";
             this.labelOrigin.Size = new System.Drawing.Size(44, 13);
             this.labelOrigin.TabIndex = 140;
             this.labelOrigin.Text = "Origin:";
             // 
-            // labelMet
-            // 
-            this.labelMet.AutoSize = true;
-            this.labelMet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.labelMet.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMet.ForeColor = System.Drawing.Color.Black;
-            this.labelMet.Location = new System.Drawing.Point(192, 230);
-            this.labelMet.Name = "labelMet";
-            this.labelMet.Size = new System.Drawing.Size(48, 13);
-            this.labelMet.TabIndex = 141;
-            this.labelMet.Text = "Met At:";
-            // 
             // buttonOTSort
             // 
-            this.buttonOTSort.Location = new System.Drawing.Point(714, 314);
+            this.buttonOTSort.Location = new System.Drawing.Point(714, 318);
             this.buttonOTSort.Name = "buttonOTSort";
             this.buttonOTSort.Size = new System.Drawing.Size(116, 23);
             this.buttonOTSort.TabIndex = 142;
@@ -1064,7 +1047,7 @@ namespace MonCollection
             // 
             // buttonMoveMonTally
             // 
-            this.buttonMoveMonTally.Location = new System.Drawing.Point(242, 370);
+            this.buttonMoveMonTally.Location = new System.Drawing.Point(714, 382);
             this.buttonMoveMonTally.Name = "buttonMoveMonTally";
             this.buttonMoveMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMoveMonTally.TabIndex = 143;
@@ -1074,7 +1057,7 @@ namespace MonCollection
             // 
             // buttonRanMon
             // 
-            this.buttonRanMon.Location = new System.Drawing.Point(735, 22);
+            this.buttonRanMon.Location = new System.Drawing.Point(735, 27);
             this.buttonRanMon.Name = "buttonRanMon";
             this.buttonRanMon.Size = new System.Drawing.Size(95, 23);
             this.buttonRanMon.TabIndex = 144;
@@ -1082,18 +1065,97 @@ namespace MonCollection
             this.buttonRanMon.UseVisualStyleBackColor = true;
             this.buttonRanMon.Click += new System.EventHandler(this.ButtonRanMon_Click);
             // 
+            // buttonSaveMon
+            // 
+            this.buttonSaveMon.Location = new System.Drawing.Point(148, 364);
+            this.buttonSaveMon.Name = "buttonSaveMon";
+            this.buttonSaveMon.Size = new System.Drawing.Size(116, 23);
+            this.buttonSaveMon.TabIndex = 145;
+            this.buttonSaveMon.Text = "Save";
+            this.buttonSaveMon.UseVisualStyleBackColor = true;
+            this.buttonSaveMon.Click += new System.EventHandler(this.ButtonSaveMon_Click);
+            // 
+            // buttonRevertMon
+            // 
+            this.buttonRevertMon.Location = new System.Drawing.Point(148, 399);
+            this.buttonRevertMon.Name = "buttonRevertMon";
+            this.buttonRevertMon.Size = new System.Drawing.Size(116, 23);
+            this.buttonRevertMon.TabIndex = 146;
+            this.buttonRevertMon.Text = "Revert";
+            this.buttonRevertMon.UseVisualStyleBackColor = true;
+            this.buttonRevertMon.Click += new System.EventHandler(this.ButtonRevertMon_Click);
+            // 
+            // textBoxNickname
+            // 
+            this.textBoxNickname.BackColor = System.Drawing.Color.Firebrick;
+            this.textBoxNickname.ForeColor = System.Drawing.Color.White;
+            this.textBoxNickname.Location = new System.Drawing.Point(225, 37);
+            this.textBoxNickname.Name = "textBoxNickname";
+            this.textBoxNickname.Size = new System.Drawing.Size(85, 20);
+            this.textBoxNickname.TabIndex = 147;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dataToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(873, 24);
+            this.menuStrip1.TabIndex = 148;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // dataToolStripMenuItem
+            // 
+            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addToolStripMenuItem,
+            this.importToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.dataToolStripMenuItem.Text = "Data";
+            // 
+            // addToolStripMenuItem
+            // 
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Text = "Import";
+            this.importToolStripMenuItem.Click += new System.EventHandler(this.ImportToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(873, 441);
+            this.ClientSize = new System.Drawing.Size(873, 465);
+            this.Controls.Add(this.textBoxNickname);
+            this.Controls.Add(this.buttonRevertMon);
+            this.Controls.Add(this.buttonSaveMon);
             this.Controls.Add(this.buttonRanMon);
             this.Controls.Add(this.buttonMoveMonTally);
             this.Controls.Add(this.buttonOTSort);
-            this.Controls.Add(this.labelMet);
             this.Controls.Add(this.labelOrigin);
-            this.Controls.Add(this.comboBoxMet);
             this.Controls.Add(this.comboBoxOrigin);
             this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
@@ -1170,8 +1232,11 @@ namespace MonCollection
             this.Controls.Add(this.comboBoxBalls);
             this.Controls.Add(this.labelBall);
             this.Controls.Add(this.labelNickname);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Pokémon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).EndInit();
@@ -1207,6 +1272,8 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Label_IsShiny)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1290,12 +1357,19 @@ namespace MonCollection
         private Button buttonNiqCalc;
         private Button buttonEggs;
         private ComboBox comboBoxOrigin;
-        private ComboBox comboBoxMet;
         private Label labelOrigin;
-        private Label labelMet;
         private Button buttonOTSort;
         private Button buttonMoveMonTally;
         private Button buttonRanMon;
+        private Button buttonSaveMon;
+        private Button buttonRevertMon;
+        private TextBox textBoxNickname;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem dataToolStripMenuItem;
+        private ToolStripMenuItem addToolStripMenuItem;
+        private ToolStripMenuItem importToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
