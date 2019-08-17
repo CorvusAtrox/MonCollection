@@ -994,9 +994,9 @@ namespace MonCollection
         {
             var results = new FormEggCalc();
 
-            //results.loadDB(PkmData, slotSelected,ver.Version);
-            //results.showValues();
-            //results.Show();
+            results.loadDB(PkmData, slotSelected, ver.Version);
+            results.showValues();
+            results.Show();
         }
 
         private void setStatText(int nature, int gen)

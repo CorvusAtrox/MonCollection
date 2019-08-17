@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PKHeX.Core;
 
@@ -16,12 +13,11 @@ namespace MonCollection
 {
     public partial class FormEggCalc : Form
     {
-        private List<PKM> PkmData;
+        private List<MonData> PkmData;
         private int ind = 0;
         private int mate = 0;
-        private string game;
         private int gen;
-        private PKM mon;
+        private MonData mon;
         private GameVersion version;
 
         private const int RES_MAX = 30;
@@ -30,7 +26,7 @@ namespace MonCollection
         private PictureBox[] PKXBOXES;
 
         private int[] majorGenderDiff;
-        private int[] minorGenderDiff;
+        private int[] noDiff;
 
         private int[] eg;
 
@@ -69,23 +65,15 @@ namespace MonCollection
             }
 
             majorGenderDiff = new int[] { 521, 592, 593, 668, 678 };
-            minorGenderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
-                                         111, 112, 118, 119, 123, 129, 130, 154, 165, 166, 178, 185,
-                                         186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214, 215,
-                                         217, 221, 224, 229, 232, 255, 256, 257, 267, 269, 272, 274,
-                                         275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369, 396,
-                                         397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
-                                         417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
-                                         457, 459, 460, 461, 464, 465, 473};
+            noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
         }
 
-        public void loadDB(List<PKM> data, int index, GameVersion vers)
+        internal void loadDB(List<MonData> data, int index, GameVersion vers)
         {
             PkmData = data;
             ind = index;
             mon = PkmData[ind];
-            game = mon.Identifier.Split('\\')[1];
-            gen = getGen(mon.Identifier);
+            gen = mon.Gen;
             version = vers;
         }
 
@@ -96,23 +84,23 @@ namespace MonCollection
             foreach (int move in mon.Moves)
                 listMovesMon.Items.Add(moveName(move));
 
-            eg = mon.PersonalInfo.EggGroups;
+            eg = MonDataToPKM(mon).PersonalInfo.EggGroups;
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
-            if (mon.PersonalInfo.IsEggGroup(15))
+            if (MonDataToPKM(mon).PersonalInfo.IsEggGroup(15))
             {
                 PkmData = PkmData.Where(pk => false).ToList();
             }
             else
             {
-                PkmData = PkmData.Where(pk => getGen(pk.Identifier) == gen)
+                PkmData = PkmData.Where(pk => pk.Gen == gen)
                                .Where(pk => ((pk.Gender + mon.Gender == 1) &&
-                               (pk.PersonalInfo.IsEggGroup(eg[0]) || pk.PersonalInfo.IsEggGroup(eg[1])))
-                               || ((pk.Species == 132 ^ mon.Species == 132) && (!pk.PersonalInfo.IsEggGroup(15))))
+                               (MonDataToPKM(pk).PersonalInfo.IsEggGroup(eg[0]) || MonDataToPKM(pk).PersonalInfo.IsEggGroup(eg[1])))
+                               || ((pk.Species == 132 ^ mon.Species == 132) && (!MonDataToPKM(pk).PersonalInfo.IsEggGroup(15))))
                                .ToList();
             }
 
             string spForm = mon.Species.ToString();
-            if (mon.AltForm > 0)
+            if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                 spForm += "-" + mon.AltForm.ToString();
             else if (majorGenderDiff.Contains(mon.Species))
             {
@@ -139,9 +127,9 @@ namespace MonCollection
             int end = Math.Min(RES_MAX, PkmData.Count - begin);
             for (int i = 0; i < end; i++)
             {
-                PKM mon = PkmData[i + begin];
+                MonData mon = PkmData[i + begin];
                 string spForm = mon.Species.ToString();
-                if (mon.AltForm > 0)
+                if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                     spForm += "-" + mon.AltForm.ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
@@ -179,7 +167,7 @@ namespace MonCollection
                 FillPKXBoxes(e.NewValue);
         }
 
-        private void SetResults(List<PKM> res)
+        private void SetResults(List<MonData> res)
         {
 
             SCR_Box.Maximum = (int)Math.Ceiling((decimal)res.Count / RES_MIN);
@@ -193,7 +181,7 @@ namespace MonCollection
                 SetMate(PkmData[0]);
         }
 
-        private void SetMate(PKM mate)
+        private void SetMate(MonData mate)
         {
             labelMateName.Text = String.Format("Name: {0}", mate.Nickname);
             listMovesMate.Items.Clear();
@@ -203,6 +191,7 @@ namespace MonCollection
                 makeEgg(mon, mate);
             else
                 makeEgg(mate, mon);
+                
 
         }
 
@@ -212,12 +201,16 @@ namespace MonCollection
             return int.Parse(sub.Substring(3));
         }
 
-        private void makeEgg(PKM mon1, PKM mon2)
+        private void makeEgg(MonData mon1, MonData mon2)
         {
-            var eggs = EncounterEggGenerator.GenerateEggs(mon1);
+            PKM pkmn = MonDataToPKM(mon1);
+            var eggs = EncounterEggGenerator.GenerateEggs(pkmn);
             int sp = eggs.ToArray()[0].Species;
             int[] moves = calcEggMoves(sp, mon1.AltForm);
-            eggIcon.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+            string spForm = sp.ToString();
+            if (mon1.AltForm > 0 && !noDiff.Contains(mon1.Species))
+                spForm += "-" + mon1.AltForm.ToString();
+            eggIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
             listMoves.Items.Clear();
             if (gen >= 6)
             {
@@ -232,7 +225,7 @@ namespace MonCollection
                 
             if(gen <= 5)
             {
-                moves = calcTMMoves(mon1,sp,mon1.AltForm).ToArray();
+                moves = calcTMMoves(pkmn,sp,mon1.AltForm).ToArray();
                 foreach (int move in moves.Intersect(mon2.Moves))
                 {
                     if (!listMoves.Items.Contains(move))
@@ -241,7 +234,7 @@ namespace MonCollection
             }
             if(version == GameVersion.C)
             {
-                moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+                moves = MoveTutor.GetTutorMoves(pkmn, sp, 0, false, gen).ToArray();
                 foreach (int move in moves.Intersect(mon2.Moves))
                 {
                     if (!listMoves.Items.Contains(move))
@@ -250,7 +243,7 @@ namespace MonCollection
             }
             foreach (int move in mon1.Moves.Intersect(mon2.Moves))
             {
-                if (!listMoves.Items.Contains(move) && move != 0 && calcLevelUpMoves(mon1, sp, mon1.AltForm,move).Level != -1)
+                if (!listMoves.Items.Contains(move) && move != 0 && calcLevelUpMoves(pkmn, sp, mon1.AltForm,move).Level != -1)
                     listMoves.Items.Add(moveName(move));
             }
             int ball = 4;
@@ -302,7 +295,7 @@ namespace MonCollection
 
                 if (gen <= 5)
                 {
-                    moves = calcTMMoves(mon1, sp, mon1.AltForm).ToArray();
+                    moves = calcTMMoves(pkmn, sp, mon1.AltForm).ToArray();
                     foreach (int move in moves.Intersect(mon2.Moves))
                     {
                         if (!listMoves2.Items.Contains(move))
@@ -311,7 +304,7 @@ namespace MonCollection
                 }
                 if (version == GameVersion.C)
                 {
-                    moves = MoveTutor.GetTutorMoves(mon1, sp, 0, false, gen).ToArray();
+                    moves = MoveTutor.GetTutorMoves(pkmn, sp, 0, false, gen).ToArray();
                     foreach (int move in moves.Intersect(mon2.Moves))
                     {
                         if (!listMoves2.Items.Contains(move))
@@ -320,7 +313,7 @@ namespace MonCollection
                 }
                 foreach (int move in mon1.Moves.Intersect(mon2.Moves))
                 {
-                    if (!listMoves2.Items.Contains(move) && move != 0 && calcLevelUpMoves(mon1, sp, mon1.AltForm, move).Level != -1)
+                    if (!listMoves2.Items.Contains(move) && move != 0 && calcLevelUpMoves(pkmn, sp, mon1.AltForm, move).Level != -1)
                         listMoves2.Items.Add(moveName(move));
                 }
                 ball = 4;
@@ -398,6 +391,44 @@ namespace MonCollection
                 return null;
             else
                 return retrieveImage("Resources/img/ball/" + ball.ToString() + ".png");
+        }
+
+        private PKM MonDataToPKM(MonData data)
+        {
+            //TODO: Check Implementation
+            PKM mon;
+            switch (data.Gen)
+            {
+                case 1:
+                    mon = new PK1();
+                    break;
+                case 2:
+                    mon = new PK2();
+                    break;
+                case 3:
+                    mon = new PK3();
+                    break;
+                case 4:
+                    mon = new PK4();
+                    break;
+                case 5:
+                    mon = new PK5();
+                    break;
+                case 6:
+                    mon = new PK6();
+                    break;
+                case 7:
+                    mon = new PK7();
+                    break;
+                default:
+                    mon = new PK7();
+                    break;
+            }
+            mon.Species = data.Species;
+            mon.AltForm = data.AltForm;
+            mon.CurrentLevel = data.Level;
+            mon.Version = (int)version;
+            return mon;
         }
 
     }
