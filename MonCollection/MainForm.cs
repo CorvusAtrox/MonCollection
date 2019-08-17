@@ -31,14 +31,7 @@ namespace MonCollection
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
 
-        private string Counter = "Num Mon: {0}";
-        private string HP = "HP: {0}";
-        private string Attack = "Attack: {0}";
-        private string Defense = "Defense: {0}";
-        private string SpAtk = "Sp. Atk: {0}";
-        private string SpDef = "Sp. Def: {0}";
-        private string Speed = "Speed: {0}";
-
+        private string Counter = "Mon Count: {0}";
         private string OT = "OT: {0} ({1})";
         private string Game = "Game: {0}";
 
@@ -391,12 +384,12 @@ namespace MonCollection
             comboBoxMove3.SelectedValue = pk.Moves[2];
             comboBoxMove4.SelectedValue = pk.Moves[3];
 
-            labelHP.Text = string.Format(HP, pk.HP);
-            labelAttack.Text = string.Format(Attack, pk.ATK);
-            labelDefense.Text = string.Format(Defense, pk.DEF);
-            labelSpAtk.Text = string.Format(SpAtk, pk.SPA);
-            labelSpDef.Text = string.Format(SpDef, pk.SPD);
-            labelSpeed.Text = string.Format(Speed, pk.SPE);
+            textBoxHP.Text = pk.HP.ToString();
+            textBoxAttack.Text = pk.ATK.ToString();
+            textBoxDefense.Text = pk.DEF.ToString();
+            textBoxSpAtk.Text = pk.SPA.ToString();
+            textBoxSpDef.Text = pk.SPD.ToString();
+            textBoxSpeed.Text = pk.SPE.ToString();
             setStatText(pk.Nature,pk.Gen);
 
             labelOT.Text = string.Format(OT,pk.ID,pk.OT);
@@ -646,7 +639,7 @@ namespace MonCollection
             SCR_Box.Value = 0;
             gameSpeciesSort(0);
 
-            L_Count.Text = string.Format(Counter, res.Count);
+            L_Count.Text = string.Format(Counter, res.Count());
             maxIndex = res.Count - 1;
             OpenPKM(PkmData[0]);
         }
@@ -1008,8 +1001,13 @@ namespace MonCollection
             labelSpAtk.ForeColor = Color.Black;
             labelSpDef.ForeColor = Color.Black;
             labelSpeed.ForeColor = Color.Black;
+            textBoxAttack.ForeColor = Color.Black;
+            textBoxDefense.ForeColor = Color.Black;
+            textBoxSpAtk.ForeColor = Color.Black;
+            textBoxSpDef.ForeColor = Color.Black;
+            textBoxSpeed.ForeColor = Color.Black;
 
-            if(gen >= 3)
+            if (gen >= 3)
             {
                 int plus = (nature / 5);
                 int minus = nature % 5;
@@ -1020,18 +1018,23 @@ namespace MonCollection
                     {
                         case 0:
                             labelAttack.ForeColor = Color.Red;
+                            textBoxAttack.ForeColor = Color.Red;
                             break;
                         case 1:
                             labelDefense.ForeColor = Color.Red;
+                            textBoxDefense.ForeColor = Color.Red;
                             break;
                         case 2:
                             labelSpeed.ForeColor = Color.Red;
+                            textBoxSpeed.ForeColor = Color.Red;
                             break;
                         case 3:
                             labelSpAtk.ForeColor = Color.Red;
+                            textBoxSpAtk.ForeColor = Color.Red;
                             break;
                         case 4:
                             labelSpDef.ForeColor = Color.Red;
+                            textBoxSpDef.ForeColor = Color.Red;
                             break;
                     }
 
@@ -1039,18 +1042,23 @@ namespace MonCollection
                     {
                         case 0:
                             labelAttack.ForeColor = Color.Blue;
+                            textBoxAttack.ForeColor = Color.Blue;
                             break;
                         case 1:
                             labelDefense.ForeColor = Color.Blue;
+                            textBoxDefense.ForeColor = Color.Blue;
                             break;
                         case 2:
                             labelSpeed.ForeColor = Color.Blue;
+                            textBoxSpeed.ForeColor = Color.Blue;
                             break;
                         case 3:
                             labelSpAtk.ForeColor = Color.Blue;
+                            textBoxSpAtk.ForeColor = Color.Blue;
                             break;
                         case 4:
                             labelSpDef.ForeColor = Color.Blue;
+                            textBoxSpDef.ForeColor = Color.Blue;
                             break;
                     }
                 }
@@ -1060,18 +1068,23 @@ namespace MonCollection
                     {
                         case 0:
                             labelAttack.ForeColor = Color.Purple;
+                            textBoxAttack.ForeColor = Color.Purple;
                             break;
                         case 1:
                             labelDefense.ForeColor = Color.Purple;
+                            textBoxDefense.ForeColor = Color.Purple;
                             break;
                         case 2:
                             labelSpeed.ForeColor = Color.Purple;
+                            textBoxSpeed.ForeColor = Color.Purple;
                             break;
                         case 3:
                             labelSpAtk.ForeColor = Color.Purple;
+                            textBoxSpAtk.ForeColor = Color.Purple;
                             break;
                         case 4:
                             labelSpDef.ForeColor = Color.Purple;
+                            textBoxSpDef.ForeColor = Color.Purple;
                             break;
                     }
                 }
@@ -1111,6 +1124,12 @@ namespace MonCollection
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
                                         (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
+            mon.HP = int.Parse(textBoxHP.Text);
+            mon.ATK = int.Parse(textBoxAttack.Text);
+            mon.DEF = int.Parse(textBoxDefense.Text);
+            mon.SPA = int.Parse(textBoxSpAtk.Text);
+            mon.SPD = int.Parse(textBoxSpDef.Text);
+            mon.SPE = int.Parse(textBoxSpeed.Text);
             mon.Ball = (int)comboBoxBalls.SelectedValue;
             if(comboBoxOrigin.SelectedValue != null)
                 mon.Origin = (int)comboBoxOrigin.SelectedValue;
@@ -1223,6 +1242,26 @@ namespace MonCollection
         {
             string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
+        }
+
+        private void TextBoxLevel_TextChanged(object sender, EventArgs e)
+        {
+            if(int.TryParse(textBoxLevel.Text,out int newLev))
+            {
+                MonData mon = PkmData[slotSelected];
+                if (mon.HP >= 11)
+                    textBoxHP.Text = (((mon.HP - 10 - mon.Level) * newLev / mon.Level) + 10 + newLev).ToString();
+                if (mon.ATK >= 5)
+                    textBoxAttack.Text = (((mon.ATK - 5) * newLev / mon.Level) + 5).ToString();
+                if (mon.DEF >= 5)
+                    textBoxDefense.Text = (((mon.DEF - 5) * newLev / mon.Level) + 5).ToString();
+                if (mon.SPA >= 5)
+                    textBoxSpAtk.Text = (((mon.SPA - 5) * newLev / mon.Level) + 5).ToString();
+                if (mon.SPD >= 5)
+                    textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
+                if (mon.SPE >= 5)
+                    textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+            }
         }
     }
 }

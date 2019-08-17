@@ -120,6 +120,12 @@ namespace MonCollection
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxHP = new System.Windows.Forms.TextBox();
+            this.textBoxAttack = new System.Windows.Forms.TextBox();
+            this.textBoxDefense = new System.Windows.Forms.TextBox();
+            this.textBoxSpAtk = new System.Windows.Forms.TextBox();
+            this.textBoxSpDef = new System.Windows.Forms.TextBox();
+            this.textBoxSpeed = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -257,6 +263,7 @@ namespace MonCollection
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(25, 20);
             this.textBoxLevel.TabIndex = 11;
+            this.textBoxLevel.TextChanged += new System.EventHandler(this.TextBoxLevel_TextChanged);
             // 
             // labelGender
             // 
@@ -761,11 +768,11 @@ namespace MonCollection
             // 
             // L_Count
             // 
-            this.L_Count.Location = new System.Drawing.Point(665, 60);
+            this.L_Count.Location = new System.Drawing.Point(662, 60);
             this.L_Count.Name = "L_Count";
-            this.L_Count.Size = new System.Drawing.Size(83, 13);
+            this.L_Count.Size = new System.Drawing.Size(89, 13);
             this.L_Count.TabIndex = 115;
-            this.L_Count.Text = "Num Mons: {0}";
+            this.L_Count.Text = "Mon Count: 0";
             this.L_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonGameLevelSort
@@ -813,11 +820,11 @@ namespace MonCollection
             this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHP.ForeColor = System.Drawing.Color.Black;
-            this.labelHP.Location = new System.Drawing.Point(7, 198);
+            this.labelHP.Location = new System.Drawing.Point(7, 203);
             this.labelHP.Name = "labelHP";
-            this.labelHP.Size = new System.Drawing.Size(49, 13);
+            this.labelHP.Size = new System.Drawing.Size(28, 13);
             this.labelHP.TabIndex = 120;
-            this.labelHP.Text = "HP: {0}";
+            this.labelHP.Text = "HP:";
             // 
             // labelAttack
             // 
@@ -825,11 +832,11 @@ namespace MonCollection
             this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAttack.ForeColor = System.Drawing.Color.Black;
-            this.labelAttack.Location = new System.Drawing.Point(7, 219);
+            this.labelAttack.Location = new System.Drawing.Point(7, 229);
             this.labelAttack.Name = "labelAttack";
-            this.labelAttack.Size = new System.Drawing.Size(69, 13);
+            this.labelAttack.Size = new System.Drawing.Size(48, 13);
             this.labelAttack.TabIndex = 121;
-            this.labelAttack.Text = "Attack: {0}";
+            this.labelAttack.Text = "Attack:";
             // 
             // labelDefense
             // 
@@ -837,11 +844,11 @@ namespace MonCollection
             this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDefense.ForeColor = System.Drawing.Color.Black;
-            this.labelDefense.Location = new System.Drawing.Point(7, 240);
+            this.labelDefense.Location = new System.Drawing.Point(7, 255);
             this.labelDefense.Name = "labelDefense";
-            this.labelDefense.Size = new System.Drawing.Size(79, 13);
+            this.labelDefense.Size = new System.Drawing.Size(58, 13);
             this.labelDefense.TabIndex = 122;
-            this.labelDefense.Text = "Defense: {0}";
+            this.labelDefense.Text = "Defense:";
             // 
             // labelSpAtk
             // 
@@ -849,11 +856,11 @@ namespace MonCollection
             this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpAtk.ForeColor = System.Drawing.Color.Black;
-            this.labelSpAtk.Location = new System.Drawing.Point(7, 261);
+            this.labelSpAtk.Location = new System.Drawing.Point(7, 281);
             this.labelSpAtk.Name = "labelSpAtk";
-            this.labelSpAtk.Size = new System.Drawing.Size(74, 13);
+            this.labelSpAtk.Size = new System.Drawing.Size(53, 13);
             this.labelSpAtk.TabIndex = 123;
-            this.labelSpAtk.Text = "Sp. Atk: {0}";
+            this.labelSpAtk.Text = "Sp. Atk:";
             // 
             // labelSpDef
             // 
@@ -861,11 +868,11 @@ namespace MonCollection
             this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpDef.ForeColor = System.Drawing.Color.Black;
-            this.labelSpDef.Location = new System.Drawing.Point(7, 282);
+            this.labelSpDef.Location = new System.Drawing.Point(6, 307);
             this.labelSpDef.Name = "labelSpDef";
-            this.labelSpDef.Size = new System.Drawing.Size(75, 13);
+            this.labelSpDef.Size = new System.Drawing.Size(54, 13);
             this.labelSpDef.TabIndex = 124;
-            this.labelSpDef.Text = "Sp. Def: {0}";
+            this.labelSpDef.Text = "Sp. Def:";
             // 
             // labelSpeed
             // 
@@ -873,11 +880,11 @@ namespace MonCollection
             this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeed.ForeColor = System.Drawing.Color.Black;
-            this.labelSpeed.Location = new System.Drawing.Point(7, 306);
+            this.labelSpeed.Location = new System.Drawing.Point(6, 333);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(68, 13);
+            this.labelSpeed.Size = new System.Drawing.Size(47, 13);
             this.labelSpeed.TabIndex = 125;
-            this.labelSpeed.Text = "Speed: {0}";
+            this.labelSpeed.Text = "Speed:";
             // 
             // labelOT
             // 
@@ -948,7 +955,7 @@ namespace MonCollection
             this.Label_IsShiny.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Label_IsShiny.Image = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.Image")));
             this.Label_IsShiny.InitialImage = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.InitialImage")));
-            this.Label_IsShiny.Location = new System.Drawing.Point(216, 86);
+            this.Label_IsShiny.Location = new System.Drawing.Point(216, 74);
             this.Label_IsShiny.Margin = new System.Windows.Forms.Padding(0, 2, 2, 0);
             this.Label_IsShiny.Name = "Label_IsShiny";
             this.Label_IsShiny.Size = new System.Drawing.Size(20, 20);
@@ -1118,30 +1125,84 @@ namespace MonCollection
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.ImportToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // textBoxHP
+            // 
+            this.textBoxHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxHP.ForeColor = System.Drawing.Color.Black;
+            this.textBoxHP.Location = new System.Drawing.Point(41, 200);
+            this.textBoxHP.Name = "textBoxHP";
+            this.textBoxHP.Size = new System.Drawing.Size(45, 20);
+            this.textBoxHP.TabIndex = 149;
+            // 
+            // textBoxAttack
+            // 
+            this.textBoxAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxAttack.ForeColor = System.Drawing.Color.Black;
+            this.textBoxAttack.Location = new System.Drawing.Point(61, 226);
+            this.textBoxAttack.Name = "textBoxAttack";
+            this.textBoxAttack.Size = new System.Drawing.Size(45, 20);
+            this.textBoxAttack.TabIndex = 150;
+            // 
+            // textBoxDefense
+            // 
+            this.textBoxDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxDefense.ForeColor = System.Drawing.Color.Black;
+            this.textBoxDefense.Location = new System.Drawing.Point(71, 252);
+            this.textBoxDefense.Name = "textBoxDefense";
+            this.textBoxDefense.Size = new System.Drawing.Size(45, 20);
+            this.textBoxDefense.TabIndex = 151;
+            // 
+            // textBoxSpAtk
+            // 
+            this.textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpAtk.ForeColor = System.Drawing.Color.Black;
+            this.textBoxSpAtk.Location = new System.Drawing.Point(66, 278);
+            this.textBoxSpAtk.Name = "textBoxSpAtk";
+            this.textBoxSpAtk.Size = new System.Drawing.Size(45, 20);
+            this.textBoxSpAtk.TabIndex = 152;
+            // 
+            // textBoxSpDef
+            // 
+            this.textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpDef.ForeColor = System.Drawing.Color.Black;
+            this.textBoxSpDef.Location = new System.Drawing.Point(66, 304);
+            this.textBoxSpDef.Name = "textBoxSpDef";
+            this.textBoxSpDef.Size = new System.Drawing.Size(45, 20);
+            this.textBoxSpDef.TabIndex = 153;
+            // 
+            // textBoxSpeed
+            // 
+            this.textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpeed.ForeColor = System.Drawing.Color.Black;
+            this.textBoxSpeed.Location = new System.Drawing.Point(59, 330);
+            this.textBoxSpeed.Name = "textBoxSpeed";
+            this.textBoxSpeed.Size = new System.Drawing.Size(45, 20);
+            this.textBoxSpeed.TabIndex = 154;
             // 
             // MainForm
             // 
@@ -1149,6 +1210,12 @@ namespace MonCollection
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 465);
+            this.Controls.Add(this.textBoxSpeed);
+            this.Controls.Add(this.textBoxSpDef);
+            this.Controls.Add(this.textBoxSpAtk);
+            this.Controls.Add(this.textBoxDefense);
+            this.Controls.Add(this.textBoxAttack);
+            this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.textBoxNickname);
             this.Controls.Add(this.buttonRevertMon);
             this.Controls.Add(this.buttonSaveMon);
@@ -1370,6 +1437,12 @@ namespace MonCollection
         private ToolStripMenuItem importToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private TextBox textBoxHP;
+        private TextBox textBoxAttack;
+        private TextBox textBoxDefense;
+        private TextBox textBoxSpAtk;
+        private TextBox textBoxSpDef;
+        private TextBox textBoxSpeed;
     }
 }
 
