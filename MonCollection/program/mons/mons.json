@@ -86304,6 +86304,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "New Heights",
+    "Species": 103,
+    "Level": 35,
+    "Gender": 2,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 0,
+    "ID": 0,
+    "OT": null,
+    "Origin": 0,
+    "Ball": 2,
+    "Language": 0,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Bread",
     "Species": 289,
     "Level": 22,

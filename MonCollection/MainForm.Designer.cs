@@ -126,6 +126,7 @@ namespace MonCollection
             this.textBoxSpAtk = new System.Windows.Forms.TextBox();
             this.textBoxSpDef = new System.Windows.Forms.TextBox();
             this.textBoxSpeed = new System.Windows.Forms.TextBox();
+            this.comboBoxGame = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -914,11 +915,11 @@ namespace MonCollection
             this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGame.ForeColor = System.Drawing.Color.Black;
-            this.labelGame.Location = new System.Drawing.Point(383, 399);
+            this.labelGame.Location = new System.Drawing.Point(340, 399);
             this.labelGame.Name = "labelGame";
-            this.labelGame.Size = new System.Drawing.Size(64, 13);
+            this.labelGame.Size = new System.Drawing.Size(43, 13);
             this.labelGame.TabIndex = 128;
-            this.labelGame.Text = "Game: {0}";
+            this.labelGame.Text = "Game:";
             // 
             // buttonGameMonTally
             // 
@@ -1204,12 +1205,26 @@ namespace MonCollection
             this.textBoxSpeed.Size = new System.Drawing.Size(45, 20);
             this.textBoxSpeed.TabIndex = 154;
             // 
+            // comboBoxGame
+            // 
+            this.comboBoxGame.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxGame.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxGame.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxGame.FormattingEnabled = true;
+            this.comboBoxGame.Location = new System.Drawing.Point(386, 396);
+            this.comboBoxGame.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxGame.Name = "comboBoxGame";
+            this.comboBoxGame.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxGame.TabIndex = 155;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 465);
+            this.Controls.Add(this.comboBoxGame);
             this.Controls.Add(this.textBoxSpeed);
             this.Controls.Add(this.textBoxSpDef);
             this.Controls.Add(this.textBoxSpAtk);
@@ -1443,6 +1458,7 @@ namespace MonCollection
         private TextBox textBoxSpAtk;
         private TextBox textBoxSpDef;
         private TextBox textBoxSpeed;
+        private ComboBox comboBoxGame;
     }
 }
 

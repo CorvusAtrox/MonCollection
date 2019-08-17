@@ -33,7 +33,6 @@ namespace MonCollection
 
         private string Counter = "Mon Count: {0}";
         private string OT = "OT: {0} ({1})";
-        private string Game = "Game: {0}";
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -219,6 +218,10 @@ namespace MonCollection
             LegalMoveSource.ReloadMoves(source.Moves);
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
+
+            comboBoxGame.Items.Clear();
+            foreach (var entry in gameDict)
+                comboBoxGame.Items.Add(entry.Key.ToString());
         }
 
         private bool OpenPKM(MonData pk)
@@ -290,6 +293,7 @@ namespace MonCollection
             mon.Species = data.Species;
             mon.AltForm = data.AltForm;
             mon.CurrentLevel = data.Level;
+            mon.Version = (int)gameDict[data.Game].version;
             return mon;
         }
 
@@ -393,7 +397,7 @@ namespace MonCollection
             setStatText(pk.Nature,pk.Gen);
 
             labelOT.Text = string.Format(OT,pk.ID,pk.OT);
-            labelGame.Text = string.Format(Game, pk.Game);
+            comboBoxGame.Text = pk.Game;
 
             textBoxLevel.Text = pk.Level.ToString();
 
@@ -1124,6 +1128,7 @@ namespace MonCollection
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
                                         (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
+            mon.Game = comboBoxGame.Text;
             mon.HP = int.Parse(textBoxHP.Text);
             mon.ATK = int.Parse(textBoxAttack.Text);
             mon.DEF = int.Parse(textBoxDefense.Text);
