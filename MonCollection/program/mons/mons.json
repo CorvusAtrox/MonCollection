@@ -86400,6 +86400,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Hip With It",
+    "Species": 450,
+    "Level": 33,
+    "Gender": 2,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 0,
+    "ID": 0,
+    "OT": null,
+    "Origin": 0,
+    "Ball": 3,
+    "Language": 0,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "OZZIL",
     "Species": 5,
     "Level": 17,

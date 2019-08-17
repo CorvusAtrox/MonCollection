@@ -109,6 +109,7 @@ namespace MonCollection
                                       GameVersion.D, GameVersion.P, GameVersion.Pt, GameVersion.HG, GameVersion.SS,
                                       GameVersion.B, GameVersion.W, GameVersion.B2, GameVersion.W2,
                                       GameVersion.X, GameVersion.Y, GameVersion.OR, GameVersion.AS,
+                                      GameVersion.GO,
                                       GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
                                       GameVersion.GP, GameVersion.GE};
             foreach (GameVersion v in versions)
@@ -293,7 +294,8 @@ namespace MonCollection
             mon.Species = data.Species;
             mon.AltForm = data.AltForm;
             mon.CurrentLevel = data.Level;
-            mon.Version = (int)gameDict[data.Game].version;
+            if(gameDict.TryGetValue(data.Game, out SaveInfo val))
+                mon.Version = (int)val.version;
             return mon;
         }
 
@@ -983,9 +985,9 @@ namespace MonCollection
         {
             var results = new FormNiqCalc();
 
-            //results.loadDB(PkmData, slotSelected);
-            //results.showValues();
-            //results.Show();
+            results.LoadDB(PkmData, slotSelected);
+            results.showValues();
+            results.Show();
         }
 
         private void ButtonEggs_Click(object sender, EventArgs e)
