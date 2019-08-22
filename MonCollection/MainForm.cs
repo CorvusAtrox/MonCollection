@@ -569,6 +569,10 @@ namespace MonCollection
                     game = "xyoras";
                     ext = ".gif";
                     break;
+                case GameVersion.GO:
+                    game = "go";
+                    ext = ".png";
+                    break;
                 case GameVersion.SN:
                 case GameVersion.MN:
                 case GameVersion.US:
