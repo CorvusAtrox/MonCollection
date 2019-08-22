@@ -30,7 +30,6 @@ namespace MonCollection
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelNickname = new System.Windows.Forms.Label();
             this.labelBall = new System.Windows.Forms.Label();
             this.comboBoxBalls = new System.Windows.Forms.ComboBox();
@@ -100,7 +99,6 @@ namespace MonCollection
             this.buttonGameMonTally = new System.Windows.Forms.Button();
             this.buttonGameTally = new System.Windows.Forms.Button();
             this.buttonSpeciesSort = new System.Windows.Forms.Button();
-            this.Label_IsShiny = new System.Windows.Forms.PictureBox();
             this.comboBoxForm = new System.Windows.Forms.ComboBox();
             this.labelPkrs = new System.Windows.Forms.Label();
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
@@ -119,6 +117,7 @@ namespace MonCollection
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHP = new System.Windows.Forms.TextBox();
             this.textBoxAttack = new System.Windows.Forms.TextBox();
@@ -127,6 +126,10 @@ namespace MonCollection
             this.textBoxSpDef = new System.Windows.Forms.TextBox();
             this.textBoxSpeed = new System.Windows.Forms.TextBox();
             this.comboBoxGame = new System.Windows.Forms.ComboBox();
+            this.textBoxOT = new System.Windows.Forms.TextBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.BTN_Shinytize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -160,7 +163,6 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Label_IsShiny)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -277,6 +279,7 @@ namespace MonCollection
             this.labelGender.Size = new System.Drawing.Size(11, 13);
             this.labelGender.TabIndex = 12;
             this.labelGender.Text = "-";
+            this.labelGender.Click += new System.EventHandler(this.LabelGender_Click);
             // 
             // comboBoxLanguage
             // 
@@ -893,11 +896,11 @@ namespace MonCollection
             this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOT.ForeColor = System.Drawing.Color.Black;
-            this.labelOT.Location = new System.Drawing.Point(383, 374);
+            this.labelOT.Location = new System.Drawing.Point(340, 374);
             this.labelOT.Name = "labelOT";
-            this.labelOT.Size = new System.Drawing.Size(78, 13);
+            this.labelOT.Size = new System.Drawing.Size(28, 13);
             this.labelOT.TabIndex = 126;
-            this.labelOT.Text = "OT: {0} ({1})";
+            this.labelOT.Text = "OT:";
             // 
             // buttonReloadDB
             // 
@@ -951,20 +954,6 @@ namespace MonCollection
             this.buttonSpeciesSort.UseVisualStyleBackColor = true;
             this.buttonSpeciesSort.Click += new System.EventHandler(this.ButtonSpeciesSort_Click);
             // 
-            // Label_IsShiny
-            // 
-            this.Label_IsShiny.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Label_IsShiny.Image = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.Image")));
-            this.Label_IsShiny.InitialImage = ((System.Drawing.Image)(resources.GetObject("Label_IsShiny.InitialImage")));
-            this.Label_IsShiny.Location = new System.Drawing.Point(216, 74);
-            this.Label_IsShiny.Margin = new System.Windows.Forms.Padding(0, 2, 2, 0);
-            this.Label_IsShiny.Name = "Label_IsShiny";
-            this.Label_IsShiny.Size = new System.Drawing.Size(20, 20);
-            this.Label_IsShiny.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Label_IsShiny.TabIndex = 132;
-            this.Label_IsShiny.TabStop = false;
-            this.Label_IsShiny.Visible = false;
-            // 
             // comboBoxForm
             // 
             this.comboBoxForm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -972,7 +961,7 @@ namespace MonCollection
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(238, 73);
+            this.comboBoxForm.Location = new System.Drawing.Point(239, 75);
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
@@ -1118,6 +1107,7 @@ namespace MonCollection
             this.addToolStripMenuItem,
             this.importToolStripMenuItem,
             this.saveToolStripMenuItem,
+            this.gamesToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
             this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
@@ -1143,6 +1133,13 @@ namespace MonCollection
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            // 
+            // gamesToolStripMenuItem
+            // 
+            this.gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
+            this.gamesToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.gamesToolStripMenuItem.Text = "Games";
+            this.gamesToolStripMenuItem.Click += new System.EventHandler(this.GamesToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -1217,6 +1214,50 @@ namespace MonCollection
             this.comboBoxGame.Name = "comboBoxGame";
             this.comboBoxGame.Size = new System.Drawing.Size(180, 21);
             this.comboBoxGame.TabIndex = 155;
+            this.comboBoxGame.SelectedValueChanged += new System.EventHandler(this.ComboBoxGame_SelectedValueChanged);
+            // 
+            // textBoxOT
+            // 
+            this.textBoxOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxOT.ForeColor = System.Drawing.Color.Black;
+            this.textBoxOT.Location = new System.Drawing.Point(374, 373);
+            this.textBoxOT.Name = "textBoxOT";
+            this.textBoxOT.Size = new System.Drawing.Size(90, 20);
+            this.textBoxOT.TabIndex = 156;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.ForeColor = System.Drawing.Color.Black;
+            this.labelID.Location = new System.Drawing.Point(470, 376);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(24, 13);
+            this.labelID.TabIndex = 157;
+            this.labelID.Text = "ID:";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxID.ForeColor = System.Drawing.Color.Black;
+            this.textBoxID.Location = new System.Drawing.Point(500, 374);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(66, 20);
+            this.textBoxID.TabIndex = 158;
+            // 
+            // BTN_Shinytize
+            // 
+            this.BTN_Shinytize.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.BTN_Shinytize.Location = new System.Drawing.Point(215, 73);
+            this.BTN_Shinytize.Margin = new System.Windows.Forms.Padding(0);
+            this.BTN_Shinytize.Name = "BTN_Shinytize";
+            this.BTN_Shinytize.Size = new System.Drawing.Size(24, 22);
+            this.BTN_Shinytize.TabIndex = 159;
+            this.BTN_Shinytize.Tag = "";
+            this.BTN_Shinytize.Text = "☆";
+            this.BTN_Shinytize.UseVisualStyleBackColor = true;
+            this.BTN_Shinytize.Click += new System.EventHandler(this.BTN_Shinytize_Click);
             // 
             // MainForm
             // 
@@ -1224,6 +1265,10 @@ namespace MonCollection
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 465);
+            this.Controls.Add(this.BTN_Shinytize);
+            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.labelID);
+            this.Controls.Add(this.textBoxOT);
             this.Controls.Add(this.comboBoxGame);
             this.Controls.Add(this.textBoxSpeed);
             this.Controls.Add(this.textBoxSpDef);
@@ -1244,7 +1289,6 @@ namespace MonCollection
             this.Controls.Add(this.pictureBoxPkrs);
             this.Controls.Add(this.labelPkrs);
             this.Controls.Add(this.comboBoxForm);
-            this.Controls.Add(this.Label_IsShiny);
             this.Controls.Add(this.buttonSpeciesSort);
             this.Controls.Add(this.buttonGameTally);
             this.Controls.Add(this.buttonGameMonTally);
@@ -1352,7 +1396,6 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Label_IsShiny)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1432,7 +1475,6 @@ namespace MonCollection
         private Button buttonGameMonTally;
         private Button buttonGameTally;
         private Button buttonSpeciesSort;
-        private PictureBox Label_IsShiny;
         private ComboBox comboBoxForm;
         private Label labelPkrs;
         private PictureBox pictureBoxPkrs;
@@ -1459,6 +1501,11 @@ namespace MonCollection
         private TextBox textBoxSpDef;
         private TextBox textBoxSpeed;
         private ComboBox comboBoxGame;
+        private TextBox textBoxOT;
+        private Label labelID;
+        private TextBox textBoxID;
+        private ToolStripMenuItem gamesToolStripMenuItem;
+        private Button BTN_Shinytize;
     }
 }
 

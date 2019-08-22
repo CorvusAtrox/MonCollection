@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +18,7 @@ namespace MonCollection
         public string Game { get; set; }
         public int AltForm { get; set; }
         public bool Shiny { get; set; }
+        [DefaultValue(-1)]
         public int Ability { get; set; }
         public int Nature { get; set; }
         public int HP { get; set; }

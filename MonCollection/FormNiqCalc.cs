@@ -19,7 +19,7 @@ namespace MonCollection
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private List<ComboBox> moveBoxes;
 
-        public Dictionary<string, MainForm.SaveInfo> gameDict;
+        public Dictionary<string, SaveInfo> gameDict;
 
         public FormNiqCalc()
         {
@@ -56,7 +56,7 @@ namespace MonCollection
 
         private void InitializeGameDict()
         {
-            gameDict = new Dictionary<string, MainForm.SaveInfo>();
+            gameDict = new Dictionary<string, SaveInfo>();
             StreamReader dict = new StreamReader(Settings.Default.mons + "/mons.ini");
             string l;
             string[] split;
@@ -66,7 +66,24 @@ namespace MonCollection
             {
                 l = dict.ReadLine();
                 split = l.Split(',');
-                gameDict.Add(split[0], new MainForm.SaveInfo(split[2], split[1], ind));
+                switch (split.Count())
+                {
+                    case 5:
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[2], split[3], ind));
+                        break;
+                    case 4:
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], split[2], split[3], ind));
+                        break;
+                    case 3:
+                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "0", null, ind));
+                        break;
+                    case 2:
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "0", null, ind));
+                        break;
+                    default:
+                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", null, ind));
+                        break;
+                }
                 ind++;
             }
         }
@@ -81,7 +98,7 @@ namespace MonCollection
         public void showValues()
         {
             MonData mon = PkmDB[ind];
-            gameDict.TryGetValue(game, out MainForm.SaveInfo si);
+            gameDict.TryGetValue(game, out SaveInfo si);
             SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
 
@@ -204,7 +221,7 @@ namespace MonCollection
             mon.Species = data.Species;
             mon.AltForm = data.AltForm;
             mon.CurrentLevel = data.Level;
-            if (gameDict.TryGetValue(data.Game, out MainForm.SaveInfo val))
+            if (gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;
             return mon;
         }

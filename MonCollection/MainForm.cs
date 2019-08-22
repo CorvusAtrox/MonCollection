@@ -32,7 +32,6 @@ namespace MonCollection
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
 
         private string Counter = "Mon Count: {0}";
-        private string OT = "OT: {0} ({1})";
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -41,28 +40,12 @@ namespace MonCollection
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
         private int[] noDiff;
+        private string[] languages;
 
 
         public static DrawConfig Draw = new DrawConfig();
 
         public Dictionary<string,SaveInfo> gameDict;
-
-        public class SaveInfo
-        {
-            public string language;
-            public GameVersion version;
-            public int index;
-
-            public SaveInfo(string l, string v, int i)
-            {
-                language = l;
-                Enum.TryParse(v, out GameVersion ver);
-                version = ver;
-                index = i;
-            }
-
-        }
-
 
         public MainForm()
         {
@@ -90,8 +73,24 @@ namespace MonCollection
             {
                 l = dict.ReadLine();
                 split = l.Split(',');
-                if(split.Count() == 3)
-                    gameDict.Add(split[0], new SaveInfo(split[2],split[1],ind));
+                switch (split.Count())
+                {
+                    case 5:
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[2], split[3], ind));
+                        break;
+                    case 4:
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], split[2], split[3], ind));
+                        break;
+                    case 3:
+                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "0", null, ind));
+                        break;
+                    case 2:
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "0", null, ind));
+                        break;
+                    default:
+                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", null, ind));
+                        break;
+                }
                 ind++;
             }
         }
@@ -136,6 +135,7 @@ namespace MonCollection
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473};
             noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
+            languages = new string[]{ "", "jp", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
         }
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
@@ -390,6 +390,9 @@ namespace MonCollection
             comboBoxMove3.SelectedValue = pk.Moves[2];
             comboBoxMove4.SelectedValue = pk.Moves[3];
 
+            BTN_Shinytize.Tag = pk.Shiny;
+            setShiny((bool)BTN_Shinytize.Tag);
+
             textBoxHP.Text = pk.HP.ToString();
             textBoxAttack.Text = pk.ATK.ToString();
             textBoxDefense.Text = pk.DEF.ToString();
@@ -398,7 +401,8 @@ namespace MonCollection
             textBoxSpeed.Text = pk.SPE.ToString();
             setStatText(pk.Nature,pk.Gen);
 
-            labelOT.Text = string.Format(OT,pk.ID,pk.OT);
+            textBoxOT.Text = pk.OT;
+            textBoxID.Text = pk.ID.ToString();
             comboBoxGame.Text = pk.Game;
 
             textBoxLevel.Text = pk.Level.ToString();
@@ -437,7 +441,8 @@ namespace MonCollection
                 pictureBoxGameSprite.Image = getSprite(spForm, GameVersion.UM, pk.Shiny);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
-            Label_IsShiny.Visible = pk.Shiny;
+            labelGender.Tag = pk.Gender;
+            setShiny(pk.Shiny);
             if (pk.PKRS_Infected)
             {
                 pictureBoxPkrs.Visible = true;
@@ -1123,14 +1128,18 @@ namespace MonCollection
 
             mon.Nickname = textBoxNickname.Text;
             mon.Level = int.Parse(textBoxLevel.Text);
+            mon.Gender = (int)labelGender.Tag;
             mon.Species = (int)comboBoxSpecies.SelectedValue;
             if(comboBoxForm.Visible == true)
-                mon.AltForm = (int)comboBoxForm.SelectedValue;
+                mon.AltForm = (int)comboBoxForm.SelectedIndex;
             mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
                                         (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
             mon.Game = comboBoxGame.Text;
+            mon.OT = textBoxOT.Text;
+            mon.ID = int.Parse(textBoxID.Text);
+            mon.Shiny = (bool)BTN_Shinytize.Tag;
             mon.HP = int.Parse(textBoxHP.Text);
             mon.ATK = int.Parse(textBoxAttack.Text);
             mon.DEF = int.Parse(textBoxDefense.Text);
@@ -1163,7 +1172,7 @@ namespace MonCollection
         {
             slotSelected = PkmData.Count();
             PkmData.Add(new MonData());
-            int val = (int)(slotSelected / RES_MIN);
+            int val = (int)((slotSelected-1) / RES_MIN);
             SCR_Box.Value = val;
             FillPKXBoxes(val);
             OpenPKM(PkmData[slotSelected]);
@@ -1224,7 +1233,8 @@ namespace MonCollection
 
                     MessageBox.Show("Pokemon Data Imported!");
 
-                    string json = JsonConvert.SerializeObject(PkmData, Formatting.Indented);
+                    string json = JsonConvert.SerializeObject(PkmData, Formatting.Indented,
+                                  new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore });
 
                     //write string to file
                     File.WriteAllText(Settings.Default.mons + "/mons.json", json);
@@ -1268,6 +1278,62 @@ namespace MonCollection
                     textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
                 if (mon.SPE >= 5)
                     textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+            }
+        }
+
+        private void LabelGender_Click(object sender, EventArgs e)
+        {
+            labelGender.Tag = ((int)labelGender.Tag + 1) % 3;
+            labelGender.Text = genders[(int)labelGender.Tag];
+        }
+
+        private void GamesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //TO DO: Make popup for editing this
+            FormGames games = new FormGames();
+            games.FormClosed += new FormClosedEventHandler(reloadGames);
+            games.Show();
+        }
+
+        private void reloadGames(object sender, FormClosedEventArgs e)
+        {
+            FormGames frm = (FormGames)sender;
+            frm.updateGameIni();
+            InitializeGameDict();
+        }
+
+        private void BTN_Shinytize_Click(object sender, EventArgs e)
+        {
+            BTN_Shinytize.Tag = !(bool)BTN_Shinytize.Tag;
+            setShiny((bool)BTN_Shinytize.Tag);
+        }
+
+        private void setShiny(bool shiny)
+        {
+            if (shiny)
+            {
+                BTN_Shinytize.Text = "★";
+                BTN_Shinytize.ForeColor = Color.Red;
+            }
+            else
+            {
+                BTN_Shinytize.Text = "☆";
+                BTN_Shinytize.ForeColor = Color.Black;
+            }
+        }
+
+        private void ComboBoxGame_SelectedValueChanged(object sender, EventArgs e)
+        {
+            SaveInfo si = gameDict[comboBoxGame.Text];
+            PkmData[slotSelected].Gen = si.getGen();
+            if (PkmData[slotSelected].Language == 0)
+                PkmData[slotSelected].Language = Array.IndexOf(languages,si.language);
+            if (PkmData[slotSelected].Origin == 0)
+                comboBoxOrigin.SelectedValue = (int)si.version;
+            if (PkmData[slotSelected].ID == 0 && (PkmData[slotSelected].OT == null || PkmData[slotSelected].OT == string.Empty))
+            {
+                textBoxOT.Text = si.ot;
+                textBoxID.Text = si.id.ToString();
             }
         }
     }
