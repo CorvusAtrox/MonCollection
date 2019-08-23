@@ -51,6 +51,7 @@ namespace MonCollection
                 case GameVersion.FR:
                 case GameVersion.LG:
                 case GameVersion.E:
+                case GameVersion.CXD:
                     return 3;
                 case GameVersion.D:
                 case GameVersion.P:

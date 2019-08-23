@@ -193,7 +193,7 @@ namespace MonCollection
             // 
             // comboBoxBalls
             // 
-            this.comboBoxBalls.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxBalls.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBalls.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxBalls.BackColor = System.Drawing.Color.Firebrick;
             this.comboBoxBalls.ForeColor = System.Drawing.Color.White;
@@ -214,7 +214,7 @@ namespace MonCollection
             // 
             // comboBoxSpecies
             // 
-            this.comboBoxSpecies.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxSpecies.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxSpecies.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
@@ -223,7 +223,7 @@ namespace MonCollection
             this.comboBoxSpecies.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
             this.comboBoxSpecies.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxSpecies.TabIndex = 8;
+            this.comboBoxSpecies.TabIndex = 10;
             // 
             // labelSpecies
             // 
@@ -283,7 +283,7 @@ namespace MonCollection
             // 
             // comboBoxLanguage
             // 
-            this.comboBoxLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
@@ -308,7 +308,7 @@ namespace MonCollection
             // 
             // comboBoxAbility
             // 
-            this.comboBoxAbility.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxAbility.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxAbility.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxAbility.ForeColor = System.Drawing.Color.Black;
@@ -333,7 +333,7 @@ namespace MonCollection
             // 
             // comboBoxNature
             // 
-            this.comboBoxNature.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxNature.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxNature.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxNature.ForeColor = System.Drawing.Color.Black;
@@ -358,7 +358,7 @@ namespace MonCollection
             // 
             // comboBoxMove1
             // 
-            this.comboBoxMove1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMove1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -385,7 +385,7 @@ namespace MonCollection
             // 
             // comboBoxMove2
             // 
-            this.comboBoxMove2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMove2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -400,7 +400,7 @@ namespace MonCollection
             // 
             // comboBoxMove4
             // 
-            this.comboBoxMove4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMove4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -415,7 +415,7 @@ namespace MonCollection
             // 
             // comboBoxMove3
             // 
-            this.comboBoxMove3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMove3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -956,7 +956,7 @@ namespace MonCollection
             // 
             // comboBoxForm
             // 
-            this.comboBoxForm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxForm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxForm.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
@@ -965,7 +965,7 @@ namespace MonCollection
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxForm.TabIndex = 133;
+            this.comboBoxForm.TabIndex = 13;
             // 
             // labelPkrs
             // 
@@ -1009,7 +1009,7 @@ namespace MonCollection
             // 
             // comboBoxOrigin
             // 
-            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
@@ -1018,7 +1018,7 @@ namespace MonCollection
             this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxOrigin.Name = "comboBoxOrigin";
             this.comboBoxOrigin.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxOrigin.TabIndex = 138;
+            this.comboBoxOrigin.TabIndex = 43;
             // 
             // labelOrigin
             // 
@@ -1067,7 +1067,7 @@ namespace MonCollection
             this.buttonSaveMon.Location = new System.Drawing.Point(148, 364);
             this.buttonSaveMon.Name = "buttonSaveMon";
             this.buttonSaveMon.Size = new System.Drawing.Size(116, 23);
-            this.buttonSaveMon.TabIndex = 145;
+            this.buttonSaveMon.TabIndex = 43;
             this.buttonSaveMon.Text = "Save";
             this.buttonSaveMon.UseVisualStyleBackColor = true;
             this.buttonSaveMon.Click += new System.EventHandler(this.ButtonSaveMon_Click);
@@ -1077,7 +1077,7 @@ namespace MonCollection
             this.buttonRevertMon.Location = new System.Drawing.Point(148, 399);
             this.buttonRevertMon.Name = "buttonRevertMon";
             this.buttonRevertMon.Size = new System.Drawing.Size(116, 23);
-            this.buttonRevertMon.TabIndex = 146;
+            this.buttonRevertMon.TabIndex = 44;
             this.buttonRevertMon.Text = "Revert";
             this.buttonRevertMon.UseVisualStyleBackColor = true;
             this.buttonRevertMon.Click += new System.EventHandler(this.ButtonRevertMon_Click);
@@ -1089,7 +1089,7 @@ namespace MonCollection
             this.textBoxNickname.Location = new System.Drawing.Point(225, 37);
             this.textBoxNickname.Name = "textBoxNickname";
             this.textBoxNickname.Size = new System.Drawing.Size(85, 20);
-            this.textBoxNickname.TabIndex = 147;
+            this.textBoxNickname.TabIndex = 8;
             // 
             // menuStrip1
             // 
@@ -1155,7 +1155,7 @@ namespace MonCollection
             this.textBoxHP.Location = new System.Drawing.Point(41, 200);
             this.textBoxHP.Name = "textBoxHP";
             this.textBoxHP.Size = new System.Drawing.Size(45, 20);
-            this.textBoxHP.TabIndex = 149;
+            this.textBoxHP.TabIndex = 24;
             // 
             // textBoxAttack
             // 
@@ -1164,7 +1164,7 @@ namespace MonCollection
             this.textBoxAttack.Location = new System.Drawing.Point(61, 226);
             this.textBoxAttack.Name = "textBoxAttack";
             this.textBoxAttack.Size = new System.Drawing.Size(45, 20);
-            this.textBoxAttack.TabIndex = 150;
+            this.textBoxAttack.TabIndex = 25;
             // 
             // textBoxDefense
             // 
@@ -1173,7 +1173,7 @@ namespace MonCollection
             this.textBoxDefense.Location = new System.Drawing.Point(71, 252);
             this.textBoxDefense.Name = "textBoxDefense";
             this.textBoxDefense.Size = new System.Drawing.Size(45, 20);
-            this.textBoxDefense.TabIndex = 151;
+            this.textBoxDefense.TabIndex = 26;
             // 
             // textBoxSpAtk
             // 
@@ -1182,7 +1182,7 @@ namespace MonCollection
             this.textBoxSpAtk.Location = new System.Drawing.Point(66, 278);
             this.textBoxSpAtk.Name = "textBoxSpAtk";
             this.textBoxSpAtk.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpAtk.TabIndex = 152;
+            this.textBoxSpAtk.TabIndex = 27;
             // 
             // textBoxSpDef
             // 
@@ -1191,7 +1191,7 @@ namespace MonCollection
             this.textBoxSpDef.Location = new System.Drawing.Point(66, 304);
             this.textBoxSpDef.Name = "textBoxSpDef";
             this.textBoxSpDef.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpDef.TabIndex = 153;
+            this.textBoxSpDef.TabIndex = 28;
             // 
             // textBoxSpeed
             // 
@@ -1200,11 +1200,11 @@ namespace MonCollection
             this.textBoxSpeed.Location = new System.Drawing.Point(59, 330);
             this.textBoxSpeed.Name = "textBoxSpeed";
             this.textBoxSpeed.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpeed.TabIndex = 154;
+            this.textBoxSpeed.TabIndex = 29;
             // 
             // comboBoxGame
             // 
-            this.comboBoxGame.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxGame.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxGame.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxGame.ForeColor = System.Drawing.Color.Black;
@@ -1213,7 +1213,7 @@ namespace MonCollection
             this.comboBoxGame.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxGame.Name = "comboBoxGame";
             this.comboBoxGame.Size = new System.Drawing.Size(180, 21);
-            this.comboBoxGame.TabIndex = 155;
+            this.comboBoxGame.TabIndex = 41;
             this.comboBoxGame.SelectedValueChanged += new System.EventHandler(this.ComboBoxGame_SelectedValueChanged);
             // 
             // textBoxOT
@@ -1223,7 +1223,7 @@ namespace MonCollection
             this.textBoxOT.Location = new System.Drawing.Point(374, 373);
             this.textBoxOT.Name = "textBoxOT";
             this.textBoxOT.Size = new System.Drawing.Size(90, 20);
-            this.textBoxOT.TabIndex = 156;
+            this.textBoxOT.TabIndex = 36;
             // 
             // labelID
             // 
@@ -1244,7 +1244,7 @@ namespace MonCollection
             this.textBoxID.Location = new System.Drawing.Point(500, 374);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(66, 20);
-            this.textBoxID.TabIndex = 158;
+            this.textBoxID.TabIndex = 38;
             // 
             // BTN_Shinytize
             // 
@@ -1361,7 +1361,6 @@ namespace MonCollection
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Pokémon";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
