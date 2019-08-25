@@ -130,6 +130,7 @@ namespace MonCollection
             this.labelID = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.BTN_Shinytize = new System.Windows.Forms.Button();
+            this.buttonMonBallTally = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -272,11 +273,11 @@ namespace MonCollection
             // 
             this.labelGender.AutoSize = true;
             this.labelGender.BackColor = System.Drawing.Color.Firebrick;
-            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
             this.labelGender.Location = new System.Drawing.Point(378, 37);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(11, 13);
+            this.labelGender.Size = new System.Drawing.Size(10, 13);
             this.labelGender.TabIndex = 12;
             this.labelGender.Text = "-";
             this.labelGender.Click += new System.EventHandler(this.LabelGender_Click);
@@ -446,7 +447,7 @@ namespace MonCollection
             this.SCR_Box.LargeChange = 1;
             this.SCR_Box.Location = new System.Drawing.Point(837, 77);
             this.SCR_Box.Name = "SCR_Box";
-            this.SCR_Box.Size = new System.Drawing.Size(24, 155);
+            this.SCR_Box.Size = new System.Drawing.Size(24, 156);
             this.SCR_Box.TabIndex = 60;
             this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
             // 
@@ -961,7 +962,7 @@ namespace MonCollection
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(239, 75);
+            this.comboBoxForm.Location = new System.Drawing.Point(239, 72);
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
@@ -999,7 +1000,7 @@ namespace MonCollection
             // 
             // buttonEggs
             // 
-            this.buttonEggs.Location = new System.Drawing.Point(638, 420);
+            this.buttonEggs.Location = new System.Drawing.Point(635, 440);
             this.buttonEggs.Name = "buttonEggs";
             this.buttonEggs.Size = new System.Drawing.Size(116, 23);
             this.buttonEggs.TabIndex = 137;
@@ -1249,7 +1250,7 @@ namespace MonCollection
             // BTN_Shinytize
             // 
             this.BTN_Shinytize.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTN_Shinytize.Location = new System.Drawing.Point(215, 73);
+            this.BTN_Shinytize.Location = new System.Drawing.Point(215, 72);
             this.BTN_Shinytize.Margin = new System.Windows.Forms.Padding(0);
             this.BTN_Shinytize.Name = "BTN_Shinytize";
             this.BTN_Shinytize.Size = new System.Drawing.Size(24, 22);
@@ -1259,12 +1260,23 @@ namespace MonCollection
             this.BTN_Shinytize.UseVisualStyleBackColor = true;
             this.BTN_Shinytize.Click += new System.EventHandler(this.BTN_Shinytize_Click);
             // 
+            // buttonMonBallTally
+            // 
+            this.buttonMonBallTally.Location = new System.Drawing.Point(714, 411);
+            this.buttonMonBallTally.Name = "buttonMonBallTally";
+            this.buttonMonBallTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonMonBallTally.TabIndex = 160;
+            this.buttonMonBallTally.Text = "Mon Ball Tally";
+            this.buttonMonBallTally.UseVisualStyleBackColor = true;
+            this.buttonMonBallTally.Click += new System.EventHandler(this.ButtonMonBallTally_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(873, 465);
+            this.ClientSize = new System.Drawing.Size(873, 478);
+            this.Controls.Add(this.buttonMonBallTally);
             this.Controls.Add(this.BTN_Shinytize);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.labelID);
@@ -1505,6 +1517,7 @@ namespace MonCollection
         private TextBox textBoxID;
         private ToolStripMenuItem gamesToolStripMenuItem;
         private Button BTN_Shinytize;
+        private Button buttonMonBallTally;
     }
 }
 

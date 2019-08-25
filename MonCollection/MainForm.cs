@@ -20,7 +20,8 @@ namespace MonCollection
     public partial class MainForm : Form
     {
         private SaveFile ver;
-        private string[] genders = { "♂", "♀️", "-" };
+        //private string[] genders = { "♂", "♀️", "⚲" };
+        private string[] genders = { "M", "F", "N" };
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private ComboBox[] moveBoxes;
         private PictureBox[] PKXBOXES;
@@ -883,6 +884,24 @@ namespace MonCollection
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
         }
 
+        private void ButtonMonBallTally_Click(object sender, EventArgs e)
+        {
+            ButtonSpeciesSort_Click(sender, e);
+            var SpeciesList = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            var query = PkmData.GroupBy(
+                mon => mon.Species,
+                mon => mon.Ball,
+                (species, ball) => new
+                {
+                    Name = PkmListAny.Find(p => p.Value == species).Text,
+                    Counts = getBallCounts(species, ball)
+                });
+            var results = new FormGameTally();
+            results.Show();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+        }
+
         private void ButtonRanMon_Click(object sender, EventArgs e)
         {
             int rnd = RandomNumberGenerator.GetRandomInt(0, maxIndex);
@@ -971,6 +990,27 @@ namespace MonCollection
 
             foreach (var mv in moveGroups)
                 result += moveNames.Find(p => p.Value == mv.Key).Text + ": " + mv.Count() + "; ";
+
+            return result;
+        }
+
+        private string getBallCounts(int index, IEnumerable<int> balls)
+        {
+            List<int> allBalls = new List<int>();
+            foreach (var m in balls)
+                if (m != 0)
+                    allBalls.Add(m);
+
+            allBalls.Sort();
+
+            string result = "";
+
+            var ballGroups = allBalls.GroupBy(i => i);
+
+            var ballNames = new List<ComboItem>(GameInfo.BallDataSource);
+
+            foreach (var bl in ballGroups)
+                result += ballNames.Find(p => p.Value == bl.Key).Text + ": " + bl.Count() + "; ";
 
             return result;
         }
