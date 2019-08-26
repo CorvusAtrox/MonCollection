@@ -66,25 +66,25 @@
   {
     "Nickname": "DARTH ZAP",
     "Species": 180,
-    "Level": 18,
+    "Level": 20,
     "Gender": 0,
     "Moves": [
       34,
       215,
-      84,
-      86
+      521,
+      36
     ],
     "Game": "HOME [CorvusOssi]",
     "AltForm": 0,
     "Shiny": false,
     "Ability": 9,
     "Nature": 22,
-    "HP": 54,
-    "ATK": 25,
-    "DEF": 30,
-    "SPA": 36,
-    "SPD": 29,
-    "SPE": 22,
+    "HP": 59,
+    "ATK": 28,
+    "DEF": 32,
+    "SPA": 40,
+    "SPD": 33,
+    "SPE": 25,
     "Gen": 7,
     "ID": 18243,
     "OT": "SMEDLY",
@@ -92,8 +92,8 @@
     "Ball": 4,
     "Language": 2,
     "PKRS_Infected": true,
-    "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Cured": false,
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BUGGY",
@@ -184,7 +184,7 @@
     "Gen": 7,
     "ID": 61542,
     "OT": "SNAGEM",
-    "Origin": 15,
+    "Origin": 3,
     "Ball": 4,
     "Language": 2,
     "PKRS_Infected": false,
@@ -221,7 +221,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MEID",
@@ -285,7 +285,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PSYQUAKE",
@@ -312,7 +312,7 @@
     "Gen": 7,
     "ID": 61542,
     "OT": "SNAGEM",
-    "Origin": 15,
+    "Origin": 3,
     "Ball": 3,
     "Language": 2,
     "PKRS_Infected": false,
@@ -1304,38 +1304,6 @@
     "Gen": 1,
     "ID": 17445,
     "OT": "GARY",
-    "Origin": 47,
-    "Ball": 0,
-    "Language": 2,
-    "PKRS_Infected": false,
-    "PKRS_Cured": false,
-    "PKRS_Strain": 0
-  },
-  {
-    "Nickname": "SLOWPOKE",
-    "Species": 79,
-    "Level": 26,
-    "Gender": 1,
-    "Moves": [
-      33,
-      45,
-      55,
-      93
-    ],
-    "Game": "Blue [GARY]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": -1,
-    "Nature": 0,
-    "HP": 86,
-    "ATK": 40,
-    "DEF": 41,
-    "SPA": 29,
-    "SPD": 29,
-    "SPE": 19,
-    "Gen": 1,
-    "ID": 34267,
-    "OT": "AJSBKTC",
     "Origin": 47,
     "Ball": 0,
     "Language": 2,
@@ -6301,7 +6269,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SHARPY",
@@ -6333,7 +6301,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Stress",
@@ -6365,7 +6333,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Vinc",
@@ -6397,7 +6365,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "TRIP",
@@ -6493,7 +6461,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PINECO",
@@ -6525,7 +6493,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BITER",
@@ -6557,7 +6525,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BEATER",
@@ -6589,7 +6557,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sulfur o3o",
@@ -6653,7 +6621,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Stress",
@@ -6685,7 +6653,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "WINSTON",
@@ -6717,7 +6685,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Valve",
@@ -6749,7 +6717,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Cornelius",
@@ -6781,7 +6749,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Mouthy",
@@ -6813,7 +6781,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LeafyGreen",
@@ -6845,7 +6813,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Polkabeach",
@@ -6973,7 +6941,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MAGIKARP",
@@ -7005,7 +6973,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Stardust",
@@ -7069,7 +7037,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Tengut",
@@ -7101,7 +7069,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Forming",
@@ -7133,7 +7101,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Hideaway",
@@ -7165,7 +7133,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Parachute",
@@ -7197,7 +7165,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Rotmare",
@@ -7229,7 +7197,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Underdog",
@@ -7261,7 +7229,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Keith",
@@ -7293,7 +7261,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Iron Ingot",
@@ -7325,7 +7293,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Tricycle",
@@ -7389,7 +7357,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Moondancer",
@@ -7421,7 +7389,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Toothbrush",
@@ -7453,7 +7421,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Shin",
@@ -7485,7 +7453,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Blight",
@@ -7517,7 +7485,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Stardust",
@@ -7549,7 +7517,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SnakeEater",
@@ -7581,7 +7549,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Janet",
@@ -7645,7 +7613,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Get Out!",
@@ -7677,7 +7645,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sakura",
@@ -7709,7 +7677,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sliding",
@@ -7741,7 +7709,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SubtlGuide",
@@ -7805,7 +7773,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "StrtchGoal",
@@ -7869,7 +7837,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Goonie",
@@ -7901,7 +7869,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Paddywagon",
@@ -7933,7 +7901,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Skate w 8",
@@ -7997,7 +7965,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Evanescenc",
@@ -8029,7 +7997,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Zoa",
@@ -8093,7 +8061,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sling",
@@ -8125,7 +8093,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Silt",
@@ -8157,7 +8125,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Gain",
@@ -8189,7 +8157,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Compelling",
@@ -8221,7 +8189,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Goo Drop",
@@ -8253,7 +8221,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "RathPlace",
@@ -8317,7 +8285,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Poised",
@@ -8349,7 +8317,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Nutrients",
@@ -8925,7 +8893,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "JODOK",
@@ -8957,7 +8925,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Moon Seed",
@@ -9117,7 +9085,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Escapee",
@@ -9245,7 +9213,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Rincar",
@@ -9309,7 +9277,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sweaty",
@@ -9405,7 +9373,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Sore Horn",
@@ -9469,7 +9437,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "TRANSOC",
@@ -9629,7 +9597,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BARBER ANN",
@@ -9789,7 +9757,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BUZZ",
@@ -9821,7 +9789,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ROLL",
@@ -9853,7 +9821,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "QUAGSIRE",
@@ -9885,7 +9853,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ESPEON",
@@ -9917,7 +9885,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "UMBREON",
@@ -9949,7 +9917,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MISDREAVUS",
@@ -9981,7 +9949,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ROCKY",
@@ -10013,7 +9981,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "More Horn",
@@ -10109,7 +10077,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Greafy",
@@ -10141,7 +10109,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ZIGZAGOON",
@@ -10173,7 +10141,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SILCOON",
@@ -10205,7 +10173,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HARIYAMA",
@@ -10269,7 +10237,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ATROX",
@@ -10301,7 +10269,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "TIGER",
@@ -10333,7 +10301,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "DEAR ABBY",
@@ -10365,7 +10333,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "JIRACHI",
@@ -10397,7 +10365,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Bruteroot",
@@ -10429,7 +10397,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Rizaadon",
@@ -10461,7 +10429,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "A",
@@ -10525,7 +10493,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "E",
@@ -10621,7 +10589,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Thundrous",
@@ -10653,7 +10621,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Ziggurat",
@@ -10813,7 +10781,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Malchus",
@@ -10845,7 +10813,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Vinc",
@@ -10877,7 +10845,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Marty",
@@ -11037,7 +11005,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "FEAROW",
@@ -11069,7 +11037,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Toot Toot",
@@ -11101,7 +11069,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Charming",
@@ -11133,7 +11101,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "JIGGERS",
@@ -11165,7 +11133,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LEAVES",
@@ -11197,7 +11165,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HEIMSTA",
@@ -11229,7 +11197,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "POWER!",
@@ -11261,7 +11229,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BOREAS",
@@ -11293,7 +11261,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Provoked",
@@ -11325,7 +11293,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "WOL",
@@ -11357,7 +11325,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SHOCKER",
@@ -11389,7 +11357,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Clingy",
@@ -11421,7 +11389,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SOMNO",
@@ -11453,7 +11421,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Arthur",
@@ -11485,7 +11453,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Apauling",
@@ -11517,7 +11485,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Murso",
@@ -11549,7 +11517,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "YANCEY",
@@ -11581,7 +11549,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Auteur",
@@ -11613,7 +11581,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Fairy Much",
@@ -11645,7 +11613,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Living Doo",
@@ -11677,7 +11645,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Arthur",
@@ -11709,7 +11677,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "CREEPER",
@@ -11741,7 +11709,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Mahha GoGo",
@@ -11773,7 +11741,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LEAFPAD",
@@ -11805,7 +11773,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PARA",
@@ -11837,7 +11805,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "CRAZED",
@@ -11869,7 +11837,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ROLL",
@@ -11901,7 +11869,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "KABAM!",
@@ -11933,7 +11901,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PHOENIX!",
@@ -11965,7 +11933,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "GREENY",
@@ -11997,7 +11965,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PUNCH",
@@ -12029,7 +11997,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LOUD WIST",
@@ -12061,7 +12029,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "CARRIER",
@@ -12093,7 +12061,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "RANDCAC",
@@ -12125,7 +12093,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "CATHY",
@@ -12157,7 +12125,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PEBBLES",
@@ -12797,7 +12765,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "GOLBAT",
@@ -13021,7 +12989,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "GARY",
@@ -14077,7 +14045,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BE QUIET",
@@ -15005,7 +14973,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BEEDRILL",
@@ -15037,7 +15005,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SELTER",
@@ -15069,7 +15037,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SPINES",
@@ -15133,7 +15101,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Expensive",
@@ -15229,7 +15197,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Doscargot",
@@ -15293,7 +15261,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Phranny",
@@ -15325,7 +15293,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "NUZLEAF",
@@ -15357,7 +15325,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SURSKIT",
@@ -15389,7 +15357,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MAKUHITA",
@@ -15421,7 +15389,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MAWILE",
@@ -15453,7 +15421,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MEDITITE",
@@ -15485,7 +15453,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HERZ-DONUT",
@@ -16573,7 +16541,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MEDITITE",
@@ -16829,7 +16797,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SPHEAL",
@@ -17533,7 +17501,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Eeden",
@@ -17757,7 +17725,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Acamar",
@@ -18813,7 +18781,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Lil JEMMA",
@@ -18837,38 +18805,6 @@
     "SPA": 48,
     "SPD": 58,
     "SPE": 58,
-    "Gen": 3,
-    "ID": 47116,
-    "OT": "NASP",
-    "Origin": 15,
-    "Ball": 3,
-    "Language": 2,
-    "PKRS_Infected": false,
-    "PKRS_Cured": false,
-    "PKRS_Strain": 0
-  },
-  {
-    "Nickname": "Akiza",
-    "Species": 315,
-    "Level": 35,
-    "Gender": 1,
-    "Moves": [
-      345,
-      186,
-      202,
-      247
-    ],
-    "Game": "XD [NASP]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 38,
-    "Nature": 0,
-    "HP": 83,
-    "ATK": 59,
-    "DEF": 40,
-    "SPA": 82,
-    "SPD": 69,
-    "SPE": 54,
     "Gen": 3,
     "ID": 47116,
     "OT": "NASP",
@@ -19005,7 +18941,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Mr. Bright",
@@ -19101,7 +19037,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Scarlet",
@@ -19133,7 +19069,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Capsize",
@@ -19197,7 +19133,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SANDY",
@@ -19229,7 +19165,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "FIERY",
@@ -19261,7 +19197,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MAX",
@@ -19293,7 +19229,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HILTON",
@@ -19325,7 +19261,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "FRIENDLY",
@@ -19357,7 +19293,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "QUERCAS",
@@ -19389,7 +19325,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "CADMIUM",
@@ -19421,7 +19357,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "JOANNE",
@@ -19453,7 +19389,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "GUIDUCK",
@@ -19485,7 +19421,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "KUDZU",
@@ -19517,7 +19453,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HOTTY!",
@@ -19549,7 +19485,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BELON",
@@ -19581,7 +19517,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "My Baby",
@@ -19645,7 +19581,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "Obtuse",
@@ -19677,7 +19613,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "EGG MAN",
@@ -19709,7 +19645,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SMALL FRY",
@@ -19741,7 +19677,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SPRIGGY",
@@ -19773,7 +19709,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "ATROX",
@@ -19805,7 +19741,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SHEBA",
@@ -19837,7 +19773,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "MATILDA",
@@ -19869,7 +19805,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "FLUFFY",
@@ -19901,7 +19837,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "OINKER",
@@ -19933,7 +19869,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BOWSER",
@@ -19965,7 +19901,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PAINT 3",
@@ -19997,7 +19933,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LARVITAR",
@@ -20029,7 +19965,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "OSCAR",
@@ -20061,7 +19997,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "RightMight",
@@ -20093,7 +20029,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LICHEN",
@@ -20125,7 +20061,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HUGS",
@@ -20157,7 +20093,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SCULPIN",
@@ -20189,7 +20125,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SLUGGER",
@@ -20221,7 +20157,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "HERNANDO",
@@ -20253,7 +20189,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "GHOSTUS",
@@ -20285,7 +20221,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "JAWS",
@@ -20317,7 +20253,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "SAMMY",
@@ -20349,7 +20285,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "PENCIL 2",
@@ -20381,7 +20317,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "BUTTERFREE",
@@ -22429,7 +22365,7 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "PKRS_Strain": 3
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "NOSEPASS",
@@ -58080,38 +58016,6 @@
     "PKRS_Strain": 6
   },
   {
-    "Nickname": "Guido",
-    "Species": 566,
-    "Level": 4,
-    "Gender": 0,
-    "Moves": [
-      98,
-      43,
-      17,
-      282
-    ],
-    "Game": "Black [KONRAD]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 129,
-    "Nature": 2,
-    "HP": 19,
-    "ATK": 14,
-    "DEF": 8,
-    "SPA": 11,
-    "SPD": 9,
-    "SPE": 9,
-    "Gen": 5,
-    "ID": 37667,
-    "OT": "KONRAD",
-    "Origin": 21,
-    "Ball": 4,
-    "Language": 2,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "PKRS_Strain": 6
-  },
-  {
     "Nickname": "ARCHER",
     "Species": 567,
     "Level": 67,
@@ -80064,38 +79968,6 @@
     "PKRS_Strain": 6
   },
   {
-    "Nickname": "Archéodong",
-    "Species": 437,
-    "Level": 37,
-    "Gender": 2,
-    "Moves": [
-      326,
-      334,
-      219,
-      335
-    ],
-    "Game": "Y [Fukurou]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 85,
-    "Nature": 3,
-    "HP": 101,
-    "ATK": 85,
-    "DEF": 91,
-    "SPA": 63,
-    "SPD": 95,
-    "SPE": 33,
-    "Gen": 6,
-    "ID": 60153,
-    "OT": "MATHIEÙ",
-    "Origin": 12,
-    "Ball": 15,
-    "Language": 3,
-    "PKRS_Infected": false,
-    "PKRS_Cured": false,
-    "PKRS_Strain": 0
-  },
-  {
     "Nickname": "Bony Wonder",
     "Species": 448,
     "Level": 32,
@@ -84736,6 +84608,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Akiza",
+    "Species": 315,
+    "Level": 36,
+    "Gender": 1,
+    "Moves": [
+      345,
+      186,
+      202,
+      247
+    ],
+    "Game": "Alpha Sapphire [Dschohehn]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 38,
+    "Nature": 0,
+    "HP": 85,
+    "ATK": 61,
+    "DEF": 41,
+    "SPA": 84,
+    "SPD": 71,
+    "SPE": 56,
+    "Gen": 6,
+    "ID": 47116,
+    "OT": "NASP",
+    "Origin": 15,
+    "Ball": 3,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Kunstblog",
     "Species": 320,
     "Level": 25,
@@ -85344,6 +85248,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Archéodong",
+    "Species": 437,
+    "Level": 38,
+    "Gender": 2,
+    "Moves": [
+      326,
+      334,
+      219,
+      335
+    ],
+    "Game": "Alpha Sapphire [Dschohehn]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 85,
+    "Nature": 3,
+    "HP": 104,
+    "ATK": 88,
+    "DEF": 94,
+    "SPA": 65,
+    "SPD": 98,
+    "SPE": 34,
+    "Gen": 6,
+    "ID": 60153,
+    "OT": "MATHIEÙ",
+    "Origin": 12,
+    "Ball": 15,
+    "Language": 3,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 2
+  },
+  {
     "Nickname": "Charap",
     "Species": 441,
     "Level": 7,
@@ -85761,8 +85697,8 @@
   },
   {
     "Nickname": "Taschenbuch",
-    "Species": 506,
-    "Level": 15,
+    "Species": 507,
+    "Level": 17,
     "Gender": 0,
     "Moves": [
       422,
@@ -85773,14 +85709,14 @@
     "Game": "Alpha Sapphire [Dschohehn]",
     "AltForm": 0,
     "Shiny": false,
-    "Ability": 72,
+    "Ability": 22,
     "Nature": 22,
-    "HP": 42,
-    "ATK": 28,
-    "DEF": 22,
-    "SPA": 13,
-    "SPD": 19,
-    "SPE": 19,
+    "HP": 53,
+    "ATK": 38,
+    "DEF": 32,
+    "SPA": 18,
+    "SPD": 29,
+    "SPE": 23,
     "Gen": 6,
     "ID": 11203,
     "OT": "Dschohehn",
@@ -86107,6 +86043,38 @@
     "Origin": 24,
     "Ball": 4,
     "Language": 1,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 6
+  },
+  {
+    "Nickname": "Guido",
+    "Species": 566,
+    "Level": 12,
+    "Gender": 0,
+    "Moves": [
+      98,
+      88,
+      17,
+      282
+    ],
+    "Game": "Alpha Sapphire [Dschohehn]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 129,
+    "Nature": 2,
+    "HP": 37,
+    "ATK": 34,
+    "DEF": 16,
+    "SPA": 26,
+    "SPD": 17,
+    "SPE": 19,
+    "Gen": 6,
+    "ID": 37667,
+    "OT": "KONRAD",
+    "Origin": 21,
+    "Ball": 4,
+    "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "PKRS_Strain": 6
@@ -103349,7 +103317,7 @@
     "SPA": 44,
     "SPD": 30,
     "SPE": 33,
-    "Gen": 6,
+    "Gen": 7,
     "ID": 11365,
     "OT": "Rachael",
     "Origin": 25,
@@ -103861,7 +103829,7 @@
     "SPA": 58,
     "SPD": 52,
     "SPE": 71,
-    "Gen": 6,
+    "Gen": 7,
     "ID": 14453,
     "OT": "Fukurou",
     "Origin": 25,
@@ -104574,6 +104542,38 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
+  },
+  {
+    "Nickname": "SLOWPOKE",
+    "Species": 79,
+    "Level": 27,
+    "Gender": 1,
+    "Moves": [
+      57,
+      45,
+      55,
+      93
+    ],
+    "Game": "Sun [Ramirez]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 144,
+    "Nature": 1,
+    "HP": 93,
+    "ATK": 51,
+    "DEF": 43,
+    "SPA": 35,
+    "SPD": 34,
+    "SPE": 16,
+    "Gen": 7,
+    "ID": 34267,
+    "OT": "AJSBKTC",
+    "Origin": 40,
+    "Ball": 4,
+    "Language": 2,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 2
   },
   {
     "Nickname": "LUCK STORK",
@@ -105378,7 +105378,7 @@
   {
     "Nickname": "Puff Up",
     "Species": 174,
-    "Level": 13,
+    "Level": 16,
     "Gender": 1,
     "Moves": [
       111,
@@ -105391,12 +105391,12 @@
     "Shiny": false,
     "Ability": 56,
     "Nature": 23,
-    "HP": 46,
-    "ATK": 14,
-    "DEF": 9,
-    "SPA": 16,
-    "SPD": 12,
-    "SPE": 10,
+    "HP": 55,
+    "ATK": 16,
+    "DEF": 10,
+    "SPA": 18,
+    "SPD": 13,
+    "SPE": 11,
     "Gen": 7,
     "ID": 860183,
     "OT": "Ramirez",
