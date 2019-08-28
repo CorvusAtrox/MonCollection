@@ -1175,7 +1175,7 @@ namespace MonCollection
             mon.Gender = (int)labelGender.Tag;
             mon.Species = (int)comboBoxSpecies.SelectedValue;
             if(comboBoxForm.Visible == true)
-                mon.AltForm = (int)comboBoxForm.SelectedIndex;
+                mon.AltForm = comboBoxForm.SelectedIndex;
             mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
