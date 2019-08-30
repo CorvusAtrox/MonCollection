@@ -64,6 +64,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Claplight",
+    "Species": 170,
+    "Level": 17,
+    "Gender": 1,
+    "Moves": [
+      109,
+      86,
+      486,
+      55
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 10,
+    "Nature": 21,
+    "HP": 52,
+    "ATK": 22,
+    "DEF": 20,
+    "SPA": 29,
+    "SPD": 27,
+    "SPE": 32,
+    "Gen": 7,
+    "ID": 612971,
+    "OT": "Hibiki",
+    "Origin": 32,
+    "Ball": 7,
+    "Language": 5,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 6
+  },
+  {
     "Nickname": "DARTH ZAP",
     "Species": 180,
     "Level": 20,
@@ -1754,7 +1786,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1786,7 +1818,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1818,7 +1850,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1850,7 +1882,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1882,7 +1914,7 @@
     "OT": "Dustin",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1914,7 +1946,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1946,7 +1978,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -1978,7 +2010,7 @@
     "OT": "Dustin",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2010,7 +2042,7 @@
     "OT": "Dustin",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2042,7 +2074,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2074,7 +2106,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2106,7 +2138,7 @@
     "OT": "Yuuya",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2138,7 +2170,7 @@
     "OT": "DRES.",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2170,7 +2202,7 @@
     "OT": "HERR J",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2202,7 +2234,7 @@
     "OT": "HERR J",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2234,7 +2266,7 @@
     "OT": "HERR J",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2266,7 +2298,7 @@
     "OT": "HERR J",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2298,7 +2330,7 @@
     "OT": "HERR J",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2330,7 +2362,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2362,7 +2394,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2458,7 +2490,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2490,7 +2522,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2522,7 +2554,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2554,7 +2586,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2586,7 +2618,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2618,7 +2650,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2650,7 +2682,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2682,7 +2714,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2714,7 +2746,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2746,7 +2778,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2778,7 +2810,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2810,7 +2842,7 @@
     "OT": "Yuna",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2842,7 +2874,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2874,7 +2906,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2906,7 +2938,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2938,7 +2970,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -2970,7 +3002,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3034,7 +3066,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3066,7 +3098,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3098,7 +3130,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3130,7 +3162,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3162,7 +3194,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3194,7 +3226,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3226,7 +3258,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3290,7 +3322,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3322,7 +3354,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3354,7 +3386,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3386,7 +3418,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3418,7 +3450,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3450,7 +3482,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3482,7 +3514,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3514,7 +3546,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3546,7 +3578,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3578,7 +3610,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3610,7 +3642,7 @@
     "OT": "PKHeX",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3642,7 +3674,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3674,7 +3706,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3706,7 +3738,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3738,7 +3770,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -3770,7 +3802,7 @@
     "OT": "Juan",
     "Origin": 47,
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
@@ -25866,7 +25898,7 @@
       2,
       193
     ],
-    "Game": "Diamond [JOHANN]",
+    "Game": "HOME [CorvusOssi]",
     "AltForm": 0,
     "Shiny": false,
     "Ability": 62,
@@ -25877,7 +25909,7 @@
     "SPA": 16,
     "SPD": 20,
     "SPE": 22,
-    "Gen": 4,
+    "Gen": 7,
     "ID": 39084,
     "OT": "JOHANN",
     "Origin": 10,
@@ -80672,6 +80704,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Crick",
+    "Species": 557,
+    "Level": 30,
+    "Gender": 0,
+    "Moves": [
+      397,
+      450,
+      446,
+      157
+    ],
+    "Game": "Y [Fukurou]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 75,
+    "Nature": 3,
+    "HP": 72,
+    "ATK": 56,
+    "DEF": 65,
+    "SPA": 31,
+    "SPD": 34,
+    "SPE": 43,
+    "Gen": 6,
+    "ID": 14453,
+    "OT": "Fukurou",
+    "Origin": 25,
+    "Ball": 6,
+    "Language": 5,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Morbid",
     "Species": 575,
     "Level": 50,
@@ -88256,6 +88320,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "No Hands",
+    "Species": 184,
+    "Level": 20,
+    "Gender": 1,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Callahan",
     "Species": 185,
     "Level": 21,
@@ -88730,6 +88826,38 @@
     "OT": "",
     "Origin": 0,
     "Ball": 3,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
+    "Nickname": "Danana",
+    "Species": 232,
+    "Level": 23,
+    "Gender": 0,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 4,
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
@@ -90176,8 +90304,72 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "Green Earth",
+    "Species": 383,
+    "Level": 15,
+    "Gender": 2,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": true,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "HeatAdvisory",
     "Species": 383,
+    "Level": 20,
+    "Gender": 2,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 12,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
+    "Nickname": "Kent Quasar",
+    "Species": 384,
     "Level": 20,
     "Gender": 2,
     "Moves": [
@@ -90528,6 +90720,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "In The Shade",
+    "Species": 470,
+    "Level": 33,
+    "Gender": 0,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Glacial Park",
     "Species": 471,
     "Level": 22,
@@ -90628,6 +90852,38 @@
     "Species": 476,
     "Level": 25,
     "Gender": 1,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Origin": 0,
+    "Ball": 12,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
+    "Nickname": "Executive",
+    "Species": 482,
+    "Level": 20,
+    "Gender": 2,
     "Moves": [
       0,
       0,
@@ -104416,6 +104672,38 @@
     "PKRS_Strain": 0
   },
   {
+    "Nickname": "SLAMMER",
+    "Species": 52,
+    "Level": 12,
+    "Gender": 0,
+    "Moves": [
+      10,
+      45,
+      44,
+      34
+    ],
+    "Game": "Sun [Ramirez]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 53,
+    "Nature": 19,
+    "HP": 34,
+    "ATK": 19,
+    "DEF": 16,
+    "SPA": 18,
+    "SPD": 15,
+    "SPE": 28,
+    "Gen": 7,
+    "ID": 6915,
+    "OT": "MARY",
+    "Origin": 5,
+    "Ball": 3,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "PKRS_Strain": 0
+  },
+  {
     "Nickname": "Jalm",
     "Species": 58,
     "Level": 7,
@@ -112286,38 +112574,6 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "PKRS_Strain": 0
-  },
-  {
-    "Nickname": "Claplight",
-    "Species": 170,
-    "Level": 17,
-    "Gender": 1,
-    "Moves": [
-      109,
-      86,
-      486,
-      55
-    ],
-    "Game": "Ultra Sun [Hibiki]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 10,
-    "Nature": 21,
-    "HP": 52,
-    "ATK": 22,
-    "DEF": 20,
-    "SPA": 29,
-    "SPD": 27,
-    "SPE": 32,
-    "Gen": 7,
-    "ID": 612971,
-    "OT": "Hibiki",
-    "Origin": 32,
-    "Ball": 7,
-    "Language": 5,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "PKRS_Strain": 6
   },
   {
     "Nickname": "Weglauf",

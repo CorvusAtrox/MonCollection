@@ -250,9 +250,15 @@ namespace MonCollection
             int ball2 = 0;
             if(gen >= 7)
             {
-
-                if (mon2.Species == mon1.Species)
-                    ball2 = mon2.Ball;
+                if(mon1.Species == 132)
+                    ball = mon2.Ball;
+                else
+                {
+                    ball = mon1.Ball;
+                    if (mon2.Species == mon1.Species)
+                        ball2 = mon2.Ball;
+                }
+                
             }
             else if(gen == 6)
             {

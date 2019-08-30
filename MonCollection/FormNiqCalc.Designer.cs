@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNiqCalc));
             this.labelName = new System.Windows.Forms.Label();
             this.labelSpecies = new System.Windows.Forms.Label();
             this.labelMoves = new System.Windows.Forms.Label();
@@ -235,6 +236,7 @@
             this.Controls.Add(this.labelMoves);
             this.Controls.Add(this.labelSpecies);
             this.Controls.Add(this.labelName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNiqCalc";
             this.Text = "FormNiqCalc";
             this.ResumeLayout(false);

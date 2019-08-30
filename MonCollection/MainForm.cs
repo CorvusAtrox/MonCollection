@@ -1190,7 +1190,8 @@ namespace MonCollection
             mon.SPA = int.Parse(textBoxSpAtk.Text);
             mon.SPD = int.Parse(textBoxSpDef.Text);
             mon.SPE = int.Parse(textBoxSpeed.Text);
-            mon.Ball = (int)comboBoxBalls.SelectedValue;
+            if(comboBoxBalls.SelectedValue != null)
+                mon.Ball = (int)comboBoxBalls.SelectedValue;
             if(comboBoxOrigin.SelectedValue != null)
                 mon.Origin = (int)comboBoxOrigin.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)

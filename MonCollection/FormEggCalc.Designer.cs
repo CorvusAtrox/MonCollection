@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEggCalc));
             this.labelName = new System.Windows.Forms.Label();
             this.L_Count = new System.Windows.Forms.Label();
             this.bpkx30 = new System.Windows.Forms.PictureBox();
@@ -638,6 +639,7 @@
             this.Controls.Add(this.bpkx12);
             this.Controls.Add(this.bpkx13);
             this.Controls.Add(this.labelName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEggCalc";
             this.Text = "FormEggCalc";
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).EndInit();

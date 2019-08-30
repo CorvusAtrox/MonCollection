@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGames));
             this.comboBoxGame = new System.Windows.Forms.ComboBox();
             this.labelGame = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
@@ -222,6 +223,7 @@
             this.Controls.Add(this.labelOT);
             this.Controls.Add(this.comboBoxGame);
             this.Controls.Add(this.labelGame);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGames";
             this.Text = "FormGames";
             this.ResumeLayout(false);

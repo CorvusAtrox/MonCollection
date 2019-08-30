@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGameTally));
             this.listGames = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(253, 301);
             this.Controls.Add(this.listGames);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGameTally";
             this.Text = "FormGameTally";
             this.ResumeLayout(false);

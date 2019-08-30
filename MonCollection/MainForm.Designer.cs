@@ -30,6 +30,7 @@ namespace MonCollection
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.labelNickname = new System.Windows.Forms.Label();
             this.labelBall = new System.Windows.Forms.Label();
             this.comboBoxBalls = new System.Windows.Forms.ComboBox();
@@ -1371,8 +1372,10 @@ namespace MonCollection
             this.Controls.Add(this.labelBall);
             this.Controls.Add(this.labelNickname);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
+            this.Text = "Mon Collection";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
