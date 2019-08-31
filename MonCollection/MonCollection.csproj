@@ -12933,13 +12933,13 @@
     <Content Include="Resources\img\smusum\54.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\056.gif">
+    <Content Include="Resources\img\smusum\56.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\058.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\060.gif">
+    <Content Include="Resources\img\smusum\60.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\061.gif">
@@ -12954,7 +12954,7 @@
     <Content Include="Resources\img\smusum\69.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\072.gif">
+    <Content Include="Resources\img\smusum\72.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\073.gif">
@@ -12969,10 +12969,10 @@
     <Content Include="Resources\img\smusum\077.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\079.gif">
+    <Content Include="Resources\img\smusum\79.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\080.gif">
+    <Content Include="Resources\img\smusum\80.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\81.gif">
@@ -12984,7 +12984,7 @@
     <Content Include="Resources\img\smusum\083.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\085f.gif">
+    <Content Include="Resources\img\smusum\85f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\692.gif">
@@ -13002,7 +13002,7 @@
     <Content Include="Resources\img\smusum\092.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\096.gif">
+    <Content Include="Resources\img\smusum\96.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\097f.gif">
