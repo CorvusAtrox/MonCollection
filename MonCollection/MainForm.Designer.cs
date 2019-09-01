@@ -101,7 +101,6 @@ namespace MonCollection
             this.buttonGameTally = new System.Windows.Forms.Button();
             this.buttonSpeciesSort = new System.Windows.Forms.Button();
             this.comboBoxForm = new System.Windows.Forms.ComboBox();
-            this.labelPkrs = new System.Windows.Forms.Label();
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
             this.buttonNiqCalc = new System.Windows.Forms.Button();
             this.buttonEggs = new System.Windows.Forms.Button();
@@ -120,6 +119,8 @@ namespace MonCollection
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHP = new System.Windows.Forms.TextBox();
             this.textBoxAttack = new System.Windows.Forms.TextBox();
             this.textBoxDefense = new System.Windows.Forms.TextBox();
@@ -132,6 +133,8 @@ namespace MonCollection
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.BTN_Shinytize = new System.Windows.Forms.Button();
             this.buttonMonBallTally = new System.Windows.Forms.Button();
+            this.comboBoxPkrs = new System.Windows.Forms.ComboBox();
+            this.textBoxStrain = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -969,20 +972,9 @@ namespace MonCollection
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
             this.comboBoxForm.TabIndex = 13;
             // 
-            // labelPkrs
-            // 
-            this.labelPkrs.AutoSize = true;
-            this.labelPkrs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.labelPkrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPkrs.ForeColor = System.Drawing.Color.Black;
-            this.labelPkrs.Location = new System.Drawing.Point(7, 164);
-            this.labelPkrs.Name = "labelPkrs";
-            this.labelPkrs.Size = new System.Drawing.Size(0, 13);
-            this.labelPkrs.TabIndex = 134;
-            // 
             // pictureBoxPkrs
             // 
-            this.pictureBoxPkrs.Location = new System.Drawing.Point(86, 169);
+            this.pictureBoxPkrs.Location = new System.Drawing.Point(112, 169);
             this.pictureBoxPkrs.Name = "pictureBoxPkrs";
             this.pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxPkrs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1096,7 +1088,8 @@ namespace MonCollection
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataToolStripMenuItem});
+            this.dataToolStripMenuItem,
+            this.filterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(873, 24);
@@ -1149,6 +1142,21 @@ namespace MonCollection
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // filterToolStripMenuItem
+            // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem});
+            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.filterToolStripMenuItem.Text = "Filter";
+            // 
+            // gameToolStripMenuItem
+            // 
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.gameToolStripMenuItem.Text = "Game";
+            this.gameToolStripMenuItem.Click += new System.EventHandler(this.GameToolStripMenuItem_Click);
             // 
             // textBoxHP
             // 
@@ -1271,12 +1279,40 @@ namespace MonCollection
             this.buttonMonBallTally.UseVisualStyleBackColor = true;
             this.buttonMonBallTally.Click += new System.EventHandler(this.ButtonMonBallTally_Click);
             // 
+            // comboBoxPkrs
+            // 
+            this.comboBoxPkrs.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxPkrs.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxPkrs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxPkrs.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxPkrs.FormattingEnabled = true;
+            this.comboBoxPkrs.Items.AddRange(new object[] {
+            "None",
+            "Infected",
+            "Cured"});
+            this.comboBoxPkrs.Location = new System.Drawing.Point(10, 169);
+            this.comboBoxPkrs.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxPkrs.Name = "comboBoxPkrs";
+            this.comboBoxPkrs.Size = new System.Drawing.Size(73, 21);
+            this.comboBoxPkrs.TabIndex = 161;
+            // 
+            // textBoxStrain
+            // 
+            this.textBoxStrain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxStrain.ForeColor = System.Drawing.Color.Black;
+            this.textBoxStrain.Location = new System.Drawing.Point(86, 169);
+            this.textBoxStrain.Name = "textBoxStrain";
+            this.textBoxStrain.Size = new System.Drawing.Size(20, 20);
+            this.textBoxStrain.TabIndex = 162;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 478);
+            this.Controls.Add(this.textBoxStrain);
+            this.Controls.Add(this.comboBoxPkrs);
             this.Controls.Add(this.buttonMonBallTally);
             this.Controls.Add(this.BTN_Shinytize);
             this.Controls.Add(this.textBoxID);
@@ -1300,7 +1336,6 @@ namespace MonCollection
             this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
-            this.Controls.Add(this.labelPkrs);
             this.Controls.Add(this.comboBoxForm);
             this.Controls.Add(this.buttonSpeciesSort);
             this.Controls.Add(this.buttonGameTally);
@@ -1490,7 +1525,6 @@ namespace MonCollection
         private Button buttonGameTally;
         private Button buttonSpeciesSort;
         private ComboBox comboBoxForm;
-        private Label labelPkrs;
         private PictureBox pictureBoxPkrs;
         private Button buttonNiqCalc;
         private Button buttonEggs;
@@ -1521,6 +1555,10 @@ namespace MonCollection
         private ToolStripMenuItem gamesToolStripMenuItem;
         private Button BTN_Shinytize;
         private Button buttonMonBallTally;
+        private ToolStripMenuItem filterToolStripMenuItem;
+        private ToolStripMenuItem gameToolStripMenuItem;
+        private ComboBox comboBoxPkrs;
+        private TextBox textBoxStrain;
     }
 }
 

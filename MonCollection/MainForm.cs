@@ -28,6 +28,8 @@ namespace MonCollection
         private int slotSelected = -1; // = null;
         private LegalityAnalysis legal;
         private List<MonData> PkmData;
+        private List<MonData> FullPkmData;
+        private List<int> PKMIndices;
 
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
@@ -321,7 +323,7 @@ namespace MonCollection
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
-                    labelPkrs.Visible = false;
+                    comboBoxPkrs.Visible = false;
                     buttonEggs.Visible = false;
                     break;
                 case 2:
@@ -334,7 +336,7 @@ namespace MonCollection
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
-                    labelPkrs.Visible = true;
+                    comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
                     break;
                 case 3:
@@ -349,7 +351,7 @@ namespace MonCollection
                     comboBoxNature.Visible = true;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
-                    labelPkrs.Visible = true;
+                    comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
                     break;
                 case 6:
@@ -364,7 +366,7 @@ namespace MonCollection
                     comboBoxNature.Visible = true;
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
-                    labelPkrs.Visible = true;
+                    comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
                     break;
             }
@@ -449,20 +451,22 @@ namespace MonCollection
                 pictureBoxPkrs.Visible = true;
                 if (pk.PKRS_Cured)
                 {
-                    labelPkrs.Text = "Cured";
+                    comboBoxPkrs.SelectedIndex = 2;
                     pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsCured.png");
                 }
                 else
                 {
-                    labelPkrs.Text = "Infected";
+                    comboBoxPkrs.SelectedIndex = 1;
                     pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsInfected.png");
                 }
-                labelPkrs.Text += " - " + pk.PKRS_Strain.ToString();
+                textBoxStrain.Visible = true;
+                textBoxStrain.Text = pk.PKRS_Strain.ToString();
             }
             else
             {
                 pictureBoxPkrs.Visible = false;
-                labelPkrs.Text = "";
+                comboBoxPkrs.SelectedIndex = 0;
+                textBoxStrain.Visible = false;
             }
 
             var ds = PKX.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
@@ -620,7 +624,12 @@ namespace MonCollection
 
         private void LoadDatabase()
         {
-            PkmData = LoadPKMSaves(Settings.Default.mons);
+            FullPkmData = LoadPKMSaves(Settings.Default.mons);
+
+            if (PkmData != null)
+                UpdateFullData();
+
+            PkmData = ApplyFilters(FullPkmData);
 
             BeginInvoke(new MethodInvoker(() => SetResults(PkmData)));
         }
@@ -1149,10 +1158,23 @@ namespace MonCollection
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string json = JsonConvert.SerializeObject(PkmData,Formatting.Indented);
+            UpdateFullData();
+
+            string json = JsonConvert.SerializeObject(FullPkmData,Formatting.Indented);
 
             //write string to file
             File.WriteAllText(Settings.Default.mons + "/mons.json", json);
+        }
+
+        private void UpdateFullData()
+        {
+            for(int i = 0; i < PkmData.Count(); i++)
+            {
+                if (i < PKMIndices.Count())
+                    FullPkmData[PKMIndices[i]] = PkmData[i];
+                else
+                    FullPkmData.Add(PkmData[i]);
+            }
         }
 
         private void ButtonRevertMon_Click(object sender, EventArgs e)
@@ -1196,6 +1218,25 @@ namespace MonCollection
                 mon.Origin = (int)comboBoxOrigin.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)
                 mon.Language = (int)comboBoxLanguage.SelectedValue;
+
+            switch (comboBoxPkrs.SelectedIndex)
+            {
+                case 0:
+                    mon.PKRS_Cured = false;
+                    mon.PKRS_Infected = false;
+                    break;
+                case 1:
+                    mon.PKRS_Cured = false;
+                    mon.PKRS_Infected = true;
+                    break;
+                case 2:
+                    mon.PKRS_Cured = true;
+                    mon.PKRS_Infected = true;
+                    break;
+            }
+
+            if (int.TryParse(textBoxStrain.Text, out int strain))
+                mon.PKRS_Strain = strain;
 
             PkmData[slotSelected] = mon;
         }
@@ -1380,6 +1421,28 @@ namespace MonCollection
                 textBoxOT.Text = si.ot;
                 textBoxID.Text = si.id.ToString();
             }
+        }
+
+        private List<MonData> ApplyFilters(List<MonData> full)
+        {
+            List<MonData> mons = new List<MonData>();
+            PKMIndices = new List<int>();
+
+            foreach (MonData data in full)
+            {
+                if (data.Game == "Ultra Sun [Hibiki]" || data.Game == "Ultra Moon [かなで]")
+                {
+                    mons.Add(data);
+                    PKMIndices.Add(full.IndexOf(data));
+                }
+            }
+
+            return mons;
+        }
+
+        private void GameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
