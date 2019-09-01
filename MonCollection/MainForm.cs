@@ -31,6 +31,8 @@ namespace MonCollection
         private List<MonData> FullPkmData;
         private List<int> PKMIndices;
 
+        private List<string> filterGames;
+
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
 
@@ -72,6 +74,8 @@ namespace MonCollection
             string[] split;
             int ind = 0;
 
+            filterGames = new List<string>();
+
             while (!dict.EndOfStream)
             {
                 l = dict.ReadLine();
@@ -95,6 +99,8 @@ namespace MonCollection
                         break;
                 }
                 ind++;
+                //if (!split[0].Equals("HOME [CorvusOssi]"))
+                //    filterGames.Add(split[0]);
             }
         }
 
@@ -1430,7 +1436,7 @@ namespace MonCollection
 
             foreach (MonData data in full)
             {
-                if (data.Game == "Ultra Sun [Hibiki]" || data.Game == "Ultra Moon [かなで]")
+                if (filterGames.Contains(data.Game))
                 {
                     mons.Add(data);
                     PKMIndices.Add(full.IndexOf(data));
