@@ -1184,7 +1184,8 @@ namespace MonCollection
             mon.Species = (int)comboBoxSpecies.SelectedValue;
             if(comboBoxForm.Visible == true)
                 mon.AltForm = comboBoxForm.SelectedIndex;
-            mon.Ability = (int)comboBoxAbility.SelectedValue;
+            if(comboBoxAbility.SelectedValue != null)
+                mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
                                         (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
