@@ -916,14 +916,22 @@ namespace MonCollection
         private void ButtonRanMon_Click(object sender, EventArgs e)
         {
             int rnd = RandomNumberGenerator.GetRandomInt(0, maxIndex);
-            int val = (int)(rnd / RES_MIN) - 2;
-            if (val < 0)
-                val = 0;
+            if(rnd != -1)
+            {
+                int val = (int)(rnd / RES_MIN) - 2;
+                if (val < 0)
+                    val = 0;
 
-            SCR_Box.Value = val;
-            slotSelected = rnd;
-            FillPKXBoxes(val);
-            OpenPKM(PkmData[rnd]);
+                SCR_Box.Value = val;
+                slotSelected = rnd;
+                FillPKXBoxes(val);
+                OpenPKM(PkmData[rnd]);
+            }
+            else
+            {
+                MessageBox.Show("Could not find random number");
+            }
+            
         }
 
         private string getGameCounts(int index, IEnumerable<string> game)
