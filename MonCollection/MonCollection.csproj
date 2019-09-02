@@ -59,6 +59,12 @@
     <Compile Include="FormGames.Designer.cs">
       <DependentUpon>FormGames.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFilters.Designer.cs">
+      <DependentUpon>FormFilters.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonData.cs" />
     <Compile Include="FormEggCalc.cs">
       <SubType>Form</SubType>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGames.resx">
       <DependentUpon>FormGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFilters.resx">
+      <DependentUpon>FormFilters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGameTally.resx">
       <DependentUpon>FormGameTally.cs</DependentUpon>

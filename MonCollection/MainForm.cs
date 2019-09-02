@@ -32,6 +32,7 @@ namespace MonCollection
         private List<int> PKMIndices;
 
         private List<string> filterGames;
+        private List<string> gameList;
 
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
@@ -75,7 +76,6 @@ namespace MonCollection
             int ind = 0;
 
             filterGames = new List<string>();
-            //filterGames = new List<string>() { "Ultra Sun [Hibiki]", "Ultra Moon [かなで]" };
 
             while (!dict.EndOfStream)
             {
@@ -100,9 +100,11 @@ namespace MonCollection
                         break;
                 }
                 ind++;
-                //if (!split[0].Equals("HOME [CorvusOssi]"))
-                    filterGames.Add(split[0]);
+                filterGames.Add(split[0]);
+                gameList = new List<string>(filterGames);
             }
+
+            dict.Close();
         }
 
         private void InitializeMonLists()
@@ -935,25 +937,7 @@ namespace MonCollection
                     d.Add(entry.Key, -1);
             }
 
-            //Dictionary<string, GameVersion> gens = new Dictionary<string, GameVersion>();
-            //gens.Add("Gen I", GameVersion.YW);
-            //gens.Add("Gen II", GameVersion.C);
-            //gens.Add("Gen III", GameVersion.LG);
-            //gens.Add("Gen IV", GameVersion.Pt);
-            //gens.Add("Gen V", GameVersion.B2);
-            //gens.Add("Gen VI", GameVersion.AS);
-            //gens.Add("Gen VII", GameVersion.US);
-            //gens.Add("LG", GameVersion.GE);
-            //foreach (var entry in gens)
-            //{
-            //    if (getGameMons(entry.Value, index))
-            //        d.Add(entry.Key, 0);
-            //    else
-            //        d.Add(entry.Key, -1);
-            //}
-
             int count;
-            //string genString;
             foreach(string s in game)
             {
                 d.TryGetValue(s, out count);
@@ -962,12 +946,6 @@ namespace MonCollection
                     count = 0;
 
                 d[s] = count + 1;
-
-                //genString = getGenString(s);
-
-                //d.TryGetValue(genString, out count);
-
-                //d[genString] = count + 1;
             }
                  
             string result = "";
@@ -1370,15 +1348,11 @@ namespace MonCollection
         {
             //TO DO: Make popup for editing this
             FormGames games = new FormGames();
-            games.FormClosed += new FormClosedEventHandler(reloadGames);
+            games.FormClosed += new FormClosedEventHandler(delegate (object send, FormClosedEventArgs a) {
+                games.updateGameIni();
+                InitializeGameDict();
+            });
             games.Show();
-        }
-
-        private void reloadGames(object sender, FormClosedEventArgs e)
-        {
-            FormGames frm = (FormGames)sender;
-            frm.updateGameIni();
-            InitializeGameDict();
         }
 
         private void BTN_Shinytize_Click(object sender, EventArgs e)
@@ -1433,7 +1407,17 @@ namespace MonCollection
 
         private void GameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormFilters form = new FormFilters();
+            form.filters = filterGames;
+            form.loadFilterList(gameList);
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    form.updateFilters();
+                    filterGames = form.filters;
+                    LoadDatabase();
+                });
+            form.Show();
         }
+
     }
 }
