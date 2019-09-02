@@ -57,6 +57,7 @@ namespace MonCollection
                 }
                 ind++;
             }
+            dict.Close();
         }
 
         private void InitializeBindings()
