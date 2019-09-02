@@ -75,6 +75,7 @@ namespace MonCollection
             int ind = 0;
 
             filterGames = new List<string>();
+            //filterGames = new List<string>() { "Ultra Sun [Hibiki]", "Ultra Moon [かなで]" };
 
             while (!dict.EndOfStream)
             {
@@ -100,7 +101,7 @@ namespace MonCollection
                 }
                 ind++;
                 //if (!split[0].Equals("HOME [CorvusOssi]"))
-                //    filterGames.Add(split[0]);
+                    filterGames.Add(split[0]);
             }
         }
 
@@ -144,7 +145,7 @@ namespace MonCollection
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473};
             noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
-            languages = new string[]{ "", "jp", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
+            languages = new string[]{ "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
         }
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
@@ -172,8 +173,7 @@ namespace MonCollection
         {
             ComboBox[] cbs =
             {
-                comboBoxBalls, comboBoxSpecies, comboBoxLanguage, comboBoxAbility, comboBoxNature,
-                comboBoxOrigin
+                comboBoxBalls, comboBoxSpecies, comboBoxLanguage, comboBoxAbility, comboBoxNature
             };
 
             moveBoxes = new []{comboBoxMove1, comboBoxMove2, comboBoxMove3, comboBoxMove4};
@@ -222,7 +222,6 @@ namespace MonCollection
             comboBoxSpecies.DataSource = new BindingSource(source.Species, null);
             comboBoxAbility.DataSource = new BindingSource(source.Abilities, null);
             comboBoxNature.DataSource = new BindingSource(source.Natures, null);
-            comboBoxOrigin.DataSource = new BindingSource(source.Games, null);
 
             // Set the Move ComboBoxes too..
             LegalMoveSource.ReloadMoves(source.Moves);
@@ -384,8 +383,6 @@ namespace MonCollection
             comboBoxAbility.SelectedValue = pk.Ability;
             comboBoxNature.SelectedValue = pk.Nature;
 
-            comboBoxOrigin.SelectedValue = pk.Origin;
-
             if(pk.Moves == null)
                 pk.Moves = new List<int>{0,0,0,0};
 
@@ -465,14 +462,11 @@ namespace MonCollection
                     comboBoxPkrs.SelectedIndex = 1;
                     pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsInfected.png");
                 }
-                textBoxStrain.Visible = true;
-                textBoxStrain.Text = pk.PKRS_Strain.ToString();
             }
             else
             {
                 pictureBoxPkrs.Visible = false;
                 comboBoxPkrs.SelectedIndex = 0;
-                textBoxStrain.Visible = false;
             }
 
             var ds = PKX.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
@@ -1220,8 +1214,6 @@ namespace MonCollection
             mon.SPE = int.Parse(textBoxSpeed.Text);
             if(comboBoxBalls.SelectedValue != null)
                 mon.Ball = (int)comboBoxBalls.SelectedValue;
-            if(comboBoxOrigin.SelectedValue != null)
-                mon.Origin = (int)comboBoxOrigin.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)
                 mon.Language = (int)comboBoxLanguage.SelectedValue;
 
@@ -1240,9 +1232,6 @@ namespace MonCollection
                     mon.PKRS_Infected = true;
                     break;
             }
-
-            if (int.TryParse(textBoxStrain.Text, out int strain))
-                mon.PKRS_Strain = strain;
 
             PkmData[slotSelected] = mon;
         }
@@ -1313,12 +1302,10 @@ namespace MonCollection
                         pd.Gen = getGen(pk.Identifier);
                         pd.ID = pk.DisplayTID;
                         pd.OT = pk.OT_Name;
-                        pd.Origin = pk.Version;
                         pd.Ball = pk.Ball;
                         pd.Language = pk.Language;
                         pd.PKRS_Infected = pk.PKRS_Infected;
                         pd.PKRS_Cured = pk.PKRS_Cured;
-                        pd.PKRS_Strain = pk.PKRS_Strain;
 
                         PkmData.Add(pd);
                     });
@@ -1420,8 +1407,6 @@ namespace MonCollection
             PkmData[slotSelected].Gen = si.getGen();
             if (PkmData[slotSelected].Language == 0)
                 PkmData[slotSelected].Language = Array.IndexOf(languages,si.language);
-            if (PkmData[slotSelected].Origin == 0)
-                comboBoxOrigin.SelectedValue = (int)si.version;
             if (PkmData[slotSelected].ID == 0 && (PkmData[slotSelected].OT == null || PkmData[slotSelected].OT == string.Empty))
             {
                 textBoxOT.Text = si.ot;

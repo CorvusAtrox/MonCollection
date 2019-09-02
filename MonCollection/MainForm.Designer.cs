@@ -104,8 +104,6 @@ namespace MonCollection
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
             this.buttonNiqCalc = new System.Windows.Forms.Button();
             this.buttonEggs = new System.Windows.Forms.Button();
-            this.comboBoxOrigin = new System.Windows.Forms.ComboBox();
-            this.labelOrigin = new System.Windows.Forms.Label();
             this.buttonOTSort = new System.Windows.Forms.Button();
             this.buttonMoveMonTally = new System.Windows.Forms.Button();
             this.buttonRanMon = new System.Windows.Forms.Button();
@@ -134,7 +132,6 @@ namespace MonCollection
             this.BTN_Shinytize = new System.Windows.Forms.Button();
             this.buttonMonBallTally = new System.Windows.Forms.Button();
             this.comboBoxPkrs = new System.Windows.Forms.ComboBox();
-            this.textBoxStrain = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -224,7 +221,7 @@ namespace MonCollection
             this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSpecies.FormattingEnabled = true;
-            this.comboBoxSpecies.Location = new System.Drawing.Point(100, 73);
+            this.comboBoxSpecies.Location = new System.Drawing.Point(107, 73);
             this.comboBoxSpecies.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
             this.comboBoxSpecies.Size = new System.Drawing.Size(115, 21);
@@ -236,7 +233,7 @@ namespace MonCollection
             this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpecies.ForeColor = System.Drawing.Color.Black;
-            this.labelSpecies.Location = new System.Drawing.Point(41, 76);
+            this.labelSpecies.Location = new System.Drawing.Point(48, 76);
             this.labelSpecies.Name = "labelSpecies";
             this.labelSpecies.Size = new System.Drawing.Size(56, 13);
             this.labelSpecies.TabIndex = 7;
@@ -244,10 +241,10 @@ namespace MonCollection
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(1, 69);
+            this.pictureBoxIcon.Location = new System.Drawing.Point(1, 62);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(24, 25);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxIcon.Size = new System.Drawing.Size(42, 32);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxIcon.TabIndex = 9;
             this.pictureBoxIcon.TabStop = false;
             // 
@@ -966,7 +963,7 @@ namespace MonCollection
             this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(239, 72);
+            this.comboBoxForm.Location = new System.Drawing.Point(246, 72);
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(115, 21);
@@ -974,7 +971,7 @@ namespace MonCollection
             // 
             // pictureBoxPkrs
             // 
-            this.pictureBoxPkrs.Location = new System.Drawing.Point(112, 169);
+            this.pictureBoxPkrs.Location = new System.Drawing.Point(87, 169);
             this.pictureBoxPkrs.Name = "pictureBoxPkrs";
             this.pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxPkrs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1000,31 +997,6 @@ namespace MonCollection
             this.buttonEggs.Text = "Breeding Calc";
             this.buttonEggs.UseVisualStyleBackColor = true;
             this.buttonEggs.Click += new System.EventHandler(this.ButtonEggs_Click);
-            // 
-            // comboBoxOrigin
-            // 
-            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxOrigin.FormattingEnabled = true;
-            this.comboBoxOrigin.Location = new System.Drawing.Point(242, 212);
-            this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxOrigin.Name = "comboBoxOrigin";
-            this.comboBoxOrigin.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxOrigin.TabIndex = 43;
-            // 
-            // labelOrigin
-            // 
-            this.labelOrigin.AutoSize = true;
-            this.labelOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrigin.ForeColor = System.Drawing.Color.Black;
-            this.labelOrigin.Location = new System.Drawing.Point(194, 215);
-            this.labelOrigin.Name = "labelOrigin";
-            this.labelOrigin.Size = new System.Drawing.Size(44, 13);
-            this.labelOrigin.TabIndex = 140;
-            this.labelOrigin.Text = "Origin:";
             // 
             // buttonOTSort
             // 
@@ -1259,7 +1231,7 @@ namespace MonCollection
             // BTN_Shinytize
             // 
             this.BTN_Shinytize.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTN_Shinytize.Location = new System.Drawing.Point(215, 72);
+            this.BTN_Shinytize.Location = new System.Drawing.Point(222, 72);
             this.BTN_Shinytize.Margin = new System.Windows.Forms.Padding(0);
             this.BTN_Shinytize.Name = "BTN_Shinytize";
             this.BTN_Shinytize.Size = new System.Drawing.Size(24, 22);
@@ -1296,22 +1268,12 @@ namespace MonCollection
             this.comboBoxPkrs.Size = new System.Drawing.Size(73, 21);
             this.comboBoxPkrs.TabIndex = 161;
             // 
-            // textBoxStrain
-            // 
-            this.textBoxStrain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.textBoxStrain.ForeColor = System.Drawing.Color.Black;
-            this.textBoxStrain.Location = new System.Drawing.Point(86, 169);
-            this.textBoxStrain.Name = "textBoxStrain";
-            this.textBoxStrain.Size = new System.Drawing.Size(20, 20);
-            this.textBoxStrain.TabIndex = 162;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(873, 478);
-            this.Controls.Add(this.textBoxStrain);
             this.Controls.Add(this.comboBoxPkrs);
             this.Controls.Add(this.buttonMonBallTally);
             this.Controls.Add(this.BTN_Shinytize);
@@ -1331,8 +1293,6 @@ namespace MonCollection
             this.Controls.Add(this.buttonRanMon);
             this.Controls.Add(this.buttonMoveMonTally);
             this.Controls.Add(this.buttonOTSort);
-            this.Controls.Add(this.labelOrigin);
-            this.Controls.Add(this.comboBoxOrigin);
             this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
@@ -1528,8 +1488,6 @@ namespace MonCollection
         private PictureBox pictureBoxPkrs;
         private Button buttonNiqCalc;
         private Button buttonEggs;
-        private ComboBox comboBoxOrigin;
-        private Label labelOrigin;
         private Button buttonOTSort;
         private Button buttonMoveMonTally;
         private Button buttonRanMon;
@@ -1558,7 +1516,6 @@ namespace MonCollection
         private ToolStripMenuItem filterToolStripMenuItem;
         private ToolStripMenuItem gameToolStripMenuItem;
         private ComboBox comboBoxPkrs;
-        private TextBox textBoxStrain;
     }
 }
 
