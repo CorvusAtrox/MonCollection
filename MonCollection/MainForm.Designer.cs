@@ -132,6 +132,7 @@ namespace MonCollection
             this.BTN_Shinytize = new System.Windows.Forms.Button();
             this.buttonMonBallTally = new System.Windows.Forms.Button();
             this.comboBoxPkrs = new System.Windows.Forms.ComboBox();
+            this.buttonLevelTally = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -948,7 +949,7 @@ namespace MonCollection
             // 
             // buttonSpeciesSort
             // 
-            this.buttonSpeciesSort.Location = new System.Drawing.Point(870, 398);
+            this.buttonSpeciesSort.Location = new System.Drawing.Point(870, 367);
             this.buttonSpeciesSort.Name = "buttonSpeciesSort";
             this.buttonSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonSpeciesSort.TabIndex = 131;
@@ -1269,12 +1270,23 @@ namespace MonCollection
             this.comboBoxPkrs.Size = new System.Drawing.Size(73, 21);
             this.comboBoxPkrs.TabIndex = 161;
             // 
+            // buttonLevelTally
+            // 
+            this.buttonLevelTally.Location = new System.Drawing.Point(870, 396);
+            this.buttonLevelTally.Name = "buttonLevelTally";
+            this.buttonLevelTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonLevelTally.TabIndex = 162;
+            this.buttonLevelTally.Text = "Level Tally";
+            this.buttonLevelTally.UseVisualStyleBackColor = true;
+            this.buttonLevelTally.Click += new System.EventHandler(this.ButtonLevelTally_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1034, 491);
+            this.Controls.Add(this.buttonLevelTally);
             this.Controls.Add(this.comboBoxPkrs);
             this.Controls.Add(this.buttonMonBallTally);
             this.Controls.Add(this.BTN_Shinytize);
@@ -1517,6 +1529,7 @@ namespace MonCollection
         private ToolStripMenuItem filterToolStripMenuItem;
         private ToolStripMenuItem gameToolStripMenuItem;
         private ComboBox comboBoxPkrs;
+        private Button buttonLevelTally;
     }
 }
 

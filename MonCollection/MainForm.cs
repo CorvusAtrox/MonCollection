@@ -1428,5 +1428,20 @@ namespace MonCollection
             form.Show();
         }
 
+        private void ButtonLevelTally_Click(object sender, EventArgs e)
+        {
+            var query = PkmData.GroupBy(
+                mon => mon.Level,
+                mon => mon.Nickname,
+                (level, name) => new
+                {
+                    Key = level,
+                    Count = name.Count()
+                }).OrderBy(entry => entry.Key);
+            var results = new FormGameTally();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
+            results.Show();
+        }
     }
 }
