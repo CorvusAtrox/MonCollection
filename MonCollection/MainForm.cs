@@ -1332,18 +1332,21 @@ namespace MonCollection
             if(int.TryParse(textBoxLevel.Text,out int newLev))
             {
                 MonData mon = PkmData[slotSelected];
-                if (mon.HP >= 11)
-                    textBoxHP.Text = (((mon.HP - 10 - mon.Level) * newLev / mon.Level) + 10 + newLev).ToString();
-                if (mon.ATK >= 5)
-                    textBoxAttack.Text = (((mon.ATK - 5) * newLev / mon.Level) + 5).ToString();
-                if (mon.DEF >= 5)
-                    textBoxDefense.Text = (((mon.DEF - 5) * newLev / mon.Level) + 5).ToString();
-                if (mon.SPA >= 5)
-                    textBoxSpAtk.Text = (((mon.SPA - 5) * newLev / mon.Level) + 5).ToString();
-                if (mon.SPD >= 5)
-                    textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
-                if (mon.SPE >= 5)
-                    textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+                if(mon.Level != 0)
+                {
+                    if (mon.HP >= 11)
+                        textBoxHP.Text = (((mon.HP - 10 - mon.Level) * newLev / mon.Level) + 10 + newLev).ToString();
+                    if (mon.ATK >= 5)
+                        textBoxAttack.Text = (((mon.ATK - 5) * newLev / mon.Level) + 5).ToString();
+                    if (mon.DEF >= 5)
+                        textBoxDefense.Text = (((mon.DEF - 5) * newLev / mon.Level) + 5).ToString();
+                    if (mon.SPA >= 5)
+                        textBoxSpAtk.Text = (((mon.SPA - 5) * newLev / mon.Level) + 5).ToString();
+                    if (mon.SPD >= 5)
+                        textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
+                    if (mon.SPE >= 5)
+                        textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+                }
             }
         }
 
