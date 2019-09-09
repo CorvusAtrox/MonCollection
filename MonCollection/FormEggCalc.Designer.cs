@@ -31,6 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEggCalc));
             this.labelName = new System.Windows.Forms.Label();
             this.L_Count = new System.Windows.Forms.Label();
+            this.monIcon = new System.Windows.Forms.PictureBox();
+            this.labelMateName = new System.Windows.Forms.Label();
+            this.eggIcon = new System.Windows.Forms.PictureBox();
+            this.listMoves = new System.Windows.Forms.ListBox();
+            this.listMovesMon = new System.Windows.Forms.ListBox();
+            this.listMovesMate = new System.Windows.Forms.ListBox();
+            this.pictureBoxBall = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBall2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBall2a = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBalla = new System.Windows.Forms.PictureBox();
+            this.listMoves2 = new System.Windows.Forms.ListBox();
+            this.eggIcon2 = new System.Windows.Forms.PictureBox();
             this.bpkx30 = new System.Windows.Forms.PictureBox();
             this.SCR_Box = new System.Windows.Forms.VScrollBar();
             this.bpkx1 = new System.Windows.Forms.PictureBox();
@@ -62,18 +74,13 @@
             this.bpkx11 = new System.Windows.Forms.PictureBox();
             this.bpkx12 = new System.Windows.Forms.PictureBox();
             this.bpkx13 = new System.Windows.Forms.PictureBox();
-            this.monIcon = new System.Windows.Forms.PictureBox();
-            this.labelMateName = new System.Windows.Forms.Label();
-            this.eggIcon = new System.Windows.Forms.PictureBox();
-            this.listMoves = new System.Windows.Forms.ListBox();
-            this.listMovesMon = new System.Windows.Forms.ListBox();
-            this.listMovesMate = new System.Windows.Forms.ListBox();
-            this.pictureBoxBall = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBall2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBall2a = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBalla = new System.Windows.Forms.PictureBox();
-            this.listMoves2 = new System.Windows.Forms.ListBox();
-            this.eggIcon2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).BeginInit();
@@ -104,20 +111,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(60, 18);
+            this.labelName.Location = new System.Drawing.Point(83, 34);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(64, 13);
             this.labelName.TabIndex = 0;
@@ -125,354 +125,12 @@
             // 
             // L_Count
             // 
-            this.L_Count.Location = new System.Drawing.Point(589, 18);
+            this.L_Count.Location = new System.Drawing.Point(659, 18);
             this.L_Count.Name = "L_Count";
             this.L_Count.Size = new System.Drawing.Size(83, 13);
             this.L_Count.TabIndex = 147;
             this.L_Count.Text = "Num Mons: {0}";
             this.L_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bpkx30
-            // 
-            this.bpkx30.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx30.Location = new System.Drawing.Point(712, 158);
-            this.bpkx30.Name = "bpkx30";
-            this.bpkx30.Size = new System.Drawing.Size(42, 32);
-            this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx30.TabIndex = 146;
-            this.bpkx30.TabStop = false;
-            // 
-            // SCR_Box
-            // 
-            this.SCR_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SCR_Box.LargeChange = 1;
-            this.SCR_Box.Location = new System.Drawing.Point(761, 35);
-            this.SCR_Box.Name = "SCR_Box";
-            this.SCR_Box.Size = new System.Drawing.Size(24, 156);
-            this.SCR_Box.TabIndex = 116;
-            this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
-            // 
-            // bpkx1
-            // 
-            this.bpkx1.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx1.Location = new System.Drawing.Point(507, 34);
-            this.bpkx1.Name = "bpkx1";
-            this.bpkx1.Size = new System.Drawing.Size(42, 32);
-            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx1.TabIndex = 117;
-            this.bpkx1.TabStop = false;
-            this.bpkx1.Tag = "";
-            // 
-            // bpkx29
-            // 
-            this.bpkx29.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx29.Location = new System.Drawing.Point(671, 158);
-            this.bpkx29.Name = "bpkx29";
-            this.bpkx29.Size = new System.Drawing.Size(42, 32);
-            this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx29.TabIndex = 145;
-            this.bpkx29.TabStop = false;
-            // 
-            // bpkx28
-            // 
-            this.bpkx28.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx28.Location = new System.Drawing.Point(630, 158);
-            this.bpkx28.Name = "bpkx28";
-            this.bpkx28.Size = new System.Drawing.Size(42, 32);
-            this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx28.TabIndex = 144;
-            this.bpkx28.TabStop = false;
-            // 
-            // bpkx27
-            // 
-            this.bpkx27.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx27.Location = new System.Drawing.Point(589, 158);
-            this.bpkx27.Name = "bpkx27";
-            this.bpkx27.Size = new System.Drawing.Size(42, 32);
-            this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx27.TabIndex = 143;
-            this.bpkx27.TabStop = false;
-            // 
-            // bpkx26
-            // 
-            this.bpkx26.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx26.Location = new System.Drawing.Point(548, 158);
-            this.bpkx26.Name = "bpkx26";
-            this.bpkx26.Size = new System.Drawing.Size(42, 32);
-            this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx26.TabIndex = 142;
-            this.bpkx26.TabStop = false;
-            // 
-            // bpkx25
-            // 
-            this.bpkx25.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx25.Location = new System.Drawing.Point(507, 158);
-            this.bpkx25.Name = "bpkx25";
-            this.bpkx25.Size = new System.Drawing.Size(42, 32);
-            this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx25.TabIndex = 141;
-            this.bpkx25.TabStop = false;
-            // 
-            // bpkx24
-            // 
-            this.bpkx24.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx24.Location = new System.Drawing.Point(712, 127);
-            this.bpkx24.Name = "bpkx24";
-            this.bpkx24.Size = new System.Drawing.Size(42, 32);
-            this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx24.TabIndex = 140;
-            this.bpkx24.TabStop = false;
-            // 
-            // bpkx23
-            // 
-            this.bpkx23.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx23.Location = new System.Drawing.Point(671, 127);
-            this.bpkx23.Name = "bpkx23";
-            this.bpkx23.Size = new System.Drawing.Size(42, 32);
-            this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx23.TabIndex = 139;
-            this.bpkx23.TabStop = false;
-            // 
-            // bpkx22
-            // 
-            this.bpkx22.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx22.Location = new System.Drawing.Point(630, 127);
-            this.bpkx22.Name = "bpkx22";
-            this.bpkx22.Size = new System.Drawing.Size(42, 32);
-            this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx22.TabIndex = 138;
-            this.bpkx22.TabStop = false;
-            // 
-            // bpkx21
-            // 
-            this.bpkx21.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx21.Location = new System.Drawing.Point(589, 127);
-            this.bpkx21.Name = "bpkx21";
-            this.bpkx21.Size = new System.Drawing.Size(42, 32);
-            this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx21.TabIndex = 137;
-            this.bpkx21.TabStop = false;
-            // 
-            // bpkx2
-            // 
-            this.bpkx2.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx2.Location = new System.Drawing.Point(548, 34);
-            this.bpkx2.Name = "bpkx2";
-            this.bpkx2.Size = new System.Drawing.Size(42, 32);
-            this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx2.TabIndex = 118;
-            this.bpkx2.TabStop = false;
-            // 
-            // bpkx20
-            // 
-            this.bpkx20.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx20.Location = new System.Drawing.Point(548, 127);
-            this.bpkx20.Name = "bpkx20";
-            this.bpkx20.Size = new System.Drawing.Size(42, 32);
-            this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx20.TabIndex = 136;
-            this.bpkx20.TabStop = false;
-            // 
-            // bpkx3
-            // 
-            this.bpkx3.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx3.Location = new System.Drawing.Point(589, 34);
-            this.bpkx3.Name = "bpkx3";
-            this.bpkx3.Size = new System.Drawing.Size(42, 32);
-            this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx3.TabIndex = 119;
-            this.bpkx3.TabStop = false;
-            // 
-            // bpkx4
-            // 
-            this.bpkx4.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx4.Location = new System.Drawing.Point(630, 34);
-            this.bpkx4.Name = "bpkx4";
-            this.bpkx4.Size = new System.Drawing.Size(42, 32);
-            this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx4.TabIndex = 120;
-            this.bpkx4.TabStop = false;
-            // 
-            // bpkx19
-            // 
-            this.bpkx19.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx19.Location = new System.Drawing.Point(507, 127);
-            this.bpkx19.Name = "bpkx19";
-            this.bpkx19.Size = new System.Drawing.Size(42, 32);
-            this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx19.TabIndex = 135;
-            this.bpkx19.TabStop = false;
-            // 
-            // bpkx5
-            // 
-            this.bpkx5.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx5.Location = new System.Drawing.Point(671, 34);
-            this.bpkx5.Name = "bpkx5";
-            this.bpkx5.Size = new System.Drawing.Size(42, 32);
-            this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx5.TabIndex = 121;
-            this.bpkx5.TabStop = false;
-            // 
-            // bpkx18
-            // 
-            this.bpkx18.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx18.Location = new System.Drawing.Point(712, 96);
-            this.bpkx18.Name = "bpkx18";
-            this.bpkx18.Size = new System.Drawing.Size(42, 32);
-            this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx18.TabIndex = 134;
-            this.bpkx18.TabStop = false;
-            // 
-            // bpkx6
-            // 
-            this.bpkx6.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx6.Location = new System.Drawing.Point(712, 34);
-            this.bpkx6.Name = "bpkx6";
-            this.bpkx6.Size = new System.Drawing.Size(42, 32);
-            this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx6.TabIndex = 122;
-            this.bpkx6.TabStop = false;
-            // 
-            // bpkx17
-            // 
-            this.bpkx17.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx17.Location = new System.Drawing.Point(671, 96);
-            this.bpkx17.Name = "bpkx17";
-            this.bpkx17.Size = new System.Drawing.Size(42, 32);
-            this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx17.TabIndex = 133;
-            this.bpkx17.TabStop = false;
-            // 
-            // bpkx7
-            // 
-            this.bpkx7.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx7.Location = new System.Drawing.Point(507, 65);
-            this.bpkx7.Name = "bpkx7";
-            this.bpkx7.Size = new System.Drawing.Size(42, 32);
-            this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx7.TabIndex = 123;
-            this.bpkx7.TabStop = false;
-            // 
-            // bpkx8
-            // 
-            this.bpkx8.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx8.Location = new System.Drawing.Point(548, 65);
-            this.bpkx8.Name = "bpkx8";
-            this.bpkx8.Size = new System.Drawing.Size(42, 32);
-            this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx8.TabIndex = 124;
-            this.bpkx8.TabStop = false;
-            // 
-            // bpkx16
-            // 
-            this.bpkx16.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx16.Location = new System.Drawing.Point(630, 96);
-            this.bpkx16.Name = "bpkx16";
-            this.bpkx16.Size = new System.Drawing.Size(42, 32);
-            this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx16.TabIndex = 132;
-            this.bpkx16.TabStop = false;
-            // 
-            // bpkx9
-            // 
-            this.bpkx9.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx9.Location = new System.Drawing.Point(589, 65);
-            this.bpkx9.Name = "bpkx9";
-            this.bpkx9.Size = new System.Drawing.Size(42, 32);
-            this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx9.TabIndex = 125;
-            this.bpkx9.TabStop = false;
-            // 
-            // bpkx15
-            // 
-            this.bpkx15.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx15.Location = new System.Drawing.Point(589, 96);
-            this.bpkx15.Name = "bpkx15";
-            this.bpkx15.Size = new System.Drawing.Size(42, 32);
-            this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx15.TabIndex = 131;
-            this.bpkx15.TabStop = false;
-            // 
-            // bpkx10
-            // 
-            this.bpkx10.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx10.Location = new System.Drawing.Point(630, 65);
-            this.bpkx10.Name = "bpkx10";
-            this.bpkx10.Size = new System.Drawing.Size(42, 32);
-            this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx10.TabIndex = 126;
-            this.bpkx10.TabStop = false;
-            // 
-            // bpkx14
-            // 
-            this.bpkx14.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx14.Location = new System.Drawing.Point(548, 96);
-            this.bpkx14.Name = "bpkx14";
-            this.bpkx14.Size = new System.Drawing.Size(42, 32);
-            this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx14.TabIndex = 130;
-            this.bpkx14.TabStop = false;
-            // 
-            // bpkx11
-            // 
-            this.bpkx11.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx11.Location = new System.Drawing.Point(671, 65);
-            this.bpkx11.Name = "bpkx11";
-            this.bpkx11.Size = new System.Drawing.Size(42, 32);
-            this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx11.TabIndex = 127;
-            this.bpkx11.TabStop = false;
-            // 
-            // bpkx12
-            // 
-            this.bpkx12.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx12.Location = new System.Drawing.Point(712, 65);
-            this.bpkx12.Name = "bpkx12";
-            this.bpkx12.Size = new System.Drawing.Size(42, 32);
-            this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx12.TabIndex = 128;
-            this.bpkx12.TabStop = false;
-            // 
-            // bpkx13
-            // 
-            this.bpkx13.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx13.Location = new System.Drawing.Point(507, 96);
-            this.bpkx13.Name = "bpkx13";
-            this.bpkx13.Size = new System.Drawing.Size(42, 32);
-            this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.bpkx13.TabIndex = 129;
-            this.bpkx13.TabStop = false;
             // 
             // monIcon
             // 
@@ -480,7 +138,7 @@
             this.monIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.monIcon.Location = new System.Drawing.Point(12, 12);
             this.monIcon.Name = "monIcon";
-            this.monIcon.Size = new System.Drawing.Size(42, 32);
+            this.monIcon.Size = new System.Drawing.Size(68, 56);
             this.monIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.monIcon.TabIndex = 148;
             this.monIcon.TabStop = false;
@@ -490,7 +148,7 @@
             // 
             this.labelMateName.AutoSize = true;
             this.labelMateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMateName.Location = new System.Drawing.Point(324, 18);
+            this.labelMateName.Location = new System.Drawing.Point(376, 34);
             this.labelMateName.Name = "labelMateName";
             this.labelMateName.Size = new System.Drawing.Size(64, 13);
             this.labelMateName.TabIndex = 149;
@@ -500,9 +158,9 @@
             // 
             this.eggIcon.BackColor = System.Drawing.Color.Transparent;
             this.eggIcon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eggIcon.Location = new System.Drawing.Point(192, 127);
+            this.eggIcon.Location = new System.Drawing.Point(207, 116);
             this.eggIcon.Name = "eggIcon";
-            this.eggIcon.Size = new System.Drawing.Size(42, 32);
+            this.eggIcon.Size = new System.Drawing.Size(68, 56);
             this.eggIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.eggIcon.TabIndex = 150;
             this.eggIcon.TabStop = false;
@@ -512,7 +170,7 @@
             // 
             this.listMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.listMoves.FormattingEnabled = true;
-            this.listMoves.Location = new System.Drawing.Point(192, 174);
+            this.listMoves.Location = new System.Drawing.Point(226, 178);
             this.listMoves.Name = "listMoves";
             this.listMoves.Size = new System.Drawing.Size(109, 95);
             this.listMoves.TabIndex = 151;
@@ -521,7 +179,7 @@
             // 
             this.listMovesMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.listMovesMon.FormattingEnabled = true;
-            this.listMovesMon.Location = new System.Drawing.Point(63, 46);
+            this.listMovesMon.Location = new System.Drawing.Point(86, 62);
             this.listMovesMon.Name = "listMovesMon";
             this.listMovesMon.Size = new System.Drawing.Size(109, 95);
             this.listMovesMon.TabIndex = 152;
@@ -530,14 +188,14 @@
             // 
             this.listMovesMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.listMovesMate.FormattingEnabled = true;
-            this.listMovesMate.Location = new System.Drawing.Point(327, 46);
+            this.listMovesMate.Location = new System.Drawing.Point(379, 62);
             this.listMovesMate.Name = "listMovesMate";
             this.listMovesMate.Size = new System.Drawing.Size(109, 95);
             this.listMovesMate.TabIndex = 153;
             // 
             // pictureBoxBall
             // 
-            this.pictureBoxBall.Location = new System.Drawing.Point(240, 134);
+            this.pictureBoxBall.Location = new System.Drawing.Point(281, 138);
             this.pictureBoxBall.Name = "pictureBoxBall";
             this.pictureBoxBall.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxBall.TabIndex = 154;
@@ -545,7 +203,7 @@
             // 
             // pictureBoxBall2
             // 
-            this.pictureBoxBall2.Location = new System.Drawing.Point(277, 134);
+            this.pictureBoxBall2.Location = new System.Drawing.Point(311, 138);
             this.pictureBoxBall2.Name = "pictureBoxBall2";
             this.pictureBoxBall2.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxBall2.TabIndex = 155;
@@ -553,7 +211,7 @@
             // 
             // pictureBoxBall2a
             // 
-            this.pictureBoxBall2a.Location = new System.Drawing.Point(277, 282);
+            this.pictureBoxBall2a.Location = new System.Drawing.Point(311, 297);
             this.pictureBoxBall2a.Name = "pictureBoxBall2a";
             this.pictureBoxBall2a.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxBall2a.TabIndex = 159;
@@ -561,7 +219,7 @@
             // 
             // pictureBoxBalla
             // 
-            this.pictureBoxBalla.Location = new System.Drawing.Point(240, 282);
+            this.pictureBoxBalla.Location = new System.Drawing.Point(281, 297);
             this.pictureBoxBalla.Name = "pictureBoxBalla";
             this.pictureBoxBalla.Size = new System.Drawing.Size(24, 25);
             this.pictureBoxBalla.TabIndex = 158;
@@ -571,7 +229,7 @@
             // 
             this.listMoves2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.listMoves2.FormattingEnabled = true;
-            this.listMoves2.Location = new System.Drawing.Point(192, 322);
+            this.listMoves2.Location = new System.Drawing.Point(226, 341);
             this.listMoves2.Name = "listMoves2";
             this.listMoves2.Size = new System.Drawing.Size(109, 95);
             this.listMoves2.TabIndex = 157;
@@ -580,33 +238,361 @@
             // 
             this.eggIcon2.BackColor = System.Drawing.Color.Transparent;
             this.eggIcon2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eggIcon2.Location = new System.Drawing.Point(192, 275);
+            this.eggIcon2.Location = new System.Drawing.Point(207, 279);
             this.eggIcon2.Name = "eggIcon2";
-            this.eggIcon2.Size = new System.Drawing.Size(42, 32);
+            this.eggIcon2.Size = new System.Drawing.Size(68, 56);
             this.eggIcon2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.eggIcon2.TabIndex = 156;
             this.eggIcon2.TabStop = false;
             this.eggIcon2.Tag = "";
+            // 
+            // bpkx30
+            // 
+            this.bpkx30.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx30.Location = new System.Drawing.Point(833, 266);
+            this.bpkx30.Name = "bpkx30";
+            this.bpkx30.Size = new System.Drawing.Size(68, 56);
+            this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx30.TabIndex = 190;
+            this.bpkx30.TabStop = false;
+            // 
+            // SCR_Box
+            // 
+            this.SCR_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SCR_Box.LargeChange = 1;
+            this.SCR_Box.Location = new System.Drawing.Point(904, 46);
+            this.SCR_Box.Name = "SCR_Box";
+            this.SCR_Box.Size = new System.Drawing.Size(24, 276);
+            this.SCR_Box.TabIndex = 160;
+            // 
+            // bpkx1
+            // 
+            this.bpkx1.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx1.Location = new System.Drawing.Point(498, 46);
+            this.bpkx1.Name = "bpkx1";
+            this.bpkx1.Size = new System.Drawing.Size(68, 56);
+            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx1.TabIndex = 161;
+            this.bpkx1.TabStop = false;
+            this.bpkx1.Tag = "";
+            // 
+            // bpkx29
+            // 
+            this.bpkx29.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx29.Location = new System.Drawing.Point(766, 266);
+            this.bpkx29.Name = "bpkx29";
+            this.bpkx29.Size = new System.Drawing.Size(68, 56);
+            this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx29.TabIndex = 189;
+            this.bpkx29.TabStop = false;
+            // 
+            // bpkx28
+            // 
+            this.bpkx28.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx28.Location = new System.Drawing.Point(699, 266);
+            this.bpkx28.Name = "bpkx28";
+            this.bpkx28.Size = new System.Drawing.Size(68, 56);
+            this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx28.TabIndex = 188;
+            this.bpkx28.TabStop = false;
+            // 
+            // bpkx27
+            // 
+            this.bpkx27.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx27.Location = new System.Drawing.Point(632, 266);
+            this.bpkx27.Name = "bpkx27";
+            this.bpkx27.Size = new System.Drawing.Size(68, 56);
+            this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx27.TabIndex = 187;
+            this.bpkx27.TabStop = false;
+            // 
+            // bpkx26
+            // 
+            this.bpkx26.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx26.Location = new System.Drawing.Point(565, 266);
+            this.bpkx26.Name = "bpkx26";
+            this.bpkx26.Size = new System.Drawing.Size(68, 56);
+            this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx26.TabIndex = 186;
+            this.bpkx26.TabStop = false;
+            // 
+            // bpkx25
+            // 
+            this.bpkx25.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx25.Location = new System.Drawing.Point(498, 266);
+            this.bpkx25.Name = "bpkx25";
+            this.bpkx25.Size = new System.Drawing.Size(68, 56);
+            this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx25.TabIndex = 185;
+            this.bpkx25.TabStop = false;
+            // 
+            // bpkx24
+            // 
+            this.bpkx24.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx24.Location = new System.Drawing.Point(833, 211);
+            this.bpkx24.Name = "bpkx24";
+            this.bpkx24.Size = new System.Drawing.Size(68, 56);
+            this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx24.TabIndex = 184;
+            this.bpkx24.TabStop = false;
+            // 
+            // bpkx23
+            // 
+            this.bpkx23.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx23.Location = new System.Drawing.Point(766, 211);
+            this.bpkx23.Name = "bpkx23";
+            this.bpkx23.Size = new System.Drawing.Size(68, 56);
+            this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx23.TabIndex = 183;
+            this.bpkx23.TabStop = false;
+            // 
+            // bpkx22
+            // 
+            this.bpkx22.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx22.Location = new System.Drawing.Point(699, 211);
+            this.bpkx22.Name = "bpkx22";
+            this.bpkx22.Size = new System.Drawing.Size(68, 56);
+            this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx22.TabIndex = 182;
+            this.bpkx22.TabStop = false;
+            // 
+            // bpkx21
+            // 
+            this.bpkx21.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx21.Location = new System.Drawing.Point(632, 211);
+            this.bpkx21.Name = "bpkx21";
+            this.bpkx21.Size = new System.Drawing.Size(68, 56);
+            this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx21.TabIndex = 181;
+            this.bpkx21.TabStop = false;
+            // 
+            // bpkx2
+            // 
+            this.bpkx2.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx2.Location = new System.Drawing.Point(565, 46);
+            this.bpkx2.Name = "bpkx2";
+            this.bpkx2.Size = new System.Drawing.Size(68, 56);
+            this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx2.TabIndex = 162;
+            this.bpkx2.TabStop = false;
+            // 
+            // bpkx20
+            // 
+            this.bpkx20.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx20.Location = new System.Drawing.Point(565, 211);
+            this.bpkx20.Name = "bpkx20";
+            this.bpkx20.Size = new System.Drawing.Size(68, 56);
+            this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx20.TabIndex = 180;
+            this.bpkx20.TabStop = false;
+            // 
+            // bpkx3
+            // 
+            this.bpkx3.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx3.Location = new System.Drawing.Point(632, 46);
+            this.bpkx3.Name = "bpkx3";
+            this.bpkx3.Size = new System.Drawing.Size(68, 56);
+            this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx3.TabIndex = 163;
+            this.bpkx3.TabStop = false;
+            // 
+            // bpkx4
+            // 
+            this.bpkx4.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx4.Location = new System.Drawing.Point(699, 46);
+            this.bpkx4.Name = "bpkx4";
+            this.bpkx4.Size = new System.Drawing.Size(68, 56);
+            this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx4.TabIndex = 164;
+            this.bpkx4.TabStop = false;
+            // 
+            // bpkx19
+            // 
+            this.bpkx19.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx19.Location = new System.Drawing.Point(498, 211);
+            this.bpkx19.Name = "bpkx19";
+            this.bpkx19.Size = new System.Drawing.Size(68, 56);
+            this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx19.TabIndex = 179;
+            this.bpkx19.TabStop = false;
+            // 
+            // bpkx5
+            // 
+            this.bpkx5.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx5.Location = new System.Drawing.Point(766, 46);
+            this.bpkx5.Name = "bpkx5";
+            this.bpkx5.Size = new System.Drawing.Size(68, 56);
+            this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx5.TabIndex = 165;
+            this.bpkx5.TabStop = false;
+            // 
+            // bpkx18
+            // 
+            this.bpkx18.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx18.Location = new System.Drawing.Point(833, 156);
+            this.bpkx18.Name = "bpkx18";
+            this.bpkx18.Size = new System.Drawing.Size(68, 56);
+            this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx18.TabIndex = 178;
+            this.bpkx18.TabStop = false;
+            // 
+            // bpkx6
+            // 
+            this.bpkx6.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx6.Location = new System.Drawing.Point(833, 46);
+            this.bpkx6.Name = "bpkx6";
+            this.bpkx6.Size = new System.Drawing.Size(68, 56);
+            this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx6.TabIndex = 166;
+            this.bpkx6.TabStop = false;
+            // 
+            // bpkx17
+            // 
+            this.bpkx17.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx17.Location = new System.Drawing.Point(766, 156);
+            this.bpkx17.Name = "bpkx17";
+            this.bpkx17.Size = new System.Drawing.Size(68, 56);
+            this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx17.TabIndex = 177;
+            this.bpkx17.TabStop = false;
+            // 
+            // bpkx7
+            // 
+            this.bpkx7.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx7.Location = new System.Drawing.Point(498, 101);
+            this.bpkx7.Name = "bpkx7";
+            this.bpkx7.Size = new System.Drawing.Size(68, 56);
+            this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx7.TabIndex = 167;
+            this.bpkx7.TabStop = false;
+            // 
+            // bpkx8
+            // 
+            this.bpkx8.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx8.Location = new System.Drawing.Point(565, 101);
+            this.bpkx8.Name = "bpkx8";
+            this.bpkx8.Size = new System.Drawing.Size(68, 56);
+            this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx8.TabIndex = 168;
+            this.bpkx8.TabStop = false;
+            // 
+            // bpkx16
+            // 
+            this.bpkx16.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx16.Location = new System.Drawing.Point(699, 156);
+            this.bpkx16.Name = "bpkx16";
+            this.bpkx16.Size = new System.Drawing.Size(68, 56);
+            this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx16.TabIndex = 176;
+            this.bpkx16.TabStop = false;
+            // 
+            // bpkx9
+            // 
+            this.bpkx9.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx9.Location = new System.Drawing.Point(632, 101);
+            this.bpkx9.Name = "bpkx9";
+            this.bpkx9.Size = new System.Drawing.Size(68, 56);
+            this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx9.TabIndex = 169;
+            this.bpkx9.TabStop = false;
+            // 
+            // bpkx15
+            // 
+            this.bpkx15.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx15.Location = new System.Drawing.Point(632, 156);
+            this.bpkx15.Name = "bpkx15";
+            this.bpkx15.Size = new System.Drawing.Size(68, 56);
+            this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx15.TabIndex = 175;
+            this.bpkx15.TabStop = false;
+            // 
+            // bpkx10
+            // 
+            this.bpkx10.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx10.Location = new System.Drawing.Point(699, 101);
+            this.bpkx10.Name = "bpkx10";
+            this.bpkx10.Size = new System.Drawing.Size(68, 56);
+            this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx10.TabIndex = 170;
+            this.bpkx10.TabStop = false;
+            // 
+            // bpkx14
+            // 
+            this.bpkx14.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx14.Location = new System.Drawing.Point(565, 156);
+            this.bpkx14.Name = "bpkx14";
+            this.bpkx14.Size = new System.Drawing.Size(68, 56);
+            this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx14.TabIndex = 174;
+            this.bpkx14.TabStop = false;
+            // 
+            // bpkx11
+            // 
+            this.bpkx11.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx11.Location = new System.Drawing.Point(766, 101);
+            this.bpkx11.Name = "bpkx11";
+            this.bpkx11.Size = new System.Drawing.Size(68, 56);
+            this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx11.TabIndex = 171;
+            this.bpkx11.TabStop = false;
+            // 
+            // bpkx12
+            // 
+            this.bpkx12.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx12.Location = new System.Drawing.Point(833, 101);
+            this.bpkx12.Name = "bpkx12";
+            this.bpkx12.Size = new System.Drawing.Size(68, 56);
+            this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx12.TabIndex = 172;
+            this.bpkx12.TabStop = false;
+            // 
+            // bpkx13
+            // 
+            this.bpkx13.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx13.Location = new System.Drawing.Point(498, 156);
+            this.bpkx13.Name = "bpkx13";
+            this.bpkx13.Size = new System.Drawing.Size(68, 56);
+            this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx13.TabIndex = 173;
+            this.bpkx13.TabStop = false;
             // 
             // FormEggCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBoxBall2a);
-            this.Controls.Add(this.pictureBoxBalla);
-            this.Controls.Add(this.listMoves2);
-            this.Controls.Add(this.eggIcon2);
-            this.Controls.Add(this.pictureBoxBall2);
-            this.Controls.Add(this.pictureBoxBall);
-            this.Controls.Add(this.listMovesMate);
-            this.Controls.Add(this.listMovesMon);
-            this.Controls.Add(this.listMoves);
-            this.Controls.Add(this.eggIcon);
-            this.Controls.Add(this.labelMateName);
-            this.Controls.Add(this.monIcon);
-            this.Controls.Add(this.L_Count);
+            this.ClientSize = new System.Drawing.Size(934, 450);
             this.Controls.Add(this.bpkx30);
             this.Controls.Add(this.SCR_Box);
             this.Controls.Add(this.bpkx1);
@@ -638,10 +624,30 @@
             this.Controls.Add(this.bpkx11);
             this.Controls.Add(this.bpkx12);
             this.Controls.Add(this.bpkx13);
+            this.Controls.Add(this.pictureBoxBall2a);
+            this.Controls.Add(this.pictureBoxBalla);
+            this.Controls.Add(this.listMoves2);
+            this.Controls.Add(this.eggIcon2);
+            this.Controls.Add(this.pictureBoxBall2);
+            this.Controls.Add(this.pictureBoxBall);
+            this.Controls.Add(this.listMovesMate);
+            this.Controls.Add(this.listMovesMon);
+            this.Controls.Add(this.listMoves);
+            this.Controls.Add(this.eggIcon);
+            this.Controls.Add(this.labelMateName);
+            this.Controls.Add(this.monIcon);
+            this.Controls.Add(this.L_Count);
             this.Controls.Add(this.labelName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEggCalc";
             this.Text = "FormEggCalc";
+            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).EndInit();
@@ -672,13 +678,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall2a)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBalla)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eggIcon2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,6 +687,18 @@
 
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label L_Count;
+        private System.Windows.Forms.PictureBox monIcon;
+        private System.Windows.Forms.Label labelMateName;
+        private System.Windows.Forms.PictureBox eggIcon;
+        private System.Windows.Forms.ListBox listMoves;
+        private System.Windows.Forms.ListBox listMovesMon;
+        private System.Windows.Forms.ListBox listMovesMate;
+        private System.Windows.Forms.PictureBox pictureBoxBall;
+        private System.Windows.Forms.PictureBox pictureBoxBall2;
+        private System.Windows.Forms.PictureBox pictureBoxBall2a;
+        private System.Windows.Forms.PictureBox pictureBoxBalla;
+        private System.Windows.Forms.ListBox listMoves2;
+        private System.Windows.Forms.PictureBox eggIcon2;
         private System.Windows.Forms.PictureBox bpkx30;
         private System.Windows.Forms.VScrollBar SCR_Box;
         private System.Windows.Forms.PictureBox bpkx1;
@@ -719,17 +730,5 @@
         private System.Windows.Forms.PictureBox bpkx11;
         private System.Windows.Forms.PictureBox bpkx12;
         private System.Windows.Forms.PictureBox bpkx13;
-        private System.Windows.Forms.PictureBox monIcon;
-        private System.Windows.Forms.Label labelMateName;
-        private System.Windows.Forms.PictureBox eggIcon;
-        private System.Windows.Forms.ListBox listMoves;
-        private System.Windows.Forms.ListBox listMovesMon;
-        private System.Windows.Forms.ListBox listMovesMate;
-        private System.Windows.Forms.PictureBox pictureBoxBall;
-        private System.Windows.Forms.PictureBox pictureBoxBall2;
-        private System.Windows.Forms.PictureBox pictureBoxBall2a;
-        private System.Windows.Forms.PictureBox pictureBoxBalla;
-        private System.Windows.Forms.ListBox listMoves2;
-        private System.Windows.Forms.PictureBox eggIcon2;
     }
 }
