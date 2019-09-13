@@ -266,6 +266,7 @@
             this.SCR_Box.Name = "SCR_Box";
             this.SCR_Box.Size = new System.Drawing.Size(24, 276);
             this.SCR_Box.TabIndex = 160;
+            this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
             // 
             // bpkx1
             // 

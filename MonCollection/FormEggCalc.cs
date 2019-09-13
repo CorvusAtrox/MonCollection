@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using PKHeX.Core;
 
@@ -92,8 +91,7 @@ namespace MonCollection
             }
             else
             {
-                PkmData = PkmData.Where(pk => pk.Gen == gen)
-                               .Where(pk => ((pk.Gender + mon.Gender == 1) &&
+                PkmData = PkmData.Where(pk => ((pk.Gender + mon.Gender == 1) &&
                                (MonDataToPKM(pk).PersonalInfo.IsEggGroup(eg[0]) || MonDataToPKM(pk).PersonalInfo.IsEggGroup(eg[1])))
                                || ((pk.Species == 132 ^ mon.Species == 132) && (!MonDataToPKM(pk).PersonalInfo.IsEggGroup(15))))
                                .ToList();
@@ -193,12 +191,6 @@ namespace MonCollection
                 makeEgg(mate, mon);
                 
 
-        }
-
-        private int getGen(string identifier)
-        {
-            string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
-            return int.Parse(sub.Substring(3));
         }
 
         private void makeEgg(MonData mon1, MonData mon2)
@@ -385,7 +377,10 @@ namespace MonCollection
         private string moveName(int index)
         {
             var result = moveNames.Where(move => move.Value == index).ToArray();
-            return result[0].Text;
+            if (result.Count() > 0)
+                return result[0].Text;
+            else
+                return "(None)";
         }
 
         private Image getBreedBall(int ball)
