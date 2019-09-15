@@ -589,7 +589,10 @@ namespace MonCollection
                     break;
                 case GameVersion.GP:
                 case GameVersion.GE:
+                    Regex genDiff = new Regex("[0-9]+(f|m)");
                     game = "lgpe";
+                    if (genDiff.IsMatch(species))
+                        species = species.Substring(0, species.Length - 1);
                     ext = ".png";
                     break;
             }
