@@ -1242,8 +1242,10 @@ namespace MonCollection
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             slotSelected = PkmData.Count();
+            int val = ((slotSelected) / RES_MIN);
+            if (val > SCR_Box.Maximum)
+                SCR_Box.Maximum = val;
             PkmData.Add(new MonData());
-            int val = (int)((slotSelected-1) / RES_MIN);
             SCR_Box.Value = val;
             FillPKXBoxes(val);
             OpenPKM(PkmData[slotSelected]);
