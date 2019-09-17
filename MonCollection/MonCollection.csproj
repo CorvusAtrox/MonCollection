@@ -11625,6 +11625,9 @@
     <Content Include="Resources\img\icons\806.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\lgpe\133-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\lgpe\27.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -11664,43 +11667,43 @@
     <Content Include="Resources\img\lgpe\58.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\060.png">
+    <Content Include="Resources\img\lgpe\60.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\063.png">
+    <Content Include="Resources\img\lgpe\63.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\075.png">
+    <Content Include="Resources\img\lgpe\75.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\077.png">
+    <Content Include="Resources\img\lgpe\77.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\081.png">
+    <Content Include="Resources\img\lgpe\81.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\082.png">
+    <Content Include="Resources\img\lgpe\82.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\086.png">
+    <Content Include="Resources\img\lgpe\86.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\090.png">
+    <Content Include="Resources\img\lgpe\90.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\092.png">
+    <Content Include="Resources\img\lgpe\92.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\095.png">
+    <Content Include="Resources\img\lgpe\95.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\096.png">
+    <Content Include="Resources\img\lgpe\96.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\097.png">
+    <Content Include="Resources\img\lgpe\97.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\lgpe\098.png">
+    <Content Include="Resources\img\lgpe\98.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\lgpe\1.png">
