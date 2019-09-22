@@ -471,7 +471,7 @@ namespace MonCollection
                 comboBoxPkrs.SelectedIndex = 0;
             }
 
-            var ds = PKX.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
+            var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
             comboBoxForm.DataSource = ds;
             comboBoxForm.SelectedIndex = pk.AltForm;
             if (comboBoxForm.Items.Count != 1)
