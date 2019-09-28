@@ -20,8 +20,7 @@ namespace MonCollection
     public partial class MainForm : Form
     {
         private SaveFile ver;
-        //private string[] genders = { "♂", "♀️", "⚲" };
-        private string[] genders = { "M", "F", "N" };
+        private readonly string[] genders = { "M", "F", "N" };
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private ComboBox[] moveBoxes;
         private PictureBox[] PKXBOXES;
@@ -37,7 +36,7 @@ namespace MonCollection
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
 
-        private string Counter = "Mon Count: {0}";
+        private readonly string Counter = "Mon Count: {0}";
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -61,7 +60,7 @@ namespace MonCollection
             InitializeStrings("en",GameVersion.US,"blank");
             InitializeBinding();
             InitializePkxBoxes();
-            PopulateFilteredDataSources(ver);
+            PopulateFilteredDataSources();
             L_Count.Text = "Loading...";
             new Task(LoadDatabase).Start();
         }
@@ -214,7 +213,7 @@ namespace MonCollection
             }
         }
 
-        private void PopulateFilteredDataSources(ITrainerInfo sav)
+        private void PopulateFilteredDataSources()
         {
             var source = GameInfo.FilteredSources;
 
@@ -254,11 +253,11 @@ namespace MonCollection
             else
                 InitializeStrings(info.language, info.version, getTrainer(identifier));
 
-            PopulateFilteredDataSources(ver);
+            PopulateFilteredDataSources();
 
         }
 
-        private int gameIndex(string identifier)
+        private int GameIndex(string identifier)
         {
             if (identifier == null)
                 identifier = "";
@@ -415,7 +414,7 @@ namespace MonCollection
 
             textBoxLevel.Text = pk.Level.ToString();
 
-            pictureBoxBall.Image = retrieveImage("Resources/img/ball/" + pk.Ball + ".png");
+            pictureBoxBall.Image = RetrieveImage("Resources/img/ball/" + pk.Ball + ".png");
             string spForm = pk.Species.ToString();
             if (pk.AltForm > 0 && !noDiff.Contains(pk.Species))
                 spForm += "-" + pk.AltForm.ToString();
@@ -426,7 +425,7 @@ namespace MonCollection
                 else if(pk.Gender == 1)
                     spForm += "f";
             }
-            pictureBoxIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
+            pictureBoxIcon.Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
 
             if (minorGenderDiff.Contains(pk.Species))
             {
@@ -444,9 +443,9 @@ namespace MonCollection
 
             gameDict.TryGetValue(pk.Game, out SaveInfo si);
             if(si != null)
-                pictureBoxGameSprite.Image = getSprite(spForm, si.version,pk.Shiny);
+                pictureBoxGameSprite.Image = GetSprite(spForm, si.version,pk.Shiny);
             else
-                pictureBoxGameSprite.Image = getSprite(spForm, GameVersion.UM, pk.Shiny);
+                pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.UM, pk.Shiny);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             labelGender.Tag = pk.Gender;
@@ -457,12 +456,12 @@ namespace MonCollection
                 if (pk.PKRS_Cured)
                 {
                     comboBoxPkrs.SelectedIndex = 2;
-                    pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsCured.png");
+                    pictureBoxPkrs.Image = RetrieveImage("Resources/img/pkrsCured.png");
                 }
                 else
                 {
                     comboBoxPkrs.SelectedIndex = 1;
-                    pictureBoxPkrs.Image = retrieveImage("Resources/img/pkrsInfected.png");
+                    pictureBoxPkrs.Image = RetrieveImage("Resources/img/pkrsInfected.png");
                 }
             }
             else
@@ -479,10 +478,10 @@ namespace MonCollection
             else
                 comboBoxForm.Visible = false;
 
-            playCry(pk.Species, pk.AltForm);
+            PlayCry(pk.Species, pk.AltForm);
         }
 
-        private void playCry(int sp, int form)
+        private void PlayCry(int sp, int form)
         {
             string spCry;
             if (form > 0)
@@ -497,10 +496,11 @@ namespace MonCollection
             {
                 SoundPlayer sound = new SoundPlayer(spCry);
                 sound.Play();
+                sound.Dispose();
             }
         }
 
-        private Image getSprite(string species, GameVersion version, bool shiny)
+        private Image GetSprite(string species, GameVersion version, bool shiny)
         {
             string game = "";
             string ext = "";
@@ -597,9 +597,9 @@ namespace MonCollection
                     break;
             }
             if(!shiny)
-                return retrieveImage("Resources/img/"+game+"/"+species+ext);
+                return RetrieveImage("Resources/img/"+game+"/"+species+ext);
             else
-                return retrieveImage("Resources/img/" + game + "/rare/" + species + ext);
+                return RetrieveImage("Resources/img/" + game + "/rare/" + species + ext);
         }
 
         private void ValidateMovePaint(object sender, DrawItemEventArgs e)
@@ -629,7 +629,7 @@ namespace MonCollection
 
         private void LoadDatabase()
         {
-            FullPkmData = LoadPKMSaves(Settings.Default.mons);
+            FullPkmData = LoadPKMSaves();
 
             if (PkmData != null)
                 UpdateFullData();
@@ -639,7 +639,7 @@ namespace MonCollection
             BeginInvoke(new MethodInvoker(() => SetResults(PkmData)));
         }
 
-        private static List<MonData> LoadPKMSaves(string pkmdb)
+        private static List<MonData> LoadPKMSaves()
         {
             if (!File.Exists(Settings.Default.mons + "/mons.json"))
                 File.Create(Settings.Default.mons + "/mons.json").Dispose();
@@ -652,7 +652,7 @@ namespace MonCollection
             }
         }
 
-        private Image retrieveImage(string path)
+        private Image RetrieveImage(string path)
         {
             if (File.Exists(path))
                 return Image.FromFile(path);
@@ -667,7 +667,7 @@ namespace MonCollection
 
             slotSelected = 0; // reset the slot last viewed
             SCR_Box.Value = 0;
-            gameSpeciesSort(0);
+            GameSpeciesSort(0);
 
             L_Count.Text = string.Format(Counter, res.Count());
             maxIndex = res.Count - 1;
@@ -697,7 +697,7 @@ namespace MonCollection
                     else if (mon.Gender == 1)
                         spForm += "f";
                 }
-                PKXBOXES[i].Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
+                PKXBOXES[i].Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
@@ -707,13 +707,13 @@ namespace MonCollection
             }
 
             for (int i = 0; i < RES_MAX; i++)
-                PKXBOXES[i].BackgroundImage = getSlotImg((int)PKXBOXES[i].Tag,false);
+                PKXBOXES[i].BackgroundImage = GetSlotImg((int)PKXBOXES[i].Tag,false);
             if (slotSelected != -1 && slotSelected >= begin && slotSelected < begin + RES_MAX)
-                PKXBOXES[slotSelected - begin].BackgroundImage = getSlotImg((int)PKXBOXES[slotSelected - begin].Tag, true);
+                PKXBOXES[slotSelected - begin].BackgroundImage = GetSlotImg((int)PKXBOXES[slotSelected - begin].Tag, true);
 
         }
 
-        private Image getSlotImg(int slot, bool selected)
+        private Image GetSlotImg(int slot, bool selected)
         {
             Image img = null;
 
@@ -734,13 +734,13 @@ namespace MonCollection
 
             if (selected)
             {
-                img = retrieveImage("Resources/img/slots/selected/" + verId.ToString() + ".png");
+                img = RetrieveImage("Resources/img/slots/selected/" + verId.ToString() + ".png");
 
                 if (img == null)
-                    img = retrieveImage("Resources/img/slotView.png");
+                    img = RetrieveImage("Resources/img/slotView.png");
             }
             else
-                img = retrieveImage("Resources/img/slots/" + verId.ToString() + ".png");
+                img = RetrieveImage("Resources/img/slots/" + verId.ToString() + ".png");
 
             return img;
         }
@@ -751,10 +751,10 @@ namespace MonCollection
                 FillPKXBoxes(e.NewValue);
         }
 
-        public void speciesGameSort(int index)
+        public void SpeciesGameSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => mon.Species)
-                             .ThenBy(mon => gameIndex(mon.Game))
+                             .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -766,7 +766,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => mon.ID)
                              .ThenBy(mon => mon.Species)
-                             .ThenBy(mon => gameIndex(mon.Game))
+                             .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -774,7 +774,7 @@ namespace MonCollection
             FillPKXBoxes(index);
         }
 
-        public void genSpeciesSort(int index)
+        public void GenSpeciesSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => mon.Gen)
                              .ThenBy(mon => mon.Species)
@@ -786,9 +786,9 @@ namespace MonCollection
         }
 
 
-        public void gameLevelSort(int index)
+        public void GameLevelSort(int index)
         {
-            PkmData = PkmData.OrderBy(mon => gameIndex(mon.Game))
+            PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Species)
                              .ThenBy(mon => mon.Nickname)
@@ -797,9 +797,9 @@ namespace MonCollection
             FillPKXBoxes(index);
         }
 
-        public void gameSpeciesSort(int index)
+        public void GameSpeciesSort(int index)
         {
-            PkmData = PkmData.OrderBy(mon => gameIndex(mon.Game))
+            PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Species)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -810,19 +810,19 @@ namespace MonCollection
 
         private void ButtonGameLevelSort_Click(object sender, EventArgs e)
         {
-            gameLevelSort((int)bpkx1.Tag/RES_MIN);
+            GameLevelSort((int)bpkx1.Tag/RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 
         private void ButtonGameSpeciesSort_Click(object sender, EventArgs e)
         {
-            gameSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            GameSpeciesSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 
         private void ButtonGenSpeciesSort_Click(object sender, EventArgs e)
         {
-            genSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            GenSpeciesSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 
@@ -846,11 +846,12 @@ namespace MonCollection
             foreach (var q in query)
                 results.addEntry(String.Format("{0}: {1}",q.Key,q.Count));
             results.Show();
+            results.Dispose();
         }
 
         private void ButtonSpeciesSort_Click(object sender, EventArgs e)
         {
-            speciesGameSort((int)bpkx1.Tag / RES_MIN);
+            SpeciesGameSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 
@@ -876,6 +877,7 @@ namespace MonCollection
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+            results.Dispose();
         }
 
 

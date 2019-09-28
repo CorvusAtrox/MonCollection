@@ -86,6 +86,7 @@ namespace MonCollection
                 }
                 ind++;
             }
+            dict.Dispose();
         }
 
         internal void LoadDB(List<MonData> data, int index)
@@ -108,10 +109,9 @@ namespace MonCollection
             comboBoxSpecies.SelectedValue = mon.Species;
 
             var query1 = PkmDB.Where(pk => pk.Species == mon.Species);
-            var query2 = query1.Where(pk => pk.Gen == mon.Gen);
-            var query3 = query1.Where(pk => pk.Game == game);
+            var query2 = query1.Where(pk => pk.Game == game);
 
-            labelSpVal.Text = String.Format("{0} {1} {2}",query1.Count(), query2.Count(), query3.Count());
+            labelSpVal.Text = String.Format("{0} {1}",query1.Count(), query2.Count());
 
             LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn);
             foreach (ComboBox mb in moveBoxes)
@@ -128,62 +128,53 @@ namespace MonCollection
 
             IEnumerable<MonData> query1a;
             IEnumerable<MonData> query2a;
-            IEnumerable<MonData> query3a;
 
             if(mon.Moves[0] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[0] || pk.Moves[1] == mon.Moves[0] || pk.Moves[2] == mon.Moves[0] || pk.Moves[3] == mon.Moves[0]);
                 query1a = query1.Where(pk => pk.Species == mon.Species);
-                query2 = query1.Where(pk => pk.Gen == pk.Gen);
+                query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Game == game);
-                query3a = query3.Where(pk => pk.Species == mon.Species);
 
-                labelMove1.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
-                                                , query1.Count(), query1a.Count(), query2.Count()
-                                                , query2a.Count(), query3.Count(), query3a.Count());
+                labelMove1.Text = String.Format("({0} {1}) ({2} {3})"
+                                                , query1.Count(), query1a.Count(),
+                                                  query2.Count(), query2a.Count());
             }
 
             if (mon.Moves[1] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[1] || pk.Moves[1] == mon.Moves[1] || pk.Moves[2] == mon.Moves[1] || pk.Moves[3] == mon.Moves[1]);
                 query1a = query1.Where(pk => pk.Species == mon.Species);
-                query2 = query1.Where(pk => pk.Gen == pk.Gen);
+                query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Game == game);
-                query3a = query3.Where(pk => pk.Species == mon.Species);
 
-                labelMove2.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
-                                                , query1.Count(), query1a.Count(), query2.Count()
-                                                , query2a.Count(), query3.Count(), query3a.Count());
+                labelMove2.Text = String.Format("({0} {1}) ({2} {3})"
+                                                , query1.Count(), query1a.Count(),
+                                                  query2.Count(), query2a.Count());
             }
 
             if (mon.Moves[2] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[2] || pk.Moves[1] == mon.Moves[2] || pk.Moves[2] == mon.Moves[2] || pk.Moves[3] == mon.Moves[2]);
                 query1a = query1.Where(pk => pk.Species == mon.Species);
-                query2 = query1.Where(pk => pk.Gen == pk.Gen);
+                query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Game == game);
-                query3a = query3.Where(pk => pk.Species == mon.Species);
 
-                labelMove3.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
-                                                , query1.Count(), query1a.Count(), query2.Count()
-                                                , query2a.Count(), query3.Count(), query3a.Count());
+                labelMove3.Text = String.Format("({0} {1}) ({2} {3})"
+                                                , query1.Count(), query1a.Count(),
+                                                  query2.Count(), query2a.Count());
             }
 
             if (mon.Moves[3] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[3] || pk.Moves[1] == mon.Moves[3] || pk.Moves[2] == mon.Moves[3] || pk.Moves[3] == mon.Moves[3]);
                 query1a = query1.Where(pk => pk.Species == mon.Species);
-                query2 = query1.Where(pk => pk.Gen == pk.Gen);
+                query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species);
-                query3 = query1.Where(pk => pk.Game == game);
-                query3a = query3.Where(pk => pk.Species == mon.Species);
 
-                labelMove4.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
-                                                , query1.Count(), query1a.Count(), query2.Count()
-                                                , query2a.Count(), query3.Count(), query3a.Count());
+                labelMove4.Text = String.Format("({0} {1}) ({2} {3})"
+                                                , query1.Count(), query1a.Count(),
+                                                  query2.Count(), query2a.Count());
             }
         }
 
@@ -226,28 +217,26 @@ namespace MonCollection
             return mon;
         }
 
-        private int getGen(string identifier)
-        {
-            string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
-            return int.Parse(sub.Substring(3));
-        }
+        //private int GetGen(string identifier)
+        //{
+        //    string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
+        //    return int.Parse(sub.Substring(3));
+        //}
 
-        private string getGame(string identifier)
-        {
-            string[] strings = identifier.Split('\\');
-            int count = strings.Count();
-            return strings[count - 2];
-        }
+        //private string GetGame(string identifier)
+        //{
+        //    string[] strings = identifier.Split('\\');
+        //    int count = strings.Count();
+        //    return strings[count - 2];
+        //}
 
         private void ComboBoxMoveNew_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(PkmDB != null) {
                 IEnumerable<MonData> query1;
                 IEnumerable<MonData> query2;
-                IEnumerable<MonData> query3;
                 IEnumerable<MonData> query1a;
                 IEnumerable<MonData> query2a;
-                IEnumerable<MonData> query3a;
 
                 MonData mon = PkmDB[ind];
 
@@ -256,14 +245,12 @@ namespace MonCollection
                     query1 = PkmDB.Where(pk => pk.Moves[0] == (int)comboBoxMoveNew.SelectedValue || pk.Moves[1] == (int)comboBoxMoveNew.SelectedValue
                                             || pk.Moves[2] == (int)comboBoxMoveNew.SelectedValue || pk.Moves[3] == (int)comboBoxMoveNew.SelectedValue);
                     query1a = query1.Where(pk => pk.Species == mon.Species);
-                    query2 = query1.Where(pk => pk.Gen == mon.Gen);
+                    query2 = query1.Where(pk => pk.Game == game);
                     query2a = query2.Where(pk => pk.Species == mon.Species);
-                    query3 = query1.Where(pk => pk.Game == game);
-                    query3a = query3.Where(pk => pk.Species == mon.Species);
 
-                    labelNewMove.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})"
-                                                    , query1.Count()+1, query1a.Count()+1, query2.Count()+1
-                                                    , query2a.Count()+1, query3.Count()+1, query3a.Count()+1);
+                    labelNewMove.Text = String.Format("({0} {1}) ({2} {3})"
+                                                    , query1.Count()+1, query1a.Count()+1, 
+                                                    query2.Count()+1 , query2a.Count()+1);
                 }
                 else
                 {
