@@ -96,7 +96,7 @@ namespace MonCollection
             game = data[index].Game;
         }
 
-        public void showValues()
+        public void ShowValues()
         {
             MonData mon = PkmDB[ind];
             gameDict.TryGetValue(game, out SaveInfo si);

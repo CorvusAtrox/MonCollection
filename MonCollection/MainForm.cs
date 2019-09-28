@@ -251,7 +251,7 @@ namespace MonCollection
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
                 InitializeStrings("en", GameVersion.US, "blank");
             else
-                InitializeStrings(info.language, info.version, getTrainer(identifier));
+                InitializeStrings(info.language, info.version, GetTrainer(identifier));
 
             PopulateFilteredDataSources();
 
@@ -398,7 +398,7 @@ namespace MonCollection
             comboBoxMove4.SelectedValue = pk.Moves[3];
 
             BTN_Shinytize.Tag = pk.Shiny;
-            setShiny((bool)BTN_Shinytize.Tag);
+            SetShiny((bool)BTN_Shinytize.Tag);
 
             textBoxHP.Text = pk.HP.ToString();
             textBoxAttack.Text = pk.ATK.ToString();
@@ -406,7 +406,7 @@ namespace MonCollection
             textBoxSpAtk.Text = pk.SPA.ToString();
             textBoxSpDef.Text = pk.SPD.ToString();
             textBoxSpeed.Text = pk.SPE.ToString();
-            setStatText(pk.Nature,pk.Gen);
+            SetStatText(pk.Nature,pk.Gen);
 
             textBoxOT.Text = pk.OT;
             textBoxID.Text = pk.ID.ToString();
@@ -449,7 +449,7 @@ namespace MonCollection
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             labelGender.Tag = pk.Gender;
-            setShiny(pk.Shiny);
+            SetShiny(pk.Shiny);
             if (pk.PKRS_Infected)
             {
                 pictureBoxPkrs.Visible = true;
@@ -871,7 +871,7 @@ namespace MonCollection
                 (species, game) => new
                 {
                     Name = PkmListAny.Find(p => p.Value == species).Text,
-                    Counts = getGameCounts(species, game)
+                    Counts = GetGameCounts(species, game)
                 }) ;
             var results = new FormGameTally();
             results.Show();
@@ -892,12 +892,13 @@ namespace MonCollection
                 (species, moves) => new
                 {
                     Name = PkmListAny.Find(p => p.Value == species).Text,
-                    Counts = getMoveCounts(species, moves)
+                    Counts = GetMoveCounts(moves)
                 });
             var results = new FormGameTally();
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+            results.Dispose();
         }
 
         private void ButtonMonBallTally_Click(object sender, EventArgs e)
@@ -910,12 +911,13 @@ namespace MonCollection
                 (species, ball) => new
                 {
                     Name = PkmListAny.Find(p => p.Value == species).Text,
-                    Counts = getBallCounts(species, ball)
+                    Counts = GetBallCounts(ball)
                 });
             var results = new FormGameTally();
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
+            results.Dispose();
         }
 
         private void ButtonRanMon_Click(object sender, EventArgs e)
@@ -939,28 +941,27 @@ namespace MonCollection
             
         }
 
-        private string getGameCounts(int index, IEnumerable<string> game)
+        private string GetGameCounts(int index, IEnumerable<string> game)
         {
             Dictionary<string, int> d = new Dictionary<string, int>();
             foreach (var entry in gameDict)
             {
-                if(getGameMons(entry.Value.version,index))
+                if(GetGameMons(entry.Value.version,index))
                     d.Add(entry.Key, 0);
                 else
                     d.Add(entry.Key, -1);
             }
 
-            int count;
-            foreach(string s in game)
+            foreach (string s in game)
             {
-                d.TryGetValue(s, out count);
+                d.TryGetValue(s, out int count);
 
                 if (count < 0)
                     count = 0;
 
                 d[s] = count + 1;
             }
-                 
+
             string result = "";
             foreach(var entry in d)
             {
@@ -972,7 +973,7 @@ namespace MonCollection
             return result;
         }
 
-        private string getMoveCounts(int index, IEnumerable<List<int>> moves)
+        private string GetMoveCounts(IEnumerable<List<int>> moves)
         {
             List<int> allMoves = new List<int>();
             foreach (var m in moves)
@@ -994,7 +995,7 @@ namespace MonCollection
             return result;
         }
 
-        private string getBallCounts(int index, IEnumerable<int> balls)
+        private string GetBallCounts(IEnumerable<int> balls)
         {
             List<int> allBalls = new List<int>();
             foreach (var m in balls)
@@ -1015,12 +1016,12 @@ namespace MonCollection
             return result;
         }
 
-        private bool getGameMons(GameVersion version, int species)
+        private bool GetGameMons(GameVersion version, int species)
         {
             return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
 
-        private string getTrainer(string identifier)
+        private string GetTrainer(string identifier)
         {
             int start = identifier.IndexOf("[");
             int end = identifier.IndexOf("]");
@@ -1035,7 +1036,7 @@ namespace MonCollection
             var results = new FormNiqCalc();
 
             results.LoadDB(PkmData, slotSelected);
-            results.showValues();
+            results.ShowValues();
             results.Show();
         }
 
@@ -1048,7 +1049,7 @@ namespace MonCollection
             results.Show();
         }
 
-        private void setStatText(int nature, int gen)
+        private void SetStatText(int nature, int gen)
         {
 
             labelAttack.ForeColor = Color.Black;
@@ -1175,11 +1176,11 @@ namespace MonCollection
 
         private void ButtonSaveMon_Click(object sender, EventArgs e)
         {
-            saveMon();
+            SaveMon();
             OpenPKM(PkmData[slotSelected]);
         }
 
-        private void saveMon()
+        private void SaveMon()
         {
             MonData mon = PkmData[slotSelected];
 
@@ -1275,31 +1276,32 @@ namespace MonCollection
                         pk.Identifier = file;
                         pk.SetStats(pk.GetStats(pk.PersonalInfo));
 
-                        MonData pd = new MonData();
-
-                        pd.Nickname = pk.Nickname;
-                        pd.Species = pk.Species;
-                        pd.Level = pk.CurrentLevel;
-                        pd.Gender = pk.Gender;
-                        pd.Moves = new List<int> { pk.Move1, pk.Move2, pk.Move3, pk.Move4 };
-                        pd.Game = getGame(pk.Identifier);
-                        pd.AltForm = pk.AltForm;
-                        pd.Shiny = pk.IsShiny;
-                        pd.Ability = pk.Ability;
-                        pd.Nature = pk.Nature;
-                        pd.HP = pk.Stat_HPMax;
-                        pd.ATK = pk.Stat_ATK;
-                        pd.DEF = pk.Stat_DEF;
-                        pd.SPA = pk.Stat_SPA;
-                        pd.SPD = pk.Stat_SPD;
-                        pd.SPE = pk.Stat_SPE;
-                        pd.Gen = getGen(pk.Identifier);
-                        pd.ID = pk.DisplayTID;
-                        pd.OT = pk.OT_Name;
-                        pd.Ball = pk.Ball;
-                        pd.Language = pk.Language;
-                        pd.PKRS_Infected = pk.PKRS_Infected;
-                        pd.PKRS_Cured = pk.PKRS_Cured;
+                        MonData pd = new MonData
+                        {
+                            Nickname = pk.Nickname,
+                            Species = pk.Species,
+                            Level = pk.CurrentLevel,
+                            Gender = pk.Gender,
+                            Moves = new List<int> { pk.Move1, pk.Move2, pk.Move3, pk.Move4 },
+                            Game = GetGame(pk.Identifier),
+                            AltForm = pk.AltForm,
+                            Shiny = pk.IsShiny,
+                            Ability = pk.Ability,
+                            Nature = pk.Nature,
+                            HP = pk.Stat_HPMax,
+                            ATK = pk.Stat_ATK,
+                            DEF = pk.Stat_DEF,
+                            SPA = pk.Stat_SPA,
+                            SPD = pk.Stat_SPD,
+                            SPE = pk.Stat_SPE,
+                            Gen = GetGen(pk.Identifier),
+                            ID = pk.DisplayTID,
+                            OT = pk.OT_Name,
+                            Ball = pk.Ball,
+                            Language = pk.Language,
+                            PKRS_Infected = pk.PKRS_Infected,
+                            PKRS_Cured = pk.PKRS_Cured
+                        };
 
                         PkmData.Add(pd);
                     });
@@ -1321,14 +1323,14 @@ namespace MonCollection
             }
         }
 
-        private string getGame(string identifier)
+        private string GetGame(string identifier)
         {
             string[] strings = identifier.Split('\\');
             int count = strings.Count();
             return strings[count - 2];
         }
 
-        private int getGen(string identifier)
+        private int GetGen(string identifier)
         {
             string sub = Regex.Match(identifier, @"\.[pcx][kb][0-9]*$").Value;
             return int.Parse(sub.Substring(3));
@@ -1377,10 +1379,10 @@ namespace MonCollection
         private void BTN_Shinytize_Click(object sender, EventArgs e)
         {
             BTN_Shinytize.Tag = !(bool)BTN_Shinytize.Tag;
-            setShiny((bool)BTN_Shinytize.Tag);
+            SetShiny((bool)BTN_Shinytize.Tag);
         }
 
-        private void setShiny(bool shiny)
+        private void SetShiny(bool shiny)
         {
             if (shiny)
             {
@@ -1426,8 +1428,10 @@ namespace MonCollection
 
         private void GameToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormFilters form = new FormFilters();
-            form.filters = filterGames;
+            FormFilters form = new FormFilters
+            {
+                filters = filterGames
+            };
             form.loadFilterList(gameList);
             form.FormClosing += new FormClosingEventHandler(
                 delegate (object send, FormClosingEventArgs a) {
@@ -1452,6 +1456,7 @@ namespace MonCollection
             foreach (var q in query)
                 results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
             results.Show();
+            results.Dispose();
         }
     }
 }
