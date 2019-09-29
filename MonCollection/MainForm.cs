@@ -846,7 +846,6 @@ namespace MonCollection
             foreach (var q in query)
                 results.addEntry(String.Format("{0}: {1}",q.Key,q.Count));
             results.Show();
-            results.Dispose();
         }
 
         private void ButtonSpeciesSort_Click(object sender, EventArgs e)
@@ -877,7 +876,6 @@ namespace MonCollection
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
-            results.Dispose();
         }
 
 
@@ -898,7 +896,6 @@ namespace MonCollection
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
-            results.Dispose();
         }
 
         private void ButtonMonBallTally_Click(object sender, EventArgs e)
@@ -917,7 +914,6 @@ namespace MonCollection
             results.Show();
             foreach (var q in query)
                 results.addEntry(String.Format("{0}; {1}", q.Name, q.Counts));
-            results.Dispose();
         }
 
         private void ButtonRanMon_Click(object sender, EventArgs e)
@@ -1456,7 +1452,6 @@ namespace MonCollection
             foreach (var q in query)
                 results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
             results.Show();
-            results.Dispose();
         }
     }
 }
