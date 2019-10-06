@@ -3360,6 +3360,36 @@
     "PKRS_Cured": false
   },
   {
+    "Nickname": "St Malo",
+    "Species": 7,
+    "Level": 11,
+    "Gender": 1,
+    "Moves": [
+      33,
+      39,
+      145,
+      0
+    ],
+    "Game": "Yellow [Juan]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 32,
+    "ATK": 15,
+    "DEF": 19,
+    "SPA": 18,
+    "SPD": 18,
+    "SPE": 15,
+    "Gen": 1,
+    "ID": 58458,
+    "OT": "Juan",
+    "Ball": 0,
+    "Language": 3,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false
+  },
+  {
     "Nickname": "Sheetz",
     "Species": 12,
     "Level": 31,
@@ -4620,36 +4650,6 @@
     "PKRS_Cured": false
   },
   {
-    "Nickname": "St Malo",
-    "Species": 7,
-    "Level": 11,
-    "Gender": 1,
-    "Moves": [
-      33,
-      39,
-      145,
-      0
-    ],
-    "Game": "Gold [Dorothy]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 0,
-    "Nature": 0,
-    "HP": 32,
-    "ATK": 15,
-    "DEF": 19,
-    "SPA": 18,
-    "SPD": 18,
-    "SPE": 15,
-    "Gen": 2,
-    "ID": 58458,
-    "OT": "Juan",
-    "Ball": 0,
-    "Language": 3,
-    "PKRS_Infected": false,
-    "PKRS_Cured": false
-  },
-  {
     "Nickname": "Entrance",
     "Species": 11,
     "Level": 18,
@@ -4675,7 +4675,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4705,7 +4705,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4765,7 +4765,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4795,7 +4795,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4825,7 +4825,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4855,7 +4855,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4885,7 +4885,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4915,7 +4915,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4945,7 +4945,7 @@
     "ID": 30793,
     "OT": "Dustin",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -4975,7 +4975,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5005,7 +5005,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5065,7 +5065,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5095,7 +5095,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5125,7 +5125,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5155,7 +5155,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5185,7 +5185,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5215,7 +5215,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5245,7 +5245,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5275,7 +5275,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5305,7 +5305,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5335,7 +5335,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5365,7 +5365,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5395,7 +5395,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5455,7 +5455,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5515,7 +5515,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5545,7 +5545,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5575,7 +5575,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5605,7 +5605,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5635,7 +5635,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5665,7 +5665,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5695,7 +5695,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5725,7 +5725,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5755,7 +5755,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5785,7 +5785,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5845,7 +5845,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5875,7 +5875,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5905,7 +5905,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5935,7 +5935,7 @@
     "ID": 58458,
     "OT": "Juan",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5965,7 +5965,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -5995,7 +5995,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6025,7 +6025,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6055,7 +6055,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6085,7 +6085,7 @@
     "ID": 58458,
     "OT": "Juan",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6115,7 +6115,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6145,7 +6145,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6175,7 +6175,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6205,7 +6205,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6235,7 +6235,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6265,7 +6265,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6325,7 +6325,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6355,7 +6355,7 @@
     "ID": 48926,
     "OT": "OLIVE",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6385,7 +6385,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6415,7 +6415,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6445,7 +6445,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6475,7 +6475,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6505,7 +6505,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6535,7 +6535,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6565,7 +6565,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6595,7 +6595,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6625,7 +6625,7 @@
     "ID": 56024,
     "OT": "Yuna",
     "Ball": 0,
-    "Language": 0,
+    "Language": 3,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6655,7 +6655,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6685,7 +6685,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6715,7 +6715,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6745,7 +6745,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6775,7 +6775,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6805,7 +6805,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6835,7 +6835,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6865,7 +6865,7 @@
     "ID": 13321,
     "OT": "Dorothy",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6895,7 +6895,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6925,7 +6925,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6955,7 +6955,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -6985,7 +6985,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -7015,7 +7015,7 @@
     "ID": 39237,
     "OT": "Catria",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -7045,7 +7045,7 @@
     "ID": 30993,
     "OT": "JOHN",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -7075,7 +7075,7 @@
     "ID": 30993,
     "OT": "JOHN",
     "Ball": 0,
-    "Language": 0,
+    "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false
   },
@@ -26260,7 +26260,7 @@
       96,
       247
     ],
-    "Game": "Diamond [JOHANN]",
+    "Game": "HOME [CorvusOssi]",
     "AltForm": 0,
     "Shiny": false,
     "Ability": 15,
@@ -26271,7 +26271,7 @@
     "SPA": 58,
     "SPD": 76,
     "SPE": 56,
-    "Gen": 4,
+    "Gen": 7,
     "ID": 26257,
     "OT": "HERR J",
     "Ball": 2,

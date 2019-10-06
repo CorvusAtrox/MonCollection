@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.buttonSelectAll = new System.Windows.Forms.Button();
             this.buttonClearAll = new System.Windows.Forms.Button();
+            this.buttonInvert = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewFilters
@@ -63,7 +64,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(86, 266);
+            this.button1.Location = new System.Drawing.Point(88, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -73,7 +74,7 @@
             // 
             // buttonSelectAll
             // 
-            this.buttonSelectAll.Location = new System.Drawing.Point(31, 237);
+            this.buttonSelectAll.Location = new System.Drawing.Point(12, 219);
             this.buttonSelectAll.Name = "buttonSelectAll";
             this.buttonSelectAll.Size = new System.Drawing.Size(75, 23);
             this.buttonSelectAll.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // buttonClearAll
             // 
-            this.buttonClearAll.Location = new System.Drawing.Point(142, 237);
+            this.buttonClearAll.Location = new System.Drawing.Point(166, 219);
             this.buttonClearAll.Name = "buttonClearAll";
             this.buttonClearAll.Size = new System.Drawing.Size(75, 23);
             this.buttonClearAll.TabIndex = 3;
@@ -91,12 +92,23 @@
             this.buttonClearAll.UseVisualStyleBackColor = true;
             this.buttonClearAll.Click += new System.EventHandler(this.ButtonClearAll_Click);
             // 
+            // buttonInvert
+            // 
+            this.buttonInvert.Location = new System.Drawing.Point(88, 237);
+            this.buttonInvert.Name = "buttonInvert";
+            this.buttonInvert.Size = new System.Drawing.Size(75, 23);
+            this.buttonInvert.TabIndex = 4;
+            this.buttonInvert.Text = "Invert";
+            this.buttonInvert.UseVisualStyleBackColor = true;
+            this.buttonInvert.Click += new System.EventHandler(this.ButtonInvert_Click);
+            // 
             // FormFilters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(253, 301);
+            this.Controls.Add(this.buttonInvert);
             this.Controls.Add(this.buttonClearAll);
             this.Controls.Add(this.buttonSelectAll);
             this.Controls.Add(this.button1);
@@ -116,5 +128,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonSelectAll;
         private System.Windows.Forms.Button buttonClearAll;
+        private System.Windows.Forms.Button buttonInvert;
     }
 }

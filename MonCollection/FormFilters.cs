@@ -65,5 +65,17 @@ namespace MonCollection
             foreach (ListViewItem item in listViewFilters.Items)
                 item.SubItems[1].Text = "false";
         }
+
+        private void ButtonInvert_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listViewFilters.Items)
+            {
+                if(item.SubItems[1].Text == "true")
+                    item.SubItems[1].Text = "false";
+                else if (item.SubItems[1].Text == "false")
+                    item.SubItems[1].Text = "true";
+            }
+                
+        }
     }
 }

@@ -510,10 +510,12 @@ namespace MonCollection
                 case GameVersion.GN:
                     game = "rb";
                     ext = ".png";
+                    shiny = false; //Shiny not visible
                     break;
                 case GameVersion.YW:
                     game = "yw";
                     ext = ".png";
+                    shiny = false; //Shiny not visible
                     break;
                 case GameVersion.GD:
                     game = "gd";
