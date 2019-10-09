@@ -421,6 +421,9 @@ namespace MonCollection
                 case 7:
                     mon = new PK7();
                     break;
+                case 8:
+                    mon = new PK8();
+                    break;
                 default:
                     mon = new PK7();
                     break;
