@@ -107,7 +107,9 @@ namespace MonCollection
             gameDict.TryGetValue(game, out SaveInfo si);
             SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
-            List<int> family = getMonFamily(mon);
+
+            MonFamily monFamily = new MonFamily();
+            int[] family = monFamily.getFamily(mon.Species);
 
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
             labelGame.Text = String.Format("Game: {0}",game);
@@ -119,7 +121,7 @@ namespace MonCollection
             var query2 = query1.Where(pk => pk.Game == game);
             var query2f = query2.Where(pk => pk.Game == game);
 
-            labelSpVal.Text = String.Format("({0} {1}) ({2} {3})",query1.Count(), query1f.Count(), query2.Count(), query2f.Count());
+            labelSpVal.Text = String.Format("({0} {1}) ({2} {3})",query1f.Count(), query1.Count(), query2f.Count(), query2.Count());
 
             LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn);
             foreach (ComboBox mb in moveBoxes)
@@ -147,8 +149,8 @@ namespace MonCollection
                 query2f = query1.Where(pk => family.Contains(pk.Species));
 
                 labelMove1.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
-                                                , query1.Count(), query1a.Count(), query1f.Count(),
-                                                  query2.Count(), query2a.Count(), query2f.Count());
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
             }
 
             if (mon.Moves[1] > 0)
@@ -161,8 +163,8 @@ namespace MonCollection
                 query2f = query1.Where(pk => family.Contains(pk.Species));
 
                 labelMove2.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
-                                                , query1.Count(), query1a.Count(), query1f.Count(),
-                                                  query2.Count(), query2a.Count(), query2f.Count());
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
             }
 
             if (mon.Moves[2] > 0)
@@ -175,8 +177,8 @@ namespace MonCollection
                 query2f = query1.Where(pk => family.Contains(pk.Species));
 
                 labelMove3.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
-                                                , query1.Count(), query1a.Count(), query1f.Count(),
-                                                  query2.Count(), query2a.Count(), query2f.Count());
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
             }
 
             if (mon.Moves[3] > 0)
@@ -189,8 +191,8 @@ namespace MonCollection
                 query2f = query1.Where(pk => family.Contains(pk.Species));
 
                 labelMove4.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
-                                                , query1.Count(), query1a.Count(), query1f.Count(),
-                                                  query2.Count(), query2a.Count(), query2f.Count());
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
             }
         }
 
@@ -265,11 +267,5 @@ namespace MonCollection
             }
         }
 
-        private List<int> getMonFamily(MonData mon)
-        {
-            List<int> list = new List<int>();
-            list.Add(mon.Species);
-            return list;
-        }
     }
 }

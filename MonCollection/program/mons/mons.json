@@ -83102,7 +83102,7 @@
   {
     "Nickname": "Dance Away",
     "Species": 105,
-    "Level": 26,
+    "Level": 29,
     "Gender": 0,
     "Moves": [
       0,
@@ -84115,6 +84115,36 @@
     "ID": 0,
     "OT": "",
     "Ball": 4,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false
+  },
+  {
+    "Nickname": "Tough Worm",
+    "Species": 208,
+    "Level": 25,
+    "Gender": 1,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Ball": 12,
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false
