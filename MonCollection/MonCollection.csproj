@@ -13129,6 +13129,9 @@
     <Content Include="Resources\img\smusum\74-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\smusum\74.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\smusum\75-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -14494,7 +14497,7 @@
     <Content Include="Resources\img\xyoras\073.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\074.gif">
+    <Content Include="Resources\img\xyoras\74.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\075.gif">
