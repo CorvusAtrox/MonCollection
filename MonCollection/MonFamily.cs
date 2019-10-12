@@ -231,17 +231,224 @@ namespace MonCollection
             families.Add(new int[] { 384 }); //Rayquaza
             families.Add(new int[] { 385 }); //Jirachi
             families.Add(new int[] { 386 }); //Deoxys
-
+            families.Add(new int[] { 387, 388, 389 }); //Turtwig
+            families.Add(new int[] { 390, 391, 392 }); //Chimchar
+            families.Add(new int[] { 393, 394, 395 }); //Piplup
+            families.Add(new int[] { 396, 397, 398 }); //Starly
+            families.Add(new int[] { 399, 400 }); //Bidoof
+            families.Add(new int[] { 401, 402 }); //Kricketot
+            families.Add(new int[] { 403, 404, 405 }); //Shinx
+            families.Add(new int[] { 408, 409 }); //Cranidos
+            families.Add(new int[] { 410, 411 }); //Shieldon
+            families.Add(new int[] { 412, 413, 414 }); //Burmy
+            families.Add(new int[] { 415, 416 }); //Combee
+            families.Add(new int[] { 417 }); //Pachirisu
+            families.Add(new int[] { 418, 419 }); //Buizel
+            families.Add(new int[] { 420, 421 }); //Cherubi
+            families.Add(new int[] { 422, 423 }); //Shellos
             families.Add(new int[] { 425, 426 }); //Drifloon
-
+            families.Add(new int[] { 427, 428 }); //Buneary
+            families.Add(new int[] { 431, 432 }); //Glameow
+            families.Add(new int[] { 433, 434 }); //Stunky
+            families.Add(new int[] { 436, 437 }); //Bronzor
+            families.Add(new int[] { 441 }); //Chatot
+            families.Add(new int[] { 442 }); //Spiritomb
+            families.Add(new int[] { 443, 444, 445 }); //Gible
+            families.Add(new int[] { 447, 448 }); //Riolu
+            families.Add(new int[] { 449, 450 }); //Hippopotas
+            families.Add(new int[] { 451, 452 }); //Skorupi
+            families.Add(new int[] { 453, 454 }); //Croagunk
+            families.Add(new int[] { 455 }); //Carnivine
+            families.Add(new int[] { 456, 457 }); //Finneon
+            families.Add(new int[] { 459, 460 }); //Snover
+            families.Add(new int[] { 479 }); //Rotom
+            families.Add(new int[] { 480 }); //Uxie
+            families.Add(new int[] { 481 }); //Mesprit
+            families.Add(new int[] { 482 }); //Azelf
+            families.Add(new int[] { 483 }); //Dialga
+            families.Add(new int[] { 484 }); //Palkia
+            families.Add(new int[] { 485 }); //Heatran
+            families.Add(new int[] { 486 }); //Regigigas
+            families.Add(new int[] { 487 }); //Giratina
+            families.Add(new int[] { 488 }); //Cresselia
+            families.Add(new int[] { 489, 490 }); //Phione
+            families.Add(new int[] { 491 }); //Darkrai
+            families.Add(new int[] { 492 }); //Shaymin
+            families.Add(new int[] { 493 }); //Arceus
+            families.Add(new int[] { 494 }); //Victini
+            families.Add(new int[] { 495, 496, 497 }); //Snivy
+            families.Add(new int[] { 498, 499, 500 }); //Tepig
+            families.Add(new int[] { 501, 502, 503 }); //Oshawott
+            families.Add(new int[] { 504, 505 }); //Patrat
+            families.Add(new int[] { 506, 507, 508 }); //Lillipup
+            families.Add(new int[] { 509, 510 }); //Purrloin
+            families.Add(new int[] { 511, 512 }); //Pansage
+            families.Add(new int[] { 513, 514 }); //Pansear
+            families.Add(new int[] { 515, 516 }); //Panpour
+            families.Add(new int[] { 517, 518 }); //Munna
+            families.Add(new int[] { 519, 520, 521 }); //Pidove
+            families.Add(new int[] { 522, 523 }); //Blitzle
+            families.Add(new int[] { 524, 525, 526 }); //Roggenrola
+            families.Add(new int[] { 527, 528 }); //Woobat
+            families.Add(new int[] { 529, 530 }); //Drilbur
+            families.Add(new int[] { 531 }); //Audino
+            families.Add(new int[] { 532, 533, 534 }); //Timburr
+            families.Add(new int[] { 535, 536, 537 }); //Tympole
+            families.Add(new int[] { 538 }); //Throh
+            families.Add(new int[] { 539 }); //Sawk
+            families.Add(new int[] { 540, 541, 542 }); //Sewaddle
+            families.Add(new int[] { 543, 544, 545 }); //Venipede
+            families.Add(new int[] { 546, 547 }); //Cottonee
+            families.Add(new int[] { 548, 549 }); //Petilil
+            families.Add(new int[] { 550 }); //Basculin
+            families.Add(new int[] { 551, 552, 553 }); //Sandile
+            families.Add(new int[] { 554, 555 }); //Darumaka
+            families.Add(new int[] { 556 }); //Maractus
+            families.Add(new int[] { 557, 558 }); //Dwebble
+            families.Add(new int[] { 559, 550 }); //Scraggy
+            families.Add(new int[] { 561 }); //Sigilyph
+            families.Add(new int[] { 562, 563 }); //Yamask
+            families.Add(new int[] { 564, 565 }); //Tirtouga
+            families.Add(new int[] { 566, 567 }); //Archen
+            families.Add(new int[] { 568, 569 }); //Trubbish
+            families.Add(new int[] { 570, 571 }); //Zorua
+            families.Add(new int[] { 572, 573 }); //Minccino
+            families.Add(new int[] { 574, 575, 576 }); //Gothita
+            families.Add(new int[] { 577, 578, 579 }); //Solosis
+            families.Add(new int[] { 580, 581 }); //Ducklett
+            families.Add(new int[] { 582, 583, 584 }); //Vanillite
+            families.Add(new int[] { 585, 586 }); //Deerling
+            families.Add(new int[] { 587 }); //Emolga
+            families.Add(new int[] { 588, 589 }); //Karrablast
+            families.Add(new int[] { 590, 591 }); //Foongus
+            families.Add(new int[] { 592, 593 }); //Frillish
+            families.Add(new int[] { 594 }); //Alomomola
+            families.Add(new int[] { 595, 596 }); //Joltik
+            families.Add(new int[] { 597, 598 }); //Ferroseed
+            families.Add(new int[] { 599, 600, 601 }); //Klink
+            families.Add(new int[] { 602, 603, 604 }); //Tynamo
+            families.Add(new int[] { 605, 606 }); //Elgyem
+            families.Add(new int[] { 607, 608, 609 }); //Litwick
+            families.Add(new int[] { 610, 611, 612 }); //Axew
+            families.Add(new int[] { 613, 614 }); //Beartic
+            families.Add(new int[] { 615 }); //Cryogonal
+            families.Add(new int[] { 616, 617 }); //Shelmet
+            families.Add(new int[] { 618 }); //Stunfisk
+            families.Add(new int[] { 619, 620 }); //Mienfoo
+            families.Add(new int[] { 621 }); //Druddigon
+            families.Add(new int[] { 622, 623 }); //Golett
+            families.Add(new int[] { 624, 625 }); //Pawniard
+            families.Add(new int[] { 626 }); //Bouffalant
+            families.Add(new int[] { 627, 628 }); //Rufflet
+            families.Add(new int[] { 629, 630 }); //Vullaby
+            families.Add(new int[] { 631 }); //Heatmor
+            families.Add(new int[] { 632 }); //Durant
+            families.Add(new int[] { 633, 634, 635 }); //Deino
+            families.Add(new int[] { 636, 637 }); //Larvesta
+            families.Add(new int[] { 638 }); //Cobalion
+            families.Add(new int[] { 639 }); //Terrakion
+            families.Add(new int[] { 640 }); //Virizion
+            families.Add(new int[] { 641 }); //Tornadus
+            families.Add(new int[] { 642 }); //Thundurus
+            families.Add(new int[] { 643 }); //Reshiram
+            families.Add(new int[] { 644 }); //Zekrom
+            families.Add(new int[] { 645 }); //Landorus
+            families.Add(new int[] { 646 }); //Kyurem
+            families.Add(new int[] { 647 }); //Keldeo
+            families.Add(new int[] { 648 }); //Meloetta
+            families.Add(new int[] { 649 }); //Genesect
+            families.Add(new int[] { 650, 651, 652 }); //Chespin
+            families.Add(new int[] { 653, 654, 655 }); //Fennekin
+            families.Add(new int[] { 656, 657, 658 }); //Froakie
+            families.Add(new int[] { 659, 660 }); //Bunnelby
+            families.Add(new int[] { 661, 662, 663 }); //Fletchling
+            families.Add(new int[] { 664, 665, 666 }); //Scatterbug
+            families.Add(new int[] { 667, 668 }); //Litleo
+            families.Add(new int[] { 669, 670, 671 }); //Flabébé
+            families.Add(new int[] { 672, 673 }); //Skiddo
+            families.Add(new int[] { 674, 675 }); //Pancham
+            families.Add(new int[] { 676 }); //Furfrou
+            families.Add(new int[] { 677, 678 }); //Espurr
+            families.Add(new int[] { 679, 680, 681 }); //Honedge
+            families.Add(new int[] { 682, 683 }); //Spritzee
+            families.Add(new int[] { 684, 685 }); //Swirlix
+            families.Add(new int[] { 686, 687 }); //Inkay
+            families.Add(new int[] { 688, 689 }); //Binacle
+            families.Add(new int[] { 690, 691 }); //Skrelp
+            families.Add(new int[] { 692, 693 }); //Clauncher
+            families.Add(new int[] { 694, 695 }); //Helioptile
+            families.Add(new int[] { 696, 697 }); //Tyrunt
+            families.Add(new int[] { 698, 699 }); //Amaura
+            families.Add(new int[] { 701 }); //Hawlucha
+            families.Add(new int[] { 702 }); //Dedenne
+            families.Add(new int[] { 703 }); //Carbink
+            families.Add(new int[] { 704, 705, 706 }); //Goomy
+            families.Add(new int[] { 707 }); //Klefki
+            families.Add(new int[] { 708, 709 }); //Phantump
+            families.Add(new int[] { 710, 711 }); //Pumpkaboo
+            families.Add(new int[] { 712, 713 }); //Bergmite
+            families.Add(new int[] { 714, 715 }); //Noibat
+            families.Add(new int[] { 716 }); //Xerneas
+            families.Add(new int[] { 717 }); //Yveltal
+            families.Add(new int[] { 718 }); //Zygarde
+            families.Add(new int[] { 719 }); //Diancie
+            families.Add(new int[] { 720 }); //Hoopa
+            families.Add(new int[] { 721 }); //Volcanion
             families.Add(new int[] { 722, 723, 724 }); //Rowlet
             families.Add(new int[] { 725, 726, 727 }); //Litten
             families.Add(new int[] { 728, 729, 730 }); //Popplio
             families.Add(new int[] { 731, 732, 733 }); //Pikipek
             families.Add(new int[] { 734, 735 }); //Yungoos
-
+            families.Add(new int[] { 736, 737, 738 }); //Grubbin
+            families.Add(new int[] { 739, 740 }); //Crabrawler
+            families.Add(new int[] { 741 }); //Oricorio
             families.Add(new int[] { 742, 743 }); //Cutiefly
-
+            families.Add(new int[] { 744, 745 }); //Rockruff
+            families.Add(new int[] { 746 }); //Wishiwashi
+            families.Add(new int[] { 747, 748 }); //Mareanie
+            families.Add(new int[] { 749, 750 }); //Mudbray
+            families.Add(new int[] { 751, 752 }); //Dewpider
+            families.Add(new int[] { 753, 754 }); //Fomantis
+            families.Add(new int[] { 755, 756 }); //Morelull
+            families.Add(new int[] { 757, 758 }); //Salandit
+            families.Add(new int[] { 759, 760 }); //Stufful
+            families.Add(new int[] { 761, 762, 763 }); //Bounsweet
+            families.Add(new int[] { 764 }); //Comfey
+            families.Add(new int[] { 765 }); //Oranguru
+            families.Add(new int[] { 766 }); //Passimian
+            families.Add(new int[] { 767, 768 }); //Wimpod
+            families.Add(new int[] { 769, 770 }); //Sandygast
+            families.Add(new int[] { 771 }); //Pyukumuku
+            families.Add(new int[] { 772, 773 }); //Type: Null
+            families.Add(new int[] { 774 }); //Minior
+            families.Add(new int[] { 775 }); //Komala
+            families.Add(new int[] { 776 }); //Turtonator
+            families.Add(new int[] { 777 }); //Togedemaru
+            families.Add(new int[] { 778 }); //Mimikyu
+            families.Add(new int[] { 779 }); //Bruxish
+            families.Add(new int[] { 780 }); //Drampa
+            families.Add(new int[] { 781 }); //Dhelmise
+            families.Add(new int[] { 782, 783, 784 }); //Jangmo-o
+            families.Add(new int[] { 785 }); //Tapu Koko
+            families.Add(new int[] { 786 }); //Tapu Lele
+            families.Add(new int[] { 787 }); //Tapu Bulu
+            families.Add(new int[] { 788 }); //Tapu Fini
+            families.Add(new int[] { 789, 790, 791, 792 }); //Cosmog
+            families.Add(new int[] { 793 }); //Nihilego
+            families.Add(new int[] { 794 }); //Buzzwole
+            families.Add(new int[] { 795 }); //Pheromosa
+            families.Add(new int[] { 796 }); //Xurkitree
+            families.Add(new int[] { 797 }); //Kartana
+            families.Add(new int[] { 798 }); //Celesteela
+            families.Add(new int[] { 799 }); //Guzzlord
+            families.Add(new int[] { 800 }); //Necrozma
+            families.Add(new int[] { 801 }); //Magearna
+            families.Add(new int[] { 802 }); //Marshadow
+            families.Add(new int[] { 803, 804 }); //Poipole
+            families.Add(new int[] { 805 }); //Stakataka
+            families.Add(new int[] { 806 }); //Blacephalon
+            families.Add(new int[] { 807 }); //Zeraora
+            families.Add(new int[] { 808, 809 }); //Meltan
         }
     }
 }
