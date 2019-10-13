@@ -11968,64 +11968,58 @@
     <Content Include="Resources\img\pt\25f.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\026.png">
+    <Content Include="Resources\img\pt\26m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\026m.png">
+    <Content Include="Resources\img\pt\35.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\035.png">
+    <Content Include="Resources\img\pt\38.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\038.png">
+    <Content Include="Resources\img\pt\41m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\041m.png">
+    <Content Include="Resources\img\pt\45m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\045.png">
+    <Content Include="Resources\img\pt\54.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\054.png">
+    <Content Include="Resources\img\pt\55.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\055.png">
+    <Content Include="Resources\img\pt\59.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\059.png">
+    <Content Include="Resources\img\pt\62.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\062.png">
+    <Content Include="Resources\img\pt\68.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\068.png">
+    <Content Include="Resources\img\pt\73.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\073.png">
+    <Content Include="Resources\img\pt\76.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\076.png">
+    <Content Include="Resources\img\pt\78.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\078.png">
+    <Content Include="Resources\img\pt\80.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\080.png">
+    <Content Include="Resources\img\pt\83.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\083.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\pt\094.png">
+    <Content Include="Resources\img\pt\94.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\101.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\110.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\pt\118.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\118m.png">
@@ -12040,7 +12034,7 @@
     <Content Include="Resources\img\pt\123.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\130.png">
+    <Content Include="Resources\img\pt\130m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\130f.png">
@@ -12079,7 +12073,7 @@
     <Content Include="Resources\img\pt\184.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\185.png">
+    <Content Include="Resources\img\pt\185m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\189.png">
@@ -12091,94 +12085,94 @@
     <Content Include="Resources\img\pt\196.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201a.png">
+    <Content Include="Resources\img\pt\201.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201aa.png">
+    <Content Include="Resources\img\pt\201-26.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201ab.png">
+    <Content Include="Resources\img\pt\201-27.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201b.png">
+    <Content Include="Resources\img\pt\201-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201c.png">
+    <Content Include="Resources\img\pt\201-2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201d.png">
+    <Content Include="Resources\img\pt\201-3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201e.png">
+    <Content Include="Resources\img\pt\201-4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201f.png">
+    <Content Include="Resources\img\pt\201-5.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201g.png">
+    <Content Include="Resources\img\pt\201-6.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201h.png">
+    <Content Include="Resources\img\pt\201-7.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201i.png">
+    <Content Include="Resources\img\pt\201-8.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201j.png">
+    <Content Include="Resources\img\pt\201-9.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201k.png">
+    <Content Include="Resources\img\pt\201-10.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201l.png">
+    <Content Include="Resources\img\pt\201-11.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201m.png">
+    <Content Include="Resources\img\pt\201-12.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201n.png">
+    <Content Include="Resources\img\pt\201-13.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201p.png">
+    <Content Include="Resources\img\pt\201-15.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201q.png">
+    <Content Include="Resources\img\pt\201-16.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201r.png">
+    <Content Include="Resources\img\pt\201-17.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201s.png">
+    <Content Include="Resources\img\pt\201-18.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201t.png">
+    <Content Include="Resources\img\pt\201-19.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201u.png">
+    <Content Include="Resources\img\pt\201-20.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201v.png">
+    <Content Include="Resources\img\pt\201-21.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201w.png">
+    <Content Include="Resources\img\pt\201-22.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201x.png">
+    <Content Include="Resources\img\pt\201-23.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201y.png">
+    <Content Include="Resources\img\pt\201-24.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\201z.png">
+    <Content Include="Resources\img\pt\201-25.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\203f.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\207.png">
+    <Content Include="Resources\img\pt\207m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\208.png">
+    <Content Include="Resources\img\pt\208m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\213.png">
@@ -12217,10 +12211,7 @@
     <Content Include="Resources\img\pt\248.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\267.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\pt\269.png">
+    <Content Include="Resources\img\pt\267m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\269m.png">
@@ -12283,7 +12274,7 @@
     <Content Include="Resources\img\pt\394.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\397.png">
+    <Content Include="Resources\img\pt\397m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\397f.png">
@@ -12325,10 +12316,10 @@
     <Content Include="Resources\img\pt\417f.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\419.png">
+    <Content Include="Resources\img\pt\419m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\pt\423w.png">
+    <Content Include="Resources\img\pt\423.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\425.png">
@@ -12389,9 +12380,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\472.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\pt\473.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\pt\473m.png">
