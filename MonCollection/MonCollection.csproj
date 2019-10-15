@@ -3955,37 +3955,37 @@
     <Content Include="Resources\img\ball\9.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\013.gif">
+    <Content Include="Resources\img\bw\13.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\016.gif">
+    <Content Include="Resources\img\bw\16.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\017.gif">
+    <Content Include="Resources\img\bw\17.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\018.gif">
+    <Content Include="Resources\img\bw\18.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\21.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\022.gif">
+    <Content Include="Resources\img\bw\22.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\024.gif">
+    <Content Include="Resources\img\bw\24.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\027.gif">
+    <Content Include="Resources\img\bw\27.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\028.gif">
+    <Content Include="Resources\img\bw\28.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\035.gif">
+    <Content Include="Resources\img\bw\35.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\037.gif">
+    <Content Include="Resources\img\bw\37.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\41f.gif">
@@ -3994,10 +3994,10 @@
     <Content Include="Resources\img\bw\41m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\042f.gif">
+    <Content Include="Resources\img\bw\42f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\043.gif">
+    <Content Include="Resources\img\bw\43.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\44m.gif">
@@ -4006,31 +4006,31 @@
     <Content Include="Resources\img\bw\44f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\046.gif">
+    <Content Include="Resources\img\bw\46.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\047.gif">
+    <Content Include="Resources\img\bw\47.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\048.gif">
+    <Content Include="Resources\img\bw\48.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\050.gif">
+    <Content Include="Resources\img\bw\50.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\055.gif">
+    <Content Include="Resources\img\bw\55.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\056.gif">
+    <Content Include="Resources\img\bw\56.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\057.gif">
+    <Content Include="Resources\img\bw\57.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\059.gif">
+    <Content Include="Resources\img\bw\59.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\062.gif">
+    <Content Include="Resources\img\bw\62.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\63.gif">
@@ -4042,58 +4042,58 @@
     <Content Include="Resources\img\bw\67.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\068.gif">
+    <Content Include="Resources\img\bw\68.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\069.gif">
+    <Content Include="Resources\img\bw\69.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\073.gif">
+    <Content Include="Resources\img\bw\73.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\074.gif">
+    <Content Include="Resources\img\bw\74.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\075.gif">
+    <Content Include="Resources\img\bw\75.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\076.gif">
+    <Content Include="Resources\img\bw\76.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\077.gif">
+    <Content Include="Resources\img\bw\77.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\078.gif">
+    <Content Include="Resources\img\bw\78.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\079.gif">
+    <Content Include="Resources\img\bw\79.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\080.gif">
+    <Content Include="Resources\img\bw\80.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\81.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\083.gif">
+    <Content Include="Resources\img\bw\83.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\084f.gif">
+    <Content Include="Resources\img\bw\84f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\090.gif">
+    <Content Include="Resources\img\bw\90.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\092.gif">
+    <Content Include="Resources\img\bw\92.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\93.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\094.gif">
+    <Content Include="Resources\img\bw\94.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\095.gif">
+    <Content Include="Resources\img\bw\95.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\1.gif">
@@ -4324,40 +4324,40 @@
     <Content Include="Resources\img\bw\201-5.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201a.gif">
+    <Content Include="Resources\img\bw\201.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201b.gif">
+    <Content Include="Resources\img\bw\201-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201c.gif">
+    <Content Include="Resources\img\bw\201-2.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201d.gif">
+    <Content Include="Resources\img\bw\201-3.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201e.gif">
+    <Content Include="Resources\img\bw\201-4.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201g.gif">
+    <Content Include="Resources\img\bw\201-6.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201h.gif">
+    <Content Include="Resources\img\bw\201-7.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201j.gif">
+    <Content Include="Resources\img\bw\201-9.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201p.gif">
+    <Content Include="Resources\img\bw\201-15.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201r.gif">
+    <Content Include="Resources\img\bw\201-17.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201t.gif">
+    <Content Include="Resources\img\bw\201-19.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\201u.gif">
+    <Content Include="Resources\img\bw\201-20.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\204.gif">
@@ -4369,13 +4369,13 @@
     <Content Include="Resources\img\bw\206.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\207.gif">
+    <Content Include="Resources\img\bw\207m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\207f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\208.gif">
+    <Content Include="Resources\img\bw\208m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\20f.gif">
@@ -4543,7 +4543,7 @@
     <Content Include="Resources\img\bw\314.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\315.gif">
+    <Content Include="Resources\img\bw\315m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\316.gif">
@@ -4591,7 +4591,7 @@
     <Content Include="Resources\img\bw\349.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\350.gif">
+    <Content Include="Resources\img\bw\350m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\351.gif">
@@ -4660,10 +4660,10 @@
     <Content Include="Resources\img\bw\396m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\397.gif">
+    <Content Include="Resources\img\bw\397m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\399.gif">
+    <Content Include="Resources\img\bw\399m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\399f.gif">
@@ -4708,13 +4708,13 @@
     <Content Include="Resources\img\bw\416.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\417.gif">
+    <Content Include="Resources\img\bw\417m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\418.gif">
+    <Content Include="Resources\img\bw\418m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\419.gif">
+    <Content Include="Resources\img\bw\419m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\421.gif">
@@ -4723,10 +4723,7 @@
     <Content Include="Resources\img\bw\422.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\422w.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\bw\423w.gif">
+    <Content Include="Resources\img\bw\423.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\424f.gif">
@@ -4771,7 +4768,7 @@
     <Content Include="Resources\img\bw\448.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\45.gif">
+    <Content Include="Resources\img\bw\45m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\451.gif">
@@ -4780,10 +4777,10 @@
     <Content Include="Resources\img\bw\452.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\453.gif">
+    <Content Include="Resources\img\bw\453m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\456.gif">
+    <Content Include="Resources\img\bw\456m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\458.gif">
@@ -4801,10 +4798,10 @@
     <Content Include="Resources\img\bw\463.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\464.gif">
+    <Content Include="Resources\img\bw\464m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\465.gif">
+    <Content Include="Resources\img\bw\465m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\466.gif">
@@ -4996,7 +4993,7 @@
     <Content Include="Resources\img\bw\550.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\550b.gif">
+    <Content Include="Resources\img\bw\550-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\551.gif">
@@ -5080,7 +5077,7 @@
     <Content Include="Resources\img\bw\585.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\bw\585s.gif">
+    <Content Include="Resources\img\bw\585-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\587.gif">
@@ -5210,6 +5207,33 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\97m.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\72.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\208f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\224f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\315f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\350f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\417f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\449f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\456f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\bw\465f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\bw\rare\130m.gif">
@@ -16010,7 +16034,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\img\swsh\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PKHex\PKHeX.Core\PKHeX.Core.csproj">
       <Project>{e2168dc0-db75-45ab-b625-eca675c0ade7}</Project>

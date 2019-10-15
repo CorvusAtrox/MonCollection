@@ -597,6 +597,11 @@ namespace MonCollection
                         species = species.Substring(0, species.Length - 1);
                     ext = ".png";
                     break;
+                case GameVersion.SW:
+                case GameVersion.SH:
+                    game = "swsh";
+                    ext = ".gif";
+                    break;
             }
             if(!shiny)
                 return RetrieveImage("Resources/img/"+game+"/"+species+ext);
