@@ -596,6 +596,7 @@ namespace MonCollection
                     if (genDiff.IsMatch(species))
                         species = species.Substring(0, species.Length - 1);
                     ext = ".png";
+                    shiny = false;
                     break;
                 case GameVersion.SW:
                 case GameVersion.SH:

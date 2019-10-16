@@ -11767,7 +11767,13 @@
     <Content Include="Resources\img\icons\579.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\lgpe\103.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\lgpe\133-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\lgpe\25-8.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\lgpe\27.png">
@@ -13069,6 +13075,9 @@
     <Content Include="Resources\img\smusum\105.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\smusum\151.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\smusum\155.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -13330,9 +13339,6 @@
     <Content Include="Resources\img\smusum\128.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\129.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\img\smusum\129m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -13423,16 +13429,16 @@
     <Content Include="Resources\img\smusum\181.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\185.gif">
+    <Content Include="Resources\img\smusum\185m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\185f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\186.gif">
+    <Content Include="Resources\img\smusum\186m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\190.gif">
+    <Content Include="Resources\img\smusum\190m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\190f.gif">
@@ -13498,7 +13504,7 @@
     <Content Include="Resources\img\smusum\223.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\224.gif">
+    <Content Include="Resources\img\smusum\224m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\227.gif">
@@ -13507,7 +13513,7 @@
     <Content Include="Resources\img\smusum\228.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\229.gif">
+    <Content Include="Resources\img\smusum\229m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\234.gif">
@@ -13777,7 +13783,7 @@
     <Content Include="Resources\img\smusum\455.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\smusum\456.gif">
+    <Content Include="Resources\img\smusum\456m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\smusum\458.gif">
@@ -14782,7 +14788,7 @@
     <Content Include="Resources\img\xyoras\165.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\166.gif">
+    <Content Include="Resources\img\xyoras\166m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\167.gif">
@@ -14842,7 +14848,7 @@
     <Content Include="Resources\img\xyoras\195f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\198.gif">
+    <Content Include="Resources\img\xyoras\198m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\19f.gif">
@@ -14953,7 +14959,7 @@
     <Content Include="Resources\img\xyoras\223.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\224.gif">
+    <Content Include="Resources\img\xyoras\224m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\225.gif">
@@ -15041,9 +15047,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\268.gif">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\img\xyoras\269.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\269f.gif">
@@ -15157,10 +15160,10 @@
     <Content Include="Resources\img\xyoras\315f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\316.gif">
+    <Content Include="Resources\img\xyoras\316m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\317.gif">
+    <Content Include="Resources\img\xyoras\317m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\318.gif">
@@ -15169,7 +15172,7 @@
     <Content Include="Resources\img\xyoras\320.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\322.gif">
+    <Content Include="Resources\img\xyoras\322m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\325.gif">
@@ -15223,7 +15226,7 @@
     <Content Include="Resources\img\xyoras\349.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\350.gif">
+    <Content Include="Resources\img\xyoras\350m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\351.gif">
@@ -15313,7 +15316,7 @@
     <Content Include="Resources\img\xyoras\397m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\398.gif">
+    <Content Include="Resources\img\xyoras\398m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\399f.gif">
@@ -15331,10 +15334,10 @@
     <Content Include="Resources\img\xyoras\400f.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\403.gif">
+    <Content Include="Resources\img\xyoras\403m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\404.gif">
+    <Content Include="Resources\img\xyoras\404m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\404f.gif">
@@ -15358,13 +15361,13 @@
     <Content Include="Resources\img\xyoras\414.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\415.gif">
+    <Content Include="Resources\img\xyoras\415m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\417.gif">
+    <Content Include="Resources\img\xyoras\417m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\419.gif">
+    <Content Include="Resources\img\xyoras\419m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\425.gif">
@@ -15430,10 +15433,10 @@
     <Content Include="Resources\img\xyoras\455.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\456.gif">
+    <Content Include="Resources\img\xyoras\456m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\img\xyoras\457.gif">
+    <Content Include="Resources\img\xyoras\457m.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\458.gif">
@@ -15893,6 +15896,48 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\721.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\25-2.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\150.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\166f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\198f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\224f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\322f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\403f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\417f.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\504.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\507.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\532.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\575.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\666-18.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\xyoras\711-1.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\xyoras\rare\243.gif">
