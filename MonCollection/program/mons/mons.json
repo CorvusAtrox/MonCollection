@@ -30,6 +30,36 @@
     "PKRS_Cured": false
   },
   {
+    "Nickname": "Buchenwald",
+    "Species": 16,
+    "Level": 3,
+    "Gender": 1,
+    "Moves": [
+      33,
+      432,
+      332,
+      0
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 51,
+    "Nature": 11,
+    "HP": 16,
+    "ATK": 8,
+    "DEF": 7,
+    "SPA": 7,
+    "SPD": 8,
+    "SPE": 8,
+    "Gen": 7,
+    "ID": 40438,
+    "OT": "JnaBrta",
+    "Ball": 4,
+    "Language": 5,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false
+  },
+  {
     "Nickname": "Cpt. Kalas",
     "Species": 22,
     "Level": 26,
@@ -56430,36 +56460,6 @@
     "PKRS_Cured": false
   },
   {
-    "Nickname": "Buchenwald",
-    "Species": 16,
-    "Level": 3,
-    "Gender": 1,
-    "Moves": [
-      33,
-      432,
-      332,
-      0
-    ],
-    "Game": "HOME [CorvusOssi]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 51,
-    "Nature": 11,
-    "HP": 16,
-    "ATK": 8,
-    "DEF": 7,
-    "SPA": 7,
-    "SPD": 8,
-    "SPE": 8,
-    "Gen": 7,
-    "ID": 40438,
-    "OT": "JnaBrta",
-    "Ball": 4,
-    "Language": 5,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false
-  },
-  {
     "Nickname": "PIDGEOTTO",
     "Species": 17,
     "Level": 24,
@@ -82652,7 +82652,7 @@
   {
     "Nickname": "Saltshaker",
     "Species": 38,
-    "Level": 20,
+    "Level": 23,
     "Gender": 0,
     "Moves": [
       0,
