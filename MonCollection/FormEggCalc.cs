@@ -107,6 +107,8 @@ namespace MonCollection
                 else if (mon.Gender == 1)
                     spForm += "f";
             }
+            if (mon.Species == 25 && mon.Gen == 6)
+                spForm += "c";
             monIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
 
             FillPKXBoxes(0);
@@ -136,6 +138,8 @@ namespace MonCollection
                     else if (mon.Gender == 1)
                         spForm += "f";
                 }
+                if (mon.Species == 25 && mon.Gen == 6)
+                    spForm += "c";
                 PKXBOXES[i].Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }

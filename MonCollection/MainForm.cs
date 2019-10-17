@@ -425,6 +425,8 @@ namespace MonCollection
                 else if(pk.Gender == 1)
                     spForm += "f";
             }
+            if (pk.Species == 25 && pk.Gen == 6)
+                spForm += "c";
             pictureBoxIcon.Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
 
             if (minorGenderDiff.Contains(pk.Species))
@@ -696,7 +698,7 @@ namespace MonCollection
             {
                 MonData mon = PkmData[i + begin];
                 string spForm = mon.Species.ToString();
-                if(mon.AltForm > 0 && !noDiff.Contains(mon.Species))
+                if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                     spForm += "-" + mon.AltForm.ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
@@ -705,6 +707,8 @@ namespace MonCollection
                     else if (mon.Gender == 1)
                         spForm += "f";
                 }
+                if (mon.Species == 25 && mon.Gen == 6)
+                    spForm += "c";
                 PKXBOXES[i].Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
                 PKXBOXES[i].Tag = i + begin;
             }
