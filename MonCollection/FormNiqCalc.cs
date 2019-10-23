@@ -259,8 +259,8 @@ namespace MonCollection
                     query2f = query2.Where(pk => family.Contains(pk.Species));
 
                     labelNewMove.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
-                                                    , query1.Count(), query1f.Count(), query1a.Count(),
-                                                      query2.Count(), query2f.Count(), query2a.Count());
+                                                    , query1.Count()+1, query1f.Count()+1, query1a.Count()+1,
+                                                      query2.Count()+1, query2f.Count()+1, query2a.Count()+1);
                 }
                 else
                 {
