@@ -311,7 +311,7 @@ namespace MonCollection
         private void PopulateFields(MonData pk)
         {
             legal = new LegalityAnalysis(MonDataToPKM(pk),ver.Personal);
-            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn);
+            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn());
             foreach(ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);

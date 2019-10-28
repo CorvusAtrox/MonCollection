@@ -8,16 +8,15 @@ namespace MonCollection
 {
     class MonFamily
     {
-
-        List<int[]> families;
+        private readonly List<int[]> families;
 
         public MonFamily()
         {
             families = new List<int[]>();
-            addMons();
+            AddMons();
         }
 
-        public int[] getFamily(int species)
+        public int[] GetFamily(int species)
         {
             foreach(int[] fam in families)
             {
@@ -27,7 +26,7 @@ namespace MonCollection
             return new int[] { species };
         }
 
-        private void addMons()
+        private void AddMons()
         {
             families.Add(new int[] { 1, 2, 3 }); //Bulbasaur
             families.Add(new int[] { 4, 5, 6 }); //Charmander
@@ -449,6 +448,9 @@ namespace MonCollection
             families.Add(new int[] { 806 }); //Blacephalon
             families.Add(new int[] { 807 }); //Zeraora
             families.Add(new int[] { 808, 809 }); //Meltan
+            families.Add(new int[] { 810, 811, 812 }); //Grookey
+            families.Add(new int[] { 813, 814, 815 }); //Scorbunny
+            families.Add(new int[] { 816, 817, 818 }); //Sobble
         }
     }
 }

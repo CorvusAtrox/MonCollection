@@ -105,7 +105,7 @@ namespace MonCollection
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
 
             monFamily = new MonFamily();
-            int[] family = monFamily.getFamily(mon.Species);
+            int[] family = monFamily.GetFamily(mon.Species);
 
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
             labelGame.Text = String.Format("Game: {0}",game);
@@ -119,7 +119,7 @@ namespace MonCollection
 
             labelSpVal.Text = String.Format("({0} {1}) ({2} {3})",query1f.Count(), query1.Count(), query2f.Count(), query2.Count());
 
-            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn);
+            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn());
             foreach (ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
@@ -246,7 +246,7 @@ namespace MonCollection
 
                 MonData mon = PkmDB[ind];
 
-                int[] family = monFamily.getFamily(mon.Species);
+                int[] family = monFamily.GetFamily(mon.Species);
 
                 if ((int)comboBoxMoveNew.SelectedValue > 0)
                 {
