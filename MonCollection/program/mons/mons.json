@@ -150,7 +150,7 @@
     "PKRS_Cured": false
   },
   {
-    "Nickname": "VULPIX",
+    "Nickname": "Vulpix",
     "Species": 37,
     "Level": 18,
     "Gender": 1,
@@ -728,7 +728,7 @@
       240,
       163,
       44,
-      57
+      127
     ],
     "Game": "HOME [CorvusOssi]",
     "AltForm": 0,
@@ -1106,6 +1106,36 @@
     "OT": "C.D.N.",
     "Ball": 1,
     "Language": 2,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false
+  },
+  {
+    "Nickname": "Celebi",
+    "Species": 251,
+    "Level": 14,
+    "Gender": 2,
+    "Moves": [
+      105,
+      215,
+      219,
+      610
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 30,
+    "Nature": 5,
+    "HP": 53,
+    "ATK": 33,
+    "DEF": 40,
+    "SPA": 37,
+    "SPD": 35,
+    "SPE": 33,
+    "Gen": 7,
+    "ID": 35038,
+    "OT": "Sagi",
+    "Ball": 11,
+    "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": false
   },
@@ -1620,7 +1650,7 @@
     "PKRS_Cured": true
   },
   {
-    "Nickname": "SALAMENCE",
+    "Nickname": "Salamence",
     "Species": 373,
     "Level": 77,
     "Gender": 0,
@@ -2247,6 +2277,36 @@
     "Ball": 17,
     "Language": 1,
     "PKRS_Infected": false,
+    "PKRS_Cured": false
+  },
+  {
+    "Nickname": "Vivillon",
+    "Species": 666,
+    "Level": 13,
+    "Gender": 0,
+    "Moves": [
+      16,
+      113,
+      522,
+      607
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 18,
+    "Shiny": false,
+    "Ability": 14,
+    "Nature": 10,
+    "HP": 45,
+    "ATK": 19,
+    "DEF": 20,
+    "SPA": 28,
+    "SPD": 19,
+    "SPE": 31,
+    "Gen": 7,
+    "ID": 108,
+    "OT": "GTS",
+    "Ball": 16,
+    "Language": 5,
+    "PKRS_Infected": true,
     "PKRS_Cured": false
   },
   {
@@ -77340,36 +77400,6 @@
     "PKRS_Cured": false
   },
   {
-    "Nickname": "Vivillon",
-    "Species": 666,
-    "Level": 13,
-    "Gender": 0,
-    "Moves": [
-      16,
-      113,
-      522,
-      607
-    ],
-    "Game": "Y [Fukurou]",
-    "AltForm": 18,
-    "Shiny": false,
-    "Ability": 14,
-    "Nature": 10,
-    "HP": 45,
-    "ATK": 19,
-    "DEF": 20,
-    "SPA": 28,
-    "SPD": 19,
-    "SPE": 31,
-    "Gen": 6,
-    "ID": 108,
-    "OT": "GTS",
-    "Ball": 16,
-    "Language": 5,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false
-  },
-  {
     "Nickname": "Regina",
     "Species": 667,
     "Level": 5,
@@ -90837,36 +90867,6 @@
     "Ball": 2,
     "Language": 5,
     "PKRS_Infected": false,
-    "PKRS_Cured": false
-  },
-  {
-    "Nickname": "Celebi",
-    "Species": 251,
-    "Level": 14,
-    "Gender": 2,
-    "Moves": [
-      105,
-      215,
-      219,
-      610
-    ],
-    "Game": "Bank [corvusbrachy]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 30,
-    "Nature": 5,
-    "HP": 53,
-    "ATK": 33,
-    "DEF": 40,
-    "SPA": 37,
-    "SPD": 35,
-    "SPE": 33,
-    "Gen": 7,
-    "ID": 35038,
-    "OT": "Sagi",
-    "Ball": 11,
-    "Language": 5,
-    "PKRS_Infected": true,
     "PKRS_Cured": false
   },
   {
