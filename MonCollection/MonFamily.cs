@@ -49,7 +49,7 @@ namespace MonCollection
             families.Add(new int[] { 46, 47 }); //Paras
             families.Add(new int[] { 48, 49 }); //Venonat
             families.Add(new int[] { 50, 51 }); //Diglett
-            families.Add(new int[] { 52, 53 }); //Meowth
+            families.Add(new int[] { 52, 53, 845 }); //Meowth
             families.Add(new int[] { 54, 55 }); //Psyduck
             families.Add(new int[] { 56, 57 }); //Mankey
             families.Add(new int[] { 58, 59 }); //Growlithe
@@ -62,7 +62,7 @@ namespace MonCollection
             families.Add(new int[] { 77, 78 }); //Ponyta
             families.Add(new int[] { 79, 80, 199 }); //Slowpoke
             families.Add(new int[] { 81, 82, 462 }); //Magnemite
-            families.Add(new int[] { 83 }); //Farfetch'd
+            families.Add(new int[] { 83, 851 }); //Farfetch'd
             families.Add(new int[] { 84, 85 }); //Doduo
             families.Add(new int[] { 86, 87 }); //Ponyta
             families.Add(new int[] { 88, 89 }); //Grimer
@@ -84,7 +84,7 @@ namespace MonCollection
             families.Add(new int[] { 116, 117, 230 }); //Horsea
             families.Add(new int[] { 118, 119 }); //Goldeen
             families.Add(new int[] { 120, 121 }); //Staryu
-            families.Add(new int[] { 439, 122 }); //Mime Jr.
+            families.Add(new int[] { 439, 122, 877 }); //Mime Jr.
             families.Add(new int[] { 123, 212 }); //Scyther
             families.Add(new int[] { 238, 124 }); //Smoochum
             families.Add(new int[] { 239, 125, 466 }); //Elekid
@@ -140,7 +140,7 @@ namespace MonCollection
             families.Add(new int[] { 216, 217 }); //Teddiursa
             families.Add(new int[] { 218, 219 }); //Slugma
             families.Add(new int[] { 220, 221, 473 }); //Swinub
-            families.Add(new int[] { 222 }); //Corsola
+            families.Add(new int[] { 222, 852 }); //Corsola
             families.Add(new int[] { 223, 224 }); //Remoraid
             families.Add(new int[] { 225 }); //Delibird
             families.Add(new int[] { 458, 226 }); //Mantyke
@@ -160,7 +160,7 @@ namespace MonCollection
             families.Add(new int[] { 252, 253, 254 }); //Treecko
             families.Add(new int[] { 255, 256, 257 }); //Torchic
             families.Add(new int[] { 258, 259, 260 }); //Mudkip
-            families.Add(new int[] { 261, 262 }); //Poochyena
+            families.Add(new int[] { 261, 262, 829 }); //Poochyena
             families.Add(new int[] { 263, 264 }); //Zigzagoon
             families.Add(new int[] { 265, 266, 267, 268, 269 }); //Wurmple
             families.Add(new int[] { 270, 271, 272 }); //Lotad
@@ -306,7 +306,7 @@ namespace MonCollection
             families.Add(new int[] { 557, 558 }); //Dwebble
             families.Add(new int[] { 559, 550 }); //Scraggy
             families.Add(new int[] { 561 }); //Sigilyph
-            families.Add(new int[] { 562, 563 }); //Yamask
+            families.Add(new int[] { 562, 563, 866 }); //Yamask
             families.Add(new int[] { 564, 565 }); //Tirtouga
             families.Add(new int[] { 566, 567 }); //Archen
             families.Add(new int[] { 568, 569 }); //Trubbish
@@ -451,6 +451,43 @@ namespace MonCollection
             families.Add(new int[] { 810, 811, 812 }); //Grookey
             families.Add(new int[] { 813, 814, 815 }); //Scorbunny
             families.Add(new int[] { 816, 817, 818 }); //Sobble
+            families.Add(new int[] { 819, 820, 821 }); //Blipbug
+            families.Add(new int[] { 822, 823, 824 }); //Rookidee
+            families.Add(new int[] { 825, 826 }); //Skwovet
+            families.Add(new int[] { 827, 828 }); //Nickit
+            families.Add(new int[] { 830, 831 }); //Wooloo
+            families.Add(new int[] { 832, 833 }); //Chewtle
+            families.Add(new int[] { 834, 835 }); //Yamper
+            families.Add(new int[] { 836, 837 }); //Gossifleur
+            families.Add(new int[] { 838, 839 }); //Sizzlipede
+            families.Add(new int[] { 840, 841, 842 }); //Rolycoly
+            families.Add(new int[] { 843, 844 }); //Arrokuda
+            families.Add(new int[] { 846, 847 }); //Milcery
+            families.Add(new int[] { 848, 849, 850 }); //Applin
+            families.Add(new int[] { 853, 854, 855 }); //Impidimp
+            families.Add(new int[] { 856, 857, 858 }); //Hattena
+            families.Add(new int[] { 859, 860 }); //Cuphant
+            families.Add(new int[] { 861 }); //Cramorant
+            families.Add(new int[] { 862, 863 }); //Toxel
+            families.Add(new int[] { 864, 865 }); //Silicobra
+            families.Add(new int[] { 867, 868 }); //Sinistea
+            families.Add(new int[] { 869 }); //Indeedee
+            families.Add(new int[] { 870 }); //Morpeko
+            families.Add(new int[] { 871 }); //Falinks
+            families.Add(new int[] { 872, 873 }); //Snom
+            families.Add(new int[] { 874, 875 }); //Clobbopus
+            families.Add(new int[] { 876 }); //Pincurchin
+            families.Add(new int[] { 878 }); //Stonjourner
+            families.Add(new int[] { 879 }); //Eiscue
+            families.Add(new int[] { 880 }); //Duraludon
+            families.Add(new int[] { 881 }); //Dracozolt
+            families.Add(new int[] { 882 }); //Arctozolt
+            families.Add(new int[] { 883 }); //Dracovish
+            families.Add(new int[] { 884 }); //Arctovish
+            families.Add(new int[] { 885, 886, 887 }); //Dreepy
+            families.Add(new int[] { 888 }); //Zacian
+            families.Add(new int[] { 889 }); //Zamazenta
+            families.Add(new int[] { 890 }); //Eternatus
         }
     }
 }
