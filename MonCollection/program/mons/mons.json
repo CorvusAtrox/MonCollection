@@ -1230,6 +1230,36 @@
     "PKRS_Cured": false
   },
   {
+    "Nickname": "PIT POOCH",
+    "Species": 262,
+    "Level": 45,
+    "Gender": 1,
+    "Moves": [
+      91,
+      215,
+      305,
+      44
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 22,
+    "Nature": 9,
+    "HP": 136,
+    "ATK": 103,
+    "DEF": 92,
+    "SPA": 77,
+    "SPD": 62,
+    "SPE": 76,
+    "Gen": 7,
+    "ID": 26257,
+    "OT": "HERR J",
+    "Ball": 4,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false
+  },
+  {
     "Nickname": "SNIFFY",
     "Species": 263,
     "Level": 18,
@@ -64017,36 +64047,6 @@
     "Ball": 4,
     "Language": 2,
     "PKRS_Infected": true,
-    "PKRS_Cured": false
-  },
-  {
-    "Nickname": "PIT POOCH",
-    "Species": 262,
-    "Level": 45,
-    "Gender": 1,
-    "Moves": [
-      91,
-      215,
-      305,
-      44
-    ],
-    "Game": "HOME [CorvusOssi]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 22,
-    "Nature": 9,
-    "HP": 136,
-    "ATK": 103,
-    "DEF": 92,
-    "SPA": 77,
-    "SPD": 62,
-    "SPE": 76,
-    "Gen": 7,
-    "ID": 26257,
-    "OT": "HERR J",
-    "Ball": 4,
-    "Language": 2,
-    "PKRS_Infected": false,
     "PKRS_Cured": false
   },
   {

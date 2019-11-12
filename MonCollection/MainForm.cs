@@ -151,6 +151,8 @@ namespace MonCollection
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
+            if (gv == GameVersion.Unknown)
+                gv = GameVersion.UM;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
             PKMConverter.Trainer = ver;
@@ -508,6 +510,11 @@ namespace MonCollection
             string ext = "";
             switch (version)
             {
+                case GameVersion.Unknown:
+                    game = "icons";
+                    ext = ".png";
+                    shiny = false; //Shiny not visible
+                    break;
                 case GameVersion.RD:
                 case GameVersion.GN:
                     game = "rb";
@@ -1026,7 +1033,10 @@ namespace MonCollection
 
         private bool GetGameMons(GameVersion version, int species)
         {
-            return monInGame[new Tuple<GameVersion, int>(version, species)];
+            if(version == GameVersion.Unknown)
+                return monInGame[new Tuple<GameVersion, int>(GameVersion.UM, species)];
+            else
+                return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
 
         private string GetTrainer(string identifier)
