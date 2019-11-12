@@ -144,7 +144,7 @@ namespace MonCollection
                                          275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369, 396,
                                          397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
-                                         457, 459, 460, 461, 464, 465, 473};
+                                         457, 459, 460, 461, 464, 465, 473, 133};
             noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
             languages = new string[]{ "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
         }
@@ -431,7 +431,7 @@ namespace MonCollection
 
             if (minorGenderDiff.Contains(pk.Species))
             {
-                if(pk.AltForm == 0 && pk.Gen >= 4)
+                if(pk.AltForm == 0 && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
                 {
                     if (pk.Gender == 0)
                         spForm += "m";
