@@ -430,6 +430,10 @@ namespace MonCollection
             if (pk.Species == 25 && pk.Gen == 6)
                 spForm += "c";
             pictureBoxIcon.Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
+            if (pictureBoxIcon.Image.Height > 56)
+                pictureBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            else
+                pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
 
             if (minorGenderDiff.Contains(pk.Species))
             {
@@ -717,6 +721,10 @@ namespace MonCollection
                 if (mon.Species == 25 && mon.Gen == 6)
                     spForm += "c";
                 PKXBOXES[i].Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
+                if (PKXBOXES[i].Image.Height > 56)
+                    PKXBOXES[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                else
+                    PKXBOXES[i].SizeMode = PictureBoxSizeMode.CenterImage;
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)

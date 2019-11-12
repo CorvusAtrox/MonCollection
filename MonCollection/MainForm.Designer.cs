@@ -245,7 +245,7 @@ namespace MonCollection
             this.pictureBoxIcon.Location = new System.Drawing.Point(1, 62);
             this.pictureBoxIcon.Name = "pictureBoxIcon";
             this.pictureBoxIcon.Size = new System.Drawing.Size(68, 56);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxIcon.TabIndex = 9;
             this.pictureBoxIcon.TabStop = false;
             // 
@@ -438,7 +438,7 @@ namespace MonCollection
             this.bpkx30.Location = new System.Drawing.Point(918, 296);
             this.bpkx30.Name = "bpkx30";
             this.bpkx30.Size = new System.Drawing.Size(68, 56);
-            this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx30.TabIndex = 90;
             this.bpkx30.TabStop = false;
             // 
@@ -460,7 +460,7 @@ namespace MonCollection
             this.bpkx1.Location = new System.Drawing.Point(583, 76);
             this.bpkx1.Name = "bpkx1";
             this.bpkx1.Size = new System.Drawing.Size(68, 56);
-            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx1.TabIndex = 61;
             this.bpkx1.TabStop = false;
             this.bpkx1.Tag = "";
@@ -472,7 +472,7 @@ namespace MonCollection
             this.bpkx29.Location = new System.Drawing.Point(851, 296);
             this.bpkx29.Name = "bpkx29";
             this.bpkx29.Size = new System.Drawing.Size(68, 56);
-            this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx29.TabIndex = 89;
             this.bpkx29.TabStop = false;
             // 
@@ -483,7 +483,7 @@ namespace MonCollection
             this.bpkx28.Location = new System.Drawing.Point(784, 296);
             this.bpkx28.Name = "bpkx28";
             this.bpkx28.Size = new System.Drawing.Size(68, 56);
-            this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx28.TabIndex = 88;
             this.bpkx28.TabStop = false;
             // 
@@ -494,7 +494,7 @@ namespace MonCollection
             this.bpkx27.Location = new System.Drawing.Point(717, 296);
             this.bpkx27.Name = "bpkx27";
             this.bpkx27.Size = new System.Drawing.Size(68, 56);
-            this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx27.TabIndex = 87;
             this.bpkx27.TabStop = false;
             // 
@@ -505,7 +505,7 @@ namespace MonCollection
             this.bpkx26.Location = new System.Drawing.Point(650, 296);
             this.bpkx26.Name = "bpkx26";
             this.bpkx26.Size = new System.Drawing.Size(68, 56);
-            this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx26.TabIndex = 86;
             this.bpkx26.TabStop = false;
             // 
@@ -516,7 +516,7 @@ namespace MonCollection
             this.bpkx25.Location = new System.Drawing.Point(583, 296);
             this.bpkx25.Name = "bpkx25";
             this.bpkx25.Size = new System.Drawing.Size(68, 56);
-            this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx25.TabIndex = 85;
             this.bpkx25.TabStop = false;
             // 
@@ -527,7 +527,7 @@ namespace MonCollection
             this.bpkx24.Location = new System.Drawing.Point(918, 241);
             this.bpkx24.Name = "bpkx24";
             this.bpkx24.Size = new System.Drawing.Size(68, 56);
-            this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx24.TabIndex = 84;
             this.bpkx24.TabStop = false;
             // 
@@ -538,7 +538,7 @@ namespace MonCollection
             this.bpkx23.Location = new System.Drawing.Point(851, 241);
             this.bpkx23.Name = "bpkx23";
             this.bpkx23.Size = new System.Drawing.Size(68, 56);
-            this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx23.TabIndex = 83;
             this.bpkx23.TabStop = false;
             // 
@@ -549,7 +549,7 @@ namespace MonCollection
             this.bpkx22.Location = new System.Drawing.Point(784, 241);
             this.bpkx22.Name = "bpkx22";
             this.bpkx22.Size = new System.Drawing.Size(68, 56);
-            this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx22.TabIndex = 82;
             this.bpkx22.TabStop = false;
             // 
@@ -560,7 +560,7 @@ namespace MonCollection
             this.bpkx21.Location = new System.Drawing.Point(717, 241);
             this.bpkx21.Name = "bpkx21";
             this.bpkx21.Size = new System.Drawing.Size(68, 56);
-            this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx21.TabIndex = 81;
             this.bpkx21.TabStop = false;
             // 
@@ -571,7 +571,7 @@ namespace MonCollection
             this.bpkx2.Location = new System.Drawing.Point(650, 76);
             this.bpkx2.Name = "bpkx2";
             this.bpkx2.Size = new System.Drawing.Size(68, 56);
-            this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx2.TabIndex = 62;
             this.bpkx2.TabStop = false;
             // 
@@ -582,7 +582,7 @@ namespace MonCollection
             this.bpkx20.Location = new System.Drawing.Point(650, 241);
             this.bpkx20.Name = "bpkx20";
             this.bpkx20.Size = new System.Drawing.Size(68, 56);
-            this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx20.TabIndex = 80;
             this.bpkx20.TabStop = false;
             // 
@@ -593,7 +593,7 @@ namespace MonCollection
             this.bpkx3.Location = new System.Drawing.Point(717, 76);
             this.bpkx3.Name = "bpkx3";
             this.bpkx3.Size = new System.Drawing.Size(68, 56);
-            this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx3.TabIndex = 63;
             this.bpkx3.TabStop = false;
             // 
@@ -604,7 +604,7 @@ namespace MonCollection
             this.bpkx4.Location = new System.Drawing.Point(784, 76);
             this.bpkx4.Name = "bpkx4";
             this.bpkx4.Size = new System.Drawing.Size(68, 56);
-            this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx4.TabIndex = 64;
             this.bpkx4.TabStop = false;
             // 
@@ -615,7 +615,7 @@ namespace MonCollection
             this.bpkx19.Location = new System.Drawing.Point(583, 241);
             this.bpkx19.Name = "bpkx19";
             this.bpkx19.Size = new System.Drawing.Size(68, 56);
-            this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx19.TabIndex = 79;
             this.bpkx19.TabStop = false;
             // 
@@ -626,7 +626,7 @@ namespace MonCollection
             this.bpkx5.Location = new System.Drawing.Point(851, 76);
             this.bpkx5.Name = "bpkx5";
             this.bpkx5.Size = new System.Drawing.Size(68, 56);
-            this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx5.TabIndex = 65;
             this.bpkx5.TabStop = false;
             // 
@@ -637,7 +637,7 @@ namespace MonCollection
             this.bpkx18.Location = new System.Drawing.Point(918, 186);
             this.bpkx18.Name = "bpkx18";
             this.bpkx18.Size = new System.Drawing.Size(68, 56);
-            this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx18.TabIndex = 78;
             this.bpkx18.TabStop = false;
             // 
@@ -648,7 +648,7 @@ namespace MonCollection
             this.bpkx6.Location = new System.Drawing.Point(918, 76);
             this.bpkx6.Name = "bpkx6";
             this.bpkx6.Size = new System.Drawing.Size(68, 56);
-            this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx6.TabIndex = 66;
             this.bpkx6.TabStop = false;
             // 
@@ -659,7 +659,7 @@ namespace MonCollection
             this.bpkx17.Location = new System.Drawing.Point(851, 186);
             this.bpkx17.Name = "bpkx17";
             this.bpkx17.Size = new System.Drawing.Size(68, 56);
-            this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx17.TabIndex = 77;
             this.bpkx17.TabStop = false;
             // 
@@ -670,7 +670,7 @@ namespace MonCollection
             this.bpkx7.Location = new System.Drawing.Point(583, 131);
             this.bpkx7.Name = "bpkx7";
             this.bpkx7.Size = new System.Drawing.Size(68, 56);
-            this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx7.TabIndex = 67;
             this.bpkx7.TabStop = false;
             // 
@@ -681,7 +681,7 @@ namespace MonCollection
             this.bpkx8.Location = new System.Drawing.Point(650, 131);
             this.bpkx8.Name = "bpkx8";
             this.bpkx8.Size = new System.Drawing.Size(68, 56);
-            this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx8.TabIndex = 68;
             this.bpkx8.TabStop = false;
             // 
@@ -692,7 +692,7 @@ namespace MonCollection
             this.bpkx16.Location = new System.Drawing.Point(784, 186);
             this.bpkx16.Name = "bpkx16";
             this.bpkx16.Size = new System.Drawing.Size(68, 56);
-            this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx16.TabIndex = 76;
             this.bpkx16.TabStop = false;
             // 
@@ -703,7 +703,7 @@ namespace MonCollection
             this.bpkx9.Location = new System.Drawing.Point(717, 131);
             this.bpkx9.Name = "bpkx9";
             this.bpkx9.Size = new System.Drawing.Size(68, 56);
-            this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx9.TabIndex = 69;
             this.bpkx9.TabStop = false;
             // 
@@ -714,7 +714,7 @@ namespace MonCollection
             this.bpkx15.Location = new System.Drawing.Point(717, 186);
             this.bpkx15.Name = "bpkx15";
             this.bpkx15.Size = new System.Drawing.Size(68, 56);
-            this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx15.TabIndex = 75;
             this.bpkx15.TabStop = false;
             // 
@@ -725,7 +725,7 @@ namespace MonCollection
             this.bpkx10.Location = new System.Drawing.Point(784, 131);
             this.bpkx10.Name = "bpkx10";
             this.bpkx10.Size = new System.Drawing.Size(68, 56);
-            this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx10.TabIndex = 70;
             this.bpkx10.TabStop = false;
             // 
@@ -736,7 +736,7 @@ namespace MonCollection
             this.bpkx14.Location = new System.Drawing.Point(650, 186);
             this.bpkx14.Name = "bpkx14";
             this.bpkx14.Size = new System.Drawing.Size(68, 56);
-            this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx14.TabIndex = 74;
             this.bpkx14.TabStop = false;
             // 
@@ -747,7 +747,7 @@ namespace MonCollection
             this.bpkx11.Location = new System.Drawing.Point(851, 131);
             this.bpkx11.Name = "bpkx11";
             this.bpkx11.Size = new System.Drawing.Size(68, 56);
-            this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx11.TabIndex = 71;
             this.bpkx11.TabStop = false;
             // 
@@ -758,7 +758,7 @@ namespace MonCollection
             this.bpkx12.Location = new System.Drawing.Point(918, 131);
             this.bpkx12.Name = "bpkx12";
             this.bpkx12.Size = new System.Drawing.Size(68, 56);
-            this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx12.TabIndex = 72;
             this.bpkx12.TabStop = false;
             // 
@@ -769,7 +769,7 @@ namespace MonCollection
             this.bpkx13.Location = new System.Drawing.Point(583, 186);
             this.bpkx13.Name = "bpkx13";
             this.bpkx13.Size = new System.Drawing.Size(68, 56);
-            this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bpkx13.TabIndex = 73;
             this.bpkx13.TabStop = false;
             // 
