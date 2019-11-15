@@ -15,6 +15,8 @@ namespace MonCollection
         public bool Shiny { get; set; }
         [DefaultValue(-1)]
         public int Ability { get; set; }
+        public int Boon { get; set; }
+        public int Bane { get; set; }
         public int Nature { get; set; }
         public int HP { get; set; }
         public int ATK { get; set; }

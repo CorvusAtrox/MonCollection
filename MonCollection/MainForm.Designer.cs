@@ -133,6 +133,8 @@ namespace MonCollection
             this.buttonMonBallTally = new System.Windows.Forms.Button();
             this.comboBoxPkrs = new System.Windows.Forms.ComboBox();
             this.buttonLevelTally = new System.Windows.Forms.Button();
+            this.comboBoxPlus = new System.Windows.Forms.ComboBox();
+            this.comboBoxMinus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1280,12 +1282,54 @@ namespace MonCollection
             this.buttonLevelTally.UseVisualStyleBackColor = true;
             this.buttonLevelTally.Click += new System.EventHandler(this.ButtonLevelTally_Click);
             // 
+            // comboBoxPlus
+            // 
+            this.comboBoxPlus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxPlus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxPlus.ForeColor = System.Drawing.Color.Red;
+            this.comboBoxPlus.FormattingEnabled = true;
+            this.comboBoxPlus.Items.AddRange(new object[] {
+            "",
+            "Atk",
+            "Def",
+            "SpA",
+            "SpD",
+            "Spd"});
+            this.comboBoxPlus.Location = new System.Drawing.Point(179, 142);
+            this.comboBoxPlus.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxPlus.Name = "comboBoxPlus";
+            this.comboBoxPlus.Size = new System.Drawing.Size(56, 21);
+            this.comboBoxPlus.TabIndex = 163;
+            // 
+            // comboBoxMinus
+            // 
+            this.comboBoxMinus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxMinus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMinus.ForeColor = System.Drawing.Color.Blue;
+            this.comboBoxMinus.FormattingEnabled = true;
+            this.comboBoxMinus.Items.AddRange(new object[] {
+            "",
+            "Atk",
+            "Def",
+            "SpA",
+            "SpD",
+            "Spd"});
+            this.comboBoxMinus.Location = new System.Drawing.Point(235, 142);
+            this.comboBoxMinus.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxMinus.Name = "comboBoxMinus";
+            this.comboBoxMinus.Size = new System.Drawing.Size(56, 21);
+            this.comboBoxMinus.TabIndex = 164;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1034, 491);
+            this.Controls.Add(this.comboBoxMinus);
+            this.Controls.Add(this.comboBoxPlus);
             this.Controls.Add(this.buttonLevelTally);
             this.Controls.Add(this.comboBoxPkrs);
             this.Controls.Add(this.buttonMonBallTally);
@@ -1531,6 +1575,8 @@ namespace MonCollection
         private ToolStripMenuItem gameToolStripMenuItem;
         private ComboBox comboBoxPkrs;
         private Button buttonLevelTally;
+        private ComboBox comboBoxPlus;
+        private ComboBox comboBoxMinus;
     }
 }
 

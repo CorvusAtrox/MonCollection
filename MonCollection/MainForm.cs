@@ -329,6 +329,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = false;
                     labelNature.Visible = false;
                     comboBoxNature.Visible = false;
+                    comboBoxPlus.Visible = false;
+                    comboBoxMinus.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = false;
@@ -341,6 +343,8 @@ namespace MonCollection
                     labelAbility.Visible = false;
                     comboBoxAbility.Visible = false;
                     labelNature.Visible = false;
+                    comboBoxPlus.Visible = false;
+                    comboBoxMinus.Visible = false;
                     comboBoxNature.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
@@ -357,6 +361,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
+                    comboBoxPlus.Visible = false;
+                    comboBoxMinus.Visible = false;
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
@@ -364,6 +370,20 @@ namespace MonCollection
                     break;
                 case 6:
                 case 7:
+                    labelGender.Visible = true;
+                    labelBall.Visible = true;
+                    comboBoxBalls.Visible = true;
+                    labelAbility.Visible = true;
+                    comboBoxAbility.Visible = true;
+                    labelNature.Visible = true;
+                    comboBoxNature.Visible = true;
+                    comboBoxPlus.Visible = false;
+                    comboBoxMinus.Visible = false;
+                    labelLanguage.Visible = true;
+                    comboBoxLanguage.Visible = true;
+                    comboBoxPkrs.Visible = true;
+                    buttonEggs.Visible = true;
+                    break;
                 case 8:
                     labelGender.Visible = true;
                     labelBall.Visible = true;
@@ -372,6 +392,8 @@ namespace MonCollection
                     comboBoxAbility.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
+                    comboBoxPlus.Visible = true;
+                    comboBoxMinus.Visible = true;
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
@@ -408,7 +430,24 @@ namespace MonCollection
             textBoxSpAtk.Text = pk.SPA.ToString();
             textBoxSpDef.Text = pk.SPD.ToString();
             textBoxSpeed.Text = pk.SPE.ToString();
-            SetStatText(pk.Nature,pk.Gen);
+            if(pk.Gen >= 3)
+            {
+                if(pk.Boon == 0 || pk.Bane == 0)
+                {
+                    pk.Boon = (pk.Nature / 5) + 1;
+                    pk.Bane = (pk.Nature % 5) + 1;
+                }
+
+            }
+            else
+            {
+                pk.Boon = 0;
+                pk.Bane = 0;
+            }
+            comboBoxPlus.SelectedIndex = pk.Boon;
+            comboBoxMinus.SelectedIndex = pk.Bane;
+                
+            SetStatText(pk.Boon,pk.Bane);
 
             textBoxOT.Text = pk.OT;
             textBoxID.Text = pk.ID.ToString();
@@ -1075,7 +1114,7 @@ namespace MonCollection
             results.Show();
         }
 
-        private void SetStatText(int nature, int gen)
+        private void SetStatText(int boon, int bane)
         {
 
             labelAttack.ForeColor = Color.Black;
@@ -1089,56 +1128,53 @@ namespace MonCollection
             textBoxSpDef.ForeColor = Color.Black;
             textBoxSpeed.ForeColor = Color.Black;
 
-            if (gen >= 3)
+            if (boon !=0 && bane != 0)
             {
-                int plus = (nature / 5);
-                int minus = nature % 5;
-
-                if (plus != minus)
+                if (boon != bane)
                 {
-                    switch (plus)
+                    switch (boon)
                     {
-                        case 0:
+                        case 1:
                             labelAttack.ForeColor = Color.Red;
                             textBoxAttack.ForeColor = Color.Red;
                             break;
-                        case 1:
+                        case 2:
                             labelDefense.ForeColor = Color.Red;
                             textBoxDefense.ForeColor = Color.Red;
                             break;
-                        case 2:
+                        case 3:
                             labelSpeed.ForeColor = Color.Red;
                             textBoxSpeed.ForeColor = Color.Red;
                             break;
-                        case 3:
+                        case 4:
                             labelSpAtk.ForeColor = Color.Red;
                             textBoxSpAtk.ForeColor = Color.Red;
                             break;
-                        case 4:
+                        case 5:
                             labelSpDef.ForeColor = Color.Red;
                             textBoxSpDef.ForeColor = Color.Red;
                             break;
                     }
 
-                    switch (minus)
+                    switch (bane)
                     {
-                        case 0:
+                        case 1:
                             labelAttack.ForeColor = Color.Blue;
                             textBoxAttack.ForeColor = Color.Blue;
                             break;
-                        case 1:
+                        case 2:
                             labelDefense.ForeColor = Color.Blue;
                             textBoxDefense.ForeColor = Color.Blue;
                             break;
-                        case 2:
+                        case 3:
                             labelSpeed.ForeColor = Color.Blue;
                             textBoxSpeed.ForeColor = Color.Blue;
                             break;
-                        case 3:
+                        case 4:
                             labelSpAtk.ForeColor = Color.Blue;
                             textBoxSpAtk.ForeColor = Color.Blue;
                             break;
-                        case 4:
+                        case 5:
                             labelSpDef.ForeColor = Color.Blue;
                             textBoxSpDef.ForeColor = Color.Blue;
                             break;
@@ -1146,25 +1182,25 @@ namespace MonCollection
                 }
                 else
                 {
-                    switch (plus)
+                    switch (boon)
                     {
-                        case 0:
+                        case 1:
                             labelAttack.ForeColor = Color.Purple;
                             textBoxAttack.ForeColor = Color.Purple;
                             break;
-                        case 1:
+                        case 2:
                             labelDefense.ForeColor = Color.Purple;
                             textBoxDefense.ForeColor = Color.Purple;
                             break;
-                        case 2:
+                        case 3:
                             labelSpeed.ForeColor = Color.Purple;
                             textBoxSpeed.ForeColor = Color.Purple;
                             break;
-                        case 3:
+                        case 4:
                             labelSpAtk.ForeColor = Color.Purple;
                             textBoxSpAtk.ForeColor = Color.Purple;
                             break;
-                        case 4:
+                        case 5:
                             labelSpDef.ForeColor = Color.Purple;
                             textBoxSpDef.ForeColor = Color.Purple;
                             break;
@@ -1219,6 +1255,8 @@ namespace MonCollection
             if(comboBoxAbility.SelectedValue != null)
                 mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
+            mon.Boon = comboBoxPlus.SelectedIndex;
+            mon.Bane = comboBoxMinus.SelectedIndex;
             mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
                                         (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
             mon.Game = comboBoxGame.Text;
@@ -1314,6 +1352,8 @@ namespace MonCollection
                             Shiny = pk.IsShiny,
                             Ability = pk.Ability,
                             Nature = pk.Nature,
+                            Boon = 0,
+                            Bane = 0,
                             HP = pk.Stat_HPMax,
                             ATK = pk.Stat_ATK,
                             DEF = pk.Stat_DEF,
