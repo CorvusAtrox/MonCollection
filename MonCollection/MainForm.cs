@@ -24,6 +24,7 @@ namespace MonCollection
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private ComboBox[] moveBoxes;
         private PictureBox[] PKXBOXES;
+        private PictureBox[] ribbonBoxes;
         private int slotSelected = -1; // = null;
         private LegalityAnalysis legal;
         private List<MonData> PkmData;
@@ -199,6 +200,10 @@ namespace MonCollection
                 bpkx25,bpkx26,bpkx27,bpkx28,bpkx29,bpkx30
             };
 
+            ribbonBoxes = new[]{
+                ribbonPic0, ribbonPic1, ribbonPic2, ribbonPic3, ribbonPic4
+            };
+
             foreach (var slot in PKXBOXES)
             {
                 slot.DoubleClick += (sender, e) =>
@@ -327,6 +332,7 @@ namespace MonCollection
                     comboBoxBalls.Visible = false;
                     labelAbility.Visible = false;
                     comboBoxAbility.Visible = false;
+                    labelRibbons.Visible = false;
                     labelNature.Visible = false;
                     comboBoxNature.Visible = false;
                     comboBoxPlus.Visible = false;
@@ -342,6 +348,7 @@ namespace MonCollection
                     comboBoxBalls.Visible = false;
                     labelAbility.Visible = false;
                     comboBoxAbility.Visible = false;
+                    labelRibbons.Visible = false;
                     labelNature.Visible = false;
                     comboBoxPlus.Visible = false;
                     comboBoxMinus.Visible = false;
@@ -359,6 +366,7 @@ namespace MonCollection
                     comboBoxBalls.Visible = true;
                     labelAbility.Visible = true;
                     comboBoxAbility.Visible = true;
+                    labelRibbons.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
                     comboBoxPlus.Visible = false;
@@ -375,6 +383,7 @@ namespace MonCollection
                     comboBoxBalls.Visible = true;
                     labelAbility.Visible = true;
                     comboBoxAbility.Visible = true;
+                    labelRibbons.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
                     comboBoxPlus.Visible = false;
@@ -390,6 +399,7 @@ namespace MonCollection
                     comboBoxBalls.Visible = true;
                     labelAbility.Visible = true;
                     comboBoxAbility.Visible = true;
+                    labelRibbons.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
                     comboBoxPlus.Visible = true;
@@ -448,6 +458,19 @@ namespace MonCollection
             comboBoxMinus.SelectedIndex = pk.Bane;
                 
             SetStatText(pk.Boon,pk.Bane);
+
+            foreach (PictureBox pb in ribbonBoxes)
+                pb.Image = null;
+
+            if(pk.Ribbons != null)
+            {
+                int r = 0;
+                foreach(string rib in pk.Ribbons)
+                {
+                    ribbonBoxes[r].Image = RetrieveImage("Resources/img/ribbon/" + rib + ".png");
+                    r++;
+                }
+            }
 
             textBoxOT.Text = pk.OT;
             textBoxID.Text = pk.ID.ToString();
@@ -1366,7 +1389,8 @@ namespace MonCollection
                             Ball = pk.Ball,
                             Language = pk.Language,
                             PKRS_Infected = pk.PKRS_Infected,
-                            PKRS_Cured = pk.PKRS_Cured
+                            PKRS_Cured = pk.PKRS_Cured,
+                            Ribbons = { }
                         };
 
                         PkmData.Add(pd);

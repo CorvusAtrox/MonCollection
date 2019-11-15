@@ -31,5 +31,6 @@ namespace MonCollection
         public int Language { get; set; }
         public bool PKRS_Infected { get; set; }
         public bool PKRS_Cured { get; set; }
+        public string[] Ribbons { get; set; }
     }
 }

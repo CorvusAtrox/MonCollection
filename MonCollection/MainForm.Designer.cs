@@ -135,6 +135,12 @@ namespace MonCollection
             this.buttonLevelTally = new System.Windows.Forms.Button();
             this.comboBoxPlus = new System.Windows.Forms.ComboBox();
             this.comboBoxMinus = new System.Windows.Forms.ComboBox();
+            this.labelRibbons = new System.Windows.Forms.Label();
+            this.ribbonPic0 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic1 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic2 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic3 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -170,6 +176,11 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -1322,12 +1333,75 @@ namespace MonCollection
             this.comboBoxMinus.Size = new System.Drawing.Size(56, 21);
             this.comboBoxMinus.TabIndex = 164;
             // 
+            // labelRibbons
+            // 
+            this.labelRibbons.AutoSize = true;
+            this.labelRibbons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRibbons.ForeColor = System.Drawing.Color.Black;
+            this.labelRibbons.Location = new System.Drawing.Point(216, 186);
+            this.labelRibbons.Name = "labelRibbons";
+            this.labelRibbons.Size = new System.Drawing.Size(57, 13);
+            this.labelRibbons.TabIndex = 165;
+            this.labelRibbons.Text = "Ribbons:";
+            // 
+            // ribbonPic0
+            // 
+            this.ribbonPic0.Location = new System.Drawing.Point(148, 209);
+            this.ribbonPic0.Name = "ribbonPic0";
+            this.ribbonPic0.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic0.TabIndex = 166;
+            this.ribbonPic0.TabStop = false;
+            // 
+            // ribbonPic1
+            // 
+            this.ribbonPic1.Location = new System.Drawing.Point(187, 209);
+            this.ribbonPic1.Name = "ribbonPic1";
+            this.ribbonPic1.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic1.TabIndex = 167;
+            this.ribbonPic1.TabStop = false;
+            // 
+            // ribbonPic2
+            // 
+            this.ribbonPic2.Location = new System.Drawing.Point(226, 209);
+            this.ribbonPic2.Name = "ribbonPic2";
+            this.ribbonPic2.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic2.TabIndex = 168;
+            this.ribbonPic2.TabStop = false;
+            // 
+            // ribbonPic3
+            // 
+            this.ribbonPic3.Location = new System.Drawing.Point(265, 209);
+            this.ribbonPic3.Name = "ribbonPic3";
+            this.ribbonPic3.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic3.TabIndex = 169;
+            this.ribbonPic3.TabStop = false;
+            // 
+            // ribbonPic4
+            // 
+            this.ribbonPic4.Location = new System.Drawing.Point(304, 209);
+            this.ribbonPic4.Name = "ribbonPic4";
+            this.ribbonPic4.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic4.TabIndex = 170;
+            this.ribbonPic4.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1034, 491);
+            this.Controls.Add(this.ribbonPic4);
+            this.Controls.Add(this.ribbonPic3);
+            this.Controls.Add(this.ribbonPic2);
+            this.Controls.Add(this.ribbonPic1);
+            this.Controls.Add(this.ribbonPic0);
+            this.Controls.Add(this.labelRibbons);
             this.Controls.Add(this.comboBoxMinus);
             this.Controls.Add(this.comboBoxPlus);
             this.Controls.Add(this.buttonLevelTally);
@@ -1466,6 +1540,11 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1577,6 +1656,12 @@ namespace MonCollection
         private Button buttonLevelTally;
         private ComboBox comboBoxPlus;
         private ComboBox comboBoxMinus;
+        private Label labelRibbons;
+        private PictureBox ribbonPic0;
+        private PictureBox ribbonPic1;
+        private PictureBox ribbonPic2;
+        private PictureBox ribbonPic3;
+        private PictureBox ribbonPic4;
     }
 }
 
