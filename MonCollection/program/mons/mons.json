@@ -841,6 +841,41 @@
     "Ribbons": null
   },
   {
+    "Nickname": "Aerodactyl",
+    "Species": 142,
+    "Level": 50,
+    "Gender": 0,
+    "Moves": [
+      246,
+      397,
+      469,
+      606
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 127,
+    "Boon": 5,
+    "Bane": 3,
+    "Nature": 22,
+    "HP": 154,
+    "ATK": 110,
+    "DEF": 84,
+    "SPA": 70,
+    "SPD": 88,
+    "SPE": 132,
+    "Gen": 7,
+    "ID": 81619,
+    "OT": "Worlds19",
+    "Ball": 16,
+    "Language": 7,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": [
+      "event"
+    ]
+  },
+  {
     "Nickname": "SNOROW",
     "Species": 143,
     "Level": 30,
@@ -112535,39 +112570,6 @@
     "Ribbons": null
   },
   {
-    "Nickname": "Aerodactyl",
-    "Species": 142,
-    "Level": 50,
-    "Gender": 0,
-    "Moves": [
-      246,
-      397,
-      469,
-      606
-    ],
-    "Game": "Sun [Ramirez]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 127,
-    "Boon": 0,
-    "Bane": 0,
-    "Nature": 22,
-    "HP": 154,
-    "ATK": 110,
-    "DEF": 84,
-    "SPA": 70,
-    "SPD": 88,
-    "SPE": 132,
-    "Gen": 7,
-    "ID": 81619,
-    "OT": "Worlds19",
-    "Ball": 16,
-    "Language": 7,
-    "PKRS_Infected": false,
-    "PKRS_Cured": false,
-    "Ribbons": null
-  },
-  {
     "Nickname": "Strecy",
     "Species": 165,
     "Level": 11,
@@ -113489,7 +113491,9 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null
+    "Ribbons": [
+      "bestFriends"
+    ]
   },
   {
     "Nickname": "SorpresaLuja",
@@ -113687,7 +113691,10 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp",
+      "bestFriends"
+    ]
   },
   {
     "Nickname": "Profi",
@@ -114034,8 +114041,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 66,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 4,
+    "Bane": 4,
     "Nature": 18,
     "HP": 193,
     "ATK": 177,
@@ -114050,7 +114057,9 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp"
+    ]
   },
   {
     "Nickname": "Pikipek",
@@ -114182,7 +114191,9 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp"
+    ]
   },
   {
     "Nickname": "Willie",
@@ -114199,8 +114210,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 118,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 3,
+    "Bane": 5,
     "Nature": 14,
     "HP": 159,
     "ATK": 101,
@@ -114215,7 +114226,10 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp",
+      "bestFriends"
+    ]
   },
   {
     "Nickname": ";-;",
@@ -114479,7 +114493,10 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp",
+      "bestFriends"
+    ]
   },
   {
     "Nickname": "Fungami",
@@ -114545,7 +114562,9 @@
     "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": null
+    "Ribbons": [
+      "classic"
+    ]
   },
   {
     "Nickname": "Game Plan",
@@ -114611,7 +114630,9 @@
     "Language": 7,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": null
+    "Ribbons": [
+      "classic"
+    ]
   },
   {
     "Nickname": "Olive Oyl",
@@ -114842,7 +114863,9 @@
     "Language": 7,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null
+    "Ribbons": [
+      "alolaChamp"
+    ]
   },
   {
     "Nickname": "Dhelmise",
