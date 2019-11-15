@@ -141,6 +141,7 @@ namespace MonCollection
             this.ribbonPic2 = new System.Windows.Forms.PictureBox();
             this.ribbonPic3 = new System.Windows.Forms.PictureBox();
             this.ribbonPic4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGMax = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -181,6 +182,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -920,7 +922,7 @@ namespace MonCollection
             // 
             // buttonReloadDB
             // 
-            this.buttonReloadDB.Location = new System.Drawing.Point(583, 47);
+            this.buttonReloadDB.Location = new System.Drawing.Point(604, 47);
             this.buttonReloadDB.Name = "buttonReloadDB";
             this.buttonReloadDB.Size = new System.Drawing.Size(95, 23);
             this.buttonReloadDB.TabIndex = 127;
@@ -1034,7 +1036,7 @@ namespace MonCollection
             // 
             // buttonRanMon
             // 
-            this.buttonRanMon.Location = new System.Drawing.Point(891, 47);
+            this.buttonRanMon.Location = new System.Drawing.Point(870, 47);
             this.buttonRanMon.Name = "buttonRanMon";
             this.buttonRanMon.Size = new System.Drawing.Size(95, 23);
             this.buttonRanMon.TabIndex = 144;
@@ -1390,12 +1392,22 @@ namespace MonCollection
             this.ribbonPic4.TabIndex = 170;
             this.ribbonPic4.TabStop = false;
             // 
+            // pictureBoxGMax
+            // 
+            this.pictureBoxGMax.Location = new System.Drawing.Point(568, 31);
+            this.pictureBoxGMax.Name = "pictureBoxGMax";
+            this.pictureBoxGMax.Size = new System.Drawing.Size(30, 23);
+            this.pictureBoxGMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxGMax.TabIndex = 171;
+            this.pictureBoxGMax.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1034, 491);
+            this.Controls.Add(this.pictureBoxGMax);
             this.Controls.Add(this.ribbonPic4);
             this.Controls.Add(this.ribbonPic3);
             this.Controls.Add(this.ribbonPic2);
@@ -1545,6 +1557,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1662,6 +1675,7 @@ namespace MonCollection
         private PictureBox ribbonPic2;
         private PictureBox ribbonPic3;
         private PictureBox ribbonPic4;
+        private PictureBox pictureBoxGMax;
     }
 }
 

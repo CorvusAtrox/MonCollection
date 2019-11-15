@@ -540,6 +540,11 @@ namespace MonCollection
                 comboBoxPkrs.SelectedIndex = 0;
             }
 
+            if (pk.gMax)
+                pictureBoxGMax.Image = RetrieveImage("Resources/img/gMax.png");
+            else
+                pictureBoxGMax.Image = null;
+
             var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
             comboBoxForm.DataSource = ds;
             comboBoxForm.SelectedIndex = pk.AltForm;
