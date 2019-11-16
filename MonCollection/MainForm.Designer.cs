@@ -1306,9 +1306,9 @@ namespace MonCollection
             "",
             "Atk",
             "Def",
+            "Spd",
             "SpA",
-            "SpD",
-            "Spd"});
+            "SpD"});
             this.comboBoxPlus.Location = new System.Drawing.Point(179, 142);
             this.comboBoxPlus.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxPlus.Name = "comboBoxPlus";
@@ -1326,9 +1326,9 @@ namespace MonCollection
             "",
             "Atk",
             "Def",
+            "Spd",
             "SpA",
-            "SpD",
-            "Spd"});
+            "SpD"});
             this.comboBoxMinus.Location = new System.Drawing.Point(235, 142);
             this.comboBoxMinus.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMinus.Name = "comboBoxMinus";

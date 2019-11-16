@@ -122,7 +122,8 @@ namespace MonCollection
                                       GameVersion.X, GameVersion.Y, GameVersion.OR, GameVersion.AS,
                                       GameVersion.GO,
                                       GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
-                                      GameVersion.GP, GameVersion.GE};
+                                      GameVersion.GP, GameVersion.GE,
+                                      GameVersion.SW, GameVersion.SH};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -303,8 +304,11 @@ namespace MonCollection
                 case 7:
                     mon = new PK7();
                     break;
+                case 8:
+                    mon = new PK8();
+                    break;
                 default:
-                    mon = new PK7();
+                    mon = new PK8();
                     break;
             }
             mon.Species = data.Species;
@@ -492,10 +496,13 @@ namespace MonCollection
             if (pk.Species == 25 && pk.Gen == 6)
                 spForm += "c";
             pictureBoxIcon.Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
-            if (pictureBoxIcon.Image.Height > 56)
-                pictureBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage;
-            else
-                pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            if(pictureBoxIcon.Image != null)
+            {
+                if (pictureBoxIcon.Image.Height > 56)
+                    pictureBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                else
+                    pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
 
             if (minorGenderDiff.Contains(pk.Species))
             {
@@ -788,10 +795,13 @@ namespace MonCollection
                 if (mon.Species == 25 && mon.Gen == 6)
                     spForm += "c";
                 PKXBOXES[i].Image = RetrieveImage("Resources/img/icons/" + spForm + ".png");
-                if (PKXBOXES[i].Image.Height > 56)
-                    PKXBOXES[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                else
-                    PKXBOXES[i].SizeMode = PictureBoxSizeMode.CenterImage;
+                if(PKXBOXES[i].Image != null)
+                {
+                    if (PKXBOXES[i].Image.Height > 56)
+                        PKXBOXES[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                    else
+                        PKXBOXES[i].SizeMode = PictureBoxSizeMode.CenterImage;
+                }
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
@@ -1277,7 +1287,7 @@ namespace MonCollection
             mon.Nickname = textBoxNickname.Text;
             mon.Level = int.Parse(textBoxLevel.Text);
             mon.Gender = (int)labelGender.Tag;
-            mon.Species = (int)comboBoxSpecies.SelectedValue;
+            mon.Species = (int?) comboBoxSpecies.SelectedValue ?? 0;
             if(comboBoxForm.Visible == true)
                 mon.AltForm = comboBoxForm.SelectedIndex;
             if(comboBoxAbility.SelectedValue != null)
@@ -1285,8 +1295,8 @@ namespace MonCollection
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Boon = comboBoxPlus.SelectedIndex;
             mon.Bane = comboBoxMinus.SelectedIndex;
-            mon.Moves = new List<int> { (int)comboBoxMove1.SelectedValue, (int)comboBoxMove2.SelectedValue,
-                                        (int)comboBoxMove3.SelectedValue, (int)comboBoxMove4.SelectedValue};
+            mon.Moves = new List<int> { (int?)comboBoxMove1.SelectedValue ?? 0, (int?)comboBoxMove2.SelectedValue ?? 0,
+                                        (int?)comboBoxMove3.SelectedValue ?? 0, (int?)comboBoxMove4.SelectedValue ?? 0 };
             mon.Game = comboBoxGame.Text;
             mon.OT = textBoxOT.Text;
             mon.ID = int.Parse(textBoxID.Text);
