@@ -58,7 +58,7 @@ namespace MonCollection
             InitializeComponent();
             InitializeGameDict();
             InitializeMonLists();
-            InitializeStrings("en",GameVersion.US,"blank");
+            InitializeStrings("en",GameVersion.SH,"blank");
             InitializeBinding();
             InitializePkxBoxes();
             PopulateFilteredDataSources();
@@ -154,7 +154,7 @@ namespace MonCollection
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
             if (gv == GameVersion.Unknown)
-                gv = GameVersion.UM;
+                gv = GameVersion.SH;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
             PKMConverter.Trainer = ver;
@@ -257,7 +257,7 @@ namespace MonCollection
                 identifier = "";
 
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
-                InitializeStrings("en", GameVersion.US, "blank");
+                InitializeStrings("en", GameVersion.SH, "blank");
             else
                 InitializeStrings(info.language, info.version, GetTrainer(identifier));
 
@@ -522,7 +522,7 @@ namespace MonCollection
             if(si != null)
                 pictureBoxGameSprite.Image = GetSprite(spForm, si.version,pk.Shiny);
             else
-                pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.UM, pk.Shiny);
+                pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.SH, pk.Shiny);
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             labelGender.Tag = pk.Gender;

@@ -101,6 +101,8 @@ namespace MonCollection
         {
             MonData mon = PkmDB[ind];
             gameDict.TryGetValue(game, out SaveInfo si);
+            if (si.version == GameVersion.Unknown)
+                si.version = GameVersion.SH;
             SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
 
