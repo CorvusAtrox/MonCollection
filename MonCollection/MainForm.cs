@@ -551,9 +551,30 @@ namespace MonCollection
                 pictureBoxGMax.Image = RetrieveImage("Resources/img/gMax.png");
             else
                 pictureBoxGMax.Image = null;
-
-            var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
-            comboBoxForm.DataSource = ds;
+            if(pk.Species != 869)
+            {
+                var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
+                comboBoxForm.DataSource = ds;
+            } else
+            {
+                string[] ds = { "Strawberry Vanilla Cream", "Berry Vanilla Cream", "Love Vanilla Cream", "Star Vanilla Cream",
+                                "Clover Vanilla Cream", "Flower Vanilla Cream", "Ribbon Vanilla Cream", "Strawberry Ruby Cream",
+                                "Berry Ruby Cream", "Lover Ruby Cream", "Star Ruby Cream", "Clover Ruby Cream", "Flower Ruby Cream",
+                                "Ribbon Ruby Cream", "Strawberry Matcha Cream", "Berry Matcha Cream", "Love Matcha Cream",
+                                "Star Matcha Cream", "Clover Matcha Cream", "Flower Matcha Cream", "Ribbon Matcha Cream",
+                                "Strawberry Mint Cream", "Berry Mint Cream", "Love Mint Cream", "Star Mint Cream", "Clover Mint Cream",
+                                "Flower Mint Cream", "Ribbon Mint Cream", "Strawberry Lemon Cream", "Berry Lemon Cream",
+                                "Love Lemon Cream", "Star Lemon Cream", "Clover Lemon Cream", "Flower Lemon Cream", "Ribbon Lemon Cream",
+                                "Strawberry Salted Cream", "Berry Salted Cream", "Love Salted Cream", "Star Salted Cream",
+                                "Clover Salted Cream", "Flower Salted Cream", "Ribbon Salted Cream", "Strawberry Ruby Swirl",
+                                "Berry Ruby Swirl", "Love Ruby Swirl", "Star Ruby Swirl", "Clover Ruby Swirl", "Flower Ruby Swirl",
+                                "Ribbon Ruby Swirl", "Strawberry Caramel Swirl", "Berry Caramel Swirl", "Love Caramel Swirl",
+                                "Star Caramel Swirl", "Clover Caramel Swirl", "Flower Caramel Swirl", "Ribbon Caramel Swirl",
+                                "Strawberry Rainbow Swirl", "Berry Rainbow Swirl", "Love Rainbow Swirl", "Star Rainbow Swirl",
+                                "Clover Rainbow Swirl", "Flower Rainbow Swirl", "Ribbon Rainbow Swirl"};
+                comboBoxForm.DataSource = ds;
+            }
+            
             comboBoxForm.SelectedIndex = pk.AltForm;
             if (comboBoxForm.Items.Count != 1)
                 comboBoxForm.Visible = true;
