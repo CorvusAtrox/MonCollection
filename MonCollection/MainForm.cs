@@ -345,6 +345,8 @@ namespace MonCollection
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = false;
                     buttonEggs.Visible = false;
+                    labelDynamax.Visible = false;
+                    textBoxDynaLv.Visible = false;
                     break;
                 case 2:
                     labelGender.Visible = true;
@@ -361,6 +363,8 @@ namespace MonCollection
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
+                    labelDynamax.Visible = false;
+                    textBoxDynaLv.Visible = false;
                     break;
                 case 3:
                 case 4:
@@ -379,6 +383,8 @@ namespace MonCollection
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
+                    labelDynamax.Visible = false;
+                    textBoxDynaLv.Visible = false;
                     break;
                 case 6:
                 case 7:
@@ -396,6 +402,8 @@ namespace MonCollection
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
+                    labelDynamax.Visible = false;
+                    textBoxDynaLv.Visible = false;
                     break;
                 case 8:
                     labelGender.Visible = true;
@@ -412,6 +420,8 @@ namespace MonCollection
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
                     buttonEggs.Visible = true;
+                    labelDynamax.Visible = true;
+                    textBoxDynaLv.Visible = true;
                     break;
             }
 
@@ -551,6 +561,7 @@ namespace MonCollection
                 pictureBoxGMax.Image = RetrieveImage("Resources/img/gMax.png");
             else
                 pictureBoxGMax.Image = null;
+            textBoxDynaLv.Text = pk.dynaLevel.ToString();
             if(pk.Species != 869)
             {
                 var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
@@ -1328,6 +1339,7 @@ namespace MonCollection
             mon.SPA = int.Parse(textBoxSpAtk.Text);
             mon.SPD = int.Parse(textBoxSpDef.Text);
             mon.SPE = int.Parse(textBoxSpeed.Text);
+            mon.dynaLevel = int.Parse(textBoxDynaLv.Text);
             if(comboBoxBalls.SelectedValue != null)
                 mon.Ball = (int)comboBoxBalls.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)
