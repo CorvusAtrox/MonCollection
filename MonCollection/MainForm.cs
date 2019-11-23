@@ -720,7 +720,7 @@ namespace MonCollection
                 case GameVersion.SW:
                 case GameVersion.SH:
                     game = "swsh";
-                    ext = ".gif";
+                    ext = ".png";
                     break;
             }
             if(!shiny)
