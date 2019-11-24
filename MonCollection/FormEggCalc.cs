@@ -110,7 +110,13 @@ namespace MonCollection
             if (mon.Species == 25 && mon.Gen == 6)
                 spForm += "c";
             monIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
-
+            if (monIcon.Image != null)
+            {
+                if (monIcon.Image.Height > 56)
+                    monIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                else
+                    monIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
             FillPKXBoxes(0);
             SetResults(PkmData);
         }
@@ -141,6 +147,13 @@ namespace MonCollection
                 if (mon.Species == 25 && mon.Gen == 6)
                     spForm += "c";
                 PKXBOXES[i].Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
+                if (PKXBOXES[i].Image != null)
+                {
+                    if (PKXBOXES[i].Image.Height > 56)
+                        PKXBOXES[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                    else
+                        PKXBOXES[i].SizeMode = PictureBoxSizeMode.CenterImage;
+                }
                 PKXBOXES[i].Tag = i + begin;
             }
             for (int i = end; i < RES_MAX; i++)
@@ -207,6 +220,13 @@ namespace MonCollection
             if (mon1.AltForm > 0 && !noDiff.Contains(mon1.Species))
                 spForm += "-" + mon1.AltForm.ToString();
             eggIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
+            if (eggIcon.Image != null)
+            {
+                if (eggIcon.Image.Height > 56)
+                    eggIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+                else
+                    eggIcon.SizeMode = PictureBoxSizeMode.CenterImage;
+            }
             listMoves.Items.Clear();
             if (gen >= 6)
             {
@@ -283,6 +303,13 @@ namespace MonCollection
             {
                 moves = calcEggMoves(sp, mon1.AltForm);
                 eggIcon2.Image = retrieveImage("Resources/img/icons/" + sp.ToString() + ".png");
+                if (eggIcon2.Image != null)
+                {
+                    if (eggIcon2.Image.Height > 56)
+                        eggIcon2.SizeMode = PictureBoxSizeMode.StretchImage;
+                    else
+                        eggIcon2.SizeMode = PictureBoxSizeMode.CenterImage;
+                }
                 listMoves2.Items.Clear();
                 if (gen >= 6)
                 {

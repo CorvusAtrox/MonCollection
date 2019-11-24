@@ -529,10 +529,26 @@ namespace MonCollection
                 pk.Game = "";
 
             gameDict.TryGetValue(pk.Game, out SaveInfo si);
+            pictureBoxGameSprite.SizeMode = PictureBoxSizeMode.AutoSize;
             if(si != null)
                 pictureBoxGameSprite.Image = GetSprite(spForm, si.version,pk.Shiny);
             else
                 pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.SH, pk.Shiny);
+            if (pictureBoxGameSprite.Height > 180 || pictureBoxGameSprite.Width > 180)
+            {
+                double ratio = pictureBoxGameSprite.Height / pictureBoxGameSprite.Width;
+                if (ratio >= 1)
+                {
+                    pictureBoxGameSprite.Height = 180;
+                    pictureBoxGameSprite.Width = (int)(180 / ratio);
+                }
+                else
+                {
+                    pictureBoxGameSprite.Width = 180;
+                    pictureBoxGameSprite.Height = (int)(180 * ratio);
+                }
+                pictureBoxGameSprite.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
             pictureBoxGameSprite.Refresh();
             labelGender.Text = genders[pk.Gender];
             labelGender.Tag = pk.Gender;

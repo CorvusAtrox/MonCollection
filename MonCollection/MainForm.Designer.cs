@@ -833,7 +833,7 @@ namespace MonCollection
             // 
             this.pictureBoxGameSprite.Location = new System.Drawing.Point(400, 79);
             this.pictureBoxGameSprite.Name = "pictureBoxGameSprite";
-            this.pictureBoxGameSprite.Size = new System.Drawing.Size(57, 39);
+            this.pictureBoxGameSprite.Size = new System.Drawing.Size(180, 180);
             this.pictureBoxGameSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBoxGameSprite.TabIndex = 119;
             this.pictureBoxGameSprite.TabStop = false;
