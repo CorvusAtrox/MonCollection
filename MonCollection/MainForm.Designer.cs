@@ -144,6 +144,7 @@ namespace MonCollection
             this.pictureBoxGMax = new System.Windows.Forms.PictureBox();
             this.textBoxDynaLv = new System.Windows.Forms.TextBox();
             this.labelDynamax = new System.Windows.Forms.Label();
+            this.buttonMonInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -461,8 +462,6 @@ namespace MonCollection
             // 
             // SCR_Box
             // 
-            this.SCR_Box.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.SCR_Box.LargeChange = 1;
             this.SCR_Box.Location = new System.Drawing.Point(1035, 76);
             this.SCR_Box.Name = "SCR_Box";
@@ -1249,8 +1248,8 @@ namespace MonCollection
             // 
             // BTN_Shinytize
             // 
-            this.BTN_Shinytize.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTN_Shinytize.Location = new System.Drawing.Point(249, 95);
+            this.BTN_Shinytize.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.BTN_Shinytize.Location = new System.Drawing.Point(249, 96);
             this.BTN_Shinytize.Margin = new System.Windows.Forms.Padding(0);
             this.BTN_Shinytize.Name = "BTN_Shinytize";
             this.BTN_Shinytize.Size = new System.Drawing.Size(24, 22);
@@ -1424,12 +1423,23 @@ namespace MonCollection
             this.labelDynamax.TabIndex = 173;
             this.labelDynamax.Text = "Dynamax:";
             // 
+            // buttonMonInfo
+            // 
+            this.buttonMonInfo.Location = new System.Drawing.Point(779, 481);
+            this.buttonMonInfo.Name = "buttonMonInfo";
+            this.buttonMonInfo.Size = new System.Drawing.Size(116, 23);
+            this.buttonMonInfo.TabIndex = 174;
+            this.buttonMonInfo.Text = "Mon Data";
+            this.buttonMonInfo.UseVisualStyleBackColor = true;
+            this.buttonMonInfo.Click += new System.EventHandler(this.buttonMonInfo_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
-            this.ClientSize = new System.Drawing.Size(1080, 491);
+            this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.Controls.Add(this.buttonMonInfo);
             this.Controls.Add(this.labelDynamax);
             this.Controls.Add(this.textBoxDynaLv);
             this.Controls.Add(this.pictureBoxGMax);
@@ -1703,6 +1713,7 @@ namespace MonCollection
         private PictureBox pictureBoxGMax;
         private TextBox textBoxDynaLv;
         private Label labelDynamax;
+        private Button buttonMonInfo;
     }
 }
 

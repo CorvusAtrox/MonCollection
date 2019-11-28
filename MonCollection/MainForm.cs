@@ -601,8 +601,17 @@ namespace MonCollection
                                 "Clover Rainbow Swirl", "Flower Rainbow Swirl", "Ribbon Rainbow Swirl"};
                 comboBoxForm.DataSource = ds;
             }
+
+            if (pk.AltForm < comboBoxForm.Items.Count)
+                comboBoxForm.SelectedIndex = pk.AltForm;
+            else if (pk.Species >= 862 && pk.Species <= 867){ //Galar Evos
+                pk.AltForm -= 1;
+                comboBoxForm.SelectedIndex = pk.AltForm;
+            } else
+                comboBoxForm.SelectedIndex = 0;
+
             
-            comboBoxForm.SelectedIndex = pk.AltForm;
+
             if (comboBoxForm.Items.Count != 1)
                 comboBoxForm.Visible = true;
             else
@@ -1610,6 +1619,92 @@ namespace MonCollection
             foreach (var q in query)
                 results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
             results.Show();
+        }
+
+        private void buttonMonInfo_Click(object sender, EventArgs e)
+        {
+            FormSpeciesInfo form = new FormSpeciesInfo();
+
+            int sp = (int)comboBoxSpecies.SelectedValue;
+            int af = comboBoxForm.SelectedIndex; 
+
+            form.spImage = pictureBoxIcon.Image;
+            form.spFormName = comboBoxSpecies.Text;
+            if(comboBoxForm.Visible == true)
+            {
+                form.spFormName += " - " + comboBoxForm.Text;
+            }
+
+            List<int> balls = new List<int>();
+            List<int> abilities = new List<int>();
+            List<int> languages = new List<int>();
+            List<int> moves = new List<int>();
+            List<string> names = new List<string>();
+
+            foreach(var mon in PkmData)
+            {
+                if(mon.Species == sp && mon.AltForm == af)
+                {
+                    abilities.Add(mon.Ability);
+                    balls.Add(mon.Ball);
+                    languages.Add(mon.Language);
+                    foreach (int m in mon.Moves)
+                        moves.Add(m);
+                    names.Add(mon.Nickname);
+
+                    if (mon.Shiny)
+                        form.hasShiny = true;
+                }
+            }
+
+            abilities = abilities.Distinct().ToList();
+            balls = balls.Distinct().ToList();
+            languages = languages.Distinct().ToList();
+            moves = moves.Distinct().ToList();
+
+            balls.Sort();
+            names.Sort();
+            languages.Sort();
+
+            foreach (int b in balls)
+            {
+                if(b != 0)
+                    form.ballList.Add(RetrieveImage("Resources/img/ball/" + b + ".png"));
+            }
+
+            foreach (string n in names)
+                form.nameList.Add(n);
+
+            var abilityNames = new List<ComboItem>(GameInfo.AbilityDataSource);
+
+            foreach (int a in abilities)
+            {
+                if (a != 0)
+                    form.abilityList.Add(abilityNames.Find(p => p.Value == a).Text);
+            }
+
+            var languageNames = new List<ComboItem>(GameInfo.LanguageDataSource(8));
+
+            foreach (int l in languages)
+            {
+                if (l != 0)
+                    form.languageList.Add(languageNames.Find(p => p.Value == l).Text);
+            }
+
+            var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
+
+            foreach (int m in moves)
+            {
+                if (m != 0)
+                    form.moveList.Add(moveNames.Find(p => p.Value == m).Text);
+            }
+
+            form.abilityList.Sort();
+            form.moveList.Sort();
+
+            form.loadData();
+
+            form.Show();
         }
     }
 }
