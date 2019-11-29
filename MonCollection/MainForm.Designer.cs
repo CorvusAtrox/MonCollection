@@ -145,6 +145,11 @@ namespace MonCollection
             this.textBoxDynaLv = new System.Windows.Forms.TextBox();
             this.labelDynamax = new System.Windows.Forms.Label();
             this.buttonMonInfo = new System.Windows.Forms.Button();
+            this.ribbonPic9 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic8 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic7 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic6 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -186,6 +191,11 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -1047,7 +1057,7 @@ namespace MonCollection
             // 
             // buttonSaveMon
             // 
-            this.buttonSaveMon.Location = new System.Drawing.Point(148, 373);
+            this.buttonSaveMon.Location = new System.Drawing.Point(150, 435);
             this.buttonSaveMon.Name = "buttonSaveMon";
             this.buttonSaveMon.Size = new System.Drawing.Size(116, 23);
             this.buttonSaveMon.TabIndex = 43;
@@ -1057,7 +1067,7 @@ namespace MonCollection
             // 
             // buttonRevertMon
             // 
-            this.buttonRevertMon.Location = new System.Drawing.Point(148, 408);
+            this.buttonRevertMon.Location = new System.Drawing.Point(150, 470);
             this.buttonRevertMon.Name = "buttonRevertMon";
             this.buttonRevertMon.Size = new System.Drawing.Size(116, 23);
             this.buttonRevertMon.TabIndex = 44;
@@ -1433,12 +1443,62 @@ namespace MonCollection
             this.buttonMonInfo.UseVisualStyleBackColor = true;
             this.buttonMonInfo.Click += new System.EventHandler(this.buttonMonInfo_Click);
             // 
+            // ribbonPic9
+            // 
+            this.ribbonPic9.Location = new System.Drawing.Point(304, 248);
+            this.ribbonPic9.Name = "ribbonPic9";
+            this.ribbonPic9.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic9.TabIndex = 179;
+            this.ribbonPic9.TabStop = false;
+            // 
+            // ribbonPic8
+            // 
+            this.ribbonPic8.Location = new System.Drawing.Point(265, 248);
+            this.ribbonPic8.Name = "ribbonPic8";
+            this.ribbonPic8.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic8.TabIndex = 178;
+            this.ribbonPic8.TabStop = false;
+            // 
+            // ribbonPic7
+            // 
+            this.ribbonPic7.Location = new System.Drawing.Point(226, 248);
+            this.ribbonPic7.Name = "ribbonPic7";
+            this.ribbonPic7.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic7.TabIndex = 177;
+            this.ribbonPic7.TabStop = false;
+            // 
+            // ribbonPic6
+            // 
+            this.ribbonPic6.Location = new System.Drawing.Point(187, 248);
+            this.ribbonPic6.Name = "ribbonPic6";
+            this.ribbonPic6.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic6.TabIndex = 176;
+            this.ribbonPic6.TabStop = false;
+            // 
+            // ribbonPic5
+            // 
+            this.ribbonPic5.Location = new System.Drawing.Point(148, 248);
+            this.ribbonPic5.Name = "ribbonPic5";
+            this.ribbonPic5.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic5.TabIndex = 175;
+            this.ribbonPic5.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.Controls.Add(this.ribbonPic9);
+            this.Controls.Add(this.ribbonPic8);
+            this.Controls.Add(this.ribbonPic7);
+            this.Controls.Add(this.ribbonPic6);
+            this.Controls.Add(this.ribbonPic5);
             this.Controls.Add(this.buttonMonInfo);
             this.Controls.Add(this.labelDynamax);
             this.Controls.Add(this.textBoxDynaLv);
@@ -1593,6 +1653,11 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1714,6 +1779,11 @@ namespace MonCollection
         private TextBox textBoxDynaLv;
         private Label labelDynamax;
         private Button buttonMonInfo;
+        private PictureBox ribbonPic9;
+        private PictureBox ribbonPic8;
+        private PictureBox ribbonPic7;
+        private PictureBox ribbonPic6;
+        private PictureBox ribbonPic5;
     }
 }
 

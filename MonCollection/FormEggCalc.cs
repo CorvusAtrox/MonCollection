@@ -219,6 +219,7 @@ namespace MonCollection
             string spForm = sp.ToString();
             if (mon1.AltForm > 0 && !noDiff.Contains(mon1.Species))
                 spForm += "-" + mon1.AltForm.ToString();
+            labelShiny.Visible = (mon1.Language != mon2.Language);
             eggIcon.Image = retrieveImage("Resources/img/icons/" + spForm + ".png");
             if (eggIcon.Image != null)
             {

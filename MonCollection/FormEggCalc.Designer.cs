@@ -74,6 +74,7 @@
             this.bpkx11 = new System.Windows.Forms.PictureBox();
             this.bpkx12 = new System.Windows.Forms.PictureBox();
             this.bpkx13 = new System.Windows.Forms.PictureBox();
+            this.labelShiny = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.monIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eggIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
@@ -588,12 +589,23 @@
             this.bpkx13.TabIndex = 173;
             this.bpkx13.TabStop = false;
             // 
+            // labelShiny
+            // 
+            this.labelShiny.AutoSize = true;
+            this.labelShiny.ForeColor = System.Drawing.Color.Red;
+            this.labelShiny.Location = new System.Drawing.Point(278, 116);
+            this.labelShiny.Name = "labelShiny";
+            this.labelShiny.Size = new System.Drawing.Size(16, 13);
+            this.labelShiny.TabIndex = 191;
+            this.labelShiny.Text = "★";
+            // 
             // FormEggCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.labelShiny);
             this.Controls.Add(this.bpkx30);
             this.Controls.Add(this.SCR_Box);
             this.Controls.Add(this.bpkx1);
@@ -731,5 +743,6 @@
         private System.Windows.Forms.PictureBox bpkx11;
         private System.Windows.Forms.PictureBox bpkx12;
         private System.Windows.Forms.PictureBox bpkx13;
+        private System.Windows.Forms.Label labelShiny;
     }
 }

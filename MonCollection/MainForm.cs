@@ -202,7 +202,8 @@ namespace MonCollection
             };
 
             ribbonBoxes = new[]{
-                ribbonPic0, ribbonPic1, ribbonPic2, ribbonPic3, ribbonPic4
+                ribbonPic0, ribbonPic1, ribbonPic2, ribbonPic3, ribbonPic4,
+                ribbonPic5, ribbonPic6, ribbonPic7, ribbonPic8, ribbonPic9
             };
 
             foreach (var slot in PKXBOXES)
@@ -481,7 +482,7 @@ namespace MonCollection
                 int r = 0;
                 foreach(string rib in pk.Ribbons)
                 {
-                    ribbonBoxes[r].Image = RetrieveImage("Resources/img/ribbon/" + rib + ".png");
+                    ribbonBoxes[r].Image = RetrieveImage("Resources/img/ribbons/" + rib + ".png");
                     r++;
                 }
             }
@@ -1640,6 +1641,7 @@ namespace MonCollection
             List<int> languages = new List<int>();
             List<int> moves = new List<int>();
             List<string> names = new List<string>();
+            List<int> levels = new List<int>();
 
             foreach(var mon in PkmData)
             {
@@ -1651,6 +1653,7 @@ namespace MonCollection
                     foreach (int m in mon.Moves)
                         moves.Add(m);
                     names.Add(mon.Nickname);
+                    levels.Add(mon.Level);
 
                     if (mon.Shiny)
                         form.hasShiny = true;
@@ -1665,6 +1668,7 @@ namespace MonCollection
             balls.Sort();
             names.Sort();
             languages.Sort();
+            levels.Sort();
 
             foreach (int b in balls)
             {
@@ -1674,6 +1678,9 @@ namespace MonCollection
 
             foreach (string n in names)
                 form.nameList.Add(n);
+
+            foreach (int v in levels)
+                form.levelList.Add(v);
 
             var abilityNames = new List<ComboItem>(GameInfo.AbilityDataSource);
 
