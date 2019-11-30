@@ -203,7 +203,9 @@ namespace MonCollection
 
             ribbonBoxes = new[]{
                 ribbonPic0, ribbonPic1, ribbonPic2, ribbonPic3, ribbonPic4,
-                ribbonPic5, ribbonPic6, ribbonPic7, ribbonPic8, ribbonPic9
+                ribbonPic5, ribbonPic6, ribbonPic7, ribbonPic8, ribbonPic9,
+                ribbonPic10, ribbonPic11, ribbonPic12, ribbonPic13, ribbonPic14,
+                ribbonPic15, ribbonPic16, ribbonPic17, ribbonPic18, ribbonPic19
             };
 
             foreach (var slot in PKXBOXES)

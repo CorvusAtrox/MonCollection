@@ -150,6 +150,16 @@ namespace MonCollection
             this.ribbonPic7 = new System.Windows.Forms.PictureBox();
             this.ribbonPic6 = new System.Windows.Forms.PictureBox();
             this.ribbonPic5 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic19 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic18 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic17 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic16 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic15 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic14 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic13 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic12 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic11 = new System.Windows.Forms.PictureBox();
+            this.ribbonPic10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -196,6 +206,16 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -1488,12 +1508,112 @@ namespace MonCollection
             this.ribbonPic5.TabIndex = 175;
             this.ribbonPic5.TabStop = false;
             // 
+            // ribbonPic19
+            // 
+            this.ribbonPic19.Location = new System.Drawing.Point(304, 326);
+            this.ribbonPic19.Name = "ribbonPic19";
+            this.ribbonPic19.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic19.TabIndex = 189;
+            this.ribbonPic19.TabStop = false;
+            // 
+            // ribbonPic18
+            // 
+            this.ribbonPic18.Location = new System.Drawing.Point(265, 326);
+            this.ribbonPic18.Name = "ribbonPic18";
+            this.ribbonPic18.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic18.TabIndex = 188;
+            this.ribbonPic18.TabStop = false;
+            // 
+            // ribbonPic17
+            // 
+            this.ribbonPic17.Location = new System.Drawing.Point(226, 326);
+            this.ribbonPic17.Name = "ribbonPic17";
+            this.ribbonPic17.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic17.TabIndex = 187;
+            this.ribbonPic17.TabStop = false;
+            // 
+            // ribbonPic16
+            // 
+            this.ribbonPic16.Location = new System.Drawing.Point(187, 326);
+            this.ribbonPic16.Name = "ribbonPic16";
+            this.ribbonPic16.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic16.TabIndex = 186;
+            this.ribbonPic16.TabStop = false;
+            // 
+            // ribbonPic15
+            // 
+            this.ribbonPic15.Location = new System.Drawing.Point(148, 326);
+            this.ribbonPic15.Name = "ribbonPic15";
+            this.ribbonPic15.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic15.TabIndex = 185;
+            this.ribbonPic15.TabStop = false;
+            // 
+            // ribbonPic14
+            // 
+            this.ribbonPic14.Location = new System.Drawing.Point(304, 287);
+            this.ribbonPic14.Name = "ribbonPic14";
+            this.ribbonPic14.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic14.TabIndex = 184;
+            this.ribbonPic14.TabStop = false;
+            // 
+            // ribbonPic13
+            // 
+            this.ribbonPic13.Location = new System.Drawing.Point(265, 287);
+            this.ribbonPic13.Name = "ribbonPic13";
+            this.ribbonPic13.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic13.TabIndex = 183;
+            this.ribbonPic13.TabStop = false;
+            // 
+            // ribbonPic12
+            // 
+            this.ribbonPic12.Location = new System.Drawing.Point(226, 287);
+            this.ribbonPic12.Name = "ribbonPic12";
+            this.ribbonPic12.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic12.TabIndex = 182;
+            this.ribbonPic12.TabStop = false;
+            // 
+            // ribbonPic11
+            // 
+            this.ribbonPic11.Location = new System.Drawing.Point(187, 287);
+            this.ribbonPic11.Name = "ribbonPic11";
+            this.ribbonPic11.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic11.TabIndex = 181;
+            this.ribbonPic11.TabStop = false;
+            // 
+            // ribbonPic10
+            // 
+            this.ribbonPic10.Location = new System.Drawing.Point(148, 287);
+            this.ribbonPic10.Name = "ribbonPic10";
+            this.ribbonPic10.Size = new System.Drawing.Size(40, 40);
+            this.ribbonPic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ribbonPic10.TabIndex = 180;
+            this.ribbonPic10.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
             this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.Controls.Add(this.ribbonPic19);
+            this.Controls.Add(this.ribbonPic18);
+            this.Controls.Add(this.ribbonPic17);
+            this.Controls.Add(this.ribbonPic16);
+            this.Controls.Add(this.ribbonPic15);
+            this.Controls.Add(this.ribbonPic14);
+            this.Controls.Add(this.ribbonPic13);
+            this.Controls.Add(this.ribbonPic12);
+            this.Controls.Add(this.ribbonPic11);
+            this.Controls.Add(this.ribbonPic10);
             this.Controls.Add(this.ribbonPic9);
             this.Controls.Add(this.ribbonPic8);
             this.Controls.Add(this.ribbonPic7);
@@ -1658,6 +1778,16 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1784,6 +1914,16 @@ namespace MonCollection
         private PictureBox ribbonPic7;
         private PictureBox ribbonPic6;
         private PictureBox ribbonPic5;
+        private PictureBox ribbonPic19;
+        private PictureBox ribbonPic18;
+        private PictureBox ribbonPic17;
+        private PictureBox ribbonPic16;
+        private PictureBox ribbonPic15;
+        private PictureBox ribbonPic14;
+        private PictureBox ribbonPic13;
+        private PictureBox ribbonPic12;
+        private PictureBox ribbonPic11;
+        private PictureBox ribbonPic10;
     }
 }
 
