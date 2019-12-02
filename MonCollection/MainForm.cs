@@ -1179,7 +1179,7 @@ namespace MonCollection
         private bool GetGameMons(GameVersion version, int species)
         {
             if(version == GameVersion.Unknown)
-                return monInGame[new Tuple<GameVersion, int>(GameVersion.UM, species)];
+                return monInGame[new Tuple<GameVersion, int>(GameVersion.SH, species)];
             else
                 return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
