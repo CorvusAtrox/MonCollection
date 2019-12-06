@@ -130,7 +130,7 @@
     "SPA": 42,
     "SPD": 37,
     "SPE": 63,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 47116,
     "OT": "NASP",
     "Ball": 3,
@@ -167,7 +167,7 @@
     "SPA": 27,
     "SPD": 41,
     "SPE": 50,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 37578,
     "OT": "YUKI",
     "Ball": 4,
@@ -237,7 +237,7 @@
     "SPA": 35,
     "SPD": 38,
     "SPE": 38,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 47742,
     "OT": "WOLFI",
     "Ball": 3,
@@ -486,12 +486,47 @@
     "SPA": 19,
     "SPD": 16,
     "SPE": 17,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 39759,
     "OT": "LIAKS",
     "Ball": 4,
     "Language": 2,
     "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Nightpain",
+    "Species": 54,
+    "Level": 10,
+    "Gender": 0,
+    "Moves": [
+      10,
+      39,
+      55,
+      362
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 33,
+    "Boon": 2,
+    "Bane": 3,
+    "Nature": 7,
+    "HP": 32,
+    "ATK": 18,
+    "DEF": 16,
+    "SPA": 21,
+    "SPD": 17,
+    "SPE": 14,
+    "Gen": 8,
+    "ID": 37667,
+    "OT": "KONRAD",
+    "Ball": 25,
+    "Language": 2,
+    "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": null,
     "dynaLevel": 0,
@@ -748,7 +783,7 @@
   },
   {
     "Nickname": "Soft Dark",
-    "Species": 93,
+    "Species": 94,
     "Level": 17,
     "Gender": 0,
     "Moves": [
@@ -764,12 +799,12 @@
     "Boon": 4,
     "Bane": 1,
     "Nature": 15,
-    "HP": 42,
-    "ATK": 20,
-    "DEF": 21,
-    "SPA": 50,
-    "SPD": 25,
-    "SPE": 38,
+    "HP": 47,
+    "ATK": 25,
+    "DEF": 26,
+    "SPA": 56,
+    "SPD": 32,
+    "SPE": 43,
     "Gen": 8,
     "ID": 39759,
     "OT": "LIAKS",
@@ -891,7 +926,7 @@
     "gMax": false
   },
   {
-    "Nickname": "PINSIR",
+    "Nickname": "Pinsir",
     "Species": 127,
     "Level": 11,
     "Gender": 1,
@@ -899,7 +934,7 @@
       11,
       69,
       116,
-      431
+      479
     ],
     "Game": "HOME [CorvusOssi]",
     "AltForm": 0,
@@ -921,7 +956,9 @@
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": ["downcast"],
+    "Ribbons": [
+      "downcast"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -1329,8 +1366,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 67,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 5,
+    "Bane": 3,
     "Nature": 22,
     "HP": 168,
     "ATK": 140,
@@ -1338,7 +1375,7 @@
     "SPA": 105,
     "SPD": 112,
     "SPE": 90,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 21252,
     "OT": "Jeff",
     "Ball": 4,
@@ -1471,8 +1508,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 0,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 1,
     "Nature": 0,
     "HP": 0,
     "ATK": 0,
@@ -1480,7 +1517,7 @@
     "SPA": 0,
     "SPD": 0,
     "SPE": 0,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 0,
     "OT": "",
     "Ball": 4,
@@ -1587,7 +1624,7 @@
     "SPA": 44,
     "SPD": 36,
     "SPE": 54,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 13757,
     "OT": "BILL",
     "Ball": 2,
@@ -1914,7 +1951,7 @@
     "gMax": false
   },
   {
-    "Nickname": "TYRANITAR",
+    "Nickname": "Tyranitar",
     "Species": 248,
     "Level": 55,
     "Gender": 0,
@@ -1937,14 +1974,16 @@
     "SPA": 114,
     "SPD": 123,
     "SPE": 72,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 7249,
     "OT": "C.D.N.",
     "Ball": 1,
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "national"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -2212,8 +2251,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 62,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 3,
     "Nature": 2,
     "HP": 121,
     "ATK": 112,
@@ -2221,7 +2260,7 @@
     "SPA": 58,
     "SPD": 60,
     "SPE": 115,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 61542,
     "OT": "SNAGEM",
     "Ball": 4,
@@ -2468,7 +2507,7 @@
     "SPA": 29,
     "SPD": 25,
     "SPE": 19,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 18243,
     "OT": "SMEDLY",
     "Ball": 4,
@@ -2575,7 +2614,7 @@
     "SPA": 0,
     "SPD": 0,
     "SPE": 0,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 0,
     "OT": "",
     "Ball": 2,
@@ -2636,8 +2675,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 8,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 5,
     "Nature": 4,
     "HP": 92,
     "ATK": 88,
@@ -2645,14 +2684,16 @@
     "SPA": 80,
     "SPD": 39,
     "SPE": 45,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 20196,
     "OT": "JOHN",
     "Ball": 3,
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": ["sinnohChamp"],
+    "Ribbons": [
+      "sinnohChampionion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -3076,7 +3117,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp",
+      "sinnohChampionion",
       "footprint"
     ],
     "dynaLevel": 0,
@@ -3153,7 +3194,7 @@
     "gMax": false
   },
   {
-    "Nickname": "LOPUNNY",
+    "Nickname": "Lopunny",
     "Species": 428,
     "Level": 79,
     "Gender": 1,
@@ -3176,7 +3217,7 @@
     "SPA": 109,
     "SPD": 195,
     "SPE": 174,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 62029,
     "OT": "Bonwily",
     "Ball": 9,
@@ -3357,6 +3398,41 @@
     "Ball": 10,
     "Language": 2,
     "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Mein Buch",
+    "Species": 498,
+    "Level": 1,
+    "Gender": 0,
+    "Moves": [
+      33,
+      37,
+      372,
+      207
+    ],
+    "Game": "HOME [CorvusOssi]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 66,
+    "Boon": 2,
+    "Bane": 4,
+    "Nature": 8,
+    "HP": 12,
+    "ATK": 6,
+    "DEF": 6,
+    "SPA": 4,
+    "SPD": 6,
+    "SPE": 6,
+    "Gen": 8,
+    "ID": 40438,
+    "OT": "JnaBrta",
+    "Ball": 4,
+    "Language": 5,
+    "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": null,
     "dynaLevel": 0,
@@ -29718,7 +29794,7 @@
     "Ribbons": [
       "champion",
       "effort",
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -29827,7 +29903,7 @@
     "Ribbons": [
       "champion",
       "effort",
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -30574,7 +30650,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -31282,7 +31358,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -31391,7 +31467,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -31428,7 +31504,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -32136,7 +32212,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -32173,7 +32249,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -34421,7 +34497,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp",
+      "sinnohChampion",
       "smile"
     ],
     "dynaLevel": 0,
@@ -37088,7 +37164,7 @@
     "Ribbons": [
       "effort",
       "national",
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -41326,7 +41402,7 @@
     "PKRS_Cured": true,
     "Ribbons": [
       "effort",
-      "sinnohChamp",
+      "sinnohChampion",
       "relax",
       "footprint"
     ],
@@ -42206,7 +42282,7 @@
     "PKRS_Cured": true,
     "Ribbons": [
       "effort",
-      "sinnohChamp",
+      "sinnohChampion",
       "contestMemory",
       "alert",
       "shock",
@@ -43167,7 +43243,7 @@
     "PKRS_Cured": false,
     "Ribbons": [
       "national",
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -43204,7 +43280,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -57679,8 +57755,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 27,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 4,
+    "Bane": 3,
     "Nature": 17,
     "HP": 58,
     "ATK": 42,
@@ -57694,41 +57770,6 @@
     "Ball": 4,
     "Language": 2,
     "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "Ribbons": null,
-    "dynaLevel": 0,
-    "gMax": false
-  },
-  {
-    "Nickname": "Nightpain",
-    "Species": 54,
-    "Level": 10,
-    "Gender": 0,
-    "Moves": [
-      10,
-      39,
-      55,
-      362
-    ],
-    "Game": "Black [KONRAD]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 33,
-    "Boon": 0,
-    "Bane": 0,
-    "Nature": 7,
-    "HP": 32,
-    "ATK": 18,
-    "DEF": 16,
-    "SPA": 21,
-    "SPD": 17,
-    "SPE": 14,
-    "Gen": 5,
-    "ID": 37667,
-    "OT": "KONRAD",
-    "Ball": 25,
-    "Language": 2,
-    "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": null,
     "dynaLevel": 0,
@@ -68459,8 +68500,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 33,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 4,
     "Nature": 3,
     "HP": 185,
     "ATK": 141,
@@ -72886,7 +72927,7 @@
     "PKRS_Cured": true,
     "Ribbons": [
       "champion",
-      "sinnohChamp",
+      "sinnohChampion",
       "effort",
       "footprint"
     ],
@@ -72926,7 +72967,7 @@
     "PKRS_Cured": true,
     "Ribbons": [
       "champion",
-      "sinnohChamp",
+      "sinnohChampion",
       "effort",
       "footprint"
     ],
@@ -73393,7 +73434,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -75542,7 +75583,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp",
+      "sinnohChampion",
       "national"
     ],
     "dynaLevel": 0,
@@ -76755,7 +76796,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -76827,7 +76868,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -77150,7 +77191,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp",
+      "sinnohChampion",
       "contestMemory"
     ],
     "dynaLevel": 0,
@@ -77542,7 +77583,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -77859,7 +77900,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp",
+      "sinnohChampion",
       "effort",
       "national"
     ],
@@ -78005,7 +78046,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -78077,7 +78118,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -78183,41 +78224,6 @@
     "OT": "Crow",
     "Ball": 4,
     "Language": 2,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "Ribbons": null,
-    "dynaLevel": 0,
-    "gMax": false
-  },
-  {
-    "Nickname": "Mein Buch",
-    "Species": 498,
-    "Level": 1,
-    "Gender": 0,
-    "Moves": [
-      33,
-      37,
-      372,
-      207
-    ],
-    "Game": "Black 2 [Crow]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 66,
-    "Boon": 0,
-    "Bane": 0,
-    "Nature": 8,
-    "HP": 12,
-    "ATK": 6,
-    "DEF": 6,
-    "SPA": 4,
-    "SPD": 6,
-    "SPE": 6,
-    "Gen": 5,
-    "ID": 40438,
-    "OT": "JnaBrta",
-    "Ball": 4,
-    "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": null,
@@ -93153,8 +93159,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 28,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 5,
     "Nature": 9,
     "HP": 210,
     "ATK": 124,
@@ -93170,7 +93176,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "clevernessMaster",
       "snooze"
     ],
@@ -93246,7 +93252,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "snooze"
     ],
     "dynaLevel": 0,
@@ -94198,7 +94204,7 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
-      "sinnohChamp"
+      "sinnohChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -94485,9 +94491,9 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "champion",
-      "sinnohChamp",
+      "sinnohChampionion",
       "effort",
       "national"
     ],
@@ -94561,7 +94567,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "snooze"
     ],
     "dynaLevel": 0,
@@ -94984,7 +94990,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "snooze"
     ],
     "dynaLevel": 0,
@@ -95094,7 +95100,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "snooze"
     ],
     "dynaLevel": 0,
@@ -95272,7 +95278,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "snooze"
     ],
     "dynaLevel": 0,
@@ -95738,7 +95744,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "hoennChamp",
+      "hoennChampion",
       "national"
     ],
     "dynaLevel": 0,
@@ -96673,8 +96679,8 @@
     "AltForm": 1,
     "Shiny": false,
     "Ability": 91,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 2,
     "Nature": 6,
     "HP": 127,
     "ATK": 102,
@@ -96865,7 +96871,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": false,
     "Ribbons": [
-      "hoennChamp"
+      "hoennChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -97464,8 +97470,8 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "hoennChamp",
-      "kalosChamp",
+      "hoennChampion",
+      "kalosChampion",
       "effort"
     ],
     "dynaLevel": 0,
@@ -99297,6 +99303,41 @@
     "Nickname": "Speed Spin",
     "Species": 148,
     "Level": 20,
+    "Gender": 0,
+    "Moves": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Game": "GO [CorvusAtrox]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 0,
+    "Boon": 1,
+    "Bane": 1,
+    "Nature": 0,
+    "HP": 0,
+    "ATK": 0,
+    "DEF": 0,
+    "SPA": 0,
+    "SPD": 0,
+    "SPE": 0,
+    "Gen": 7,
+    "ID": 0,
+    "OT": "",
+    "Ball": 4,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "My Witness",
+    "Species": 148,
+    "Level": 23,
     "Gender": 0,
     "Moves": [
       0,
@@ -121422,7 +121463,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp",
+      "alolaChampion",
       "bestFriends"
     ],
     "dynaLevel": 0,
@@ -121810,7 +121851,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -121952,7 +121993,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -121989,7 +122030,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp",
+      "alolaChampion",
       "bestFriends"
     ],
     "dynaLevel": 0,
@@ -122272,7 +122313,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp",
+      "alolaChampion",
       "bestFriends"
     ],
     "dynaLevel": 0,
@@ -122664,7 +122705,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -123771,8 +123812,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 9,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 3,
+    "Bane": 2,
     "Nature": 11,
     "HP": 67,
     "ATK": 33,
@@ -123823,7 +123864,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -125225,7 +125266,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -125700,8 +125741,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 33,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 3,
+    "Bane": 2,
     "Nature": 11,
     "HP": 45,
     "ATK": 24,
@@ -125752,7 +125793,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp"
+      "alolaChampion"
     ],
     "dynaLevel": 0,
     "gMax": false
@@ -126349,7 +126390,7 @@
     "PKRS_Infected": true,
     "PKRS_Cured": true,
     "Ribbons": [
-      "alolaChamp",
+      "alolaChampion",
       "bestFriends"
     ],
     "dynaLevel": 0,
@@ -137325,8 +137366,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 9,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 5,
+    "Bane": 2,
     "Nature": 21,
     "HP": 39,
     "ATK": 28,
@@ -138013,11 +138054,11 @@
   {
     "Nickname": "Tristery",
     "Species": 51,
-    "Level": 39,
+    "Level": 48,
     "Gender": 1,
     "Moves": [
-      91,
-      389,
+      414,
+      89,
       523,
       163
     ],
@@ -138028,12 +138069,12 @@
     "Boon": 3,
     "Bane": 2,
     "Nature": 11,
-    "HP": 81,
-    "ATK": 88,
-    "DEF": 47,
-    "SPA": 44,
-    "SPD": 70,
-    "SPE": 117,
+    "HP": 97,
+    "ATK": 108,
+    "DEF": 58,
+    "SPA": 53,
+    "SPD": 85,
+    "SPE": 143,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -138190,10 +138231,10 @@
   {
     "Nickname": "That Fool",
     "Species": 67,
-    "Level": 40,
+    "Level": 45,
     "Gender": 1,
     "Moves": [
-      184,
+      339,
       530,
       282,
       70
@@ -138205,12 +138246,12 @@
     "Boon": 1,
     "Bane": 1,
     "Nature": 0,
-    "HP": 115,
-    "ATK": 97,
-    "DEF": 68,
-    "SPA": 49,
-    "SPD": 57,
-    "SPE": 49,
+    "HP": 128,
+    "ATK": 108,
+    "DEF": 76,
+    "SPA": 55,
+    "SPD": 64,
+    "SPE": 54,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -138332,11 +138373,11 @@
   {
     "Nickname": "Rugged Worm",
     "Species": 95,
-    "Level": 45,
+    "Level": 52,
     "Gender": 0,
     "Moves": [
-      201,
-      446,
+      231,
+      444,
       91,
       174
     ],
@@ -138347,12 +138388,12 @@
     "Boon": 2,
     "Bane": 1,
     "Nature": 5,
-    "HP": 95,
-    "ATK": 47,
-    "DEF": 173,
-    "SPA": 36,
-    "SPD": 53,
-    "SPE": 77,
+    "HP": 108,
+    "ATK": 54,
+    "DEF": 200,
+    "SPA": 41,
+    "SPD": 61,
+    "SPE": 88,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -138542,10 +138583,10 @@
   {
     "Nickname": "What Was It",
     "Species": 111,
-    "Level": 41,
+    "Level": 48,
     "Gender": 0,
     "Moves": [
-      36,
+      89,
       33,
       479,
       529
@@ -138557,12 +138598,12 @@
     "Boon": 4,
     "Bane": 3,
     "Nature": 17,
-    "HP": 125,
-    "ATK": 87,
-    "DEF": 85,
-    "SPA": 42,
-    "SPD": 42,
-    "SPE": 22,
+    "HP": 144,
+    "ATK": 101,
+    "DEF": 99,
+    "SPA": 48,
+    "SPD": 48,
+    "SPE": 26,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -139172,10 +139213,10 @@
   {
     "Nickname": "Don't Slip",
     "Species": 221,
-    "Level": 49,
+    "Level": 54,
     "Gender": 1,
     "Moves": [
-      175,
+      89,
       196,
       181,
       420
@@ -139187,12 +139228,12 @@
     "Boon": 2,
     "Bane": 3,
     "Nature": 7,
-    "HP": 172,
-    "ATK": 111,
-    "DEF": 107,
-    "SPA": 76,
-    "SPD": 78,
-    "SPE": 62,
+    "HP": 188,
+    "ATK": 122,
+    "DEF": 118,
+    "SPA": 83,
+    "SPD": 85,
+    "SPE": 67,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -139347,7 +139388,7 @@
   {
     "Nickname": "Sudden Ram",
     "Species": 236,
-    "Level": 36,
+    "Level": 42,
     "Gender": 0,
     "Moves": [
       252,
@@ -139362,12 +139403,12 @@
     "Boon": 2,
     "Bane": 1,
     "Nature": 5,
-    "HP": 78,
-    "ATK": 36,
-    "DEF": 33,
-    "SPA": 37,
-    "SPD": 35,
-    "SPE": 41,
+    "HP": 89,
+    "ATK": 42,
+    "DEF": 38,
+    "SPA": 42,
+    "SPD": 40,
+    "SPE": 47,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -139837,7 +139878,7 @@
   {
     "Nickname": "From Afar",
     "Species": 342,
-    "Level": 68,
+    "Level": 69,
     "Gender": 1,
     "Moves": [
       152,
@@ -139852,12 +139893,12 @@
     "Boon": 2,
     "Bane": 2,
     "Nature": 6,
-    "HP": 177,
-    "ATK": 202,
-    "DEF": 151,
-    "SPA": 158,
-    "SPD": 104,
-    "SPE": 107,
+    "HP": 179,
+    "ATK": 205,
+    "DEF": 154,
+    "SPA": 160,
+    "SPD": 105,
+    "SPE": 109,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -139866,9 +139907,10 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "effort"
     ],
-    "dynaLevel": 7,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
@@ -140331,7 +140373,7 @@
   {
     "Nickname": "Big Pharma",
     "Species": 454,
-    "Level": 69,
+    "Level": 70,
     "Gender": 0,
     "Moves": [
       398,
@@ -140346,12 +140388,12 @@
     "Boon": 4,
     "Bane": 4,
     "Nature": 18,
-    "HP": 205,
-    "ATK": 184,
-    "DEF": 119,
-    "SPA": 160,
-    "SPD": 116,
-    "SPE": 155,
+    "HP": 208,
+    "ATK": 187,
+    "DEF": 121,
+    "SPA": 162,
+    "SPD": 117,
+    "SPE": 157,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -140360,10 +140402,11 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "bestFriends",
       "effort"
     ],
-    "dynaLevel": 7,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
@@ -140894,10 +140937,10 @@
   {
     "Nickname": "OneShotBeam",
     "Species": 533,
-    "Level": 40,
+    "Level": 44,
     "Gender": 1,
     "Moves": [
-      157,
+      359,
       184,
       21,
       223
@@ -140909,12 +140952,12 @@
     "Boon": 4,
     "Bane": 1,
     "Nature": 15,
-    "HP": 125,
-    "ATK": 82,
-    "DEF": 73,
-    "SPA": 52,
-    "SPD": 56,
-    "SPE": 37,
+    "HP": 137,
+    "ATK": 90,
+    "DEF": 80,
+    "SPA": 57,
+    "SPD": 61,
+    "SPE": 41,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -140991,6 +141034,146 @@
     "ID": 460551,
     "OT": "Wendy",
     "Ball": 6,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Massage Song",
+    "Species": 537,
+    "Level": 60,
+    "Gender": 1,
+    "Moves": [
+      253,
+      392,
+      304,
+      330
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 143,
+    "Boon": 5,
+    "Bane": 1,
+    "Nature": 20,
+    "HP": 208,
+    "ATK": 115,
+    "DEF": 112,
+    "SPA": 117,
+    "SPD": 108,
+    "SPE": 101,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 3,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Quincy",
+    "Species": 538,
+    "Level": 42,
+    "Gender": 0,
+    "Moves": [
+      339,
+      480,
+      233,
+      69
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 62,
+    "Boon": 5,
+    "Bane": 3,
+    "Nature": 22,
+    "HP": 152,
+    "ATK": 98,
+    "DEF": 86,
+    "SPA": 30,
+    "SPD": 93,
+    "SPE": 42,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Blubop",
+    "Species": 539,
+    "Level": 37,
+    "Gender": 0,
+    "Moves": [
+      490,
+      339,
+      514,
+      280
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 5,
+    "Boon": 1,
+    "Bane": 4,
+    "Nature": 3,
+    "HP": 108,
+    "ATK": 113,
+    "DEF": 66,
+    "SPA": 28,
+    "SPD": 66,
+    "SPE": 73,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 4,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "Color Gang",
+    "Species": 550,
+    "Level": 60,
+    "Gender": 1,
+    "Moves": [
+      401,
+      37,
+      38,
+      457
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 1,
+    "Shiny": false,
+    "Ability": 69,
+    "Boon": 4,
+    "Bane": 4,
+    "Nature": 18,
+    "HP": 165,
+    "ATK": 117,
+    "DEF": 84,
+    "SPA": 119,
+    "SPD": 72,
+    "SPE": 128,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 15,
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
@@ -141631,6 +141814,41 @@
     "gMax": false
   },
   {
+    "Nickname": "WheatyMemory",
+    "Species": 606,
+    "Level": 60,
+    "Gender": 0,
+    "Moves": [
+      428,
+      105,
+      347,
+      472
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 140,
+    "Boon": 3,
+    "Bane": 4,
+    "Nature": 13,
+    "HP": 171,
+    "ATK": 99,
+    "DEF": 108,
+    "SPA": 153,
+    "SPD": 131,
+    "SPE": 78,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 13,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
     "Nickname": "HoldACandle",
     "Species": 607,
     "Level": 46,
@@ -141775,10 +141993,10 @@
   {
     "Nickname": "SurpriseTool",
     "Species": 618,
-    "Level": 52,
+    "Level": 58,
     "Gender": 1,
     "Moves": [
-      175,
+      90,
       279,
       340,
       779
@@ -141790,12 +142008,12 @@
     "Boon": 5,
     "Bane": 5,
     "Nature": 24,
-    "HP": 196,
-    "ATK": 108,
-    "DEF": 123,
-    "SPA": 76,
-    "SPD": 94,
-    "SPE": 50,
+    "HP": 218,
+    "ATK": 120,
+    "DEF": 137,
+    "SPA": 85,
+    "SPD": 105,
+    "SPE": 55,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -141810,11 +142028,11 @@
   {
     "Nickname": "Goby",
     "Species": 622,
-    "Level": 47,
+    "Level": 54,
     "Gender": 2,
     "Moves": [
-      707,
-      484,
+      359,
+      89,
       174,
       566
     ],
@@ -141825,12 +142043,12 @@
     "Boon": 1,
     "Bane": 4,
     "Nature": 3,
-    "HP": 120,
-    "ATK": 82,
-    "DEF": 63,
-    "SPA": 36,
-    "SPD": 52,
-    "SPE": 44,
+    "HP": 137,
+    "ATK": 94,
+    "DEF": 71,
+    "SPA": 40,
+    "SPD": 60,
+    "SPE": 50,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142055,10 +142273,10 @@
   {
     "Nickname": "Fuzzy Warmth",
     "Species": 660,
-    "Level": 54,
+    "Level": 60,
     "Gender": 0,
     "Moves": [
-      340,
+      359,
       162,
       91,
       89
@@ -142070,12 +142288,12 @@
     "Boon": 4,
     "Bane": 3,
     "Nature": 17,
-    "HP": 156,
-    "ATK": 82,
-    "DEF": 101,
-    "SPA": 82,
-    "SPD": 92,
-    "SPE": 94,
+    "HP": 172,
+    "ATK": 90,
+    "DEF": 111,
+    "SPA": 91,
+    "SPD": 102,
+    "SPE": 105,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142090,12 +142308,12 @@
   {
     "Nickname": "Big Ol' Eyes",
     "Species": 674,
-    "Level": 36,
+    "Level": 42,
     "Gender": 1,
     "Moves": [
-      34,
       242,
       269,
+      575,
       509
     ],
     "Game": "Shield [Wendy]",
@@ -142105,12 +142323,12 @@
     "Boon": 3,
     "Bane": 3,
     "Nature": 12,
-    "HP": 103,
-    "ATK": 66,
-    "DEF": 60,
-    "SPA": 41,
-    "SPD": 48,
-    "SPE": 45,
+    "HP": 119,
+    "ATK": 77,
+    "DEF": 69,
+    "SPA": 47,
+    "SPD": 56,
+    "SPE": 52,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142407,11 +142625,11 @@
   {
     "Nickname": "Drama H",
     "Species": 701,
-    "Level": 43,
+    "Level": 47,
     "Gender": 0,
     "Moves": [
-      355,
       14,
+      560,
       340,
       66
     ],
@@ -142422,12 +142640,12 @@
     "Boon": 2,
     "Bane": 4,
     "Nature": 8,
-    "HP": 133,
-    "ATK": 87,
-    "DEF": 82,
-    "SPA": 72,
-    "SPD": 72,
-    "SPE": 119,
+    "HP": 144,
+    "ATK": 95,
+    "DEF": 90,
+    "SPA": 80,
+    "SPD": 78,
+    "SPE": 130,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142582,12 +142800,12 @@
   {
     "Nickname": "Frisky Flap",
     "Species": 714,
-    "Level": 29,
+    "Level": 32,
     "Gender": 1,
     "Moves": [
-      17,
       44,
       314,
+      162,
       18
     ],
     "Game": "Shield [Wendy]",
@@ -142597,12 +142815,12 @@
     "Boon": 2,
     "Bane": 4,
     "Nature": 8,
-    "HP": 64,
-    "ATK": 23,
-    "DEF": 37,
-    "SPA": 29,
-    "SPD": 28,
-    "SPE": 43,
+    "HP": 69,
+    "ATK": 25,
+    "DEF": 40,
+    "SPA": 32,
+    "SPD": 30,
+    "SPE": 47,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142827,10 +143045,10 @@
   {
     "Nickname": "Dirt Mule",
     "Species": 749,
-    "Level": 42,
+    "Level": 51,
     "Gender": 0,
     "Moves": [
-      68,
+      276,
       89,
       25,
       667
@@ -142842,12 +143060,12 @@
     "Boon": 5,
     "Bane": 1,
     "Nature": 20,
-    "HP": 113,
-    "ATK": 86,
-    "DEF": 74,
-    "SPA": 46,
-    "SPD": 60,
-    "SPE": 52,
+    "HP": 135,
+    "ATK": 103,
+    "DEF": 89,
+    "SPA": 54,
+    "SPD": 72,
+    "SPE": 62,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -142967,12 +143185,12 @@
   {
     "Nickname": "Rare Plush",
     "Species": 759,
-    "Level": 37,
+    "Level": 43,
     "Gender": 0,
     "Moves": [
-      175,
       70,
       37,
+      220,
       395
     ],
     "Game": "Shield [Wendy]",
@@ -142982,12 +143200,12 @@
     "Boon": 4,
     "Bane": 2,
     "Nature": 16,
-    "HP": 110,
-    "ATK": 67,
-    "DEF": 38,
-    "SPA": 45,
-    "SPD": 48,
-    "SPE": 53,
+    "HP": 126,
+    "ATK": 78,
+    "DEF": 45,
+    "SPA": 51,
+    "SPD": 55,
+    "SPE": 61,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -143210,9 +143428,44 @@
     "gMax": false
   },
   {
+    "Nickname": "Giant Fist",
+    "Species": 771,
+    "Level": 60,
+    "Gender": 1,
+    "Moves": [
+      68,
+      262,
+      487,
+      92
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 109,
+    "Boon": 5,
+    "Bane": 4,
+    "Nature": 23,
+    "HP": 154,
+    "ATK": 84,
+    "DEF": 170,
+    "SPA": 53,
+    "SPD": 196,
+    "SPE": 29,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 8,
+    "gMax": false
+  },
+  {
     "Nickname": "Peter",
     "Species": 812,
-    "Level": 69,
+    "Level": 70,
     "Gender": 0,
     "Moves": [
       667,
@@ -143227,12 +143480,12 @@
     "Boon": 4,
     "Bane": 4,
     "Nature": 18,
-    "HP": 250,
-    "ATK": 212,
-    "DEF": 145,
-    "SPA": 122,
-    "SPD": 125,
-    "SPE": 150,
+    "HP": 254,
+    "ATK": 215,
+    "DEF": 147,
+    "SPA": 124,
+    "SPD": 126,
+    "SPE": 152,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -143241,10 +143494,11 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "bestFriends",
       "effort"
     ],
-    "dynaLevel": 8,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
@@ -143915,7 +144169,7 @@
   {
     "Nickname": "Rev Up",
     "Species": 838,
-    "Level": 69,
+    "Level": 71,
     "Gender": 0,
     "Moves": [
       682,
@@ -143930,12 +144184,12 @@
     "Boon": 3,
     "Bane": 4,
     "Nature": 13,
-    "HP": 201,
-    "ATK": 127,
-    "DEF": 152,
-    "SPA": 104,
-    "SPD": 124,
-    "SPE": 110,
+    "HP": 206,
+    "ATK": 131,
+    "DEF": 156,
+    "SPA": 107,
+    "SPD": 127,
+    "SPE": 113,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -143944,16 +144198,17 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "bestFriends",
       "effort"
     ],
-    "dynaLevel": 7,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
     "Nickname": "Smoothies",
     "Species": 840,
-    "Level": 45,
+    "Level": 47,
     "Gender": 0,
     "Moves": [
       110,
@@ -143968,12 +144223,12 @@
     "Boon": 3,
     "Bane": 4,
     "Nature": 13,
-    "HP": 100,
-    "ATK": 46,
-    "DEF": 88,
-    "SPA": 45,
-    "SPD": 88,
-    "SPE": 26,
+    "HP": 104,
+    "ATK": 48,
+    "DEF": 91,
+    "SPA": 46,
+    "SPD": 50,
+    "SPE": 27,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -143988,7 +144243,7 @@
   {
     "Nickname": "AppleOfMyEye",
     "Species": 842,
-    "Level": 50,
+    "Level": 51,
     "Gender": 0,
     "Moves": [
       29,
@@ -144003,11 +144258,11 @@
     "Boon": 2,
     "Bane": 4,
     "Nature": 8,
-    "HP": 178,
-    "ATK": 93,
-    "DEF": 102,
-    "SPA": 95,
-    "SPD": 100,
+    "HP": 181,
+    "ATK": 94,
+    "DEF": 103,
+    "SPA": 97,
+    "SPD": 101,
     "SPE": 38,
     "Gen": 8,
     "ID": 460551,
@@ -144058,11 +144313,11 @@
   {
     "Nickname": "That'sNotFun",
     "Species": 844,
-    "Level": 47,
+    "Level": 54,
     "Gender": 1,
     "Moves": [
-      91,
-      137,
+      489,
+      328,
       21,
       201
     ],
@@ -144073,12 +144328,12 @@
     "Boon": 1,
     "Bane": 1,
     "Nature": 0,
-    "HP": 135,
-    "ATK": 119,
-    "DEF": 137,
-    "SPA": 76,
-    "SPD": 75,
-    "SPE": 77,
+    "HP": 154,
+    "ATK": 136,
+    "DEF": 156,
+    "SPA": 87,
+    "SPD": 86,
+    "SPE": 88,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144338,11 +144593,11 @@
   {
     "Nickname": "Permanence",
     "Species": 852,
-    "Level": 43,
+    "Level": 47,
     "Gender": 0,
     "Moves": [
-      269,
       179,
+      276,
       339,
       66
     ],
@@ -144353,12 +144608,12 @@
     "Boon": 3,
     "Bane": 2,
     "Nature": 11,
-    "HP": 106,
-    "ATK": 68,
-    "DEF": 59,
-    "SPA": 51,
-    "SPD": 50,
-    "SPE": 49,
+    "HP": 115,
+    "ATK": 74,
+    "DEF": 64,
+    "SPA": 55,
+    "SPD": 54,
+    "SPE": 53,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144620,7 +144875,7 @@
   {
     "Nickname": "Ahtohallan",
     "Species": 866,
-    "Level": 68,
+    "Level": 69,
     "Gender": 1,
     "Moves": [
       303,
@@ -144635,12 +144890,12 @@
     "Boon": 2,
     "Bane": 3,
     "Nature": 7,
-    "HP": 204,
-    "ATK": 159,
-    "DEF": 163,
-    "SPA": 182,
-    "SPD": 170,
-    "SPE": 118,
+    "HP": 207,
+    "ATK": 161,
+    "DEF": 166,
+    "SPA": 185,
+    "SPD": 173,
+    "SPE": 120,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144649,15 +144904,16 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "effort"
     ],
-    "dynaLevel": 7,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
     "Nickname": "Ichika",
     "Species": 869,
-    "Level": 69,
+    "Level": 70,
     "Gender": 1,
     "Moves": [
       605,
@@ -144672,12 +144928,12 @@
     "Boon": 4,
     "Bane": 4,
     "Nature": 18,
-    "HP": 192,
-    "ATK": 122,
-    "DEF": 123,
-    "SPA": 175,
-    "SPD": 196,
-    "SPE": 109,
+    "HP": 194,
+    "ATK": 124,
+    "DEF": 125,
+    "SPA": 177,
+    "SPD": 198,
+    "SPE": 111,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144686,19 +144942,20 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": [
+      "galarChampion",
       "bestFriends",
       "effort"
     ],
-    "dynaLevel": 7,
+    "dynaLevel": 10,
     "gMax": false
   },
   {
     "Nickname": "Game We Play",
     "Species": 870,
-    "Level": 44,
+    "Level": 48,
     "Gender": 2,
     "Moves": [
-      203,
+      334,
       179,
       660,
       748
@@ -144710,12 +144967,12 @@
     "Boon": 2,
     "Bane": 4,
     "Nature": 8,
-    "HP": 112,
-    "ATK": 97,
-    "DEF": 110,
-    "SPA": 70,
-    "SPD": 59,
-    "SPE": 83,
+    "HP": 121,
+    "ATK": 105,
+    "DEF": 118,
+    "SPA": 76,
+    "SPD": 64,
+    "SPE": 90,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144870,12 +145127,12 @@
   {
     "Nickname": "SupportGroup",
     "Species": 886,
-    "Level": 53,
+    "Level": 54,
     "Gender": 0,
     "Moves": [
-      98,
       611,
       310,
+      36,
       406
     ],
     "Game": "Shield [Wendy]",
@@ -144885,12 +145142,12 @@
     "Boon": 1,
     "Bane": 4,
     "Nature": 3,
-    "HP": 149,
-    "ATK": 111,
-    "DEF": 63,
-    "SPA": 72,
-    "SPD": 72,
-    "SPE": 121,
+    "HP": 152,
+    "ATK": 113,
+    "DEF": 64,
+    "SPA": 73,
+    "SPD": 73,
+    "SPE": 123,
     "Gen": 8,
     "ID": 460551,
     "OT": "Wendy",
@@ -144930,6 +145187,41 @@
     "ID": 460551,
     "OT": "Wendy",
     "Ball": 10,
+    "Language": 2,
+    "PKRS_Infected": false,
+    "PKRS_Cured": false,
+    "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "AggressivDig",
+    "Species": 51,
+    "Level": 57,
+    "Gender": 0,
+    "Moves": [
+      91,
+      89,
+      389,
+      90
+    ],
+    "Game": "Shield [Wendy]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 159,
+    "Boon": 4,
+    "Bane": 4,
+    "Nature": 18,
+    "HP": 122,
+    "ATK": 136,
+    "DEF": 79,
+    "SPA": 79,
+    "SPD": 102,
+    "SPE": 159,
+    "Gen": 8,
+    "ID": 460551,
+    "OT": "Wendy",
+    "Ball": 3,
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
