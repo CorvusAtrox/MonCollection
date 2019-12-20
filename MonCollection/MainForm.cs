@@ -138,7 +138,7 @@ namespace MonCollection
                         monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
                 }
             }
-            majorGenderDiff = new int[]{ 521, 592, 593, 668, 678 };
+            majorGenderDiff = new int[]{ 521, 592, 593, 668 };
             minorGenderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
                                          111, 112, 118, 119, 123, 129, 130, 154, 165, 166, 178, 185,
                                          186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214, 215,
@@ -147,7 +147,7 @@ namespace MonCollection
                                          397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473, 133};
-            noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
+            noDiff = new int[] { 414, 664, 665 };
             languages = new string[]{ "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
         }
 
@@ -1629,13 +1629,26 @@ namespace MonCollection
             FormSpeciesInfo form = new FormSpeciesInfo();
 
             int sp = (int)comboBoxSpecies.SelectedValue;
-            int af = comboBoxForm.SelectedIndex; 
-
+            int af = comboBoxForm.SelectedIndex;
+            int gd = -1;
+            if (majorGenderDiff.Contains(sp))
+                gd = (int)labelGender.Tag;
+            if (noDiff.Contains(sp))
+                af = -1;
             form.spImage = pictureBoxIcon.Image;
             form.spFormName = comboBoxSpecies.Text;
             if(comboBoxForm.Visible == true)
             {
                 form.spFormName += " - " + comboBoxForm.Text;
+            }
+            switch (gd)
+            {
+                case 0:
+                    form.spFormName += " - Male";
+                    break;
+                case 1:
+                    form.spFormName += " - Female";
+                    break;
             }
 
             List<int> balls = new List<int>();
@@ -1647,7 +1660,7 @@ namespace MonCollection
 
             foreach(var mon in PkmData)
             {
-                if(mon.Species == sp && mon.AltForm == af)
+                if(mon.Species == sp && mon.AltForm == af && (mon.Gender == gd || gd == -1))
                 {
                     abilities.Add(mon.Ability);
                     balls.Add(mon.Ball);
