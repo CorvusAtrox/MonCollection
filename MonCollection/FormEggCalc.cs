@@ -462,6 +462,8 @@ namespace MonCollection
             }
             mon.Species = data.Species;
             mon.AltForm = data.AltForm;
+            if (mon.Species == 869) //Alcremie
+                mon.AltForm = mon.AltForm / 7;
             mon.CurrentLevel = data.Level;
             mon.Version = (int)version;
             return mon;

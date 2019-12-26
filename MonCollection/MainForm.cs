@@ -316,6 +316,8 @@ namespace MonCollection
             }
             mon.Species = data.Species;
             mon.AltForm = data.AltForm;
+            if (mon.Species == 869) //Alcremie
+                mon.AltForm = mon.AltForm / 7;
             mon.CurrentLevel = data.Level;
             if(gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;
@@ -1644,10 +1646,10 @@ namespace MonCollection
             switch (gd)
             {
                 case 0:
-                    form.spFormName += " - Male";
+                    form.spFormName += " - M";
                     break;
                 case 1:
-                    form.spFormName += " - Female";
+                    form.spFormName += " - F";
                     break;
             }
 
