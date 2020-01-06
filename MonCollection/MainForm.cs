@@ -920,6 +920,8 @@ namespace MonCollection
         public void SpeciesGameSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -932,6 +934,8 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => mon.ID)
                              .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -944,6 +948,8 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => mon.Gen)
                              .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -957,6 +963,8 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
 
@@ -967,6 +975,8 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -1626,7 +1636,7 @@ namespace MonCollection
             results.Show();
         }
 
-        private void buttonMonInfo_Click(object sender, EventArgs e)
+        private void ButtonMonInfo_Click(object sender, EventArgs e)
         {
             FormSpeciesInfo form = new FormSpeciesInfo();
 
@@ -1639,7 +1649,7 @@ namespace MonCollection
                 af = -1;
             form.spImage = pictureBoxIcon.Image;
             form.spFormName = comboBoxSpecies.Text;
-            if(comboBoxForm.Visible == true)
+            if(comboBoxForm.Visible == true && af != -1)
             {
                 form.spFormName += " - " + comboBoxForm.Text;
             }
@@ -1662,7 +1672,7 @@ namespace MonCollection
 
             foreach(var mon in PkmData)
             {
-                if(mon.Species == sp && mon.AltForm == af && (mon.Gender == gd || gd == -1))
+                if(mon.Species == sp && (mon.AltForm == af || af == -1) && (mon.Gender == gd || gd == -1))
                 {
                     abilities.Add(mon.Ability);
                     balls.Add(mon.Ball);
@@ -1726,7 +1736,7 @@ namespace MonCollection
             form.abilityList.Sort();
             form.moveList.Sort();
 
-            form.loadData();
+            form.LoadData();
 
             form.Show();
         }

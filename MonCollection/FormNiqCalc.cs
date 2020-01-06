@@ -17,6 +17,8 @@ namespace MonCollection
         private string game;
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private List<ComboBox> moveBoxes;
+        private int[] majorGenderDiff;
+        private int[] noDiff;
 
         public Dictionary<string, SaveInfo> gameDict;
 
@@ -33,7 +35,7 @@ namespace MonCollection
         {
             ComboBox[] cbs =
             {
-                comboBoxSpecies
+                comboBoxBalls, comboBoxSpecies, comboBoxLang, comboBoxAbility, comboBoxNature
             };
 
             moveBoxes = new List<ComboBox>{ comboBoxMove1, comboBoxMove2, comboBoxMove3, comboBoxMove4, comboBoxMoveNew };
@@ -46,7 +48,12 @@ namespace MonCollection
 
             var source = GameInfo.FilteredSources;
 
+            comboBoxLang.DataSource = source.Languages;
+
+            comboBoxBalls.DataSource = new BindingSource(source.Balls, null);
             comboBoxSpecies.DataSource = new BindingSource(source.Species, null);
+            comboBoxAbility.DataSource = new BindingSource(source.Abilities, null);
+            comboBoxNature.DataSource = new BindingSource(source.Natures, null);
 
 
             // Set the Move ComboBoxes too..
@@ -57,6 +64,9 @@ namespace MonCollection
 
         private void InitializeGameDict()
         {
+            majorGenderDiff = new int[] { 521, 592, 593, 668 };
+            noDiff = new int[] { 414, 664, 665 };
+
             gameDict = new Dictionary<string, SaveInfo>();
             StreamReader dict = new StreamReader(Settings.Default.mons + "/mons.ini");
             string l;
@@ -114,7 +124,14 @@ namespace MonCollection
 
             comboBoxSpecies.SelectedValue = mon.Species;
 
-            var query1 = PkmDB.Where(pk => pk.Species == mon.Species);
+            bool gd = true;
+            bool nd = false;
+            if (majorGenderDiff.Contains(mon.Species))
+                gd = false;
+            if (noDiff.Contains(mon.Species))
+                nd = true;
+
+            var query1 = PkmDB.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
             var query1f = PkmDB.Where(pk => family.Contains(pk.Species));
             var query2 = query1.Where(pk => pk.Game == game);
             var query2f = query1f.Where(pk => pk.Game == game);
@@ -140,10 +157,10 @@ namespace MonCollection
             if (mon.Moves[0] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[0] || pk.Moves[1] == mon.Moves[0] || pk.Moves[2] == mon.Moves[0] || pk.Moves[3] == mon.Moves[0]);
-                query1a = query1.Where(pk => pk.Species == mon.Species);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query1f = query1.Where(pk => family.Contains(pk.Species));
                 query2 = query1.Where(pk => pk.Game == game);
-                query2a = query2.Where(pk => pk.Species == mon.Species);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
 
                 labelMove1.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
@@ -154,10 +171,10 @@ namespace MonCollection
             if (mon.Moves[1] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[1] || pk.Moves[1] == mon.Moves[1] || pk.Moves[2] == mon.Moves[1] || pk.Moves[3] == mon.Moves[1]);
-                query1a = query1.Where(pk => pk.Species == mon.Species);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query1f = query1.Where(pk => family.Contains(pk.Species));
                 query2 = query1.Where(pk => pk.Game == game);
-                query2a = query2.Where(pk => pk.Species == mon.Species);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
 
                 labelMove2.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
@@ -168,10 +185,10 @@ namespace MonCollection
             if (mon.Moves[2] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[2] || pk.Moves[1] == mon.Moves[2] || pk.Moves[2] == mon.Moves[2] || pk.Moves[3] == mon.Moves[2]);
-                query1a = query1.Where(pk => pk.Species == mon.Species);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query1f = query1.Where(pk => family.Contains(pk.Species));
                 query2 = query1.Where(pk => pk.Game == game);
-                query2a = query2.Where(pk => pk.Species == mon.Species);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
 
                 labelMove3.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
@@ -182,13 +199,71 @@ namespace MonCollection
             if (mon.Moves[3] > 0)
             {
                 query1 = PkmDB.Where(pk => pk.Moves[0] == mon.Moves[3] || pk.Moves[1] == mon.Moves[3] || pk.Moves[2] == mon.Moves[3] || pk.Moves[3] == mon.Moves[3]);
-                query1a = query1.Where(pk => pk.Species == mon.Species);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query1f = query1.Where(pk => family.Contains(pk.Species));
                 query2 = query1.Where(pk => pk.Game == game);
-                query2a = query2.Where(pk => pk.Species == mon.Species);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
 
                 labelMove4.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
+            }
+
+            comboBoxLang.SelectedValue = mon.Language;
+
+            query1 = PkmDB.Where(pk => pk.Language == mon.Language);
+            query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query1f = query1.Where(pk => family.Contains(pk.Species));
+            query2 = query1.Where(pk => pk.Game == game);
+            query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query2f = query2.Where(pk => family.Contains(pk.Species));
+
+            labelLangVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                                            , query1.Count(), query1f.Count(), query1a.Count(),
+                                                query2.Count(), query2f.Count(), query2a.Count());
+
+            comboBoxBalls.SelectedValue = mon.Ball;
+
+            query1 = PkmDB.Where(pk => pk.Ball == mon.Ball || pk.Ball == 0 && mon.Ball == 4);
+            query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query1f = query1.Where(pk => family.Contains(pk.Species));
+            query2 = query1.Where(pk => pk.Game == game);
+            query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query2f = query2.Where(pk => family.Contains(pk.Species));
+
+            labelBallVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                                            , query1.Count(), query1f.Count(), query1a.Count(),
+                                                query2.Count(), query2f.Count(), query2a.Count());
+
+            comboBoxAbility.SelectedValue = mon.Ability;
+
+            if (mon.Ability > 0)
+            {
+                query1 = PkmDB.Where(pk => pk.Ability == mon.Ability);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query1f = query1.Where(pk => family.Contains(pk.Species));
+                query2 = query1.Where(pk => pk.Game == game);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query2f = query2.Where(pk => family.Contains(pk.Species));
+
+                labelAbilityVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                                                , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query2.Count(), query2f.Count(), query2a.Count());
+            }
+
+            comboBoxNature.SelectedValue = mon.Nature;
+
+            if (mon.Nature > 0)
+            {
+                query1 = PkmDB.Where(pk => pk.Nature == mon.Nature);
+                query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query1f = query1.Where(pk => family.Contains(pk.Species));
+                query2 = query1.Where(pk => pk.Game == game);
+                query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query2f = query2.Where(pk => family.Contains(pk.Species));
+
+                labelNatureVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
@@ -250,16 +325,23 @@ namespace MonCollection
 
                 MonData mon = PkmDB[ind];
 
+                bool gd = true;
+                bool nd = false;
+                if (majorGenderDiff.Contains(mon.Species))
+                    gd = false;
+                if (noDiff.Contains(mon.Species))
+                    nd = true;
+
                 int[] family = monFamily.GetFamily(mon.Species);
 
                 if ((int)comboBoxMoveNew.SelectedValue > 0)
                 {
                     query1 = PkmDB.Where(pk => pk.Moves[0] == (int)comboBoxMoveNew.SelectedValue || pk.Moves[1] == (int)comboBoxMoveNew.SelectedValue
                                             || pk.Moves[2] == (int)comboBoxMoveNew.SelectedValue || pk.Moves[3] == (int)comboBoxMoveNew.SelectedValue);
-                    query1a = query1.Where(pk => pk.Species == mon.Species);
+                    query1a = query1.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                     query1f = query1.Where(pk => family.Contains(pk.Species));
                     query2 = query1.Where(pk => pk.Game == game);
-                    query2a = query2.Where(pk => pk.Species == mon.Species);
+                    query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                     query2f = query2.Where(pk => family.Contains(pk.Species));
 
                     labelNewMove.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"

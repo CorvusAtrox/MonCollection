@@ -1461,7 +1461,7 @@ namespace MonCollection
             this.buttonMonInfo.TabIndex = 174;
             this.buttonMonInfo.Text = "Mon Data";
             this.buttonMonInfo.UseVisualStyleBackColor = true;
-            this.buttonMonInfo.Click += new System.EventHandler(this.buttonMonInfo_Click);
+            this.buttonMonInfo.Click += new System.EventHandler(this.ButtonMonInfo_Click);
             // 
             // ribbonPic9
             // 

@@ -32,7 +32,7 @@ namespace MonCollection
                                          pictureBall15, pictureBall16, pictureBall17, pictureBall18, pictureBall19};
         }
 
-        public void loadData()
+        public void LoadData()
         {
             pictureBoxIcon.Image = spImage;
             if (pictureBoxIcon.Image != null)
