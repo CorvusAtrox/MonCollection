@@ -157,7 +157,7 @@ namespace MonCollection
                 gv = GameVersion.SH;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
-            PKMConverter.Trainer = ver;
+            PKMConverter.SetPrimaryTrainer(ver);
             GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources);
 
             // Update Legality Strings
