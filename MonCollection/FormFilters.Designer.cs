@@ -40,7 +40,7 @@
             // 
             // listViewFilters
             // 
-            this.listViewFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listViewFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listViewFilters.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderItem,
             this.columnHeaderVisible});
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(253, 301);
             this.Controls.Add(this.buttonInvert);
             this.Controls.Add(this.buttonClearAll);

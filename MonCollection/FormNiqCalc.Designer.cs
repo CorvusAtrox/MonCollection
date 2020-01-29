@@ -122,7 +122,7 @@
             // 
             // comboBoxSpecies
             // 
-            this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxSpecies.FormattingEnabled = true;
             this.comboBoxSpecies.Location = new System.Drawing.Point(66, 60);
             this.comboBoxSpecies.Name = "comboBoxSpecies";
@@ -141,7 +141,7 @@
             // 
             // comboBoxMove1
             // 
-            this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove1.FormattingEnabled = true;
             this.comboBoxMove1.Location = new System.Drawing.Point(40, 134);
             this.comboBoxMove1.Name = "comboBoxMove1";
@@ -150,7 +150,7 @@
             // 
             // comboBoxMove2
             // 
-            this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove2.FormattingEnabled = true;
             this.comboBoxMove2.Location = new System.Drawing.Point(40, 165);
             this.comboBoxMove2.Name = "comboBoxMove2";
@@ -159,7 +159,7 @@
             // 
             // comboBoxMove3
             // 
-            this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove3.FormattingEnabled = true;
             this.comboBoxMove3.Location = new System.Drawing.Point(40, 195);
             this.comboBoxMove3.Name = "comboBoxMove3";
@@ -168,7 +168,7 @@
             // 
             // comboBoxMove4
             // 
-            this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove4.FormattingEnabled = true;
             this.comboBoxMove4.Location = new System.Drawing.Point(40, 222);
             this.comboBoxMove4.Name = "comboBoxMove4";
@@ -197,7 +197,7 @@
             // 
             // comboBoxMoveNew
             // 
-            this.comboBoxMoveNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMoveNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMoveNew.FormattingEnabled = true;
             this.comboBoxMoveNew.Location = new System.Drawing.Point(38, 272);
             this.comboBoxMoveNew.Name = "comboBoxMoveNew";
@@ -229,7 +229,7 @@
             // 
             this.comboBoxBalls.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBalls.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxBalls.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxBalls.FormattingEnabled = true;
             this.comboBoxBalls.Location = new System.Drawing.Point(351, 165);
@@ -241,7 +241,7 @@
             // labelBall
             // 
             this.labelBall.AutoSize = true;
-            this.labelBall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelBall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBall.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelBall.Location = new System.Drawing.Point(316, 168);
@@ -274,7 +274,7 @@
             // 
             this.comboBoxLang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxLang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxLang.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxLang.FormattingEnabled = true;
             this.comboBoxLang.Location = new System.Drawing.Point(356, 137);
@@ -286,7 +286,7 @@
             // labelLanguage
             // 
             this.labelLanguage.AutoSize = true;
-            this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelLanguage.Location = new System.Drawing.Point(286, 140);
@@ -309,7 +309,7 @@
             // 
             this.comboBoxAbility.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxAbility.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxAbility.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxAbility.FormattingEnabled = true;
             this.comboBoxAbility.Location = new System.Drawing.Point(351, 195);
@@ -321,7 +321,7 @@
             // labelAbility
             // 
             this.labelAbility.AutoSize = true;
-            this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAbility.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelAbility.Location = new System.Drawing.Point(303, 198);
@@ -344,7 +344,7 @@
             // 
             this.comboBoxNature.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxNature.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxNature.ForeColor = System.Drawing.SystemColors.ControlText;
             this.comboBoxNature.FormattingEnabled = true;
             this.comboBoxNature.Location = new System.Drawing.Point(351, 222);
@@ -356,7 +356,7 @@
             // labelNature
             // 
             this.labelNature.AutoSize = true;
-            this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNature.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelNature.Location = new System.Drawing.Point(299, 225);
@@ -369,7 +369,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelNatureVal);
             this.Controls.Add(this.comboBoxNature);

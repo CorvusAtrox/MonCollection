@@ -221,7 +221,7 @@ namespace MonCollection
             // labelNickname
             // 
             this.labelNickname.AutoSize = true;
-            this.labelNickname.BackColor = System.Drawing.Color.Firebrick;
+            this.labelNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNickname.ForeColor = System.Drawing.Color.White;
             this.labelNickname.Location = new System.Drawing.Point(176, 37);
@@ -233,7 +233,7 @@ namespace MonCollection
             // labelBall
             // 
             this.labelBall.AutoSize = true;
-            this.labelBall.BackColor = System.Drawing.Color.Firebrick;
+            this.labelBall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBall.ForeColor = System.Drawing.Color.White;
             this.labelBall.Location = new System.Drawing.Point(31, 37);
@@ -246,7 +246,7 @@ namespace MonCollection
             // 
             this.comboBoxBalls.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxBalls.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxBalls.BackColor = System.Drawing.Color.Firebrick;
+            this.comboBoxBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.comboBoxBalls.ForeColor = System.Drawing.Color.White;
             this.comboBoxBalls.FormattingEnabled = true;
             this.comboBoxBalls.Location = new System.Drawing.Point(66, 34);
@@ -267,7 +267,7 @@ namespace MonCollection
             // 
             this.comboBoxSpecies.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxSpecies.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
             this.comboBoxSpecies.FormattingEnabled = true;
             this.comboBoxSpecies.Location = new System.Drawing.Point(134, 96);
@@ -279,7 +279,7 @@ namespace MonCollection
             // labelSpecies
             // 
             this.labelSpecies.AutoSize = true;
-            this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpecies.ForeColor = System.Drawing.Color.Black;
             this.labelSpecies.Location = new System.Drawing.Point(75, 99);
@@ -300,7 +300,7 @@ namespace MonCollection
             // labelLevel
             // 
             this.labelLevel.AutoSize = true;
-            this.labelLevel.BackColor = System.Drawing.Color.Firebrick;
+            this.labelLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLevel.ForeColor = System.Drawing.Color.White;
             this.labelLevel.Location = new System.Drawing.Point(316, 37);
@@ -311,7 +311,7 @@ namespace MonCollection
             // 
             // textBoxLevel
             // 
-            this.textBoxLevel.BackColor = System.Drawing.Color.Firebrick;
+            this.textBoxLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.textBoxLevel.ForeColor = System.Drawing.Color.White;
             this.textBoxLevel.Location = new System.Drawing.Point(347, 34);
             this.textBoxLevel.Name = "textBoxLevel";
@@ -322,7 +322,7 @@ namespace MonCollection
             // labelGender
             // 
             this.labelGender.AutoSize = true;
-            this.labelGender.BackColor = System.Drawing.Color.Firebrick;
+            this.labelGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGender.ForeColor = System.Drawing.Color.White;
             this.labelGender.Location = new System.Drawing.Point(378, 37);
@@ -336,7 +336,7 @@ namespace MonCollection
             // 
             this.comboBoxLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
             this.comboBoxLanguage.FormattingEnabled = true;
             this.comboBoxLanguage.Location = new System.Drawing.Point(467, 33);
@@ -348,7 +348,7 @@ namespace MonCollection
             // labelLanguage
             // 
             this.labelLanguage.AutoSize = true;
-            this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLanguage.ForeColor = System.Drawing.Color.White;
             this.labelLanguage.Location = new System.Drawing.Point(397, 37);
@@ -361,7 +361,7 @@ namespace MonCollection
             // 
             this.comboBoxAbility.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxAbility.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxAbility.ForeColor = System.Drawing.Color.Black;
             this.comboBoxAbility.FormattingEnabled = true;
             this.comboBoxAbility.Location = new System.Drawing.Point(55, 121);
@@ -373,7 +373,7 @@ namespace MonCollection
             // labelAbility
             // 
             this.labelAbility.AutoSize = true;
-            this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAbility.ForeColor = System.Drawing.Color.Black;
             this.labelAbility.Location = new System.Drawing.Point(7, 124);
@@ -386,7 +386,7 @@ namespace MonCollection
             // 
             this.comboBoxNature.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxNature.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxNature.ForeColor = System.Drawing.Color.Black;
             this.comboBoxNature.FormattingEnabled = true;
             this.comboBoxNature.Location = new System.Drawing.Point(59, 142);
@@ -398,7 +398,7 @@ namespace MonCollection
             // labelNature
             // 
             this.labelNature.AutoSize = true;
-            this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNature.ForeColor = System.Drawing.Color.Black;
             this.labelNature.Location = new System.Drawing.Point(7, 145);
@@ -411,7 +411,7 @@ namespace MonCollection
             // 
             this.comboBoxMove1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove1.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove1.FormattingEnabled = true;
@@ -425,7 +425,7 @@ namespace MonCollection
             // labelMoves
             // 
             this.labelMoves.AutoSize = true;
-            this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoves.ForeColor = System.Drawing.Color.Black;
             this.labelMoves.Location = new System.Drawing.Point(383, 266);
@@ -438,7 +438,7 @@ namespace MonCollection
             // 
             this.comboBoxMove2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove2.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove2.FormattingEnabled = true;
@@ -453,7 +453,7 @@ namespace MonCollection
             // 
             this.comboBoxMove4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove4.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove4.FormattingEnabled = true;
@@ -468,7 +468,7 @@ namespace MonCollection
             // 
             this.comboBoxMove3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMove3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.comboBoxMove3.ForeColor = System.Drawing.Color.Black;
             this.comboBoxMove3.FormattingEnabled = true;
@@ -870,7 +870,7 @@ namespace MonCollection
             // labelHP
             // 
             this.labelHP.AutoSize = true;
-            this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHP.ForeColor = System.Drawing.Color.Black;
             this.labelHP.Location = new System.Drawing.Point(7, 212);
@@ -882,7 +882,7 @@ namespace MonCollection
             // labelAttack
             // 
             this.labelAttack.AutoSize = true;
-            this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAttack.ForeColor = System.Drawing.Color.Black;
             this.labelAttack.Location = new System.Drawing.Point(7, 238);
@@ -894,7 +894,7 @@ namespace MonCollection
             // labelDefense
             // 
             this.labelDefense.AutoSize = true;
-            this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDefense.ForeColor = System.Drawing.Color.Black;
             this.labelDefense.Location = new System.Drawing.Point(7, 264);
@@ -906,7 +906,7 @@ namespace MonCollection
             // labelSpAtk
             // 
             this.labelSpAtk.AutoSize = true;
-            this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpAtk.ForeColor = System.Drawing.Color.Black;
             this.labelSpAtk.Location = new System.Drawing.Point(7, 290);
@@ -918,7 +918,7 @@ namespace MonCollection
             // labelSpDef
             // 
             this.labelSpDef.AutoSize = true;
-            this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpDef.ForeColor = System.Drawing.Color.Black;
             this.labelSpDef.Location = new System.Drawing.Point(6, 316);
@@ -930,7 +930,7 @@ namespace MonCollection
             // labelSpeed
             // 
             this.labelSpeed.AutoSize = true;
-            this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeed.ForeColor = System.Drawing.Color.Black;
             this.labelSpeed.Location = new System.Drawing.Point(6, 342);
@@ -942,7 +942,7 @@ namespace MonCollection
             // labelOT
             // 
             this.labelOT.AutoSize = true;
-            this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOT.ForeColor = System.Drawing.Color.Black;
             this.labelOT.Location = new System.Drawing.Point(340, 383);
@@ -964,7 +964,7 @@ namespace MonCollection
             // labelGame
             // 
             this.labelGame.AutoSize = true;
-            this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGame.ForeColor = System.Drawing.Color.Black;
             this.labelGame.Location = new System.Drawing.Point(340, 408);
@@ -1007,7 +1007,7 @@ namespace MonCollection
             // 
             this.comboBoxForm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxForm.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
             this.comboBoxForm.FormattingEnabled = true;
             this.comboBoxForm.Location = new System.Drawing.Point(273, 95);
@@ -1097,7 +1097,7 @@ namespace MonCollection
             // 
             // textBoxNickname
             // 
-            this.textBoxNickname.BackColor = System.Drawing.Color.Firebrick;
+            this.textBoxNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
             this.textBoxNickname.ForeColor = System.Drawing.Color.White;
             this.textBoxNickname.Location = new System.Drawing.Point(225, 37);
             this.textBoxNickname.Name = "textBoxNickname";
@@ -1180,7 +1180,7 @@ namespace MonCollection
             // 
             // textBoxHP
             // 
-            this.textBoxHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxHP.ForeColor = System.Drawing.Color.Black;
             this.textBoxHP.Location = new System.Drawing.Point(41, 209);
             this.textBoxHP.Name = "textBoxHP";
@@ -1189,7 +1189,7 @@ namespace MonCollection
             // 
             // textBoxAttack
             // 
-            this.textBoxAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxAttack.ForeColor = System.Drawing.Color.Black;
             this.textBoxAttack.Location = new System.Drawing.Point(61, 235);
             this.textBoxAttack.Name = "textBoxAttack";
@@ -1198,7 +1198,7 @@ namespace MonCollection
             // 
             // textBoxDefense
             // 
-            this.textBoxDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxDefense.ForeColor = System.Drawing.Color.Black;
             this.textBoxDefense.Location = new System.Drawing.Point(71, 261);
             this.textBoxDefense.Name = "textBoxDefense";
@@ -1207,7 +1207,7 @@ namespace MonCollection
             // 
             // textBoxSpAtk
             // 
-            this.textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxSpAtk.ForeColor = System.Drawing.Color.Black;
             this.textBoxSpAtk.Location = new System.Drawing.Point(66, 287);
             this.textBoxSpAtk.Name = "textBoxSpAtk";
@@ -1216,7 +1216,7 @@ namespace MonCollection
             // 
             // textBoxSpDef
             // 
-            this.textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxSpDef.ForeColor = System.Drawing.Color.Black;
             this.textBoxSpDef.Location = new System.Drawing.Point(66, 313);
             this.textBoxSpDef.Name = "textBoxSpDef";
@@ -1225,7 +1225,7 @@ namespace MonCollection
             // 
             // textBoxSpeed
             // 
-            this.textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxSpeed.ForeColor = System.Drawing.Color.Black;
             this.textBoxSpeed.Location = new System.Drawing.Point(59, 339);
             this.textBoxSpeed.Name = "textBoxSpeed";
@@ -1236,7 +1236,7 @@ namespace MonCollection
             // 
             this.comboBoxGame.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxGame.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxGame.ForeColor = System.Drawing.Color.Black;
             this.comboBoxGame.FormattingEnabled = true;
             this.comboBoxGame.Location = new System.Drawing.Point(386, 405);
@@ -1248,7 +1248,7 @@ namespace MonCollection
             // 
             // textBoxOT
             // 
-            this.textBoxOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxOT.ForeColor = System.Drawing.Color.Black;
             this.textBoxOT.Location = new System.Drawing.Point(374, 382);
             this.textBoxOT.Name = "textBoxOT";
@@ -1258,7 +1258,7 @@ namespace MonCollection
             // labelID
             // 
             this.labelID.AutoSize = true;
-            this.labelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelID.ForeColor = System.Drawing.Color.Black;
             this.labelID.Location = new System.Drawing.Point(470, 385);
@@ -1269,7 +1269,7 @@ namespace MonCollection
             // 
             // textBoxID
             // 
-            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxID.ForeColor = System.Drawing.Color.Black;
             this.textBoxID.Location = new System.Drawing.Point(500, 383);
             this.textBoxID.Name = "textBoxID";
@@ -1303,7 +1303,7 @@ namespace MonCollection
             // 
             this.comboBoxPkrs.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxPkrs.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxPkrs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxPkrs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxPkrs.ForeColor = System.Drawing.Color.Black;
             this.comboBoxPkrs.FormattingEnabled = true;
             this.comboBoxPkrs.Items.AddRange(new object[] {
@@ -1330,7 +1330,7 @@ namespace MonCollection
             // 
             this.comboBoxPlus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxPlus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxPlus.ForeColor = System.Drawing.Color.Red;
             this.comboBoxPlus.FormattingEnabled = true;
             this.comboBoxPlus.Items.AddRange(new object[] {
@@ -1350,7 +1350,7 @@ namespace MonCollection
             // 
             this.comboBoxMinus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.comboBoxMinus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.comboBoxMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxMinus.ForeColor = System.Drawing.Color.Blue;
             this.comboBoxMinus.FormattingEnabled = true;
             this.comboBoxMinus.Items.AddRange(new object[] {
@@ -1369,7 +1369,7 @@ namespace MonCollection
             // labelRibbons
             // 
             this.labelRibbons.AutoSize = true;
-            this.labelRibbons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelRibbons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRibbons.ForeColor = System.Drawing.Color.Black;
             this.labelRibbons.Location = new System.Drawing.Point(216, 186);
@@ -1434,7 +1434,7 @@ namespace MonCollection
             // 
             // textBoxDynaLv
             // 
-            this.textBoxDynaLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.textBoxDynaLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.textBoxDynaLv.ForeColor = System.Drawing.Color.Black;
             this.textBoxDynaLv.Location = new System.Drawing.Point(239, 122);
             this.textBoxDynaLv.Name = "textBoxDynaLv";
@@ -1444,7 +1444,7 @@ namespace MonCollection
             // labelDynamax
             // 
             this.labelDynamax.AutoSize = true;
-            this.labelDynamax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelDynamax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelDynamax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDynamax.ForeColor = System.Drawing.Color.Black;
             this.labelDynamax.Location = new System.Drawing.Point(176, 124);
@@ -1602,7 +1602,7 @@ namespace MonCollection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1080, 514);
             this.Controls.Add(this.ribbonPic19);
             this.Controls.Add(this.ribbonPic18);

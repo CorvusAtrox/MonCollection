@@ -93,7 +93,7 @@
             // labelSpeciesForm
             // 
             this.labelSpeciesForm.AutoSize = true;
-            this.labelSpeciesForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpeciesForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpeciesForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeciesForm.ForeColor = System.Drawing.Color.Black;
             this.labelSpeciesForm.Location = new System.Drawing.Point(86, 12);
@@ -105,7 +105,7 @@
             // labelSpeciesBalls
             // 
             this.labelSpeciesBalls.AutoSize = true;
-            this.labelSpeciesBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.labelSpeciesBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelSpeciesBalls.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpeciesBalls.ForeColor = System.Drawing.Color.Black;
             this.labelSpeciesBalls.Location = new System.Drawing.Point(38, 85);
@@ -276,7 +276,7 @@
             // 
             // listBoxNames
             // 
-            this.listBoxNames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listBoxNames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxNames.FormattingEnabled = true;
             this.listBoxNames.Location = new System.Drawing.Point(193, 42);
             this.listBoxNames.Name = "listBoxNames";
@@ -285,7 +285,7 @@
             // 
             // listBoxAbilities
             // 
-            this.listBoxAbilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listBoxAbilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxAbilities.FormattingEnabled = true;
             this.listBoxAbilities.Location = new System.Drawing.Point(12, 231);
             this.listBoxAbilities.Name = "listBoxAbilities";
@@ -294,7 +294,7 @@
             // 
             // listBoxLanguages
             // 
-            this.listBoxLanguages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listBoxLanguages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxLanguages.FormattingEnabled = true;
             this.listBoxLanguages.Location = new System.Drawing.Point(193, 231);
             this.listBoxLanguages.Name = "listBoxLanguages";
@@ -303,7 +303,7 @@
             // 
             // listBoxMoves
             // 
-            this.listBoxMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listBoxMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxMoves.FormattingEnabled = true;
             this.listBoxMoves.Location = new System.Drawing.Point(12, 305);
             this.listBoxMoves.MultiColumn = true;
@@ -323,7 +323,7 @@
             // 
             // listBoxLevels
             // 
-            this.listBoxLevels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listBoxLevels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxLevels.FormattingEnabled = true;
             this.listBoxLevels.Location = new System.Drawing.Point(128, 111);
             this.listBoxLevels.Name = "listBoxLevels";
@@ -334,7 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(319, 500);
             this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.labelShiny);

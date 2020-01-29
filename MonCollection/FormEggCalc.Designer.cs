@@ -169,7 +169,7 @@
             // 
             // listMoves
             // 
-            this.listMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listMoves.FormattingEnabled = true;
             this.listMoves.Location = new System.Drawing.Point(226, 178);
             this.listMoves.Name = "listMoves";
@@ -178,7 +178,7 @@
             // 
             // listMovesMon
             // 
-            this.listMovesMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMovesMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listMovesMon.FormattingEnabled = true;
             this.listMovesMon.Location = new System.Drawing.Point(86, 62);
             this.listMovesMon.Name = "listMovesMon";
@@ -187,7 +187,7 @@
             // 
             // listMovesMate
             // 
-            this.listMovesMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMovesMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listMovesMate.FormattingEnabled = true;
             this.listMovesMate.Location = new System.Drawing.Point(379, 62);
             this.listMovesMate.Name = "listMovesMate";
@@ -228,7 +228,7 @@
             // 
             // listMoves2
             // 
-            this.listMoves2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.listMoves2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listMoves2.FormattingEnabled = true;
             this.listMoves2.Location = new System.Drawing.Point(226, 341);
             this.listMoves2.Name = "listMoves2";
@@ -603,7 +603,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(218)))), ((int)(((byte)(113)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(934, 450);
             this.Controls.Add(this.labelShiny);
             this.Controls.Add(this.bpkx30);
