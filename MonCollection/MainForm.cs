@@ -48,6 +48,7 @@ namespace MonCollection
         private int[] noDiff;
         private string[] languages;
 
+        private MonFamily monFamily;
 
         public static DrawConfig Draw = new DrawConfig();
 
@@ -1700,6 +1701,97 @@ namespace MonCollection
             foreach (int b in balls)
             {
                 if(b != 0)
+                    form.ballList.Add(RetrieveImage("Resources/img/ball/" + b + ".png"));
+            }
+
+            foreach (string n in names)
+                form.nameList.Add(n);
+
+            foreach (int v in levels)
+                form.levelList.Add(v);
+
+            var abilityNames = new List<ComboItem>(GameInfo.AbilityDataSource);
+
+            foreach (int a in abilities)
+            {
+                if (a != 0)
+                    form.abilityList.Add(abilityNames.Find(p => p.Value == a).Text);
+            }
+
+            var languageNames = new List<ComboItem>(GameInfo.LanguageDataSource(8));
+
+            foreach (int l in languages)
+            {
+                if (l != 0)
+                    form.languageList.Add(languageNames.Find(p => p.Value == l).Text);
+            }
+
+            var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
+
+            foreach (int m in moves)
+            {
+                if (m != 0)
+                    form.moveList.Add(moveNames.Find(p => p.Value == m).Text);
+            }
+
+            form.abilityList.Sort();
+            form.moveList.Sort();
+
+            form.LoadData();
+
+            form.Show();
+        }
+
+        private void buttonLineInfo_Click(object sender, EventArgs e)
+        {
+            FormSpeciesInfo form = new FormSpeciesInfo();
+            
+            monFamily = new MonFamily();
+            int[] family = monFamily.GetFamily((int)comboBoxSpecies.SelectedValue);
+            
+            if(family[0] == 592)
+                form.spImage = RetrieveImage("Resources/img/icons/592f.png");
+            else
+                form.spImage = RetrieveImage("Resources/img/icons/" + family[0] + ".png");
+            form.spFormName = "";
+
+            List<int> balls = new List<int>();
+            List<int> abilities = new List<int>();
+            List<int> languages = new List<int>();
+            List<int> moves = new List<int>();
+            List<string> names = new List<string>();
+            List<int> levels = new List<int>();
+
+            foreach (var mon in PkmData)
+            {
+                if (family.Contains(mon.Species))
+                {
+                    abilities.Add(mon.Ability);
+                    balls.Add(mon.Ball);
+                    languages.Add(mon.Language);
+                    foreach (int m in mon.Moves)
+                        moves.Add(m);
+                    names.Add(mon.Nickname);
+                    levels.Add(mon.Level);
+
+                    if (mon.Shiny)
+                        form.hasShiny = true;
+                }
+            }
+
+            abilities = abilities.Distinct().ToList();
+            balls = balls.Distinct().ToList();
+            languages = languages.Distinct().ToList();
+            moves = moves.Distinct().ToList();
+
+            balls.Sort();
+            names.Sort();
+            languages.Sort();
+            levels.Sort();
+
+            foreach (int b in balls)
+            {
+                if (b != 0)
                     form.ballList.Add(RetrieveImage("Resources/img/ball/" + b + ".png"));
             }
 

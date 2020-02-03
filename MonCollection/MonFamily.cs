@@ -301,7 +301,7 @@ namespace MonCollection
             families.Add(new int[] { 554, 555 }); //Darumaka
             families.Add(new int[] { 556 }); //Maractus
             families.Add(new int[] { 557, 558 }); //Dwebble
-            families.Add(new int[] { 559, 550 }); //Scraggy
+            families.Add(new int[] { 559, 560 }); //Scraggy
             families.Add(new int[] { 561 }); //Sigilyph
             families.Add(new int[] { 562, 563, 867 }); //Yamask
             families.Add(new int[] { 564, 565 }); //Tirtouga

@@ -160,6 +160,7 @@ namespace MonCollection
             this.ribbonPic12 = new System.Windows.Forms.PictureBox();
             this.ribbonPic11 = new System.Windows.Forms.PictureBox();
             this.ribbonPic10 = new System.Windows.Forms.PictureBox();
+            this.buttonLineInfo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1455,7 +1456,7 @@ namespace MonCollection
             // 
             // buttonMonInfo
             // 
-            this.buttonMonInfo.Location = new System.Drawing.Point(779, 481);
+            this.buttonMonInfo.Location = new System.Drawing.Point(702, 479);
             this.buttonMonInfo.Name = "buttonMonInfo";
             this.buttonMonInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonMonInfo.TabIndex = 174;
@@ -1598,12 +1599,23 @@ namespace MonCollection
             this.ribbonPic10.TabIndex = 180;
             this.ribbonPic10.TabStop = false;
             // 
+            // buttonLineInfo
+            // 
+            this.buttonLineInfo.Location = new System.Drawing.Point(846, 479);
+            this.buttonLineInfo.Name = "buttonLineInfo";
+            this.buttonLineInfo.Size = new System.Drawing.Size(116, 23);
+            this.buttonLineInfo.TabIndex = 190;
+            this.buttonLineInfo.Text = "Line Data";
+            this.buttonLineInfo.UseVisualStyleBackColor = true;
+            this.buttonLineInfo.Click += new System.EventHandler(this.buttonLineInfo_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.Controls.Add(this.buttonLineInfo);
             this.Controls.Add(this.ribbonPic19);
             this.Controls.Add(this.ribbonPic18);
             this.Controls.Add(this.ribbonPic17);
@@ -1924,6 +1936,7 @@ namespace MonCollection
         private PictureBox ribbonPic12;
         private PictureBox ribbonPic11;
         private PictureBox ribbonPic10;
+        private Button buttonLineInfo;
     }
 }
 
