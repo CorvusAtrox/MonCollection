@@ -542,7 +542,7 @@ namespace MonCollection
                 pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.SH, pk.Shiny);
             if (pictureBoxGameSprite.Height > 180 || pictureBoxGameSprite.Width > 180)
             {
-                double ratio = pictureBoxGameSprite.Height / pictureBoxGameSprite.Width;
+                double ratio = (double)pictureBoxGameSprite.Height / (double)pictureBoxGameSprite.Width;
                 if (ratio >= 1)
                 {
                     pictureBoxGameSprite.Height = 180;
