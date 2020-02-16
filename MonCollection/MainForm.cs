@@ -753,6 +753,10 @@ namespace MonCollection
                     game = "swsh";
                     ext = ".gif";
                     break;
+                case GameVersion.SWSH:
+                    game = "home";
+                    ext = ".png";
+                    break;
             }
             if(!shiny)
                 return RetrieveImage("Resources/img/"+game+"/"+species+ext);
