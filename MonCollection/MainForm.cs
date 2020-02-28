@@ -97,7 +97,7 @@ namespace MonCollection
                         gameDict.Add(split[0], new SaveInfo("en", split[1], "0", null, ind));
                         break;
                     default:
-                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo("en", "SH", "0", null, ind));
                         break;
                 }
                 ind++;
@@ -462,22 +462,20 @@ namespace MonCollection
             textBoxSpeed.Text = pk.SPE.ToString();
             if(pk.Gen >= 3)
             {
-                if(pk.Boon == 0 || pk.Bane == 0)
+                if (pk.Boon == 0 || pk.Bane == 0)
                 {
                     pk.Boon = (pk.Nature / 5) + 1;
                     pk.Bane = (pk.Nature % 5) + 1;
                 }
 
-            }
-            else
-            {
+                comboBoxPlus.SelectedIndex = pk.Boon;
+                comboBoxMinus.SelectedIndex = pk.Bane;
+
+                SetStatText(comboBoxPlus.SelectedIndex, comboBoxMinus.SelectedIndex);
+            } else {
                 pk.Boon = 0;
                 pk.Bane = 0;
             }
-            comboBoxPlus.SelectedIndex = pk.Boon;
-            comboBoxMinus.SelectedIndex = pk.Bane;
-                
-            SetStatText(pk.Boon,pk.Bane);
 
             foreach (PictureBox pb in ribbonBoxes)
                 pb.Image = null;
@@ -1243,7 +1241,7 @@ namespace MonCollection
             textBoxSpDef.ForeColor = Color.Black;
             textBoxSpeed.ForeColor = Color.Black;
 
-            if (boon !=0 && bane != 0)
+            if (boon != 0 && bane != 0)
             {
                 if (boon != bane)
                 {
@@ -1835,6 +1833,22 @@ namespace MonCollection
             form.LoadData();
 
             form.Show();
+        }
+
+        private void comboBoxNature_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxNature.Visible)
+            {
+                int nat = (int)comboBoxNature.SelectedValue;
+                comboBoxPlus.SelectedIndex = (nat / 5) + 1;
+                comboBoxMinus.SelectedIndex = (nat % 5) + 1;
+
+                SetStatText(comboBoxPlus.SelectedIndex, comboBoxMinus.SelectedIndex);
+            } 
+            else
+            {
+                SetStatText(0, 0);
+            }
         }
     }
 }

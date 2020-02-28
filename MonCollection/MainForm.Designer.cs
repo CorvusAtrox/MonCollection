@@ -395,6 +395,7 @@ namespace MonCollection
             this.comboBoxNature.Name = "comboBoxNature";
             this.comboBoxNature.Size = new System.Drawing.Size(115, 21);
             this.comboBoxNature.TabIndex = 18;
+            this.comboBoxNature.SelectedIndexChanged += new System.EventHandler(this.comboBoxNature_SelectedIndexChanged);
             // 
             // labelNature
             // 

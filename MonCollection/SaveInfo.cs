@@ -78,9 +78,10 @@ namespace MonCollection
                     return 7;
                 case GameVersion.SW:
                 case GameVersion.SH:
+                case GameVersion.SWSH:
                     return 8;
                 default:
-                    return 7;
+                    return 8;
             }
         }
 
