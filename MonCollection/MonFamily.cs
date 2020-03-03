@@ -485,6 +485,9 @@ namespace MonCollection
             families.Add(new int[] { 888 }); //Zacian
             families.Add(new int[] { 889 }); //Zamazenta
             families.Add(new int[] { 890 }); //Eternatus
+            //Kubfu
+            //Zarude
+            //Calyrex
         }
     }
 }
