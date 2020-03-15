@@ -317,7 +317,7 @@ namespace MonCollection
             this.textBoxLevel.Location = new System.Drawing.Point(347, 34);
             this.textBoxLevel.Name = "textBoxLevel";
             this.textBoxLevel.Size = new System.Drawing.Size(25, 20);
-            this.textBoxLevel.TabIndex = 11;
+            this.textBoxLevel.TabIndex = 9;
             this.textBoxLevel.TextChanged += new System.EventHandler(this.TextBoxLevel_TextChanged);
             // 
             // labelGender
@@ -421,7 +421,7 @@ namespace MonCollection
             this.comboBoxMove1.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove1.Name = "comboBoxMove1";
             this.comboBoxMove1.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxMove1.TabIndex = 20;
+            this.comboBoxMove1.TabIndex = 26;
             this.comboBoxMove1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
             // 
             // labelMoves
@@ -448,7 +448,7 @@ namespace MonCollection
             this.comboBoxMove2.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove2.Name = "comboBoxMove2";
             this.comboBoxMove2.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxMove2.TabIndex = 21;
+            this.comboBoxMove2.TabIndex = 27;
             this.comboBoxMove2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
             // 
             // comboBoxMove4
@@ -463,7 +463,7 @@ namespace MonCollection
             this.comboBoxMove4.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove4.Name = "comboBoxMove4";
             this.comboBoxMove4.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxMove4.TabIndex = 23;
+            this.comboBoxMove4.TabIndex = 29;
             this.comboBoxMove4.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
             // 
             // comboBoxMove3
@@ -478,7 +478,7 @@ namespace MonCollection
             this.comboBoxMove3.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxMove3.Name = "comboBoxMove3";
             this.comboBoxMove3.Size = new System.Drawing.Size(115, 21);
-            this.comboBoxMove3.TabIndex = 22;
+            this.comboBoxMove3.TabIndex = 28;
             this.comboBoxMove3.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
             // 
             // bpkx30
@@ -1187,7 +1187,7 @@ namespace MonCollection
             this.textBoxHP.Location = new System.Drawing.Point(41, 209);
             this.textBoxHP.Name = "textBoxHP";
             this.textBoxHP.Size = new System.Drawing.Size(45, 20);
-            this.textBoxHP.TabIndex = 24;
+            this.textBoxHP.TabIndex = 20;
             // 
             // textBoxAttack
             // 
@@ -1196,7 +1196,7 @@ namespace MonCollection
             this.textBoxAttack.Location = new System.Drawing.Point(61, 235);
             this.textBoxAttack.Name = "textBoxAttack";
             this.textBoxAttack.Size = new System.Drawing.Size(45, 20);
-            this.textBoxAttack.TabIndex = 25;
+            this.textBoxAttack.TabIndex = 21;
             // 
             // textBoxDefense
             // 
@@ -1205,7 +1205,7 @@ namespace MonCollection
             this.textBoxDefense.Location = new System.Drawing.Point(71, 261);
             this.textBoxDefense.Name = "textBoxDefense";
             this.textBoxDefense.Size = new System.Drawing.Size(45, 20);
-            this.textBoxDefense.TabIndex = 26;
+            this.textBoxDefense.TabIndex = 22;
             // 
             // textBoxSpAtk
             // 
@@ -1214,7 +1214,7 @@ namespace MonCollection
             this.textBoxSpAtk.Location = new System.Drawing.Point(66, 287);
             this.textBoxSpAtk.Name = "textBoxSpAtk";
             this.textBoxSpAtk.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpAtk.TabIndex = 27;
+            this.textBoxSpAtk.TabIndex = 23;
             // 
             // textBoxSpDef
             // 
@@ -1223,7 +1223,7 @@ namespace MonCollection
             this.textBoxSpDef.Location = new System.Drawing.Point(66, 313);
             this.textBoxSpDef.Name = "textBoxSpDef";
             this.textBoxSpDef.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpDef.TabIndex = 28;
+            this.textBoxSpDef.TabIndex = 24;
             // 
             // textBoxSpeed
             // 
@@ -1232,7 +1232,7 @@ namespace MonCollection
             this.textBoxSpeed.Location = new System.Drawing.Point(59, 339);
             this.textBoxSpeed.Name = "textBoxSpeed";
             this.textBoxSpeed.Size = new System.Drawing.Size(45, 20);
-            this.textBoxSpeed.TabIndex = 29;
+            this.textBoxSpeed.TabIndex = 25;
             // 
             // comboBoxGame
             // 
