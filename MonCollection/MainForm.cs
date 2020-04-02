@@ -1634,8 +1634,19 @@ namespace MonCollection
                     Count = name.Count()
                 }).OrderBy(entry => entry.Key);
             var results = new FormGameTally();
+            int i = 1;
             foreach (var q in query)
+            {
+                while(i < q.Key)
+                {
+                    results.addEntry(String.Format("{0}: 0", i));
+                    i++;
+                }
+
                 results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
+                i++;
+            }
+                
             results.Show();
         }
 
