@@ -63,8 +63,8 @@ namespace MonCollection
                 };
             }
 
-            majorGenderDiff = new int[] { 521, 592, 593, 668, 678 };
-            noDiff = new int[] { 414, 493, 664, 665, 744, 773 };
+            majorGenderDiff = new int[] { 521, 592, 593, 668 };
+            noDiff = new int[] { 414, 664, 665 };
         }
 
         internal void loadDB(List<MonData> data, int index, GameVersion vers)
