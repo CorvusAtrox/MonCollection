@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MonCollection.Properties;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using PKHeX.Core;
 using PKHeX.WinForms;
 using TrueRandomGenerator;
@@ -1860,6 +1861,36 @@ namespace MonCollection
             {
                 SetStatText(0, 0);
             }
+        }
+
+        private void buttonDupCheck_Click(object sender, EventArgs e)
+        {
+            GameSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            MonData previous = null;
+            foreach(MonData md in PkmData)
+            {
+                if(previous == null)
+                {
+                    previous = md;
+                    continue;
+                }
+
+                if(md.Nickname == previous.Nickname &&
+                   md.Level == previous.Level &&
+                   md.Species == previous.Species &&
+                   md.OT == previous.OT)
+                {
+                    OpenPKM(md);
+                    return;
+                }
+                else
+                {
+                    previous = md;
+                }
+            }
+
+            OpenPKM(PkmData[slotSelected]);
+
         }
     }
 }

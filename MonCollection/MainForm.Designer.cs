@@ -161,6 +161,7 @@ namespace MonCollection
             this.ribbonPic11 = new System.Windows.Forms.PictureBox();
             this.ribbonPic10 = new System.Windows.Forms.PictureBox();
             this.buttonLineInfo = new System.Windows.Forms.Button();
+            this.buttonDupCheck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1457,7 +1458,7 @@ namespace MonCollection
             // 
             // buttonMonInfo
             // 
-            this.buttonMonInfo.Location = new System.Drawing.Point(702, 479);
+            this.buttonMonInfo.Location = new System.Drawing.Point(626, 481);
             this.buttonMonInfo.Name = "buttonMonInfo";
             this.buttonMonInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonMonInfo.TabIndex = 174;
@@ -1602,7 +1603,7 @@ namespace MonCollection
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(846, 479);
+            this.buttonLineInfo.Location = new System.Drawing.Point(913, 481);
             this.buttonLineInfo.Name = "buttonLineInfo";
             this.buttonLineInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonLineInfo.TabIndex = 190;
@@ -1610,12 +1611,23 @@ namespace MonCollection
             this.buttonLineInfo.UseVisualStyleBackColor = true;
             this.buttonLineInfo.Click += new System.EventHandler(this.buttonLineInfo_Click);
             // 
+            // buttonDupCheck
+            // 
+            this.buttonDupCheck.Location = new System.Drawing.Point(778, 481);
+            this.buttonDupCheck.Name = "buttonDupCheck";
+            this.buttonDupCheck.Size = new System.Drawing.Size(116, 23);
+            this.buttonDupCheck.TabIndex = 191;
+            this.buttonDupCheck.Text = "Duplicate Check";
+            this.buttonDupCheck.UseVisualStyleBackColor = true;
+            this.buttonDupCheck.Click += new System.EventHandler(this.buttonDupCheck_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.Controls.Add(this.buttonDupCheck);
             this.Controls.Add(this.buttonLineInfo);
             this.Controls.Add(this.ribbonPic19);
             this.Controls.Add(this.ribbonPic18);
@@ -1938,6 +1950,7 @@ namespace MonCollection
         private PictureBox ribbonPic11;
         private PictureBox ribbonPic10;
         private Button buttonLineInfo;
+        private Button buttonDupCheck;
     }
 }
 
