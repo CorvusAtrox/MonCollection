@@ -162,6 +162,7 @@ namespace MonCollection
             this.ribbonPic10 = new System.Windows.Forms.PictureBox();
             this.buttonLineInfo = new System.Windows.Forms.Button();
             this.buttonDupCheck = new System.Windows.Forms.Button();
+            this.buttonPkrsCount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1613,7 +1614,7 @@ namespace MonCollection
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(778, 481);
+            this.buttonDupCheck.Location = new System.Drawing.Point(626, 510);
             this.buttonDupCheck.Name = "buttonDupCheck";
             this.buttonDupCheck.Size = new System.Drawing.Size(116, 23);
             this.buttonDupCheck.TabIndex = 191;
@@ -1621,12 +1622,23 @@ namespace MonCollection
             this.buttonDupCheck.UseVisualStyleBackColor = true;
             this.buttonDupCheck.Click += new System.EventHandler(this.buttonDupCheck_Click);
             // 
+            // buttonPkrsCount
+            // 
+            this.buttonPkrsCount.Location = new System.Drawing.Point(913, 510);
+            this.buttonPkrsCount.Name = "buttonPkrsCount";
+            this.buttonPkrsCount.Size = new System.Drawing.Size(116, 23);
+            this.buttonPkrsCount.TabIndex = 192;
+            this.buttonPkrsCount.Text = "Pokerus Spread";
+            this.buttonPkrsCount.UseVisualStyleBackColor = true;
+            this.buttonPkrsCount.Click += new System.EventHandler(this.buttonPkrsCount_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1080, 514);
+            this.ClientSize = new System.Drawing.Size(1080, 549);
+            this.Controls.Add(this.buttonPkrsCount);
             this.Controls.Add(this.buttonDupCheck);
             this.Controls.Add(this.buttonLineInfo);
             this.Controls.Add(this.ribbonPic19);
@@ -1951,6 +1963,7 @@ namespace MonCollection
         private PictureBox ribbonPic10;
         private Button buttonLineInfo;
         private Button buttonDupCheck;
+        private Button buttonPkrsCount;
     }
 }
 

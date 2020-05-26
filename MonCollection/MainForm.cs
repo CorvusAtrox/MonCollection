@@ -1194,7 +1194,7 @@ namespace MonCollection
 
         private bool GetGameMons(GameVersion version, int species)
         {
-            if(version == GameVersion.Unknown)
+            if(version == GameVersion.Unknown || version == GameVersion.SWSH)
                 return monInGame[new Tuple<GameVersion, int>(GameVersion.SH, species)];
             else
                 return monInGame[new Tuple<GameVersion, int>(version, species)];
@@ -1891,6 +1891,31 @@ namespace MonCollection
 
             OpenPKM(PkmData[slotSelected]);
 
+        }
+
+        private void buttonPkrsCount_Click(object sender, EventArgs e)
+        {
+            var results = new FormGameTally();
+            List<MonData> total = PkmData;
+            List<MonData> infected = total.Where(pk => pk.PKRS_Infected == true).ToList();
+            List<MonData> cured = total.Where(pk => pk.PKRS_Cured == true).ToList();
+            results.addEntry(String.Format("Total: {0}% Infected {1}% Cured",
+                    Math.Round((double)infected.Count / total.Count * 100, 2),
+                    Math.Round((double)cured.Count / total.Count * 100, 2)));
+            foreach (var entry in gameDict)
+            {
+                if(entry.Value.getGen() > 1 && entry.Value.version != GameVersion.GO &&
+                   entry.Value.version != GameVersion.GP && entry.Value.version != GameVersion.GE)
+                {
+                    total = PkmData.Where(pk => pk.Game == entry.Key).ToList();
+                    infected = total.Where(pk => pk.PKRS_Infected == true).ToList();
+                    cured = total.Where(pk => pk.PKRS_Cured == true).ToList();
+                    results.addEntry(String.Format("{0}: {1}% Infected {2}% Cured", entry.Key,
+                            Math.Round((double)infected.Count / total.Count * 100,2),
+                            Math.Round((double)cured.Count / total.Count * 100,2)));
+                }
+            }
+            results.Show();
         }
     }
 }
