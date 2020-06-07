@@ -1381,6 +1381,7 @@ namespace MonCollection
             this.labelRibbons.Size = new System.Drawing.Size(57, 13);
             this.labelRibbons.TabIndex = 165;
             this.labelRibbons.Text = "Ribbons:";
+            this.labelRibbons.Click += new System.EventHandler(this.labelRibbons_Click);
             // 
             // ribbonPic0
             // 
@@ -1456,6 +1457,7 @@ namespace MonCollection
             this.labelDynamax.Size = new System.Drawing.Size(62, 13);
             this.labelDynamax.TabIndex = 173;
             this.labelDynamax.Text = "Dynamax:";
+            this.labelDynamax.Click += new System.EventHandler(this.labelDynamax_Click);
             // 
             // buttonMonInfo
             // 

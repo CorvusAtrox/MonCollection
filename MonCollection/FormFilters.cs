@@ -13,7 +13,7 @@ namespace MonCollection
             InitializeComponent();
         }
 
-        public void loadFilterList(List<string> vs)
+        public void LoadFilterList(List<string> vs)
         {
             foreach(string v in vs)
             {
@@ -26,7 +26,7 @@ namespace MonCollection
             }
         }
 
-        public void updateFilters()
+        public void UpdateFilters()
         {
             filters = new List<string>();
             foreach (ListViewItem item in listViewFilters.Items)

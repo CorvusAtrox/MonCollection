@@ -55,6 +55,8 @@ namespace MonCollection
 
         public Dictionary<string,SaveInfo> gameDict;
 
+        public List<string> monRibbons;
+
         public MainForm()
         {
             InitializeComponent();
@@ -478,18 +480,15 @@ namespace MonCollection
                 pk.Bane = 0;
             }
 
-            foreach (PictureBox pb in ribbonBoxes)
-                pb.Image = null;
+            monRibbons = new List<string>();
 
             if(pk.Ribbons != null)
             {
-                int r = 0;
-                foreach(string rib in pk.Ribbons)
-                {
-                    ribbonBoxes[r].Image = RetrieveImage("Resources/img/ribbons/" + rib + ".png");
-                    r++;
-                }
+                foreach (string rib in pk.Ribbons)
+                    monRibbons.Add(rib);
             }
+
+            UpdateRibbons();
 
             textBoxOT.Text = pk.OT;
             textBoxID.Text = pk.ID.ToString();
@@ -761,6 +760,22 @@ namespace MonCollection
                 return RetrieveImage("Resources/img/"+game+"/"+species+ext);
             else
                 return RetrieveImage("Resources/img/" + game + "/rare/" + species + ext);
+        }
+
+        private void UpdateRibbons()
+        {
+            foreach (PictureBox pb in ribbonBoxes)
+                pb.Image = null;
+
+            if (monRibbons.Count > 0)
+            {
+                int r = 0;
+                foreach (string rib in monRibbons)
+                {
+                    ribbonBoxes[r].Image = RetrieveImage("Resources/img/ribbons/" + rib + ".png");
+                    r++;
+                }
+            }
         }
 
         private void ValidateMovePaint(object sender, DrawItemEventArgs e)
@@ -1384,7 +1399,8 @@ namespace MonCollection
             mon.SPD = int.Parse(textBoxSpDef.Text);
             mon.SPE = int.Parse(textBoxSpeed.Text);
             mon.dynaLevel = int.Parse(textBoxDynaLv.Text);
-            if(comboBoxBalls.SelectedValue != null)
+            mon.gMax = (pictureBoxGMax.Image != null);
+            if (comboBoxBalls.SelectedValue != null)
                 mon.Ball = (int)comboBoxBalls.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)
                 mon.Language = (int)comboBoxLanguage.SelectedValue;
@@ -1404,6 +1420,8 @@ namespace MonCollection
                     mon.PKRS_Infected = true;
                     break;
             }
+
+            mon.Ribbons = monRibbons.ToArray();
 
             PkmData[slotSelected] = mon;
         }
@@ -1614,10 +1632,10 @@ namespace MonCollection
             {
                 filters = filterGames
             };
-            form.loadFilterList(gameList);
+            form.LoadFilterList(gameList);
             form.FormClosing += new FormClosingEventHandler(
                 delegate (object send, FormClosingEventArgs a) {
-                    form.updateFilters();
+                    form.UpdateFilters();
                     filterGames = form.filters;
                     LoadDatabase();
                 });
@@ -1916,6 +1934,29 @@ namespace MonCollection
                 }
             }
             results.Show();
+        }
+
+        private void labelDynamax_Click(object sender, EventArgs e)
+        {
+            if (pictureBoxGMax.Image == null)
+                pictureBoxGMax.Image = RetrieveImage("Resources/img/gMax.png");
+            else
+                pictureBoxGMax.Image = null;
+        }
+
+        private void labelRibbons_Click(object sender, EventArgs e)
+        {
+            FormRibbons form = new FormRibbons
+            {
+                ribbons = monRibbons
+            };
+            form.LoadRibbons();
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    monRibbons = form.ribbons;
+                    UpdateRibbons();
+                });
+            form.Show();
         }
     }
 }
