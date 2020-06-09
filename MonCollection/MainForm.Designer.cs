@@ -104,7 +104,7 @@ namespace MonCollection
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
             this.buttonNiqCalc = new System.Windows.Forms.Button();
             this.buttonEggs = new System.Windows.Forms.Button();
-            this.buttonOTSort = new System.Windows.Forms.Button();
+            this.buttonOriginSort = new System.Windows.Forms.Button();
             this.buttonMoveMonTally = new System.Windows.Forms.Button();
             this.buttonRanMon = new System.Windows.Forms.Button();
             this.buttonSaveMon = new System.Windows.Forms.Button();
@@ -119,6 +119,7 @@ namespace MonCollection
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.speciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHP = new System.Windows.Forms.TextBox();
             this.textBoxAttack = new System.Windows.Forms.TextBox();
             this.textBoxDefense = new System.Windows.Forms.TextBox();
@@ -163,6 +164,10 @@ namespace MonCollection
             this.buttonLineInfo = new System.Windows.Forms.Button();
             this.buttonDupCheck = new System.Windows.Forms.Button();
             this.buttonPkrsCount = new System.Windows.Forms.Button();
+            this.comboBoxOrigin = new System.Windows.Forms.ComboBox();
+            this.labelOrigin = new System.Windows.Forms.Label();
+            this.buttonGameOriginSort = new System.Windows.Forms.Button();
+            this.buttonAssignOrigin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -971,7 +976,7 @@ namespace MonCollection
             this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGame.ForeColor = System.Drawing.Color.Black;
-            this.labelGame.Location = new System.Drawing.Point(340, 408);
+            this.labelGame.Location = new System.Drawing.Point(340, 433);
             this.labelGame.Name = "labelGame";
             this.labelGame.Size = new System.Drawing.Size(43, 13);
             this.labelGame.TabIndex = 128;
@@ -999,7 +1004,7 @@ namespace MonCollection
             // 
             // buttonSpeciesSort
             // 
-            this.buttonSpeciesSort.Location = new System.Drawing.Point(913, 365);
+            this.buttonSpeciesSort.Location = new System.Drawing.Point(913, 394);
             this.buttonSpeciesSort.Name = "buttonSpeciesSort";
             this.buttonSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonSpeciesSort.TabIndex = 131;
@@ -1031,7 +1036,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(626, 452);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(913, 452);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
             this.buttonNiqCalc.TabIndex = 136;
@@ -1041,7 +1046,7 @@ namespace MonCollection
             // 
             // buttonEggs
             // 
-            this.buttonEggs.Location = new System.Drawing.Point(778, 452);
+            this.buttonEggs.Location = new System.Drawing.Point(626, 510);
             this.buttonEggs.Name = "buttonEggs";
             this.buttonEggs.Size = new System.Drawing.Size(116, 23);
             this.buttonEggs.TabIndex = 137;
@@ -1049,19 +1054,19 @@ namespace MonCollection
             this.buttonEggs.UseVisualStyleBackColor = true;
             this.buttonEggs.Click += new System.EventHandler(this.ButtonEggs_Click);
             // 
-            // buttonOTSort
+            // buttonOriginSort
             // 
-            this.buttonOTSort.Location = new System.Drawing.Point(779, 394);
-            this.buttonOTSort.Name = "buttonOTSort";
-            this.buttonOTSort.Size = new System.Drawing.Size(116, 23);
-            this.buttonOTSort.TabIndex = 142;
-            this.buttonOTSort.Text = "OT-Species Sort";
-            this.buttonOTSort.UseVisualStyleBackColor = true;
-            this.buttonOTSort.Click += new System.EventHandler(this.ButtonOTSort_Click);
+            this.buttonOriginSort.Location = new System.Drawing.Point(779, 394);
+            this.buttonOriginSort.Name = "buttonOriginSort";
+            this.buttonOriginSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonOriginSort.TabIndex = 142;
+            this.buttonOriginSort.Text = "Origin-Species Sort";
+            this.buttonOriginSort.UseVisualStyleBackColor = true;
+            this.buttonOriginSort.Click += new System.EventHandler(this.ButtonOriginSort_Click);
             // 
             // buttonMoveMonTally
             // 
-            this.buttonMoveMonTally.Location = new System.Drawing.Point(913, 423);
+            this.buttonMoveMonTally.Location = new System.Drawing.Point(626, 452);
             this.buttonMoveMonTally.Name = "buttonMoveMonTally";
             this.buttonMoveMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMoveMonTally.TabIndex = 143;
@@ -1081,7 +1086,7 @@ namespace MonCollection
             // 
             // buttonSaveMon
             // 
-            this.buttonSaveMon.Location = new System.Drawing.Point(150, 435);
+            this.buttonSaveMon.Location = new System.Drawing.Point(150, 470);
             this.buttonSaveMon.Name = "buttonSaveMon";
             this.buttonSaveMon.Size = new System.Drawing.Size(116, 23);
             this.buttonSaveMon.TabIndex = 43;
@@ -1091,7 +1096,7 @@ namespace MonCollection
             // 
             // buttonRevertMon
             // 
-            this.buttonRevertMon.Location = new System.Drawing.Point(150, 470);
+            this.buttonRevertMon.Location = new System.Drawing.Point(150, 505);
             this.buttonRevertMon.Name = "buttonRevertMon";
             this.buttonRevertMon.Size = new System.Drawing.Size(116, 23);
             this.buttonRevertMon.TabIndex = 44;
@@ -1170,7 +1175,8 @@ namespace MonCollection
             // filterToolStripMenuItem
             // 
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gameToolStripMenuItem});
+            this.gameToolStripMenuItem,
+            this.speciesToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -1178,9 +1184,16 @@ namespace MonCollection
             // gameToolStripMenuItem
             // 
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.gameToolStripMenuItem.Text = "Game";
             this.gameToolStripMenuItem.Click += new System.EventHandler(this.GameToolStripMenuItem_Click);
+            // 
+            // speciesToolStripMenuItem
+            // 
+            this.speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
+            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.speciesToolStripMenuItem.Text = "Species";
+            this.speciesToolStripMenuItem.Click += new System.EventHandler(this.SpeciesToolStripMenuItem_Click);
             // 
             // textBoxHP
             // 
@@ -1243,7 +1256,7 @@ namespace MonCollection
             this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.comboBoxGame.ForeColor = System.Drawing.Color.Black;
             this.comboBoxGame.FormattingEnabled = true;
-            this.comboBoxGame.Location = new System.Drawing.Point(386, 405);
+            this.comboBoxGame.Location = new System.Drawing.Point(386, 433);
             this.comboBoxGame.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxGame.Name = "comboBoxGame";
             this.comboBoxGame.Size = new System.Drawing.Size(180, 21);
@@ -1295,7 +1308,7 @@ namespace MonCollection
             // 
             // buttonMonBallTally
             // 
-            this.buttonMonBallTally.Location = new System.Drawing.Point(913, 452);
+            this.buttonMonBallTally.Location = new System.Drawing.Point(778, 452);
             this.buttonMonBallTally.Name = "buttonMonBallTally";
             this.buttonMonBallTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMonBallTally.TabIndex = 160;
@@ -1322,7 +1335,7 @@ namespace MonCollection
             // 
             // buttonLevelTally
             // 
-            this.buttonLevelTally.Location = new System.Drawing.Point(913, 394);
+            this.buttonLevelTally.Location = new System.Drawing.Point(913, 423);
             this.buttonLevelTally.Name = "buttonLevelTally";
             this.buttonLevelTally.Size = new System.Drawing.Size(116, 23);
             this.buttonLevelTally.TabIndex = 162;
@@ -1606,7 +1619,7 @@ namespace MonCollection
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(913, 481);
+            this.buttonLineInfo.Location = new System.Drawing.Point(778, 481);
             this.buttonLineInfo.Name = "buttonLineInfo";
             this.buttonLineInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonLineInfo.TabIndex = 190;
@@ -1616,7 +1629,7 @@ namespace MonCollection
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(626, 510);
+            this.buttonDupCheck.Location = new System.Drawing.Point(913, 481);
             this.buttonDupCheck.Name = "buttonDupCheck";
             this.buttonDupCheck.Size = new System.Drawing.Size(116, 23);
             this.buttonDupCheck.TabIndex = 191;
@@ -1634,12 +1647,61 @@ namespace MonCollection
             this.buttonPkrsCount.UseVisualStyleBackColor = true;
             this.buttonPkrsCount.Click += new System.EventHandler(this.buttonPkrsCount_Click);
             // 
+            // comboBoxOrigin
+            // 
+            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
+            this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxOrigin.FormattingEnabled = true;
+            this.comboBoxOrigin.Location = new System.Drawing.Point(386, 407);
+            this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxOrigin.Name = "comboBoxOrigin";
+            this.comboBoxOrigin.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxOrigin.TabIndex = 193;
+            // 
+            // labelOrigin
+            // 
+            this.labelOrigin.AutoSize = true;
+            this.labelOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
+            this.labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrigin.ForeColor = System.Drawing.Color.Black;
+            this.labelOrigin.Location = new System.Drawing.Point(340, 410);
+            this.labelOrigin.Name = "labelOrigin";
+            this.labelOrigin.Size = new System.Drawing.Size(44, 13);
+            this.labelOrigin.TabIndex = 194;
+            this.labelOrigin.Text = "Origin:";
+            // 
+            // buttonGameOriginSort
+            // 
+            this.buttonGameOriginSort.Location = new System.Drawing.Point(913, 365);
+            this.buttonGameOriginSort.Name = "buttonGameOriginSort";
+            this.buttonGameOriginSort.Size = new System.Drawing.Size(116, 23);
+            this.buttonGameOriginSort.TabIndex = 195;
+            this.buttonGameOriginSort.Text = "Game-Origin Sort";
+            this.buttonGameOriginSort.UseVisualStyleBackColor = true;
+            this.buttonGameOriginSort.Click += new System.EventHandler(this.buttonGameOriginSort_Click);
+            // 
+            // buttonAssignOrigin
+            // 
+            this.buttonAssignOrigin.Location = new System.Drawing.Point(778, 510);
+            this.buttonAssignOrigin.Name = "buttonAssignOrigin";
+            this.buttonAssignOrigin.Size = new System.Drawing.Size(116, 23);
+            this.buttonAssignOrigin.TabIndex = 196;
+            this.buttonAssignOrigin.Text = "Assign Origin";
+            this.buttonAssignOrigin.UseVisualStyleBackColor = true;
+            this.buttonAssignOrigin.Click += new System.EventHandler(this.buttonAssignOrigin_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1080, 549);
+            this.Controls.Add(this.buttonAssignOrigin);
+            this.Controls.Add(this.buttonGameOriginSort);
+            this.Controls.Add(this.comboBoxOrigin);
+            this.Controls.Add(this.labelOrigin);
             this.Controls.Add(this.buttonPkrsCount);
             this.Controls.Add(this.buttonDupCheck);
             this.Controls.Add(this.buttonLineInfo);
@@ -1689,7 +1751,7 @@ namespace MonCollection
             this.Controls.Add(this.buttonSaveMon);
             this.Controls.Add(this.buttonRanMon);
             this.Controls.Add(this.buttonMoveMonTally);
-            this.Controls.Add(this.buttonOTSort);
+            this.Controls.Add(this.buttonOriginSort);
             this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
@@ -1907,7 +1969,7 @@ namespace MonCollection
         private PictureBox pictureBoxPkrs;
         private Button buttonNiqCalc;
         private Button buttonEggs;
-        private Button buttonOTSort;
+        private Button buttonOriginSort;
         private Button buttonMoveMonTally;
         private Button buttonRanMon;
         private Button buttonSaveMon;
@@ -1966,6 +2028,11 @@ namespace MonCollection
         private Button buttonLineInfo;
         private Button buttonDupCheck;
         private Button buttonPkrsCount;
+        private ComboBox comboBoxOrigin;
+        private Label labelOrigin;
+        private ToolStripMenuItem speciesToolStripMenuItem;
+        private Button buttonGameOriginSort;
+        private Button buttonAssignOrigin;
     }
 }
 

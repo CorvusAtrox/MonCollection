@@ -27,6 +27,7 @@ namespace MonCollection
         public int Gen { get; set; }
         public int ID { get; set; }
         public string OT { get; set; }
+        public string Origin { get; set; }
         public int Ball { get; set; }
         public int Language { get; set; }
         public bool PKRS_Infected { get; set; }

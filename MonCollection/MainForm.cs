@@ -35,6 +35,8 @@ namespace MonCollection
         private List<string> filterGames;
         private List<string> gameList;
 
+        private List<int> filterSpecies;
+
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
 
@@ -54,6 +56,7 @@ namespace MonCollection
         public static DrawConfig Draw = new DrawConfig();
 
         public Dictionary<string,SaveInfo> gameDict;
+        public Dictionary<string,int> regionDict;
 
         public List<string> monRibbons;
 
@@ -73,13 +76,18 @@ namespace MonCollection
         private void InitializeGameDict()
         {
             gameDict = new Dictionary<string, SaveInfo>();
+            regionDict = new Dictionary<string,int>();
+
+            filterGames = new List<string>();
+            filterSpecies = new List<int>();
+
+            for (int i = 1; i <= 890; i++)
+                filterSpecies.Add(i);
 
             StreamReader dict = new StreamReader(Settings.Default.mons + "/mons.ini");
             string l;
             string[] split;
             int ind = 0;
-
-            filterGames = new List<string>();
 
             while (!dict.EndOfStream)
             {
@@ -105,7 +113,21 @@ namespace MonCollection
                 }
                 ind++;
                 filterGames.Add(split[0]);
-                gameList = new List<string>(filterGames);
+            }
+
+            dict.Close();
+
+            gameList = new List<string>(filterGames);
+
+            dict = new StreamReader(Settings.Default.mons + "/regions.ini");
+            ind = 1;
+
+            while (!dict.EndOfStream)
+            {
+                l = dict.ReadLine();
+                split = l.Split(',');
+                regionDict.Add(split[0],ind);
+                ind++;
             }
 
             dict.Close();
@@ -247,6 +269,10 @@ namespace MonCollection
             comboBoxGame.Items.Clear();
             foreach (var entry in gameDict)
                 comboBoxGame.Items.Add(entry.Key.ToString());
+
+            comboBoxOrigin.Items.Clear();
+            foreach (var entry in regionDict)
+                comboBoxOrigin.Items.Add(entry.Key.ToString());
         }
 
         private bool OpenPKM(MonData pk)
@@ -283,7 +309,18 @@ namespace MonCollection
                 return info.index;
         }
 
-        
+        private int OriginIndex(string identifier)
+        {
+            if (identifier == null)
+                identifier = "";
+
+            if (!regionDict.TryGetValue(identifier, out int value))
+                return 0;
+            else
+                return value;
+        }
+
+
         private PKM MonDataToPKM(MonData data)
         {
             //TODO: Check Implementation
@@ -493,6 +530,7 @@ namespace MonCollection
             textBoxOT.Text = pk.OT;
             textBoxID.Text = pk.ID.ToString();
             comboBoxGame.Text = pk.Game;
+            comboBoxOrigin.Text = pk.Origin;
 
             textBoxLevel.Text = pk.Level.ToString();
 
@@ -949,9 +987,23 @@ namespace MonCollection
             FillPKXBoxes(index);
         }
 
-        public void OTSpeciesSort(int index)
+        public void GameOriginSort(int index)
         {
-            PkmData = PkmData.OrderBy(mon => mon.ID)
+            PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
+                             .ThenBy(mon => OriginIndex(mon.Origin))
+                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => mon.AltForm)
+                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Level)
+                             .ThenBy(mon => mon.Nickname)
+                             .ToList<MonData>();
+
+            FillPKXBoxes(index);
+        }
+
+        public void OriginSpeciesSort(int index)
+        {
+            PkmData = PkmData.OrderBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => mon.Species)
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
@@ -1049,9 +1101,15 @@ namespace MonCollection
             OpenPKM(PkmData[slotSelected]);
         }
 
-        private void ButtonOTSort_Click(object sender, EventArgs e)
+        private void ButtonOriginSort_Click(object sender, EventArgs e)
         {
-            OTSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            OriginSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            OpenPKM(PkmData[slotSelected]);
+        }
+
+        private void buttonGameOriginSort_Click(object sender, EventArgs e)
+        {
+            GameOriginSort((int)bpkx1.Tag / RES_MIN);
             OpenPKM(PkmData[slotSelected]);
         }
 
@@ -1391,6 +1449,7 @@ namespace MonCollection
             mon.Game = comboBoxGame.Text;
             mon.OT = textBoxOT.Text;
             mon.ID = int.Parse(textBoxID.Text);
+            mon.Origin = comboBoxOrigin.Text;
             mon.Shiny = (bool)BTN_Shinytize.Tag;
             mon.HP = int.Parse(textBoxHP.Text);
             mon.ATK = int.Parse(textBoxAttack.Text);
@@ -1616,7 +1675,7 @@ namespace MonCollection
 
             foreach (MonData data in full)
             {
-                if (filterGames.Contains(data.Game))
+                if (filterGames.Contains(data.Game) && filterSpecies.Contains(data.Species))
                 {
                     mons.Add(data);
                     PKMIndices.Add(full.IndexOf(data));
@@ -1637,6 +1696,42 @@ namespace MonCollection
                 delegate (object send, FormClosingEventArgs a) {
                     form.UpdateFilters();
                     filterGames = form.filters;
+                    LoadDatabase();
+                });
+            form.Show();
+        }
+
+        private void SpeciesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            PkmListSorted.RemoveAt(0);
+            PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
+
+            List<string> filterSpeciesNames = new List<string>();
+            List<string> allSpeciesNames = new List<string>();
+
+            foreach(ComboItem ci in PkmListSorted)
+            {
+                allSpeciesNames.Add(ci.Text);
+                if (filterSpecies.Contains(ci.Value))
+                    filterSpeciesNames.Add(ci.Text);
+            }
+
+            FormFilters form = new FormFilters
+            {
+                filters = filterSpeciesNames
+            };
+            form.LoadFilterList(allSpeciesNames);
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    form.UpdateFilters();
+                    filterSpeciesNames = form.filters;
+                    filterSpecies = new List<int>();
+                    foreach (ComboItem ci in PkmListAny)
+                    {
+                        if (filterSpeciesNames.Contains(ci.Text))
+                            filterSpecies.Add(ci.Value);
+                    }
                     LoadDatabase();
                 });
             form.Show();
@@ -1956,6 +2051,31 @@ namespace MonCollection
                     monRibbons = form.ribbons;
                     UpdateRibbons();
                 });
+            form.Show();
+        }
+
+        private void buttonAssignOrigin_Click(object sender, EventArgs e)
+        {
+            FormAssignOrigin form = new FormAssignOrigin
+            {
+                regionVals = regionDict
+            };
+            form.LoadOrigins();
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    if (form.set)
+                    {
+                        foreach(MonData mon in PkmData)
+                        {
+                            if(mon.ID == form.setID && mon.OT == form.setOT)
+                            {
+                                mon.Origin = form.setOrigin;
+                            }
+                        }
+                        OpenPKM(PkmData[slotSelected]);
+                    }
+                });
+
             form.Show();
         }
     }

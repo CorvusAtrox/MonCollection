@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAssignOrigin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignOrigin.Designer.cs">
+      <DependentUpon>FormAssignOrigin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRibbons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
     <Compile Include="SaveInfo.cs" />
+    <EmbeddedResource Include="FormAssignOrigin.resx">
+      <DependentUpon>FormAssignOrigin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRibbons.resx">
       <DependentUpon>FormRibbons.cs</DependentUpon>
     </EmbeddedResource>
@@ -19095,6 +19104,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\swsh\814.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\swsh\815.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\swsh\816.gif">
