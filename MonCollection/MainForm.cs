@@ -33,9 +33,10 @@ namespace MonCollection
         private List<int> PKMIndices;
 
         private List<string> filterGames;
-        private List<string> gameList;
-
+        private List<string> filterOrigins;
         private List<int> filterSpecies;
+
+        private List<string> gameList;
 
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame; 
@@ -46,9 +47,18 @@ namespace MonCollection
         private const int RES_MIN = 6;
         private int maxIndex = 0;
 
+        private const int numPokemon = 893;
+
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
         private int[] noDiff;
+
+        private int[] galar;
+        private int[] isleArmor;
+        private int[] crownTundra;
+
+        private int[] swshForeign;
+
         private string[] languages;
 
         private MonFamily monFamily;
@@ -79,9 +89,10 @@ namespace MonCollection
             regionDict = new Dictionary<string,int>();
 
             filterGames = new List<string>();
+            filterOrigins = new List<string>();
             filterSpecies = new List<int>();
 
-            for (int i = 1; i <= 890; i++)
+            for (int i = 1; i <= numPokemon; i++)
                 filterSpecies.Add(i);
 
             StreamReader dict = new StreamReader(Settings.Default.mons + "/mons.ini");
@@ -127,6 +138,7 @@ namespace MonCollection
                 l = dict.ReadLine();
                 split = l.Split(',');
                 regionDict.Add(split[0],ind);
+                filterOrigins.Add(split[0]);
                 ind++;
             }
 
@@ -175,6 +187,105 @@ namespace MonCollection
                                          457, 459, 460, 461, 464, 465, 473, 133};
             noDiff = new int[] { 414, 664, 665 };
             languages = new string[]{ "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
+
+            galar = new int[] { 810, 811, 812, 813, 814, 815, 816, 817, 818,
+                                824, 825, 826, 10, 11, 12, 736, 737, 738,
+                                163, 164, 821, 822, 823, 819, 820, 519, 520, 521,
+                                827, 828, 263, 264, 862, 831, 832, 270, 271, 272,
+                                273, 274, 275, 833, 834, 509, 510, 835, 836,
+                                659, 660, 572, 573, 761, 762, 763, 43, 44, 45, 182,
+                                406, 315, 407, 278, 279, 595, 596, 309, 310,
+                                37, 38, 58, 59, 582, 583, 584, 220, 221, 473,
+                                225, 361, 362, 478, 343, 344, 749, 750, 557, 558,
+                                622, 623, 517, 518, 177, 178, 759, 760, 459, 460,
+                                98, 99, 194, 195, 341, 342, 290, 291, 292,
+                                236, 106, 107, 237, 674, 675, 599, 600, 601,
+                                415, 416, 436, 437, 280, 281, 282, 475, 425, 426,
+                                829, 830, 420, 421, 434, 435, 535, 536, 537,
+                                355, 356, 477, 66, 67, 68, 92, 93, 94, 129, 130,
+                                118, 119, 223, 224, 90, 91, 349, 350, 550, 746,
+                                771, 568, 569, 850, 851, 837, 838, 839, 50, 51,
+                                529, 530, 524, 525, 526, 532, 533, 534, 527, 528,
+                                714, 715, 95, 208, 846, 847, 52, 863, 53,
+                                868, 869, 742, 743, 597, 598, 710, 711,
+                                172, 25, 26, 133, 134, 135, 136, 196, 197,
+                                470, 471, 700, 840, 841, 842, 677, 678, 684, 685,
+                                682, 683, 751, 752, 360, 202, 83, 865, 170, 171,
+                                453, 454, 559, 560, 618, 213, 339, 340, 422, 423,
+                                767, 768, 688, 689, 222, 864, 859, 860, 861,
+                                856, 857, 858, 757, 758, 624, 625, 538, 539,
+                                109, 110, 438, 185, 173, 35, 36, 175, 176, 468,
+                                446, 143, 546, 547, 111, 112, 464, 574, 575, 576,
+                                577, 578, 579, 588, 589, 616, 617, 605, 606,
+                                613, 614, 627, 628, 629, 630, 451, 452,
+                                607, 608, 609, 686, 687, 215, 461, 302, 303,
+                                556, 561, 447, 448, 324, 778, 878, 879, 211,
+                                592, 593, 747, 748, 845, 848, 849, 843, 844,
+                                449, 450, 632, 631, 694, 695, 701, 328, 329, 330,
+                                610, 611, 612, 562, 867, 563, 679, 680, 681,
+                                77, 78, 854, 855, 876, 708, 709, 755, 756,
+                                765, 766, 877, 870, 780, 776, 777, 872, 873,
+                                852, 853, 871, 458, 226, 320, 321, 712, 713,
+                                781, 131, 337, 338, 439, 122, 866, 554, 555,
+                                874, 875, 884, 479, 132, 880, 881, 882, 883,
+                                4, 5, 6, 772, 773, 246, 247, 248, 633, 634, 635,
+                                704, 705, 706, 782, 783, 784, 885, 886, 887,
+                                888, 889, 890
+                               };
+            isleArmor = new int[] { 79, 80, 199, 427, 428, 440, 113, 242, 819, 820,
+                                    174, 39, 40, 824, 825, 826, 753, 754, 840, 841, 842,
+                                    661, 662, 663, 403, 404, 405, 707, 624, 625,
+                                    63, 64, 65, 280, 281, 282, 475, 98, 99, 72, 73,
+                                    129, 130, 223, 224, 458, 226, 278, 279, 451, 452,
+                                    206, 626, 108, 463, 833, 834, 194, 195, 704, 705, 706,
+                                    621, 616, 617, 588, 589, 1, 2, 3, 7, 8, 9,
+                                    543, 544, 545, 590, 591, 764, 114, 465, 453, 454,
+                                    172, 25, 26, 570, 571, 765, 766, 341, 342, 845, 
+                                    118, 119, 846, 847, 120, 121, 891, 892, 587, 702,
+                                    877, 81, 82, 462, 686, 687, 746, 318, 319,
+                                    506, 507, 508, 128, 241, 123, 212, 127, 214,
+                                    557, 558, 767, 768, 871, 747, 748, 852, 853,
+                                    90, 91, 769, 770, 425, 426, 339, 340, 298, 183, 184,
+                                    60, 61, 62, 168, 54, 55, 293, 294, 295, 527, 528, 
+                                    227, 744, 745, 524, 525, 526, 757, 758, 559, 560,
+                                    619, 620, 782, 783, 784, 27, 28, 104, 105, 115,
+                                    324, 843, 844, 551, 552, 553, 627, 628, 629, 630,
+                                    111, 112, 464, 636, 637, 170, 171, 320, 321,
+                                    592, 593, 690, 691, 692, 693, 116, 117, 118,
+                                    648, 649, 415, 416, 102, 103, 132, 137, 233, 474, 893
+                                  };
+            crownTundra = new int[] { 29, 30, 31, 32, 33, 34,
+                                      41, 42, 169,
+                                      199,
+                                      239, 125, 466,
+                                      240, 126, 467,
+                                      304, 305, 306,
+                                      333, 334,
+                                      359,
+                                      363, 364, 365,
+                                      369,
+                                      374, 375, 376,
+                                      443, 444, 445,
+                                      615,
+                                      698, 699,
+                                      144, 145, 146,
+                                      243, 244, 245,
+                                      249, 250,
+                                      377, 378, 379, 486,
+                                      380, 381, 
+                                      382, 383, 384,
+                                      480, 481, 482,
+                                      483, 484, 487,
+                                      485,
+                                      488,
+                                      641, 642, 645,
+                                      716, 717, 718,
+                                      785, 786, 787, 788
+                                    };
+            swshForeign = new int[] { 150, 151, 251, 385, 638, 639, 640, 643, 644, 646, 647, 
+                                      722, 723, 724, 725, 726, 727, 728, 729, 730, 789, 790, 
+                                      791, 792, 800, 801, 802, 807, 808, 809
+                                    };
         }
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
@@ -536,13 +647,15 @@ namespace MonCollection
 
             pictureBoxBall.Image = RetrieveImage("Resources/img/ball/" + pk.Ball + ".png");
             string spForm = pk.Species.ToString();
-            if (pk.AltForm > 0 && !noDiff.Contains(pk.Species))
+            if (pk.AltForm > 0 && !noDiff.Contains(pk.Species) && pk.Species != 869)
                 spForm += "-" + pk.AltForm.ToString();
+            else if (pk.Species == 869)
+                spForm += "-" + (pk.AltForm / 7).ToString() + "-" + (pk.AltForm % 7).ToString();
             else if (majorGenderDiff.Contains(pk.Species))
             {
                 if (pk.Gender == 0)
                     spForm += "m";
-                else if(pk.Gender == 1)
+                else if (pk.Gender == 1)
                     spForm += "f";
             }
             if (pk.Species == 25 && pk.Gen == 6)
@@ -902,8 +1015,10 @@ namespace MonCollection
             {
                 MonData mon = PkmData[i + begin];
                 string spForm = mon.Species.ToString();
-                if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
+                if (mon.AltForm > 0 && !noDiff.Contains(mon.Species) && mon.Species != 869)
                     spForm += "-" + mon.AltForm.ToString();
+                else if (mon.Species == 869)
+                    spForm += "-" + (mon.AltForm / 7).ToString() + "-" + (mon.AltForm % 7).ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
                     if (mon.Gender == 0)
@@ -1675,7 +1790,7 @@ namespace MonCollection
 
             foreach (MonData data in full)
             {
-                if (filterGames.Contains(data.Game) && filterSpecies.Contains(data.Species))
+                if (filterGames.Contains(data.Game) && filterOrigins.Contains(data.Origin) && filterSpecies.Contains(data.Species))
                 {
                     mons.Add(data);
                     PKMIndices.Add(full.IndexOf(data));
@@ -1696,6 +1811,28 @@ namespace MonCollection
                 delegate (object send, FormClosingEventArgs a) {
                     form.UpdateFilters();
                     filterGames = form.filters;
+                    LoadDatabase();
+                });
+            form.Show();
+        }
+
+        private void originToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<string> originList = new List<string>();
+            FormFilters form = new FormFilters
+            {
+                filters = filterOrigins
+            };
+            foreach (var item in comboBoxOrigin.Items)
+            {
+                if(item != null)
+                    originList.Add(item.ToString());
+            }
+            form.LoadFilterList(originList);
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    form.UpdateFilters();
+                    filterOrigins = form.filters;
                     LoadDatabase();
                 });
             form.Show();
@@ -2077,6 +2214,24 @@ namespace MonCollection
                 });
 
             form.Show();
+        }
+
+        private void homeSwShToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterGames = new List<string>();
+            foreach(var item in comboBoxGame.Items)
+            {
+                if (item.ToString().Contains("HOME"))
+                    filterGames.Add(item.ToString());
+            }
+
+            filterSpecies = new List<int>();
+            
+            filterSpecies.AddRange(galar);
+            filterSpecies.AddRange(isleArmor);
+            //filterSpecies.AddRange(crownTundra);
+            filterSpecies.AddRange(swshForeign);
+            LoadDatabase();
         }
     }
 }

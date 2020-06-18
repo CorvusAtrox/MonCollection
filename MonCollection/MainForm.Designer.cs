@@ -54,7 +54,6 @@ namespace MonCollection
             this.comboBoxMove3 = new System.Windows.Forms.ComboBox();
             this.bpkx30 = new System.Windows.Forms.PictureBox();
             this.SCR_Box = new System.Windows.Forms.VScrollBar();
-            this.bpkx1 = new System.Windows.Forms.PictureBox();
             this.bpkx29 = new System.Windows.Forms.PictureBox();
             this.bpkx28 = new System.Windows.Forms.PictureBox();
             this.bpkx27 = new System.Windows.Forms.PictureBox();
@@ -120,6 +119,8 @@ namespace MonCollection
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homeSwShToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHP = new System.Windows.Forms.TextBox();
             this.textBoxAttack = new System.Windows.Forms.TextBox();
             this.textBoxDefense = new System.Windows.Forms.TextBox();
@@ -168,10 +169,11 @@ namespace MonCollection
             this.labelOrigin = new System.Windows.Forms.Label();
             this.buttonGameOriginSort = new System.Windows.Forms.Button();
             this.buttonAssignOrigin = new System.Windows.Forms.Button();
+            this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bpkx1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx27)).BeginInit();
@@ -224,6 +226,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -507,18 +510,6 @@ namespace MonCollection
             this.SCR_Box.Size = new System.Drawing.Size(24, 276);
             this.SCR_Box.TabIndex = 60;
             this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
-            // 
-            // bpkx1
-            // 
-            this.bpkx1.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx1.Location = new System.Drawing.Point(626, 76);
-            this.bpkx1.Name = "bpkx1";
-            this.bpkx1.Size = new System.Drawing.Size(68, 56);
-            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx1.TabIndex = 61;
-            this.bpkx1.TabStop = false;
-            this.bpkx1.Tag = "";
             // 
             // bpkx29
             // 
@@ -849,7 +840,7 @@ namespace MonCollection
             // 
             // buttonGameSpeciesSort
             // 
-            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(779, 365);
+            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(760, 365);
             this.buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
             this.buttonGameSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonGameSpeciesSort.TabIndex = 117;
@@ -984,7 +975,7 @@ namespace MonCollection
             // 
             // buttonGameMonTally
             // 
-            this.buttonGameMonTally.Location = new System.Drawing.Point(779, 423);
+            this.buttonGameMonTally.Location = new System.Drawing.Point(760, 423);
             this.buttonGameMonTally.Name = "buttonGameMonTally";
             this.buttonGameMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameMonTally.TabIndex = 129;
@@ -1004,7 +995,7 @@ namespace MonCollection
             // 
             // buttonSpeciesSort
             // 
-            this.buttonSpeciesSort.Location = new System.Drawing.Point(913, 394);
+            this.buttonSpeciesSort.Location = new System.Drawing.Point(894, 394);
             this.buttonSpeciesSort.Name = "buttonSpeciesSort";
             this.buttonSpeciesSort.Size = new System.Drawing.Size(116, 23);
             this.buttonSpeciesSort.TabIndex = 131;
@@ -1036,7 +1027,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(913, 452);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(626, 452);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
             this.buttonNiqCalc.TabIndex = 136;
@@ -1056,7 +1047,7 @@ namespace MonCollection
             // 
             // buttonOriginSort
             // 
-            this.buttonOriginSort.Location = new System.Drawing.Point(779, 394);
+            this.buttonOriginSort.Location = new System.Drawing.Point(760, 394);
             this.buttonOriginSort.Name = "buttonOriginSort";
             this.buttonOriginSort.Size = new System.Drawing.Size(116, 23);
             this.buttonOriginSort.TabIndex = 142;
@@ -1066,7 +1057,7 @@ namespace MonCollection
             // 
             // buttonMoveMonTally
             // 
-            this.buttonMoveMonTally.Location = new System.Drawing.Point(626, 452);
+            this.buttonMoveMonTally.Location = new System.Drawing.Point(760, 452);
             this.buttonMoveMonTally.Name = "buttonMoveMonTally";
             this.buttonMoveMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMoveMonTally.TabIndex = 143;
@@ -1176,7 +1167,9 @@ namespace MonCollection
             // 
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem,
-            this.speciesToolStripMenuItem});
+            this.originToolStripMenuItem,
+            this.speciesToolStripMenuItem,
+            this.presetsToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -1184,16 +1177,31 @@ namespace MonCollection
             // gameToolStripMenuItem
             // 
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gameToolStripMenuItem.Text = "Game";
             this.gameToolStripMenuItem.Click += new System.EventHandler(this.GameToolStripMenuItem_Click);
             // 
             // speciesToolStripMenuItem
             // 
             this.speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
-            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.speciesToolStripMenuItem.Text = "Species";
             this.speciesToolStripMenuItem.Click += new System.EventHandler(this.SpeciesToolStripMenuItem_Click);
+            // 
+            // presetsToolStripMenuItem
+            // 
+            this.presetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homeSwShToolStripMenuItem});
+            this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
+            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presetsToolStripMenuItem.Text = "Presets";
+            // 
+            // homeSwShToolStripMenuItem
+            // 
+            this.homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
+            this.homeSwShToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homeSwShToolStripMenuItem.Text = "Home->SwSh";
+            this.homeSwShToolStripMenuItem.Click += new System.EventHandler(this.homeSwShToolStripMenuItem_Click);
             // 
             // textBoxHP
             // 
@@ -1308,7 +1316,7 @@ namespace MonCollection
             // 
             // buttonMonBallTally
             // 
-            this.buttonMonBallTally.Location = new System.Drawing.Point(778, 452);
+            this.buttonMonBallTally.Location = new System.Drawing.Point(894, 452);
             this.buttonMonBallTally.Name = "buttonMonBallTally";
             this.buttonMonBallTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMonBallTally.TabIndex = 160;
@@ -1335,7 +1343,7 @@ namespace MonCollection
             // 
             // buttonLevelTally
             // 
-            this.buttonLevelTally.Location = new System.Drawing.Point(913, 423);
+            this.buttonLevelTally.Location = new System.Drawing.Point(894, 423);
             this.buttonLevelTally.Name = "buttonLevelTally";
             this.buttonLevelTally.Size = new System.Drawing.Size(116, 23);
             this.buttonLevelTally.TabIndex = 162;
@@ -1619,7 +1627,7 @@ namespace MonCollection
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(778, 481);
+            this.buttonLineInfo.Location = new System.Drawing.Point(760, 481);
             this.buttonLineInfo.Name = "buttonLineInfo";
             this.buttonLineInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonLineInfo.TabIndex = 190;
@@ -1629,7 +1637,7 @@ namespace MonCollection
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(913, 481);
+            this.buttonDupCheck.Location = new System.Drawing.Point(894, 481);
             this.buttonDupCheck.Name = "buttonDupCheck";
             this.buttonDupCheck.Size = new System.Drawing.Size(116, 23);
             this.buttonDupCheck.TabIndex = 191;
@@ -1639,7 +1647,7 @@ namespace MonCollection
             // 
             // buttonPkrsCount
             // 
-            this.buttonPkrsCount.Location = new System.Drawing.Point(913, 510);
+            this.buttonPkrsCount.Location = new System.Drawing.Point(894, 510);
             this.buttonPkrsCount.Name = "buttonPkrsCount";
             this.buttonPkrsCount.Size = new System.Drawing.Size(116, 23);
             this.buttonPkrsCount.TabIndex = 192;
@@ -1674,7 +1682,7 @@ namespace MonCollection
             // 
             // buttonGameOriginSort
             // 
-            this.buttonGameOriginSort.Location = new System.Drawing.Point(913, 365);
+            this.buttonGameOriginSort.Location = new System.Drawing.Point(894, 365);
             this.buttonGameOriginSort.Name = "buttonGameOriginSort";
             this.buttonGameOriginSort.Size = new System.Drawing.Size(116, 23);
             this.buttonGameOriginSort.TabIndex = 195;
@@ -1684,13 +1692,32 @@ namespace MonCollection
             // 
             // buttonAssignOrigin
             // 
-            this.buttonAssignOrigin.Location = new System.Drawing.Point(778, 510);
+            this.buttonAssignOrigin.Location = new System.Drawing.Point(760, 510);
             this.buttonAssignOrigin.Name = "buttonAssignOrigin";
             this.buttonAssignOrigin.Size = new System.Drawing.Size(116, 23);
             this.buttonAssignOrigin.TabIndex = 196;
             this.buttonAssignOrigin.Text = "Assign Origin";
             this.buttonAssignOrigin.UseVisualStyleBackColor = true;
             this.buttonAssignOrigin.Click += new System.EventHandler(this.buttonAssignOrigin_Click);
+            // 
+            // originToolStripMenuItem
+            // 
+            this.originToolStripMenuItem.Name = "originToolStripMenuItem";
+            this.originToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.originToolStripMenuItem.Text = "Origin";
+            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
+            // 
+            // bpkx1
+            // 
+            this.bpkx1.BackColor = System.Drawing.Color.Transparent;
+            this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bpkx1.Location = new System.Drawing.Point(626, 76);
+            this.bpkx1.Name = "bpkx1";
+            this.bpkx1.Size = new System.Drawing.Size(68, 56);
+            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bpkx1.TabIndex = 61;
+            this.bpkx1.TabStop = false;
+            this.bpkx1.Tag = "";
             // 
             // MainForm
             // 
@@ -1835,7 +1862,6 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx27)).EndInit();
@@ -1889,6 +1915,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1919,7 +1946,6 @@ namespace MonCollection
         private System.Windows.Forms.ComboBox comboBoxMove3;
         private PictureBox bpkx30;
         private VScrollBar SCR_Box;
-        private PictureBox bpkx1;
         private PictureBox bpkx29;
         private PictureBox bpkx28;
         private PictureBox bpkx27;
@@ -2033,6 +2059,10 @@ namespace MonCollection
         private ToolStripMenuItem speciesToolStripMenuItem;
         private Button buttonGameOriginSort;
         private Button buttonAssignOrigin;
+        private ToolStripMenuItem presetsToolStripMenuItem;
+        private ToolStripMenuItem homeSwShToolStripMenuItem;
+        private ToolStripMenuItem originToolStripMenuItem;
+        private PictureBox bpkx1;
     }
 }
 

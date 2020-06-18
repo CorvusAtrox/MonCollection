@@ -129,7 +129,7 @@ namespace MonCollection
             families.Add(new int[] { 204, 205 }); //Pineco
             families.Add(new int[] { 206 }); //Dunsparce
             families.Add(new int[] { 207, 472 }); //Gligar
-            families.Add(new int[] { 209, 210 }); //Snubbul
+            families.Add(new int[] { 209, 210 }); //Snubbull
             families.Add(new int[] { 211 }); //Qwilfish
             families.Add(new int[] { 213 }); //Shuckle
             families.Add(new int[] { 214 }); //Heracross
@@ -485,8 +485,10 @@ namespace MonCollection
             families.Add(new int[] { 888 }); //Zacian
             families.Add(new int[] { 889 }); //Zamazenta
             families.Add(new int[] { 890 }); //Eternatus
-            //Kubfu
-            //Zarude
+            families.Add(new int[] { 891, 892 }); //Kubfu
+            families.Add(new int[] { 893 }); //Zarude
+            //Regieleki
+            //Regidrago
             //Calyrex
         }
     }
