@@ -487,9 +487,11 @@ namespace MonCollection
             families.Add(new int[] { 890 }); //Eternatus
             families.Add(new int[] { 891, 892 }); //Kubfu
             families.Add(new int[] { 893 }); //Zarude
-            //Regieleki
-            //Regidrago
-            //Calyrex
+            families.Add(new int[] { 894 }); //Regieleki
+            families.Add(new int[] { 895 }); //Regidrago
+            families.Add(new int[] { 896 }); //HAKUBA
+            families.Add(new int[] { 897 }); //KOKUBA
+            families.Add(new int[] { 898 }); //Calyrex
         }
     }
 }
