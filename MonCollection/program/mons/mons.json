@@ -2424,6 +2424,42 @@
     "gMax": false
   },
   {
+    "Nickname": "BOUNCER",
+    "Species": 77,
+    "Level": 36,
+    "Gender": 1,
+    "Moves": [
+      52,
+      23,
+      83,
+      36
+    ],
+    "Game": "HOME [Dieter]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 50,
+    "Boon": 1,
+    "Bane": 3,
+    "Nature": 2,
+    "HP": 86,
+    "ATK": 79,
+    "DEF": 54,
+    "SPA": 53,
+    "SPD": 62,
+    "SPE": 64,
+    "Gen": 8,
+    "ID": 13757,
+    "OT": "BILL",
+    "Origin": "Kanto (FRLG)",
+    "Ball": 2,
+    "Language": 2,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "Ribbons": [],
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
     "Nickname": "ポニータ",
     "Species": 77,
     "Level": 1,
@@ -6541,6 +6577,42 @@
     "PKRS_Infected": false,
     "PKRS_Cured": false,
     "Ribbons": null,
+    "dynaLevel": 0,
+    "gMax": false
+  },
+  {
+    "Nickname": "ニンニン",
+    "Species": 290,
+    "Level": 12,
+    "Gender": 1,
+    "Moves": [
+      10,
+      106,
+      141,
+      28
+    ],
+    "Game": "HOME [Dieter]",
+    "AltForm": 0,
+    "Shiny": false,
+    "Ability": 14,
+    "Boon": 3,
+    "Bane": 3,
+    "Nature": 12,
+    "HP": 32,
+    "ATK": 16,
+    "DEF": 29,
+    "SPA": 14,
+    "SPD": 13,
+    "SPE": 16,
+    "Gen": 8,
+    "ID": 47177,
+    "OT": "ゆあみ",
+    "Origin": "Kalos (XY)",
+    "Ball": 3,
+    "Language": 1,
+    "PKRS_Infected": true,
+    "PKRS_Cured": false,
+    "Ribbons": [],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -10779,7 +10851,7 @@
     "SPA": 38,
     "SPD": 21,
     "SPE": 35,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 860183,
     "OT": "Ramirez",
     "Origin": "Alola (SMUSUM)",
@@ -55229,42 +55301,6 @@
     "gMax": false
   },
   {
-    "Nickname": "BOUNCER",
-    "Species": 77,
-    "Level": 36,
-    "Gender": 1,
-    "Moves": [
-      52,
-      23,
-      83,
-      36
-    ],
-    "Game": "HOME [Dieter]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 50,
-    "Boon": 1,
-    "Bane": 3,
-    "Nature": 2,
-    "HP": 86,
-    "ATK": 79,
-    "DEF": 54,
-    "SPA": 53,
-    "SPD": 62,
-    "SPE": 64,
-    "Gen": 8,
-    "ID": 13757,
-    "OT": "BILL",
-    "Origin": "Kanto (FRLG)",
-    "Ball": 2,
-    "Language": 2,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "Ribbons": [],
-    "dynaLevel": 0,
-    "gMax": false
-  },
-  {
     "Nickname": "Sgt PB",
     "Species": 78,
     "Level": 44,
@@ -91065,42 +91101,6 @@
     "gMax": false
   },
   {
-    "Nickname": "ニンニン",
-    "Species": 290,
-    "Level": 12,
-    "Gender": 1,
-    "Moves": [
-      10,
-      106,
-      141,
-      28
-    ],
-    "Game": "X [だいすけ]",
-    "AltForm": 0,
-    "Shiny": false,
-    "Ability": 14,
-    "Boon": 3,
-    "Bane": 3,
-    "Nature": 12,
-    "HP": 32,
-    "ATK": 16,
-    "DEF": 29,
-    "SPA": 14,
-    "SPD": 13,
-    "SPE": 16,
-    "Gen": 6,
-    "ID": 47177,
-    "OT": "ゆあみ",
-    "Origin": "Kalos (XY)",
-    "Ball": 3,
-    "Language": 1,
-    "PKRS_Infected": true,
-    "PKRS_Cured": false,
-    "Ribbons": [],
-    "dynaLevel": 0,
-    "gMax": false
-  },
-  {
     "Nickname": "17 Again",
     "Species": 291,
     "Level": 29,
@@ -93565,8 +93565,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 65,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 5,
     "Nature": 4,
     "HP": 244,
     "ATK": 205,
@@ -93582,7 +93582,10 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "kalosChampion",
+      "skillfulBattler"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -93601,8 +93604,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 66,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 3,
+    "Bane": 3,
     "Nature": 12,
     "HP": 48,
     "ATK": 30,
@@ -93997,8 +94000,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 22,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 2,
     "Nature": 6,
     "HP": 92,
     "ATK": 76,
@@ -94014,7 +94017,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "national"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -94662,7 +94667,9 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "event"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95041,8 +95048,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 11,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 4,
+    "Bane": 2,
     "Nature": 16,
     "HP": 268,
     "ATK": 197,
@@ -95058,7 +95065,10 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "kalosChampion",
+      "skillfulBattler"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95149,8 +95159,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 68,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 1,
     "Nature": 5,
     "HP": 244,
     "ATK": 200,
@@ -95166,7 +95176,9 @@
     "Language": 2,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "national"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95418,7 +95430,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "national"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95454,7 +95468,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "classic"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95689,8 +95705,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 62,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 4,
     "Nature": 3,
     "HP": 133,
     "ATK": 94,
@@ -95706,7 +95722,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "national"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -95725,8 +95743,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 74,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 1,
+    "Bane": 3,
     "Nature": 2,
     "HP": 35,
     "ATK": 18,
@@ -95761,8 +95779,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 9,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 4,
+    "Bane": 1,
     "Nature": 15,
     "HP": 125,
     "ATK": 78,
@@ -95778,7 +95796,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "sinnohChampion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -96210,7 +96230,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "footprint"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -96282,7 +96304,9 @@
     "Language": 2,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "sinnohChampion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -96409,8 +96433,8 @@
     "AltForm": 2,
     "Shiny": false,
     "Ability": 68,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 4,
     "Nature": 8,
     "HP": 222,
     "ATK": 196,
@@ -96426,7 +96450,9 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "kalosChampion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -96805,8 +96831,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 46,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 5,
+    "Bane": 1,
     "Nature": 20,
     "HP": 455,
     "ATK": 239,
@@ -96822,7 +96848,17 @@
     "Language": 3,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "sinnohChampion",
+      "effort",
+      "alert",
+      "shock",
+      "careless",
+      "relax",
+      "snooze",
+      "smile",
+      "legend"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -96858,7 +96894,9 @@
     "Language": 3,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "sinnohChampion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -97057,8 +97095,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 82,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 2,
+    "Bane": 2,
     "Nature": 6,
     "HP": 71,
     "ATK": 43,
@@ -97726,7 +97764,9 @@
     "Language": 5,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [
+      "classic"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -98429,8 +98469,8 @@
     "AltForm": 0,
     "Shiny": false,
     "Ability": 29,
-    "Boon": 0,
-    "Bane": 0,
+    "Boon": 3,
+    "Bane": 1,
     "Nature": 10,
     "HP": 184,
     "ATK": 106,
@@ -98446,7 +98486,9 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "kalosChampion"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -98554,7 +98596,10 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": true,
-    "Ribbons": null,
+    "Ribbons": [
+      "kalosChampion",
+      "skillfulBattler"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -98626,7 +98671,9 @@
     "Language": 5,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": [],
+    "Ribbons": [
+      "classic"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -98662,7 +98709,9 @@
     "Language": 5,
     "PKRS_Infected": true,
     "PKRS_Cured": false,
-    "Ribbons": [],
+    "Ribbons": [
+      "classic"
+    ],
     "dynaLevel": 0,
     "gMax": false
   },
@@ -140179,7 +140228,7 @@
       63,
       326
     ],
-    "Game": "Ultra Moon [かなで]",
+    "Game": "HOME [Dieter]",
     "AltForm": 0,
     "Shiny": false,
     "Ability": 26,
@@ -140192,7 +140241,7 @@
     "SPA": 58,
     "SPD": 93,
     "SPE": 69,
-    "Gen": 7,
+    "Gen": 8,
     "ID": 723026,
     "OT": "かなで",
     "Origin": "Alola (SMUSUM)",
@@ -140200,7 +140249,7 @@
     "Language": 1,
     "PKRS_Infected": false,
     "PKRS_Cured": false,
-    "Ribbons": null,
+    "Ribbons": [],
     "dynaLevel": 0,
     "gMax": false
   },
