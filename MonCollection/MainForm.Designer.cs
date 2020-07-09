@@ -118,6 +118,7 @@ namespace MonCollection
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeSwShToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -169,7 +170,6 @@ namespace MonCollection
             this.labelOrigin = new System.Windows.Forms.Label();
             this.buttonGameOriginSort = new System.Windows.Forms.Button();
             this.buttonAssignOrigin = new System.Windows.Forms.Button();
-            this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bpkx1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
@@ -1177,14 +1177,21 @@ namespace MonCollection
             // gameToolStripMenuItem
             // 
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.gameToolStripMenuItem.Text = "Game";
             this.gameToolStripMenuItem.Click += new System.EventHandler(this.GameToolStripMenuItem_Click);
+            // 
+            // originToolStripMenuItem
+            // 
+            this.originToolStripMenuItem.Name = "originToolStripMenuItem";
+            this.originToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.originToolStripMenuItem.Text = "Origin";
+            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
             // 
             // speciesToolStripMenuItem
             // 
             this.speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
-            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.speciesToolStripMenuItem.Text = "Species";
             this.speciesToolStripMenuItem.Click += new System.EventHandler(this.SpeciesToolStripMenuItem_Click);
             // 
@@ -1193,13 +1200,13 @@ namespace MonCollection
             this.presetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeSwShToolStripMenuItem});
             this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.presetsToolStripMenuItem.Text = "Presets";
             // 
             // homeSwShToolStripMenuItem
             // 
             this.homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
-            this.homeSwShToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homeSwShToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.homeSwShToolStripMenuItem.Text = "Home->SwSh";
             this.homeSwShToolStripMenuItem.Click += new System.EventHandler(this.homeSwShToolStripMenuItem_Click);
             // 
@@ -1666,7 +1673,7 @@ namespace MonCollection
             this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxOrigin.Name = "comboBoxOrigin";
             this.comboBoxOrigin.Size = new System.Drawing.Size(180, 21);
-            this.comboBoxOrigin.TabIndex = 193;
+            this.comboBoxOrigin.TabIndex = 42;
             // 
             // labelOrigin
             // 
@@ -1699,13 +1706,6 @@ namespace MonCollection
             this.buttonAssignOrigin.Text = "Assign Origin";
             this.buttonAssignOrigin.UseVisualStyleBackColor = true;
             this.buttonAssignOrigin.Click += new System.EventHandler(this.buttonAssignOrigin_Click);
-            // 
-            // originToolStripMenuItem
-            // 
-            this.originToolStripMenuItem.Name = "originToolStripMenuItem";
-            this.originToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.originToolStripMenuItem.Text = "Origin";
-            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
             // 
             // bpkx1
             // 
