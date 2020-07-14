@@ -92,7 +92,7 @@ namespace MonCollection
             families.Add(new int[] { 131 }); //Lapras
             families.Add(new int[] { 132 }); //Ditto
             families.Add(new int[] { 133, 134, 135, 136, 196, 197, 470, 471, 700 }); //Eevee
-            families.Add(new int[] { 137, 233, 467 }); //Porygon
+            families.Add(new int[] { 137, 233, 474 }); //Porygon
             families.Add(new int[] { 138, 139 }); //Omanyte
             families.Add(new int[] { 140, 141 }); //Kabuto
             families.Add(new int[] { 142 }); //Aerodactyl

@@ -202,10 +202,18 @@ namespace MonCollection
             listMovesMate.Items.Clear();
             foreach (int move in mate.Moves)
                 listMovesMate.Items.Add(moveName(move));
-            if (mon.Gender == 1 || mate.Species == 132)
-                makeEgg(mon, mate);
-            else
-                makeEgg(mate, mon);
+            try
+            {
+                if (mon.Gender == 1 || mate.Species == 132)
+                    makeEgg(mon, mate);
+                else
+                    makeEgg(mate, mon);
+            } 
+            catch
+            {
+                MessageBox.Show("Failed to Make Egg");
+            }
+            
                 
 
         }
