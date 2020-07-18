@@ -100,6 +100,8 @@ namespace MonCollection
             string spForm = mon.Species.ToString();
             if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                 spForm += "-" + mon.AltForm.ToString();
+            else if (mon.Species == 869)
+                spForm += "-" + (mon.AltForm / 7).ToString() + "-" + (mon.AltForm % 7).ToString();
             else if (majorGenderDiff.Contains(mon.Species))
             {
                 if (mon.Gender == 0)
@@ -137,6 +139,8 @@ namespace MonCollection
                 string spForm = mon.Species.ToString();
                 if (mon.AltForm > 0 && !noDiff.Contains(mon.Species))
                     spForm += "-" + mon.AltForm.ToString();
+                else if (mon.Species == 869)
+                    spForm += "-" + (mon.AltForm / 7).ToString() + "-" + (mon.AltForm % 7).ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
                     if (mon.Gender == 0)
