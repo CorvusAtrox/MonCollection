@@ -147,36 +147,7 @@ namespace MonCollection
 
         private void InitializeMonLists()
         {
-            GameInfo.Strings = GameInfo.GetStrings("en");
-            PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
-
-            monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
-            GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
-                                      GameVersion.GD, GameVersion.SV, GameVersion.C,
-                                      GameVersion.R, GameVersion.S, GameVersion.FR,  GameVersion.LG, GameVersion.E,
-                                      GameVersion.CXD,
-                                      GameVersion.D, GameVersion.P, GameVersion.Pt, GameVersion.HG, GameVersion.SS,
-                                      GameVersion.B, GameVersion.W, GameVersion.B2, GameVersion.W2,
-                                      GameVersion.X, GameVersion.Y, GameVersion.OR, GameVersion.AS,
-                                      GameVersion.GO,
-                                      GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
-                                      GameVersion.GP, GameVersion.GE,
-                                      GameVersion.SW, GameVersion.SH};
-            foreach (GameVersion v in versions)
-            {
-                SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
-                var f = new FilteredGameDataSource(sf, GameInfo.Sources).Species;
-                List<ComboItem> sp = new List<ComboItem>(f);
-
-                foreach (ComboItem ci in PkmListAny)
-                {
-                    if (sp.Contains(ci))
-                        monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value),true);
-                    else
-                        monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
-                }
-            }
-            majorGenderDiff = new int[]{ 521, 592, 593, 668 };
+            majorGenderDiff = new int[] { 521, 592, 593, 668 };
             minorGenderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
                                          111, 112, 118, 119, 123, 129, 130, 154, 165, 166, 178, 185,
                                          186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214, 215,
@@ -186,7 +157,7 @@ namespace MonCollection
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473, 133};
             noDiff = new int[] { 414, 664, 665 };
-            languages = new string[]{ "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
+            languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 
             galar = new int[] { 810, 811, 812, 813, 814, 815, 816, 817, 818,
                                 824, 825, 826, 10, 11, 12, 736, 737, 738,
@@ -240,13 +211,13 @@ namespace MonCollection
                                     206, 626, 108, 463, 833, 834, 194, 195, 704, 705, 706,
                                     621, 616, 617, 588, 589, 1, 2, 3, 7, 8, 9,
                                     543, 544, 545, 590, 591, 764, 114, 465, 453, 454,
-                                    172, 25, 26, 570, 571, 765, 766, 341, 342, 845, 
+                                    172, 25, 26, 570, 571, 765, 766, 341, 342, 845,
                                     118, 119, 846, 847, 120, 121, 891, 892, 587, 702,
                                     877, 81, 82, 462, 686, 687, 746, 318, 319,
                                     506, 507, 508, 128, 241, 123, 212, 127, 214,
                                     557, 558, 767, 768, 871, 747, 748, 852, 853,
                                     90, 91, 769, 770, 425, 426, 339, 340, 298, 183, 184,
-                                    60, 61, 62, 168, 54, 55, 293, 294, 295, 527, 528, 
+                                    60, 61, 62, 186, 54, 55, 293, 294, 295, 527, 528,
                                     227, 744, 745, 524, 525, 526, 757, 758, 559, 560,
                                     619, 620, 782, 783, 784, 27, 28, 104, 105, 115,
                                     324, 843, 844, 551, 552, 553, 627, 628, 629, 630,
@@ -272,7 +243,7 @@ namespace MonCollection
                                       243, 244, 245,
                                       249, 250,
                                       377, 378, 379, 486,
-                                      380, 381, 
+                                      380, 381,
                                       382, 383, 384,
                                       480, 481, 482,
                                       483, 484, 487,
@@ -282,10 +253,64 @@ namespace MonCollection
                                       716, 717, 718,
                                       785, 786, 787, 788
                                     };
-            swshForeign = new int[] { 150, 151, 251, 385, 638, 639, 640, 643, 644, 646, 647, 
-                                      722, 723, 724, 725, 726, 727, 728, 729, 730, 789, 790, 
+            swshForeign = new int[] { 150, 151, 251, 385, 638, 639, 640, 643, 644, 646, 647,
+                                      722, 723, 724, 725, 726, 727, 728, 729, 730, 789, 790,
                                       791, 792, 800, 801, 802, 807, 808, 809
                                     };
+
+            GameInfo.Strings = GameInfo.GetStrings("en");
+            PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
+
+            monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
+            GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
+                                      GameVersion.GD, GameVersion.SV, GameVersion.C,
+                                      GameVersion.R, GameVersion.S, GameVersion.FR,  GameVersion.LG, GameVersion.E,
+                                      GameVersion.CXD,
+                                      GameVersion.D, GameVersion.P, GameVersion.Pt, GameVersion.HG, GameVersion.SS,
+                                      GameVersion.B, GameVersion.W, GameVersion.B2, GameVersion.W2,
+                                      GameVersion.X, GameVersion.Y, GameVersion.OR, GameVersion.AS,
+                                      GameVersion.GO,
+                                      GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
+                                      GameVersion.GP, GameVersion.GE,
+                                      GameVersion.SW, GameVersion.SH};
+            foreach (GameVersion v in versions)
+            {
+                SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
+                var f = new FilteredGameDataSource(sf, GameInfo.Sources).Species;
+                List<ComboItem> sp = new List<ComboItem>(f);
+
+                if(v == GameVersion.SW || v == GameVersion.SH)
+                {
+                    List<int> gameSpecies = new List<int>();
+
+                    gameSpecies.AddRange(galar);
+                    gameSpecies.AddRange(isleArmor);
+                    //gameSpecies.AddRange(crownTundra);
+                    gameSpecies.AddRange(swshForeign);
+
+                    foreach (ComboItem ci in PkmListAny)
+                    {
+                        if (gameSpecies.Contains(ci.Value))
+                            monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), true);
+                        else
+                            monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
+                    }
+                }
+                else
+                {
+                    foreach (ComboItem ci in PkmListAny)
+                    {
+                        if (sp.Contains(ci))
+                            monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), true);
+                        else
+                            monInGame.Add(new Tuple<GameVersion, int>(v, ci.Value), false);
+                    }
+                }
+            }
+
+            for(int i = 1; i <= numPokemon; i++)
+                monInGame.Add(new Tuple<GameVersion, int>(GameVersion.SWSH, i), true);
+
         }
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
@@ -1383,7 +1408,7 @@ namespace MonCollection
         private bool GetGameMons(GameVersion version, int species)
         {
             if(version == GameVersion.Unknown || version == GameVersion.SWSH)
-                return monInGame[new Tuple<GameVersion, int>(GameVersion.SH, species)];
+                return monInGame[new Tuple<GameVersion, int>(GameVersion.SWSH, species)];
             else
                 return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
