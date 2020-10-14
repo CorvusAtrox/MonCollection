@@ -332,8 +332,8 @@ namespace MonCollection
             });
 
             // Update Legality Analysis strings
-            LegalityAnalysis.MoveStrings = GameInfo.Strings.movelist;
-            LegalityAnalysis.SpeciesStrings = GameInfo.Strings.specieslist;
+            /*LegalityAnalysis.MoveStrings = GameInfo.Strings.movelist;
+            LegalityAnalysis.SpeciesStrings = GameInfo.Strings.specieslist;*/
         }
 
         private void InitializeBinding()

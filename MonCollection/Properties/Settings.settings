@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="mons" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\CorvusAtrox\source\repos\MonCollection\MonCollection\program\mons</Value>
+      <Value Profile="(Default)">C:\Users\crowl\OneDrive\Documents\GitHub\MonCollection\MonCollection\program\mons</Value>
     </Setting>
   </Settings>
 </SettingsFile>
