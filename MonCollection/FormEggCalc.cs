@@ -83,7 +83,7 @@ namespace MonCollection
             foreach (int move in mon.Moves)
                 listMovesMon.Items.Add(moveName(move));
 
-            eg = MonDataToPKM(mon).PersonalInfo.EggGroups;
+            eg = new int[] {MonDataToPKM(mon).PersonalInfo.EggGroup1, MonDataToPKM(mon).PersonalInfo.EggGroup2};
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
             if (MonDataToPKM(mon).PersonalInfo.IsEggGroup(15))
             {

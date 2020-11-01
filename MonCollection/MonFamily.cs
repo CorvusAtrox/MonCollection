@@ -489,8 +489,8 @@ namespace MonCollection
             families.Add(new int[] { 893 }); //Zarude
             families.Add(new int[] { 894 }); //Regieleki
             families.Add(new int[] { 895 }); //Regidrago
-            families.Add(new int[] { 896 }); //HAKUBA
-            families.Add(new int[] { 897 }); //KOKUBA
+            families.Add(new int[] { 896 }); //Glastrier
+            families.Add(new int[] { 897 }); //Spectrier
             families.Add(new int[] { 898 }); //Calyrex
         }
     }
