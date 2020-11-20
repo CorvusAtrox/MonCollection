@@ -673,8 +673,8 @@ namespace MonCollection
             string spForm = pk.Species.ToString();
             if (pk.AltForm > 0 && !noDiff.Contains(pk.Species) && pk.Species != 869)
                 spForm += "-" + pk.AltForm.ToString();
-            else if (pk.Species == 869)
-                spForm += "-" + (pk.AltForm / 7).ToString() + "-" + (pk.AltForm % 7).ToString();
+            else if (pk.Species == 869 && pk.AltForm >= 7)
+                spForm += "-" + (pk.AltForm / 7).ToString();
             else if (majorGenderDiff.Contains(pk.Species))
             {
                 if (pk.Gender == 0)
@@ -692,7 +692,10 @@ namespace MonCollection
                 else
                     pictureBoxIcon.SizeMode = PictureBoxSizeMode.CenterImage;
             }
-
+            if (pk.Species == 869 && pk.AltForm < 7)
+                spForm += "-0";
+            if (pk.Species == 869)
+                spForm += "-" + (pk.AltForm % 7).ToString();
             if (minorGenderDiff.Contains(pk.Species))
             {
                 if(pk.AltForm == 0 && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
@@ -1041,8 +1044,8 @@ namespace MonCollection
                 string spForm = mon.Species.ToString();
                 if (mon.AltForm > 0 && !noDiff.Contains(mon.Species) && mon.Species != 869)
                     spForm += "-" + mon.AltForm.ToString();
-                else if (mon.Species == 869)
-                    spForm += "-" + (mon.AltForm / 7).ToString() + "-" + (mon.AltForm % 7).ToString();
+                else if (mon.Species == 869 && mon.AltForm >= 7)
+                    spForm += "-" + (mon.AltForm / 7).ToString();
                 else if (majorGenderDiff.Contains(mon.Species))
                 {
                     if (mon.Gender == 0)
