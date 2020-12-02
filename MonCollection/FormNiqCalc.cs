@@ -15,6 +15,7 @@ namespace MonCollection
         private List<MonData> PkmDB;
         private int ind = 0;
         private string game;
+        private string origin;
         private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
         private List<ComboBox> moveBoxes;
         private int[] majorGenderDiff;
@@ -105,6 +106,7 @@ namespace MonCollection
             PkmDB = data;
             ind = index;
             game = data[index].Game;
+            origin = data[index].Origin;
         }
 
         public void ShowValues()
@@ -135,8 +137,10 @@ namespace MonCollection
             var query1f = PkmDB.Where(pk => family.Contains(pk.Species));
             var query2 = query1.Where(pk => pk.Game == game);
             var query2f = query1f.Where(pk => pk.Game == game);
+            var query0 = query1.Where(pk => pk.Origin == origin);
+            var query0f = query1f.Where(pk => pk.Origin == origin);
 
-            labelSpVal.Text = String.Format("({0} {1}) ({2} {3})",query1f.Count(), query1.Count(), query2f.Count(), query2.Count());
+            labelSpVal.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})", query1f.Count(), query1.Count(), query0f.Count(), query0.Count(), query2f.Count(), query2.Count());
 
             LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn());
             foreach (ComboBox mb in moveBoxes)
@@ -153,6 +157,7 @@ namespace MonCollection
 
             IEnumerable<MonData> query1a;
             IEnumerable<MonData> query2a;
+            IEnumerable<MonData> query0a;
 
             if (mon.Moves[0] > 0)
             {
@@ -162,9 +167,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelMove1.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelMove1.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
 
@@ -176,9 +185,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelMove2.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelMove2.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
 
@@ -190,9 +203,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelMove3.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelMove3.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
 
@@ -204,9 +221,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelMove4.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelMove4.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
 
@@ -218,10 +239,14 @@ namespace MonCollection
             query2 = query1.Where(pk => pk.Game == game);
             query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
             query2f = query2.Where(pk => family.Contains(pk.Species));
+            query0 = query1.Where(pk => pk.Origin == origin);
+            query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query0f = query0.Where(pk => family.Contains(pk.Species));
 
-            labelLangVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+            labelLangVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                             , query1.Count(), query1f.Count(), query1a.Count(),
-                                                query2.Count(), query2f.Count(), query2a.Count());
+                                              query0.Count(), query0f.Count(), query0a.Count(),
+                                              query2.Count(), query2f.Count(), query2a.Count());
 
             comboBoxBalls.SelectedValue = mon.Ball;
 
@@ -231,10 +256,14 @@ namespace MonCollection
             query2 = query1.Where(pk => pk.Game == game);
             query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
             query2f = query2.Where(pk => family.Contains(pk.Species));
+            query0 = query1.Where(pk => pk.Origin == origin);
+            query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+            query0f = query0.Where(pk => family.Contains(pk.Species));
 
-            labelBallVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+            labelBallVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                             , query1.Count(), query1f.Count(), query1a.Count(),
-                                                query2.Count(), query2f.Count(), query2a.Count());
+                                              query0.Count(), query0f.Count(), query0a.Count(),
+                                              query2.Count(), query2f.Count(), query2a.Count());
 
             comboBoxAbility.SelectedValue = mon.Ability;
 
@@ -246,9 +275,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelAbilityVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelAbilityVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
 
@@ -262,9 +295,13 @@ namespace MonCollection
                 query2 = query1.Where(pk => pk.Game == game);
                 query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                 query2f = query2.Where(pk => family.Contains(pk.Species));
+                query0 = query1.Where(pk => pk.Origin == origin);
+                query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                labelNatureVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                labelNatureVal.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                 , query1.Count(), query1f.Count(), query1a.Count(),
+                                                  query0.Count(), query0f.Count(), query0a.Count(),
                                                   query2.Count(), query2f.Count(), query2a.Count());
             }
         }
@@ -318,10 +355,13 @@ namespace MonCollection
             if(PkmDB != null) {
                 IEnumerable<MonData> query1;
                 IEnumerable<MonData> query2;
+                IEnumerable<MonData> query0;
                 IEnumerable<MonData> query1f;
                 IEnumerable<MonData> query2f;
+                IEnumerable<MonData> query0f;
                 IEnumerable<MonData> query1a;
                 IEnumerable<MonData> query2a;
+                IEnumerable<MonData> query0a;
 
                 MonData mon = PkmDB[ind];
 
@@ -343,9 +383,13 @@ namespace MonCollection
                     query2 = query1.Where(pk => pk.Game == game);
                     query2a = query2.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
                     query2f = query2.Where(pk => family.Contains(pk.Species));
+                    query0 = query1.Where(pk => pk.Origin == origin);
+                    query0a = query0.Where(pk => pk.Species == mon.Species && (pk.AltForm == mon.AltForm || nd) && (pk.Gender == mon.Gender || gd));
+                    query0f = query0.Where(pk => family.Contains(pk.Species));
 
-                    labelNewMove.Text = String.Format("({0} {1} {2}) ({3} {4} {5})"
+                    labelNewMove.Text = String.Format("({0} {1} {2}) ({3} {4} {5}) ({6} {7} {8})"
                                                     , query1.Count()+1, query1f.Count()+1, query1a.Count()+1,
+                                                      query0.Count()+1, query0f.Count()+1, query0a.Count()+1,
                                                       query2.Count()+1, query2f.Count()+1, query2a.Count()+1);
                 }
                 else
