@@ -48,16 +48,27 @@ namespace MonCollection
         private int maxIndex = 0;
 
         private const int numPokemon = 898;
+        private const int HOME_DEX = 0;
+        private const int SWSH_DEX = 1;
+
+        private enum VisibleSpecies
+        {
+            All,
+            Available,
+            Native
+        }
+
 
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
         private int[] noDiff;
 
-        private int[] galar;
-        private int[] isleArmor;
-        private int[] crownTundra;
+        private Dictionary<int,int> monOrder;
 
-        private int[] swshForeign;
+        private int lastDex;
+        private int lastVis;
+
+        private List<MonSortOrder> dexes;
 
         private string[] languages;
 
@@ -159,103 +170,11 @@ namespace MonCollection
             noDiff = new int[] { 414, 664, 665 };
             languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 
-            galar = new int[] { 810, 811, 812, 813, 814, 815, 816, 817, 818,
-                                824, 825, 826, 10, 11, 12, 736, 737, 738,
-                                163, 164, 821, 822, 823, 819, 820, 519, 520, 521,
-                                827, 828, 263, 264, 862, 831, 832, 270, 271, 272,
-                                273, 274, 275, 833, 834, 509, 510, 835, 836,
-                                659, 660, 572, 573, 761, 762, 763, 43, 44, 45, 182,
-                                406, 315, 407, 278, 279, 595, 596, 309, 310,
-                                37, 38, 58, 59, 582, 583, 584, 220, 221, 473,
-                                225, 361, 362, 478, 343, 344, 749, 750, 557, 558,
-                                622, 623, 517, 518, 177, 178, 759, 760, 459, 460,
-                                98, 99, 194, 195, 341, 342, 290, 291, 292,
-                                236, 106, 107, 237, 674, 675, 599, 600, 601,
-                                415, 416, 436, 437, 280, 281, 282, 475, 425, 426,
-                                829, 830, 420, 421, 434, 435, 535, 536, 537,
-                                355, 356, 477, 66, 67, 68, 92, 93, 94, 129, 130,
-                                118, 119, 223, 224, 90, 91, 349, 350, 550, 746,
-                                771, 568, 569, 850, 851, 837, 838, 839, 50, 51,
-                                529, 530, 524, 525, 526, 532, 533, 534, 527, 528,
-                                714, 715, 95, 208, 846, 847, 52, 863, 53,
-                                868, 869, 742, 743, 597, 598, 710, 711,
-                                172, 25, 26, 133, 134, 135, 136, 196, 197,
-                                470, 471, 700, 840, 841, 842, 677, 678, 684, 685,
-                                682, 683, 751, 752, 360, 202, 83, 865, 170, 171,
-                                453, 454, 559, 560, 618, 213, 339, 340, 422, 423,
-                                767, 768, 688, 689, 222, 864, 859, 860, 861,
-                                856, 857, 858, 757, 758, 624, 625, 538, 539,
-                                109, 110, 438, 185, 173, 35, 36, 175, 176, 468,
-                                446, 143, 546, 547, 111, 112, 464, 574, 575, 576,
-                                577, 578, 579, 588, 589, 616, 617, 605, 606,
-                                613, 614, 627, 628, 629, 630, 451, 452,
-                                607, 608, 609, 686, 687, 215, 461, 302, 303,
-                                556, 561, 447, 448, 324, 778, 878, 879, 211,
-                                592, 593, 747, 748, 845, 848, 849, 843, 844,
-                                449, 450, 632, 631, 694, 695, 701, 328, 329, 330,
-                                610, 611, 612, 562, 867, 563, 679, 680, 681,
-                                77, 78, 854, 855, 876, 708, 709, 755, 756,
-                                765, 766, 877, 870, 780, 776, 777, 872, 873,
-                                852, 853, 871, 458, 226, 320, 321, 712, 713,
-                                781, 131, 337, 338, 439, 122, 866, 554, 555,
-                                874, 875, 884, 479, 132, 880, 881, 882, 883,
-                                4, 5, 6, 772, 773, 246, 247, 248, 633, 634, 635,
-                                704, 705, 706, 782, 783, 784, 885, 886, 887,
-                                888, 889, 890
-                               };
-            isleArmor = new int[] { 79, 80, 199, 427, 428, 440, 113, 242, 819, 820,
-                                    174, 39, 40, 824, 825, 826, 753, 754, 840, 841, 842,
-                                    661, 662, 663, 403, 404, 405, 707, 624, 625,
-                                    63, 64, 65, 280, 281, 282, 475, 98, 99, 72, 73,
-                                    129, 130, 223, 224, 458, 226, 278, 279, 451, 452,
-                                    206, 626, 108, 463, 833, 834, 194, 195, 704, 705, 706,
-                                    621, 616, 617, 588, 589, 1, 2, 3, 7, 8, 9,
-                                    543, 544, 545, 590, 591, 764, 114, 465, 453, 454,
-                                    172, 25, 26, 570, 571, 765, 766, 341, 342, 845,
-                                    118, 119, 846, 847, 120, 121, 891, 892, 587, 702,
-                                    877, 81, 82, 462, 686, 687, 746, 318, 319,
-                                    506, 507, 508, 128, 241, 123, 212, 127, 214,
-                                    557, 558, 767, 768, 871, 747, 748, 852, 853,
-                                    90, 91, 769, 770, 425, 426, 339, 340, 298, 183, 184,
-                                    60, 61, 62, 186, 54, 55, 293, 294, 295, 527, 528,
-                                    227, 744, 745, 524, 525, 526, 757, 758, 559, 560,
-                                    619, 620, 782, 783, 784, 27, 28, 104, 105, 115,
-                                    324, 843, 844, 551, 552, 553, 627, 628, 629, 630,
-                                    111, 112, 464, 636, 637, 170, 171, 320, 321,
-                                    592, 593, 690, 691, 692, 693, 116, 117, 118,
-                                    648, 649, 415, 416, 102, 103, 132, 137, 233, 474, 893
-                                  };
-            crownTundra = new int[] { 872, 873, 831, 832, 819, 820, 220, 221, 473,
-                                      439, 122, 866, 238, 124, 239, 125, 466,
-                                      240, 126, 467, 531, 582, 583, 584, 361, 362, 478,
-                                      215, 461, 615, 459, 460, 708, 709, 333, 334,
-                                      859, 860, 861, 856, 857, 858, 173, 35, 36, 778,
-                                      442, 607, 608, 609, 574, 575, 576, 577, 578, 579,
-                                      532, 533, 534, 339, 340, 129, 130, 550, 29, 30, 31,
-                                      32, 33, 34, 263, 264, 862, 133, 134, 135, 136,
-                                      197, 196, 471, 470, 700, 696, 697, 698, 699,
-                                      436, 437, 874, 875, 751, 752, 595, 596, 588, 589,
-                                      616, 617, 850, 851, 632, 631, 554, 555, 77, 78, 359,
-                                      878, 879, 885, 886, 887, 371, 372, 373, 443, 444, 445,
-                                      621, 225, 613, 614, 138, 139, 140, 141, 142, 703,
-                                      374, 375, 376, 854, 855, 447, 448, 633, 634, 635,
-                                      246, 247, 248, 712, 713, 41, 42, 169, 564, 565,
-                                      566, 567, 343, 344, 622, 623, 835, 836, 877, 871,
-                                      363, 364, 365, 781, 821, 822, 823, 829, 830, 546, 547,
-                                      213, 876, 446, 143, 302, 303, 837, 838, 839, 597, 598,
-                                      714, 715, 345, 346, 347, 348, 369, 349, 350, 131,
-                                      304, 305, 306, 147, 148, 149, 377, 378, 379, 894, 895,
-                                      144, 145, 146, 638, 639, 640, 896, 897, 898
-                                    };
-            swshForeign = new int[] { 150, 151, 243, 244, 245, 249, 250, 251, 252, 253, 254,
-                                      255, 256, 257, 258, 259, 260, 380, 381, 382, 383, 384, 
-                                      385, 480, 481, 482, 483, 484, 485, 486, 487, 488, 494,
-                                      641, 642, 643, 644, 645, 646, 647, 649, 716, 717, 718,
-                                      719, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 
-                                      785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795,
-                                      796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 
-                                      807, 808, 809
-                                    };
+            dexes = LoadSortOrders();
+            
+            List<bool> checks = new List<bool>();
+            checks.Add(true);
+            setDexOrder(HOME_DEX, VisibleSpecies.All, checks);
 
             GameInfo.Strings = GameInfo.GetStrings("en");
             PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
@@ -282,10 +201,11 @@ namespace MonCollection
                 {
                     List<int> gameSpecies = new List<int>();
 
-                    gameSpecies.AddRange(galar);
-                    gameSpecies.AddRange(isleArmor);
-                    gameSpecies.AddRange(crownTundra);
-                    gameSpecies.AddRange(swshForeign);
+                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Galar"]);
+                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Isle of Armor"]);
+                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Crown Tundra"]);
+                    gameSpecies.AddRange(dexes[SWSH_DEX].Foreign);
+
 
                     foreach (ComboItem ci in PkmListAny)
                     {
@@ -458,7 +378,6 @@ namespace MonCollection
 
         private PKM MonDataToPKM(MonData data)
         {
-            //TODO: Check Implementation
             PKM mon;
             switch (data.Gen)
             {
@@ -1006,6 +925,19 @@ namespace MonCollection
             }
         }
 
+        private static List<MonSortOrder> LoadSortOrders()
+        {
+            if (!File.Exists(Settings.Default.mons + "/dexes.json"))
+                File.Create(Settings.Default.mons + "/dexes.json").Dispose();
+
+            using (StreamReader r = new StreamReader(Settings.Default.mons + "/dexes.json"))
+            {
+                string json = r.ReadToEnd();
+                List<MonSortOrder> orders = JsonConvert.DeserializeObject<List<MonSortOrder>>(json);
+                return orders;
+            }
+        }
+
         private Image RetrieveImage(string path)
         {
             if (File.Exists(path))
@@ -1118,7 +1050,7 @@ namespace MonCollection
 
         public void SpeciesGameSort(int index)
         {
-            PkmData = PkmData.OrderBy(mon => mon.Species)
+            PkmData = PkmData.OrderBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => GameIndex(mon.Game))
@@ -1133,7 +1065,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => OriginIndex(mon.Origin))
-                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Level)
@@ -1146,7 +1078,7 @@ namespace MonCollection
         public void OriginSpeciesSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => OriginIndex(mon.Origin))
-                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => GameIndex(mon.Game))
@@ -1160,7 +1092,7 @@ namespace MonCollection
         public void GenSpeciesSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => mon.Gen)
-                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Level)
@@ -1175,7 +1107,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
-                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Nickname)
@@ -1187,7 +1119,7 @@ namespace MonCollection
         public void GameSpeciesSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
-                             .ThenBy(mon => mon.Species)
+                             .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
                              .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
                              .ThenBy(mon => mon.Level)
@@ -1547,6 +1479,9 @@ namespace MonCollection
 
             //write string to file
             File.WriteAllText(Settings.Default.mons + "/mons.json", json);
+
+            json = JsonConvert.SerializeObject(dexes, Formatting.Indented);
+            File.WriteAllText(Settings.Default.mons + "/dexes.json", json);
         }
 
         private void UpdateFullData()
@@ -1768,7 +1703,6 @@ namespace MonCollection
 
         private void GamesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TO DO: Make popup for editing this
             FormGames games = new FormGames();
             games.FormClosed += new FormClosedEventHandler(delegate (object send, FormClosedEventArgs a) {
                 games.updateGameIni();
@@ -2254,11 +2188,93 @@ namespace MonCollection
 
             filterSpecies = new List<int>();
             
-            filterSpecies.AddRange(galar);
-            filterSpecies.AddRange(isleArmor);
-            filterSpecies.AddRange(crownTundra);
-            filterSpecies.AddRange(swshForeign);
+            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Galar"]);
+            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Isle of Armor"]);
+            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Crown Tundra"]);
+            filterSpecies.AddRange(dexes[SWSH_DEX].Foreign);
             LoadDatabase();
+        }
+
+        private void buttonSortOrder_Click(object sender, EventArgs e)
+        {
+            FormDexOrder dexOrder = new FormDexOrder(dexes,lastDex,lastVis);
+            dexOrder.FormClosed += new FormClosedEventHandler(delegate (object send, FormClosedEventArgs a) {
+                setDexOrder(dexOrder.dex, (VisibleSpecies)dexOrder.vis, dexOrder.getChecks());
+                LoadDatabase();
+            });
+           dexOrder.Show();
+        }
+
+        private void setDexOrder(int dex, VisibleSpecies vis, List<bool> checks)
+        {
+            monOrder = new Dictionary<int, int>();
+            filterSpecies = new List<int>();
+            lastDex = dex;
+            lastVis = (int)vis;
+
+            int j = 1;
+
+            List<int> foreign = new List<int>();
+            int d = 0;
+
+            foreach (var entry in dexes[dex].Dexes)
+            {
+                if (checks[d])
+                {
+                    foreach (int val in entry.Value)
+                    {
+                        if (!monOrder.ContainsKey(val))
+                        {
+                            monOrder.Add(val, j);
+                            filterSpecies.Add(val);
+                            j++;
+                        }
+                    }
+                }
+                else
+                {
+                    foreign.AddRange(entry.Value);
+                }
+                d++;
+            }
+
+            foreign.AddRange(dexes[dex].Foreign);
+            foreign.Sort();
+
+            foreach (int val in foreign)
+            {
+                if (!monOrder.ContainsKey(val))
+                {
+                    monOrder.Add(val, j);
+                    if(vis != VisibleSpecies.Native)
+                    {
+                        filterSpecies.Add(val);
+                    }
+                    j++;
+                }
+            }
+            
+            for(int p = 1; p <= numPokemon; p++)
+            {
+                if (!monOrder.ContainsKey(p))
+                {
+                    monOrder.Add(p, j);
+                    if (vis == VisibleSpecies.All)
+                    {
+                        filterSpecies.Add(p);
+                    }
+                    j++;
+                }
+            }
+        }
+
+        private void buttonEditDexes_Click(object sender, EventArgs e)
+        {
+            FormEditDexes editDexes = new FormEditDexes(dexes);
+            editDexes.FormClosed += new FormClosedEventHandler(delegate (object send, FormClosedEventArgs a) {
+                dexes = editDexes.UpdateDexes();
+            });
+            editDexes.Show();
         }
     }
 }

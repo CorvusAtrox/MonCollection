@@ -59,6 +59,18 @@
     <Compile Include="FormAssignOrigin.Designer.cs">
       <DependentUpon>FormAssignOrigin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditDexes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditDexes.Designer.cs">
+      <DependentUpon>FormEditDexes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDexOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDexOrder.Designer.cs">
+      <DependentUpon>FormDexOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRibbons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,7 @@
     <Compile Include="FormSpeciesInfo.Designer.cs">
       <DependentUpon>FormSpeciesInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonSortOrder.cs" />
     <Compile Include="MonData.cs" />
     <Compile Include="FormEggCalc.cs">
       <SubType>Form</SubType>
@@ -115,6 +128,12 @@
     <Compile Include="SaveInfo.cs" />
     <EmbeddedResource Include="FormAssignOrigin.resx">
       <DependentUpon>FormAssignOrigin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDexes.resx">
+      <DependentUpon>FormEditDexes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDexOrder.resx">
+      <DependentUpon>FormDexOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRibbons.resx">
       <DependentUpon>FormRibbons.cs</DependentUpon>
@@ -8741,6 +8760,9 @@
     <Content Include="Resources\img\go\545.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\go\547.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\go\55.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -8805,6 +8827,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\go\65f.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\go\668m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\go\71.png">
@@ -9350,6 +9375,9 @@
     <Content Include="Resources\img\go\rare\491.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\go\rare\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\go\rare\50.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -9785,7 +9813,13 @@
     <Content Include="Resources\img\home\318.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\329.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\330.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\335.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\336.png">
@@ -9858,6 +9892,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\423-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\440.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\44f.png">
@@ -11459,6 +11496,9 @@
     <Content Include="Resources\img\home\611.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\613.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\614.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -11690,6 +11730,9 @@
     <Content Include="Resources\img\home\749.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\750.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\753.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -11865,6 +11908,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\844.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\849.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\84m.png">
@@ -14210,6 +14256,9 @@
     <Content Include="Resources\img\icons\668f.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\icons\668m.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\icons\669-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -15045,6 +15094,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\icons\892-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\icons\893.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\icons\897.png">
@@ -20892,6 +20944,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\swsh\892-1.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\swsh\893.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\swsh\897.gif">

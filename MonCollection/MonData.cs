@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace MonCollection
 {
-    class MonData
+    public class MonData
     {
         public string Nickname { get; set; }
         public int Species { get; set; }

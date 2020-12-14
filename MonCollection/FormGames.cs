@@ -14,7 +14,7 @@ namespace MonCollection
     {
 
         public Dictionary<string, SaveInfo> gameDict;
-        private string[] languages = { "", "jp", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2"};
+        private string[] languages = { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2"};
 
         public FormGames()
         {
