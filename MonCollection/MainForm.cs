@@ -2238,8 +2238,8 @@ namespace MonCollection
                 d++;
             }
 
-            foreign.AddRange(dexes[dex].Foreign);
             foreign.Sort();
+            foreign.AddRange(dexes[dex].Foreign);
 
             foreach (int val in foreign)
             {

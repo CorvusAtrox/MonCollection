@@ -99,9 +99,11 @@ namespace MonCollection
             List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
             PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
             listSpecies.Items.Clear();
+            int num = 1;
             foreach (int s in species)
             {
-                listSpecies.Items.Add(PkmListSorted[s].Text);
+                listSpecies.Items.Add(num.ToString() + ": " + PkmListSorted[s].Text);
+                num++;
             }
         }
 
@@ -197,6 +199,33 @@ namespace MonCollection
                         dexes[comboBoxOrder.SelectedIndex].Dexes[comboBoxDexes.Text] = species;
                     }
                 }
+            }
+            ShowDexOrder();
+        }
+
+        private void buttonAddLine_Click(object sender, EventArgs e)
+        {
+            string input = Interaction.InputBox("List Pokemon to add, comma separated");
+
+            string[] spec = input.Split(',');
+            List<int> species = new List<int>();
+            foreach (string s in spec)
+            {
+                if (int.TryParse(s, out int item))
+                {
+                    species.Add(item);
+                }
+            }
+
+            string indput = Interaction.InputBox("What is the Dex number of the first Pokemon?");
+
+            if (int.TryParse(indput, out int index))
+            {
+                dexes[comboBoxOrder.SelectedIndex].Dexes[comboBoxDexes.Text].InsertRange(index-1, species);
+            }
+            else
+            {
+                dexes[comboBoxOrder.SelectedIndex].Dexes[comboBoxDexes.Text].AddRange(species);
             }
             ShowDexOrder();
         }

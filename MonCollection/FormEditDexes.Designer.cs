@@ -75,10 +75,10 @@
             // 
             // buttonAddDex
             // 
-            this.buttonAddDex.Location = new System.Drawing.Point(500, 100);
+            this.buttonAddDex.Location = new System.Drawing.Point(485, 99);
             this.buttonAddDex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonAddDex.Name = "buttonAddDex";
-            this.buttonAddDex.Size = new System.Drawing.Size(102, 35);
+            this.buttonAddDex.Size = new System.Drawing.Size(129, 35);
             this.buttonAddDex.TabIndex = 169;
             this.buttonAddDex.Text = "Add Dex";
             this.buttonAddDex.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             // buttonRemoveDex
             // 
-            this.buttonRemoveDex.Location = new System.Drawing.Point(610, 100);
+            this.buttonRemoveDex.Location = new System.Drawing.Point(622, 100);
             this.buttonRemoveDex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonRemoveDex.Name = "buttonRemoveDex";
             this.buttonRemoveDex.Size = new System.Drawing.Size(124, 35);
@@ -154,7 +154,7 @@
             // 
             // buttonCreateOrder
             // 
-            this.buttonCreateOrder.Location = new System.Drawing.Point(500, 45);
+            this.buttonCreateOrder.Location = new System.Drawing.Point(485, 45);
             this.buttonCreateOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCreateOrder.Name = "buttonCreateOrder";
             this.buttonCreateOrder.Size = new System.Drawing.Size(129, 35);
@@ -165,7 +165,7 @@
             // 
             // buttonDeleteOrder
             // 
-            this.buttonDeleteOrder.Location = new System.Drawing.Point(638, 45);
+            this.buttonDeleteOrder.Location = new System.Drawing.Point(622, 45);
             this.buttonDeleteOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonDeleteOrder.Name = "buttonDeleteOrder";
             this.buttonDeleteOrder.Size = new System.Drawing.Size(129, 35);
@@ -204,7 +204,7 @@
             this.listSpecies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listSpecies.Name = "listSpecies";
             this.listSpecies.ScrollAlwaysVisible = true;
-            this.listSpecies.Size = new System.Drawing.Size(340, 144);
+            this.listSpecies.Size = new System.Drawing.Size(366, 144);
             this.listSpecies.TabIndex = 180;
             // 
             // buttonAddLine
@@ -216,6 +216,7 @@
             this.buttonAddLine.TabIndex = 181;
             this.buttonAddLine.Text = "Add";
             this.buttonAddLine.UseVisualStyleBackColor = true;
+            this.buttonAddLine.Click += new System.EventHandler(this.buttonAddLine_Click);
             // 
             // FormEditDexes
             // 
