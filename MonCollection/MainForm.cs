@@ -2076,7 +2076,7 @@ namespace MonCollection
 
         private void buttonDupCheck_Click(object sender, EventArgs e)
         {
-            GameSpeciesSort((int)bpkx1.Tag / RES_MIN);
+            OriginSpeciesSort((int)bpkx1.Tag / RES_MIN);
             MonData previous = null;
             foreach(MonData md in PkmData)
             {
@@ -2089,6 +2089,9 @@ namespace MonCollection
                 if(md.Nickname == previous.Nickname &&
                    md.Level == previous.Level &&
                    md.Species == previous.Species &&
+                   md.AltForm == previous.AltForm &&
+                   md.HP == previous.HP &&
+                   md.SPE == previous.SPE &&
                    md.OT == previous.OT)
                 {
                     OpenPKM(md);
