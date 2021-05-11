@@ -142,7 +142,7 @@ namespace MonCollection
 
             labelSpVal.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})", query1f.Count(), query1.Count(), query0f.Count(), query0.Count(), query2f.Count(), query2.Count());
 
-            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn());
+            LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
             foreach (ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
@@ -341,9 +341,9 @@ namespace MonCollection
                     break;
             }
             mon.Species = data.Species;
-            mon.AltForm = data.AltForm;
+            mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
-                mon.AltForm = mon.AltForm / 7;
+                mon.Form = mon.Form / 7;
             mon.CurrentLevel = data.Level;
             if (gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;

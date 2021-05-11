@@ -245,8 +245,8 @@ namespace MonCollection
             Task.Run(() =>
             {
                 var lang = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.Substring(0, 2);
-                Util.SetLocalization(typeof(LegalityCheckStrings), lang);
-                Util.SetLocalization(typeof(MessageStrings), lang);
+                LocalizationUtil.SetLocalization(typeof(LegalityCheckStrings), lang);
+                LocalizationUtil.SetLocalization(typeof(MessageStrings), lang);
                 RibbonStrings.ResetDictionary(GameInfo.Strings.ribbons);
             });
 
@@ -410,9 +410,9 @@ namespace MonCollection
                     break;
             }
             mon.Species = data.Species;
-            mon.AltForm = data.AltForm;
+            mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
-                mon.AltForm = mon.AltForm / 7;
+                mon.Form = mon.Form / 7;
             mon.CurrentLevel = data.Level;
             if(gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;
@@ -422,7 +422,7 @@ namespace MonCollection
         private void PopulateFields(MonData pk)
         {
             legal = new LegalityAnalysis(MonDataToPKM(pk),ver.Personal);
-            LegalMoveSource.ReloadMoves(legal.AllSuggestedMovesAndRelearn());
+            LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
             foreach(ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
@@ -1169,6 +1169,22 @@ namespace MonCollection
             results.Show();
         }
 
+        private void ButtonOriginTally_Click(object sender, EventArgs e)
+        {
+            var query = PkmData.GroupBy(
+                mon => mon.Origin,
+                mon => mon.Nickname,
+                (origin, name) => new
+                {
+                    Key = origin,
+                    Count = name.Count()
+                });
+            var results = new FormGameTally();
+            foreach (var q in query)
+                results.addEntry(String.Format("{0}: {1}", q.Key, q.Count));
+            results.Show();
+        }
+
         private void ButtonSpeciesSort_Click(object sender, EventArgs e)
         {
             SpeciesGameSort((int)bpkx1.Tag / RES_MIN);
@@ -1617,7 +1633,7 @@ namespace MonCollection
                             Gender = pk.Gender,
                             Moves = new List<int> { pk.Move1, pk.Move2, pk.Move3, pk.Move4 },
                             Game = GetGame(pk.Identifier),
-                            AltForm = pk.AltForm,
+                            AltForm = pk.Form,
                             Shiny = pk.IsShiny,
                             Ability = pk.Ability,
                             Nature = pk.Nature,

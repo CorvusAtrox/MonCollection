@@ -173,6 +173,7 @@ namespace MonCollection
             this.bpkx1 = new System.Windows.Forms.PictureBox();
             this.buttonSortOrder = new System.Windows.Forms.Button();
             this.buttonEditDexes = new System.Windows.Forms.Button();
+            this.buttonOriginTally = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -977,7 +978,7 @@ namespace MonCollection
             // 
             // buttonGameMonTally
             // 
-            this.buttonGameMonTally.Location = new System.Drawing.Point(760, 445);
+            this.buttonGameMonTally.Location = new System.Drawing.Point(626, 474);
             this.buttonGameMonTally.Name = "buttonGameMonTally";
             this.buttonGameMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonGameMonTally.TabIndex = 129;
@@ -1029,7 +1030,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(626, 474);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(760, 504);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
             this.buttonNiqCalc.TabIndex = 136;
@@ -1039,7 +1040,7 @@ namespace MonCollection
             // 
             // buttonEggs
             // 
-            this.buttonEggs.Location = new System.Drawing.Point(626, 532);
+            this.buttonEggs.Location = new System.Drawing.Point(626, 562);
             this.buttonEggs.Name = "buttonEggs";
             this.buttonEggs.Size = new System.Drawing.Size(116, 23);
             this.buttonEggs.TabIndex = 137;
@@ -1059,7 +1060,7 @@ namespace MonCollection
             // 
             // buttonMoveMonTally
             // 
-            this.buttonMoveMonTally.Location = new System.Drawing.Point(760, 474);
+            this.buttonMoveMonTally.Location = new System.Drawing.Point(894, 474);
             this.buttonMoveMonTally.Name = "buttonMoveMonTally";
             this.buttonMoveMonTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMoveMonTally.TabIndex = 143;
@@ -1115,7 +1116,7 @@ namespace MonCollection
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
             this.menuStrip1.TabIndex = 148;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1327,7 +1328,7 @@ namespace MonCollection
             // 
             // buttonMonBallTally
             // 
-            this.buttonMonBallTally.Location = new System.Drawing.Point(894, 474);
+            this.buttonMonBallTally.Location = new System.Drawing.Point(760, 474);
             this.buttonMonBallTally.Name = "buttonMonBallTally";
             this.buttonMonBallTally.Size = new System.Drawing.Size(116, 23);
             this.buttonMonBallTally.TabIndex = 160;
@@ -1493,7 +1494,7 @@ namespace MonCollection
             // 
             // buttonMonInfo
             // 
-            this.buttonMonInfo.Location = new System.Drawing.Point(626, 503);
+            this.buttonMonInfo.Location = new System.Drawing.Point(626, 533);
             this.buttonMonInfo.Name = "buttonMonInfo";
             this.buttonMonInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonMonInfo.TabIndex = 174;
@@ -1638,7 +1639,7 @@ namespace MonCollection
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(760, 503);
+            this.buttonLineInfo.Location = new System.Drawing.Point(760, 533);
             this.buttonLineInfo.Name = "buttonLineInfo";
             this.buttonLineInfo.Size = new System.Drawing.Size(116, 23);
             this.buttonLineInfo.TabIndex = 190;
@@ -1648,7 +1649,7 @@ namespace MonCollection
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(894, 503);
+            this.buttonDupCheck.Location = new System.Drawing.Point(894, 533);
             this.buttonDupCheck.Name = "buttonDupCheck";
             this.buttonDupCheck.Size = new System.Drawing.Size(116, 23);
             this.buttonDupCheck.TabIndex = 191;
@@ -1658,7 +1659,7 @@ namespace MonCollection
             // 
             // buttonPkrsCount
             // 
-            this.buttonPkrsCount.Location = new System.Drawing.Point(894, 532);
+            this.buttonPkrsCount.Location = new System.Drawing.Point(894, 562);
             this.buttonPkrsCount.Name = "buttonPkrsCount";
             this.buttonPkrsCount.Size = new System.Drawing.Size(116, 23);
             this.buttonPkrsCount.TabIndex = 192;
@@ -1703,7 +1704,7 @@ namespace MonCollection
             // 
             // buttonAssignOrigin
             // 
-            this.buttonAssignOrigin.Location = new System.Drawing.Point(760, 532);
+            this.buttonAssignOrigin.Location = new System.Drawing.Point(760, 562);
             this.buttonAssignOrigin.Name = "buttonAssignOrigin";
             this.buttonAssignOrigin.Size = new System.Drawing.Size(116, 23);
             this.buttonAssignOrigin.TabIndex = 196;
@@ -1743,12 +1744,23 @@ namespace MonCollection
             this.buttonEditDexes.UseVisualStyleBackColor = true;
             this.buttonEditDexes.Click += new System.EventHandler(this.buttonEditDexes_Click);
             // 
+            // buttonOriginTally
+            // 
+            this.buttonOriginTally.Location = new System.Drawing.Point(760, 445);
+            this.buttonOriginTally.Name = "buttonOriginTally";
+            this.buttonOriginTally.Size = new System.Drawing.Size(116, 23);
+            this.buttonOriginTally.TabIndex = 199;
+            this.buttonOriginTally.Text = "Origin Tally";
+            this.buttonOriginTally.UseVisualStyleBackColor = true;
+            this.buttonOriginTally.Click += new System.EventHandler(this.ButtonOriginTally_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1080, 568);
+            this.ClientSize = new System.Drawing.Size(1085, 607);
+            this.Controls.Add(this.buttonOriginTally);
             this.Controls.Add(this.buttonEditDexes);
             this.Controls.Add(this.buttonSortOrder);
             this.Controls.Add(this.buttonAssignOrigin);
@@ -2091,6 +2103,7 @@ namespace MonCollection
         private PictureBox bpkx1;
         private Button buttonSortOrder;
         private Button buttonEditDexes;
+        private Button buttonOriginTally;
     }
 }
 

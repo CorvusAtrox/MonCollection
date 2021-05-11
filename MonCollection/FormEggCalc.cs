@@ -225,7 +225,7 @@ namespace MonCollection
         private void makeEgg(MonData mon1, MonData mon2)
         {
             PKM pkmn = MonDataToPKM(mon1);
-            var eggs = EncounterEggGenerator.GenerateEggs(pkmn);
+            var eggs = EncounterEggGenerator.GenerateEggs(pkmn, mon1.Gen);
             int sp = eggs.ToArray()[0].Species;
             int[] moves = calcEggMoves(sp, mon1.AltForm);
             string spForm = sp.ToString();
@@ -473,9 +473,9 @@ namespace MonCollection
                     break;
             }
             mon.Species = data.Species;
-            mon.AltForm = data.AltForm;
+            mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
-                mon.AltForm = mon.AltForm / 7;
+                mon.Form = mon.Form / 7;
             mon.CurrentLevel = data.Level;
             mon.Version = (int)version;
             return mon;
