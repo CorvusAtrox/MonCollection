@@ -35,6 +35,7 @@ namespace MonCollection
         private List<string> filterGames;
         private List<string> filterOrigins;
         private List<int> filterSpecies;
+        private (int, int) filterLevels;
 
         private List<string> gameList;
 
@@ -102,6 +103,7 @@ namespace MonCollection
             filterGames = new List<string>();
             filterOrigins = new List<string>();
             filterSpecies = new List<int>();
+            filterLevels = (0, 100);
 
             for (int i = 1; i <= numPokemon; i++)
                 filterSpecies.Add(i);
@@ -1767,7 +1769,11 @@ namespace MonCollection
 
             foreach (MonData data in full)
             {
-                if (filterGames.Contains(data.Game) && filterOrigins.Contains(data.Origin) && filterSpecies.Contains(data.Species))
+                if (filterGames.Contains(data.Game) &&
+                    filterOrigins.Contains(data.Origin) &&
+                    filterSpecies.Contains(data.Species) &&
+                    data.Level >= filterLevels.Item1 &&
+                    data.Level <= filterLevels.Item2)
                 {
                     mons.Add(data);
                     PKMIndices.Add(full.IndexOf(data));
@@ -2294,6 +2300,21 @@ namespace MonCollection
                 dexes = editDexes.UpdateDexes();
             });
             editDexes.Show();
+        }
+
+        private void levelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLevelRange form = new FormLevelRange
+            {
+                setLevels = filterLevels
+            };
+            form.loadLevels();
+            form.FormClosing += new FormClosingEventHandler(
+                delegate (object send, FormClosingEventArgs a) {
+                    filterLevels = form.setLevels;
+                    LoadDatabase();
+                });
+            form.Show();
         }
     }
 }

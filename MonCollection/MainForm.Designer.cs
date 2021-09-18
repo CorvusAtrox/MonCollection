@@ -120,6 +120,7 @@ namespace MonCollection
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.speciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.levelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeSwShToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxHP = new System.Windows.Forms.TextBox();
@@ -1116,7 +1117,7 @@ namespace MonCollection
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1080, 24);
             this.menuStrip1.TabIndex = 148;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1174,6 +1175,7 @@ namespace MonCollection
             this.gameToolStripMenuItem,
             this.originToolStripMenuItem,
             this.speciesToolStripMenuItem,
+            this.levelToolStripMenuItem,
             this.presetsToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
@@ -1199,6 +1201,13 @@ namespace MonCollection
             this.speciesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.speciesToolStripMenuItem.Text = "Species";
             this.speciesToolStripMenuItem.Click += new System.EventHandler(this.SpeciesToolStripMenuItem_Click);
+            // 
+            // levelToolStripMenuItem
+            // 
+            this.levelToolStripMenuItem.Name = "levelToolStripMenuItem";
+            this.levelToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.levelToolStripMenuItem.Text = "Level";
+            this.levelToolStripMenuItem.Click += new System.EventHandler(this.levelToolStripMenuItem_Click);
             // 
             // presetsToolStripMenuItem
             // 
@@ -1759,7 +1768,7 @@ namespace MonCollection
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1085, 607);
+            this.ClientSize = new System.Drawing.Size(1080, 598);
             this.Controls.Add(this.buttonOriginTally);
             this.Controls.Add(this.buttonEditDexes);
             this.Controls.Add(this.buttonSortOrder);
@@ -2104,6 +2113,7 @@ namespace MonCollection
         private Button buttonSortOrder;
         private Button buttonEditDexes;
         private Button buttonOriginTally;
+        private ToolStripMenuItem levelToolStripMenuItem;
     }
 }
 
