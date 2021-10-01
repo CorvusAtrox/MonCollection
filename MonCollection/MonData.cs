@@ -35,5 +35,6 @@ namespace MonCollection
         public string[] Ribbons { get; set; }
         public int dynaLevel { get; set; }
         public bool gMax { get; set; }
+        public int lastVersion { get; set; }
     }
 }

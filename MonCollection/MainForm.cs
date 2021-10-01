@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MonCollection.Properties;
+using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PKHeX.Core;
@@ -49,8 +50,17 @@ namespace MonCollection
         private int maxIndex = 0;
 
         private const int numPokemon = 898;
-        private const int HOME_DEX = 0;
-        private const int SWSH_DEX = 1;
+
+        private enum Dexes
+        {
+            HomeDex,
+            SwordShieldDex,
+            NewSnapDex,
+            PinkMeteorDex,
+            SunMoonDex,
+            UltraSunMoonDex,
+            LetsGoDex
+        }
 
         private enum VisibleSpecies
         {
@@ -176,7 +186,7 @@ namespace MonCollection
             
             List<bool> checks = new List<bool>();
             checks.Add(true);
-            setDexOrder(HOME_DEX, VisibleSpecies.All, checks);
+            setDexOrder((int)Dexes.HomeDex, VisibleSpecies.All, checks);
 
             GameInfo.Strings = GameInfo.GetStrings("en");
             PkmListAny = new List<ComboItem>(GameInfo.SpeciesDataSource);
@@ -203,10 +213,10 @@ namespace MonCollection
                 {
                     List<int> gameSpecies = new List<int>();
 
-                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Galar"]);
-                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Isle of Armor"]);
-                    gameSpecies.AddRange(dexes[SWSH_DEX].Dexes["Crown Tundra"]);
-                    gameSpecies.AddRange(dexes[SWSH_DEX].Foreign);
+                    gameSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"]);
+                    gameSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"]);
+                    gameSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"]);
+                    gameSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Foreign);
 
 
                     foreach (ComboItem ci in PkmListAny)
@@ -1576,6 +1586,14 @@ namespace MonCollection
             }
 
             mon.Ribbons = monRibbons.ToArray();
+            if (mon.lastVersion != (int) GameVersion.Invalid)
+            {
+                SaveInfo si = gameDict[mon.Game];
+                if (si.version <= GameVersion.SH) // Newest Version
+                {
+                    mon.lastVersion = (int) si.version;
+                }
+            }
 
             PkmData[slotSelected] = mon;
         }
@@ -2213,10 +2231,10 @@ namespace MonCollection
 
             filterSpecies = new List<int>();
             
-            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Galar"]);
-            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Isle of Armor"]);
-            filterSpecies.AddRange(dexes[SWSH_DEX].Dexes["Crown Tundra"]);
-            filterSpecies.AddRange(dexes[SWSH_DEX].Foreign);
+            filterSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"]);
+            filterSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"]);
+            filterSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"]);
+            filterSpecies.AddRange(dexes[(int)Dexes.SwordShieldDex].Foreign);
             LoadDatabase();
         }
 
@@ -2315,6 +2333,211 @@ namespace MonCollection
                     LoadDatabase();
                 });
             form.Show();
+        }
+
+        private void buttonPickTransfers_Click(object sender, EventArgs e)
+        {
+            List<MonData> transferMons = new List<MonData>();
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
+
+            for (int i = 0; i < PkmData.Count; i++)
+            {
+                if (canTransfer(PkmData, i))
+                {
+                    transferMons.Add(PkmData[i]);
+                }
+            }
+            
+            int entries = int.Parse(Interaction.InputBox(String.Format("How many Transfers? ({0} Transferrable)", transferMons.Count), "Transfers"));
+            int[] rnd = RandomNumberGenerator.GetRandomInts(0, transferMons.Count - 1, entries);
+
+            Array.Sort(rnd);
+
+            if (rnd[0] != -1)
+            {
+                var results = new FormGameTally();
+
+                foreach (int r in rnd)
+                {
+                    if (transferMons[r].Game.Contains("HOME"))
+                    {
+                        results.addEntry(String.Format("{0} ({1}, {2}) -> [{3}]", transferMons[r].Nickname, PkmListSorted[transferMons[r].Species].Text, transferMons[r].OT, idealTransfer(transferMons, r)));
+                    }
+                    else
+                    {
+                        results.addEntry(String.Format("{0} ({1}, {2}) [{3}]", transferMons[r].Nickname, PkmListSorted[transferMons[r].Species].Text, transferMons[r].OT, transferMons[r].Game));
+                    }
+                }
+
+                results.Show();
+            }
+            else
+            {
+                MessageBox.Show("Could not find random numbers");
+            }
+            
+        }
+
+        public bool canTransfer(List<MonData> monData, int index)
+        {
+            bool t = true;
+
+            string[] noTransfer = {
+                "Brilliant Diamond", "Shining Pearl", "Legends: Arceus",
+                "Rejuvenation", "Pink Meteor"
+            };
+
+            if (monData[index].lastVersion == (int)GameVersion.Invalid)
+            {
+                t = false;
+            }
+
+            foreach (string nt in noTransfer)
+            {
+                if (monData[index].Game.Contains(nt))
+                {
+                    t = false;
+                }
+            }
+
+            if (monData[index].Game.Contains("HOME"))
+            {
+                bool outHome = false;
+
+                foreach(var gameInfo in gameDict)
+                {
+                    GameVersion vers = gameInfo.Value.version;
+                    if ((vers == GameVersion.GP || vers == GameVersion.GE) &&
+                        (monData[index].lastVersion == (int)GameVersion.GP ||
+                         monData[index].lastVersion == (int)GameVersion.GE))
+                    {
+                        if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species))
+                        {
+                            outHome = true;
+                        }
+                    }
+                    else if ((vers == GameVersion.SW || vers == GameVersion.SH))
+                    {
+                        if (dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
+                            dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
+                            dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
+                            dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species))
+                        {
+                            outHome = true;
+                        }
+                    }
+                }
+
+                t = (t && outHome);
+            }
+
+            return t;
+        }
+
+        public string idealTransfer(List<MonData> monData, int index)
+        {
+            string dest;
+
+            List<Tuple<string, int, int, int>> comp = new List<Tuple<string, int, int, int>>();
+
+            foreach (var save in gameDict)
+            {
+                GameVersion vers = save.Value.version;
+                if ((vers == GameVersion.GP || vers == GameVersion.GE) &&
+                    (monData[index].lastVersion == (int)GameVersion.GP ||
+                     monData[index].lastVersion == (int)GameVersion.GE))
+                {
+                    if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species))
+                    {
+                        int num = 0;
+                        int spec = 0;
+                        foreach (MonData md in monData)
+                        {
+                            if (md.Game == save.Key)
+                            {
+                                num++;
+                                if (md.Species == monData[index].Species)
+                                {
+                                    spec++;
+                                }
+                            }
+                        }
+                        comp.Add(Tuple.Create(save.Key, spec, 1, num));
+                    }
+                }
+                else if (vers == GameVersion.SW || vers == GameVersion.SH)
+                {
+                    if (dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species))
+                    {
+                        int num = 0;
+                        int spec = 0;
+                        foreach (MonData md in monData)
+                        {
+                            if (md.Game == save.Key)
+                            {
+                                num++;
+                                if (md.Species == monData[index].Species)
+                                {
+                                    spec++;
+                                }
+                            }
+                        }
+                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                    }
+                }
+            }
+
+            if (comp.Count == 0)
+            {
+                dest = "???";
+            }
+            else
+            {
+                dest = comp[0].Item1;
+                int spec = comp[0].Item2;
+                int priority = comp[0].Item3;
+                int size = comp[0].Item4;
+                
+
+                if (comp.Count > 1)
+                {
+                    for (int i = 1; i < comp.Count; i++)
+                    {
+                        if (spec > comp[i].Item2)
+                        {
+                            dest = comp[i].Item1;
+                            spec = comp[i].Item2;
+                            priority = comp[i].Item3;
+                            size = comp[i].Item4;
+                        }
+                        else if (spec == comp[i].Item2)
+                        {
+                            if (priority < comp[i].Item3)
+                            {
+                                dest = comp[i].Item1;
+                                spec = comp[i].Item2;
+                                priority = comp[i].Item3;
+                                size = comp[i].Item4;
+                            }
+                            else if (priority == comp[i].Item3)
+                            {
+                                if (size >= comp[i].Item4)
+                                {
+                                    dest = comp[i].Item1;
+                                    spec = comp[i].Item2;
+                                    priority = comp[i].Item3;
+                                    size = comp[i].Item4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return dest;
         }
     }
 }

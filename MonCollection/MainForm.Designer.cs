@@ -175,6 +175,7 @@ namespace MonCollection
             this.buttonSortOrder = new System.Windows.Forms.Button();
             this.buttonEditDexes = new System.Windows.Forms.Button();
             this.buttonOriginTally = new System.Windows.Forms.Button();
+            this.buttonPickTransfers = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1031,7 +1032,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(760, 504);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(760, 503);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(116, 23);
             this.buttonNiqCalc.TabIndex = 136;
@@ -1117,7 +1118,7 @@ namespace MonCollection
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1080, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
             this.menuStrip1.TabIndex = 148;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1763,12 +1764,23 @@ namespace MonCollection
             this.buttonOriginTally.UseVisualStyleBackColor = true;
             this.buttonOriginTally.Click += new System.EventHandler(this.ButtonOriginTally_Click);
             // 
+            // buttonPickTransfers
+            // 
+            this.buttonPickTransfers.Location = new System.Drawing.Point(760, 358);
+            this.buttonPickTransfers.Name = "buttonPickTransfers";
+            this.buttonPickTransfers.Size = new System.Drawing.Size(116, 23);
+            this.buttonPickTransfers.TabIndex = 200;
+            this.buttonPickTransfers.Text = "Pick Transfers";
+            this.buttonPickTransfers.UseVisualStyleBackColor = true;
+            this.buttonPickTransfers.Click += new System.EventHandler(this.buttonPickTransfers_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1080, 598);
+            this.ClientSize = new System.Drawing.Size(1066, 594);
+            this.Controls.Add(this.buttonPickTransfers);
             this.Controls.Add(this.buttonOriginTally);
             this.Controls.Add(this.buttonEditDexes);
             this.Controls.Add(this.buttonSortOrder);
@@ -2114,6 +2126,7 @@ namespace MonCollection
         private Button buttonEditDexes;
         private Button buttonOriginTally;
         private ToolStripMenuItem levelToolStripMenuItem;
+        private Button buttonPickTransfers;
     }
 }
 
