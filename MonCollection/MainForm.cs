@@ -55,6 +55,7 @@ namespace MonCollection
         {
             HomeDex,
             SwordShieldDex,
+            BrilliantDiamondShiningPearlDex,
             NewSnapDex,
             PinkMeteorDex,
             SunMoonDex,
@@ -73,6 +74,13 @@ namespace MonCollection
         private int[] majorGenderDiff;
         private int[] minorGenderDiff;
         private int[] noDiff;
+
+        private Dictionary<int, int> alolan;
+        private Dictionary<int, int> galarian;
+        private Dictionary<int, int> hisuian;
+
+        private Dictionary<(int, int), int> galarianEvo;
+        private Dictionary<(int, int), int> hisuianEvo;
 
         private Dictionary<int,int> monOrder;
 
@@ -178,8 +186,31 @@ namespace MonCollection
                                          275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369, 396,
                                          397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
-                                         457, 459, 460, 461, 464, 465, 473, 133};
+                                         457, 459, 460, 461, 464, 465, 473, 133 };
             noDiff = new int[] { 414, 664, 665 };
+            alolan = new Dictionary<int, int>()
+            {
+                {19, 1}, {20, 1}, {26, 1}, {27, 1}, {28, 1}, {37, 1}, {38, 1}, {50, 1}, {51, 1},
+                {52, 1}, {53, 1}, {74, 1}, {75, 1}, {76, 1}, {88, 1}, {89, 1}, {103, 1}, {105, 1}
+            };
+            galarian = new Dictionary<int, int>()
+            {
+                {52, 2}, {77, 1}, {78, 1}, {79, 1}, {80, 2}, {83, 1}, {110, 1}, {144, 1 }, {145, 1}, {146, 1},
+                {199, 1}, {222, 1}, {263, 1}, {264, 1}, {554, 1}, {555, 2}, {562, 1}, {618, 1}
+            };
+            galarianEvo = new Dictionary<(int, int), int>()
+            {
+                {(80, 1), 2}, {(555, 1), 2}, {(862, 1), 0}, {(863, 2), 0},
+                {(864, 1), 0}, {(865, 1), 0}, {(866, 1), 0}, {(867, 1), 0}
+            };
+            hisuian = new Dictionary<int, int>()
+            {
+                {58, 1}, {570, 1}, {571, 1}, {628, 1}
+            };
+            hisuianEvo = new Dictionary<(int, int), int>()
+            {
+                
+            };
             languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 
             dexes = LoadSortOrders();
@@ -202,7 +233,8 @@ namespace MonCollection
                                       GameVersion.GO,
                                       GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
                                       GameVersion.GP, GameVersion.GE,
-                                      GameVersion.SW, GameVersion.SH};
+                                      GameVersion.SW, GameVersion.SH,
+                                      GameVersion.BD, GameVersion.SP};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -240,7 +272,7 @@ namespace MonCollection
             }
 
             for(int i = 1; i <= numPokemon; i++)
-                monInGame.Add(new Tuple<GameVersion, int>(GameVersion.SWSH, i), true);
+                monInGame.Add(new Tuple<GameVersion, int>(GameVersion.HOME, i), true);
 
         }
 
@@ -358,6 +390,8 @@ namespace MonCollection
 
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
                 InitializeStrings("en", GameVersion.SH, "blank");
+            else if(info.version == GameVersion.HOME)
+                InitializeStrings(info.language, GameVersion.SWSH, GetTrainer(identifier));
             else
                 InitializeStrings(info.language, info.version, GetTrainer(identifier));
 
@@ -717,10 +751,17 @@ namespace MonCollection
 
             if (pk.AltForm < comboBoxForm.Items.Count)
                 comboBoxForm.SelectedIndex = pk.AltForm;
-            else if (pk.Species >= 862 && pk.Species <= 867){ //Galar Evos
-                pk.AltForm -= 1;
+            else if (galarianEvo.ContainsKey((pk.Species, pk.AltForm)))
+            {
+                pk.AltForm = galarianEvo[(pk.Species, pk.AltForm)];
                 comboBoxForm.SelectedIndex = pk.AltForm;
-            } else
+            }
+            else if (hisuianEvo.ContainsKey((pk.Species, pk.AltForm)))
+            {
+                pk.AltForm = hisuianEvo[(pk.Species, pk.AltForm)];
+                comboBoxForm.SelectedIndex = pk.AltForm;
+            }
+            else
                 comboBoxForm.SelectedIndex = 0;
 
             
@@ -857,13 +898,16 @@ namespace MonCollection
                     break;
                 case GameVersion.SW:
                 case GameVersion.SH:
+                case GameVersion.BD:
+                case GameVersion.SP:
                     game = "swsh";
                     ext = ".gif";
                     break;
-                case GameVersion.SWSH:
+                case GameVersion.HOME:
                     game = "home";
                     ext = ".png";
                     break;
+
             }
             if(!shiny)
                 return RetrieveImage("Resources/img/"+game+"/"+species+ext);
@@ -1369,8 +1413,8 @@ namespace MonCollection
 
         private bool GetGameMons(GameVersion version, int species)
         {
-            if(version == GameVersion.Unknown || version == GameVersion.SWSH)
-                return monInGame[new Tuple<GameVersion, int>(GameVersion.SWSH, species)];
+            if(version == GameVersion.Unknown || version == GameVersion.HOME)
+                return monInGame[new Tuple<GameVersion, int>(GameVersion.HOME, species)];
             else
                 return monInGame[new Tuple<GameVersion, int>(version, species)];
         }
@@ -1589,7 +1633,7 @@ namespace MonCollection
             if (mon.lastVersion != (int) GameVersion.Invalid)
             {
                 SaveInfo si = gameDict[mon.Game];
-                if (si.version <= GameVersion.SH) // Newest Version
+                if (si.version != GameVersion.HOME) // Newest Version
                 {
                     mon.lastVersion = (int) si.version;
                 }
@@ -1642,7 +1686,6 @@ namespace MonCollection
                         var pk = PKMConverter.GetPKMfromBytes(data);
                         if (!(pk?.Species > 0))
                             return;
-                        pk.Identifier = file;
                         pk.SetStats(pk.GetStats(pk.PersonalInfo));
 
                         MonData pd = new MonData
@@ -1652,7 +1695,7 @@ namespace MonCollection
                             Level = pk.CurrentLevel,
                             Gender = pk.Gender,
                             Moves = new List<int> { pk.Move1, pk.Move2, pk.Move3, pk.Move4 },
-                            Game = GetGame(pk.Identifier),
+                            Game = GetGame(file),
                             AltForm = pk.Form,
                             Shiny = pk.IsShiny,
                             Ability = pk.Ability,
@@ -1665,7 +1708,7 @@ namespace MonCollection
                             SPA = pk.Stat_SPA,
                             SPD = pk.Stat_SPD,
                             SPE = pk.Stat_SPE,
-                            Gen = GetGen(pk.Identifier),
+                            Gen = GetGen(file),
                             ID = pk.DisplayTID,
                             OT = pk.OT_Name,
                             Ball = pk.Ball,
@@ -2379,12 +2422,44 @@ namespace MonCollection
             
         }
 
+        public bool isAlolanForm(MonData mon)
+        {
+            if (alolan.ContainsKey(mon.Species))
+            {
+                if (alolan[mon.Species] == mon.AltForm)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public bool isGalarianForm(MonData mon)
+        {
+            if (galarian.ContainsKey(mon.Species))
+            {
+                if (galarian[mon.Species] == mon.AltForm)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public bool isHisuianForm(MonData mon)
+        {
+            if (hisuian.ContainsKey(mon.Species))
+            {
+                if (hisuian[mon.Species] == mon.AltForm)
+                    return true;
+            }
+
+            return false;
+        }
+
         public bool canTransfer(List<MonData> monData, int index)
         {
             bool t = true;
 
             string[] noTransfer = {
-                "Brilliant Diamond", "Shining Pearl", "Legends: Arceus",
                 "Rejuvenation", "Pink Meteor"
             };
 
@@ -2412,17 +2487,39 @@ namespace MonCollection
                         (monData[index].lastVersion == (int)GameVersion.GP ||
                          monData[index].lastVersion == (int)GameVersion.GE))
                     {
-                        if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species))
+                        if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species) &&
+                            !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                         {
-                            outHome = true;
+                            bool legalForm = true;
+                            if (galarian.ContainsKey(monData[index].Species))
+                            {
+                                if (galarian[monData[index].Species] == monData[index].AltForm)
+                                    legalForm = false;
+                            }
+                            if (hisuian.ContainsKey(monData[index].Species))
+                            {
+                                if (hisuian[monData[index].Species] == monData[index].AltForm)
+                                    legalForm = false;
+                            }
+                            outHome = legalForm;
                         }
                     }
                     else if ((vers == GameVersion.SW || vers == GameVersion.SH))
                     {
-                        if (dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
+                        if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
-                            dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species))
+                            dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
+                            !isHisuianForm(monData[index]))
+                        {
+                            outHome = true;
+                        }
+                    }
+                    else if (vers == GameVersion.BD || vers == GameVersion.SP)
+                    {
+                        if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
+                             dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
+                            !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                         {
                             outHome = true;
                         }
@@ -2448,7 +2545,8 @@ namespace MonCollection
                     (monData[index].lastVersion == (int)GameVersion.GP ||
                      monData[index].lastVersion == (int)GameVersion.GE))
                 {
-                    if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species))
+                    if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species) &&
+                        !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                     {
                         int num = 0;
                         int spec = 0;
@@ -2468,10 +2566,33 @@ namespace MonCollection
                 }
                 else if (vers == GameVersion.SW || vers == GameVersion.SH)
                 {
-                    if (dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
+                    if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
-                        dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species))
+                        dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
+                        !isHisuianForm(monData[index]))
+                    {
+                        int num = 0;
+                        int spec = 0;
+                        foreach (MonData md in monData)
+                        {
+                            if (md.Game == save.Key)
+                            {
+                                num++;
+                                if (md.Species == monData[index].Species)
+                                {
+                                    spec++;
+                                }
+                            }
+                        }
+                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                    }
+                }
+                else if (vers == GameVersion.BD || vers == GameVersion.SP)
+                {
+                    if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
+                         dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
+                        !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                     {
                         int num = 0;
                         int spec = 0;

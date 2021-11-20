@@ -1118,7 +1118,7 @@ namespace MonCollection
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1066, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1068, 24);
             this.menuStrip1.TabIndex = 148;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1779,7 +1779,7 @@ namespace MonCollection
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1066, 594);
+            this.ClientSize = new System.Drawing.Size(1068, 598);
             this.Controls.Add(this.buttonPickTransfers);
             this.Controls.Add(this.buttonOriginTally);
             this.Controls.Add(this.buttonEditDexes);
