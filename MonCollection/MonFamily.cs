@@ -82,7 +82,7 @@ namespace MonCollection
             families.Add(new int[] { 118, 119 }); //Goldeen
             families.Add(new int[] { 120, 121 }); //Staryu
             families.Add(new int[] { 439, 122, 866 }); //Mime Jr.
-            families.Add(new int[] { 123, 212 }); //Scyther
+            families.Add(new int[] { 123, 212, 900 }); //Scyther
             families.Add(new int[] { 238, 124 }); //Smoochum
             families.Add(new int[] { 239, 125, 466 }); //Elekid
             families.Add(new int[] { 240, 126, 467 }); //Magby
@@ -130,11 +130,11 @@ namespace MonCollection
             families.Add(new int[] { 206 }); //Dunsparce
             families.Add(new int[] { 207, 472 }); //Gligar
             families.Add(new int[] { 209, 210 }); //Snubbull
-            families.Add(new int[] { 211 }); //Qwilfish
+            families.Add(new int[] { 211, 904 }); //Qwilfish
             families.Add(new int[] { 213 }); //Shuckle
             families.Add(new int[] { 214 }); //Heracross
-            families.Add(new int[] { 215, 461 }); //Sneasel
-            families.Add(new int[] { 216, 217 }); //Teddiursa
+            families.Add(new int[] { 215, 461, 903 }); //Sneasel
+            families.Add(new int[] { 216, 217, 901 }); //Teddiursa
             families.Add(new int[] { 218, 219 }); //Slugma
             families.Add(new int[] { 220, 221, 473 }); //Swinub
             families.Add(new int[] { 222, 864 }); //Corsola
@@ -144,7 +144,7 @@ namespace MonCollection
             families.Add(new int[] { 227 }); //Skarmory
             families.Add(new int[] { 228, 229 }); //Houndour
             families.Add(new int[] { 231, 232 }); //Phanpy
-            families.Add(new int[] { 234 }); //Stantler
+            families.Add(new int[] { 234, 899 }); //Stantler
             families.Add(new int[] { 235 }); //Smeargle
             families.Add(new int[] { 241 }); //Miltank
             families.Add(new int[] { 243 }); //Raikou
@@ -296,7 +296,7 @@ namespace MonCollection
             families.Add(new int[] { 543, 544, 545 }); //Venipede
             families.Add(new int[] { 546, 547 }); //Cottonee
             families.Add(new int[] { 548, 549 }); //Petilil
-            families.Add(new int[] { 550 }); //Basculin
+            families.Add(new int[] { 550, 902 }); //Basculin
             families.Add(new int[] { 551, 552, 553 }); //Sandile
             families.Add(new int[] { 554, 555 }); //Darumaka
             families.Add(new int[] { 556 }); //Maractus
@@ -492,6 +492,7 @@ namespace MonCollection
             families.Add(new int[] { 896 }); //Glastrier
             families.Add(new int[] { 897 }); //Spectrier
             families.Add(new int[] { 898 }); //Calyrex
+            families.Add(new int[] { 905 }); //Enamorus
         }
     }
 }

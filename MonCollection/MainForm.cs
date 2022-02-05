@@ -49,13 +49,14 @@ namespace MonCollection
         private const int RES_MIN = 6;
         private int maxIndex = 0;
 
-        private const int numPokemon = 898;
+        private const int numPokemon = 905;
 
         private enum Dexes
         {
             HomeDex,
             SwordShieldDex,
             BrilliantDiamondShiningPearlDex,
+            LegendsArceusDex,
             NewSnapDex,
             PinkMeteorDex,
             SunMoonDex,
@@ -205,11 +206,13 @@ namespace MonCollection
             };
             hisuian = new Dictionary<int, int>()
             {
-                {58, 1}, {570, 1}, {571, 1}, {628, 1}
+                {58, 1}, {59, 1}, {100, 1}, {101, 1}, {157, 1}, {211, 1 }, {215, 1}, {503, 1},
+                {549, 1}, {550, 2},  {570, 1}, {571, 1}, {628, 1}, {705, 1}, {706, 1}, {713, 1},
+                {724, 1}
             };
             hisuianEvo = new Dictionary<(int, int), int>()
             {
-                
+                {(902, 0), 2}, {(903, 0), 1}, {(904, 0), 1}
             };
             languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 
@@ -278,7 +281,7 @@ namespace MonCollection
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
-            if (gv == GameVersion.Unknown)
+            if (gv == GameVersion.Unknown || gv == GameVersion.HOME)
                 gv = GameVersion.SH;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
@@ -555,8 +558,16 @@ namespace MonCollection
                     labelGender.Visible = true;
                     labelBall.Visible = true;
                     comboBoxBalls.Visible = true;
-                    labelAbility.Visible = true;
-                    comboBoxAbility.Visible = true;
+                    if (pk.Game.Contains("Legends"))
+                    {
+                        labelAbility.Visible = false;
+                        comboBoxAbility.Visible = false;
+                    }
+                    else
+                    {
+                        labelAbility.Visible = true;
+                        comboBoxAbility.Visible = true;
+                    }
                     labelRibbons.Visible = true;
                     labelNature.Visible = true;
                     comboBoxNature.Visible = true;
@@ -565,9 +576,23 @@ namespace MonCollection
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
-                    buttonEggs.Visible = true;
-                    labelDynamax.Visible = true;
-                    textBoxDynaLv.Visible = true;
+                    if (pk.Game.Contains("Legends"))
+                        buttonEggs.Visible = false;
+                    else
+                        buttonEggs.Visible = true;
+                    if (pk.Game.Contains("Diamond") ||
+                        pk.Game.Contains("Pearl") ||
+                        pk.Game.Contains("Legends"))
+                    {
+                        labelDynamax.Visible = false;
+                        textBoxDynaLv.Visible = false;
+                    }
+                    else
+                    {
+                        labelDynamax.Visible = true;
+                        textBoxDynaLv.Visible = true;
+                    }
+
                     break;
             }
 
@@ -663,7 +688,7 @@ namespace MonCollection
                 spForm += "-" + (pk.AltForm % 7).ToString();
             if (minorGenderDiff.Contains(pk.Species))
             {
-                if(pk.AltForm == 0 && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
+                if((pk.AltForm == 0 || (pk.AltForm == 1 && pk.Species == 215)) && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
                 {
                     if (pk.Gender == 0)
                         spForm += "m";
@@ -725,7 +750,11 @@ namespace MonCollection
             else
                 pictureBoxGMax.Image = null;
             textBoxDynaLv.Text = pk.dynaLevel.ToString();
-            if(pk.Species != 869)
+            if (pk.alpha)
+                pictureBoxAlpha.Image = RetrieveImage("Resources/img/alpha.png");
+            else
+                pictureBoxAlpha.Image = null;
+            if (pk.Species != 869)
             {
                 var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
                 comboBoxForm.DataSource = ds;
@@ -902,6 +931,10 @@ namespace MonCollection
                 case GameVersion.SP:
                     game = "swsh";
                     ext = ".gif";
+                    break;
+                case GameVersion.PLA:
+                    game = "pla";
+                    ext = ".png";
                     break;
                 case GameVersion.HOME:
                     game = "home";
@@ -1585,7 +1618,8 @@ namespace MonCollection
             mon.Nickname = textBoxNickname.Text;
             mon.Level = int.Parse(textBoxLevel.Text);
             mon.Gender = (int)labelGender.Tag;
-            mon.Species = (int?) comboBoxSpecies.SelectedValue ?? 0;
+            if (comboBoxSpecies.SelectedValue != null)
+                mon.Species = (int)comboBoxSpecies.SelectedValue;
             if(comboBoxForm.Visible == true)
                 mon.AltForm = comboBoxForm.SelectedIndex;
             if(comboBoxAbility.SelectedValue != null)
@@ -1608,6 +1642,7 @@ namespace MonCollection
             mon.SPE = int.Parse(textBoxSpeed.Text);
             mon.dynaLevel = int.Parse(textBoxDynaLv.Text);
             mon.gMax = (pictureBoxGMax.Image != null);
+            mon.alpha = (pictureBoxAlpha.Image != null);
             if (comboBoxBalls.SelectedValue != null)
                 mon.Ball = (int)comboBoxBalls.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)
@@ -1758,18 +1793,30 @@ namespace MonCollection
                 MonData mon = PkmData[slotSelected];
                 if(mon.Level != 0)
                 {
-                    if (mon.HP >= 11)
-                        textBoxHP.Text = (((mon.HP - 10 - mon.Level) * newLev / mon.Level) + 10 + newLev).ToString();
-                    if (mon.ATK >= 5)
-                        textBoxAttack.Text = (((mon.ATK - 5) * newLev / mon.Level) + 5).ToString();
-                    if (mon.DEF >= 5)
-                        textBoxDefense.Text = (((mon.DEF - 5) * newLev / mon.Level) + 5).ToString();
-                    if (mon.SPA >= 5)
-                        textBoxSpAtk.Text = (((mon.SPA - 5) * newLev / mon.Level) + 5).ToString();
-                    if (mon.SPD >= 5)
-                        textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
-                    if (mon.SPE >= 5)
-                        textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+                    if (mon.Game.Contains("Legends"))
+                    {
+                        textBoxHP.Text = ((int)(((mon.HP - mon.Level) * (1 + .01 * newLev) / (1 + .01 * mon.Level)) + newLev)).ToString();
+                        textBoxAttack.Text = ((int)(mon.ATK * (1 + .02 * newLev) / (1 + .02 * mon.Level))).ToString();
+                        textBoxDefense.Text = ((int)(mon.DEF * (1 + .02 * newLev) / (1 + .02 * mon.Level))).ToString();
+                        textBoxSpAtk.Text = ((int)(mon.SPA * (1 + .02 * newLev) / (1 + .02 * mon.Level))).ToString();
+                        textBoxSpDef.Text = ((int)(mon.SPD * (1 + .02 * newLev) / (1 + .02 * mon.Level))).ToString();
+                        textBoxSpeed.Text = ((int)(mon.SPE * (1 + .02 * newLev) / (1 + .02 * mon.Level))).ToString();
+                    }
+                    else
+                    {
+                        if (mon.HP >= 11)
+                            textBoxHP.Text = (((mon.HP - 10 - mon.Level) * newLev / mon.Level) + 10 + newLev).ToString();
+                        if (mon.ATK >= 5)
+                            textBoxAttack.Text = (((mon.ATK - 5) * newLev / mon.Level) + 5).ToString();
+                        if (mon.DEF >= 5)
+                            textBoxDefense.Text = (((mon.DEF - 5) * newLev / mon.Level) + 5).ToString();
+                        if (mon.SPA >= 5)
+                            textBoxSpAtk.Text = (((mon.SPA - 5) * newLev / mon.Level) + 5).ToString();
+                        if (mon.SPD >= 5)
+                            textBoxSpDef.Text = (((mon.SPD - 5) * newLev / mon.Level) + 5).ToString();
+                        if (mon.SPE >= 5)
+                            textBoxSpeed.Text = (((mon.SPE - 5) * newLev / mon.Level) + 5).ToString();
+                    }
                 }
             }
         }
@@ -2422,6 +2469,13 @@ namespace MonCollection
             
         }
 
+        public bool isHatPikachu(MonData mon)
+        {
+            if (mon.Species == 25 && mon.AltForm > 0)
+                return true;
+            return false;
+        }
+
         public bool isAlolanForm(MonData mon)
         {
             if (alolan.ContainsKey(mon.Species))
@@ -2429,7 +2483,6 @@ namespace MonCollection
                 if (alolan[mon.Species] == mon.AltForm)
                     return true;
             }
-
             return false;
         }
 
@@ -2440,7 +2493,13 @@ namespace MonCollection
                 if (galarian[mon.Species] == mon.AltForm)
                     return true;
             }
+            return false;
+        }
 
+        public bool hasHisuianForm(MonData mon)
+        {
+            if (hisuian.ContainsKey(mon.Species))
+                return true;
             return false;
         }
 
@@ -2451,7 +2510,6 @@ namespace MonCollection
                 if (hisuian[mon.Species] == mon.AltForm)
                     return true;
             }
-
             return false;
         }
 
@@ -2510,6 +2568,7 @@ namespace MonCollection
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
+                            
                             !isHisuianForm(monData[index]))
                         {
                             outHome = true;
@@ -2592,7 +2651,35 @@ namespace MonCollection
                 {
                     if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
-                        !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
+                        !isHatPikachu(monData[index]) &&
+                        !isAlolanForm(monData[index]) &&
+                        !isGalarianForm(monData[index]) &&
+                        !isHisuianForm(monData[index]))
+                    {
+                        int num = 0;
+                        int spec = 0;
+                        foreach (MonData md in monData)
+                        {
+                            if (md.Game == save.Key)
+                            {
+                                num++;
+                                if (md.Species == monData[index].Species)
+                                {
+                                    spec++;
+                                }
+                            }
+                        }
+                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                    }
+                }
+                else if (vers == GameVersion.PLA)
+                {
+                    if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
+                         dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
+                        !isHatPikachu(monData[index]) &&
+                        (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
+                        !isGalarianForm(monData[index]) &&
+                        (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215))
                     {
                         int num = 0;
                         int spec = 0;

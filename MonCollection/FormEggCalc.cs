@@ -74,6 +74,10 @@ namespace MonCollection
             mon = PkmData[ind];
             gen = mon.Gen;
             version = vers;
+            if (version == GameVersion.HOME)
+            {
+                version = GameVersion.SH;
+            }
         }
 
         public void showValues()
@@ -217,9 +221,6 @@ namespace MonCollection
             {
                 MessageBox.Show("Failed to Make Egg");
             }
-            
-                
-
         }
 
         private void makeEgg(MonData mon1, MonData mon2)
@@ -392,30 +393,17 @@ namespace MonCollection
 
         private int[] calcEggMoves(int species, int forme)
         {
-            Type eggType = pkAssembly.GetType("PKHeX.Core.MoveEgg");
-            MethodInfo em = eggType.GetMethod("GetEggMoves", BindingFlags.NonPublic | BindingFlags.Static, null,
-                                              new Type[] { typeof(int), typeof(int), typeof(int), typeof(GameVersion) }, null);
-            object[] paramArray = new object[] { gen, species, forme, version };
-            object val = em.Invoke(eggType, paramArray);
-            return (int[]) val;
+            return MoveEgg.GetEggMoves(gen, species, forme, version);
         }
 
         private IEnumerable<int> calcTMMoves(PKM mon, int species, int forme)
         {
-            Type tmType = pkAssembly.GetType("PKHeX.Core.MoveTechnicalMachine");
-            MethodInfo em = tmType.GetMethod("GetTMHM", BindingFlags.NonPublic | BindingFlags.Static);
-            object[] paramArray = new object[] { mon, species, forme, gen, version, true};
-            object val = em.Invoke(tmType, paramArray);
-            return (IEnumerable<int>)val;
+            return MoveTechnicalMachine.GetTMHM(mon, species, forme, gen, version, true);
         }
 
         private LearnVersion calcLevelUpMoves(PKM mon, int species, int forme, int move)
         {
-            Type lUpType = pkAssembly.GetType("PKHeX.Core.MoveLevelUp");
-            MethodInfo em = lUpType.GetMethod("GetIsLevelUpMove", BindingFlags.Public | BindingFlags.Static);
-            object[] paramArray = new object[] { mon, species, forme, 100, gen, move, 5, 5, version };
-            object val = em.Invoke(lUpType, paramArray);
-            return (LearnVersion)val;
+            return MoveLevelUp.GetIsLevelUpMove(mon, species, forme, 100, gen, move, 5, 5, version);
         }
 
         private string moveName(int index)
@@ -469,7 +457,7 @@ namespace MonCollection
                     mon = new PK8();
                     break;
                 default:
-                    mon = new PK7();
+                    mon = new PK8();
                     break;
             }
             mon.Species = data.Species;

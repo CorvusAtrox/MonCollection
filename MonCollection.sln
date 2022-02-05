@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonCollection", "MonCollection\MonCollection.csproj", "{AC2C16B1-8DC9-4267-9E8A-D252B723AABE}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -19,6 +19,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PKHeX.WinForms", "PKHex\PKHeX.WinForms\PKHeX.WinForms.csproj", "{D1B91861-A448-4762-A313-C7BC179F4415}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PKHeX.Drawing", "PKHex\PKHeX.Drawing\PKHeX.Drawing.csproj", "{458F541C-D8C1-4567-8770-E7CA9465AED1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PKHeX.Drawing.Misc", "PKHex\PKHeX.Drawing.Misc\PKHeX.Drawing.Misc.csproj", "{55251727-D8BF-4C8E-A764-FA48C8891D24}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PKHeX.Drawing.PokeSprite", "PKHex\PKHeX.Drawing.PokeSprite\PKHeX.Drawing.PokeSprite.csproj", "{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +118,46 @@ Global
 		{458F541C-D8C1-4567-8770-E7CA9465AED1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{458F541C-D8C1-4567-8770-E7CA9465AED1}.Release|x86.ActiveCfg = Release|Any CPU
 		{458F541C-D8C1-4567-8770-E7CA9465AED1}.Release|x86.Build.0 = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.ClickOnce|Any CPU.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.ClickOnce|Any CPU.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.ClickOnce|x86.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.ClickOnce|x86.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Debug|x86.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Debug|x86.ActiveCfg = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Debug|x86.Build.0 = Debug|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Release|Any CPU.Build.0 = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Release|x86.ActiveCfg = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Mono-Release|x86.Build.0 = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Release|x86.ActiveCfg = Release|Any CPU
+		{55251727-D8BF-4C8E-A764-FA48C8891D24}.Release|x86.Build.0 = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.ClickOnce|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.ClickOnce|Any CPU.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.ClickOnce|x86.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.ClickOnce|x86.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Debug|x86.ActiveCfg = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Debug|x86.Build.0 = Debug|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Release|x86.ActiveCfg = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Mono-Release|x86.Build.0 = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7A9C92EA-F4BF-4A32-B342-A96798D56E4C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

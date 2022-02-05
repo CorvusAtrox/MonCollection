@@ -176,6 +176,7 @@ namespace MonCollection
             this.buttonEditDexes = new System.Windows.Forms.Button();
             this.buttonOriginTally = new System.Windows.Forms.Button();
             this.buttonPickTransfers = new System.Windows.Forms.Button();
+            this.pictureBoxAlpha = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -232,6 +233,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlpha)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNickname
@@ -1118,7 +1120,7 @@ namespace MonCollection
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1068, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 24);
             this.menuStrip1.TabIndex = 148;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1774,12 +1776,22 @@ namespace MonCollection
             this.buttonPickTransfers.UseVisualStyleBackColor = true;
             this.buttonPickTransfers.Click += new System.EventHandler(this.buttonPickTransfers_Click);
             // 
+            // pictureBoxAlpha
+            // 
+            this.pictureBoxAlpha.Location = new System.Drawing.Point(292, 142);
+            this.pictureBoxAlpha.Name = "pictureBoxAlpha";
+            this.pictureBoxAlpha.Size = new System.Drawing.Size(30, 23);
+            this.pictureBoxAlpha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxAlpha.TabIndex = 201;
+            this.pictureBoxAlpha.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1068, 598);
+            this.ClientSize = new System.Drawing.Size(1067, 593);
+            this.Controls.Add(this.pictureBoxAlpha);
             this.Controls.Add(this.buttonPickTransfers);
             this.Controls.Add(this.buttonOriginTally);
             this.Controls.Add(this.buttonEditDexes);
@@ -1975,6 +1987,7 @@ namespace MonCollection
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlpha)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2127,6 +2140,7 @@ namespace MonCollection
         private Button buttonOriginTally;
         private ToolStripMenuItem levelToolStripMenuItem;
         private Button buttonPickTransfers;
+        private PictureBox pictureBoxAlpha;
     }
 }
 
