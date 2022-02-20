@@ -196,7 +196,7 @@ namespace MonCollection
             };
             galarian = new Dictionary<int, int>()
             {
-                {52, 2}, {77, 1}, {78, 1}, {79, 1}, {80, 2}, {83, 1}, {110, 1}, {144, 1 }, {145, 1}, {146, 1},
+                {52, 2}, {77, 1}, {78, 1}, {79, 1}, {80, 2}, {83, 1}, {110, 1}, {122, 1 }, {144, 1 }, {145, 1}, {146, 1},
                 {199, 1}, {222, 1}, {263, 1}, {264, 1}, {554, 1}, {555, 2}, {562, 1}, {618, 1}
             };
             galarianEvo = new Dictionary<(int, int), int>()
@@ -237,7 +237,8 @@ namespace MonCollection
                                       GameVersion.SN, GameVersion.MN, GameVersion.US, GameVersion.UM,
                                       GameVersion.GP, GameVersion.GE,
                                       GameVersion.SW, GameVersion.SH,
-                                      GameVersion.BD, GameVersion.SP};
+                                      GameVersion.BD, GameVersion.SP,
+                                      GameVersion.PLA};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -2450,13 +2451,19 @@ namespace MonCollection
 
                 foreach (int r in rnd)
                 {
+                    string spForm = PkmListSorted[transferMons[r].Species].Text;
+                    if (transferMons[r].AltForm > 0 && !noDiff.Contains(transferMons[r].Species) && transferMons[r].Species != 869)
+                        spForm += "-" + transferMons[r].AltForm.ToString();
+                    else if (transferMons[r].Species == 869 && transferMons[r].AltForm >= 7)
+                        spForm += "-" + (transferMons[r].AltForm / 7).ToString();
+
                     if (transferMons[r].Game.Contains("HOME"))
                     {
-                        results.addEntry(String.Format("{0} ({1}, {2}) -> [{3}]", transferMons[r].Nickname, PkmListSorted[transferMons[r].Species].Text, transferMons[r].OT, idealTransfer(transferMons, r)));
+                        results.addEntry(String.Format("{0} ({1}, {2}) -> [{3}]", transferMons[r].Nickname, spForm, transferMons[r].OT, idealTransfer(transferMons, r)));
                     }
                     else
                     {
-                        results.addEntry(String.Format("{0} ({1}, {2}) [{3}]", transferMons[r].Nickname, PkmListSorted[transferMons[r].Species].Text, transferMons[r].OT, transferMons[r].Game));
+                        results.addEntry(String.Format("{0} ({1}, {2}) [{3}]", transferMons[r].Nickname, spForm, transferMons[r].OT, transferMons[r].Game));
                     }
                 }
 
@@ -2546,7 +2553,7 @@ namespace MonCollection
                          monData[index].lastVersion == (int)GameVersion.GE))
                     {
                         if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(monData[index].Species) &&
-                            !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
+                            !isHatPikachu(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                         {
                             bool legalForm = true;
                             if (galarian.ContainsKey(monData[index].Species))
@@ -2562,7 +2569,7 @@ namespace MonCollection
                             outHome = legalForm;
                         }
                     }
-                    else if ((vers == GameVersion.SW || vers == GameVersion.SH))
+                    else if (vers == GameVersion.SW || vers == GameVersion.SH)
                     {
                         if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
@@ -2578,7 +2585,19 @@ namespace MonCollection
                     {
                         if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
-                            !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
+                            !isHatPikachu(monData[index]) && !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
+                        {
+                            outHome = true;
+                        }
+                    }
+                    else if (vers == GameVersion.PLA)
+                    {
+                        if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
+                             dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
+                            !isHatPikachu(monData[index]) &&
+                            (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
+                            !isGalarianForm(monData[index]) &&
+                            (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215))
                         {
                             outHome = true;
                         }
@@ -2614,13 +2633,13 @@ namespace MonCollection
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species)
+                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
                                 {
                                     spec++;
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 1, num));
+                        comp.Add(Tuple.Create(save.Key, spec, 7, num));
                     }
                 }
                 else if (vers == GameVersion.SW || vers == GameVersion.SH)
@@ -2638,13 +2657,13 @@ namespace MonCollection
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species)
+                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
                                 {
                                     spec++;
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
                     }
                 }
                 else if (vers == GameVersion.BD || vers == GameVersion.SP)
@@ -2663,13 +2682,13 @@ namespace MonCollection
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species)
+                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
                                 {
                                     spec++;
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
                     }
                 }
                 else if (vers == GameVersion.PLA)
@@ -2688,13 +2707,13 @@ namespace MonCollection
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species)
+                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
                                 {
                                     spec++;
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 2, num));
+                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
                     }
                 }
             }
