@@ -58,10 +58,10 @@ namespace MonCollection
             BrilliantDiamondShiningPearlDex,
             LegendsArceusDex,
             NewSnapDex,
-            PinkMeteorDex,
             SunMoonDex,
             UltraSunMoonDex,
-            LetsGoDex
+            LetsGoDex,
+            PinkMeteorDex
         }
 
         private enum VisibleSpecies
@@ -841,16 +841,16 @@ namespace MonCollection
                     shiny = false; //Shiny not visible
                     break;
                 case GameVersion.YW:
-                    game = "yw";
+                    game = "y";
                     ext = ".png";
                     shiny = false; //Shiny not visible
                     break;
                 case GameVersion.GD:
-                    game = "gd";
+                    game = "g";
                     ext = ".png";
                     break;
                 case GameVersion.SV:
-                    game = "sv";
+                    game = "s";
                     ext = ".png";
                     break;
                 case GameVersion.C:
