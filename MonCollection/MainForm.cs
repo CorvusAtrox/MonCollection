@@ -73,7 +73,7 @@ namespace MonCollection
 
 
         private int[] majorGenderDiff;
-        private int[] minorGenderDiff;
+        private int[] genderDiff;
         private int[] noDiff;
 
         private Dictionary<int, int> alolan;
@@ -180,14 +180,14 @@ namespace MonCollection
         private void InitializeMonLists()
         {
             majorGenderDiff = new int[] { 521, 592, 593, 668 };
-            minorGenderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
-                                         111, 112, 118, 119, 123, 129, 130, 154, 165, 166, 178, 185,
-                                         186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214, 215,
-                                         217, 221, 224, 229, 232, 255, 256, 257, 267, 269, 272, 274,
-                                         275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369, 396,
-                                         397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415, 417,
+            genderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
+                                        111, 112, 118, 119, 123, 129, 130, 133, 154, 165, 166, 178,
+                                         185, 186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214,
+                                         215, 217, 221, 224, 229, 232, 255, 256, 257, 267, 269, 272,
+                                         274, 275, 307, 308, 315, 316, 317, 322, 323, 332, 350, 369,
+                                         396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
-                                         457, 459, 460, 461, 464, 465, 473, 133 };
+                                         457, 459, 460, 461, 464, 465, 473, 521, 592, 593, 668 };
             noDiff = new int[] { 414, 664, 665 };
             alolan = new Dictionary<int, int>()
             {
@@ -687,7 +687,7 @@ namespace MonCollection
                 spForm += "-0";
             if (pk.Species == 869)
                 spForm += "-" + (pk.AltForm % 7).ToString();
-            if (minorGenderDiff.Contains(pk.Species))
+            if (genderDiff.Contains(pk.Species) && !majorGenderDiff.Contains(pk.Species))
             {
                 if((pk.AltForm == 0 || (pk.AltForm == 1 && pk.Species == 215)) && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
                 {
@@ -1142,7 +1142,8 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -1157,7 +1158,8 @@ namespace MonCollection
                              .ThenBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -1170,7 +1172,8 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -1184,7 +1187,8 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => mon.Gen)
                              .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -1199,7 +1203,8 @@ namespace MonCollection
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
 
@@ -1211,7 +1216,8 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => majorGenderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -2000,7 +2006,7 @@ namespace MonCollection
             int sp = (int)comboBoxSpecies.SelectedValue;
             int af = comboBoxForm.SelectedIndex;
             int gd = -1;
-            if (majorGenderDiff.Contains(sp))
+            if (genderDiff.Contains(sp))
                 gd = (int)labelGender.Tag;
             if (noDiff.Contains(sp))
                 af = -1;
@@ -2614,7 +2620,7 @@ namespace MonCollection
         {
             string dest;
 
-            List<Tuple<string, int, int, int>> comp = new List<Tuple<string, int, int, int>>();
+            List<Tuple<string, float, int, int>> comp = new List<Tuple<string, float, int, int>>();
 
             foreach (var save in gameDict)
             {
@@ -2627,19 +2633,27 @@ namespace MonCollection
                         !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                     {
                         int num = 0;
-                        int spec = 0;
+                        float spec = 0;
+                        float spform = 0;
                         foreach (MonData md in monData)
                         {
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
+                                if (md.Species == monData[index].Species)
                                 {
                                     spec++;
                                 }
+                                if (md.Species == monData[index].Species &&
+                                    (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)) &&
+                                    (md.Gender == monData[index].Gender || !genderDiff.Contains(md.Species)) &&
+                                    md.Shiny == monData[index].Shiny)
+                                {
+                                    spform++;
+                                }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 7, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 7, num));
                     }
                 }
                 else if (vers == GameVersion.SW || vers == GameVersion.SH)
@@ -2651,19 +2665,27 @@ namespace MonCollection
                         !isHisuianForm(monData[index]))
                     {
                         int num = 0;
-                        int spec = 0;
+                        float spec = 0;
+                        float spform = 0;
                         foreach (MonData md in monData)
                         {
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
+                                if (md.Species == monData[index].Species)
                                 {
                                     spec++;
                                 }
+                                if (md.Species == monData[index].Species &&
+                                    (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)) &&
+                                    (md.Gender == monData[index].Gender || !genderDiff.Contains(md.Species)) &&
+                                    md.Shiny == monData[index].Shiny)
+                                {
+                                    spform++;
+                                }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
                     }
                 }
                 else if (vers == GameVersion.BD || vers == GameVersion.SP)
@@ -2676,19 +2698,27 @@ namespace MonCollection
                         !isHisuianForm(monData[index]))
                     {
                         int num = 0;
-                        int spec = 0;
+                        float spec = 0;
+                        float spform = 0;
                         foreach (MonData md in monData)
                         {
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
+                                if (md.Species == monData[index].Species)
                                 {
                                     spec++;
                                 }
+                                if (md.Species == monData[index].Species &&
+                                    (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)) &&
+                                    (md.Gender == monData[index].Gender || !genderDiff.Contains(md.Species)) &&
+                                    md.Shiny == monData[index].Shiny)
+                                {
+                                    spform++;
+                                }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
                     }
                 }
                 else if (vers == GameVersion.PLA)
@@ -2701,19 +2731,27 @@ namespace MonCollection
                         (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215))
                     {
                         int num = 0;
-                        int spec = 0;
+                        float spec = 0;
+                        float spform = 0;
                         foreach (MonData md in monData)
                         {
                             if (md.Game == save.Key)
                             {
                                 num++;
-                                if (md.Species == monData[index].Species && (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)))
+                                if (md.Species == monData[index].Species)
                                 {
                                     spec++;
                                 }
+                                if (md.Species == monData[index].Species &&
+                                    (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)) &&
+                                    (md.Gender == monData[index].Gender || !genderDiff.Contains(md.Species)) &&
+                                    md.Shiny == monData[index].Shiny)
+                                {
+                                    spform++;
+                                }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, spec, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
                     }
                 }
             }
@@ -2725,10 +2763,9 @@ namespace MonCollection
             else
             {
                 dest = comp[0].Item1;
-                int spec = comp[0].Item2;
+                double spec = comp[0].Item2;
                 int priority = comp[0].Item3;
                 int size = comp[0].Item4;
-                
 
                 if (comp.Count > 1)
                 {
