@@ -136,6 +136,7 @@ namespace MonCollection
                 {
                     species.Remove(num);
                 }
+                species.Sort();
                 dexes[comboBoxOrder.SelectedIndex].Foreign = species;
             }
             else

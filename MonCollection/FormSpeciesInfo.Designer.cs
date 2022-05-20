@@ -58,6 +58,7 @@
             this.listBoxMoves = new System.Windows.Forms.ListBox();
             this.labelShiny = new System.Windows.Forms.Label();
             this.listBoxLevels = new System.Windows.Forms.ListBox();
+            this.listBoxOrigins = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBall0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBall1)).BeginInit();
@@ -280,14 +281,14 @@
             this.listBoxNames.FormattingEnabled = true;
             this.listBoxNames.Location = new System.Drawing.Point(193, 42);
             this.listBoxNames.Name = "listBoxNames";
-            this.listBoxNames.Size = new System.Drawing.Size(114, 160);
+            this.listBoxNames.Size = new System.Drawing.Size(114, 134);
             this.listBoxNames.TabIndex = 34;
             // 
             // listBoxAbilities
             // 
             this.listBoxAbilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxAbilities.FormattingEnabled = true;
-            this.listBoxAbilities.Location = new System.Drawing.Point(12, 231);
+            this.listBoxAbilities.Location = new System.Drawing.Point(12, 244);
             this.listBoxAbilities.Name = "listBoxAbilities";
             this.listBoxAbilities.Size = new System.Drawing.Size(110, 56);
             this.listBoxAbilities.TabIndex = 35;
@@ -296,7 +297,7 @@
             // 
             this.listBoxLanguages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxLanguages.FormattingEnabled = true;
-            this.listBoxLanguages.Location = new System.Drawing.Point(193, 231);
+            this.listBoxLanguages.Location = new System.Drawing.Point(193, 182);
             this.listBoxLanguages.Name = "listBoxLanguages";
             this.listBoxLanguages.Size = new System.Drawing.Size(114, 56);
             this.listBoxLanguages.TabIndex = 36;
@@ -305,7 +306,7 @@
             // 
             this.listBoxMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.listBoxMoves.FormattingEnabled = true;
-            this.listBoxMoves.Location = new System.Drawing.Point(12, 305);
+            this.listBoxMoves.Location = new System.Drawing.Point(12, 306);
             this.listBoxMoves.MultiColumn = true;
             this.listBoxMoves.Name = "listBoxMoves";
             this.listBoxMoves.Size = new System.Drawing.Size(295, 173);
@@ -327,8 +328,17 @@
             this.listBoxLevels.FormattingEnabled = true;
             this.listBoxLevels.Location = new System.Drawing.Point(128, 111);
             this.listBoxLevels.Name = "listBoxLevels";
-            this.listBoxLevels.Size = new System.Drawing.Size(59, 173);
+            this.listBoxLevels.Size = new System.Drawing.Size(59, 186);
             this.listBoxLevels.TabIndex = 39;
+            // 
+            // listBoxOrigins
+            // 
+            this.listBoxOrigins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
+            this.listBoxOrigins.FormattingEnabled = true;
+            this.listBoxOrigins.Location = new System.Drawing.Point(193, 244);
+            this.listBoxOrigins.Name = "listBoxOrigins";
+            this.listBoxOrigins.Size = new System.Drawing.Size(114, 56);
+            this.listBoxOrigins.TabIndex = 40;
             // 
             // FormSpeciesInfo
             // 
@@ -336,6 +346,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(319, 500);
+            this.Controls.Add(this.listBoxOrigins);
             this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.labelShiny);
             this.Controls.Add(this.listBoxMoves);
@@ -425,5 +436,6 @@
         private System.Windows.Forms.ListBox listBoxMoves;
         private System.Windows.Forms.Label labelShiny;
         private System.Windows.Forms.ListBox listBoxLevels;
+        private System.Windows.Forms.ListBox listBoxOrigins;
     }
 }

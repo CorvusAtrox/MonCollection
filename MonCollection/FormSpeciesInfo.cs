@@ -12,6 +12,7 @@ namespace MonCollection
         public List<string> nameList;
         public List<string> abilityList;
         public List<string> languageList;
+        public List<string> originList;
         public List<string> moveList;
         public List<int> levelList;
         public bool hasShiny;
@@ -24,6 +25,7 @@ namespace MonCollection
             abilityList = new List<string>();
             nameList = new List<string>();
             languageList = new List<string>();
+            originList = new List<string>();
             moveList = new List<string>();
             levelList = new List<int>();
             ballArray = new PictureBox[]{pictureBall0, pictureBall1, pictureBall2, pictureBall3, pictureBall4,
@@ -55,7 +57,9 @@ namespace MonCollection
                 listBoxAbilities.Items.Add(a);
             foreach(string l in languageList)
                 listBoxLanguages.Items.Add(l);
-            foreach(string m in moveList)
+            foreach (string o in originList)
+                listBoxOrigins.Items.Add(o);
+            foreach (string m in moveList)
                 listBoxMoves.Items.Add(m);
             foreach(int v in levelList)
                 listBoxLevels.Items.Add(v);

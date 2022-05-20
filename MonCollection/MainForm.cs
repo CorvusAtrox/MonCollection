@@ -54,6 +54,7 @@ namespace MonCollection
         private enum Dexes
         {
             HomeDex,
+            ScarletVioletDex,
             SwordShieldDex,
             BrilliantDiamondShiningPearlDex,
             LegendsArceusDex,
@@ -2006,7 +2007,7 @@ namespace MonCollection
             int sp = (int)comboBoxSpecies.SelectedValue;
             int af = comboBoxForm.SelectedIndex;
             int gd = -1;
-            if (genderDiff.Contains(sp))
+            if (genderDiff.Contains(sp) && (af == 0 || (af == 1 && sp == 215)))
                 gd = (int)labelGender.Tag;
             if (noDiff.Contains(sp))
                 af = -1;
@@ -2029,6 +2030,7 @@ namespace MonCollection
             List<int> balls = new List<int>();
             List<int> abilities = new List<int>();
             List<int> languages = new List<int>();
+            List<string> origins = new List<string>();
             List<int> moves = new List<int>();
             List<string> names = new List<string>();
             List<int> levels = new List<int>();
@@ -2040,6 +2042,7 @@ namespace MonCollection
                     abilities.Add(mon.Ability);
                     balls.Add(mon.Ball);
                     languages.Add(mon.Language);
+                    origins.Add(mon.Origin);
                     foreach (int m in mon.Moves)
                         moves.Add(m);
                     names.Add(mon.Nickname);
@@ -2053,11 +2056,13 @@ namespace MonCollection
             abilities = abilities.Distinct().ToList();
             balls = balls.Distinct().ToList();
             languages = languages.Distinct().ToList();
+            origins = origins.Distinct().ToList();
             moves = moves.Distinct().ToList();
 
             balls.Sort();
             names.Sort();
             languages.Sort();
+            origins = origins.OrderBy(o => regionDict[o]).ToList();
             levels.Sort();
 
             foreach (int b in balls)
@@ -2071,6 +2076,9 @@ namespace MonCollection
 
             foreach (int v in levels)
                 form.levelList.Add(v);
+
+            foreach (string o in origins)
+                form.originList.Add(o);
 
             var abilityNames = new List<ComboItem>(GameInfo.AbilityDataSource);
 
@@ -2120,6 +2128,7 @@ namespace MonCollection
             List<int> balls = new List<int>();
             List<int> abilities = new List<int>();
             List<int> languages = new List<int>();
+            List<string> origins = new List<string>();
             List<int> moves = new List<int>();
             List<string> names = new List<string>();
             List<int> levels = new List<int>();
@@ -2131,6 +2140,7 @@ namespace MonCollection
                     abilities.Add(mon.Ability);
                     balls.Add(mon.Ball);
                     languages.Add(mon.Language);
+                    origins.Add(mon.Origin);
                     foreach (int m in mon.Moves)
                         moves.Add(m);
                     names.Add(mon.Nickname);
@@ -2144,11 +2154,13 @@ namespace MonCollection
             abilities = abilities.Distinct().ToList();
             balls = balls.Distinct().ToList();
             languages = languages.Distinct().ToList();
+            origins = origins.Distinct().ToList();
             moves = moves.Distinct().ToList();
 
             balls.Sort();
             names.Sort();
             languages.Sort();
+            origins = origins.OrderBy(o => regionDict[o]).ToList();
             levels.Sort();
 
             foreach (int b in balls)
@@ -2159,6 +2171,9 @@ namespace MonCollection
 
             foreach (string n in names)
                 form.nameList.Add(n);
+
+            foreach (string o in origins)
+                form.originList.Add(o);
 
             foreach (int v in levels)
                 form.levelList.Add(v);
@@ -2446,7 +2461,7 @@ namespace MonCollection
                 }
             }
             
-            int entries = int.Parse(Interaction.InputBox(String.Format("How many Transfers? ({0} Transferrable)", transferMons.Count), "Transfers"));
+            int entries = int.Parse(Interaction.InputBox(String.Format("How many Transfers?\n({0})", homeTransferCounts()), "Transfers"));
             int[] rnd = RandomNumberGenerator.GetRandomInts(0, transferMons.Count - 1, entries);
 
             Array.Sort(rnd);
@@ -2581,7 +2596,6 @@ namespace MonCollection
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
-                            
                             !isHisuianForm(monData[index]))
                         {
                             outHome = true;
@@ -2591,6 +2605,8 @@ namespace MonCollection
                     {
                         if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
+                             //(monData[index].Species != 290 && monData[index].Species != 355) &&
+                             //!(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)) &&
                             !isHatPikachu(monData[index]) && !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                         {
                             outHome = true;
@@ -2600,6 +2616,7 @@ namespace MonCollection
                     {
                         if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
+                            //!(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 133)) &&
                             !isHatPikachu(monData[index]) &&
                             (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
                             !isGalarianForm(monData[index]) &&
@@ -2653,10 +2670,11 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 7, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 7, num));
                     }
                 }
-                else if (vers == GameVersion.SW || vers == GameVersion.SH)
+                else if ((vers == GameVersion.SW || vers == GameVersion.SH) &&
+                         monData[index].lastVersion <= (int)GameVersion.SP)
                 {
                     if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
@@ -2685,13 +2703,15 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
                     }
                 }
-                else if (vers == GameVersion.BD || vers == GameVersion.SP)
+                else if ((vers == GameVersion.BD || vers == GameVersion.SP) &&
+                         monData[index].lastVersion <= (int)GameVersion.SP)
                 {
                     if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
+                         (monData[index].Species != 290 && monData[index].Species != 355) &&
                         !isHatPikachu(monData[index]) &&
                         !isAlolanForm(monData[index]) &&
                         !isGalarianForm(monData[index]) &&
@@ -2718,10 +2738,11 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
                     }
                 }
-                else if (vers == GameVersion.PLA)
+                else if ((vers == GameVersion.PLA) &&
+                         monData[index].lastVersion <= (int)GameVersion.SP)
                 {
                     if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
@@ -2751,7 +2772,7 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : (spec + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
                     }
                 }
             }
@@ -2802,6 +2823,75 @@ namespace MonCollection
                 }
             }
             return dest;
+        }
+
+        public string homeTransferCounts()
+        {
+            List<MonData> homeMons = new List<MonData>();
+
+            foreach (MonData md in PkmData)
+            {
+                if (md.Game.Contains("HOME"))
+                    homeMons.Add(md);
+            }
+
+            int lgpe = 0;
+            int swsh = 0;
+            int bdsp = 0;
+            int pla = 0;
+            int sv = 0;
+
+            foreach (MonData hm in homeMons)
+            {
+                if (dexes[(int)Dexes.ScarletVioletDex].Dexes["TBD"].Contains(hm.Species) ||
+                    dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species))
+                {
+                    sv++;
+                }
+
+                if (hm.lastVersion <= (int)GameVersion.SP)
+                {
+                    if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(hm.Species) ||
+                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(hm.Species) ||
+                         dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(hm.Species) ||
+                         dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(hm.Species)) &&
+                         !isHisuianForm(hm))
+                    {
+                        swsh++;
+                    }
+
+                    if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(hm.Species) ||
+                         dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(hm.Species)) &&
+                        !isHatPikachu(hm) &&
+                        !isAlolanForm(hm) &&
+                        !isGalarianForm(hm) &&
+                        !isHisuianForm(hm))
+                    {
+                        bdsp++;
+                    }
+
+                    if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(hm.Species) ||
+                         dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(hm.Species)) &&
+                        !isHatPikachu(hm) &&
+                        (!isAlolanForm(hm) || hm.Species == 37 || hm.Species == 38) &&
+                        !isGalarianForm(hm) &&
+                        (isHisuianForm(hm) || !hasHisuianForm(hm) || hm.Species == 215))
+                    {
+                        pla++;
+                    }
+                }
+                
+                if (hm.lastVersion == (int)GameVersion.GP || hm.lastVersion == (int)GameVersion.GE)
+                {
+                    if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(hm.Species) &&
+                        !isGalarianForm(hm) && !isHisuianForm(hm))
+                    {
+                        lgpe++;
+                    }
+                }
+            }
+
+            return String.Format("LGPE: {0}, SWSH: {1},  BDSP: {2}, PLA: {3}, SV: {4}", lgpe, swsh, bdsp, pla, sv);
         }
     }
 }
