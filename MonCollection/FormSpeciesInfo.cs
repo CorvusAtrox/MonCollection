@@ -48,7 +48,12 @@ namespace MonCollection
             int pb = 0;
             foreach (var i in ballList)
             {
+                ballArray[pb].SizeMode = PictureBoxSizeMode.AutoSize;
                 ballArray[pb].Image = i;
+                ballArray[pb].Height = 32;
+                ballArray[pb].Width = 32;
+                ballArray[pb].SizeMode = PictureBoxSizeMode.StretchImage;
+                ballArray[pb].Refresh();
                 pb++;
             }
             foreach(string n in nameList)

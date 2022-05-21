@@ -661,7 +661,13 @@ namespace MonCollection
 
             textBoxLevel.Text = pk.Level.ToString();
 
+            pictureBoxBall.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBoxBall.Image = RetrieveImage("Resources/img/ball/" + pk.Ball + ".png");
+            pictureBoxBall.Height = 32;
+            pictureBoxBall.Width = 32;
+            pictureBoxBall.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxBall.Refresh();
+
             string spForm = pk.Species.ToString();
             if (pk.AltForm > 0 && !noDiff.Contains(pk.Species) && pk.Species != 869)
                 spForm += "-" + pk.AltForm.ToString();
@@ -2596,6 +2602,7 @@ namespace MonCollection
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
+                            !(monData[index].Species == 290 && monData[index].Origin == "Sinnoh (BDSP)") &&
                             !isHisuianForm(monData[index]))
                         {
                             outHome = true;
@@ -2605,8 +2612,9 @@ namespace MonCollection
                     {
                         if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
-                             //(monData[index].Species != 290 && monData[index].Species != 355) &&
-                             //!(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)) &&
+                             monData[index].Species != 355 &&
+                             !(monData[index].Species == 290 && monData[index].Origin != "Sinnoh (BDSP)") &&
+                             !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)) &&
                             !isHatPikachu(monData[index]) && !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
                         {
                             outHome = true;
@@ -2616,7 +2624,7 @@ namespace MonCollection
                     {
                         if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
-                            //!(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 133)) &&
+                            !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 133)) &&
                             !isHatPikachu(monData[index]) &&
                             (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
                             !isGalarianForm(monData[index]) &&
