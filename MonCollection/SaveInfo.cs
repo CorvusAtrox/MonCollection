@@ -43,7 +43,7 @@ namespace MonCollection
                 case GameVersion.YW:
                     return 1;
                 case GameVersion.GD:
-                case GameVersion.SV:
+                case GameVersion.SI:
                 case GameVersion.C:
                     return 2;
                 case GameVersion.R:

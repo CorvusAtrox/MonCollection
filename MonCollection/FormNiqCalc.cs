@@ -16,7 +16,8 @@ namespace MonCollection
         private int ind = 0;
         private string game;
         private string origin;
-        private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
+        private readonly LegalMoveSource<ComboItem> LegalMoveSource = new(new LegalMoveComboSource());
+        private LegalityAnalysis Legality = null!;
         private List<ComboBox> moveBoxes;
         private int[] majorGenderDiff;
         private int[] noDiff;
@@ -58,7 +59,7 @@ namespace MonCollection
 
 
             // Set the Move ComboBoxes too..
-            LegalMoveSource.ReloadMoves(source.Moves);
+            LegalMoveSource.ReloadMoves(Legality.GetSuggestedMovesAndRelearn());
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
         }
@@ -145,7 +146,7 @@ namespace MonCollection
             LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
             foreach (ComboBox mb in moveBoxes)
             {
-                mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
+                mb.DataSource = new BindingSource(LegalMoveSource.Display.DataSource, null);
             }
 
             comboBoxMove1.SelectedValue = mon.Moves[0];

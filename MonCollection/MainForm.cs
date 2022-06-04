@@ -23,7 +23,7 @@ namespace MonCollection
     {
         private SaveFile ver;
         private readonly string[] genders = { "M", "F", "N" };
-        private readonly LegalMoveSource LegalMoveSource = new LegalMoveSource();
+        private readonly LegalMoveSource<ComboItem> LegalMoveSource = new(new LegalMoveComboSource());
         private ComboBox[] moveBoxes;
         private PictureBox[] PKXBOXES;
         private PictureBox[] ribbonBoxes;
@@ -228,7 +228,7 @@ namespace MonCollection
 
             monInGame = new Dictionary<Tuple<GameVersion, int>, bool>();
             GameVersion[] versions = {GameVersion.RD,GameVersion.GN, GameVersion.YW,
-                                      GameVersion.GD, GameVersion.SV, GameVersion.C,
+                                      GameVersion.GD, GameVersion.SI, GameVersion.C,
                                       GameVersion.R, GameVersion.S, GameVersion.FR,  GameVersion.LG, GameVersion.E,
                                       GameVersion.CXD,
                                       GameVersion.D, GameVersion.P, GameVersion.Pt, GameVersion.HG, GameVersion.SS,
@@ -287,7 +287,7 @@ namespace MonCollection
                 gv = GameVersion.SH;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
-            PKMConverter.SetPrimaryTrainer(ver);
+            //PKMConverter.SetPrimaryTrainer(ver);
             GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources);
 
             // Update Legality Strings
@@ -366,7 +366,7 @@ namespace MonCollection
             comboBoxNature.DataSource = new BindingSource(source.Natures, null);
 
             // Set the Move ComboBoxes too..
-            LegalMoveSource.ReloadMoves(source.Moves);
+            LegalMoveSource.ChangeMoveSource(source.Moves);
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
 
@@ -476,7 +476,7 @@ namespace MonCollection
             LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
             foreach(ComboBox mb in moveBoxes)
             {
-                mb.DataSource = new BindingSource(LegalMoveSource.DataSource, null);
+                mb.DataSource = new BindingSource(LegalMoveSource.Display.DataSource, null);
             }
 
             switch (ver.Generation)
@@ -848,16 +848,16 @@ namespace MonCollection
                     shiny = false; //Shiny not visible
                     break;
                 case GameVersion.YW:
-                    game = "y";
+                    game = "yw";
                     ext = ".png";
                     shiny = false; //Shiny not visible
                     break;
                 case GameVersion.GD:
-                    game = "g";
+                    game = "gd";
                     ext = ".png";
                     break;
-                case GameVersion.SV:
-                    game = "s";
+                case GameVersion.SI:
+                    game = "si";
                     ext = ".png";
                     break;
                 case GameVersion.C:
@@ -978,7 +978,7 @@ namespace MonCollection
                 return;
 
             var item = (ComboItem)((ComboBox)sender).Items[e.Index];
-            var valid = LegalMoveSource.CanLearn(item.Value);
+            var valid = LegalMoveSource.Info.CanLearn(item.Value);
 
             var current = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
             var brush = Draw.Brushes.GetBackground(valid, current);
@@ -1718,7 +1718,7 @@ namespace MonCollection
 
         private void ImportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (var fbd = new FolderBrowserDialog())
+            /*using (var fbd = new FolderBrowserDialog())
             {
                 DialogResult result = fbd.ShowDialog();
 
@@ -1784,7 +1784,7 @@ namespace MonCollection
                     OpenPKM(PkmData[slotSelected]);
 
                 }
-            }
+            }*/
         }
 
         private string GetGame(string identifier)
