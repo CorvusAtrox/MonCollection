@@ -598,6 +598,11 @@ namespace MonCollection
                     break;
             }
 
+            if (pk.Game.Contains("HOME"))
+                buttonIdealTransfer.Visible = true;
+            else
+                buttonIdealTransfer.Visible = false;
+
             textBoxNickname.Text = pk.Nickname;
             comboBoxBalls.SelectedValue = pk.Ball;
             comboBoxSpecies.SelectedValue = pk.Species;
@@ -2851,7 +2856,7 @@ namespace MonCollection
 
             foreach (MonData hm in homeMons)
             {
-                if (dexes[(int)Dexes.ScarletVioletDex].Dexes["TBD"].Contains(hm.Species) ||
+                if (dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(hm.Species) ||
                     dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species))
                 {
                     sv++;
@@ -2900,6 +2905,19 @@ namespace MonCollection
             }
 
             return String.Format("LGPE: {0}, SWSH: {1},  BDSP: {2}, PLA: {3}, SV: {4}", lgpe, swsh, bdsp, pla, sv);
+        }
+
+        private void buttonIdealTransfer_Click(object sender, EventArgs e)
+        {
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
+
+            string spForm = PkmListSorted[PkmData[slotSelected].Species].Text;
+            if (PkmData[slotSelected].AltForm > 0 && !noDiff.Contains(PkmData[slotSelected].Species) && PkmData[slotSelected].Species != 869)
+                spForm += "-" + PkmData[slotSelected].AltForm.ToString();
+            else if (PkmData[slotSelected].Species == 869 && PkmData[slotSelected].AltForm >= 7)
+                spForm += "-" + (PkmData[slotSelected].AltForm / 7).ToString();
+            MessageBox.Show(String.Format("{0} ({1}, {2}) -> [{3}]", PkmData[slotSelected].Nickname, spForm, PkmData[slotSelected].OT, idealTransfer(PkmData, slotSelected)));
         }
     }
 }
