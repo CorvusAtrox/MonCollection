@@ -102,7 +102,6 @@ namespace MonCollection
             this.comboBoxForm = new System.Windows.Forms.ComboBox();
             this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
             this.buttonNiqCalc = new System.Windows.Forms.Button();
-            this.buttonEggs = new System.Windows.Forms.Button();
             this.buttonOriginSort = new System.Windows.Forms.Button();
             this.buttonMoveMonTally = new System.Windows.Forms.Button();
             this.buttonRanMon = new System.Windows.Forms.Button();
@@ -1095,7 +1094,7 @@ namespace MonCollection
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(1013, 619);
+            this.buttonNiqCalc.Location = new System.Drawing.Point(1013, 658);
             this.buttonNiqCalc.Margin = new System.Windows.Forms.Padding(4);
             this.buttonNiqCalc.Name = "buttonNiqCalc";
             this.buttonNiqCalc.Size = new System.Drawing.Size(155, 28);
@@ -1103,17 +1102,6 @@ namespace MonCollection
             this.buttonNiqCalc.Text = "Unique Calc";
             this.buttonNiqCalc.UseVisualStyleBackColor = true;
             this.buttonNiqCalc.Click += new System.EventHandler(this.ButtonNiqCalc_Click);
-            // 
-            // buttonEggs
-            // 
-            this.buttonEggs.Location = new System.Drawing.Point(835, 692);
-            this.buttonEggs.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonEggs.Name = "buttonEggs";
-            this.buttonEggs.Size = new System.Drawing.Size(155, 28);
-            this.buttonEggs.TabIndex = 137;
-            this.buttonEggs.Text = "Breeding Calc";
-            this.buttonEggs.UseVisualStyleBackColor = true;
-            this.buttonEggs.Click += new System.EventHandler(this.ButtonEggs_Click);
             // 
             // buttonOriginSort
             // 
@@ -1595,7 +1583,7 @@ namespace MonCollection
             // 
             // buttonMonInfo
             // 
-            this.buttonMonInfo.Location = new System.Drawing.Point(835, 656);
+            this.buttonMonInfo.Location = new System.Drawing.Point(835, 622);
             this.buttonMonInfo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonMonInfo.Name = "buttonMonInfo";
             this.buttonMonInfo.Size = new System.Drawing.Size(155, 28);
@@ -1756,7 +1744,7 @@ namespace MonCollection
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(1013, 656);
+            this.buttonLineInfo.Location = new System.Drawing.Point(1013, 622);
             this.buttonLineInfo.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLineInfo.Name = "buttonLineInfo";
             this.buttonLineInfo.Size = new System.Drawing.Size(155, 28);
@@ -1767,7 +1755,7 @@ namespace MonCollection
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(1192, 656);
+            this.buttonDupCheck.Location = new System.Drawing.Point(1192, 622);
             this.buttonDupCheck.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDupCheck.Name = "buttonDupCheck";
             this.buttonDupCheck.Size = new System.Drawing.Size(155, 28);
@@ -1778,7 +1766,7 @@ namespace MonCollection
             // 
             // buttonPkrsCount
             // 
-            this.buttonPkrsCount.Location = new System.Drawing.Point(1192, 692);
+            this.buttonPkrsCount.Location = new System.Drawing.Point(1192, 658);
             this.buttonPkrsCount.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPkrsCount.Name = "buttonPkrsCount";
             this.buttonPkrsCount.Size = new System.Drawing.Size(155, 28);
@@ -1826,7 +1814,7 @@ namespace MonCollection
             // 
             // buttonAssignOrigin
             // 
-            this.buttonAssignOrigin.Location = new System.Drawing.Point(1013, 692);
+            this.buttonAssignOrigin.Location = new System.Drawing.Point(835, 658);
             this.buttonAssignOrigin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAssignOrigin.Name = "buttonAssignOrigin";
             this.buttonAssignOrigin.Size = new System.Drawing.Size(155, 28);
@@ -1979,7 +1967,6 @@ namespace MonCollection
             this.Controls.Add(this.buttonRanMon);
             this.Controls.Add(this.buttonMoveMonTally);
             this.Controls.Add(this.buttonOriginSort);
-            this.Controls.Add(this.buttonEggs);
             this.Controls.Add(this.buttonNiqCalc);
             this.Controls.Add(this.pictureBoxPkrs);
             this.Controls.Add(this.comboBoxForm);
@@ -2196,7 +2183,6 @@ namespace MonCollection
         private ComboBox comboBoxForm;
         private PictureBox pictureBoxPkrs;
         private Button buttonNiqCalc;
-        private Button buttonEggs;
         private Button buttonOriginSort;
         private Button buttonMoveMonTally;
         private Button buttonRanMon;

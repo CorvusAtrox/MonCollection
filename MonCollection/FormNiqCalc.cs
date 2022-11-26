@@ -57,9 +57,6 @@ namespace MonCollection
             comboBoxAbility.DataSource = new BindingSource(source.Abilities, null);
             comboBoxNature.DataSource = new BindingSource(source.Natures, null);
 
-
-            // Set the Move ComboBoxes too..
-            LegalMoveSource.ReloadMoves(Legality.GetSuggestedMovesAndRelearn());
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
         }
@@ -119,13 +116,18 @@ namespace MonCollection
             SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
 
+            //LegalMoveSource.ReloadMoves(legal);
+
             monFamily = new MonFamily();
-            int[] family = monFamily.GetFamily(mon.Species);
+            ushort[] family = monFamily.GetFamily(mon.Species);
 
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
             labelGame.Text = String.Format("Game: {0}",game);
 
-            comboBoxSpecies.SelectedValue = mon.Species;
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
+
+            comboBoxSpecies.Text = PkmListSorted[mon.Species].Text;
 
             bool gd = true;
             bool nd = false;
@@ -143,11 +145,11 @@ namespace MonCollection
 
             labelSpVal.Text = String.Format("({0} {1}) ({2} {3}) ({4} {5})", query1f.Count(), query1.Count(), query0f.Count(), query0.Count(), query2f.Count(), query2.Count());
 
-            LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
+            /*LegalMoveSource.ReloadMoves(legal);
             foreach (ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.Display.DataSource, null);
-            }
+            }*/
 
             comboBoxMove1.SelectedValue = mon.Moves[0];
             comboBoxMove2.SelectedValue = mon.Moves[1];
@@ -337,6 +339,9 @@ namespace MonCollection
                 case 8:
                     mon = new PK8();
                     break;
+                case 9:
+                    mon = new PK9();
+                    break;
                 default:
                     mon = new PK7();
                     break;
@@ -344,7 +349,7 @@ namespace MonCollection
             mon.Species = data.Species;
             mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
-                mon.Form = mon.Form / 7;
+                mon.Form = (byte)(mon.Form / 7);
             mon.CurrentLevel = data.Level;
             if (gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;
@@ -373,7 +378,7 @@ namespace MonCollection
                 if (noDiff.Contains(mon.Species))
                     nd = true;
 
-                int[] family = monFamily.GetFamily(mon.Species);
+                ushort[] family = monFamily.GetFamily(mon.Species);
 
                 if ((int)comboBoxMoveNew.SelectedValue > 0)
                 {

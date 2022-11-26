@@ -6,12 +6,12 @@ namespace MonCollection
     public class MonData
     {
         public string Nickname { get; set; }
-        public int Species { get; set; }
+        public ushort Species { get; set; }
         public int Level { get; set; }
         public int Gender { get; set; } = 2;
         public List<int> Moves { get; set; }
         public string Game { get; set; }
-        public int AltForm { get; set; }
+        public byte AltForm { get; set; }
         public bool Shiny { get; set; }
         [DefaultValue(-1)]
         public int Ability { get; set; }

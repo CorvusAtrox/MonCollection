@@ -73,16 +73,16 @@ namespace MonCollection
         }
 
 
-        private int[] majorGenderDiff;
-        private int[] genderDiff;
-        private int[] noDiff;
+        private ushort[] majorGenderDiff;
+        private ushort[] genderDiff;
+        private ushort[] noDiff;
 
-        private Dictionary<int, int> alolan;
-        private Dictionary<int, int> galarian;
-        private Dictionary<int, int> hisuian;
+        private Dictionary<ushort, byte> alolan;
+        private Dictionary<ushort, byte> galarian;
+        private Dictionary<ushort, byte> hisuian;
 
-        private Dictionary<(int, int), int> galarianEvo;
-        private Dictionary<(int, int), int> hisuianEvo;
+        private Dictionary<(ushort, byte), byte> galarianEvo;
+        private Dictionary<(ushort, byte), byte> hisuianEvo;
 
         private Dictionary<int,int> monOrder;
 
@@ -180,8 +180,8 @@ namespace MonCollection
 
         private void InitializeMonLists()
         {
-            majorGenderDiff = new int[] { 521, 592, 593, 668 };
-            genderDiff = new int[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
+            majorGenderDiff = new ushort[] { 521, 592, 593, 668 };
+            genderDiff = new ushort[] { 3, 12, 19, 20, 25, 26, 41, 42, 44, 45, 64, 65, 84, 85, 97,
                                         111, 112, 118, 119, 123, 129, 130, 133, 154, 165, 166, 178,
                                          185, 186, 190, 194, 195, 198, 202, 203, 207, 208, 212, 214,
                                          215, 217, 221, 224, 229, 232, 255, 256, 257, 267, 269, 272,
@@ -189,29 +189,29 @@ namespace MonCollection
                                          396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473, 521, 592, 593, 668 };
-            noDiff = new int[] { 414, 664, 665 };
-            alolan = new Dictionary<int, int>()
+            noDiff = new ushort[] { 414, 664, 665 };
+            alolan = new Dictionary<ushort, byte>()
             {
                 {19, 1}, {20, 1}, {26, 1}, {27, 1}, {28, 1}, {37, 1}, {38, 1}, {50, 1}, {51, 1},
                 {52, 1}, {53, 1}, {74, 1}, {75, 1}, {76, 1}, {88, 1}, {89, 1}, {103, 1}, {105, 1}
             };
-            galarian = new Dictionary<int, int>()
+            galarian = new Dictionary<ushort, byte>()
             {
                 {52, 2}, {77, 1}, {78, 1}, {79, 1}, {80, 2}, {83, 1}, {110, 1}, {122, 1 }, {144, 1 }, {145, 1}, {146, 1},
                 {199, 1}, {222, 1}, {263, 1}, {264, 1}, {554, 1}, {555, 2}, {562, 1}, {618, 1}
             };
-            galarianEvo = new Dictionary<(int, int), int>()
+            galarianEvo = new Dictionary<(ushort, byte), byte>()
             {
                 {(80, 1), 2}, {(555, 1), 2}, {(862, 1), 0}, {(863, 2), 0},
                 {(864, 1), 0}, {(865, 1), 0}, {(866, 1), 0}, {(867, 1), 0}
             };
-            hisuian = new Dictionary<int, int>()
+            hisuian = new Dictionary<ushort, byte>()
             {
                 {58, 1}, {59, 1}, {100, 1}, {101, 1}, {157, 1}, {211, 1 }, {215, 1}, {503, 1},
                 {549, 1}, {550, 2},  {570, 1}, {571, 1}, {628, 1}, {705, 1}, {706, 1}, {713, 1},
                 {724, 1}
             };
-            hisuianEvo = new Dictionary<(int, int), int>()
+            hisuianEvo = new Dictionary<(ushort, byte), byte>()
             {
                 {(902, 0), 2}, {(903, 0), 1}, {(904, 0), 1}
             };
@@ -394,7 +394,7 @@ namespace MonCollection
                 identifier = "";
 
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
-                InitializeStrings("en", GameVersion.SH, "blank");
+                InitializeStrings("en", GameVersion.VL, "blank");
             else if(info.version == GameVersion.HOME)
                 InitializeStrings(info.language, GameVersion.SWSH, GetTrainer(identifier));
             else
@@ -456,6 +456,9 @@ namespace MonCollection
                 case 8:
                     mon = new PK8();
                     break;
+                case 9:
+                    mon = new PK9();
+                    break;
                 default:
                     mon = new PK8();
                     break;
@@ -463,7 +466,7 @@ namespace MonCollection
             mon.Species = data.Species;
             mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
-                mon.Form = mon.Form / 7;
+                mon.Form = (byte)(mon.Form / 7);
             mon.CurrentLevel = data.Level;
             if(gameDict.TryGetValue(data.Game, out SaveInfo val))
                 mon.Version = (int)val.version;
@@ -473,7 +476,7 @@ namespace MonCollection
         private void PopulateFields(MonData pk)
         {
             legal = new LegalityAnalysis(MonDataToPKM(pk),ver.Personal);
-            LegalMoveSource.ReloadMoves(legal.GetSuggestedMovesAndRelearn());
+            LegalMoveSource.ReloadMoves(legal);
             foreach(ComboBox mb in moveBoxes)
             {
                 mb.DataSource = new BindingSource(LegalMoveSource.Display.DataSource, null);
@@ -495,7 +498,6 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = false;
-                    buttonEggs.Visible = false;
                     labelDynamax.Visible = false;
                     textBoxDynaLv.Visible = false;
                     break;
@@ -513,7 +515,6 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
-                    buttonEggs.Visible = true;
                     labelDynamax.Visible = false;
                     textBoxDynaLv.Visible = false;
                     break;
@@ -533,7 +534,6 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
-                    buttonEggs.Visible = true;
                     labelDynamax.Visible = false;
                     textBoxDynaLv.Visible = false;
                     break;
@@ -552,7 +552,6 @@ namespace MonCollection
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
-                    buttonEggs.Visible = true;
                     labelDynamax.Visible = false;
                     textBoxDynaLv.Visible = false;
                     break;
@@ -578,23 +577,42 @@ namespace MonCollection
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
-                    if (pk.Game.Contains("Legends"))
-                        buttonEggs.Visible = false;
-                    else
-                        buttonEggs.Visible = true;
-                    if (pk.Game.Contains("Diamond") ||
-                        pk.Game.Contains("Pearl") ||
-                        pk.Game.Contains("Legends"))
-                    {
-                        labelDynamax.Visible = false;
-                        textBoxDynaLv.Visible = false;
-                    }
-                    else
+                    if (pk.Game.Contains("Sword") ||
+                        pk.Game.Contains("Shield"))
                     {
                         labelDynamax.Visible = true;
                         textBoxDynaLv.Visible = true;
                     }
-
+                    else
+                    {
+                        labelDynamax.Visible = false;
+                        textBoxDynaLv.Visible = false;
+                    }
+                    break;
+                case 9:
+                    labelGender.Visible = true;
+                    labelBall.Visible = true;
+                    comboBoxBalls.Visible = true;
+                    labelAbility.Visible = true;
+                    comboBoxAbility.Visible = true;
+                    labelRibbons.Visible = true;
+                    labelNature.Visible = true;
+                    comboBoxNature.Visible = true;
+                    comboBoxPlus.Visible = true;
+                    comboBoxMinus.Visible = true;
+                    labelLanguage.Visible = true;
+                    comboBoxLanguage.Visible = true;
+                    if (pk.Game.Contains("Scarlet") ||
+                        pk.Game.Contains("Violet"))
+                    {
+                        comboBoxPkrs.Visible = false;
+                    }
+                    else
+                    {
+                        comboBoxPkrs.Visible = true;
+                    }
+                    labelDynamax.Visible = false;
+                    textBoxDynaLv.Visible = false;
                     break;
             }
 
@@ -603,9 +621,12 @@ namespace MonCollection
             else
                 buttonIdealTransfer.Visible = false;
 
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
+
             textBoxNickname.Text = pk.Nickname;
             comboBoxBalls.SelectedValue = pk.Ball;
-            comboBoxSpecies.SelectedValue = pk.Species;
+            comboBoxSpecies.Text = PkmListSorted[pk.Species].Text;
             comboBoxLanguage.SelectedValue = pk.Language;
             comboBoxAbility.SelectedValue = pk.Ability;
             comboBoxNature.SelectedValue = pk.Nature;
@@ -718,7 +739,7 @@ namespace MonCollection
             if(si != null)
                 pictureBoxGameSprite.Image = GetSprite(spForm, si.version,pk.Shiny);
             else
-                pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.SH, pk.Shiny);
+                pictureBoxGameSprite.Image = GetSprite(spForm, GameVersion.VL, pk.Shiny);
             if (pictureBoxGameSprite.Height > 180 || pictureBoxGameSprite.Width > 180)
             {
                 double ratio = (double)pictureBoxGameSprite.Height / (double)pictureBoxGameSprite.Width;
@@ -769,7 +790,7 @@ namespace MonCollection
                 pictureBoxAlpha.Image = null;
             if (pk.Species != 869)
             {
-                var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, pk.Gen);
+                var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, (EntityContext)pk.Gen);
                 comboBoxForm.DataSource = ds;
             } else
             {
@@ -983,7 +1004,7 @@ namespace MonCollection
                 return;
 
             var item = (ComboItem)((ComboBox)sender).Items[e.Index];
-            var valid = LegalMoveSource.Info.CanLearn(item.Value);
+            var valid = LegalMoveSource.Info.CanLearn((ushort)item.Value);
 
             var current = (e.State & DrawItemState.Selected) == DrawItemState.Selected;
             var brush = Draw.Brushes.GetBackground(valid, current);
@@ -1490,15 +1511,6 @@ namespace MonCollection
             results.Show();
         }
 
-        private void ButtonEggs_Click(object sender, EventArgs e)
-        {
-            var results = new FormEggCalc();
-
-            results.loadDB(PkmData, slotSelected, ver.Version);
-            results.showValues();
-            results.Show();
-        }
-
         private void SetStatText(int boon, int bane)
         {
 
@@ -1638,9 +1650,9 @@ namespace MonCollection
             mon.Level = int.Parse(textBoxLevel.Text);
             mon.Gender = (int)labelGender.Tag;
             if (comboBoxSpecies.SelectedValue != null)
-                mon.Species = (int)comboBoxSpecies.SelectedValue;
+                mon.Species = (ushort)comboBoxSpecies.SelectedValue;
             if(comboBoxForm.Visible == true)
-                mon.AltForm = comboBoxForm.SelectedIndex;
+                mon.AltForm = (byte)comboBoxForm.SelectedIndex;
             if(comboBoxAbility.SelectedValue != null)
                 mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
@@ -2015,7 +2027,7 @@ namespace MonCollection
         {
             FormSpeciesInfo form = new FormSpeciesInfo();
 
-            int sp = (int)comboBoxSpecies.SelectedValue;
+            ushort sp = (ushort)((int)comboBoxSpecies.SelectedValue);
             int af = comboBoxForm.SelectedIndex;
             int gd = -1;
             if (genderDiff.Contains(sp) && (af == 0 || (af == 1 && sp == 215)))
@@ -2128,7 +2140,7 @@ namespace MonCollection
             FormSpeciesInfo form = new FormSpeciesInfo();
             
             monFamily = new MonFamily();
-            int[] family = monFamily.GetFamily((int)comboBoxSpecies.SelectedValue);
+            ushort[] family = monFamily.GetFamily((ushort)((int)comboBoxSpecies.SelectedValue));
             
             if(family[0] == 592)
                 form.spImage = RetrieveImage("Resources/img/icons/592f.png");
