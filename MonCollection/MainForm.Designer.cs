@@ -146,7 +146,7 @@ namespace MonCollection
             this.ribbonPic4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxGMax = new System.Windows.Forms.PictureBox();
             this.textBoxDynaLv = new System.Windows.Forms.TextBox();
-            this.labelDynamax = new System.Windows.Forms.Label();
+            this.labelGimmick = new System.Windows.Forms.Label();
             this.buttonMonInfo = new System.Windows.Forms.Button();
             this.ribbonPic9 = new System.Windows.Forms.PictureBox();
             this.ribbonPic8 = new System.Windows.Forms.PictureBox();
@@ -177,6 +177,7 @@ namespace MonCollection
             this.buttonPickTransfers = new System.Windows.Forms.Button();
             this.pictureBoxAlpha = new System.Windows.Forms.PictureBox();
             this.buttonIdealTransfer = new System.Windows.Forms.Button();
+            this.comboBoxTeraType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
@@ -1567,19 +1568,19 @@ namespace MonCollection
             this.textBoxDynaLv.Size = new System.Drawing.Size(32, 22);
             this.textBoxDynaLv.TabIndex = 172;
             // 
-            // labelDynamax
+            // labelGimmick
             // 
-            this.labelDynamax.AutoSize = true;
-            this.labelDynamax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelDynamax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDynamax.ForeColor = System.Drawing.Color.Black;
-            this.labelDynamax.Location = new System.Drawing.Point(235, 153);
-            this.labelDynamax.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDynamax.Name = "labelDynamax";
-            this.labelDynamax.Size = new System.Drawing.Size(78, 17);
-            this.labelDynamax.TabIndex = 173;
-            this.labelDynamax.Text = "Dynamax:";
-            this.labelDynamax.Click += new System.EventHandler(this.labelDynamax_Click);
+            this.labelGimmick.AutoSize = true;
+            this.labelGimmick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
+            this.labelGimmick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGimmick.ForeColor = System.Drawing.Color.Black;
+            this.labelGimmick.Location = new System.Drawing.Point(235, 153);
+            this.labelGimmick.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelGimmick.Name = "labelGimmick";
+            this.labelGimmick.Size = new System.Drawing.Size(78, 17);
+            this.labelGimmick.TabIndex = 173;
+            this.labelGimmick.Text = "Dynamax:";
+            this.labelGimmick.Click += new System.EventHandler(this.labelDynamax_Click);
             // 
             // buttonMonInfo
             // 
@@ -1901,12 +1902,30 @@ namespace MonCollection
             this.buttonIdealTransfer.UseVisualStyleBackColor = true;
             this.buttonIdealTransfer.Click += new System.EventHandler(this.buttonIdealTransfer_Click);
             // 
+            // comboBoxTeraType
+            // 
+            this.comboBoxTeraType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxTeraType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxTeraType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
+            this.comboBoxTeraType.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxTeraType.FormattingEnabled = true;
+            this.comboBoxTeraType.Items.AddRange(new object[] {
+            "None",
+            "Infected",
+            "Cured"});
+            this.comboBoxTeraType.Location = new System.Drawing.Point(332, 148);
+            this.comboBoxTeraType.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxTeraType.Name = "comboBoxTeraType";
+            this.comboBoxTeraType.Size = new System.Drawing.Size(96, 24);
+            this.comboBoxTeraType.TabIndex = 203;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1423, 730);
+            this.Controls.Add(this.comboBoxTeraType);
             this.Controls.Add(this.buttonIdealTransfer);
             this.Controls.Add(this.pictureBoxAlpha);
             this.Controls.Add(this.buttonPickTransfers);
@@ -1936,7 +1955,7 @@ namespace MonCollection
             this.Controls.Add(this.ribbonPic6);
             this.Controls.Add(this.ribbonPic5);
             this.Controls.Add(this.buttonMonInfo);
-            this.Controls.Add(this.labelDynamax);
+            this.Controls.Add(this.labelGimmick);
             this.Controls.Add(this.textBoxDynaLv);
             this.Controls.Add(this.pictureBoxGMax);
             this.Controls.Add(this.ribbonPic4);
@@ -2222,7 +2241,7 @@ namespace MonCollection
         private PictureBox ribbonPic4;
         private PictureBox pictureBoxGMax;
         private TextBox textBoxDynaLv;
-        private Label labelDynamax;
+        private Label labelGimmick;
         private Button buttonMonInfo;
         private PictureBox ribbonPic9;
         private PictureBox ribbonPic8;
@@ -2258,6 +2277,7 @@ namespace MonCollection
         private Button buttonPickTransfers;
         private PictureBox pictureBoxAlpha;
         private Button buttonIdealTransfer;
+        private ComboBox comboBoxTeraType;
     }
 }
 

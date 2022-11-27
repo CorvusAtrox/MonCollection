@@ -36,6 +36,7 @@ namespace MonCollection
         public int dynaLevel { get; set; }
         public bool gMax { get; set; }
         public bool alpha { get; set; }
+        public byte teraType { get; set; }
         public int lastVersion { get; set; }
     }
 }

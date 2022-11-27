@@ -80,9 +80,11 @@ namespace MonCollection
         private Dictionary<ushort, byte> alolan;
         private Dictionary<ushort, byte> galarian;
         private Dictionary<ushort, byte> hisuian;
+        private Dictionary<ushort, byte> paldean;
 
         private Dictionary<(ushort, byte), byte> galarianEvo;
         private Dictionary<(ushort, byte), byte> hisuianEvo;
+        private Dictionary<(ushort, byte), byte> paldeanEvo;
 
         private Dictionary<int,int> monOrder;
 
@@ -215,6 +217,14 @@ namespace MonCollection
             {
                 {(902, 0), 2}, {(903, 0), 1}, {(904, 0), 1}
             };
+            paldean = new Dictionary<ushort, byte>()
+            {
+                {128, 1}, {194, 1}
+            };
+            paldeanEvo = new Dictionary<(ushort, byte), byte>()
+            {
+                {(1009, 0), 1}
+            };
             languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 
             dexes = LoadSortOrders();
@@ -239,7 +249,8 @@ namespace MonCollection
                                       GameVersion.GP, GameVersion.GE,
                                       GameVersion.SW, GameVersion.SH,
                                       GameVersion.BD, GameVersion.SP,
-                                      GameVersion.PLA};
+                                      GameVersion.PLA,
+                                      GameVersion.SL, GameVersion.VL};
             foreach (GameVersion v in versions)
             {
                 SaveFile sf = SaveUtil.GetBlankSAV(v, "blank");
@@ -318,6 +329,7 @@ namespace MonCollection
                 cb.DisplayMember = nameof(ComboItem.Text);
                 cb.ValueMember = nameof(ComboItem.Value);
             }
+
         }
 
         private void InitializePkxBoxes()
@@ -377,6 +389,11 @@ namespace MonCollection
             comboBoxOrigin.Items.Clear();
             foreach (var entry in regionDict)
                 comboBoxOrigin.Items.Add(entry.Key.ToString());
+
+            comboBoxTeraType.InitializeBinding();
+            var types = GameInfo.Strings.types;
+            var tera = Util.GetCBList(types);
+            comboBoxTeraType.DataSource = new BindingSource(tera, null);
         }
 
         private bool OpenPKM(MonData pk)
@@ -498,8 +515,9 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = false;
-                    labelDynamax.Visible = false;
+                    labelGimmick.Visible = false;
                     textBoxDynaLv.Visible = false;
+                    comboBoxTeraType.Visible = false;
                     break;
                 case 2:
                     labelGender.Visible = true;
@@ -515,8 +533,9 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
-                    labelDynamax.Visible = false;
+                    labelGimmick.Visible = false;
                     textBoxDynaLv.Visible = false;
+                    comboBoxTeraType.Visible = false;
                     break;
                 case 3:
                 case 4:
@@ -534,8 +553,9 @@ namespace MonCollection
                     labelLanguage.Visible = false;
                     comboBoxLanguage.Visible = false;
                     comboBoxPkrs.Visible = true;
-                    labelDynamax.Visible = false;
+                    labelGimmick.Visible = false;
                     textBoxDynaLv.Visible = false;
+                    comboBoxTeraType.Visible = false;
                     break;
                 case 6:
                 case 7:
@@ -552,8 +572,9 @@ namespace MonCollection
                     labelLanguage.Visible = true;
                     comboBoxLanguage.Visible = true;
                     comboBoxPkrs.Visible = true;
-                    labelDynamax.Visible = false;
+                    labelGimmick.Visible = false;
                     textBoxDynaLv.Visible = false;
+                    comboBoxTeraType.Visible = false;
                     break;
                 case 8:
                     labelGender.Visible = true;
@@ -580,14 +601,16 @@ namespace MonCollection
                     if (pk.Game.Contains("Sword") ||
                         pk.Game.Contains("Shield"))
                     {
-                        labelDynamax.Visible = true;
+                        labelGimmick.Visible = true;
+                        labelGimmick.Text = "Dynamax:";
                         textBoxDynaLv.Visible = true;
                     }
                     else
                     {
-                        labelDynamax.Visible = false;
+                        labelGimmick.Visible = false;
                         textBoxDynaLv.Visible = false;
                     }
+                    comboBoxTeraType.Visible = false;
                     break;
                 case 9:
                     labelGender.Visible = true;
@@ -606,12 +629,16 @@ namespace MonCollection
                         pk.Game.Contains("Violet"))
                     {
                         comboBoxPkrs.Visible = false;
+                        labelGimmick.Visible = true;
+                        labelGimmick.Text = "Tera Type:";
+                        comboBoxTeraType.Visible = true;
                     }
                     else
                     {
                         comboBoxPkrs.Visible = true;
+                        labelGimmick.Visible = false;
+                        comboBoxTeraType.Visible = false;
                     }
-                    labelDynamax.Visible = false;
                     textBoxDynaLv.Visible = false;
                     break;
             }
@@ -788,6 +815,8 @@ namespace MonCollection
                 pictureBoxAlpha.Image = RetrieveImage("Resources/img/alpha.png");
             else
                 pictureBoxAlpha.Image = null;
+            var types = GameInfo.Strings.types;
+            comboBoxTeraType.Text = types[pk.teraType];
             if (pk.Species != 869)
             {
                 var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, (EntityContext)pk.Gen);
@@ -968,6 +997,11 @@ namespace MonCollection
                     break;
                 case GameVersion.PLA:
                     game = "pla";
+                    ext = ".png";
+                    break;
+                case GameVersion.SL:
+                case GameVersion.VL:
+                    game = "sv";
                     ext = ".png";
                     break;
                 case GameVersion.HOME:
@@ -1650,7 +1684,7 @@ namespace MonCollection
             mon.Level = int.Parse(textBoxLevel.Text);
             mon.Gender = (int)labelGender.Tag;
             if (comboBoxSpecies.SelectedValue != null)
-                mon.Species = (ushort)comboBoxSpecies.SelectedValue;
+                mon.Species = (ushort)((int)comboBoxSpecies.SelectedValue);
             if(comboBoxForm.Visible == true)
                 mon.AltForm = (byte)comboBoxForm.SelectedIndex;
             if(comboBoxAbility.SelectedValue != null)
@@ -1674,6 +1708,8 @@ namespace MonCollection
             mon.dynaLevel = int.Parse(textBoxDynaLv.Text);
             mon.gMax = (pictureBoxGMax.Image != null);
             mon.alpha = (pictureBoxAlpha.Image != null);
+            if (comboBoxTeraType.SelectedValue != null)
+                mon.teraType = (byte)((int)comboBoxTeraType.SelectedValue);
             if (comboBoxBalls.SelectedValue != null)
                 mon.Ball = (int)comboBoxBalls.SelectedValue;
             if (comboBoxLanguage.SelectedValue != null)

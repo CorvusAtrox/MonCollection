@@ -17,7 +17,6 @@ namespace MonCollection
         private string game;
         private string origin;
         private readonly LegalMoveSource<ComboItem> LegalMoveSource = new(new LegalMoveComboSource());
-        private LegalityAnalysis Legality = null!;
         private List<ComboBox> moveBoxes;
         private int[] majorGenderDiff;
         private int[] noDiff;

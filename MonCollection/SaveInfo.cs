@@ -79,7 +79,15 @@ namespace MonCollection
                 case GameVersion.SW:
                 case GameVersion.SH:
                 case GameVersion.SWSH:
+                case GameVersion.BD:
+                case GameVersion.SP:
+                case GameVersion.BDSP:
+                case GameVersion.PLA:
                     return 8;
+                case GameVersion.SL:
+                case GameVersion.VL:
+                case GameVersion.SV:
+                    return 9;
                 default:
                     return 8;
             }
