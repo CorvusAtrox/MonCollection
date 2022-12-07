@@ -49,7 +49,7 @@ namespace MonCollection
         private const int RES_MIN = 6;
         private int maxIndex = 0;
 
-        private const int numPokemon = 905;
+        private const int numPokemon = 1008;
 
         private enum Dexes
         {
@@ -223,7 +223,7 @@ namespace MonCollection
             };
             paldeanEvo = new Dictionary<(ushort, byte), byte>()
             {
-                {(1009, 0), 1}
+                {(980, 0), 1}
             };
             languages = new string[] { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2" };
 

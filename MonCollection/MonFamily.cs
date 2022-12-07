@@ -47,7 +47,7 @@ namespace MonCollection
             families.Add(new ushort[] { 50, 51 }); // Diglett
             families.Add(new ushort[] { 52, 53, 863 }); // Meowth
             families.Add(new ushort[] { 54, 55 }); // Psyduck
-            families.Add(new ushort[] { 56, 57, 1010 }); // Mankey
+            families.Add(new ushort[] { 56, 57, 979 }); // Mankey
             families.Add(new ushort[] { 58, 59 }); // Growlithe
             families.Add(new ushort[] { 60, 61, 62, 186 }); // Poliwag
             families.Add(new ushort[] { 63, 64, 65 }); // Abra
@@ -119,14 +119,14 @@ namespace MonCollection
             families.Add(new ushort[] { 190, 424 }); // Aipom
             families.Add(new ushort[] { 191, 192 }); // Sunkern
             families.Add(new ushort[] { 193, 469 }); // Yanma
-            families.Add(new ushort[] { 194, 195, 1009 }); // Wooper
+            families.Add(new ushort[] { 194, 195, 980 }); // Wooper
             families.Add(new ushort[] { 198, 430 }); // Murkrow
             families.Add(new ushort[] { 200, 429 }); // Misdreavus
             families.Add(new ushort[] { 201 }); // Unown
             families.Add(new ushort[] { 360, 202 }); // Wynaut
-            families.Add(new ushort[] { 203, 928 }); // Girafarig
+            families.Add(new ushort[] { 203, 981 }); // Girafarig
             families.Add(new ushort[] { 204, 205 }); // Pineco
-            families.Add(new ushort[] { 206, 917 }); // Dunsparce
+            families.Add(new ushort[] { 206, 982 }); // Dunsparce
             families.Add(new ushort[] { 207, 472 }); // Gligar
             families.Add(new ushort[] { 209, 210 }); // Snubbull
             families.Add(new ushort[] { 211, 904 }); // Qwilfish
@@ -331,7 +331,7 @@ namespace MonCollection
             families.Add(new ushort[] { 619, 620 }); // Mienfoo
             families.Add(new ushort[] { 621 }); // Druddigon
             families.Add(new ushort[] { 622, 623 }); // Golett
-            families.Add(new ushort[] { 624, 625, 1008 }); // Pawniard
+            families.Add(new ushort[] { 624, 625, 983 }); // Pawniard
             families.Add(new ushort[] { 626 }); // Bouffalant
             families.Add(new ushort[] { 627, 628 }); // Rufflet
             families.Add(new ushort[] { 629, 630 }); // Vullaby
@@ -495,61 +495,61 @@ namespace MonCollection
             families.Add(new ushort[] { 909, 910, 911 }); // Fuecoco
             families.Add(new ushort[] { 912, 913, 914 }); // Quaxly
             families.Add(new ushort[] { 915, 916 }); // Lechonk
-            families.Add(new ushort[] { 918, 919 }); // Tarountula
-            families.Add(new ushort[] { 920, 921 }); // Nymble
-            families.Add(new ushort[] { 922, 923 }); // Rellor
-            families.Add(new ushort[] { 924, 925 }); // Greavard
-            families.Add(new ushort[] { 926, 927 }); // Flittle
-            families.Add(new ushort[] { 929, 930 }); // Wiglett
-            families.Add(new ushort[] { 931 }); // Dodonzo
-            families.Add(new ushort[] { 932 }); // Veluza
-            families.Add(new ushort[] { 933, 934 }); // Finizen
-            families.Add(new ushort[] { 935, 936, 937 }); // Smoliv
-            families.Add(new ushort[] { 938, 939 }); // Capsakid
-            families.Add(new ushort[] { 940, 941 }); // Tadbulb
-            families.Add(new ushort[] { 942, 943 }); // Varoom
-            families.Add(new ushort[] { 944 }); // Orthworm
-            families.Add(new ushort[] { 945, 946 }); // Tandemaus
-            families.Add(new ushort[] { 947, 948 }); // Cetoddle
-            families.Add(new ushort[] { 949, 950, 951}); // Frigibax
-            families.Add(new ushort[] { 952 }); // Tatsugiri
-            families.Add(new ushort[] { 953 }); // Cyclizar
-            families.Add(new ushort[] { 954, 955, 956 }); // Pawmi
-            families.Add(new ushort[] { 957, 958 }); // Wattrel
-            families.Add(new ushort[] { 959 }); // Bombirdier
-            families.Add(new ushort[] { 960 }); // Squawkabilly
-            families.Add(new ushort[] { 961 }); // Flamigo
-            families.Add(new ushort[] { 962 }); // Klawf
-            families.Add(new ushort[] { 963, 964, 965 }); // Nacli
-            families.Add(new ushort[] { 966, 967 }); // Glimmet
-            families.Add(new ushort[] { 968, 969 }); // Shroodle
-            families.Add(new ushort[] { 970, 971 }); // Fidough
-            families.Add(new ushort[] { 972, 973 }); // Maschiff
-            families.Add(new ushort[] { 974, 975 }); // Bramblin
-            families.Add(new ushort[] { 976, 977 }); // Gimmighoul
-            families.Add(new ushort[] { 978 }); // Great Tusk
-            families.Add(new ushort[] { 979 }); // Brute Bonnet
-            families.Add(new ushort[] { 981 }); // Sandy Shocks
-            families.Add(new ushort[] { 982 }); // Scream Tail
-            families.Add(new ushort[] { 983 }); // Flutter Mane
-            families.Add(new ushort[] { 984 }); // Slither Wing
-            families.Add(new ushort[] { 985 }); // Roaring Moon
-            families.Add(new ushort[] { 986 }); // Iron Treads
-            families.Add(new ushort[] { 988 }); // Iron Moth
-            families.Add(new ushort[] { 989 }); // Iron Hands
-            families.Add(new ushort[] { 990 }); // Iron Jugulis
-            families.Add(new ushort[] { 991 }); // Iron Thorns
-            families.Add(new ushort[] { 992 }); // Iron Bundle
-            families.Add(new ushort[] { 993 }); // Iron Valiant
-            families.Add(new ushort[] { 994 }); // Ting-Lu
-            families.Add(new ushort[] { 995 }); // Chien-Pao
-            families.Add(new ushort[] { 996 }); // Wo-Chien
-            families.Add(new ushort[] { 997 }); // Chi-Yu
-            families.Add(new ushort[] { 998 }); // Koraidon
-            families.Add(new ushort[] { 999 }); // Miraidon
-            families.Add(new ushort[] { 1000, 1001, 1002 }); // Tinkatink
-            families.Add(new ushort[] { 1003, 1004, 1005 }); // Charcadet
-            families.Add(new ushort[] { 1006, 1007 }); // Toedscool
+            families.Add(new ushort[] { 917, 918 }); // Tarountula
+            families.Add(new ushort[] { 919, 920 }); // Nymble
+            families.Add(new ushort[] { 921, 922, 923 }); // Pawmi
+            families.Add(new ushort[] { 924, 925 }); // Tandemaus
+            families.Add(new ushort[] { 926, 927 }); // Fidough
+            families.Add(new ushort[] { 928, 929, 930 }); // Smoliv
+            families.Add(new ushort[] { 931 }); // Squawkabilly
+            families.Add(new ushort[] { 932, 933, 934 }); // Nacli
+            families.Add(new ushort[] { 935, 936, 937 }); // Charcadet
+            families.Add(new ushort[] { 938, 939 }); // Tadbulb
+            families.Add(new ushort[] { 940, 941 }); // Wattrel
+            families.Add(new ushort[] { 942, 943 }); // Maschiff
+            families.Add(new ushort[] { 944, 945 }); // Shroodle
+            families.Add(new ushort[] { 946, 947 }); // Bramblin
+            families.Add(new ushort[] { 948, 949 }); // Toedscool
+            families.Add(new ushort[] { 950 }); // Klawf
+            families.Add(new ushort[] { 951, 952 }); // Capsakid
+            families.Add(new ushort[] { 953, 954 }); // Rellor
+            families.Add(new ushort[] { 955, 956 }); // Flittle
+            families.Add(new ushort[] { 957, 958, 959 }); // Tinkatink
+            families.Add(new ushort[] { 960, 961 }); // Wiglett
+            families.Add(new ushort[] { 962 }); // Bombirdier
+            families.Add(new ushort[] { 963, 964 }); // Finizen
+            families.Add(new ushort[] { 965, 966 }); // Varoom
+            families.Add(new ushort[] { 967 }); // Cyclizar
+            families.Add(new ushort[] { 968 }); // Orthworm
+            families.Add(new ushort[] { 969, 970 }); // Glimmet
+            families.Add(new ushort[] { 971, 972 }); // Greavard
+            families.Add(new ushort[] { 973 }); // Flamigo
+            families.Add(new ushort[] { 974, 975 }); // Cetoddle
+            families.Add(new ushort[] { 976 }); // Veluza
+            families.Add(new ushort[] { 977 }); // Dodonzo
+            families.Add(new ushort[] { 978 }); // Tatsugiri
+            families.Add(new ushort[] { 984 }); // Great Tusk
+            families.Add(new ushort[] { 985 }); // Scream Tail
+            families.Add(new ushort[] { 986 }); // Brute Bonnet
+            families.Add(new ushort[] { 987 }); // Flutter Mane
+            families.Add(new ushort[] { 988 }); // Slither Wing
+            families.Add(new ushort[] { 989 }); // Sandy Shocks
+            families.Add(new ushort[] { 990 }); // Iron Treads
+            families.Add(new ushort[] { 991 }); // Iron Bundle
+            families.Add(new ushort[] { 992 }); // Iron Hands
+            families.Add(new ushort[] { 993 }); // Iron Jugulis
+            families.Add(new ushort[] { 994 }); // Iron Moth
+            families.Add(new ushort[] { 995 }); // Iron Thorns
+            families.Add(new ushort[] { 996, 997, 998 }); // Frigibax
+            families.Add(new ushort[] { 999, 1000 }); // Gimmighoul
+            families.Add(new ushort[] { 1001 }); // Wo-Chien
+            families.Add(new ushort[] { 1002 }); // Chien-Pao
+            families.Add(new ushort[] { 1003 }); // Ting-Lu
+            families.Add(new ushort[] { 1004 }); // Chi-Yu
+            families.Add(new ushort[] { 1005 }); // Roaring Moon
+            families.Add(new ushort[] { 1006 }); // Iron Valiant
+            families.Add(new ushort[] { 1007 }); // Koraidon
+            families.Add(new ushort[] { 1008 }); // Miraidon
         }
     }
 }
