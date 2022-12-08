@@ -653,7 +653,7 @@ namespace MonCollection
 
             textBoxNickname.Text = pk.Nickname;
             comboBoxBalls.SelectedValue = pk.Ball;
-            comboBoxSpecies.Text = PkmListSorted[pk.Species].Text;
+            comboBoxSpecies.Text = PkmListSorted[nationalToSv(pk.Species)].Text;
             comboBoxLanguage.SelectedValue = pk.Language;
             comboBoxAbility.SelectedValue = pk.Ability;
             comboBoxNature.SelectedValue = pk.Nature;
@@ -819,7 +819,7 @@ namespace MonCollection
             comboBoxTeraType.Text = types[pk.teraType];
             if (pk.Species != 869)
             {
-                var ds = FormConverter.GetFormList(pk.Species, GameInfo.Strings.types, GameInfo.Strings.forms, genders, (EntityContext)pk.Gen);
+                var ds = FormConverter.GetFormList((ushort)nationalToSv(pk.Species), GameInfo.Strings.types, GameInfo.Strings.forms, genders, (EntityContext)pk.Gen);
                 comboBoxForm.DataSource = ds;
             } else
             {
@@ -851,6 +851,11 @@ namespace MonCollection
             else if (hisuianEvo.ContainsKey((pk.Species, pk.AltForm)))
             {
                 pk.AltForm = hisuianEvo[(pk.Species, pk.AltForm)];
+                comboBoxForm.SelectedIndex = pk.AltForm;
+            }
+            else if (paldeanEvo.ContainsKey((pk.Species, pk.AltForm)))
+            {
+                pk.AltForm = paldeanEvo[(pk.Species, pk.AltForm)];
                 comboBoxForm.SelectedIndex = pk.AltForm;
             }
             else
@@ -1684,10 +1689,10 @@ namespace MonCollection
             mon.Level = int.Parse(textBoxLevel.Text);
             mon.Gender = (int)labelGender.Tag;
             if (comboBoxSpecies.SelectedValue != null)
-                mon.Species = (ushort)((int)comboBoxSpecies.SelectedValue);
-            if(comboBoxForm.Visible == true)
+                mon.Species = (ushort)(svToNational((int)comboBoxSpecies.SelectedValue));
+            if (comboBoxForm.Visible == true)
                 mon.AltForm = (byte)comboBoxForm.SelectedIndex;
-            if(comboBoxAbility.SelectedValue != null)
+            if (comboBoxAbility.SelectedValue != null)
                 mon.Ability = (int)comboBoxAbility.SelectedValue;
             mon.Nature = (int)comboBoxNature.SelectedValue;
             mon.Boon = comboBoxPlus.SelectedIndex;
@@ -2063,7 +2068,7 @@ namespace MonCollection
         {
             FormSpeciesInfo form = new FormSpeciesInfo();
 
-            ushort sp = (ushort)((int)comboBoxSpecies.SelectedValue);
+            ushort sp = (ushort)(svToNational((int)comboBoxSpecies.SelectedValue));
             int af = comboBoxForm.SelectedIndex;
             int gd = -1;
             if (genderDiff.Contains(sp) && (af == 0 || (af == 1 && sp == 215)))
@@ -2176,7 +2181,7 @@ namespace MonCollection
             FormSpeciesInfo form = new FormSpeciesInfo();
             
             monFamily = new MonFamily();
-            ushort[] family = monFamily.GetFamily((ushort)((int)comboBoxSpecies.SelectedValue));
+            ushort[] family = monFamily.GetFamily((ushort)svToNational((int)comboBoxSpecies.SelectedValue));
             
             if(family[0] == 592)
                 form.spImage = RetrieveImage("Resources/img/icons/592f.png");
@@ -2531,7 +2536,7 @@ namespace MonCollection
 
                 foreach (int r in rnd)
                 {
-                    string spForm = PkmListSorted[transferMons[r].Species].Text;
+                    string spForm = PkmListSorted[nationalToSv(transferMons[r].Species)].Text;
                     if (transferMons[r].AltForm > 0 && !noDiff.Contains(transferMons[r].Species) && transferMons[r].Species != 869)
                         spForm += "-" + transferMons[r].AltForm.ToString();
                     else if (transferMons[r].Species == 869 && transferMons[r].AltForm >= 7)
@@ -2966,6 +2971,49 @@ namespace MonCollection
             else if (PkmData[slotSelected].Species == 869 && PkmData[slotSelected].AltForm >= 7)
                 spForm += "-" + (PkmData[slotSelected].AltForm / 7).ToString();
             MessageBox.Show(String.Format("{0} ({1}, {2}) -> [{3}]", PkmData[slotSelected].Nickname, spForm, PkmData[slotSelected].OT, idealTransfer(PkmData, slotSelected)));
+        }
+
+        public int nationalToSv(int index)
+        {
+            int[] dexNums =
+            {
+                918, 919, 920, 921, 954, 955, 956, 945, 946, 970, 971, 935, 936, 937, 960,
+                963, 964, 965, 1003, 1004, 1005, 940, 941, 957, 958, 972, 973, 968, 969,
+                974, 975, 1006, 1007, 962, 938, 939, 922, 923, 926, 927, 1000, 1001, 1002,
+                929, 930, 959, 933, 934, 942, 943, 953, 944, 966, 967, 924, 925, 961, 947,
+                948, 932, 931, 952, 1010, 1009, 928, 917, 1008, 978, 982, 979, 983, 984,
+                981, 986, 992, 989, 990, 988, 991, 949, 950, 951, 976, 977, 996, 995, 994,
+                997, 985, 993, 998, 999
+            };
+
+            if (index >= 917 && index < 917 + dexNums.Length)
+            {
+                index -= 917;
+                index = dexNums[index];
+            }
+
+            return index;
+        }
+
+        public int svToNational(int index)
+        {
+            int[] dexNums =
+            {
+                982, 917, 918, 919, 920, 953, 954, 971, 972, 955, 956, 981, 960, 961, 977, 976,
+                963, 964, 928, 929, 930, 951, 952, 938, 939, 965, 966, 968, 924, 925, 974, 975,
+                996, 997, 998, 978, 967, 921, 922, 923, 940, 941, 962, 931, 973, 950, 932, 933,
+                934, 969, 970, 944, 945, 926, 927, 942, 943, 946, 947, 999, 1000, 984, 986, 1009,
+                985, 983, 984, 981, 1005, 990, 1010, 994, 992, 993, 995, 991, 1006, 1003, 1002,
+                1001, 1004, 1007, 1008, 957, 958, 959, 935, 936, 937, 948, 949, 983, 980, 979
+            };
+
+            if (index >= 917 && index < 917 + dexNums.Length)
+            {
+                index -= 917;
+                index = dexNums[index];
+            }
+
+            return index;
         }
     }
 }
