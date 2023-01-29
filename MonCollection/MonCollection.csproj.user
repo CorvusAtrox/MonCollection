@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="FormAssignOrigin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormDexOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormEditDexes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormGames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormGameTally.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormLevelRange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormNiqCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormRibbons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormSpeciesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
