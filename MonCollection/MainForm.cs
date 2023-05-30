@@ -47,7 +47,13 @@ namespace MonCollection
         private const int RES_MIN = 6;
         private int maxIndex = 0;
 
-        private const int numPokemon = 1008;
+        private const int numPokemon = 1010;
+
+        private const int SV_PRIORITY = 1;
+        private const int PLA_PRIORITY = 2;
+        private const int SWSH_PRIORITY = 3;
+        private const int LGPE_PRIORITY = 4;
+        private const int BDSP_PRIORITY = 5;
 
         private enum Dexes
         {
@@ -411,7 +417,7 @@ namespace MonCollection
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
                 InitializeStrings("en", GameVersion.VL, "blank");
             else if(info.version == GameVersion.HOME)
-                InitializeStrings(info.language, GameVersion.SWSH, GetTrainer(identifier));
+                InitializeStrings(info.language, GameVersion.SV, GetTrainer(identifier));
             else
                 InitializeStrings(info.language, info.version, GetTrainer(identifier));
 
@@ -2734,11 +2740,10 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 7, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, LGPE_PRIORITY, num));
                     }
                 }
-                else if ((vers == GameVersion.SW || vers == GameVersion.SH) &&
-                         monData[index].lastVersion <= (int)GameVersion.SP)
+                else if ((vers == GameVersion.SW || vers == GameVersion.SH))
                 {
                     if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
@@ -2767,11 +2772,10 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, SWSH_PRIORITY, num));
                     }
                 }
-                else if ((vers == GameVersion.BD || vers == GameVersion.SP) &&
-                         monData[index].lastVersion <= (int)GameVersion.SP)
+                else if ((vers == GameVersion.BD || vers == GameVersion.SP))
                 {
                     if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
@@ -2802,11 +2806,10 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, BDSP_PRIORITY, num));
                     }
                 }
-                else if ((vers == GameVersion.PLA) &&
-                         monData[index].lastVersion <= (int)GameVersion.SP)
+                else if ((vers == GameVersion.PLA))
                 {
                     if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
@@ -2836,7 +2839,36 @@ namespace MonCollection
                                 }
                             }
                         }
-                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, 8, num));
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, PLA_PRIORITY, num));
+                    }
+                }
+                else if ((vers == GameVersion.SL || vers == GameVersion.VL))
+                {
+                    if ((dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(monData[index].Species) ||
+                         dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)))
+                    {
+                        int num = 0;
+                        float spec = 0;
+                        float spform = 0;
+                        foreach (MonData md in monData)
+                        {
+                            if (md.Game == save.Key)
+                            {
+                                num++;
+                                if (md.Species == monData[index].Species)
+                                {
+                                    spec++;
+                                }
+                                if (md.Species == monData[index].Species &&
+                                    (md.AltForm == monData[index].AltForm || noDiff.Contains(md.Species)) &&
+                                    (md.Gender == monData[index].Gender || !genderDiff.Contains(md.Species)) &&
+                                    md.Shiny == monData[index].Shiny)
+                                {
+                                    spform++;
+                                }
+                            }
+                        }
+                        comp.Add(Tuple.Create(save.Key, (spec == 0) ? 0 : spec * (1 + (spform / spec)) / 2, SV_PRIORITY, num));
                     }
                 }
             }
@@ -2865,7 +2897,7 @@ namespace MonCollection
                         }
                         else if (spec == comp[i].Item2)
                         {
-                            if (priority < comp[i].Item3)
+                            if (priority > comp[i].Item3)
                             {
                                 dest = comp[i].Item1;
                                 spec = comp[i].Item2;
@@ -2907,44 +2939,42 @@ namespace MonCollection
 
             foreach (MonData hm in homeMons)
             {
+
+                if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(hm.Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(hm.Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(hm.Species) ||
+                        dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(hm.Species)) &&
+                        !isHisuianForm(hm))
+                {
+                    swsh++;
+                }
+
+                if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(hm.Species) ||
+                        dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(hm.Species)) &&
+                    !isHatPikachu(hm) &&
+                    !isAlolanForm(hm) &&
+                    !isGalarianForm(hm) &&
+                    !isHisuianForm(hm))
+                {
+                    bdsp++;
+                }
+
+                if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(hm.Species) ||
+                        dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(hm.Species)) &&
+                    !isHatPikachu(hm) &&
+                    (!isAlolanForm(hm) || hm.Species == 37 || hm.Species == 38) &&
+                    !isGalarianForm(hm) &&
+                    (isHisuianForm(hm) || !hasHisuianForm(hm) || hm.Species == 215))
+                {
+                    pla++;
+                }
+
                 if (dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(hm.Species) ||
                     dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species))
                 {
                     sv++;
                 }
 
-                if (hm.lastVersion <= (int)GameVersion.SP)
-                {
-                    if ((dexes[(int)Dexes.SwordShieldDex].Dexes["Galar"].Contains(hm.Species) ||
-                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(hm.Species) ||
-                         dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(hm.Species) ||
-                         dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(hm.Species)) &&
-                         !isHisuianForm(hm))
-                    {
-                        swsh++;
-                    }
-
-                    if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(hm.Species) ||
-                         dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(hm.Species)) &&
-                        !isHatPikachu(hm) &&
-                        !isAlolanForm(hm) &&
-                        !isGalarianForm(hm) &&
-                        !isHisuianForm(hm))
-                    {
-                        bdsp++;
-                    }
-
-                    if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(hm.Species) ||
-                         dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(hm.Species)) &&
-                        !isHatPikachu(hm) &&
-                        (!isAlolanForm(hm) || hm.Species == 37 || hm.Species == 38) &&
-                        !isGalarianForm(hm) &&
-                        (isHisuianForm(hm) || !hasHisuianForm(hm) || hm.Species == 215))
-                    {
-                        pla++;
-                    }
-                }
-                
                 if (hm.lastVersion == (int)GameVersion.GP || hm.lastVersion == (int)GameVersion.GE)
                 {
                     if (dexes[(int)Dexes.LetsGoDex].Dexes["Kanto"].Contains(hm.Species) &&

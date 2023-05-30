@@ -11,17 +11,35 @@
     <ApplicationIcon>Cramorant.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\cries\1009.wav" />
+    <None Remove="Resources\cries\1010.wav" />
+    <None Remove="Resources\img\go\rare\676-8.png" />
     <None Remove="Resources\img\home\201-4.png" />
     <None Remove="Resources\img\home\201-9.png" />
     <None Remove="Resources\img\home\802.png" />
+    <None Remove="Resources\img\icons\1009.png" />
+    <None Remove="Resources\img\icons\1010.png" />
+    <None Remove="Resources\img\ribbons\destiny.png" />
+    <None Remove="Resources\img\ribbons\mightiest.png" />
+    <None Remove="Resources\img\sv\1009.png" />
+    <None Remove="Resources\img\sv\1010.png" />
     <None Remove="Resources\img\sv\136.png" />
+    <None Remove="Resources\img\sv\185f.png" />
+    <None Remove="Resources\img\sv\189.png" />
     <None Remove="Resources\img\sv\281.png" />
     <None Remove="Resources\img\sv\286.png" />
     <None Remove="Resources\img\sv\317f.png" />
     <None Remove="Resources\img\sv\372.png" />
+    <None Remove="Resources\img\sv\429.png" />
     <None Remove="Resources\img\sv\437.png" />
     <None Remove="Resources\img\sv\448.png" />
+    <None Remove="Resources\img\sv\658.png" />
     <None Remove="Resources\img\sv\735.png" />
+    <None Remove="Resources\img\sv\769.png" />
+    <None Remove="Resources\img\sv\779.png" />
+    <None Remove="Resources\img\sv\860.png" />
+    <None Remove="Resources\img\sv\931.png" />
+    <None Remove="Resources\img\sv\948.png" />
     <None Remove="Resources\img\sv\949.png" />
     <None Remove="Resources\img\sv\972.png" />
     <None Remove="Resources\img\sv\981.png" />
@@ -96,7 +114,13 @@
     <Content Include="Resources\cries\1008.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\cries\1009.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\cries\101.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1010.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\cries\102.wav">
@@ -8805,6 +8829,9 @@
     <Content Include="Resources\img\go\rare\641-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\go\rare\676-8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\go\rare\75-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -14154,10 +14181,16 @@
     <Content Include="Resources\img\icons\1008.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\icons\1009.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\icons\101-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\icons\101.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\icons\1010.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\icons\102.png">
@@ -19281,6 +19314,9 @@
     <Content Include="Resources\img\ribbons\dawn.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\ribbons\destiny.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\ribbons\downcast.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -19330,6 +19366,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\ribbons\masterRank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\ribbons\mightiest.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\ribbons\misty.png">
@@ -23181,7 +23220,19 @@
     <Content Include="Resources\img\sv\100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\sv\1009.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\1010.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\sv\136.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\185f.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\189.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\sv\225.png">
@@ -23208,6 +23259,9 @@
     <Content Include="Resources\img\sv\373.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\sv\429.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\sv\430.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -23226,6 +23280,9 @@
     <Content Include="Resources\img\sv\49.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\sv\658.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\sv\670-4.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -23233,6 +23290,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\sv\735.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\769.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\779.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\sv\82.png">
@@ -23244,6 +23307,9 @@
     <Content Include="Resources\img\sv\833.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\sv\860.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\sv\870.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -23253,7 +23319,13 @@
     <Content Include="Resources\img\sv\924.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\sv\931.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\sv\945.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\sv\948.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\sv\949.png">
