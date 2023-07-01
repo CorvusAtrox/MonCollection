@@ -2609,6 +2609,16 @@ namespace MonCollection
             return false;
         }
 
+        public bool isPaldeanForm(MonData mon)
+        {
+            if (paldean.ContainsKey(mon.Species))
+            {
+                if (paldean[mon.Species] == mon.AltForm || (mon.Species == 128 && (mon.AltForm >= 1 && mon.AltForm <= 3)))
+                    return true;
+            }
+            return false;
+        }
+
         public bool canTransfer(List<MonData> monData, int index)
         {
             bool t = true;
@@ -2749,7 +2759,8 @@ namespace MonCollection
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
-                        !isHisuianForm(monData[index]))
+                        !isHisuianForm(monData[index]) &&
+                        !isPaldeanForm(monData[index]))
                     {
                         int num = 0;
                         float spec = 0;
@@ -2783,7 +2794,8 @@ namespace MonCollection
                         !isHatPikachu(monData[index]) &&
                         !isAlolanForm(monData[index]) &&
                         !isGalarianForm(monData[index]) &&
-                        !isHisuianForm(monData[index]))
+                        !isHisuianForm(monData[index]) &&
+                        !isPaldeanForm(monData[index]))
                     {
                         int num = 0;
                         float spec = 0;
@@ -2816,7 +2828,8 @@ namespace MonCollection
                         !isHatPikachu(monData[index]) &&
                         (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
                         !isGalarianForm(monData[index]) &&
-                        (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215))
+                        (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215) &&
+                        !isPaldeanForm(monData[index]))
                     {
                         int num = 0;
                         float spec = 0;
