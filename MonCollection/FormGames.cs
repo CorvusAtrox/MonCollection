@@ -39,20 +39,23 @@ namespace MonCollection
                 split = l.Split(',');
                 switch (split.Count())
                 {
+                    case 6:
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[5], split[2], split[3], ind));
+                        break;
                     case 5:
-                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[2], split[3], ind));
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], "", split[2], split[3], ind));
                         break;
                     case 4:
-                        gameDict.Add(split[0], new SaveInfo("en", split[1], split[2], split[3], ind));
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "", split[2], split[3], ind));
                         break;
                     case 3:
-                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "", "0", null, ind));
                         break;
                     case 2:
-                        gameDict.Add(split[0], new SaveInfo("en", split[1], "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "", "0", null, ind));
                         break;
                     default:
-                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", "", null, ind));
                         break;
                 }
                 ind++;
@@ -109,7 +112,7 @@ namespace MonCollection
         private void ButtonAddGame_Click(object sender, EventArgs e)
         {
             string input = Interaction.InputBox("Enter New Game's Title");
-            gameDict.Add(input, new SaveInfo("en", "US", "0", null, gameDict.Count()));
+            gameDict.Add(input, new SaveInfo("en", "US", "0", "", null, gameDict.Count()));
             SetGameOptions();
         }
 
@@ -135,7 +138,7 @@ namespace MonCollection
         {
             gameDict[comboBoxGame.Text] = new SaveInfo(languages[(int)comboBoxLanguage.SelectedValue],
                                                        ((GameVersion)comboBoxVersion.SelectedValue).ToString(),
-                                                       textBoxID.Text, textBoxOT.Text,comboBoxGame.SelectedIndex);
+                                                        "", textBoxID.Text, textBoxOT.Text,comboBoxGame.SelectedIndex);
         }
     }
 }

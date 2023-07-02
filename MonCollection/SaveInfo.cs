@@ -7,15 +7,17 @@ namespace MonCollection
     {
         public string language;
         public GameVersion version;
+        public string dataGroup;
         public int id;
         public string ot;
         public int index;
 
-        public SaveInfo(string l, string v, string d, string o, int i)
+        public SaveInfo(string l, string v, string g, string d, string o, int i)
         {
             language = l;
             Enum.TryParse(v, out GameVersion ver);
             version = ver;
+            dataGroup = g;
             id = int.Parse(d);
             ot = o;
             index = i;

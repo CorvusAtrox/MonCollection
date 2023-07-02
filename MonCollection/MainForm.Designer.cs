@@ -31,2127 +31,2096 @@ namespace MonCollection
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.labelNickname = new System.Windows.Forms.Label();
-            this.labelBall = new System.Windows.Forms.Label();
-            this.comboBoxBalls = new System.Windows.Forms.ComboBox();
-            this.pictureBoxBall = new System.Windows.Forms.PictureBox();
-            this.comboBoxSpecies = new System.Windows.Forms.ComboBox();
-            this.labelSpecies = new System.Windows.Forms.Label();
-            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
-            this.labelLevel = new System.Windows.Forms.Label();
-            this.textBoxLevel = new System.Windows.Forms.TextBox();
-            this.labelGender = new System.Windows.Forms.Label();
-            this.comboBoxLanguage = new System.Windows.Forms.ComboBox();
-            this.labelLanguage = new System.Windows.Forms.Label();
-            this.comboBoxAbility = new System.Windows.Forms.ComboBox();
-            this.labelAbility = new System.Windows.Forms.Label();
-            this.comboBoxNature = new System.Windows.Forms.ComboBox();
-            this.labelNature = new System.Windows.Forms.Label();
-            this.comboBoxMove1 = new System.Windows.Forms.ComboBox();
-            this.labelMoves = new System.Windows.Forms.Label();
-            this.comboBoxMove2 = new System.Windows.Forms.ComboBox();
-            this.comboBoxMove4 = new System.Windows.Forms.ComboBox();
-            this.comboBoxMove3 = new System.Windows.Forms.ComboBox();
-            this.bpkx30 = new System.Windows.Forms.PictureBox();
-            this.SCR_Box = new System.Windows.Forms.VScrollBar();
-            this.bpkx29 = new System.Windows.Forms.PictureBox();
-            this.bpkx28 = new System.Windows.Forms.PictureBox();
-            this.bpkx27 = new System.Windows.Forms.PictureBox();
-            this.bpkx26 = new System.Windows.Forms.PictureBox();
-            this.bpkx25 = new System.Windows.Forms.PictureBox();
-            this.bpkx24 = new System.Windows.Forms.PictureBox();
-            this.bpkx23 = new System.Windows.Forms.PictureBox();
-            this.bpkx22 = new System.Windows.Forms.PictureBox();
-            this.bpkx21 = new System.Windows.Forms.PictureBox();
-            this.bpkx2 = new System.Windows.Forms.PictureBox();
-            this.bpkx20 = new System.Windows.Forms.PictureBox();
-            this.bpkx3 = new System.Windows.Forms.PictureBox();
-            this.bpkx4 = new System.Windows.Forms.PictureBox();
-            this.bpkx19 = new System.Windows.Forms.PictureBox();
-            this.bpkx5 = new System.Windows.Forms.PictureBox();
-            this.bpkx18 = new System.Windows.Forms.PictureBox();
-            this.bpkx6 = new System.Windows.Forms.PictureBox();
-            this.bpkx17 = new System.Windows.Forms.PictureBox();
-            this.bpkx7 = new System.Windows.Forms.PictureBox();
-            this.bpkx8 = new System.Windows.Forms.PictureBox();
-            this.bpkx16 = new System.Windows.Forms.PictureBox();
-            this.bpkx9 = new System.Windows.Forms.PictureBox();
-            this.bpkx15 = new System.Windows.Forms.PictureBox();
-            this.bpkx10 = new System.Windows.Forms.PictureBox();
-            this.bpkx14 = new System.Windows.Forms.PictureBox();
-            this.bpkx11 = new System.Windows.Forms.PictureBox();
-            this.bpkx12 = new System.Windows.Forms.PictureBox();
-            this.bpkx13 = new System.Windows.Forms.PictureBox();
-            this.L_Count = new System.Windows.Forms.Label();
-            this.buttonGameLevelSort = new System.Windows.Forms.Button();
-            this.buttonGameSpeciesSort = new System.Windows.Forms.Button();
-            this.buttonGenSpeciesSort = new System.Windows.Forms.Button();
-            this.pictureBoxGameSprite = new System.Windows.Forms.PictureBox();
-            this.labelHP = new System.Windows.Forms.Label();
-            this.labelAttack = new System.Windows.Forms.Label();
-            this.labelDefense = new System.Windows.Forms.Label();
-            this.labelSpAtk = new System.Windows.Forms.Label();
-            this.labelSpDef = new System.Windows.Forms.Label();
-            this.labelSpeed = new System.Windows.Forms.Label();
-            this.labelOT = new System.Windows.Forms.Label();
-            this.buttonReloadDB = new System.Windows.Forms.Button();
-            this.labelGame = new System.Windows.Forms.Label();
-            this.buttonGameMonTally = new System.Windows.Forms.Button();
-            this.buttonGameTally = new System.Windows.Forms.Button();
-            this.buttonSpeciesSort = new System.Windows.Forms.Button();
-            this.comboBoxForm = new System.Windows.Forms.ComboBox();
-            this.pictureBoxPkrs = new System.Windows.Forms.PictureBox();
-            this.buttonNiqCalc = new System.Windows.Forms.Button();
-            this.buttonOriginSort = new System.Windows.Forms.Button();
-            this.buttonMoveMonTally = new System.Windows.Forms.Button();
-            this.buttonRanMon = new System.Windows.Forms.Button();
-            this.buttonSaveMon = new System.Windows.Forms.Button();
-            this.buttonRevertMon = new System.Windows.Forms.Button();
-            this.textBoxNickname = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gamesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.speciesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.levelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.homeSwShToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBoxHP = new System.Windows.Forms.TextBox();
-            this.textBoxAttack = new System.Windows.Forms.TextBox();
-            this.textBoxDefense = new System.Windows.Forms.TextBox();
-            this.textBoxSpAtk = new System.Windows.Forms.TextBox();
-            this.textBoxSpDef = new System.Windows.Forms.TextBox();
-            this.textBoxSpeed = new System.Windows.Forms.TextBox();
-            this.comboBoxGame = new System.Windows.Forms.ComboBox();
-            this.textBoxOT = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.BTN_Shinytize = new System.Windows.Forms.Button();
-            this.buttonMonBallTally = new System.Windows.Forms.Button();
-            this.comboBoxPkrs = new System.Windows.Forms.ComboBox();
-            this.buttonLevelTally = new System.Windows.Forms.Button();
-            this.comboBoxPlus = new System.Windows.Forms.ComboBox();
-            this.comboBoxMinus = new System.Windows.Forms.ComboBox();
-            this.labelRibbons = new System.Windows.Forms.Label();
-            this.ribbonPic0 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic1 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic2 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic3 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic4 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxGMax = new System.Windows.Forms.PictureBox();
-            this.textBoxDynaLv = new System.Windows.Forms.TextBox();
-            this.labelGimmick = new System.Windows.Forms.Label();
-            this.buttonMonInfo = new System.Windows.Forms.Button();
-            this.ribbonPic9 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic8 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic7 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic6 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic5 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic19 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic18 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic17 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic16 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic15 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic14 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic13 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic12 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic11 = new System.Windows.Forms.PictureBox();
-            this.ribbonPic10 = new System.Windows.Forms.PictureBox();
-            this.buttonLineInfo = new System.Windows.Forms.Button();
-            this.buttonDupCheck = new System.Windows.Forms.Button();
-            this.buttonPkrsCount = new System.Windows.Forms.Button();
-            this.comboBoxOrigin = new System.Windows.Forms.ComboBox();
-            this.labelOrigin = new System.Windows.Forms.Label();
-            this.buttonGameOriginSort = new System.Windows.Forms.Button();
-            this.buttonAssignOrigin = new System.Windows.Forms.Button();
-            this.bpkx1 = new System.Windows.Forms.PictureBox();
-            this.buttonSortOrder = new System.Windows.Forms.Button();
-            this.buttonEditDexes = new System.Windows.Forms.Button();
-            this.buttonOriginTally = new System.Windows.Forms.Button();
-            this.buttonPickTransfers = new System.Windows.Forms.Button();
-            this.pictureBoxAlpha = new System.Windows.Forms.PictureBox();
-            this.buttonIdealTransfer = new System.Windows.Forms.Button();
-            this.comboBoxTeraType = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlpha)).BeginInit();
-            this.SuspendLayout();
+            labelNickname = new Label();
+            labelBall = new Label();
+            comboBoxBalls = new ComboBox();
+            pictureBoxBall = new PictureBox();
+            comboBoxSpecies = new ComboBox();
+            labelSpecies = new Label();
+            pictureBoxIcon = new PictureBox();
+            labelLevel = new Label();
+            textBoxLevel = new TextBox();
+            labelGender = new Label();
+            comboBoxLanguage = new ComboBox();
+            labelLanguage = new Label();
+            comboBoxAbility = new ComboBox();
+            labelAbility = new Label();
+            comboBoxNature = new ComboBox();
+            labelNature = new Label();
+            comboBoxMove1 = new ComboBox();
+            labelMoves = new Label();
+            comboBoxMove2 = new ComboBox();
+            comboBoxMove4 = new ComboBox();
+            comboBoxMove3 = new ComboBox();
+            bpkx30 = new PictureBox();
+            SCR_Box = new VScrollBar();
+            bpkx29 = new PictureBox();
+            bpkx28 = new PictureBox();
+            bpkx27 = new PictureBox();
+            bpkx26 = new PictureBox();
+            bpkx25 = new PictureBox();
+            bpkx24 = new PictureBox();
+            bpkx23 = new PictureBox();
+            bpkx22 = new PictureBox();
+            bpkx21 = new PictureBox();
+            bpkx2 = new PictureBox();
+            bpkx20 = new PictureBox();
+            bpkx3 = new PictureBox();
+            bpkx4 = new PictureBox();
+            bpkx19 = new PictureBox();
+            bpkx5 = new PictureBox();
+            bpkx18 = new PictureBox();
+            bpkx6 = new PictureBox();
+            bpkx17 = new PictureBox();
+            bpkx7 = new PictureBox();
+            bpkx8 = new PictureBox();
+            bpkx16 = new PictureBox();
+            bpkx9 = new PictureBox();
+            bpkx15 = new PictureBox();
+            bpkx10 = new PictureBox();
+            bpkx14 = new PictureBox();
+            bpkx11 = new PictureBox();
+            bpkx12 = new PictureBox();
+            bpkx13 = new PictureBox();
+            L_Count = new Label();
+            buttonGameLevelSort = new Button();
+            buttonGameSpeciesSort = new Button();
+            buttonGenSpeciesSort = new Button();
+            pictureBoxGameSprite = new PictureBox();
+            labelHP = new Label();
+            labelAttack = new Label();
+            labelDefense = new Label();
+            labelSpAtk = new Label();
+            labelSpDef = new Label();
+            labelSpeed = new Label();
+            labelOT = new Label();
+            buttonReloadDB = new Button();
+            labelGame = new Label();
+            buttonGameMonTally = new Button();
+            buttonGameTally = new Button();
+            buttonSpeciesSort = new Button();
+            comboBoxForm = new ComboBox();
+            pictureBoxPkrs = new PictureBox();
+            buttonNiqCalc = new Button();
+            buttonOriginSort = new Button();
+            buttonMoveMonTally = new Button();
+            buttonRanMon = new Button();
+            buttonSaveMon = new Button();
+            buttonRevertMon = new Button();
+            textBoxNickname = new TextBox();
+            menuStrip1 = new MenuStrip();
+            dataToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            importToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            gamesToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            filterToolStripMenuItem = new ToolStripMenuItem();
+            gameToolStripMenuItem = new ToolStripMenuItem();
+            originToolStripMenuItem = new ToolStripMenuItem();
+            speciesToolStripMenuItem = new ToolStripMenuItem();
+            levelToolStripMenuItem = new ToolStripMenuItem();
+            presetsToolStripMenuItem = new ToolStripMenuItem();
+            homeSwShToolStripMenuItem = new ToolStripMenuItem();
+            textBoxHP = new TextBox();
+            textBoxAttack = new TextBox();
+            textBoxDefense = new TextBox();
+            textBoxSpAtk = new TextBox();
+            textBoxSpDef = new TextBox();
+            textBoxSpeed = new TextBox();
+            comboBoxGame = new ComboBox();
+            textBoxOT = new TextBox();
+            labelID = new Label();
+            textBoxID = new TextBox();
+            BTN_Shinytize = new Button();
+            buttonMonBallTally = new Button();
+            comboBoxPkrs = new ComboBox();
+            buttonLevelTally = new Button();
+            comboBoxPlus = new ComboBox();
+            comboBoxMinus = new ComboBox();
+            labelRibbons = new Label();
+            ribbonPic0 = new PictureBox();
+            ribbonPic1 = new PictureBox();
+            ribbonPic2 = new PictureBox();
+            ribbonPic3 = new PictureBox();
+            ribbonPic4 = new PictureBox();
+            pictureBoxGMax = new PictureBox();
+            textBoxDynaLv = new TextBox();
+            labelGimmick = new Label();
+            buttonMonInfo = new Button();
+            ribbonPic9 = new PictureBox();
+            ribbonPic8 = new PictureBox();
+            ribbonPic7 = new PictureBox();
+            ribbonPic6 = new PictureBox();
+            ribbonPic5 = new PictureBox();
+            ribbonPic19 = new PictureBox();
+            ribbonPic18 = new PictureBox();
+            ribbonPic17 = new PictureBox();
+            ribbonPic16 = new PictureBox();
+            ribbonPic15 = new PictureBox();
+            ribbonPic14 = new PictureBox();
+            ribbonPic13 = new PictureBox();
+            ribbonPic12 = new PictureBox();
+            ribbonPic11 = new PictureBox();
+            ribbonPic10 = new PictureBox();
+            buttonLineInfo = new Button();
+            buttonDupCheck = new Button();
+            buttonPkrsCount = new Button();
+            comboBoxOrigin = new ComboBox();
+            labelOrigin = new Label();
+            buttonGameOriginSort = new Button();
+            buttonAssignOrigin = new Button();
+            bpkx1 = new PictureBox();
+            buttonSortOrder = new Button();
+            buttonEditDexes = new Button();
+            buttonOriginTally = new Button();
+            buttonPickTransfers = new Button();
+            pictureBoxAlpha = new PictureBox();
+            buttonIdealTransfer = new Button();
+            comboBoxTeraType = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBall).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx30).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx29).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx28).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx27).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx26).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx25).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx24).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx23).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx22).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx21).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx20).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGameSprite).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPkrs).BeginInit();
+            menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic0).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGMax).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAlpha).BeginInit();
+            SuspendLayout();
             // 
             // labelNickname
             // 
-            this.labelNickname.AutoSize = true;
-            this.labelNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNickname.ForeColor = System.Drawing.Color.White;
-            this.labelNickname.Location = new System.Drawing.Point(206, 43);
-            this.labelNickname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelNickname.Name = "labelNickname";
-            this.labelNickname.Size = new System.Drawing.Size(43, 13);
-            this.labelNickname.TabIndex = 0;
-            this.labelNickname.Text = "Name:";
+            labelNickname.AutoSize = true;
+            labelNickname.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelNickname.ForeColor = System.Drawing.Color.White;
+            labelNickname.Location = new System.Drawing.Point(235, 57);
+            labelNickname.Margin = new Padding(5, 0, 5, 0);
+            labelNickname.Name = "labelNickname";
+            labelNickname.Size = new System.Drawing.Size(54, 17);
+            labelNickname.TabIndex = 0;
+            labelNickname.Text = "Name:";
             // 
             // labelBall
             // 
-            this.labelBall.AutoSize = true;
-            this.labelBall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelBall.ForeColor = System.Drawing.Color.White;
-            this.labelBall.Location = new System.Drawing.Point(36, 43);
-            this.labelBall.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelBall.Name = "labelBall";
-            this.labelBall.Size = new System.Drawing.Size(32, 13);
-            this.labelBall.TabIndex = 4;
-            this.labelBall.Text = "Ball:";
+            labelBall.AutoSize = true;
+            labelBall.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelBall.ForeColor = System.Drawing.Color.White;
+            labelBall.Location = new System.Drawing.Point(41, 57);
+            labelBall.Margin = new Padding(5, 0, 5, 0);
+            labelBall.Name = "labelBall";
+            labelBall.Size = new System.Drawing.Size(40, 17);
+            labelBall.TabIndex = 4;
+            labelBall.Text = "Ball:";
             // 
             // comboBoxBalls
             // 
-            this.comboBoxBalls.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxBalls.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxBalls.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.comboBoxBalls.ForeColor = System.Drawing.Color.White;
-            this.comboBoxBalls.FormattingEnabled = true;
-            this.comboBoxBalls.Location = new System.Drawing.Point(77, 39);
-            this.comboBoxBalls.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxBalls.Name = "comboBoxBalls";
-            this.comboBoxBalls.Size = new System.Drawing.Size(120, 23);
-            this.comboBoxBalls.TabIndex = 5;
+            comboBoxBalls.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxBalls.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxBalls.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            comboBoxBalls.ForeColor = System.Drawing.Color.White;
+            comboBoxBalls.FormattingEnabled = true;
+            comboBoxBalls.Location = new System.Drawing.Point(88, 52);
+            comboBoxBalls.Margin = new Padding(0);
+            comboBoxBalls.Name = "comboBoxBalls";
+            comboBoxBalls.Size = new System.Drawing.Size(137, 28);
+            comboBoxBalls.TabIndex = 5;
             // 
             // pictureBoxBall
             // 
-            this.pictureBoxBall.Location = new System.Drawing.Point(1, 35);
-            this.pictureBoxBall.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxBall.Name = "pictureBoxBall";
-            this.pictureBoxBall.Size = new System.Drawing.Size(32, 31);
-            this.pictureBoxBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxBall.TabIndex = 6;
-            this.pictureBoxBall.TabStop = false;
+            pictureBoxBall.Location = new System.Drawing.Point(1, 47);
+            pictureBoxBall.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxBall.Name = "pictureBoxBall";
+            pictureBoxBall.Size = new System.Drawing.Size(32, 31);
+            pictureBoxBall.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxBall.TabIndex = 6;
+            pictureBoxBall.TabStop = false;
             // 
             // comboBoxSpecies
             // 
-            this.comboBoxSpecies.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxSpecies.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxSpecies.FormattingEnabled = true;
-            this.comboBoxSpecies.Location = new System.Drawing.Point(157, 111);
-            this.comboBoxSpecies.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxSpecies.Name = "comboBoxSpecies";
-            this.comboBoxSpecies.Size = new System.Drawing.Size(134, 23);
-            this.comboBoxSpecies.TabIndex = 10;
+            comboBoxSpecies.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxSpecies.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxSpecies.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxSpecies.ForeColor = System.Drawing.Color.Black;
+            comboBoxSpecies.FormattingEnabled = true;
+            comboBoxSpecies.Location = new System.Drawing.Point(179, 148);
+            comboBoxSpecies.Margin = new Padding(0);
+            comboBoxSpecies.Name = "comboBoxSpecies";
+            comboBoxSpecies.Size = new System.Drawing.Size(153, 28);
+            comboBoxSpecies.TabIndex = 10;
             // 
             // labelSpecies
             // 
-            this.labelSpecies.AutoSize = true;
-            this.labelSpecies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSpecies.ForeColor = System.Drawing.Color.Black;
-            this.labelSpecies.Location = new System.Drawing.Point(88, 114);
-            this.labelSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSpecies.Name = "labelSpecies";
-            this.labelSpecies.Size = new System.Drawing.Size(56, 13);
-            this.labelSpecies.TabIndex = 7;
-            this.labelSpecies.Text = "Species:";
+            labelSpecies.AutoSize = true;
+            labelSpecies.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpecies.ForeColor = System.Drawing.Color.Black;
+            labelSpecies.Location = new System.Drawing.Point(101, 152);
+            labelSpecies.Margin = new Padding(5, 0, 5, 0);
+            labelSpecies.Name = "labelSpecies";
+            labelSpecies.Size = new System.Drawing.Size(70, 17);
+            labelSpecies.TabIndex = 7;
+            labelSpecies.Text = "Species:";
             // 
             // pictureBoxIcon
             // 
-            this.pictureBoxIcon.Location = new System.Drawing.Point(1, 71);
-            this.pictureBoxIcon.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxIcon.Name = "pictureBoxIcon";
-            this.pictureBoxIcon.Size = new System.Drawing.Size(80, 65);
-            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxIcon.TabIndex = 9;
-            this.pictureBoxIcon.TabStop = false;
+            pictureBoxIcon.Location = new System.Drawing.Point(1, 95);
+            pictureBoxIcon.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxIcon.Name = "pictureBoxIcon";
+            pictureBoxIcon.Size = new System.Drawing.Size(91, 87);
+            pictureBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBoxIcon.TabIndex = 9;
+            pictureBoxIcon.TabStop = false;
             // 
             // labelLevel
             // 
-            this.labelLevel.AutoSize = true;
-            this.labelLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelLevel.ForeColor = System.Drawing.Color.White;
-            this.labelLevel.Location = new System.Drawing.Point(368, 43);
-            this.labelLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLevel.Name = "labelLevel";
-            this.labelLevel.Size = new System.Drawing.Size(25, 13);
-            this.labelLevel.TabIndex = 10;
-            this.labelLevel.Text = "Lv:";
+            labelLevel.AutoSize = true;
+            labelLevel.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelLevel.ForeColor = System.Drawing.Color.White;
+            labelLevel.Location = new System.Drawing.Point(421, 57);
+            labelLevel.Margin = new Padding(5, 0, 5, 0);
+            labelLevel.Name = "labelLevel";
+            labelLevel.Size = new System.Drawing.Size(30, 17);
+            labelLevel.TabIndex = 10;
+            labelLevel.Text = "Lv:";
             // 
             // textBoxLevel
             // 
-            this.textBoxLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.textBoxLevel.ForeColor = System.Drawing.Color.White;
-            this.textBoxLevel.Location = new System.Drawing.Point(405, 39);
-            this.textBoxLevel.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxLevel.Name = "textBoxLevel";
-            this.textBoxLevel.Size = new System.Drawing.Size(28, 23);
-            this.textBoxLevel.TabIndex = 9;
-            this.textBoxLevel.TextChanged += new System.EventHandler(this.TextBoxLevel_TextChanged);
+            textBoxLevel.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            textBoxLevel.ForeColor = System.Drawing.Color.White;
+            textBoxLevel.Location = new System.Drawing.Point(463, 52);
+            textBoxLevel.Margin = new Padding(5, 5, 5, 5);
+            textBoxLevel.Name = "textBoxLevel";
+            textBoxLevel.Size = new System.Drawing.Size(31, 27);
+            textBoxLevel.TabIndex = 9;
+            textBoxLevel.TextChanged += TextBoxLevel_TextChanged;
             // 
             // labelGender
             // 
-            this.labelGender.AutoSize = true;
-            this.labelGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelGender.ForeColor = System.Drawing.Color.White;
-            this.labelGender.Location = new System.Drawing.Point(441, 43);
-            this.labelGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(10, 13);
-            this.labelGender.TabIndex = 12;
-            this.labelGender.Text = "-";
-            this.labelGender.Click += new System.EventHandler(this.LabelGender_Click);
+            labelGender.AutoSize = true;
+            labelGender.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelGender.ForeColor = System.Drawing.Color.White;
+            labelGender.Location = new System.Drawing.Point(504, 57);
+            labelGender.Margin = new Padding(5, 0, 5, 0);
+            labelGender.Name = "labelGender";
+            labelGender.Size = new System.Drawing.Size(13, 17);
+            labelGender.TabIndex = 12;
+            labelGender.Text = "-";
+            labelGender.Click += LabelGender_Click;
             // 
             // comboBoxLanguage
             // 
-            this.comboBoxLanguage.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxLanguage.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.comboBoxLanguage.ForeColor = System.Drawing.Color.White;
-            this.comboBoxLanguage.FormattingEnabled = true;
-            this.comboBoxLanguage.Location = new System.Drawing.Point(545, 38);
-            this.comboBoxLanguage.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxLanguage.Name = "comboBoxLanguage";
-            this.comboBoxLanguage.Size = new System.Drawing.Size(115, 23);
-            this.comboBoxLanguage.TabIndex = 14;
+            comboBoxLanguage.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxLanguage.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxLanguage.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            comboBoxLanguage.ForeColor = System.Drawing.Color.White;
+            comboBoxLanguage.FormattingEnabled = true;
+            comboBoxLanguage.Location = new System.Drawing.Point(623, 51);
+            comboBoxLanguage.Margin = new Padding(0);
+            comboBoxLanguage.Name = "comboBoxLanguage";
+            comboBoxLanguage.Size = new System.Drawing.Size(131, 28);
+            comboBoxLanguage.TabIndex = 14;
             // 
             // labelLanguage
             // 
-            this.labelLanguage.AutoSize = true;
-            this.labelLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelLanguage.ForeColor = System.Drawing.Color.White;
-            this.labelLanguage.Location = new System.Drawing.Point(463, 43);
-            this.labelLanguage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelLanguage.Name = "labelLanguage";
-            this.labelLanguage.Size = new System.Drawing.Size(67, 13);
-            this.labelLanguage.TabIndex = 13;
-            this.labelLanguage.Text = "Language:";
+            labelLanguage.AutoSize = true;
+            labelLanguage.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelLanguage.ForeColor = System.Drawing.Color.White;
+            labelLanguage.Location = new System.Drawing.Point(529, 57);
+            labelLanguage.Margin = new Padding(5, 0, 5, 0);
+            labelLanguage.Name = "labelLanguage";
+            labelLanguage.Size = new System.Drawing.Size(85, 17);
+            labelLanguage.TabIndex = 13;
+            labelLanguage.Text = "Language:";
             // 
             // comboBoxAbility
             // 
-            this.comboBoxAbility.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxAbility.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxAbility.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxAbility.FormattingEnabled = true;
-            this.comboBoxAbility.Location = new System.Drawing.Point(64, 140);
-            this.comboBoxAbility.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxAbility.Name = "comboBoxAbility";
-            this.comboBoxAbility.Size = new System.Drawing.Size(134, 23);
-            this.comboBoxAbility.TabIndex = 16;
+            comboBoxAbility.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxAbility.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxAbility.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxAbility.ForeColor = System.Drawing.Color.Black;
+            comboBoxAbility.FormattingEnabled = true;
+            comboBoxAbility.Location = new System.Drawing.Point(73, 187);
+            comboBoxAbility.Margin = new Padding(0);
+            comboBoxAbility.Name = "comboBoxAbility";
+            comboBoxAbility.Size = new System.Drawing.Size(153, 28);
+            comboBoxAbility.TabIndex = 16;
             // 
             // labelAbility
             // 
-            this.labelAbility.AutoSize = true;
-            this.labelAbility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelAbility.ForeColor = System.Drawing.Color.Black;
-            this.labelAbility.Location = new System.Drawing.Point(8, 143);
-            this.labelAbility.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelAbility.Name = "labelAbility";
-            this.labelAbility.Size = new System.Drawing.Size(45, 13);
-            this.labelAbility.TabIndex = 15;
-            this.labelAbility.Text = "Ability:";
+            labelAbility.AutoSize = true;
+            labelAbility.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelAbility.ForeColor = System.Drawing.Color.Black;
+            labelAbility.Location = new System.Drawing.Point(9, 191);
+            labelAbility.Margin = new Padding(5, 0, 5, 0);
+            labelAbility.Name = "labelAbility";
+            labelAbility.Size = new System.Drawing.Size(57, 17);
+            labelAbility.TabIndex = 15;
+            labelAbility.Text = "Ability:";
             // 
             // comboBoxNature
             // 
-            this.comboBoxNature.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxNature.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxNature.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxNature.FormattingEnabled = true;
-            this.comboBoxNature.Location = new System.Drawing.Point(69, 164);
-            this.comboBoxNature.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxNature.Name = "comboBoxNature";
-            this.comboBoxNature.Size = new System.Drawing.Size(134, 23);
-            this.comboBoxNature.TabIndex = 18;
-            this.comboBoxNature.SelectedIndexChanged += new System.EventHandler(this.comboBoxNature_SelectedIndexChanged);
+            comboBoxNature.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxNature.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxNature.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxNature.ForeColor = System.Drawing.Color.Black;
+            comboBoxNature.FormattingEnabled = true;
+            comboBoxNature.Location = new System.Drawing.Point(79, 219);
+            comboBoxNature.Margin = new Padding(0);
+            comboBoxNature.Name = "comboBoxNature";
+            comboBoxNature.Size = new System.Drawing.Size(153, 28);
+            comboBoxNature.TabIndex = 18;
+            comboBoxNature.SelectedIndexChanged += comboBoxNature_SelectedIndexChanged;
             // 
             // labelNature
             // 
-            this.labelNature.AutoSize = true;
-            this.labelNature.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelNature.ForeColor = System.Drawing.Color.Black;
-            this.labelNature.Location = new System.Drawing.Point(8, 167);
-            this.labelNature.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelNature.Name = "labelNature";
-            this.labelNature.Size = new System.Drawing.Size(49, 13);
-            this.labelNature.TabIndex = 17;
-            this.labelNature.Text = "Nature:";
+            labelNature.AutoSize = true;
+            labelNature.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelNature.ForeColor = System.Drawing.Color.Black;
+            labelNature.Location = new System.Drawing.Point(9, 223);
+            labelNature.Margin = new Padding(5, 0, 5, 0);
+            labelNature.Name = "labelNature";
+            labelNature.Size = new System.Drawing.Size(62, 17);
+            labelNature.TabIndex = 17;
+            labelNature.Text = "Nature:";
             // 
             // comboBoxMove1
             // 
-            this.comboBoxMove1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMove1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxMove1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxMove1.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMove1.FormattingEnabled = true;
-            this.comboBoxMove1.Location = new System.Drawing.Point(451, 331);
-            this.comboBoxMove1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMove1.Name = "comboBoxMove1";
-            this.comboBoxMove1.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxMove1.TabIndex = 26;
-            this.comboBoxMove1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
+            comboBoxMove1.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxMove1.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxMove1.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMove1.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMove1.ForeColor = System.Drawing.Color.Black;
+            comboBoxMove1.FormattingEnabled = true;
+            comboBoxMove1.Location = new System.Drawing.Point(515, 441);
+            comboBoxMove1.Margin = new Padding(0);
+            comboBoxMove1.Name = "comboBoxMove1";
+            comboBoxMove1.Size = new System.Drawing.Size(153, 28);
+            comboBoxMove1.TabIndex = 26;
+            comboBoxMove1.DrawItem += ValidateMovePaint;
             // 
             // labelMoves
             // 
-            this.labelMoves.AutoSize = true;
-            this.labelMoves.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelMoves.ForeColor = System.Drawing.Color.Black;
-            this.labelMoves.Location = new System.Drawing.Point(447, 307);
-            this.labelMoves.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelMoves.Name = "labelMoves";
-            this.labelMoves.Size = new System.Drawing.Size(48, 13);
-            this.labelMoves.TabIndex = 19;
-            this.labelMoves.Text = "Moves:";
+            labelMoves.AutoSize = true;
+            labelMoves.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelMoves.ForeColor = System.Drawing.Color.Black;
+            labelMoves.Location = new System.Drawing.Point(511, 409);
+            labelMoves.Margin = new Padding(5, 0, 5, 0);
+            labelMoves.Name = "labelMoves";
+            labelMoves.Size = new System.Drawing.Size(59, 17);
+            labelMoves.TabIndex = 19;
+            labelMoves.Text = "Moves:";
+            labelMoves.Click += this.labelMoves_Click;
             // 
             // comboBoxMove2
             // 
-            this.comboBoxMove2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMove2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxMove2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxMove2.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMove2.FormattingEnabled = true;
-            this.comboBoxMove2.Location = new System.Drawing.Point(451, 355);
-            this.comboBoxMove2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMove2.Name = "comboBoxMove2";
-            this.comboBoxMove2.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxMove2.TabIndex = 27;
-            this.comboBoxMove2.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
+            comboBoxMove2.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxMove2.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxMove2.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMove2.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMove2.ForeColor = System.Drawing.Color.Black;
+            comboBoxMove2.FormattingEnabled = true;
+            comboBoxMove2.Location = new System.Drawing.Point(515, 473);
+            comboBoxMove2.Margin = new Padding(0);
+            comboBoxMove2.Name = "comboBoxMove2";
+            comboBoxMove2.Size = new System.Drawing.Size(153, 28);
+            comboBoxMove2.TabIndex = 27;
+            comboBoxMove2.DrawItem += ValidateMovePaint;
             // 
             // comboBoxMove4
             // 
-            this.comboBoxMove4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMove4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxMove4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxMove4.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMove4.FormattingEnabled = true;
-            this.comboBoxMove4.Location = new System.Drawing.Point(451, 404);
-            this.comboBoxMove4.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMove4.Name = "comboBoxMove4";
-            this.comboBoxMove4.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxMove4.TabIndex = 29;
-            this.comboBoxMove4.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
+            comboBoxMove4.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxMove4.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxMove4.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMove4.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMove4.ForeColor = System.Drawing.Color.Black;
+            comboBoxMove4.FormattingEnabled = true;
+            comboBoxMove4.Location = new System.Drawing.Point(515, 539);
+            comboBoxMove4.Margin = new Padding(0);
+            comboBoxMove4.Name = "comboBoxMove4";
+            comboBoxMove4.Size = new System.Drawing.Size(153, 28);
+            comboBoxMove4.TabIndex = 29;
+            comboBoxMove4.DrawItem += ValidateMovePaint;
             // 
             // comboBoxMove3
             // 
-            this.comboBoxMove3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMove3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxMove3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBoxMove3.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxMove3.FormattingEnabled = true;
-            this.comboBoxMove3.Location = new System.Drawing.Point(451, 380);
-            this.comboBoxMove3.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMove3.Name = "comboBoxMove3";
-            this.comboBoxMove3.Size = new System.Drawing.Size(134, 24);
-            this.comboBoxMove3.TabIndex = 28;
-            this.comboBoxMove3.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ValidateMovePaint);
+            comboBoxMove3.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxMove3.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxMove3.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMove3.DrawMode = DrawMode.OwnerDrawVariable;
+            comboBoxMove3.ForeColor = System.Drawing.Color.Black;
+            comboBoxMove3.FormattingEnabled = true;
+            comboBoxMove3.Location = new System.Drawing.Point(515, 507);
+            comboBoxMove3.Margin = new Padding(0);
+            comboBoxMove3.Name = "comboBoxMove3";
+            comboBoxMove3.Size = new System.Drawing.Size(153, 28);
+            comboBoxMove3.TabIndex = 28;
+            comboBoxMove3.DrawItem += ValidateMovePaint;
             // 
             // bpkx30
             // 
-            this.bpkx30.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx30.Location = new System.Drawing.Point(1121, 341);
-            this.bpkx30.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx30.Name = "bpkx30";
-            this.bpkx30.Size = new System.Drawing.Size(68, 56);
-            this.bpkx30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx30.TabIndex = 90;
-            this.bpkx30.TabStop = false;
+            bpkx30.BackColor = System.Drawing.Color.Transparent;
+            bpkx30.BorderStyle = BorderStyle.FixedSingle;
+            bpkx30.Location = new System.Drawing.Point(1281, 455);
+            bpkx30.Margin = new Padding(5, 5, 5, 5);
+            bpkx30.Name = "bpkx30";
+            bpkx30.Size = new System.Drawing.Size(77, 74);
+            bpkx30.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx30.TabIndex = 90;
+            bpkx30.TabStop = false;
             // 
             // SCR_Box
             // 
-            this.SCR_Box.LargeChange = 1;
-            this.SCR_Box.Location = new System.Drawing.Point(1208, 88);
-            this.SCR_Box.Name = "SCR_Box";
-            this.SCR_Box.Size = new System.Drawing.Size(24, 319);
-            this.SCR_Box.TabIndex = 60;
-            this.SCR_Box.Scroll += new System.Windows.Forms.ScrollEventHandler(this.SCR_Box_Scroll);
+            SCR_Box.LargeChange = 1;
+            SCR_Box.Location = new System.Drawing.Point(1381, 117);
+            SCR_Box.Name = "SCR_Box";
+            SCR_Box.Size = new System.Drawing.Size(24, 425);
+            SCR_Box.TabIndex = 60;
+            SCR_Box.Scroll += SCR_Box_Scroll;
             // 
             // bpkx29
             // 
-            this.bpkx29.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx29.Location = new System.Drawing.Point(1043, 341);
-            this.bpkx29.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx29.Name = "bpkx29";
-            this.bpkx29.Size = new System.Drawing.Size(68, 56);
-            this.bpkx29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx29.TabIndex = 89;
-            this.bpkx29.TabStop = false;
+            bpkx29.BackColor = System.Drawing.Color.Transparent;
+            bpkx29.BorderStyle = BorderStyle.FixedSingle;
+            bpkx29.Location = new System.Drawing.Point(1192, 455);
+            bpkx29.Margin = new Padding(5, 5, 5, 5);
+            bpkx29.Name = "bpkx29";
+            bpkx29.Size = new System.Drawing.Size(77, 74);
+            bpkx29.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx29.TabIndex = 89;
+            bpkx29.TabStop = false;
             // 
             // bpkx28
             // 
-            this.bpkx28.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx28.Location = new System.Drawing.Point(965, 341);
-            this.bpkx28.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx28.Name = "bpkx28";
-            this.bpkx28.Size = new System.Drawing.Size(68, 56);
-            this.bpkx28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx28.TabIndex = 88;
-            this.bpkx28.TabStop = false;
+            bpkx28.BackColor = System.Drawing.Color.Transparent;
+            bpkx28.BorderStyle = BorderStyle.FixedSingle;
+            bpkx28.Location = new System.Drawing.Point(1103, 455);
+            bpkx28.Margin = new Padding(5, 5, 5, 5);
+            bpkx28.Name = "bpkx28";
+            bpkx28.Size = new System.Drawing.Size(77, 74);
+            bpkx28.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx28.TabIndex = 88;
+            bpkx28.TabStop = false;
             // 
             // bpkx27
             // 
-            this.bpkx27.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx27.Location = new System.Drawing.Point(886, 341);
-            this.bpkx27.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx27.Name = "bpkx27";
-            this.bpkx27.Size = new System.Drawing.Size(68, 56);
-            this.bpkx27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx27.TabIndex = 87;
-            this.bpkx27.TabStop = false;
+            bpkx27.BackColor = System.Drawing.Color.Transparent;
+            bpkx27.BorderStyle = BorderStyle.FixedSingle;
+            bpkx27.Location = new System.Drawing.Point(1013, 455);
+            bpkx27.Margin = new Padding(5, 5, 5, 5);
+            bpkx27.Name = "bpkx27";
+            bpkx27.Size = new System.Drawing.Size(77, 74);
+            bpkx27.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx27.TabIndex = 87;
+            bpkx27.TabStop = false;
             // 
             // bpkx26
             // 
-            this.bpkx26.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx26.Location = new System.Drawing.Point(808, 341);
-            this.bpkx26.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx26.Name = "bpkx26";
-            this.bpkx26.Size = new System.Drawing.Size(68, 56);
-            this.bpkx26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx26.TabIndex = 86;
-            this.bpkx26.TabStop = false;
+            bpkx26.BackColor = System.Drawing.Color.Transparent;
+            bpkx26.BorderStyle = BorderStyle.FixedSingle;
+            bpkx26.Location = new System.Drawing.Point(923, 455);
+            bpkx26.Margin = new Padding(5, 5, 5, 5);
+            bpkx26.Name = "bpkx26";
+            bpkx26.Size = new System.Drawing.Size(77, 74);
+            bpkx26.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx26.TabIndex = 86;
+            bpkx26.TabStop = false;
             // 
             // bpkx25
             // 
-            this.bpkx25.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx25.Location = new System.Drawing.Point(731, 341);
-            this.bpkx25.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx25.Name = "bpkx25";
-            this.bpkx25.Size = new System.Drawing.Size(68, 56);
-            this.bpkx25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx25.TabIndex = 85;
-            this.bpkx25.TabStop = false;
+            bpkx25.BackColor = System.Drawing.Color.Transparent;
+            bpkx25.BorderStyle = BorderStyle.FixedSingle;
+            bpkx25.Location = new System.Drawing.Point(835, 455);
+            bpkx25.Margin = new Padding(5, 5, 5, 5);
+            bpkx25.Name = "bpkx25";
+            bpkx25.Size = new System.Drawing.Size(77, 74);
+            bpkx25.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx25.TabIndex = 85;
+            bpkx25.TabStop = false;
             // 
             // bpkx24
             // 
-            this.bpkx24.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx24.Location = new System.Drawing.Point(1121, 278);
-            this.bpkx24.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx24.Name = "bpkx24";
-            this.bpkx24.Size = new System.Drawing.Size(68, 56);
-            this.bpkx24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx24.TabIndex = 84;
-            this.bpkx24.TabStop = false;
+            bpkx24.BackColor = System.Drawing.Color.Transparent;
+            bpkx24.BorderStyle = BorderStyle.FixedSingle;
+            bpkx24.Location = new System.Drawing.Point(1281, 371);
+            bpkx24.Margin = new Padding(5, 5, 5, 5);
+            bpkx24.Name = "bpkx24";
+            bpkx24.Size = new System.Drawing.Size(77, 74);
+            bpkx24.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx24.TabIndex = 84;
+            bpkx24.TabStop = false;
             // 
             // bpkx23
             // 
-            this.bpkx23.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx23.Location = new System.Drawing.Point(1043, 278);
-            this.bpkx23.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx23.Name = "bpkx23";
-            this.bpkx23.Size = new System.Drawing.Size(68, 56);
-            this.bpkx23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx23.TabIndex = 83;
-            this.bpkx23.TabStop = false;
+            bpkx23.BackColor = System.Drawing.Color.Transparent;
+            bpkx23.BorderStyle = BorderStyle.FixedSingle;
+            bpkx23.Location = new System.Drawing.Point(1192, 371);
+            bpkx23.Margin = new Padding(5, 5, 5, 5);
+            bpkx23.Name = "bpkx23";
+            bpkx23.Size = new System.Drawing.Size(77, 74);
+            bpkx23.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx23.TabIndex = 83;
+            bpkx23.TabStop = false;
             // 
             // bpkx22
             // 
-            this.bpkx22.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx22.Location = new System.Drawing.Point(965, 278);
-            this.bpkx22.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx22.Name = "bpkx22";
-            this.bpkx22.Size = new System.Drawing.Size(68, 56);
-            this.bpkx22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx22.TabIndex = 82;
-            this.bpkx22.TabStop = false;
+            bpkx22.BackColor = System.Drawing.Color.Transparent;
+            bpkx22.BorderStyle = BorderStyle.FixedSingle;
+            bpkx22.Location = new System.Drawing.Point(1103, 371);
+            bpkx22.Margin = new Padding(5, 5, 5, 5);
+            bpkx22.Name = "bpkx22";
+            bpkx22.Size = new System.Drawing.Size(77, 74);
+            bpkx22.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx22.TabIndex = 82;
+            bpkx22.TabStop = false;
             // 
             // bpkx21
             // 
-            this.bpkx21.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx21.Location = new System.Drawing.Point(886, 278);
-            this.bpkx21.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx21.Name = "bpkx21";
-            this.bpkx21.Size = new System.Drawing.Size(68, 56);
-            this.bpkx21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx21.TabIndex = 81;
-            this.bpkx21.TabStop = false;
+            bpkx21.BackColor = System.Drawing.Color.Transparent;
+            bpkx21.BorderStyle = BorderStyle.FixedSingle;
+            bpkx21.Location = new System.Drawing.Point(1013, 371);
+            bpkx21.Margin = new Padding(5, 5, 5, 5);
+            bpkx21.Name = "bpkx21";
+            bpkx21.Size = new System.Drawing.Size(77, 74);
+            bpkx21.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx21.TabIndex = 81;
+            bpkx21.TabStop = false;
             // 
             // bpkx2
             // 
-            this.bpkx2.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx2.Location = new System.Drawing.Point(807, 88);
-            this.bpkx2.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx2.Name = "bpkx2";
-            this.bpkx2.Size = new System.Drawing.Size(68, 56);
-            this.bpkx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx2.TabIndex = 62;
-            this.bpkx2.TabStop = false;
+            bpkx2.BackColor = System.Drawing.Color.Transparent;
+            bpkx2.BorderStyle = BorderStyle.FixedSingle;
+            bpkx2.Location = new System.Drawing.Point(922, 117);
+            bpkx2.Margin = new Padding(5, 5, 5, 5);
+            bpkx2.Name = "bpkx2";
+            bpkx2.Size = new System.Drawing.Size(77, 74);
+            bpkx2.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx2.TabIndex = 62;
+            bpkx2.TabStop = false;
             // 
             // bpkx20
             // 
-            this.bpkx20.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx20.Location = new System.Drawing.Point(808, 278);
-            this.bpkx20.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx20.Name = "bpkx20";
-            this.bpkx20.Size = new System.Drawing.Size(68, 56);
-            this.bpkx20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx20.TabIndex = 80;
-            this.bpkx20.TabStop = false;
+            bpkx20.BackColor = System.Drawing.Color.Transparent;
+            bpkx20.BorderStyle = BorderStyle.FixedSingle;
+            bpkx20.Location = new System.Drawing.Point(923, 371);
+            bpkx20.Margin = new Padding(5, 5, 5, 5);
+            bpkx20.Name = "bpkx20";
+            bpkx20.Size = new System.Drawing.Size(77, 74);
+            bpkx20.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx20.TabIndex = 80;
+            bpkx20.TabStop = false;
             // 
             // bpkx3
             // 
-            this.bpkx3.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx3.Location = new System.Drawing.Point(886, 88);
-            this.bpkx3.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx3.Name = "bpkx3";
-            this.bpkx3.Size = new System.Drawing.Size(68, 56);
-            this.bpkx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx3.TabIndex = 63;
-            this.bpkx3.TabStop = false;
+            bpkx3.BackColor = System.Drawing.Color.Transparent;
+            bpkx3.BorderStyle = BorderStyle.FixedSingle;
+            bpkx3.Location = new System.Drawing.Point(1013, 117);
+            bpkx3.Margin = new Padding(5, 5, 5, 5);
+            bpkx3.Name = "bpkx3";
+            bpkx3.Size = new System.Drawing.Size(77, 74);
+            bpkx3.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx3.TabIndex = 63;
+            bpkx3.TabStop = false;
             // 
             // bpkx4
             // 
-            this.bpkx4.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx4.Location = new System.Drawing.Point(965, 87);
-            this.bpkx4.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx4.Name = "bpkx4";
-            this.bpkx4.Size = new System.Drawing.Size(68, 56);
-            this.bpkx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx4.TabIndex = 64;
-            this.bpkx4.TabStop = false;
+            bpkx4.BackColor = System.Drawing.Color.Transparent;
+            bpkx4.BorderStyle = BorderStyle.FixedSingle;
+            bpkx4.Location = new System.Drawing.Point(1103, 116);
+            bpkx4.Margin = new Padding(5, 5, 5, 5);
+            bpkx4.Name = "bpkx4";
+            bpkx4.Size = new System.Drawing.Size(77, 74);
+            bpkx4.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx4.TabIndex = 64;
+            bpkx4.TabStop = false;
             // 
             // bpkx19
             // 
-            this.bpkx19.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx19.Location = new System.Drawing.Point(731, 278);
-            this.bpkx19.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx19.Name = "bpkx19";
-            this.bpkx19.Size = new System.Drawing.Size(68, 56);
-            this.bpkx19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx19.TabIndex = 79;
-            this.bpkx19.TabStop = false;
+            bpkx19.BackColor = System.Drawing.Color.Transparent;
+            bpkx19.BorderStyle = BorderStyle.FixedSingle;
+            bpkx19.Location = new System.Drawing.Point(835, 371);
+            bpkx19.Margin = new Padding(5, 5, 5, 5);
+            bpkx19.Name = "bpkx19";
+            bpkx19.Size = new System.Drawing.Size(77, 74);
+            bpkx19.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx19.TabIndex = 79;
+            bpkx19.TabStop = false;
             // 
             // bpkx5
             // 
-            this.bpkx5.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx5.Location = new System.Drawing.Point(1043, 87);
-            this.bpkx5.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx5.Name = "bpkx5";
-            this.bpkx5.Size = new System.Drawing.Size(68, 56);
-            this.bpkx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx5.TabIndex = 65;
-            this.bpkx5.TabStop = false;
+            bpkx5.BackColor = System.Drawing.Color.Transparent;
+            bpkx5.BorderStyle = BorderStyle.FixedSingle;
+            bpkx5.Location = new System.Drawing.Point(1192, 116);
+            bpkx5.Margin = new Padding(5, 5, 5, 5);
+            bpkx5.Name = "bpkx5";
+            bpkx5.Size = new System.Drawing.Size(77, 74);
+            bpkx5.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx5.TabIndex = 65;
+            bpkx5.TabStop = false;
             // 
             // bpkx18
             // 
-            this.bpkx18.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx18.Location = new System.Drawing.Point(1121, 215);
-            this.bpkx18.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx18.Name = "bpkx18";
-            this.bpkx18.Size = new System.Drawing.Size(68, 56);
-            this.bpkx18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx18.TabIndex = 78;
-            this.bpkx18.TabStop = false;
+            bpkx18.BackColor = System.Drawing.Color.Transparent;
+            bpkx18.BorderStyle = BorderStyle.FixedSingle;
+            bpkx18.Location = new System.Drawing.Point(1281, 287);
+            bpkx18.Margin = new Padding(5, 5, 5, 5);
+            bpkx18.Name = "bpkx18";
+            bpkx18.Size = new System.Drawing.Size(77, 74);
+            bpkx18.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx18.TabIndex = 78;
+            bpkx18.TabStop = false;
             // 
             // bpkx6
             // 
-            this.bpkx6.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx6.Location = new System.Drawing.Point(1121, 87);
-            this.bpkx6.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx6.Name = "bpkx6";
-            this.bpkx6.Size = new System.Drawing.Size(68, 56);
-            this.bpkx6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx6.TabIndex = 66;
-            this.bpkx6.TabStop = false;
+            bpkx6.BackColor = System.Drawing.Color.Transparent;
+            bpkx6.BorderStyle = BorderStyle.FixedSingle;
+            bpkx6.Location = new System.Drawing.Point(1281, 116);
+            bpkx6.Margin = new Padding(5, 5, 5, 5);
+            bpkx6.Name = "bpkx6";
+            bpkx6.Size = new System.Drawing.Size(77, 74);
+            bpkx6.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx6.TabIndex = 66;
+            bpkx6.TabStop = false;
             // 
             // bpkx17
             // 
-            this.bpkx17.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx17.Location = new System.Drawing.Point(1043, 215);
-            this.bpkx17.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx17.Name = "bpkx17";
-            this.bpkx17.Size = new System.Drawing.Size(68, 56);
-            this.bpkx17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx17.TabIndex = 77;
-            this.bpkx17.TabStop = false;
+            bpkx17.BackColor = System.Drawing.Color.Transparent;
+            bpkx17.BorderStyle = BorderStyle.FixedSingle;
+            bpkx17.Location = new System.Drawing.Point(1192, 287);
+            bpkx17.Margin = new Padding(5, 5, 5, 5);
+            bpkx17.Name = "bpkx17";
+            bpkx17.Size = new System.Drawing.Size(77, 74);
+            bpkx17.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx17.TabIndex = 77;
+            bpkx17.TabStop = false;
             // 
             // bpkx7
             // 
-            this.bpkx7.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx7.Location = new System.Drawing.Point(731, 151);
-            this.bpkx7.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx7.Name = "bpkx7";
-            this.bpkx7.Size = new System.Drawing.Size(68, 56);
-            this.bpkx7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx7.TabIndex = 67;
-            this.bpkx7.TabStop = false;
+            bpkx7.BackColor = System.Drawing.Color.Transparent;
+            bpkx7.BorderStyle = BorderStyle.FixedSingle;
+            bpkx7.Location = new System.Drawing.Point(835, 201);
+            bpkx7.Margin = new Padding(5, 5, 5, 5);
+            bpkx7.Name = "bpkx7";
+            bpkx7.Size = new System.Drawing.Size(77, 74);
+            bpkx7.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx7.TabIndex = 67;
+            bpkx7.TabStop = false;
             // 
             // bpkx8
             // 
-            this.bpkx8.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx8.Location = new System.Drawing.Point(807, 151);
-            this.bpkx8.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx8.Name = "bpkx8";
-            this.bpkx8.Size = new System.Drawing.Size(68, 56);
-            this.bpkx8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx8.TabIndex = 68;
-            this.bpkx8.TabStop = false;
+            bpkx8.BackColor = System.Drawing.Color.Transparent;
+            bpkx8.BorderStyle = BorderStyle.FixedSingle;
+            bpkx8.Location = new System.Drawing.Point(922, 201);
+            bpkx8.Margin = new Padding(5, 5, 5, 5);
+            bpkx8.Name = "bpkx8";
+            bpkx8.Size = new System.Drawing.Size(77, 74);
+            bpkx8.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx8.TabIndex = 68;
+            bpkx8.TabStop = false;
             // 
             // bpkx16
             // 
-            this.bpkx16.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx16.Location = new System.Drawing.Point(965, 215);
-            this.bpkx16.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx16.Name = "bpkx16";
-            this.bpkx16.Size = new System.Drawing.Size(68, 56);
-            this.bpkx16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx16.TabIndex = 76;
-            this.bpkx16.TabStop = false;
+            bpkx16.BackColor = System.Drawing.Color.Transparent;
+            bpkx16.BorderStyle = BorderStyle.FixedSingle;
+            bpkx16.Location = new System.Drawing.Point(1103, 287);
+            bpkx16.Margin = new Padding(5, 5, 5, 5);
+            bpkx16.Name = "bpkx16";
+            bpkx16.Size = new System.Drawing.Size(77, 74);
+            bpkx16.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx16.TabIndex = 76;
+            bpkx16.TabStop = false;
             // 
             // bpkx9
             // 
-            this.bpkx9.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx9.Location = new System.Drawing.Point(886, 151);
-            this.bpkx9.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx9.Name = "bpkx9";
-            this.bpkx9.Size = new System.Drawing.Size(68, 56);
-            this.bpkx9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx9.TabIndex = 69;
-            this.bpkx9.TabStop = false;
+            bpkx9.BackColor = System.Drawing.Color.Transparent;
+            bpkx9.BorderStyle = BorderStyle.FixedSingle;
+            bpkx9.Location = new System.Drawing.Point(1013, 201);
+            bpkx9.Margin = new Padding(5, 5, 5, 5);
+            bpkx9.Name = "bpkx9";
+            bpkx9.Size = new System.Drawing.Size(77, 74);
+            bpkx9.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx9.TabIndex = 69;
+            bpkx9.TabStop = false;
             // 
             // bpkx15
             // 
-            this.bpkx15.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx15.Location = new System.Drawing.Point(886, 215);
-            this.bpkx15.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx15.Name = "bpkx15";
-            this.bpkx15.Size = new System.Drawing.Size(68, 56);
-            this.bpkx15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx15.TabIndex = 75;
-            this.bpkx15.TabStop = false;
+            bpkx15.BackColor = System.Drawing.Color.Transparent;
+            bpkx15.BorderStyle = BorderStyle.FixedSingle;
+            bpkx15.Location = new System.Drawing.Point(1013, 287);
+            bpkx15.Margin = new Padding(5, 5, 5, 5);
+            bpkx15.Name = "bpkx15";
+            bpkx15.Size = new System.Drawing.Size(77, 74);
+            bpkx15.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx15.TabIndex = 75;
+            bpkx15.TabStop = false;
             // 
             // bpkx10
             // 
-            this.bpkx10.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx10.Location = new System.Drawing.Point(965, 151);
-            this.bpkx10.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx10.Name = "bpkx10";
-            this.bpkx10.Size = new System.Drawing.Size(68, 56);
-            this.bpkx10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx10.TabIndex = 70;
-            this.bpkx10.TabStop = false;
+            bpkx10.BackColor = System.Drawing.Color.Transparent;
+            bpkx10.BorderStyle = BorderStyle.FixedSingle;
+            bpkx10.Location = new System.Drawing.Point(1103, 201);
+            bpkx10.Margin = new Padding(5, 5, 5, 5);
+            bpkx10.Name = "bpkx10";
+            bpkx10.Size = new System.Drawing.Size(77, 74);
+            bpkx10.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx10.TabIndex = 70;
+            bpkx10.TabStop = false;
             // 
             // bpkx14
             // 
-            this.bpkx14.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx14.Location = new System.Drawing.Point(808, 215);
-            this.bpkx14.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx14.Name = "bpkx14";
-            this.bpkx14.Size = new System.Drawing.Size(68, 56);
-            this.bpkx14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx14.TabIndex = 74;
-            this.bpkx14.TabStop = false;
+            bpkx14.BackColor = System.Drawing.Color.Transparent;
+            bpkx14.BorderStyle = BorderStyle.FixedSingle;
+            bpkx14.Location = new System.Drawing.Point(923, 287);
+            bpkx14.Margin = new Padding(5, 5, 5, 5);
+            bpkx14.Name = "bpkx14";
+            bpkx14.Size = new System.Drawing.Size(77, 74);
+            bpkx14.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx14.TabIndex = 74;
+            bpkx14.TabStop = false;
             // 
             // bpkx11
             // 
-            this.bpkx11.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx11.Location = new System.Drawing.Point(1043, 151);
-            this.bpkx11.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx11.Name = "bpkx11";
-            this.bpkx11.Size = new System.Drawing.Size(68, 56);
-            this.bpkx11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx11.TabIndex = 71;
-            this.bpkx11.TabStop = false;
+            bpkx11.BackColor = System.Drawing.Color.Transparent;
+            bpkx11.BorderStyle = BorderStyle.FixedSingle;
+            bpkx11.Location = new System.Drawing.Point(1192, 201);
+            bpkx11.Margin = new Padding(5, 5, 5, 5);
+            bpkx11.Name = "bpkx11";
+            bpkx11.Size = new System.Drawing.Size(77, 74);
+            bpkx11.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx11.TabIndex = 71;
+            bpkx11.TabStop = false;
             // 
             // bpkx12
             // 
-            this.bpkx12.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx12.Location = new System.Drawing.Point(1121, 151);
-            this.bpkx12.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx12.Name = "bpkx12";
-            this.bpkx12.Size = new System.Drawing.Size(68, 56);
-            this.bpkx12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx12.TabIndex = 72;
-            this.bpkx12.TabStop = false;
+            bpkx12.BackColor = System.Drawing.Color.Transparent;
+            bpkx12.BorderStyle = BorderStyle.FixedSingle;
+            bpkx12.Location = new System.Drawing.Point(1281, 201);
+            bpkx12.Margin = new Padding(5, 5, 5, 5);
+            bpkx12.Name = "bpkx12";
+            bpkx12.Size = new System.Drawing.Size(77, 74);
+            bpkx12.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx12.TabIndex = 72;
+            bpkx12.TabStop = false;
             // 
             // bpkx13
             // 
-            this.bpkx13.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx13.Location = new System.Drawing.Point(731, 214);
-            this.bpkx13.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx13.Name = "bpkx13";
-            this.bpkx13.Size = new System.Drawing.Size(68, 56);
-            this.bpkx13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx13.TabIndex = 73;
-            this.bpkx13.TabStop = false;
+            bpkx13.BackColor = System.Drawing.Color.Transparent;
+            bpkx13.BorderStyle = BorderStyle.FixedSingle;
+            bpkx13.Location = new System.Drawing.Point(835, 285);
+            bpkx13.Margin = new Padding(5, 5, 5, 5);
+            bpkx13.Name = "bpkx13";
+            bpkx13.Size = new System.Drawing.Size(77, 74);
+            bpkx13.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx13.TabIndex = 73;
+            bpkx13.TabStop = false;
             // 
             // L_Count
             // 
-            this.L_Count.Location = new System.Drawing.Point(886, 60);
-            this.L_Count.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.L_Count.Name = "L_Count";
-            this.L_Count.Size = new System.Drawing.Size(158, 15);
-            this.L_Count.TabIndex = 115;
-            this.L_Count.Text = "Mon Count: 0";
-            this.L_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            L_Count.Location = new System.Drawing.Point(1013, 80);
+            L_Count.Margin = new Padding(5, 0, 5, 0);
+            L_Count.Name = "L_Count";
+            L_Count.Size = new System.Drawing.Size(181, 20);
+            L_Count.TabIndex = 115;
+            L_Count.Text = "Mon Count: 0";
+            L_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonGameLevelSort
             // 
-            this.buttonGameLevelSort.Location = new System.Drawing.Point(731, 446);
-            this.buttonGameLevelSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGameLevelSort.Name = "buttonGameLevelSort";
-            this.buttonGameLevelSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonGameLevelSort.TabIndex = 116;
-            this.buttonGameLevelSort.Text = "Game-Level Sort";
-            this.buttonGameLevelSort.UseVisualStyleBackColor = true;
-            this.buttonGameLevelSort.Click += new System.EventHandler(this.ButtonGameLevelSort_Click);
+            buttonGameLevelSort.Location = new System.Drawing.Point(835, 595);
+            buttonGameLevelSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameLevelSort.Name = "buttonGameLevelSort";
+            buttonGameLevelSort.Size = new System.Drawing.Size(155, 35);
+            buttonGameLevelSort.TabIndex = 116;
+            buttonGameLevelSort.Text = "Game-Level Sort";
+            buttonGameLevelSort.UseVisualStyleBackColor = true;
+            buttonGameLevelSort.Click += ButtonGameLevelSort_Click;
             // 
             // buttonGameSpeciesSort
             // 
-            this.buttonGameSpeciesSort.Location = new System.Drawing.Point(886, 446);
-            this.buttonGameSpeciesSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
-            this.buttonGameSpeciesSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonGameSpeciesSort.TabIndex = 117;
-            this.buttonGameSpeciesSort.Text = "Game-Species Sort";
-            this.buttonGameSpeciesSort.UseVisualStyleBackColor = true;
-            this.buttonGameSpeciesSort.Click += new System.EventHandler(this.ButtonGameSpeciesSort_Click);
+            buttonGameSpeciesSort.Location = new System.Drawing.Point(1013, 595);
+            buttonGameSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
+            buttonGameSpeciesSort.Size = new System.Drawing.Size(155, 35);
+            buttonGameSpeciesSort.TabIndex = 117;
+            buttonGameSpeciesSort.Text = "Game-Species Sort";
+            buttonGameSpeciesSort.UseVisualStyleBackColor = true;
+            buttonGameSpeciesSort.Click += ButtonGameSpeciesSort_Click;
             // 
             // buttonGenSpeciesSort
             // 
-            this.buttonGenSpeciesSort.Location = new System.Drawing.Point(731, 480);
-            this.buttonGenSpeciesSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
-            this.buttonGenSpeciesSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonGenSpeciesSort.TabIndex = 118;
-            this.buttonGenSpeciesSort.Text = "Gen-Species Sort";
-            this.buttonGenSpeciesSort.UseVisualStyleBackColor = true;
-            this.buttonGenSpeciesSort.Click += new System.EventHandler(this.ButtonGenSpeciesSort_Click);
+            buttonGenSpeciesSort.Location = new System.Drawing.Point(835, 640);
+            buttonGenSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
+            buttonGenSpeciesSort.Size = new System.Drawing.Size(155, 35);
+            buttonGenSpeciesSort.TabIndex = 118;
+            buttonGenSpeciesSort.Text = "Gen-Species Sort";
+            buttonGenSpeciesSort.UseVisualStyleBackColor = true;
+            buttonGenSpeciesSort.Click += ButtonGenSpeciesSort_Click;
             // 
             // pictureBoxGameSprite
             // 
-            this.pictureBoxGameSprite.Location = new System.Drawing.Point(466, 91);
-            this.pictureBoxGameSprite.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxGameSprite.Name = "pictureBoxGameSprite";
-            this.pictureBoxGameSprite.Size = new System.Drawing.Size(180, 180);
-            this.pictureBoxGameSprite.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxGameSprite.TabIndex = 119;
-            this.pictureBoxGameSprite.TabStop = false;
+            pictureBoxGameSprite.Location = new System.Drawing.Point(533, 121);
+            pictureBoxGameSprite.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxGameSprite.Name = "pictureBoxGameSprite";
+            pictureBoxGameSprite.Size = new System.Drawing.Size(180, 180);
+            pictureBoxGameSprite.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxGameSprite.TabIndex = 119;
+            pictureBoxGameSprite.TabStop = false;
             // 
             // labelHP
             // 
-            this.labelHP.AutoSize = true;
-            this.labelHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelHP.ForeColor = System.Drawing.Color.Black;
-            this.labelHP.Location = new System.Drawing.Point(8, 245);
-            this.labelHP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelHP.Name = "labelHP";
-            this.labelHP.Size = new System.Drawing.Size(28, 13);
-            this.labelHP.TabIndex = 120;
-            this.labelHP.Text = "HP:";
+            labelHP.AutoSize = true;
+            labelHP.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelHP.ForeColor = System.Drawing.Color.Black;
+            labelHP.Location = new System.Drawing.Point(9, 327);
+            labelHP.Margin = new Padding(5, 0, 5, 0);
+            labelHP.Name = "labelHP";
+            labelHP.Size = new System.Drawing.Size(34, 17);
+            labelHP.TabIndex = 120;
+            labelHP.Text = "HP:";
             // 
             // labelAttack
             // 
-            this.labelAttack.AutoSize = true;
-            this.labelAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelAttack.ForeColor = System.Drawing.Color.Black;
-            this.labelAttack.Location = new System.Drawing.Point(8, 275);
-            this.labelAttack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelAttack.Name = "labelAttack";
-            this.labelAttack.Size = new System.Drawing.Size(48, 13);
-            this.labelAttack.TabIndex = 121;
-            this.labelAttack.Text = "Attack:";
+            labelAttack.AutoSize = true;
+            labelAttack.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelAttack.ForeColor = System.Drawing.Color.Black;
+            labelAttack.Location = new System.Drawing.Point(9, 367);
+            labelAttack.Margin = new Padding(5, 0, 5, 0);
+            labelAttack.Name = "labelAttack";
+            labelAttack.Size = new System.Drawing.Size(58, 17);
+            labelAttack.TabIndex = 121;
+            labelAttack.Text = "Attack:";
             // 
             // labelDefense
             // 
-            this.labelDefense.AutoSize = true;
-            this.labelDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelDefense.ForeColor = System.Drawing.Color.Black;
-            this.labelDefense.Location = new System.Drawing.Point(8, 305);
-            this.labelDefense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDefense.Name = "labelDefense";
-            this.labelDefense.Size = new System.Drawing.Size(58, 13);
-            this.labelDefense.TabIndex = 122;
-            this.labelDefense.Text = "Defense:";
+            labelDefense.AutoSize = true;
+            labelDefense.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelDefense.ForeColor = System.Drawing.Color.Black;
+            labelDefense.Location = new System.Drawing.Point(9, 407);
+            labelDefense.Margin = new Padding(5, 0, 5, 0);
+            labelDefense.Name = "labelDefense";
+            labelDefense.Size = new System.Drawing.Size(73, 17);
+            labelDefense.TabIndex = 122;
+            labelDefense.Text = "Defense:";
             // 
             // labelSpAtk
             // 
-            this.labelSpAtk.AutoSize = true;
-            this.labelSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSpAtk.ForeColor = System.Drawing.Color.Black;
-            this.labelSpAtk.Location = new System.Drawing.Point(8, 335);
-            this.labelSpAtk.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSpAtk.Name = "labelSpAtk";
-            this.labelSpAtk.Size = new System.Drawing.Size(53, 13);
-            this.labelSpAtk.TabIndex = 123;
-            this.labelSpAtk.Text = "Sp. Atk:";
+            labelSpAtk.AutoSize = true;
+            labelSpAtk.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpAtk.ForeColor = System.Drawing.Color.Black;
+            labelSpAtk.Location = new System.Drawing.Point(9, 447);
+            labelSpAtk.Margin = new Padding(5, 0, 5, 0);
+            labelSpAtk.Name = "labelSpAtk";
+            labelSpAtk.Size = new System.Drawing.Size(65, 17);
+            labelSpAtk.TabIndex = 123;
+            labelSpAtk.Text = "Sp. Atk:";
             // 
             // labelSpDef
             // 
-            this.labelSpDef.AutoSize = true;
-            this.labelSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSpDef.ForeColor = System.Drawing.Color.Black;
-            this.labelSpDef.Location = new System.Drawing.Point(7, 365);
-            this.labelSpDef.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSpDef.Name = "labelSpDef";
-            this.labelSpDef.Size = new System.Drawing.Size(54, 13);
-            this.labelSpDef.TabIndex = 124;
-            this.labelSpDef.Text = "Sp. Def:";
+            labelSpDef.AutoSize = true;
+            labelSpDef.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpDef.ForeColor = System.Drawing.Color.Black;
+            labelSpDef.Location = new System.Drawing.Point(8, 487);
+            labelSpDef.Margin = new Padding(5, 0, 5, 0);
+            labelSpDef.Name = "labelSpDef";
+            labelSpDef.Size = new System.Drawing.Size(67, 17);
+            labelSpDef.TabIndex = 124;
+            labelSpDef.Text = "Sp. Def:";
             // 
             // labelSpeed
             // 
-            this.labelSpeed.AutoSize = true;
-            this.labelSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelSpeed.ForeColor = System.Drawing.Color.Black;
-            this.labelSpeed.Location = new System.Drawing.Point(7, 395);
-            this.labelSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(47, 13);
-            this.labelSpeed.TabIndex = 125;
-            this.labelSpeed.Text = "Speed:";
+            labelSpeed.AutoSize = true;
+            labelSpeed.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpeed.ForeColor = System.Drawing.Color.Black;
+            labelSpeed.Location = new System.Drawing.Point(8, 527);
+            labelSpeed.Margin = new Padding(5, 0, 5, 0);
+            labelSpeed.Name = "labelSpeed";
+            labelSpeed.Size = new System.Drawing.Size(59, 17);
+            labelSpeed.TabIndex = 125;
+            labelSpeed.Text = "Speed:";
             // 
             // labelOT
             // 
-            this.labelOT.AutoSize = true;
-            this.labelOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelOT.ForeColor = System.Drawing.Color.Black;
-            this.labelOT.Location = new System.Drawing.Point(396, 442);
-            this.labelOT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelOT.Name = "labelOT";
-            this.labelOT.Size = new System.Drawing.Size(28, 13);
-            this.labelOT.TabIndex = 126;
-            this.labelOT.Text = "OT:";
+            labelOT.AutoSize = true;
+            labelOT.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelOT.ForeColor = System.Drawing.Color.Black;
+            labelOT.Location = new System.Drawing.Point(453, 589);
+            labelOT.Margin = new Padding(5, 0, 5, 0);
+            labelOT.Name = "labelOT";
+            labelOT.Size = new System.Drawing.Size(35, 17);
+            labelOT.TabIndex = 126;
+            labelOT.Text = "OT:";
             // 
             // buttonReloadDB
             // 
-            this.buttonReloadDB.Location = new System.Drawing.Point(731, 54);
-            this.buttonReloadDB.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonReloadDB.Name = "buttonReloadDB";
-            this.buttonReloadDB.Size = new System.Drawing.Size(111, 26);
-            this.buttonReloadDB.TabIndex = 127;
-            this.buttonReloadDB.Text = "Reload Mons";
-            this.buttonReloadDB.UseVisualStyleBackColor = true;
-            this.buttonReloadDB.Click += new System.EventHandler(this.ButtonReloadDB_Click);
+            buttonReloadDB.Location = new System.Drawing.Point(835, 72);
+            buttonReloadDB.Margin = new Padding(5, 5, 5, 5);
+            buttonReloadDB.Name = "buttonReloadDB";
+            buttonReloadDB.Size = new System.Drawing.Size(127, 35);
+            buttonReloadDB.TabIndex = 127;
+            buttonReloadDB.Text = "Reload Mons";
+            buttonReloadDB.UseVisualStyleBackColor = true;
+            buttonReloadDB.Click += ButtonReloadDB_Click;
             // 
             // labelGame
             // 
-            this.labelGame.AutoSize = true;
-            this.labelGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGame.ForeColor = System.Drawing.Color.Black;
-            this.labelGame.Location = new System.Drawing.Point(396, 500);
-            this.labelGame.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelGame.Name = "labelGame";
-            this.labelGame.Size = new System.Drawing.Size(43, 13);
-            this.labelGame.TabIndex = 128;
-            this.labelGame.Text = "Game:";
+            labelGame.AutoSize = true;
+            labelGame.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelGame.ForeColor = System.Drawing.Color.Black;
+            labelGame.Location = new System.Drawing.Point(453, 667);
+            labelGame.Margin = new Padding(5, 0, 5, 0);
+            labelGame.Name = "labelGame";
+            labelGame.Size = new System.Drawing.Size(55, 17);
+            labelGame.TabIndex = 128;
+            labelGame.Text = "Game:";
             // 
             // buttonGameMonTally
             // 
-            this.buttonGameMonTally.Location = new System.Drawing.Point(731, 547);
-            this.buttonGameMonTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGameMonTally.Name = "buttonGameMonTally";
-            this.buttonGameMonTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonGameMonTally.TabIndex = 129;
-            this.buttonGameMonTally.Text = "Game Mon Tally";
-            this.buttonGameMonTally.UseVisualStyleBackColor = true;
-            this.buttonGameMonTally.Click += new System.EventHandler(this.ButtonGameMonTally_Click);
+            buttonGameMonTally.Location = new System.Drawing.Point(835, 729);
+            buttonGameMonTally.Margin = new Padding(5, 5, 5, 5);
+            buttonGameMonTally.Name = "buttonGameMonTally";
+            buttonGameMonTally.Size = new System.Drawing.Size(155, 35);
+            buttonGameMonTally.TabIndex = 129;
+            buttonGameMonTally.Text = "Game Mon Tally";
+            buttonGameMonTally.UseVisualStyleBackColor = true;
+            buttonGameMonTally.Click += ButtonGameMonTally_Click;
             // 
             // buttonGameTally
             // 
-            this.buttonGameTally.Location = new System.Drawing.Point(731, 514);
-            this.buttonGameTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGameTally.Name = "buttonGameTally";
-            this.buttonGameTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonGameTally.TabIndex = 130;
-            this.buttonGameTally.Text = "Game Tally";
-            this.buttonGameTally.UseVisualStyleBackColor = true;
-            this.buttonGameTally.Click += new System.EventHandler(this.ButtonGameTally_Click);
+            buttonGameTally.Location = new System.Drawing.Point(835, 685);
+            buttonGameTally.Margin = new Padding(5, 5, 5, 5);
+            buttonGameTally.Name = "buttonGameTally";
+            buttonGameTally.Size = new System.Drawing.Size(155, 35);
+            buttonGameTally.TabIndex = 130;
+            buttonGameTally.Text = "Game Tally";
+            buttonGameTally.UseVisualStyleBackColor = true;
+            buttonGameTally.Click += ButtonGameTally_Click;
             // 
             // buttonSpeciesSort
             // 
-            this.buttonSpeciesSort.Location = new System.Drawing.Point(1043, 480);
-            this.buttonSpeciesSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSpeciesSort.Name = "buttonSpeciesSort";
-            this.buttonSpeciesSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonSpeciesSort.TabIndex = 131;
-            this.buttonSpeciesSort.Text = "All Species Sort";
-            this.buttonSpeciesSort.UseVisualStyleBackColor = true;
-            this.buttonSpeciesSort.Click += new System.EventHandler(this.ButtonSpeciesSort_Click);
+            buttonSpeciesSort.Location = new System.Drawing.Point(1192, 640);
+            buttonSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonSpeciesSort.Name = "buttonSpeciesSort";
+            buttonSpeciesSort.Size = new System.Drawing.Size(155, 35);
+            buttonSpeciesSort.TabIndex = 131;
+            buttonSpeciesSort.Text = "All Species Sort";
+            buttonSpeciesSort.UseVisualStyleBackColor = true;
+            buttonSpeciesSort.Click += ButtonSpeciesSort_Click;
             // 
             // comboBoxForm
             // 
-            this.comboBoxForm.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxForm.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxForm.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxForm.FormattingEnabled = true;
-            this.comboBoxForm.Location = new System.Drawing.Point(318, 110);
-            this.comboBoxForm.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxForm.Name = "comboBoxForm";
-            this.comboBoxForm.Size = new System.Drawing.Size(134, 23);
-            this.comboBoxForm.TabIndex = 13;
+            comboBoxForm.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxForm.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxForm.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxForm.ForeColor = System.Drawing.Color.Black;
+            comboBoxForm.FormattingEnabled = true;
+            comboBoxForm.Location = new System.Drawing.Point(363, 147);
+            comboBoxForm.Margin = new Padding(0);
+            comboBoxForm.Name = "comboBoxForm";
+            comboBoxForm.Size = new System.Drawing.Size(153, 28);
+            comboBoxForm.TabIndex = 13;
             // 
             // pictureBoxPkrs
             // 
-            this.pictureBoxPkrs.Location = new System.Drawing.Point(102, 205);
-            this.pictureBoxPkrs.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxPkrs.Name = "pictureBoxPkrs";
-            this.pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
-            this.pictureBoxPkrs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxPkrs.TabIndex = 135;
-            this.pictureBoxPkrs.TabStop = false;
+            pictureBoxPkrs.Location = new System.Drawing.Point(117, 273);
+            pictureBoxPkrs.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxPkrs.Name = "pictureBoxPkrs";
+            pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
+            pictureBoxPkrs.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxPkrs.TabIndex = 135;
+            pictureBoxPkrs.TabStop = false;
             // 
             // buttonNiqCalc
             // 
-            this.buttonNiqCalc.Location = new System.Drawing.Point(886, 617);
-            this.buttonNiqCalc.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonNiqCalc.Name = "buttonNiqCalc";
-            this.buttonNiqCalc.Size = new System.Drawing.Size(136, 26);
-            this.buttonNiqCalc.TabIndex = 136;
-            this.buttonNiqCalc.Text = "Unique Calc";
-            this.buttonNiqCalc.UseVisualStyleBackColor = true;
-            this.buttonNiqCalc.Click += new System.EventHandler(this.ButtonNiqCalc_Click);
+            buttonNiqCalc.Location = new System.Drawing.Point(1013, 823);
+            buttonNiqCalc.Margin = new Padding(5, 5, 5, 5);
+            buttonNiqCalc.Name = "buttonNiqCalc";
+            buttonNiqCalc.Size = new System.Drawing.Size(155, 35);
+            buttonNiqCalc.TabIndex = 136;
+            buttonNiqCalc.Text = "Unique Calc";
+            buttonNiqCalc.UseVisualStyleBackColor = true;
+            buttonNiqCalc.Click += ButtonNiqCalc_Click;
             // 
             // buttonOriginSort
             // 
-            this.buttonOriginSort.Location = new System.Drawing.Point(886, 480);
-            this.buttonOriginSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonOriginSort.Name = "buttonOriginSort";
-            this.buttonOriginSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonOriginSort.TabIndex = 142;
-            this.buttonOriginSort.Text = "Origin-Species Sort";
-            this.buttonOriginSort.UseVisualStyleBackColor = true;
-            this.buttonOriginSort.Click += new System.EventHandler(this.ButtonOriginSort_Click);
+            buttonOriginSort.Location = new System.Drawing.Point(1013, 640);
+            buttonOriginSort.Margin = new Padding(5, 5, 5, 5);
+            buttonOriginSort.Name = "buttonOriginSort";
+            buttonOriginSort.Size = new System.Drawing.Size(155, 35);
+            buttonOriginSort.TabIndex = 142;
+            buttonOriginSort.Text = "Origin-Species Sort";
+            buttonOriginSort.UseVisualStyleBackColor = true;
+            buttonOriginSort.Click += ButtonOriginSort_Click;
             // 
             // buttonMoveMonTally
             // 
-            this.buttonMoveMonTally.Location = new System.Drawing.Point(1043, 547);
-            this.buttonMoveMonTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMoveMonTally.Name = "buttonMoveMonTally";
-            this.buttonMoveMonTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonMoveMonTally.TabIndex = 143;
-            this.buttonMoveMonTally.Text = "Mon Move Tally";
-            this.buttonMoveMonTally.UseVisualStyleBackColor = true;
-            this.buttonMoveMonTally.Click += new System.EventHandler(this.ButtonMoveMonTally_Click);
+            buttonMoveMonTally.Location = new System.Drawing.Point(1192, 729);
+            buttonMoveMonTally.Margin = new Padding(5, 5, 5, 5);
+            buttonMoveMonTally.Name = "buttonMoveMonTally";
+            buttonMoveMonTally.Size = new System.Drawing.Size(155, 35);
+            buttonMoveMonTally.TabIndex = 143;
+            buttonMoveMonTally.Text = "Mon Move Tally";
+            buttonMoveMonTally.UseVisualStyleBackColor = true;
+            buttonMoveMonTally.Click += ButtonMoveMonTally_Click;
             // 
             // buttonRanMon
             // 
-            this.buttonRanMon.Location = new System.Drawing.Point(1089, 54);
-            this.buttonRanMon.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonRanMon.Name = "buttonRanMon";
-            this.buttonRanMon.Size = new System.Drawing.Size(111, 26);
-            this.buttonRanMon.TabIndex = 144;
-            this.buttonRanMon.Text = "Random Mon";
-            this.buttonRanMon.UseVisualStyleBackColor = true;
-            this.buttonRanMon.Click += new System.EventHandler(this.ButtonRanMon_Click);
+            buttonRanMon.Location = new System.Drawing.Point(1245, 72);
+            buttonRanMon.Margin = new Padding(5, 5, 5, 5);
+            buttonRanMon.Name = "buttonRanMon";
+            buttonRanMon.Size = new System.Drawing.Size(127, 35);
+            buttonRanMon.TabIndex = 144;
+            buttonRanMon.Text = "Random Mon";
+            buttonRanMon.UseVisualStyleBackColor = true;
+            buttonRanMon.Click += ButtonRanMon_Click;
             // 
             // buttonSaveMon
             // 
-            this.buttonSaveMon.Location = new System.Drawing.Point(175, 542);
-            this.buttonSaveMon.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSaveMon.Name = "buttonSaveMon";
-            this.buttonSaveMon.Size = new System.Drawing.Size(136, 26);
-            this.buttonSaveMon.TabIndex = 43;
-            this.buttonSaveMon.Text = "Save";
-            this.buttonSaveMon.UseVisualStyleBackColor = true;
-            this.buttonSaveMon.Click += new System.EventHandler(this.ButtonSaveMon_Click);
+            buttonSaveMon.Location = new System.Drawing.Point(200, 723);
+            buttonSaveMon.Margin = new Padding(5, 5, 5, 5);
+            buttonSaveMon.Name = "buttonSaveMon";
+            buttonSaveMon.Size = new System.Drawing.Size(155, 35);
+            buttonSaveMon.TabIndex = 43;
+            buttonSaveMon.Text = "Save";
+            buttonSaveMon.UseVisualStyleBackColor = true;
+            buttonSaveMon.Click += ButtonSaveMon_Click;
             // 
             // buttonRevertMon
             // 
-            this.buttonRevertMon.Location = new System.Drawing.Point(175, 583);
-            this.buttonRevertMon.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonRevertMon.Name = "buttonRevertMon";
-            this.buttonRevertMon.Size = new System.Drawing.Size(136, 26);
-            this.buttonRevertMon.TabIndex = 44;
-            this.buttonRevertMon.Text = "Revert";
-            this.buttonRevertMon.UseVisualStyleBackColor = true;
-            this.buttonRevertMon.Click += new System.EventHandler(this.ButtonRevertMon_Click);
+            buttonRevertMon.Location = new System.Drawing.Point(200, 777);
+            buttonRevertMon.Margin = new Padding(5, 5, 5, 5);
+            buttonRevertMon.Name = "buttonRevertMon";
+            buttonRevertMon.Size = new System.Drawing.Size(155, 35);
+            buttonRevertMon.TabIndex = 44;
+            buttonRevertMon.Text = "Revert";
+            buttonRevertMon.UseVisualStyleBackColor = true;
+            buttonRevertMon.Click += ButtonRevertMon_Click;
             // 
             // textBoxNickname
             // 
-            this.textBoxNickname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(132)))), ((int)(((byte)(218)))));
-            this.textBoxNickname.ForeColor = System.Drawing.Color.White;
-            this.textBoxNickname.Location = new System.Drawing.Point(262, 43);
-            this.textBoxNickname.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxNickname.Name = "textBoxNickname";
-            this.textBoxNickname.Size = new System.Drawing.Size(98, 23);
-            this.textBoxNickname.TabIndex = 8;
+            textBoxNickname.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
+            textBoxNickname.ForeColor = System.Drawing.Color.White;
+            textBoxNickname.Location = new System.Drawing.Point(299, 57);
+            textBoxNickname.Margin = new Padding(5, 5, 5, 5);
+            textBoxNickname.Name = "textBoxNickname";
+            textBoxNickname.Size = new System.Drawing.Size(111, 27);
+            textBoxNickname.TabIndex = 8;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataToolStripMenuItem,
-            this.filterToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1245, 24);
-            this.menuStrip1.TabIndex = 148;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dataToolStripMenuItem, filterToolStripMenuItem });
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(5, 1, 0, 1);
+            menuStrip1.Size = new System.Drawing.Size(1423, 26);
+            menuStrip1.TabIndex = 148;
+            menuStrip1.Text = "menuStrip1";
             // 
             // dataToolStripMenuItem
             // 
-            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.importToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.gamesToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(43, 22);
-            this.dataToolStripMenuItem.Text = "Data";
+            dataToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenuItem, importToolStripMenuItem, saveToolStripMenuItem, gamesToolStripMenuItem, exitToolStripMenuItem });
+            dataToolStripMenuItem.Name = "dataToolStripMenuItem";
+            dataToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            dataToolStripMenuItem.Text = "Data";
             // 
             // addToolStripMenuItem
             // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.addToolStripMenuItem.Text = "Add";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            addToolStripMenuItem.Text = "Add";
+            addToolStripMenuItem.Click += AddToolStripMenuItem_Click;
             // 
             // importToolStripMenuItem
             // 
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.importToolStripMenuItem.Text = "Import";
-            this.importToolStripMenuItem.Click += new System.EventHandler(this.ImportToolStripMenuItem_Click);
+            importToolStripMenuItem.Name = "importToolStripMenuItem";
+            importToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            importToolStripMenuItem.Text = "Import";
+            importToolStripMenuItem.Click += ImportToolStripMenuItem_Click;
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Visible = false;
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Visible = false;
+            saveToolStripMenuItem.Click += SaveToolStripMenuItem_Click;
             // 
             // gamesToolStripMenuItem
             // 
-            this.gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
-            this.gamesToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.gamesToolStripMenuItem.Text = "Games";
-            this.gamesToolStripMenuItem.Click += new System.EventHandler(this.GamesToolStripMenuItem_Click);
+            gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
+            gamesToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            gamesToolStripMenuItem.Text = "Games";
+            gamesToolStripMenuItem.Click += GamesToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
             // filterToolStripMenuItem
             // 
-            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gameToolStripMenuItem,
-            this.originToolStripMenuItem,
-            this.speciesToolStripMenuItem,
-            this.levelToolStripMenuItem,
-            this.presetsToolStripMenuItem});
-            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
-            this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 22);
-            this.filterToolStripMenuItem.Text = "Filter";
+            filterToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gameToolStripMenuItem, originToolStripMenuItem, speciesToolStripMenuItem, levelToolStripMenuItem, presetsToolStripMenuItem });
+            filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            filterToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            filterToolStripMenuItem.Text = "Filter";
             // 
             // gameToolStripMenuItem
             // 
-            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.gameToolStripMenuItem.Text = "Game";
-            this.gameToolStripMenuItem.Click += new System.EventHandler(this.GameToolStripMenuItem_Click);
+            gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            gameToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            gameToolStripMenuItem.Text = "Game";
+            gameToolStripMenuItem.Click += GameToolStripMenuItem_Click;
             // 
             // originToolStripMenuItem
             // 
-            this.originToolStripMenuItem.Name = "originToolStripMenuItem";
-            this.originToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.originToolStripMenuItem.Text = "Origin";
-            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
+            originToolStripMenuItem.Name = "originToolStripMenuItem";
+            originToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            originToolStripMenuItem.Text = "Origin";
+            originToolStripMenuItem.Click += originToolStripMenuItem_Click;
             // 
             // speciesToolStripMenuItem
             // 
-            this.speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
-            this.speciesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.speciesToolStripMenuItem.Text = "Species";
-            this.speciesToolStripMenuItem.Click += new System.EventHandler(this.SpeciesToolStripMenuItem_Click);
+            speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
+            speciesToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            speciesToolStripMenuItem.Text = "Species";
+            speciesToolStripMenuItem.Click += SpeciesToolStripMenuItem_Click;
             // 
             // levelToolStripMenuItem
             // 
-            this.levelToolStripMenuItem.Name = "levelToolStripMenuItem";
-            this.levelToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.levelToolStripMenuItem.Text = "Level";
-            this.levelToolStripMenuItem.Click += new System.EventHandler(this.levelToolStripMenuItem_Click);
+            levelToolStripMenuItem.Name = "levelToolStripMenuItem";
+            levelToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            levelToolStripMenuItem.Text = "Level";
+            levelToolStripMenuItem.Click += levelToolStripMenuItem_Click;
             // 
             // presetsToolStripMenuItem
             // 
-            this.presetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeSwShToolStripMenuItem});
-            this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
-            this.presetsToolStripMenuItem.Text = "Presets";
+            presetsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { homeSwShToolStripMenuItem });
+            presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
+            presetsToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            presetsToolStripMenuItem.Text = "Presets";
             // 
             // homeSwShToolStripMenuItem
             // 
-            this.homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
-            this.homeSwShToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.homeSwShToolStripMenuItem.Text = "Home->SwSh";
-            this.homeSwShToolStripMenuItem.Click += new System.EventHandler(this.homeSwShToolStripMenuItem_Click);
+            homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
+            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            homeSwShToolStripMenuItem.Text = "Home->SwSh";
+            homeSwShToolStripMenuItem.Click += homeSwShToolStripMenuItem_Click;
             // 
             // textBoxHP
             // 
-            this.textBoxHP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxHP.ForeColor = System.Drawing.Color.Black;
-            this.textBoxHP.Location = new System.Drawing.Point(48, 241);
-            this.textBoxHP.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxHP.Name = "textBoxHP";
-            this.textBoxHP.Size = new System.Drawing.Size(52, 23);
-            this.textBoxHP.TabIndex = 20;
+            textBoxHP.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxHP.ForeColor = System.Drawing.Color.Black;
+            textBoxHP.Location = new System.Drawing.Point(55, 321);
+            textBoxHP.Margin = new Padding(5, 5, 5, 5);
+            textBoxHP.Name = "textBoxHP";
+            textBoxHP.Size = new System.Drawing.Size(59, 27);
+            textBoxHP.TabIndex = 20;
             // 
             // textBoxAttack
             // 
-            this.textBoxAttack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxAttack.ForeColor = System.Drawing.Color.Black;
-            this.textBoxAttack.Location = new System.Drawing.Point(71, 271);
-            this.textBoxAttack.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxAttack.Name = "textBoxAttack";
-            this.textBoxAttack.Size = new System.Drawing.Size(52, 23);
-            this.textBoxAttack.TabIndex = 21;
+            textBoxAttack.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxAttack.ForeColor = System.Drawing.Color.Black;
+            textBoxAttack.Location = new System.Drawing.Point(81, 361);
+            textBoxAttack.Margin = new Padding(5, 5, 5, 5);
+            textBoxAttack.Name = "textBoxAttack";
+            textBoxAttack.Size = new System.Drawing.Size(59, 27);
+            textBoxAttack.TabIndex = 21;
             // 
             // textBoxDefense
             // 
-            this.textBoxDefense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxDefense.ForeColor = System.Drawing.Color.Black;
-            this.textBoxDefense.Location = new System.Drawing.Point(83, 301);
-            this.textBoxDefense.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxDefense.Name = "textBoxDefense";
-            this.textBoxDefense.Size = new System.Drawing.Size(52, 23);
-            this.textBoxDefense.TabIndex = 22;
+            textBoxDefense.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxDefense.ForeColor = System.Drawing.Color.Black;
+            textBoxDefense.Location = new System.Drawing.Point(95, 401);
+            textBoxDefense.Margin = new Padding(5, 5, 5, 5);
+            textBoxDefense.Name = "textBoxDefense";
+            textBoxDefense.Size = new System.Drawing.Size(59, 27);
+            textBoxDefense.TabIndex = 22;
             // 
             // textBoxSpAtk
             // 
-            this.textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxSpAtk.ForeColor = System.Drawing.Color.Black;
-            this.textBoxSpAtk.Location = new System.Drawing.Point(77, 331);
-            this.textBoxSpAtk.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSpAtk.Name = "textBoxSpAtk";
-            this.textBoxSpAtk.Size = new System.Drawing.Size(52, 23);
-            this.textBoxSpAtk.TabIndex = 23;
+            textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxSpAtk.ForeColor = System.Drawing.Color.Black;
+            textBoxSpAtk.Location = new System.Drawing.Point(88, 441);
+            textBoxSpAtk.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpAtk.Name = "textBoxSpAtk";
+            textBoxSpAtk.Size = new System.Drawing.Size(59, 27);
+            textBoxSpAtk.TabIndex = 23;
             // 
             // textBoxSpDef
             // 
-            this.textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxSpDef.ForeColor = System.Drawing.Color.Black;
-            this.textBoxSpDef.Location = new System.Drawing.Point(77, 361);
-            this.textBoxSpDef.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSpDef.Name = "textBoxSpDef";
-            this.textBoxSpDef.Size = new System.Drawing.Size(52, 23);
-            this.textBoxSpDef.TabIndex = 24;
+            textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxSpDef.ForeColor = System.Drawing.Color.Black;
+            textBoxSpDef.Location = new System.Drawing.Point(88, 481);
+            textBoxSpDef.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpDef.Name = "textBoxSpDef";
+            textBoxSpDef.Size = new System.Drawing.Size(59, 27);
+            textBoxSpDef.TabIndex = 24;
             // 
             // textBoxSpeed
             // 
-            this.textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxSpeed.ForeColor = System.Drawing.Color.Black;
-            this.textBoxSpeed.Location = new System.Drawing.Point(69, 391);
-            this.textBoxSpeed.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSpeed.Name = "textBoxSpeed";
-            this.textBoxSpeed.Size = new System.Drawing.Size(52, 23);
-            this.textBoxSpeed.TabIndex = 25;
+            textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxSpeed.ForeColor = System.Drawing.Color.Black;
+            textBoxSpeed.Location = new System.Drawing.Point(79, 521);
+            textBoxSpeed.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpeed.Name = "textBoxSpeed";
+            textBoxSpeed.Size = new System.Drawing.Size(59, 27);
+            textBoxSpeed.TabIndex = 25;
             // 
             // comboBoxGame
             // 
-            this.comboBoxGame.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxGame.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxGame.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxGame.FormattingEnabled = true;
-            this.comboBoxGame.Location = new System.Drawing.Point(451, 500);
-            this.comboBoxGame.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxGame.Name = "comboBoxGame";
-            this.comboBoxGame.Size = new System.Drawing.Size(210, 23);
-            this.comboBoxGame.TabIndex = 41;
-            this.comboBoxGame.SelectedValueChanged += new System.EventHandler(this.ComboBoxGame_SelectedValueChanged);
+            comboBoxGame.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxGame.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxGame.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxGame.ForeColor = System.Drawing.Color.Black;
+            comboBoxGame.FormattingEnabled = true;
+            comboBoxGame.Location = new System.Drawing.Point(515, 667);
+            comboBoxGame.Margin = new Padding(0);
+            comboBoxGame.Name = "comboBoxGame";
+            comboBoxGame.Size = new System.Drawing.Size(239, 28);
+            comboBoxGame.TabIndex = 41;
+            comboBoxGame.SelectedValueChanged += ComboBoxGame_SelectedValueChanged;
             // 
             // textBoxOT
             // 
-            this.textBoxOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxOT.ForeColor = System.Drawing.Color.Black;
-            this.textBoxOT.Location = new System.Drawing.Point(437, 441);
-            this.textBoxOT.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxOT.Name = "textBoxOT";
-            this.textBoxOT.Size = new System.Drawing.Size(105, 23);
-            this.textBoxOT.TabIndex = 36;
+            textBoxOT.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxOT.ForeColor = System.Drawing.Color.Black;
+            textBoxOT.Location = new System.Drawing.Point(499, 588);
+            textBoxOT.Margin = new Padding(5, 5, 5, 5);
+            textBoxOT.Name = "textBoxOT";
+            textBoxOT.Size = new System.Drawing.Size(119, 27);
+            textBoxOT.TabIndex = 36;
             // 
             // labelID
             // 
-            this.labelID.AutoSize = true;
-            this.labelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelID.ForeColor = System.Drawing.Color.Black;
-            this.labelID.Location = new System.Drawing.Point(549, 444);
-            this.labelID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(24, 13);
-            this.labelID.TabIndex = 157;
-            this.labelID.Text = "ID:";
+            labelID.AutoSize = true;
+            labelID.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelID.ForeColor = System.Drawing.Color.Black;
+            labelID.Location = new System.Drawing.Point(627, 592);
+            labelID.Margin = new Padding(5, 0, 5, 0);
+            labelID.Name = "labelID";
+            labelID.Size = new System.Drawing.Size(28, 17);
+            labelID.TabIndex = 157;
+            labelID.Text = "ID:";
             // 
             // textBoxID
             // 
-            this.textBoxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxID.ForeColor = System.Drawing.Color.Black;
-            this.textBoxID.Location = new System.Drawing.Point(584, 442);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(77, 23);
-            this.textBoxID.TabIndex = 38;
+            textBoxID.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxID.ForeColor = System.Drawing.Color.Black;
+            textBoxID.Location = new System.Drawing.Point(667, 589);
+            textBoxID.Margin = new Padding(5, 5, 5, 5);
+            textBoxID.Name = "textBoxID";
+            textBoxID.Size = new System.Drawing.Size(87, 27);
+            textBoxID.TabIndex = 38;
             // 
             // BTN_Shinytize
             // 
-            this.BTN_Shinytize.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BTN_Shinytize.Location = new System.Drawing.Point(290, 111);
-            this.BTN_Shinytize.Margin = new System.Windows.Forms.Padding(0);
-            this.BTN_Shinytize.Name = "BTN_Shinytize";
-            this.BTN_Shinytize.Size = new System.Drawing.Size(28, 25);
-            this.BTN_Shinytize.TabIndex = 159;
-            this.BTN_Shinytize.Tag = "";
-            this.BTN_Shinytize.Text = "☆";
-            this.BTN_Shinytize.UseVisualStyleBackColor = true;
-            this.BTN_Shinytize.Click += new System.EventHandler(this.BTN_Shinytize_Click);
+            BTN_Shinytize.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            BTN_Shinytize.Location = new System.Drawing.Point(331, 148);
+            BTN_Shinytize.Margin = new Padding(0);
+            BTN_Shinytize.Name = "BTN_Shinytize";
+            BTN_Shinytize.Size = new System.Drawing.Size(32, 33);
+            BTN_Shinytize.TabIndex = 159;
+            BTN_Shinytize.Tag = "";
+            BTN_Shinytize.Text = "☆";
+            BTN_Shinytize.UseVisualStyleBackColor = true;
+            BTN_Shinytize.Click += BTN_Shinytize_Click;
             // 
             // buttonMonBallTally
             // 
-            this.buttonMonBallTally.Location = new System.Drawing.Point(886, 547);
-            this.buttonMonBallTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMonBallTally.Name = "buttonMonBallTally";
-            this.buttonMonBallTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonMonBallTally.TabIndex = 160;
-            this.buttonMonBallTally.Text = "Mon Ball Tally";
-            this.buttonMonBallTally.UseVisualStyleBackColor = true;
-            this.buttonMonBallTally.Click += new System.EventHandler(this.ButtonMonBallTally_Click);
+            buttonMonBallTally.Location = new System.Drawing.Point(1013, 729);
+            buttonMonBallTally.Margin = new Padding(5, 5, 5, 5);
+            buttonMonBallTally.Name = "buttonMonBallTally";
+            buttonMonBallTally.Size = new System.Drawing.Size(155, 35);
+            buttonMonBallTally.TabIndex = 160;
+            buttonMonBallTally.Text = "Mon Ball Tally";
+            buttonMonBallTally.UseVisualStyleBackColor = true;
+            buttonMonBallTally.Click += ButtonMonBallTally_Click;
             // 
             // comboBoxPkrs
             // 
-            this.comboBoxPkrs.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxPkrs.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxPkrs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxPkrs.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxPkrs.FormattingEnabled = true;
-            this.comboBoxPkrs.Items.AddRange(new object[] {
-            "None",
-            "Infected",
-            "Cured"});
-            this.comboBoxPkrs.Location = new System.Drawing.Point(11, 205);
-            this.comboBoxPkrs.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxPkrs.Name = "comboBoxPkrs";
-            this.comboBoxPkrs.Size = new System.Drawing.Size(84, 23);
-            this.comboBoxPkrs.TabIndex = 161;
+            comboBoxPkrs.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxPkrs.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxPkrs.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxPkrs.ForeColor = System.Drawing.Color.Black;
+            comboBoxPkrs.FormattingEnabled = true;
+            comboBoxPkrs.Items.AddRange(new object[] { "None", "Infected", "Cured" });
+            comboBoxPkrs.Location = new System.Drawing.Point(13, 273);
+            comboBoxPkrs.Margin = new Padding(0);
+            comboBoxPkrs.Name = "comboBoxPkrs";
+            comboBoxPkrs.Size = new System.Drawing.Size(95, 28);
+            comboBoxPkrs.TabIndex = 161;
             // 
             // buttonLevelTally
             // 
-            this.buttonLevelTally.Location = new System.Drawing.Point(1043, 514);
-            this.buttonLevelTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonLevelTally.Name = "buttonLevelTally";
-            this.buttonLevelTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonLevelTally.TabIndex = 162;
-            this.buttonLevelTally.Text = "Level Tally";
-            this.buttonLevelTally.UseVisualStyleBackColor = true;
-            this.buttonLevelTally.Click += new System.EventHandler(this.ButtonLevelTally_Click);
+            buttonLevelTally.Location = new System.Drawing.Point(1192, 685);
+            buttonLevelTally.Margin = new Padding(5, 5, 5, 5);
+            buttonLevelTally.Name = "buttonLevelTally";
+            buttonLevelTally.Size = new System.Drawing.Size(155, 35);
+            buttonLevelTally.TabIndex = 162;
+            buttonLevelTally.Text = "Level Tally";
+            buttonLevelTally.UseVisualStyleBackColor = true;
+            buttonLevelTally.Click += ButtonLevelTally_Click;
             // 
             // comboBoxPlus
             // 
-            this.comboBoxPlus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxPlus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxPlus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxPlus.ForeColor = System.Drawing.Color.Red;
-            this.comboBoxPlus.FormattingEnabled = true;
-            this.comboBoxPlus.Items.AddRange(new object[] {
-            "",
-            "Atk",
-            "Def",
-            "Spd",
-            "SpA",
-            "SpD"});
-            this.comboBoxPlus.Location = new System.Drawing.Point(209, 164);
-            this.comboBoxPlus.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxPlus.Name = "comboBoxPlus";
-            this.comboBoxPlus.Size = new System.Drawing.Size(64, 23);
-            this.comboBoxPlus.TabIndex = 163;
+            comboBoxPlus.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxPlus.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxPlus.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxPlus.ForeColor = System.Drawing.Color.Red;
+            comboBoxPlus.FormattingEnabled = true;
+            comboBoxPlus.Items.AddRange(new object[] { "", "Atk", "Def", "Spd", "SpA", "SpD" });
+            comboBoxPlus.Location = new System.Drawing.Point(239, 219);
+            comboBoxPlus.Margin = new Padding(0);
+            comboBoxPlus.Name = "comboBoxPlus";
+            comboBoxPlus.Size = new System.Drawing.Size(73, 28);
+            comboBoxPlus.TabIndex = 163;
             // 
             // comboBoxMinus
             // 
-            this.comboBoxMinus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxMinus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxMinus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxMinus.ForeColor = System.Drawing.Color.Blue;
-            this.comboBoxMinus.FormattingEnabled = true;
-            this.comboBoxMinus.Items.AddRange(new object[] {
-            "",
-            "Atk",
-            "Def",
-            "Spd",
-            "SpA",
-            "SpD"});
-            this.comboBoxMinus.Location = new System.Drawing.Point(274, 164);
-            this.comboBoxMinus.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMinus.Name = "comboBoxMinus";
-            this.comboBoxMinus.Size = new System.Drawing.Size(64, 23);
-            this.comboBoxMinus.TabIndex = 164;
+            comboBoxMinus.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxMinus.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxMinus.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMinus.ForeColor = System.Drawing.Color.Blue;
+            comboBoxMinus.FormattingEnabled = true;
+            comboBoxMinus.Items.AddRange(new object[] { "", "Atk", "Def", "Spd", "SpA", "SpD" });
+            comboBoxMinus.Location = new System.Drawing.Point(313, 219);
+            comboBoxMinus.Margin = new Padding(0);
+            comboBoxMinus.Name = "comboBoxMinus";
+            comboBoxMinus.Size = new System.Drawing.Size(73, 28);
+            comboBoxMinus.TabIndex = 164;
             // 
             // labelRibbons
             // 
-            this.labelRibbons.AutoSize = true;
-            this.labelRibbons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelRibbons.ForeColor = System.Drawing.Color.Black;
-            this.labelRibbons.Location = new System.Drawing.Point(252, 215);
-            this.labelRibbons.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelRibbons.Name = "labelRibbons";
-            this.labelRibbons.Size = new System.Drawing.Size(57, 13);
-            this.labelRibbons.TabIndex = 165;
-            this.labelRibbons.Text = "Ribbons:";
-            this.labelRibbons.Click += new System.EventHandler(this.labelRibbons_Click);
+            labelRibbons.AutoSize = true;
+            labelRibbons.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelRibbons.ForeColor = System.Drawing.Color.Black;
+            labelRibbons.Location = new System.Drawing.Point(288, 287);
+            labelRibbons.Margin = new Padding(5, 0, 5, 0);
+            labelRibbons.Name = "labelRibbons";
+            labelRibbons.Size = new System.Drawing.Size(72, 17);
+            labelRibbons.TabIndex = 165;
+            labelRibbons.Text = "Ribbons:";
+            labelRibbons.Click += labelRibbons_Click;
             // 
             // ribbonPic0
             // 
-            this.ribbonPic0.Location = new System.Drawing.Point(172, 241);
-            this.ribbonPic0.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic0.Name = "ribbonPic0";
-            this.ribbonPic0.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic0.TabIndex = 166;
-            this.ribbonPic0.TabStop = false;
+            ribbonPic0.Location = new System.Drawing.Point(197, 321);
+            ribbonPic0.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic0.Name = "ribbonPic0";
+            ribbonPic0.Size = new System.Drawing.Size(53, 61);
+            ribbonPic0.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic0.TabIndex = 166;
+            ribbonPic0.TabStop = false;
             // 
             // ribbonPic1
             // 
-            this.ribbonPic1.Location = new System.Drawing.Point(218, 241);
-            this.ribbonPic1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic1.Name = "ribbonPic1";
-            this.ribbonPic1.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic1.TabIndex = 167;
-            this.ribbonPic1.TabStop = false;
+            ribbonPic1.Location = new System.Drawing.Point(249, 321);
+            ribbonPic1.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic1.Name = "ribbonPic1";
+            ribbonPic1.Size = new System.Drawing.Size(53, 61);
+            ribbonPic1.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic1.TabIndex = 167;
+            ribbonPic1.TabStop = false;
             // 
             // ribbonPic2
             // 
-            this.ribbonPic2.Location = new System.Drawing.Point(263, 241);
-            this.ribbonPic2.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic2.Name = "ribbonPic2";
-            this.ribbonPic2.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic2.TabIndex = 168;
-            this.ribbonPic2.TabStop = false;
+            ribbonPic2.Location = new System.Drawing.Point(301, 321);
+            ribbonPic2.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic2.Name = "ribbonPic2";
+            ribbonPic2.Size = new System.Drawing.Size(53, 61);
+            ribbonPic2.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic2.TabIndex = 168;
+            ribbonPic2.TabStop = false;
             // 
             // ribbonPic3
             // 
-            this.ribbonPic3.Location = new System.Drawing.Point(309, 241);
-            this.ribbonPic3.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic3.Name = "ribbonPic3";
-            this.ribbonPic3.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic3.TabIndex = 169;
-            this.ribbonPic3.TabStop = false;
+            ribbonPic3.Location = new System.Drawing.Point(353, 321);
+            ribbonPic3.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic3.Name = "ribbonPic3";
+            ribbonPic3.Size = new System.Drawing.Size(53, 61);
+            ribbonPic3.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic3.TabIndex = 169;
+            ribbonPic3.TabStop = false;
             // 
             // ribbonPic4
             // 
-            this.ribbonPic4.Location = new System.Drawing.Point(354, 241);
-            this.ribbonPic4.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic4.Name = "ribbonPic4";
-            this.ribbonPic4.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic4.TabIndex = 170;
-            this.ribbonPic4.TabStop = false;
+            ribbonPic4.Location = new System.Drawing.Point(405, 321);
+            ribbonPic4.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic4.Name = "ribbonPic4";
+            ribbonPic4.Size = new System.Drawing.Size(53, 61);
+            ribbonPic4.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic4.TabIndex = 170;
+            ribbonPic4.TabStop = false;
             // 
             // pictureBoxGMax
             // 
-            this.pictureBoxGMax.Location = new System.Drawing.Point(315, 137);
-            this.pictureBoxGMax.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxGMax.Name = "pictureBoxGMax";
-            this.pictureBoxGMax.Size = new System.Drawing.Size(30, 23);
-            this.pictureBoxGMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxGMax.TabIndex = 171;
-            this.pictureBoxGMax.TabStop = false;
+            pictureBoxGMax.Location = new System.Drawing.Point(360, 183);
+            pictureBoxGMax.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxGMax.Name = "pictureBoxGMax";
+            pictureBoxGMax.Size = new System.Drawing.Size(30, 23);
+            pictureBoxGMax.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxGMax.TabIndex = 171;
+            pictureBoxGMax.TabStop = false;
             // 
             // textBoxDynaLv
             // 
-            this.textBoxDynaLv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.textBoxDynaLv.ForeColor = System.Drawing.Color.Black;
-            this.textBoxDynaLv.Location = new System.Drawing.Point(279, 141);
-            this.textBoxDynaLv.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxDynaLv.Name = "textBoxDynaLv";
-            this.textBoxDynaLv.Size = new System.Drawing.Size(28, 23);
-            this.textBoxDynaLv.TabIndex = 172;
+            textBoxDynaLv.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            textBoxDynaLv.ForeColor = System.Drawing.Color.Black;
+            textBoxDynaLv.Location = new System.Drawing.Point(319, 188);
+            textBoxDynaLv.Margin = new Padding(5, 5, 5, 5);
+            textBoxDynaLv.Name = "textBoxDynaLv";
+            textBoxDynaLv.Size = new System.Drawing.Size(31, 27);
+            textBoxDynaLv.TabIndex = 172;
             // 
             // labelGimmick
             // 
-            this.labelGimmick.AutoSize = true;
-            this.labelGimmick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelGimmick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelGimmick.ForeColor = System.Drawing.Color.Black;
-            this.labelGimmick.Location = new System.Drawing.Point(206, 143);
-            this.labelGimmick.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelGimmick.Name = "labelGimmick";
-            this.labelGimmick.Size = new System.Drawing.Size(62, 13);
-            this.labelGimmick.TabIndex = 173;
-            this.labelGimmick.Text = "Dynamax:";
-            this.labelGimmick.Click += new System.EventHandler(this.labelDynamax_Click);
+            labelGimmick.AutoSize = true;
+            labelGimmick.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelGimmick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelGimmick.ForeColor = System.Drawing.Color.Black;
+            labelGimmick.Location = new System.Drawing.Point(235, 191);
+            labelGimmick.Margin = new Padding(5, 0, 5, 0);
+            labelGimmick.Name = "labelGimmick";
+            labelGimmick.Size = new System.Drawing.Size(78, 17);
+            labelGimmick.TabIndex = 173;
+            labelGimmick.Text = "Dynamax:";
+            labelGimmick.Click += labelDynamax_Click;
             // 
             // buttonMonInfo
             // 
-            this.buttonMonInfo.Location = new System.Drawing.Point(731, 583);
-            this.buttonMonInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonMonInfo.Name = "buttonMonInfo";
-            this.buttonMonInfo.Size = new System.Drawing.Size(136, 26);
-            this.buttonMonInfo.TabIndex = 174;
-            this.buttonMonInfo.Text = "Mon Data";
-            this.buttonMonInfo.UseVisualStyleBackColor = true;
-            this.buttonMonInfo.Click += new System.EventHandler(this.ButtonMonInfo_Click);
+            buttonMonInfo.Location = new System.Drawing.Point(835, 777);
+            buttonMonInfo.Margin = new Padding(5, 5, 5, 5);
+            buttonMonInfo.Name = "buttonMonInfo";
+            buttonMonInfo.Size = new System.Drawing.Size(155, 35);
+            buttonMonInfo.TabIndex = 174;
+            buttonMonInfo.Text = "Mon Data";
+            buttonMonInfo.UseVisualStyleBackColor = true;
+            buttonMonInfo.Click += ButtonMonInfo_Click;
             // 
             // ribbonPic9
             // 
-            this.ribbonPic9.Location = new System.Drawing.Point(354, 286);
-            this.ribbonPic9.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic9.Name = "ribbonPic9";
-            this.ribbonPic9.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic9.TabIndex = 179;
-            this.ribbonPic9.TabStop = false;
+            ribbonPic9.Location = new System.Drawing.Point(405, 381);
+            ribbonPic9.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic9.Name = "ribbonPic9";
+            ribbonPic9.Size = new System.Drawing.Size(53, 61);
+            ribbonPic9.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic9.TabIndex = 179;
+            ribbonPic9.TabStop = false;
             // 
             // ribbonPic8
             // 
-            this.ribbonPic8.Location = new System.Drawing.Point(309, 286);
-            this.ribbonPic8.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic8.Name = "ribbonPic8";
-            this.ribbonPic8.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic8.TabIndex = 178;
-            this.ribbonPic8.TabStop = false;
+            ribbonPic8.Location = new System.Drawing.Point(353, 381);
+            ribbonPic8.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic8.Name = "ribbonPic8";
+            ribbonPic8.Size = new System.Drawing.Size(53, 61);
+            ribbonPic8.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic8.TabIndex = 178;
+            ribbonPic8.TabStop = false;
             // 
             // ribbonPic7
             // 
-            this.ribbonPic7.Location = new System.Drawing.Point(263, 286);
-            this.ribbonPic7.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic7.Name = "ribbonPic7";
-            this.ribbonPic7.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic7.TabIndex = 177;
-            this.ribbonPic7.TabStop = false;
+            ribbonPic7.Location = new System.Drawing.Point(301, 381);
+            ribbonPic7.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic7.Name = "ribbonPic7";
+            ribbonPic7.Size = new System.Drawing.Size(53, 61);
+            ribbonPic7.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic7.TabIndex = 177;
+            ribbonPic7.TabStop = false;
             // 
             // ribbonPic6
             // 
-            this.ribbonPic6.Location = new System.Drawing.Point(218, 286);
-            this.ribbonPic6.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic6.Name = "ribbonPic6";
-            this.ribbonPic6.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic6.TabIndex = 176;
-            this.ribbonPic6.TabStop = false;
+            ribbonPic6.Location = new System.Drawing.Point(249, 381);
+            ribbonPic6.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic6.Name = "ribbonPic6";
+            ribbonPic6.Size = new System.Drawing.Size(53, 61);
+            ribbonPic6.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic6.TabIndex = 176;
+            ribbonPic6.TabStop = false;
             // 
             // ribbonPic5
             // 
-            this.ribbonPic5.Location = new System.Drawing.Point(172, 286);
-            this.ribbonPic5.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic5.Name = "ribbonPic5";
-            this.ribbonPic5.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic5.TabIndex = 175;
-            this.ribbonPic5.TabStop = false;
+            ribbonPic5.Location = new System.Drawing.Point(197, 381);
+            ribbonPic5.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic5.Name = "ribbonPic5";
+            ribbonPic5.Size = new System.Drawing.Size(53, 61);
+            ribbonPic5.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic5.TabIndex = 175;
+            ribbonPic5.TabStop = false;
             // 
             // ribbonPic19
             // 
-            this.ribbonPic19.Location = new System.Drawing.Point(354, 376);
-            this.ribbonPic19.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic19.Name = "ribbonPic19";
-            this.ribbonPic19.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic19.TabIndex = 189;
-            this.ribbonPic19.TabStop = false;
+            ribbonPic19.Location = new System.Drawing.Point(405, 501);
+            ribbonPic19.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic19.Name = "ribbonPic19";
+            ribbonPic19.Size = new System.Drawing.Size(53, 61);
+            ribbonPic19.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic19.TabIndex = 189;
+            ribbonPic19.TabStop = false;
             // 
             // ribbonPic18
             // 
-            this.ribbonPic18.Location = new System.Drawing.Point(309, 376);
-            this.ribbonPic18.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic18.Name = "ribbonPic18";
-            this.ribbonPic18.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic18.TabIndex = 188;
-            this.ribbonPic18.TabStop = false;
+            ribbonPic18.Location = new System.Drawing.Point(353, 501);
+            ribbonPic18.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic18.Name = "ribbonPic18";
+            ribbonPic18.Size = new System.Drawing.Size(53, 61);
+            ribbonPic18.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic18.TabIndex = 188;
+            ribbonPic18.TabStop = false;
             // 
             // ribbonPic17
             // 
-            this.ribbonPic17.Location = new System.Drawing.Point(263, 376);
-            this.ribbonPic17.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic17.Name = "ribbonPic17";
-            this.ribbonPic17.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic17.TabIndex = 187;
-            this.ribbonPic17.TabStop = false;
+            ribbonPic17.Location = new System.Drawing.Point(301, 501);
+            ribbonPic17.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic17.Name = "ribbonPic17";
+            ribbonPic17.Size = new System.Drawing.Size(53, 61);
+            ribbonPic17.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic17.TabIndex = 187;
+            ribbonPic17.TabStop = false;
             // 
             // ribbonPic16
             // 
-            this.ribbonPic16.Location = new System.Drawing.Point(218, 376);
-            this.ribbonPic16.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic16.Name = "ribbonPic16";
-            this.ribbonPic16.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic16.TabIndex = 186;
-            this.ribbonPic16.TabStop = false;
+            ribbonPic16.Location = new System.Drawing.Point(249, 501);
+            ribbonPic16.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic16.Name = "ribbonPic16";
+            ribbonPic16.Size = new System.Drawing.Size(53, 61);
+            ribbonPic16.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic16.TabIndex = 186;
+            ribbonPic16.TabStop = false;
             // 
             // ribbonPic15
             // 
-            this.ribbonPic15.Location = new System.Drawing.Point(172, 376);
-            this.ribbonPic15.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic15.Name = "ribbonPic15";
-            this.ribbonPic15.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic15.TabIndex = 185;
-            this.ribbonPic15.TabStop = false;
+            ribbonPic15.Location = new System.Drawing.Point(197, 501);
+            ribbonPic15.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic15.Name = "ribbonPic15";
+            ribbonPic15.Size = new System.Drawing.Size(53, 61);
+            ribbonPic15.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic15.TabIndex = 185;
+            ribbonPic15.TabStop = false;
             // 
             // ribbonPic14
             // 
-            this.ribbonPic14.Location = new System.Drawing.Point(354, 331);
-            this.ribbonPic14.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic14.Name = "ribbonPic14";
-            this.ribbonPic14.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic14.TabIndex = 184;
-            this.ribbonPic14.TabStop = false;
+            ribbonPic14.Location = new System.Drawing.Point(405, 441);
+            ribbonPic14.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic14.Name = "ribbonPic14";
+            ribbonPic14.Size = new System.Drawing.Size(53, 61);
+            ribbonPic14.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic14.TabIndex = 184;
+            ribbonPic14.TabStop = false;
             // 
             // ribbonPic13
             // 
-            this.ribbonPic13.Location = new System.Drawing.Point(309, 331);
-            this.ribbonPic13.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic13.Name = "ribbonPic13";
-            this.ribbonPic13.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic13.TabIndex = 183;
-            this.ribbonPic13.TabStop = false;
+            ribbonPic13.Location = new System.Drawing.Point(353, 441);
+            ribbonPic13.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic13.Name = "ribbonPic13";
+            ribbonPic13.Size = new System.Drawing.Size(53, 61);
+            ribbonPic13.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic13.TabIndex = 183;
+            ribbonPic13.TabStop = false;
             // 
             // ribbonPic12
             // 
-            this.ribbonPic12.Location = new System.Drawing.Point(263, 331);
-            this.ribbonPic12.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic12.Name = "ribbonPic12";
-            this.ribbonPic12.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic12.TabIndex = 182;
-            this.ribbonPic12.TabStop = false;
+            ribbonPic12.Location = new System.Drawing.Point(301, 441);
+            ribbonPic12.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic12.Name = "ribbonPic12";
+            ribbonPic12.Size = new System.Drawing.Size(53, 61);
+            ribbonPic12.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic12.TabIndex = 182;
+            ribbonPic12.TabStop = false;
             // 
             // ribbonPic11
             // 
-            this.ribbonPic11.Location = new System.Drawing.Point(218, 331);
-            this.ribbonPic11.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic11.Name = "ribbonPic11";
-            this.ribbonPic11.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic11.TabIndex = 181;
-            this.ribbonPic11.TabStop = false;
+            ribbonPic11.Location = new System.Drawing.Point(249, 441);
+            ribbonPic11.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic11.Name = "ribbonPic11";
+            ribbonPic11.Size = new System.Drawing.Size(53, 61);
+            ribbonPic11.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic11.TabIndex = 181;
+            ribbonPic11.TabStop = false;
             // 
             // ribbonPic10
             // 
-            this.ribbonPic10.Location = new System.Drawing.Point(172, 331);
-            this.ribbonPic10.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonPic10.Name = "ribbonPic10";
-            this.ribbonPic10.Size = new System.Drawing.Size(46, 46);
-            this.ribbonPic10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ribbonPic10.TabIndex = 180;
-            this.ribbonPic10.TabStop = false;
+            ribbonPic10.Location = new System.Drawing.Point(197, 441);
+            ribbonPic10.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic10.Name = "ribbonPic10";
+            ribbonPic10.Size = new System.Drawing.Size(53, 61);
+            ribbonPic10.SizeMode = PictureBoxSizeMode.StretchImage;
+            ribbonPic10.TabIndex = 180;
+            ribbonPic10.TabStop = false;
             // 
             // buttonLineInfo
             // 
-            this.buttonLineInfo.Location = new System.Drawing.Point(886, 583);
-            this.buttonLineInfo.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonLineInfo.Name = "buttonLineInfo";
-            this.buttonLineInfo.Size = new System.Drawing.Size(136, 26);
-            this.buttonLineInfo.TabIndex = 190;
-            this.buttonLineInfo.Text = "Line Data";
-            this.buttonLineInfo.UseVisualStyleBackColor = true;
-            this.buttonLineInfo.Click += new System.EventHandler(this.buttonLineInfo_Click);
+            buttonLineInfo.Location = new System.Drawing.Point(1013, 777);
+            buttonLineInfo.Margin = new Padding(5, 5, 5, 5);
+            buttonLineInfo.Name = "buttonLineInfo";
+            buttonLineInfo.Size = new System.Drawing.Size(155, 35);
+            buttonLineInfo.TabIndex = 190;
+            buttonLineInfo.Text = "Line Data";
+            buttonLineInfo.UseVisualStyleBackColor = true;
+            buttonLineInfo.Click += buttonLineInfo_Click;
             // 
             // buttonDupCheck
             // 
-            this.buttonDupCheck.Location = new System.Drawing.Point(1043, 583);
-            this.buttonDupCheck.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonDupCheck.Name = "buttonDupCheck";
-            this.buttonDupCheck.Size = new System.Drawing.Size(136, 26);
-            this.buttonDupCheck.TabIndex = 191;
-            this.buttonDupCheck.Text = "Duplicate Check";
-            this.buttonDupCheck.UseVisualStyleBackColor = true;
-            this.buttonDupCheck.Click += new System.EventHandler(this.buttonDupCheck_Click);
+            buttonDupCheck.Location = new System.Drawing.Point(1192, 777);
+            buttonDupCheck.Margin = new Padding(5, 5, 5, 5);
+            buttonDupCheck.Name = "buttonDupCheck";
+            buttonDupCheck.Size = new System.Drawing.Size(155, 35);
+            buttonDupCheck.TabIndex = 191;
+            buttonDupCheck.Text = "Duplicate Check";
+            buttonDupCheck.UseVisualStyleBackColor = true;
+            buttonDupCheck.Click += buttonDupCheck_Click;
             // 
             // buttonPkrsCount
             // 
-            this.buttonPkrsCount.Location = new System.Drawing.Point(1043, 617);
-            this.buttonPkrsCount.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonPkrsCount.Name = "buttonPkrsCount";
-            this.buttonPkrsCount.Size = new System.Drawing.Size(136, 26);
-            this.buttonPkrsCount.TabIndex = 192;
-            this.buttonPkrsCount.Text = "Pokerus Spread";
-            this.buttonPkrsCount.UseVisualStyleBackColor = true;
-            this.buttonPkrsCount.Click += new System.EventHandler(this.buttonPkrsCount_Click);
+            buttonPkrsCount.Location = new System.Drawing.Point(1192, 823);
+            buttonPkrsCount.Margin = new Padding(5, 5, 5, 5);
+            buttonPkrsCount.Name = "buttonPkrsCount";
+            buttonPkrsCount.Size = new System.Drawing.Size(155, 35);
+            buttonPkrsCount.TabIndex = 192;
+            buttonPkrsCount.Text = "Pokerus Spread";
+            buttonPkrsCount.UseVisualStyleBackColor = true;
+            buttonPkrsCount.Click += buttonPkrsCount_Click;
             // 
             // comboBoxOrigin
             // 
-            this.comboBoxOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxOrigin.FormattingEnabled = true;
-            this.comboBoxOrigin.Location = new System.Drawing.Point(451, 470);
-            this.comboBoxOrigin.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxOrigin.Name = "comboBoxOrigin";
-            this.comboBoxOrigin.Size = new System.Drawing.Size(210, 23);
-            this.comboBoxOrigin.TabIndex = 42;
+            comboBoxOrigin.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxOrigin.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxOrigin.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxOrigin.ForeColor = System.Drawing.Color.Black;
+            comboBoxOrigin.FormattingEnabled = true;
+            comboBoxOrigin.Location = new System.Drawing.Point(515, 627);
+            comboBoxOrigin.Margin = new Padding(0);
+            comboBoxOrigin.Name = "comboBoxOrigin";
+            comboBoxOrigin.Size = new System.Drawing.Size(239, 28);
+            comboBoxOrigin.TabIndex = 42;
             // 
             // labelOrigin
             // 
-            this.labelOrigin.AutoSize = true;
-            this.labelOrigin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labelOrigin.ForeColor = System.Drawing.Color.Black;
-            this.labelOrigin.Location = new System.Drawing.Point(396, 473);
-            this.labelOrigin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelOrigin.Name = "labelOrigin";
-            this.labelOrigin.Size = new System.Drawing.Size(44, 13);
-            this.labelOrigin.TabIndex = 194;
-            this.labelOrigin.Text = "Origin:";
+            labelOrigin.AutoSize = true;
+            labelOrigin.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelOrigin.ForeColor = System.Drawing.Color.Black;
+            labelOrigin.Location = new System.Drawing.Point(453, 631);
+            labelOrigin.Margin = new Padding(5, 0, 5, 0);
+            labelOrigin.Name = "labelOrigin";
+            labelOrigin.Size = new System.Drawing.Size(57, 17);
+            labelOrigin.TabIndex = 194;
+            labelOrigin.Text = "Origin:";
             // 
             // buttonGameOriginSort
             // 
-            this.buttonGameOriginSort.Location = new System.Drawing.Point(1043, 446);
-            this.buttonGameOriginSort.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonGameOriginSort.Name = "buttonGameOriginSort";
-            this.buttonGameOriginSort.Size = new System.Drawing.Size(136, 26);
-            this.buttonGameOriginSort.TabIndex = 195;
-            this.buttonGameOriginSort.Text = "Game-Origin Sort";
-            this.buttonGameOriginSort.UseVisualStyleBackColor = true;
-            this.buttonGameOriginSort.Click += new System.EventHandler(this.buttonGameOriginSort_Click);
+            buttonGameOriginSort.Location = new System.Drawing.Point(1192, 595);
+            buttonGameOriginSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameOriginSort.Name = "buttonGameOriginSort";
+            buttonGameOriginSort.Size = new System.Drawing.Size(155, 35);
+            buttonGameOriginSort.TabIndex = 195;
+            buttonGameOriginSort.Text = "Game-Origin Sort";
+            buttonGameOriginSort.UseVisualStyleBackColor = true;
+            buttonGameOriginSort.Click += buttonGameOriginSort_Click;
             // 
             // buttonAssignOrigin
             // 
-            this.buttonAssignOrigin.Location = new System.Drawing.Point(731, 617);
-            this.buttonAssignOrigin.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAssignOrigin.Name = "buttonAssignOrigin";
-            this.buttonAssignOrigin.Size = new System.Drawing.Size(136, 26);
-            this.buttonAssignOrigin.TabIndex = 196;
-            this.buttonAssignOrigin.Text = "Assign Origin";
-            this.buttonAssignOrigin.UseVisualStyleBackColor = true;
-            this.buttonAssignOrigin.Click += new System.EventHandler(this.buttonAssignOrigin_Click);
+            buttonAssignOrigin.Location = new System.Drawing.Point(835, 823);
+            buttonAssignOrigin.Margin = new Padding(5, 5, 5, 5);
+            buttonAssignOrigin.Name = "buttonAssignOrigin";
+            buttonAssignOrigin.Size = new System.Drawing.Size(155, 35);
+            buttonAssignOrigin.TabIndex = 196;
+            buttonAssignOrigin.Text = "Assign Origin";
+            buttonAssignOrigin.UseVisualStyleBackColor = true;
+            buttonAssignOrigin.Click += buttonAssignOrigin_Click;
             // 
             // bpkx1
             // 
-            this.bpkx1.BackColor = System.Drawing.Color.Transparent;
-            this.bpkx1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bpkx1.Location = new System.Drawing.Point(731, 88);
-            this.bpkx1.Margin = new System.Windows.Forms.Padding(4);
-            this.bpkx1.Name = "bpkx1";
-            this.bpkx1.Size = new System.Drawing.Size(68, 56);
-            this.bpkx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bpkx1.TabIndex = 61;
-            this.bpkx1.TabStop = false;
-            this.bpkx1.Tag = "";
+            bpkx1.BackColor = System.Drawing.Color.Transparent;
+            bpkx1.BorderStyle = BorderStyle.FixedSingle;
+            bpkx1.Location = new System.Drawing.Point(835, 117);
+            bpkx1.Margin = new Padding(5, 5, 5, 5);
+            bpkx1.Name = "bpkx1";
+            bpkx1.Size = new System.Drawing.Size(77, 74);
+            bpkx1.SizeMode = PictureBoxSizeMode.StretchImage;
+            bpkx1.TabIndex = 61;
+            bpkx1.TabStop = false;
+            bpkx1.Tag = "";
             // 
             // buttonSortOrder
             // 
-            this.buttonSortOrder.Location = new System.Drawing.Point(731, 413);
-            this.buttonSortOrder.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonSortOrder.Name = "buttonSortOrder";
-            this.buttonSortOrder.Size = new System.Drawing.Size(136, 26);
-            this.buttonSortOrder.TabIndex = 197;
-            this.buttonSortOrder.Text = "Set Dex Order";
-            this.buttonSortOrder.UseVisualStyleBackColor = true;
-            this.buttonSortOrder.Click += new System.EventHandler(this.buttonSortOrder_Click);
+            buttonSortOrder.Location = new System.Drawing.Point(835, 551);
+            buttonSortOrder.Margin = new Padding(5, 5, 5, 5);
+            buttonSortOrder.Name = "buttonSortOrder";
+            buttonSortOrder.Size = new System.Drawing.Size(155, 35);
+            buttonSortOrder.TabIndex = 197;
+            buttonSortOrder.Text = "Set Dex Order";
+            buttonSortOrder.UseVisualStyleBackColor = true;
+            buttonSortOrder.Click += buttonSortOrder_Click;
             // 
             // buttonEditDexes
             // 
-            this.buttonEditDexes.Location = new System.Drawing.Point(1043, 413);
-            this.buttonEditDexes.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonEditDexes.Name = "buttonEditDexes";
-            this.buttonEditDexes.Size = new System.Drawing.Size(136, 26);
-            this.buttonEditDexes.TabIndex = 198;
-            this.buttonEditDexes.Text = "Edit Dex Orders";
-            this.buttonEditDexes.UseVisualStyleBackColor = true;
-            this.buttonEditDexes.Click += new System.EventHandler(this.buttonEditDexes_Click);
+            buttonEditDexes.Location = new System.Drawing.Point(1192, 551);
+            buttonEditDexes.Margin = new Padding(5, 5, 5, 5);
+            buttonEditDexes.Name = "buttonEditDexes";
+            buttonEditDexes.Size = new System.Drawing.Size(155, 35);
+            buttonEditDexes.TabIndex = 198;
+            buttonEditDexes.Text = "Edit Dex Orders";
+            buttonEditDexes.UseVisualStyleBackColor = true;
+            buttonEditDexes.Click += buttonEditDexes_Click;
             // 
             // buttonOriginTally
             // 
-            this.buttonOriginTally.Location = new System.Drawing.Point(886, 514);
-            this.buttonOriginTally.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonOriginTally.Name = "buttonOriginTally";
-            this.buttonOriginTally.Size = new System.Drawing.Size(136, 26);
-            this.buttonOriginTally.TabIndex = 199;
-            this.buttonOriginTally.Text = "Origin Tally";
-            this.buttonOriginTally.UseVisualStyleBackColor = true;
-            this.buttonOriginTally.Click += new System.EventHandler(this.ButtonOriginTally_Click);
+            buttonOriginTally.Location = new System.Drawing.Point(1013, 685);
+            buttonOriginTally.Margin = new Padding(5, 5, 5, 5);
+            buttonOriginTally.Name = "buttonOriginTally";
+            buttonOriginTally.Size = new System.Drawing.Size(155, 35);
+            buttonOriginTally.TabIndex = 199;
+            buttonOriginTally.Text = "Origin Tally";
+            buttonOriginTally.UseVisualStyleBackColor = true;
+            buttonOriginTally.Click += ButtonOriginTally_Click;
             // 
             // buttonPickTransfers
             // 
-            this.buttonPickTransfers.Location = new System.Drawing.Point(886, 413);
-            this.buttonPickTransfers.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonPickTransfers.Name = "buttonPickTransfers";
-            this.buttonPickTransfers.Size = new System.Drawing.Size(136, 26);
-            this.buttonPickTransfers.TabIndex = 200;
-            this.buttonPickTransfers.Text = "Pick Transfers";
-            this.buttonPickTransfers.UseVisualStyleBackColor = true;
-            this.buttonPickTransfers.Click += new System.EventHandler(this.buttonPickTransfers_Click);
+            buttonPickTransfers.Location = new System.Drawing.Point(1013, 551);
+            buttonPickTransfers.Margin = new Padding(5, 5, 5, 5);
+            buttonPickTransfers.Name = "buttonPickTransfers";
+            buttonPickTransfers.Size = new System.Drawing.Size(155, 35);
+            buttonPickTransfers.TabIndex = 200;
+            buttonPickTransfers.Text = "Pick Transfers";
+            buttonPickTransfers.UseVisualStyleBackColor = true;
+            buttonPickTransfers.Click += buttonPickTransfers_Click;
             // 
             // pictureBoxAlpha
             // 
-            this.pictureBoxAlpha.Location = new System.Drawing.Point(340, 164);
-            this.pictureBoxAlpha.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBoxAlpha.Name = "pictureBoxAlpha";
-            this.pictureBoxAlpha.Size = new System.Drawing.Size(30, 23);
-            this.pictureBoxAlpha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxAlpha.TabIndex = 201;
-            this.pictureBoxAlpha.TabStop = false;
+            pictureBoxAlpha.Location = new System.Drawing.Point(389, 219);
+            pictureBoxAlpha.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxAlpha.Name = "pictureBoxAlpha";
+            pictureBoxAlpha.Size = new System.Drawing.Size(30, 23);
+            pictureBoxAlpha.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxAlpha.TabIndex = 201;
+            pictureBoxAlpha.TabStop = false;
             // 
             // buttonIdealTransfer
             // 
-            this.buttonIdealTransfer.Location = new System.Drawing.Point(466, 542);
-            this.buttonIdealTransfer.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonIdealTransfer.Name = "buttonIdealTransfer";
-            this.buttonIdealTransfer.Size = new System.Drawing.Size(136, 26);
-            this.buttonIdealTransfer.TabIndex = 202;
-            this.buttonIdealTransfer.Text = "Ideal Transfer";
-            this.buttonIdealTransfer.UseVisualStyleBackColor = true;
-            this.buttonIdealTransfer.Click += new System.EventHandler(this.buttonIdealTransfer_Click);
+            buttonIdealTransfer.Location = new System.Drawing.Point(533, 723);
+            buttonIdealTransfer.Margin = new Padding(5, 5, 5, 5);
+            buttonIdealTransfer.Name = "buttonIdealTransfer";
+            buttonIdealTransfer.Size = new System.Drawing.Size(155, 35);
+            buttonIdealTransfer.TabIndex = 202;
+            buttonIdealTransfer.Text = "Ideal Transfer";
+            buttonIdealTransfer.UseVisualStyleBackColor = true;
+            buttonIdealTransfer.Click += buttonIdealTransfer_Click;
             // 
             // comboBoxTeraType
             // 
-            this.comboBoxTeraType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.comboBoxTeraType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBoxTeraType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.comboBoxTeraType.ForeColor = System.Drawing.Color.Black;
-            this.comboBoxTeraType.FormattingEnabled = true;
-            this.comboBoxTeraType.Items.AddRange(new object[] {
-            "None",
-            "Infected",
-            "Cured"});
-            this.comboBoxTeraType.Location = new System.Drawing.Point(290, 139);
-            this.comboBoxTeraType.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxTeraType.Name = "comboBoxTeraType";
-            this.comboBoxTeraType.Size = new System.Drawing.Size(84, 23);
-            this.comboBoxTeraType.TabIndex = 203;
+            comboBoxTeraType.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxTeraType.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxTeraType.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxTeraType.ForeColor = System.Drawing.Color.Black;
+            comboBoxTeraType.FormattingEnabled = true;
+            comboBoxTeraType.Items.AddRange(new object[] { "None", "Infected", "Cured" });
+            comboBoxTeraType.Location = new System.Drawing.Point(331, 185);
+            comboBoxTeraType.Margin = new Padding(0);
+            comboBoxTeraType.Name = "comboBoxTeraType";
+            comboBoxTeraType.Size = new System.Drawing.Size(95, 28);
+            comboBoxTeraType.TabIndex = 203;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(199)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1245, 684);
-            this.Controls.Add(this.comboBoxTeraType);
-            this.Controls.Add(this.buttonIdealTransfer);
-            this.Controls.Add(this.pictureBoxAlpha);
-            this.Controls.Add(this.buttonPickTransfers);
-            this.Controls.Add(this.buttonOriginTally);
-            this.Controls.Add(this.buttonEditDexes);
-            this.Controls.Add(this.buttonSortOrder);
-            this.Controls.Add(this.buttonAssignOrigin);
-            this.Controls.Add(this.buttonGameOriginSort);
-            this.Controls.Add(this.comboBoxOrigin);
-            this.Controls.Add(this.labelOrigin);
-            this.Controls.Add(this.buttonPkrsCount);
-            this.Controls.Add(this.buttonDupCheck);
-            this.Controls.Add(this.buttonLineInfo);
-            this.Controls.Add(this.ribbonPic19);
-            this.Controls.Add(this.ribbonPic18);
-            this.Controls.Add(this.ribbonPic17);
-            this.Controls.Add(this.ribbonPic16);
-            this.Controls.Add(this.ribbonPic15);
-            this.Controls.Add(this.ribbonPic14);
-            this.Controls.Add(this.ribbonPic13);
-            this.Controls.Add(this.ribbonPic12);
-            this.Controls.Add(this.ribbonPic11);
-            this.Controls.Add(this.ribbonPic10);
-            this.Controls.Add(this.ribbonPic9);
-            this.Controls.Add(this.ribbonPic8);
-            this.Controls.Add(this.ribbonPic7);
-            this.Controls.Add(this.ribbonPic6);
-            this.Controls.Add(this.ribbonPic5);
-            this.Controls.Add(this.buttonMonInfo);
-            this.Controls.Add(this.labelGimmick);
-            this.Controls.Add(this.textBoxDynaLv);
-            this.Controls.Add(this.pictureBoxGMax);
-            this.Controls.Add(this.ribbonPic4);
-            this.Controls.Add(this.ribbonPic3);
-            this.Controls.Add(this.ribbonPic2);
-            this.Controls.Add(this.ribbonPic1);
-            this.Controls.Add(this.ribbonPic0);
-            this.Controls.Add(this.labelRibbons);
-            this.Controls.Add(this.comboBoxMinus);
-            this.Controls.Add(this.comboBoxPlus);
-            this.Controls.Add(this.buttonLevelTally);
-            this.Controls.Add(this.comboBoxPkrs);
-            this.Controls.Add(this.buttonMonBallTally);
-            this.Controls.Add(this.BTN_Shinytize);
-            this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.labelID);
-            this.Controls.Add(this.textBoxOT);
-            this.Controls.Add(this.comboBoxGame);
-            this.Controls.Add(this.textBoxSpeed);
-            this.Controls.Add(this.textBoxSpDef);
-            this.Controls.Add(this.textBoxSpAtk);
-            this.Controls.Add(this.textBoxDefense);
-            this.Controls.Add(this.textBoxAttack);
-            this.Controls.Add(this.textBoxHP);
-            this.Controls.Add(this.textBoxNickname);
-            this.Controls.Add(this.buttonRevertMon);
-            this.Controls.Add(this.buttonSaveMon);
-            this.Controls.Add(this.buttonRanMon);
-            this.Controls.Add(this.buttonMoveMonTally);
-            this.Controls.Add(this.buttonOriginSort);
-            this.Controls.Add(this.buttonNiqCalc);
-            this.Controls.Add(this.pictureBoxPkrs);
-            this.Controls.Add(this.comboBoxForm);
-            this.Controls.Add(this.buttonSpeciesSort);
-            this.Controls.Add(this.buttonGameTally);
-            this.Controls.Add(this.buttonGameMonTally);
-            this.Controls.Add(this.labelGame);
-            this.Controls.Add(this.buttonReloadDB);
-            this.Controls.Add(this.labelOT);
-            this.Controls.Add(this.labelSpeed);
-            this.Controls.Add(this.labelSpDef);
-            this.Controls.Add(this.labelSpAtk);
-            this.Controls.Add(this.labelDefense);
-            this.Controls.Add(this.labelAttack);
-            this.Controls.Add(this.labelHP);
-            this.Controls.Add(this.pictureBoxGameSprite);
-            this.Controls.Add(this.buttonGenSpeciesSort);
-            this.Controls.Add(this.buttonGameSpeciesSort);
-            this.Controls.Add(this.buttonGameLevelSort);
-            this.Controls.Add(this.L_Count);
-            this.Controls.Add(this.bpkx30);
-            this.Controls.Add(this.SCR_Box);
-            this.Controls.Add(this.bpkx1);
-            this.Controls.Add(this.bpkx29);
-            this.Controls.Add(this.bpkx28);
-            this.Controls.Add(this.bpkx27);
-            this.Controls.Add(this.bpkx26);
-            this.Controls.Add(this.bpkx25);
-            this.Controls.Add(this.bpkx24);
-            this.Controls.Add(this.bpkx23);
-            this.Controls.Add(this.bpkx22);
-            this.Controls.Add(this.bpkx21);
-            this.Controls.Add(this.bpkx2);
-            this.Controls.Add(this.bpkx20);
-            this.Controls.Add(this.bpkx3);
-            this.Controls.Add(this.bpkx4);
-            this.Controls.Add(this.bpkx19);
-            this.Controls.Add(this.bpkx5);
-            this.Controls.Add(this.bpkx18);
-            this.Controls.Add(this.bpkx6);
-            this.Controls.Add(this.bpkx17);
-            this.Controls.Add(this.bpkx7);
-            this.Controls.Add(this.bpkx8);
-            this.Controls.Add(this.bpkx16);
-            this.Controls.Add(this.bpkx9);
-            this.Controls.Add(this.bpkx15);
-            this.Controls.Add(this.bpkx10);
-            this.Controls.Add(this.bpkx14);
-            this.Controls.Add(this.bpkx11);
-            this.Controls.Add(this.bpkx12);
-            this.Controls.Add(this.bpkx13);
-            this.Controls.Add(this.comboBoxMove4);
-            this.Controls.Add(this.comboBoxMove3);
-            this.Controls.Add(this.comboBoxMove2);
-            this.Controls.Add(this.comboBoxMove1);
-            this.Controls.Add(this.labelMoves);
-            this.Controls.Add(this.comboBoxNature);
-            this.Controls.Add(this.labelNature);
-            this.Controls.Add(this.comboBoxAbility);
-            this.Controls.Add(this.labelAbility);
-            this.Controls.Add(this.comboBoxLanguage);
-            this.Controls.Add(this.labelLanguage);
-            this.Controls.Add(this.labelGender);
-            this.Controls.Add(this.textBoxLevel);
-            this.Controls.Add(this.labelLevel);
-            this.Controls.Add(this.pictureBoxIcon);
-            this.Controls.Add(this.comboBoxSpecies);
-            this.Controls.Add(this.labelSpecies);
-            this.Controls.Add(this.pictureBoxBall);
-            this.Controls.Add(this.comboBoxBalls);
-            this.Controls.Add(this.labelBall);
-            this.Controls.Add(this.labelNickname);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MainForm";
-            this.Text = "Mon Collection";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBall)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGameSprite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPkrs)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonPic10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bpkx1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlpha)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            ClientSize = new System.Drawing.Size(1423, 912);
+            Controls.Add(comboBoxTeraType);
+            Controls.Add(buttonIdealTransfer);
+            Controls.Add(pictureBoxAlpha);
+            Controls.Add(buttonPickTransfers);
+            Controls.Add(buttonOriginTally);
+            Controls.Add(buttonEditDexes);
+            Controls.Add(buttonSortOrder);
+            Controls.Add(buttonAssignOrigin);
+            Controls.Add(buttonGameOriginSort);
+            Controls.Add(comboBoxOrigin);
+            Controls.Add(labelOrigin);
+            Controls.Add(buttonPkrsCount);
+            Controls.Add(buttonDupCheck);
+            Controls.Add(buttonLineInfo);
+            Controls.Add(ribbonPic19);
+            Controls.Add(ribbonPic18);
+            Controls.Add(ribbonPic17);
+            Controls.Add(ribbonPic16);
+            Controls.Add(ribbonPic15);
+            Controls.Add(ribbonPic14);
+            Controls.Add(ribbonPic13);
+            Controls.Add(ribbonPic12);
+            Controls.Add(ribbonPic11);
+            Controls.Add(ribbonPic10);
+            Controls.Add(ribbonPic9);
+            Controls.Add(ribbonPic8);
+            Controls.Add(ribbonPic7);
+            Controls.Add(ribbonPic6);
+            Controls.Add(ribbonPic5);
+            Controls.Add(buttonMonInfo);
+            Controls.Add(labelGimmick);
+            Controls.Add(textBoxDynaLv);
+            Controls.Add(pictureBoxGMax);
+            Controls.Add(ribbonPic4);
+            Controls.Add(ribbonPic3);
+            Controls.Add(ribbonPic2);
+            Controls.Add(ribbonPic1);
+            Controls.Add(ribbonPic0);
+            Controls.Add(labelRibbons);
+            Controls.Add(comboBoxMinus);
+            Controls.Add(comboBoxPlus);
+            Controls.Add(buttonLevelTally);
+            Controls.Add(comboBoxPkrs);
+            Controls.Add(buttonMonBallTally);
+            Controls.Add(BTN_Shinytize);
+            Controls.Add(textBoxID);
+            Controls.Add(labelID);
+            Controls.Add(textBoxOT);
+            Controls.Add(comboBoxGame);
+            Controls.Add(textBoxSpeed);
+            Controls.Add(textBoxSpDef);
+            Controls.Add(textBoxSpAtk);
+            Controls.Add(textBoxDefense);
+            Controls.Add(textBoxAttack);
+            Controls.Add(textBoxHP);
+            Controls.Add(textBoxNickname);
+            Controls.Add(buttonRevertMon);
+            Controls.Add(buttonSaveMon);
+            Controls.Add(buttonRanMon);
+            Controls.Add(buttonMoveMonTally);
+            Controls.Add(buttonOriginSort);
+            Controls.Add(buttonNiqCalc);
+            Controls.Add(pictureBoxPkrs);
+            Controls.Add(comboBoxForm);
+            Controls.Add(buttonSpeciesSort);
+            Controls.Add(buttonGameTally);
+            Controls.Add(buttonGameMonTally);
+            Controls.Add(labelGame);
+            Controls.Add(buttonReloadDB);
+            Controls.Add(labelOT);
+            Controls.Add(labelSpeed);
+            Controls.Add(labelSpDef);
+            Controls.Add(labelSpAtk);
+            Controls.Add(labelDefense);
+            Controls.Add(labelAttack);
+            Controls.Add(labelHP);
+            Controls.Add(pictureBoxGameSprite);
+            Controls.Add(buttonGenSpeciesSort);
+            Controls.Add(buttonGameSpeciesSort);
+            Controls.Add(buttonGameLevelSort);
+            Controls.Add(L_Count);
+            Controls.Add(bpkx30);
+            Controls.Add(SCR_Box);
+            Controls.Add(bpkx1);
+            Controls.Add(bpkx29);
+            Controls.Add(bpkx28);
+            Controls.Add(bpkx27);
+            Controls.Add(bpkx26);
+            Controls.Add(bpkx25);
+            Controls.Add(bpkx24);
+            Controls.Add(bpkx23);
+            Controls.Add(bpkx22);
+            Controls.Add(bpkx21);
+            Controls.Add(bpkx2);
+            Controls.Add(bpkx20);
+            Controls.Add(bpkx3);
+            Controls.Add(bpkx4);
+            Controls.Add(bpkx19);
+            Controls.Add(bpkx5);
+            Controls.Add(bpkx18);
+            Controls.Add(bpkx6);
+            Controls.Add(bpkx17);
+            Controls.Add(bpkx7);
+            Controls.Add(bpkx8);
+            Controls.Add(bpkx16);
+            Controls.Add(bpkx9);
+            Controls.Add(bpkx15);
+            Controls.Add(bpkx10);
+            Controls.Add(bpkx14);
+            Controls.Add(bpkx11);
+            Controls.Add(bpkx12);
+            Controls.Add(bpkx13);
+            Controls.Add(comboBoxMove4);
+            Controls.Add(comboBoxMove3);
+            Controls.Add(comboBoxMove2);
+            Controls.Add(comboBoxMove1);
+            Controls.Add(labelMoves);
+            Controls.Add(comboBoxNature);
+            Controls.Add(labelNature);
+            Controls.Add(comboBoxAbility);
+            Controls.Add(labelAbility);
+            Controls.Add(comboBoxLanguage);
+            Controls.Add(labelLanguage);
+            Controls.Add(labelGender);
+            Controls.Add(textBoxLevel);
+            Controls.Add(labelLevel);
+            Controls.Add(pictureBoxIcon);
+            Controls.Add(comboBoxSpecies);
+            Controls.Add(labelSpecies);
+            Controls.Add(pictureBoxBall);
+            Controls.Add(comboBoxBalls);
+            Controls.Add(labelBall);
+            Controls.Add(labelNickname);
+            Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(5, 5, 5, 5);
+            Name = "MainForm";
+            Text = "Mon Collection";
+            FormClosing += MainForm_FormClosing;
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBall).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx30).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx29).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx28).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx27).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx26).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx25).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx24).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx23).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx22).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx21).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx20).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGameSprite).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPkrs).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic0).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxGMax).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ribbonPic10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bpkx1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAlpha).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelNickname;
-        private System.Windows.Forms.Label labelBall;
-        private System.Windows.Forms.ComboBox comboBoxBalls;
-        private System.Windows.Forms.PictureBox pictureBoxBall;
-        private System.Windows.Forms.ComboBox comboBoxSpecies;
-        private System.Windows.Forms.Label labelSpecies;
-        private System.Windows.Forms.PictureBox pictureBoxIcon;
-        private System.Windows.Forms.Label labelLevel;
-        private System.Windows.Forms.TextBox textBoxLevel;
-        private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.ComboBox comboBoxLanguage;
-        private System.Windows.Forms.Label labelLanguage;
-        private System.Windows.Forms.ComboBox comboBoxAbility;
-        private System.Windows.Forms.Label labelAbility;
-        private System.Windows.Forms.ComboBox comboBoxNature;
-        private System.Windows.Forms.Label labelNature;
-        private System.Windows.Forms.ComboBox comboBoxMove1;
-        private System.Windows.Forms.Label labelMoves;
-        private System.Windows.Forms.ComboBox comboBoxMove2;
-        private System.Windows.Forms.ComboBox comboBoxMove4;
-        private System.Windows.Forms.ComboBox comboBoxMove3;
+        private Label labelNickname;
+        private Label labelBall;
+        private ComboBox comboBoxBalls;
+        private PictureBox pictureBoxBall;
+        private ComboBox comboBoxSpecies;
+        private Label labelSpecies;
+        private PictureBox pictureBoxIcon;
+        private Label labelLevel;
+        private TextBox textBoxLevel;
+        private Label labelGender;
+        private ComboBox comboBoxLanguage;
+        private Label labelLanguage;
+        private ComboBox comboBoxAbility;
+        private Label labelAbility;
+        private ComboBox comboBoxNature;
+        private Label labelNature;
+        private ComboBox comboBoxMove1;
+        private Label labelMoves;
+        private ComboBox comboBoxMove2;
+        private ComboBox comboBoxMove4;
+        private ComboBox comboBoxMove3;
         private PictureBox bpkx30;
         private VScrollBar SCR_Box;
         private PictureBox bpkx29;

@@ -23,6 +23,9 @@
     <Compile Update="FormLevelRange.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormMovepools.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormNiqCalc.cs">
       <SubType>Form</SubType>
     </Compile>

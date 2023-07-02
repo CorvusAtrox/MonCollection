@@ -28532,4 +28532,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="FormMovepools.cs" />
+  </ItemGroup>
 </Project>

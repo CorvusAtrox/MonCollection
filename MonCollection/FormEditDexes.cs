@@ -102,14 +102,7 @@ namespace MonCollection
             int num = 1;
             foreach (int s in species)
             {
-                if (s < PkmListSorted.Count)
-                {
-                    listSpecies.Items.Add(num.ToString() + ": " + PkmListSorted[nationalToSv(s)].Text);
-                }
-                else
-                {
-                    listSpecies.Items.Add(num.ToString() + ": " + s.ToString());
-                }
+                listSpecies.Items.Add(num.ToString() + ": " + s.ToString());
                 num++;
             }
         }
@@ -236,28 +229,6 @@ namespace MonCollection
                 dexes[comboBoxOrder.SelectedIndex].Dexes[comboBoxDexes.Text].AddRange(species);
             }
             ShowDexOrder();
-        }
-
-        public int nationalToSv(int index)
-        {
-            int[] dexNums =
-            {
-                918, 919, 920, 921, 954, 955, 956, 945, 946, 970, 971, 935, 936, 937, 960,
-                963, 964, 965, 1003, 1004, 1005, 940, 941, 957, 958, 972, 973, 968, 969,
-                974, 975, 1006, 1007, 962, 938, 939, 922, 923, 926, 927, 1000, 1001, 1002,
-                929, 930, 959, 933, 934, 942, 943, 953, 944, 966, 967, 924, 925, 961, 947,
-                948, 932, 931, 952, 1010, 1009, 928, 917, 1008, 978, 982, 979, 983, 984,
-                981, 986, 992, 989, 990, 988, 991, 949, 950, 951, 976, 977, 996, 995, 994,
-                997, 985, 993, 998, 999
-            };
-
-            if (index >= 917 && index < 917 + dexNums.Length)
-            {
-                index -= 917;
-                index = dexNums[index];
-            }
-
-            return index;
         }
     }
 }

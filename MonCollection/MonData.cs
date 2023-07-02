@@ -37,6 +37,13 @@ namespace MonCollection
         public bool gMax { get; set; }
         public bool alpha { get; set; }
         public byte teraType { get; set; }
-        public int lastVersion { get; set; }
+        public List<string> availableVersions { get; set; }
+        public Dictionary<string,Movepools> movepools { get; set; }
+    }
+
+    public class Movepools
+    {
+        public List<int> moves;
+        public List<int> special;
     }
 }

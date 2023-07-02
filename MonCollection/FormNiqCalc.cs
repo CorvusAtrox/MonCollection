@@ -77,20 +77,23 @@ namespace MonCollection
                 split = l.Split(',');
                 switch (split.Count())
                 {
+                    case 6:
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[5], split[2], split[3], ind));
+                        break;
                     case 5:
-                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], split[2], split[3], ind));
+                        gameDict.Add(split[0], new SaveInfo(split[4], split[1], "", split[2], split[3], ind));
                         break;
                     case 4:
-                        gameDict.Add(split[0], new SaveInfo("en", split[1], split[2], split[3], ind));
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "", split[2], split[3], ind));
                         break;
                     case 3:
-                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo(split[2], split[1], "", "0", null, ind));
                         break;
                     case 2:
-                        gameDict.Add(split[0], new SaveInfo("en", split[1], "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo("en", split[1], "", "0", null, ind));
                         break;
                     default:
-                        gameDict.Add(split[0], new SaveInfo("en", "US", "0", null, ind));
+                        gameDict.Add(split[0], new SaveInfo("en", "SH", "", "0", null, ind));
                         break;
                 }
                 ind++;
