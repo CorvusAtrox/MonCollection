@@ -279,7 +279,7 @@ namespace MonCollection
             // pictureBoxBall
             // 
             pictureBoxBall.Location = new System.Drawing.Point(1, 47);
-            pictureBoxBall.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxBall.Margin = new Padding(5);
             pictureBoxBall.Name = "pictureBoxBall";
             pictureBoxBall.Size = new System.Drawing.Size(32, 31);
             pictureBoxBall.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -315,7 +315,7 @@ namespace MonCollection
             // pictureBoxIcon
             // 
             pictureBoxIcon.Location = new System.Drawing.Point(1, 95);
-            pictureBoxIcon.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxIcon.Margin = new Padding(5);
             pictureBoxIcon.Name = "pictureBoxIcon";
             pictureBoxIcon.Size = new System.Drawing.Size(91, 87);
             pictureBoxIcon.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -340,7 +340,7 @@ namespace MonCollection
             textBoxLevel.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
             textBoxLevel.ForeColor = System.Drawing.Color.White;
             textBoxLevel.Location = new System.Drawing.Point(463, 52);
-            textBoxLevel.Margin = new Padding(5, 5, 5, 5);
+            textBoxLevel.Margin = new Padding(5);
             textBoxLevel.Name = "textBoxLevel";
             textBoxLevel.Size = new System.Drawing.Size(31, 27);
             textBoxLevel.TabIndex = 9;
@@ -466,7 +466,7 @@ namespace MonCollection
             labelMoves.Size = new System.Drawing.Size(59, 17);
             labelMoves.TabIndex = 19;
             labelMoves.Text = "Moves:";
-            labelMoves.Click += this.labelMoves_Click;
+            labelMoves.Click += labelMoves_Click;
             // 
             // comboBoxMove2
             // 
@@ -518,7 +518,7 @@ namespace MonCollection
             bpkx30.BackColor = System.Drawing.Color.Transparent;
             bpkx30.BorderStyle = BorderStyle.FixedSingle;
             bpkx30.Location = new System.Drawing.Point(1281, 455);
-            bpkx30.Margin = new Padding(5, 5, 5, 5);
+            bpkx30.Margin = new Padding(5);
             bpkx30.Name = "bpkx30";
             bpkx30.Size = new System.Drawing.Size(77, 74);
             bpkx30.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -539,7 +539,7 @@ namespace MonCollection
             bpkx29.BackColor = System.Drawing.Color.Transparent;
             bpkx29.BorderStyle = BorderStyle.FixedSingle;
             bpkx29.Location = new System.Drawing.Point(1192, 455);
-            bpkx29.Margin = new Padding(5, 5, 5, 5);
+            bpkx29.Margin = new Padding(5);
             bpkx29.Name = "bpkx29";
             bpkx29.Size = new System.Drawing.Size(77, 74);
             bpkx29.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -551,7 +551,7 @@ namespace MonCollection
             bpkx28.BackColor = System.Drawing.Color.Transparent;
             bpkx28.BorderStyle = BorderStyle.FixedSingle;
             bpkx28.Location = new System.Drawing.Point(1103, 455);
-            bpkx28.Margin = new Padding(5, 5, 5, 5);
+            bpkx28.Margin = new Padding(5);
             bpkx28.Name = "bpkx28";
             bpkx28.Size = new System.Drawing.Size(77, 74);
             bpkx28.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -563,7 +563,7 @@ namespace MonCollection
             bpkx27.BackColor = System.Drawing.Color.Transparent;
             bpkx27.BorderStyle = BorderStyle.FixedSingle;
             bpkx27.Location = new System.Drawing.Point(1013, 455);
-            bpkx27.Margin = new Padding(5, 5, 5, 5);
+            bpkx27.Margin = new Padding(5);
             bpkx27.Name = "bpkx27";
             bpkx27.Size = new System.Drawing.Size(77, 74);
             bpkx27.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -575,7 +575,7 @@ namespace MonCollection
             bpkx26.BackColor = System.Drawing.Color.Transparent;
             bpkx26.BorderStyle = BorderStyle.FixedSingle;
             bpkx26.Location = new System.Drawing.Point(923, 455);
-            bpkx26.Margin = new Padding(5, 5, 5, 5);
+            bpkx26.Margin = new Padding(5);
             bpkx26.Name = "bpkx26";
             bpkx26.Size = new System.Drawing.Size(77, 74);
             bpkx26.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -587,7 +587,7 @@ namespace MonCollection
             bpkx25.BackColor = System.Drawing.Color.Transparent;
             bpkx25.BorderStyle = BorderStyle.FixedSingle;
             bpkx25.Location = new System.Drawing.Point(835, 455);
-            bpkx25.Margin = new Padding(5, 5, 5, 5);
+            bpkx25.Margin = new Padding(5);
             bpkx25.Name = "bpkx25";
             bpkx25.Size = new System.Drawing.Size(77, 74);
             bpkx25.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -599,7 +599,7 @@ namespace MonCollection
             bpkx24.BackColor = System.Drawing.Color.Transparent;
             bpkx24.BorderStyle = BorderStyle.FixedSingle;
             bpkx24.Location = new System.Drawing.Point(1281, 371);
-            bpkx24.Margin = new Padding(5, 5, 5, 5);
+            bpkx24.Margin = new Padding(5);
             bpkx24.Name = "bpkx24";
             bpkx24.Size = new System.Drawing.Size(77, 74);
             bpkx24.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -611,7 +611,7 @@ namespace MonCollection
             bpkx23.BackColor = System.Drawing.Color.Transparent;
             bpkx23.BorderStyle = BorderStyle.FixedSingle;
             bpkx23.Location = new System.Drawing.Point(1192, 371);
-            bpkx23.Margin = new Padding(5, 5, 5, 5);
+            bpkx23.Margin = new Padding(5);
             bpkx23.Name = "bpkx23";
             bpkx23.Size = new System.Drawing.Size(77, 74);
             bpkx23.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -623,7 +623,7 @@ namespace MonCollection
             bpkx22.BackColor = System.Drawing.Color.Transparent;
             bpkx22.BorderStyle = BorderStyle.FixedSingle;
             bpkx22.Location = new System.Drawing.Point(1103, 371);
-            bpkx22.Margin = new Padding(5, 5, 5, 5);
+            bpkx22.Margin = new Padding(5);
             bpkx22.Name = "bpkx22";
             bpkx22.Size = new System.Drawing.Size(77, 74);
             bpkx22.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -635,7 +635,7 @@ namespace MonCollection
             bpkx21.BackColor = System.Drawing.Color.Transparent;
             bpkx21.BorderStyle = BorderStyle.FixedSingle;
             bpkx21.Location = new System.Drawing.Point(1013, 371);
-            bpkx21.Margin = new Padding(5, 5, 5, 5);
+            bpkx21.Margin = new Padding(5);
             bpkx21.Name = "bpkx21";
             bpkx21.Size = new System.Drawing.Size(77, 74);
             bpkx21.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -647,7 +647,7 @@ namespace MonCollection
             bpkx2.BackColor = System.Drawing.Color.Transparent;
             bpkx2.BorderStyle = BorderStyle.FixedSingle;
             bpkx2.Location = new System.Drawing.Point(922, 117);
-            bpkx2.Margin = new Padding(5, 5, 5, 5);
+            bpkx2.Margin = new Padding(5);
             bpkx2.Name = "bpkx2";
             bpkx2.Size = new System.Drawing.Size(77, 74);
             bpkx2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -659,7 +659,7 @@ namespace MonCollection
             bpkx20.BackColor = System.Drawing.Color.Transparent;
             bpkx20.BorderStyle = BorderStyle.FixedSingle;
             bpkx20.Location = new System.Drawing.Point(923, 371);
-            bpkx20.Margin = new Padding(5, 5, 5, 5);
+            bpkx20.Margin = new Padding(5);
             bpkx20.Name = "bpkx20";
             bpkx20.Size = new System.Drawing.Size(77, 74);
             bpkx20.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -671,7 +671,7 @@ namespace MonCollection
             bpkx3.BackColor = System.Drawing.Color.Transparent;
             bpkx3.BorderStyle = BorderStyle.FixedSingle;
             bpkx3.Location = new System.Drawing.Point(1013, 117);
-            bpkx3.Margin = new Padding(5, 5, 5, 5);
+            bpkx3.Margin = new Padding(5);
             bpkx3.Name = "bpkx3";
             bpkx3.Size = new System.Drawing.Size(77, 74);
             bpkx3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -683,7 +683,7 @@ namespace MonCollection
             bpkx4.BackColor = System.Drawing.Color.Transparent;
             bpkx4.BorderStyle = BorderStyle.FixedSingle;
             bpkx4.Location = new System.Drawing.Point(1103, 116);
-            bpkx4.Margin = new Padding(5, 5, 5, 5);
+            bpkx4.Margin = new Padding(5);
             bpkx4.Name = "bpkx4";
             bpkx4.Size = new System.Drawing.Size(77, 74);
             bpkx4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -695,7 +695,7 @@ namespace MonCollection
             bpkx19.BackColor = System.Drawing.Color.Transparent;
             bpkx19.BorderStyle = BorderStyle.FixedSingle;
             bpkx19.Location = new System.Drawing.Point(835, 371);
-            bpkx19.Margin = new Padding(5, 5, 5, 5);
+            bpkx19.Margin = new Padding(5);
             bpkx19.Name = "bpkx19";
             bpkx19.Size = new System.Drawing.Size(77, 74);
             bpkx19.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -707,7 +707,7 @@ namespace MonCollection
             bpkx5.BackColor = System.Drawing.Color.Transparent;
             bpkx5.BorderStyle = BorderStyle.FixedSingle;
             bpkx5.Location = new System.Drawing.Point(1192, 116);
-            bpkx5.Margin = new Padding(5, 5, 5, 5);
+            bpkx5.Margin = new Padding(5);
             bpkx5.Name = "bpkx5";
             bpkx5.Size = new System.Drawing.Size(77, 74);
             bpkx5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -719,7 +719,7 @@ namespace MonCollection
             bpkx18.BackColor = System.Drawing.Color.Transparent;
             bpkx18.BorderStyle = BorderStyle.FixedSingle;
             bpkx18.Location = new System.Drawing.Point(1281, 287);
-            bpkx18.Margin = new Padding(5, 5, 5, 5);
+            bpkx18.Margin = new Padding(5);
             bpkx18.Name = "bpkx18";
             bpkx18.Size = new System.Drawing.Size(77, 74);
             bpkx18.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -731,7 +731,7 @@ namespace MonCollection
             bpkx6.BackColor = System.Drawing.Color.Transparent;
             bpkx6.BorderStyle = BorderStyle.FixedSingle;
             bpkx6.Location = new System.Drawing.Point(1281, 116);
-            bpkx6.Margin = new Padding(5, 5, 5, 5);
+            bpkx6.Margin = new Padding(5);
             bpkx6.Name = "bpkx6";
             bpkx6.Size = new System.Drawing.Size(77, 74);
             bpkx6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -743,7 +743,7 @@ namespace MonCollection
             bpkx17.BackColor = System.Drawing.Color.Transparent;
             bpkx17.BorderStyle = BorderStyle.FixedSingle;
             bpkx17.Location = new System.Drawing.Point(1192, 287);
-            bpkx17.Margin = new Padding(5, 5, 5, 5);
+            bpkx17.Margin = new Padding(5);
             bpkx17.Name = "bpkx17";
             bpkx17.Size = new System.Drawing.Size(77, 74);
             bpkx17.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -755,7 +755,7 @@ namespace MonCollection
             bpkx7.BackColor = System.Drawing.Color.Transparent;
             bpkx7.BorderStyle = BorderStyle.FixedSingle;
             bpkx7.Location = new System.Drawing.Point(835, 201);
-            bpkx7.Margin = new Padding(5, 5, 5, 5);
+            bpkx7.Margin = new Padding(5);
             bpkx7.Name = "bpkx7";
             bpkx7.Size = new System.Drawing.Size(77, 74);
             bpkx7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -767,7 +767,7 @@ namespace MonCollection
             bpkx8.BackColor = System.Drawing.Color.Transparent;
             bpkx8.BorderStyle = BorderStyle.FixedSingle;
             bpkx8.Location = new System.Drawing.Point(922, 201);
-            bpkx8.Margin = new Padding(5, 5, 5, 5);
+            bpkx8.Margin = new Padding(5);
             bpkx8.Name = "bpkx8";
             bpkx8.Size = new System.Drawing.Size(77, 74);
             bpkx8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -779,7 +779,7 @@ namespace MonCollection
             bpkx16.BackColor = System.Drawing.Color.Transparent;
             bpkx16.BorderStyle = BorderStyle.FixedSingle;
             bpkx16.Location = new System.Drawing.Point(1103, 287);
-            bpkx16.Margin = new Padding(5, 5, 5, 5);
+            bpkx16.Margin = new Padding(5);
             bpkx16.Name = "bpkx16";
             bpkx16.Size = new System.Drawing.Size(77, 74);
             bpkx16.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -791,7 +791,7 @@ namespace MonCollection
             bpkx9.BackColor = System.Drawing.Color.Transparent;
             bpkx9.BorderStyle = BorderStyle.FixedSingle;
             bpkx9.Location = new System.Drawing.Point(1013, 201);
-            bpkx9.Margin = new Padding(5, 5, 5, 5);
+            bpkx9.Margin = new Padding(5);
             bpkx9.Name = "bpkx9";
             bpkx9.Size = new System.Drawing.Size(77, 74);
             bpkx9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -803,7 +803,7 @@ namespace MonCollection
             bpkx15.BackColor = System.Drawing.Color.Transparent;
             bpkx15.BorderStyle = BorderStyle.FixedSingle;
             bpkx15.Location = new System.Drawing.Point(1013, 287);
-            bpkx15.Margin = new Padding(5, 5, 5, 5);
+            bpkx15.Margin = new Padding(5);
             bpkx15.Name = "bpkx15";
             bpkx15.Size = new System.Drawing.Size(77, 74);
             bpkx15.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -815,7 +815,7 @@ namespace MonCollection
             bpkx10.BackColor = System.Drawing.Color.Transparent;
             bpkx10.BorderStyle = BorderStyle.FixedSingle;
             bpkx10.Location = new System.Drawing.Point(1103, 201);
-            bpkx10.Margin = new Padding(5, 5, 5, 5);
+            bpkx10.Margin = new Padding(5);
             bpkx10.Name = "bpkx10";
             bpkx10.Size = new System.Drawing.Size(77, 74);
             bpkx10.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -827,7 +827,7 @@ namespace MonCollection
             bpkx14.BackColor = System.Drawing.Color.Transparent;
             bpkx14.BorderStyle = BorderStyle.FixedSingle;
             bpkx14.Location = new System.Drawing.Point(923, 287);
-            bpkx14.Margin = new Padding(5, 5, 5, 5);
+            bpkx14.Margin = new Padding(5);
             bpkx14.Name = "bpkx14";
             bpkx14.Size = new System.Drawing.Size(77, 74);
             bpkx14.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -839,7 +839,7 @@ namespace MonCollection
             bpkx11.BackColor = System.Drawing.Color.Transparent;
             bpkx11.BorderStyle = BorderStyle.FixedSingle;
             bpkx11.Location = new System.Drawing.Point(1192, 201);
-            bpkx11.Margin = new Padding(5, 5, 5, 5);
+            bpkx11.Margin = new Padding(5);
             bpkx11.Name = "bpkx11";
             bpkx11.Size = new System.Drawing.Size(77, 74);
             bpkx11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -851,7 +851,7 @@ namespace MonCollection
             bpkx12.BackColor = System.Drawing.Color.Transparent;
             bpkx12.BorderStyle = BorderStyle.FixedSingle;
             bpkx12.Location = new System.Drawing.Point(1281, 201);
-            bpkx12.Margin = new Padding(5, 5, 5, 5);
+            bpkx12.Margin = new Padding(5);
             bpkx12.Name = "bpkx12";
             bpkx12.Size = new System.Drawing.Size(77, 74);
             bpkx12.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -863,7 +863,7 @@ namespace MonCollection
             bpkx13.BackColor = System.Drawing.Color.Transparent;
             bpkx13.BorderStyle = BorderStyle.FixedSingle;
             bpkx13.Location = new System.Drawing.Point(835, 285);
-            bpkx13.Margin = new Padding(5, 5, 5, 5);
+            bpkx13.Margin = new Padding(5);
             bpkx13.Name = "bpkx13";
             bpkx13.Size = new System.Drawing.Size(77, 74);
             bpkx13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -883,7 +883,7 @@ namespace MonCollection
             // buttonGameLevelSort
             // 
             buttonGameLevelSort.Location = new System.Drawing.Point(835, 595);
-            buttonGameLevelSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameLevelSort.Margin = new Padding(5);
             buttonGameLevelSort.Name = "buttonGameLevelSort";
             buttonGameLevelSort.Size = new System.Drawing.Size(155, 35);
             buttonGameLevelSort.TabIndex = 116;
@@ -894,7 +894,7 @@ namespace MonCollection
             // buttonGameSpeciesSort
             // 
             buttonGameSpeciesSort.Location = new System.Drawing.Point(1013, 595);
-            buttonGameSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameSpeciesSort.Margin = new Padding(5);
             buttonGameSpeciesSort.Name = "buttonGameSpeciesSort";
             buttonGameSpeciesSort.Size = new System.Drawing.Size(155, 35);
             buttonGameSpeciesSort.TabIndex = 117;
@@ -905,7 +905,7 @@ namespace MonCollection
             // buttonGenSpeciesSort
             // 
             buttonGenSpeciesSort.Location = new System.Drawing.Point(835, 640);
-            buttonGenSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGenSpeciesSort.Margin = new Padding(5);
             buttonGenSpeciesSort.Name = "buttonGenSpeciesSort";
             buttonGenSpeciesSort.Size = new System.Drawing.Size(155, 35);
             buttonGenSpeciesSort.TabIndex = 118;
@@ -916,7 +916,7 @@ namespace MonCollection
             // pictureBoxGameSprite
             // 
             pictureBoxGameSprite.Location = new System.Drawing.Point(533, 121);
-            pictureBoxGameSprite.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxGameSprite.Margin = new Padding(5);
             pictureBoxGameSprite.Name = "pictureBoxGameSprite";
             pictureBoxGameSprite.Size = new System.Drawing.Size(180, 180);
             pictureBoxGameSprite.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1017,7 +1017,7 @@ namespace MonCollection
             // buttonReloadDB
             // 
             buttonReloadDB.Location = new System.Drawing.Point(835, 72);
-            buttonReloadDB.Margin = new Padding(5, 5, 5, 5);
+            buttonReloadDB.Margin = new Padding(5);
             buttonReloadDB.Name = "buttonReloadDB";
             buttonReloadDB.Size = new System.Drawing.Size(127, 35);
             buttonReloadDB.TabIndex = 127;
@@ -1041,7 +1041,7 @@ namespace MonCollection
             // buttonGameMonTally
             // 
             buttonGameMonTally.Location = new System.Drawing.Point(835, 729);
-            buttonGameMonTally.Margin = new Padding(5, 5, 5, 5);
+            buttonGameMonTally.Margin = new Padding(5);
             buttonGameMonTally.Name = "buttonGameMonTally";
             buttonGameMonTally.Size = new System.Drawing.Size(155, 35);
             buttonGameMonTally.TabIndex = 129;
@@ -1052,7 +1052,7 @@ namespace MonCollection
             // buttonGameTally
             // 
             buttonGameTally.Location = new System.Drawing.Point(835, 685);
-            buttonGameTally.Margin = new Padding(5, 5, 5, 5);
+            buttonGameTally.Margin = new Padding(5);
             buttonGameTally.Name = "buttonGameTally";
             buttonGameTally.Size = new System.Drawing.Size(155, 35);
             buttonGameTally.TabIndex = 130;
@@ -1063,7 +1063,7 @@ namespace MonCollection
             // buttonSpeciesSort
             // 
             buttonSpeciesSort.Location = new System.Drawing.Point(1192, 640);
-            buttonSpeciesSort.Margin = new Padding(5, 5, 5, 5);
+            buttonSpeciesSort.Margin = new Padding(5);
             buttonSpeciesSort.Name = "buttonSpeciesSort";
             buttonSpeciesSort.Size = new System.Drawing.Size(155, 35);
             buttonSpeciesSort.TabIndex = 131;
@@ -1087,7 +1087,7 @@ namespace MonCollection
             // pictureBoxPkrs
             // 
             pictureBoxPkrs.Location = new System.Drawing.Point(117, 273);
-            pictureBoxPkrs.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxPkrs.Margin = new Padding(5);
             pictureBoxPkrs.Name = "pictureBoxPkrs";
             pictureBoxPkrs.Size = new System.Drawing.Size(24, 25);
             pictureBoxPkrs.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1097,7 +1097,7 @@ namespace MonCollection
             // buttonNiqCalc
             // 
             buttonNiqCalc.Location = new System.Drawing.Point(1013, 823);
-            buttonNiqCalc.Margin = new Padding(5, 5, 5, 5);
+            buttonNiqCalc.Margin = new Padding(5);
             buttonNiqCalc.Name = "buttonNiqCalc";
             buttonNiqCalc.Size = new System.Drawing.Size(155, 35);
             buttonNiqCalc.TabIndex = 136;
@@ -1108,7 +1108,7 @@ namespace MonCollection
             // buttonOriginSort
             // 
             buttonOriginSort.Location = new System.Drawing.Point(1013, 640);
-            buttonOriginSort.Margin = new Padding(5, 5, 5, 5);
+            buttonOriginSort.Margin = new Padding(5);
             buttonOriginSort.Name = "buttonOriginSort";
             buttonOriginSort.Size = new System.Drawing.Size(155, 35);
             buttonOriginSort.TabIndex = 142;
@@ -1119,7 +1119,7 @@ namespace MonCollection
             // buttonMoveMonTally
             // 
             buttonMoveMonTally.Location = new System.Drawing.Point(1192, 729);
-            buttonMoveMonTally.Margin = new Padding(5, 5, 5, 5);
+            buttonMoveMonTally.Margin = new Padding(5);
             buttonMoveMonTally.Name = "buttonMoveMonTally";
             buttonMoveMonTally.Size = new System.Drawing.Size(155, 35);
             buttonMoveMonTally.TabIndex = 143;
@@ -1130,7 +1130,7 @@ namespace MonCollection
             // buttonRanMon
             // 
             buttonRanMon.Location = new System.Drawing.Point(1245, 72);
-            buttonRanMon.Margin = new Padding(5, 5, 5, 5);
+            buttonRanMon.Margin = new Padding(5);
             buttonRanMon.Name = "buttonRanMon";
             buttonRanMon.Size = new System.Drawing.Size(127, 35);
             buttonRanMon.TabIndex = 144;
@@ -1141,7 +1141,7 @@ namespace MonCollection
             // buttonSaveMon
             // 
             buttonSaveMon.Location = new System.Drawing.Point(200, 723);
-            buttonSaveMon.Margin = new Padding(5, 5, 5, 5);
+            buttonSaveMon.Margin = new Padding(5);
             buttonSaveMon.Name = "buttonSaveMon";
             buttonSaveMon.Size = new System.Drawing.Size(155, 35);
             buttonSaveMon.TabIndex = 43;
@@ -1152,7 +1152,7 @@ namespace MonCollection
             // buttonRevertMon
             // 
             buttonRevertMon.Location = new System.Drawing.Point(200, 777);
-            buttonRevertMon.Margin = new Padding(5, 5, 5, 5);
+            buttonRevertMon.Margin = new Padding(5);
             buttonRevertMon.Name = "buttonRevertMon";
             buttonRevertMon.Size = new System.Drawing.Size(155, 35);
             buttonRevertMon.TabIndex = 44;
@@ -1165,7 +1165,7 @@ namespace MonCollection
             textBoxNickname.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
             textBoxNickname.ForeColor = System.Drawing.Color.White;
             textBoxNickname.Location = new System.Drawing.Point(299, 57);
-            textBoxNickname.Margin = new Padding(5, 5, 5, 5);
+            textBoxNickname.Margin = new Padding(5);
             textBoxNickname.Name = "textBoxNickname";
             textBoxNickname.Size = new System.Drawing.Size(111, 27);
             textBoxNickname.TabIndex = 8;
@@ -1234,28 +1234,28 @@ namespace MonCollection
             // gameToolStripMenuItem
             // 
             gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            gameToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            gameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             gameToolStripMenuItem.Text = "Game";
             gameToolStripMenuItem.Click += GameToolStripMenuItem_Click;
             // 
             // originToolStripMenuItem
             // 
             originToolStripMenuItem.Name = "originToolStripMenuItem";
-            originToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            originToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             originToolStripMenuItem.Text = "Origin";
             originToolStripMenuItem.Click += originToolStripMenuItem_Click;
             // 
             // speciesToolStripMenuItem
             // 
             speciesToolStripMenuItem.Name = "speciesToolStripMenuItem";
-            speciesToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            speciesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             speciesToolStripMenuItem.Text = "Species";
             speciesToolStripMenuItem.Click += SpeciesToolStripMenuItem_Click;
             // 
             // levelToolStripMenuItem
             // 
             levelToolStripMenuItem.Name = "levelToolStripMenuItem";
-            levelToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            levelToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             levelToolStripMenuItem.Text = "Level";
             levelToolStripMenuItem.Click += levelToolStripMenuItem_Click;
             // 
@@ -1263,13 +1263,13 @@ namespace MonCollection
             // 
             presetsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { homeSwShToolStripMenuItem });
             presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            presetsToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            presetsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             presetsToolStripMenuItem.Text = "Presets";
             // 
             // homeSwShToolStripMenuItem
             // 
             homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
-            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             homeSwShToolStripMenuItem.Text = "Home->SwSh";
             homeSwShToolStripMenuItem.Click += homeSwShToolStripMenuItem_Click;
             // 
@@ -1278,7 +1278,7 @@ namespace MonCollection
             textBoxHP.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxHP.ForeColor = System.Drawing.Color.Black;
             textBoxHP.Location = new System.Drawing.Point(55, 321);
-            textBoxHP.Margin = new Padding(5, 5, 5, 5);
+            textBoxHP.Margin = new Padding(5);
             textBoxHP.Name = "textBoxHP";
             textBoxHP.Size = new System.Drawing.Size(59, 27);
             textBoxHP.TabIndex = 20;
@@ -1288,7 +1288,7 @@ namespace MonCollection
             textBoxAttack.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxAttack.ForeColor = System.Drawing.Color.Black;
             textBoxAttack.Location = new System.Drawing.Point(81, 361);
-            textBoxAttack.Margin = new Padding(5, 5, 5, 5);
+            textBoxAttack.Margin = new Padding(5);
             textBoxAttack.Name = "textBoxAttack";
             textBoxAttack.Size = new System.Drawing.Size(59, 27);
             textBoxAttack.TabIndex = 21;
@@ -1298,7 +1298,7 @@ namespace MonCollection
             textBoxDefense.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxDefense.ForeColor = System.Drawing.Color.Black;
             textBoxDefense.Location = new System.Drawing.Point(95, 401);
-            textBoxDefense.Margin = new Padding(5, 5, 5, 5);
+            textBoxDefense.Margin = new Padding(5);
             textBoxDefense.Name = "textBoxDefense";
             textBoxDefense.Size = new System.Drawing.Size(59, 27);
             textBoxDefense.TabIndex = 22;
@@ -1308,7 +1308,7 @@ namespace MonCollection
             textBoxSpAtk.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxSpAtk.ForeColor = System.Drawing.Color.Black;
             textBoxSpAtk.Location = new System.Drawing.Point(88, 441);
-            textBoxSpAtk.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpAtk.Margin = new Padding(5);
             textBoxSpAtk.Name = "textBoxSpAtk";
             textBoxSpAtk.Size = new System.Drawing.Size(59, 27);
             textBoxSpAtk.TabIndex = 23;
@@ -1318,7 +1318,7 @@ namespace MonCollection
             textBoxSpDef.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxSpDef.ForeColor = System.Drawing.Color.Black;
             textBoxSpDef.Location = new System.Drawing.Point(88, 481);
-            textBoxSpDef.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpDef.Margin = new Padding(5);
             textBoxSpDef.Name = "textBoxSpDef";
             textBoxSpDef.Size = new System.Drawing.Size(59, 27);
             textBoxSpDef.TabIndex = 24;
@@ -1328,7 +1328,7 @@ namespace MonCollection
             textBoxSpeed.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxSpeed.ForeColor = System.Drawing.Color.Black;
             textBoxSpeed.Location = new System.Drawing.Point(79, 521);
-            textBoxSpeed.Margin = new Padding(5, 5, 5, 5);
+            textBoxSpeed.Margin = new Padding(5);
             textBoxSpeed.Name = "textBoxSpeed";
             textBoxSpeed.Size = new System.Drawing.Size(59, 27);
             textBoxSpeed.TabIndex = 25;
@@ -1352,7 +1352,7 @@ namespace MonCollection
             textBoxOT.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxOT.ForeColor = System.Drawing.Color.Black;
             textBoxOT.Location = new System.Drawing.Point(499, 588);
-            textBoxOT.Margin = new Padding(5, 5, 5, 5);
+            textBoxOT.Margin = new Padding(5);
             textBoxOT.Name = "textBoxOT";
             textBoxOT.Size = new System.Drawing.Size(119, 27);
             textBoxOT.TabIndex = 36;
@@ -1375,7 +1375,7 @@ namespace MonCollection
             textBoxID.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxID.ForeColor = System.Drawing.Color.Black;
             textBoxID.Location = new System.Drawing.Point(667, 589);
-            textBoxID.Margin = new Padding(5, 5, 5, 5);
+            textBoxID.Margin = new Padding(5);
             textBoxID.Name = "textBoxID";
             textBoxID.Size = new System.Drawing.Size(87, 27);
             textBoxID.TabIndex = 38;
@@ -1396,7 +1396,7 @@ namespace MonCollection
             // buttonMonBallTally
             // 
             buttonMonBallTally.Location = new System.Drawing.Point(1013, 729);
-            buttonMonBallTally.Margin = new Padding(5, 5, 5, 5);
+            buttonMonBallTally.Margin = new Padding(5);
             buttonMonBallTally.Name = "buttonMonBallTally";
             buttonMonBallTally.Size = new System.Drawing.Size(155, 35);
             buttonMonBallTally.TabIndex = 160;
@@ -1421,7 +1421,7 @@ namespace MonCollection
             // buttonLevelTally
             // 
             buttonLevelTally.Location = new System.Drawing.Point(1192, 685);
-            buttonLevelTally.Margin = new Padding(5, 5, 5, 5);
+            buttonLevelTally.Margin = new Padding(5);
             buttonLevelTally.Name = "buttonLevelTally";
             buttonLevelTally.Size = new System.Drawing.Size(155, 35);
             buttonLevelTally.TabIndex = 162;
@@ -1474,7 +1474,7 @@ namespace MonCollection
             // ribbonPic0
             // 
             ribbonPic0.Location = new System.Drawing.Point(197, 321);
-            ribbonPic0.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic0.Margin = new Padding(5);
             ribbonPic0.Name = "ribbonPic0";
             ribbonPic0.Size = new System.Drawing.Size(53, 61);
             ribbonPic0.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1484,7 +1484,7 @@ namespace MonCollection
             // ribbonPic1
             // 
             ribbonPic1.Location = new System.Drawing.Point(249, 321);
-            ribbonPic1.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic1.Margin = new Padding(5);
             ribbonPic1.Name = "ribbonPic1";
             ribbonPic1.Size = new System.Drawing.Size(53, 61);
             ribbonPic1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1494,7 +1494,7 @@ namespace MonCollection
             // ribbonPic2
             // 
             ribbonPic2.Location = new System.Drawing.Point(301, 321);
-            ribbonPic2.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic2.Margin = new Padding(5);
             ribbonPic2.Name = "ribbonPic2";
             ribbonPic2.Size = new System.Drawing.Size(53, 61);
             ribbonPic2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1504,7 +1504,7 @@ namespace MonCollection
             // ribbonPic3
             // 
             ribbonPic3.Location = new System.Drawing.Point(353, 321);
-            ribbonPic3.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic3.Margin = new Padding(5);
             ribbonPic3.Name = "ribbonPic3";
             ribbonPic3.Size = new System.Drawing.Size(53, 61);
             ribbonPic3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1514,7 +1514,7 @@ namespace MonCollection
             // ribbonPic4
             // 
             ribbonPic4.Location = new System.Drawing.Point(405, 321);
-            ribbonPic4.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic4.Margin = new Padding(5);
             ribbonPic4.Name = "ribbonPic4";
             ribbonPic4.Size = new System.Drawing.Size(53, 61);
             ribbonPic4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1524,7 +1524,7 @@ namespace MonCollection
             // pictureBoxGMax
             // 
             pictureBoxGMax.Location = new System.Drawing.Point(360, 183);
-            pictureBoxGMax.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxGMax.Margin = new Padding(5);
             pictureBoxGMax.Name = "pictureBoxGMax";
             pictureBoxGMax.Size = new System.Drawing.Size(30, 23);
             pictureBoxGMax.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1536,7 +1536,7 @@ namespace MonCollection
             textBoxDynaLv.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             textBoxDynaLv.ForeColor = System.Drawing.Color.Black;
             textBoxDynaLv.Location = new System.Drawing.Point(319, 188);
-            textBoxDynaLv.Margin = new Padding(5, 5, 5, 5);
+            textBoxDynaLv.Margin = new Padding(5);
             textBoxDynaLv.Name = "textBoxDynaLv";
             textBoxDynaLv.Size = new System.Drawing.Size(31, 27);
             textBoxDynaLv.TabIndex = 172;
@@ -1558,7 +1558,7 @@ namespace MonCollection
             // buttonMonInfo
             // 
             buttonMonInfo.Location = new System.Drawing.Point(835, 777);
-            buttonMonInfo.Margin = new Padding(5, 5, 5, 5);
+            buttonMonInfo.Margin = new Padding(5);
             buttonMonInfo.Name = "buttonMonInfo";
             buttonMonInfo.Size = new System.Drawing.Size(155, 35);
             buttonMonInfo.TabIndex = 174;
@@ -1569,7 +1569,7 @@ namespace MonCollection
             // ribbonPic9
             // 
             ribbonPic9.Location = new System.Drawing.Point(405, 381);
-            ribbonPic9.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic9.Margin = new Padding(5);
             ribbonPic9.Name = "ribbonPic9";
             ribbonPic9.Size = new System.Drawing.Size(53, 61);
             ribbonPic9.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1579,7 +1579,7 @@ namespace MonCollection
             // ribbonPic8
             // 
             ribbonPic8.Location = new System.Drawing.Point(353, 381);
-            ribbonPic8.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic8.Margin = new Padding(5);
             ribbonPic8.Name = "ribbonPic8";
             ribbonPic8.Size = new System.Drawing.Size(53, 61);
             ribbonPic8.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1589,7 +1589,7 @@ namespace MonCollection
             // ribbonPic7
             // 
             ribbonPic7.Location = new System.Drawing.Point(301, 381);
-            ribbonPic7.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic7.Margin = new Padding(5);
             ribbonPic7.Name = "ribbonPic7";
             ribbonPic7.Size = new System.Drawing.Size(53, 61);
             ribbonPic7.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1599,7 +1599,7 @@ namespace MonCollection
             // ribbonPic6
             // 
             ribbonPic6.Location = new System.Drawing.Point(249, 381);
-            ribbonPic6.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic6.Margin = new Padding(5);
             ribbonPic6.Name = "ribbonPic6";
             ribbonPic6.Size = new System.Drawing.Size(53, 61);
             ribbonPic6.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1609,7 +1609,7 @@ namespace MonCollection
             // ribbonPic5
             // 
             ribbonPic5.Location = new System.Drawing.Point(197, 381);
-            ribbonPic5.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic5.Margin = new Padding(5);
             ribbonPic5.Name = "ribbonPic5";
             ribbonPic5.Size = new System.Drawing.Size(53, 61);
             ribbonPic5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1619,7 +1619,7 @@ namespace MonCollection
             // ribbonPic19
             // 
             ribbonPic19.Location = new System.Drawing.Point(405, 501);
-            ribbonPic19.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic19.Margin = new Padding(5);
             ribbonPic19.Name = "ribbonPic19";
             ribbonPic19.Size = new System.Drawing.Size(53, 61);
             ribbonPic19.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1629,7 +1629,7 @@ namespace MonCollection
             // ribbonPic18
             // 
             ribbonPic18.Location = new System.Drawing.Point(353, 501);
-            ribbonPic18.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic18.Margin = new Padding(5);
             ribbonPic18.Name = "ribbonPic18";
             ribbonPic18.Size = new System.Drawing.Size(53, 61);
             ribbonPic18.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1639,7 +1639,7 @@ namespace MonCollection
             // ribbonPic17
             // 
             ribbonPic17.Location = new System.Drawing.Point(301, 501);
-            ribbonPic17.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic17.Margin = new Padding(5);
             ribbonPic17.Name = "ribbonPic17";
             ribbonPic17.Size = new System.Drawing.Size(53, 61);
             ribbonPic17.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1649,7 +1649,7 @@ namespace MonCollection
             // ribbonPic16
             // 
             ribbonPic16.Location = new System.Drawing.Point(249, 501);
-            ribbonPic16.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic16.Margin = new Padding(5);
             ribbonPic16.Name = "ribbonPic16";
             ribbonPic16.Size = new System.Drawing.Size(53, 61);
             ribbonPic16.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1659,7 +1659,7 @@ namespace MonCollection
             // ribbonPic15
             // 
             ribbonPic15.Location = new System.Drawing.Point(197, 501);
-            ribbonPic15.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic15.Margin = new Padding(5);
             ribbonPic15.Name = "ribbonPic15";
             ribbonPic15.Size = new System.Drawing.Size(53, 61);
             ribbonPic15.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1669,7 +1669,7 @@ namespace MonCollection
             // ribbonPic14
             // 
             ribbonPic14.Location = new System.Drawing.Point(405, 441);
-            ribbonPic14.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic14.Margin = new Padding(5);
             ribbonPic14.Name = "ribbonPic14";
             ribbonPic14.Size = new System.Drawing.Size(53, 61);
             ribbonPic14.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1679,7 +1679,7 @@ namespace MonCollection
             // ribbonPic13
             // 
             ribbonPic13.Location = new System.Drawing.Point(353, 441);
-            ribbonPic13.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic13.Margin = new Padding(5);
             ribbonPic13.Name = "ribbonPic13";
             ribbonPic13.Size = new System.Drawing.Size(53, 61);
             ribbonPic13.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1689,7 +1689,7 @@ namespace MonCollection
             // ribbonPic12
             // 
             ribbonPic12.Location = new System.Drawing.Point(301, 441);
-            ribbonPic12.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic12.Margin = new Padding(5);
             ribbonPic12.Name = "ribbonPic12";
             ribbonPic12.Size = new System.Drawing.Size(53, 61);
             ribbonPic12.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1699,7 +1699,7 @@ namespace MonCollection
             // ribbonPic11
             // 
             ribbonPic11.Location = new System.Drawing.Point(249, 441);
-            ribbonPic11.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic11.Margin = new Padding(5);
             ribbonPic11.Name = "ribbonPic11";
             ribbonPic11.Size = new System.Drawing.Size(53, 61);
             ribbonPic11.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1709,7 +1709,7 @@ namespace MonCollection
             // ribbonPic10
             // 
             ribbonPic10.Location = new System.Drawing.Point(197, 441);
-            ribbonPic10.Margin = new Padding(5, 5, 5, 5);
+            ribbonPic10.Margin = new Padding(5);
             ribbonPic10.Name = "ribbonPic10";
             ribbonPic10.Size = new System.Drawing.Size(53, 61);
             ribbonPic10.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1719,7 +1719,7 @@ namespace MonCollection
             // buttonLineInfo
             // 
             buttonLineInfo.Location = new System.Drawing.Point(1013, 777);
-            buttonLineInfo.Margin = new Padding(5, 5, 5, 5);
+            buttonLineInfo.Margin = new Padding(5);
             buttonLineInfo.Name = "buttonLineInfo";
             buttonLineInfo.Size = new System.Drawing.Size(155, 35);
             buttonLineInfo.TabIndex = 190;
@@ -1730,7 +1730,7 @@ namespace MonCollection
             // buttonDupCheck
             // 
             buttonDupCheck.Location = new System.Drawing.Point(1192, 777);
-            buttonDupCheck.Margin = new Padding(5, 5, 5, 5);
+            buttonDupCheck.Margin = new Padding(5);
             buttonDupCheck.Name = "buttonDupCheck";
             buttonDupCheck.Size = new System.Drawing.Size(155, 35);
             buttonDupCheck.TabIndex = 191;
@@ -1741,7 +1741,7 @@ namespace MonCollection
             // buttonPkrsCount
             // 
             buttonPkrsCount.Location = new System.Drawing.Point(1192, 823);
-            buttonPkrsCount.Margin = new Padding(5, 5, 5, 5);
+            buttonPkrsCount.Margin = new Padding(5);
             buttonPkrsCount.Name = "buttonPkrsCount";
             buttonPkrsCount.Size = new System.Drawing.Size(155, 35);
             buttonPkrsCount.TabIndex = 192;
@@ -1778,7 +1778,7 @@ namespace MonCollection
             // buttonGameOriginSort
             // 
             buttonGameOriginSort.Location = new System.Drawing.Point(1192, 595);
-            buttonGameOriginSort.Margin = new Padding(5, 5, 5, 5);
+            buttonGameOriginSort.Margin = new Padding(5);
             buttonGameOriginSort.Name = "buttonGameOriginSort";
             buttonGameOriginSort.Size = new System.Drawing.Size(155, 35);
             buttonGameOriginSort.TabIndex = 195;
@@ -1789,7 +1789,7 @@ namespace MonCollection
             // buttonAssignOrigin
             // 
             buttonAssignOrigin.Location = new System.Drawing.Point(835, 823);
-            buttonAssignOrigin.Margin = new Padding(5, 5, 5, 5);
+            buttonAssignOrigin.Margin = new Padding(5);
             buttonAssignOrigin.Name = "buttonAssignOrigin";
             buttonAssignOrigin.Size = new System.Drawing.Size(155, 35);
             buttonAssignOrigin.TabIndex = 196;
@@ -1802,7 +1802,7 @@ namespace MonCollection
             bpkx1.BackColor = System.Drawing.Color.Transparent;
             bpkx1.BorderStyle = BorderStyle.FixedSingle;
             bpkx1.Location = new System.Drawing.Point(835, 117);
-            bpkx1.Margin = new Padding(5, 5, 5, 5);
+            bpkx1.Margin = new Padding(5);
             bpkx1.Name = "bpkx1";
             bpkx1.Size = new System.Drawing.Size(77, 74);
             bpkx1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -1813,7 +1813,7 @@ namespace MonCollection
             // buttonSortOrder
             // 
             buttonSortOrder.Location = new System.Drawing.Point(835, 551);
-            buttonSortOrder.Margin = new Padding(5, 5, 5, 5);
+            buttonSortOrder.Margin = new Padding(5);
             buttonSortOrder.Name = "buttonSortOrder";
             buttonSortOrder.Size = new System.Drawing.Size(155, 35);
             buttonSortOrder.TabIndex = 197;
@@ -1824,7 +1824,7 @@ namespace MonCollection
             // buttonEditDexes
             // 
             buttonEditDexes.Location = new System.Drawing.Point(1192, 551);
-            buttonEditDexes.Margin = new Padding(5, 5, 5, 5);
+            buttonEditDexes.Margin = new Padding(5);
             buttonEditDexes.Name = "buttonEditDexes";
             buttonEditDexes.Size = new System.Drawing.Size(155, 35);
             buttonEditDexes.TabIndex = 198;
@@ -1835,7 +1835,7 @@ namespace MonCollection
             // buttonOriginTally
             // 
             buttonOriginTally.Location = new System.Drawing.Point(1013, 685);
-            buttonOriginTally.Margin = new Padding(5, 5, 5, 5);
+            buttonOriginTally.Margin = new Padding(5);
             buttonOriginTally.Name = "buttonOriginTally";
             buttonOriginTally.Size = new System.Drawing.Size(155, 35);
             buttonOriginTally.TabIndex = 199;
@@ -1846,7 +1846,7 @@ namespace MonCollection
             // buttonPickTransfers
             // 
             buttonPickTransfers.Location = new System.Drawing.Point(1013, 551);
-            buttonPickTransfers.Margin = new Padding(5, 5, 5, 5);
+            buttonPickTransfers.Margin = new Padding(5);
             buttonPickTransfers.Name = "buttonPickTransfers";
             buttonPickTransfers.Size = new System.Drawing.Size(155, 35);
             buttonPickTransfers.TabIndex = 200;
@@ -1857,7 +1857,7 @@ namespace MonCollection
             // pictureBoxAlpha
             // 
             pictureBoxAlpha.Location = new System.Drawing.Point(389, 219);
-            pictureBoxAlpha.Margin = new Padding(5, 5, 5, 5);
+            pictureBoxAlpha.Margin = new Padding(5);
             pictureBoxAlpha.Name = "pictureBoxAlpha";
             pictureBoxAlpha.Size = new System.Drawing.Size(30, 23);
             pictureBoxAlpha.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -1867,7 +1867,7 @@ namespace MonCollection
             // buttonIdealTransfer
             // 
             buttonIdealTransfer.Location = new System.Drawing.Point(533, 723);
-            buttonIdealTransfer.Margin = new Padding(5, 5, 5, 5);
+            buttonIdealTransfer.Margin = new Padding(5);
             buttonIdealTransfer.Name = "buttonIdealTransfer";
             buttonIdealTransfer.Size = new System.Drawing.Size(155, 35);
             buttonIdealTransfer.TabIndex = 202;
@@ -2032,7 +2032,7 @@ namespace MonCollection
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "MainForm";
             Text = "Mon Collection";
             FormClosing += MainForm_FormClosing;

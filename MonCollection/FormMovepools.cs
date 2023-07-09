@@ -86,75 +86,114 @@ namespace MonCollection
             }
             if (comboBoxCategory.Text != string.Empty)
             {
-                GameVersion gv = GameVersion.SH;
+                GameVersion gv = GameVersion.Any;
                 switch (comboBoxCategory.Text)
                 {
                     case "LGPE":
                         gv = GameVersion.GE;
                         break;
-                }
-
-                SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
-
-                PKM pkmn = new PK8();
-
-                switch (gv)
-                {
-                    case GameVersion.GE:
-                        pkmn = new PB7();
+                    case "SWSH":
+                        gv = GameVersion.SH;
                         break;
-                    case GameVersion.SH:
-                        pkmn = new PK8();
+                    case "BDSP":
+                        gv = GameVersion.BD;
                         break;
-                    case GameVersion.BD:
-                        pkmn = new PB8();
+                    case "PLA":
+                        gv = GameVersion.PLA;
                         break;
-                    case GameVersion.PLA:
-                        pkmn = new PA8();
-                        break;
-                    case GameVersion.VL:
-                        pkmn = new PK9();
+                    case "SV":
+                        gv = GameVersion.VL;
                         break;
                 }
-
-                pkmn.Species = mon.Species;
-                pkmn.Form = mon.AltForm;
-                pkmn.CurrentLevel = mon.Level;
-                pkmn.Version = (int)gv;
-
-                legal = new LegalityAnalysis(pkmn, sf.Personal);
-                LegalMoveSource.ReloadMoves(legal);
-
-                var ls = GameData.GetLearnSource(gv);
-                var learn = ls.GetLearnset(mon.Species, mon.AltForm);
-                var mv = learn.GetAllMoves();
 
                 relearn = new List<ushort>();
-                for (int i = 0; i < 4; i++)
+
+                if (gv == GameVersion.Any)
                 {
-                    ushort m = (ushort)movepools[comboBoxCategory.Text].moves[i];
-                    if (m != 0 && !relearn.Contains(m) && LegalMoveSource.Info.CanLearn(m))
+                    for (int i = 0; i < 4; i++)
                     {
-                        relearn.Add(m);
+                        ushort m = (ushort)movepools[comboBoxCategory.Text].moves[i];
+                        if (m != 0 && !relearn.Contains(m))
+                        {
+                            relearn.Add(m);
+                        }
                     }
                 }
-
-                foreach (var m in mv)
+                else
                 {
-                    if (learn.GetLevelLearnMove(m) <= mon.Level && !relearn.Contains(m))
+                    SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
+
+                    PKM pkmn = new PK8();
+
+                    switch (gv)
                     {
-                        relearn.Add(m);
+                        case GameVersion.GE:
+                            pkmn = new PB7();
+                            break;
+                        case GameVersion.SH:
+                            pkmn = new PK8();
+                            break;
+                        case GameVersion.BD:
+                            pkmn = new PB8();
+                            break;
+                        case GameVersion.PLA:
+                            pkmn = new PA8();
+                            break;
+                        case GameVersion.VL:
+                            pkmn = new PK9();
+                            break;
                     }
-                }
 
-                listBoxMoves.Items.Clear();
-                var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
-                foreach (var r in relearn)
-                {
-                    if (r != 0)
-                        listBoxMoves.Items.Add(moveNames.Find(p => p.Value == r).Text);
+                    pkmn.Species = mon.Species;
+                    pkmn.Form = mon.AltForm;
+                    pkmn.CurrentLevel = 100;
+                    pkmn.Version = (int)gv;
+
+                    legal = new LegalityAnalysis(pkmn, sf.Personal);
+                    LegalMoveSource.ReloadMoves(legal);
+
+                    var ls = GameData.GetLearnSource(gv);
+                    var learn = ls.GetLearnset(mon.Species, mon.AltForm);
+                    var mv = learn.GetAllMoves();
+
+                    for (int i = 0; i < 4; i++)
+                    {
+                        ushort m = (ushort)movepools[comboBoxCategory.Text].moves[i];
+                        if (m != 0 && !relearn.Contains(m) && LegalMoveSource.Info.CanLearn(m))
+                        {
+                            relearn.Add(m);
+                        }
+                    }
+
+                    if (movepools[comboBoxCategory.Text].special != null)
+                    {
+                        foreach (ushort s in movepools[comboBoxCategory.Text].special)
+                        {
+                            if (s != 0 && !relearn.Contains(s) && LegalMoveSource.Info.CanLearn(s))
+                            {
+                                relearn.Add(s);
+                            }
+                        }
+                    }
+
+                    foreach (var m in mv)
+                    {
+                        if (learn.GetLevelLearnMove(m) <= mon.Level && !relearn.Contains(m))
+                        {
+                            relearn.Add(m);
+                        }
+                    }
                 }
             }
+
+            listBoxMoves.Items.Clear();
+            var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
+            foreach (var r in relearn)
+            {
+                if (r != 0)
+                    listBoxMoves.Items.Add(moveNames.Find(p => p.Value == r).Text);
+            }
+
             comboBoxMove1.SelectedValue = movepools[comboBoxCategory.Text].moves[0];
             comboBoxMove2.SelectedValue = movepools[comboBoxCategory.Text].moves[1];
             comboBoxMove3.SelectedValue = movepools[comboBoxCategory.Text].moves[2];

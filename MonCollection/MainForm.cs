@@ -744,6 +744,10 @@ namespace MonCollection
                 monMovepools = new Dictionary<string, Movepools>();
             }
 
+            if (pk.availableVersions == null)
+            {
+                pk.availableVersions = new List<string>();
+            }
             foreach (string av in pk.availableVersions)
             {
                 if (!monMovepools.ContainsKey(av))
@@ -795,7 +799,7 @@ namespace MonCollection
                 spForm += "-" + (pk.AltForm % 7).ToString();
             if (genderDiff.Contains(pk.Species) && !majorGenderDiff.Contains(pk.Species))
             {
-                if ((pk.AltForm == 0 || (pk.AltForm == 1 && pk.Species == 215)) && pk.Gen >= 4 && !(pk.Species == 133 && pk.Gen <= 7))
+                if ((pk.AltForm == 0 || (pk.AltForm == 1 && pk.Species == 215)) && pk.Gen >= 4 && !(pk.Species == 133 && gameDict[pk.Game].version < GameVersion.GP))
                 {
                     if (pk.Gender == 0)
                         spForm += "m";
@@ -1260,8 +1264,7 @@ namespace MonCollection
         public void SpeciesGameSort(int index)
         {
             PkmData = PkmData.OrderBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
@@ -1276,8 +1279,7 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -1290,8 +1292,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
@@ -1305,8 +1306,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => mon.Gen)
                              .ThenBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -1321,8 +1321,7 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Nickname)
                              .ToList<MonData>();
@@ -1334,8 +1333,7 @@ namespace MonCollection
         {
             PkmData = PkmData.OrderBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => monOrder[mon.Species])
-                             .ThenBy(mon => mon.AltForm)
-                             .ThenBy(mon => genderDiff.Contains(mon.Species) ? mon.Gender : -1)
+                             .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -1797,13 +1795,14 @@ namespace MonCollection
             }
             else
             {
-                byte temp = 8;
+                byte temp = 0;
                 foreach (string s in mon.availableVersions)
                 {
                     switch (s)
                     {
                         case "LGPE":
-                            temp = 7;
+                            if (temp < 7)
+                                temp = 7;
                             break;
                         case "SWSH":
                         case "BDSP":
@@ -1817,6 +1816,8 @@ namespace MonCollection
                             break;
                     }
                 }
+                if (temp == 0)
+                    temp = 8;
                 mon.Gen = temp;
             }
             switch (mon.Gen)
@@ -2065,6 +2066,202 @@ namespace MonCollection
             return mons;
         }
 
+        private List<int> getMovepools(MonData mon)
+        {
+            List<int> moves = new List<int>();
+
+            moves.AddRange(mon.Moves);
+
+            SaveInfo si = gameDict[mon.Game];
+
+            if (si.version == GameVersion.HOME)
+            {
+                if (mon.movepools == null)
+                {
+                    mon.movepools = new Dictionary<string, Movepools>();
+                }
+                foreach (string av in mon.availableVersions)
+                {
+                    if (!mon.movepools.ContainsKey(av))
+                    {
+                        mon.movepools[av] = new Movepools();
+                        monMovepools[av].moves = new List<int> { 0, 0, 0, 0 };
+                    }
+                    GameVersion gv = GameVersion.Any;
+                    switch (av)
+                    {
+                        case "LGPE":
+                            gv = GameVersion.GE;
+                            break;
+                        case "SWSH":
+                            gv = GameVersion.SH;
+                            break;
+                        case "BDSP":
+                            gv = GameVersion.BD;
+                            break;
+                        case "PLA":
+                            gv = GameVersion.PLA;
+                            break;
+                        case "SV":
+                            gv = GameVersion.VL;
+                            break;
+                    }
+
+                    if (gv == GameVersion.Any)
+                    {
+                        for (int i = 0; i < 4; i++)
+                        {
+                            ushort m = (ushort)mon.movepools[av].moves[i];
+                            if (m != 0 && !moves.Contains(m))
+                            {
+                                moves.Add(m);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
+
+                        PKM pkmn = new PK8();
+
+                        switch (gv)
+                        {
+                            case GameVersion.GE:
+                                pkmn = new PB7();
+                                break;
+                            case GameVersion.SH:
+                                pkmn = new PK8();
+                                break;
+                            case GameVersion.BD:
+                                pkmn = new PB8();
+                                break;
+                            case GameVersion.PLA:
+                                pkmn = new PA8();
+                                break;
+                            case GameVersion.VL:
+                                pkmn = new PK9();
+                                break;
+                        }
+
+                        pkmn.Species = mon.Species;
+                        pkmn.Form = mon.AltForm;
+                        pkmn.CurrentLevel = mon.Level;
+                        pkmn.Version = (int)gv;
+
+                        legal = new LegalityAnalysis(pkmn, sf.Personal);
+                        LegalMoveSource.ReloadMoves(legal);
+
+                        var ls = GameData.GetLearnSource(gv);
+                        var learn = ls.GetLearnset(mon.Species, mon.AltForm);
+                        var mv = learn.GetAllMoves();
+
+                        for (int i = 0; i < 4; i++)
+                        {
+                            ushort m = (ushort)mon.movepools[av].moves[i];
+                            if (m != 0 && !moves.Contains(m))
+                            {
+                                moves.Add(m);
+                            }
+                        }
+
+                        foreach (var m in mv)
+                        {
+                            if (learn.GetLevelLearnMove(m) <= mon.Level && !moves.Contains(m))
+                            {
+                                moves.Add(m);
+                            }
+                        }
+                    }
+                }
+            }
+            else if (si.dataGroup != string.Empty)
+            {
+                GameVersion gv = GameVersion.Any;
+                switch (si.dataGroup)
+                {
+                    case "LGPE":
+                        gv = GameVersion.GE;
+                        break;
+                    case "SWSH":
+                        gv = GameVersion.SH;
+                        break;
+                    case "BDSP":
+                        gv = GameVersion.BD;
+                        break;
+                    case "PLA":
+                        gv = GameVersion.PLA;
+                        break;
+                    case "SV":
+                        gv = GameVersion.VL;
+                        break;
+                }
+                SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
+
+                PKM pkmn = new PK8();
+
+                switch (gv)
+                {
+                    case GameVersion.GE:
+                        pkmn = new PB7();
+                        break;
+                    case GameVersion.SH:
+                        pkmn = new PK8();
+                        break;
+                    case GameVersion.BD:
+                        pkmn = new PB8();
+                        break;
+                    case GameVersion.PLA:
+                        pkmn = new PA8();
+                        break;
+                    case GameVersion.VL:
+                        pkmn = new PK9();
+                        break;
+                }
+
+                pkmn.Species = mon.Species;
+                pkmn.Form = mon.AltForm;
+                pkmn.CurrentLevel = mon.Level;
+                pkmn.Version = (int)gv;
+
+                legal = new LegalityAnalysis(pkmn, sf.Personal);
+                LegalMoveSource.ReloadMoves(legal);
+
+                var ls = GameData.GetLearnSource(gv);
+                var learn = ls.GetLearnset(mon.Species, mon.AltForm);
+                var mv = learn.GetAllMoves();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    ushort m = (ushort)mon.movepools[si.dataGroup].moves[i];
+                    if (m != 0 && !moves.Contains(m))
+                    {
+                        moves.Add(m);
+                    }
+                }
+
+                if (mon.movepools[si.dataGroup].special != null)
+                {
+                    foreach (ushort s in mon.movepools[si.dataGroup].special)
+                    {
+                        if (s != 0 && !moves.Contains(s) && LegalMoveSource.Info.CanLearn(s))
+                        {
+                            moves.Add(s);
+                        }
+                    }
+                }
+
+                foreach (var m in mv)
+                {
+                    if (learn.GetLevelLearnMove(m) <= mon.Level && !moves.Contains(m))
+                    {
+                        moves.Add(m);
+                    }
+                }
+            }
+
+            return moves;
+        }
+
         private void GameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormFilters form = new FormFilters
@@ -2169,6 +2366,27 @@ namespace MonCollection
             results.Show();
         }
 
+        private int visibleAltForm(MonData mon)
+        {
+            int formVal = mon.AltForm;
+
+            if (genderDiff.Contains(mon.Species))
+            {
+                if (mon.Species == 215 && mon.AltForm == 1)
+                {
+                    formVal = mon.AltForm * 2 + mon.Gender;
+                }
+                else
+                {
+                    formVal = mon.AltForm + (mon.AltForm > 0 ? 1 : mon.Gender);
+                }
+            }
+            else if (noDiff.Contains(mon.Species))
+                formVal = -1;
+
+            return formVal;
+        }
+
         private void ButtonMonInfo_Click(object sender, EventArgs e)
         {
             FormSpeciesInfo form = new FormSpeciesInfo();
@@ -2212,8 +2430,7 @@ namespace MonCollection
                     balls.Add(mon.Ball);
                     languages.Add(mon.Language);
                     origins.Add(mon.Origin);
-                    foreach (int m in mon.Moves)
-                        moves.Add(m);
+                    moves.AddRange(getMovepools(mon));
                     names.Add(mon.Nickname);
                     levels.Add(mon.Level);
 
@@ -2310,7 +2527,7 @@ namespace MonCollection
                     balls.Add(mon.Ball);
                     languages.Add(mon.Language);
                     origins.Add(mon.Origin);
-                    foreach (int m in mon.Moves)
+                    foreach (int m in getMovepools(mon))
                         moves.Add(m);
                     names.Add(mon.Nickname);
                     levels.Add(mon.Level);
@@ -2483,7 +2700,7 @@ namespace MonCollection
             {
                 movepools = monMovepools,
                 mon = PkmData[slotSelected]
-        };
+            };
             form.SetupValues();
             form.FormClosing += new FormClosingEventHandler(
                 delegate (object send, FormClosingEventArgs a)
@@ -2495,7 +2712,7 @@ namespace MonCollection
 
         private void buttonAssignOrigin_Click(object sender, EventArgs e)
         {
-            FormAssignOrigin form = new FormAssignOrigin
+            /*FormAssignOrigin form = new FormAssignOrigin
             {
                 regionVals = regionDict
             };
@@ -2516,7 +2733,15 @@ namespace MonCollection
                     }
                 });
 
-            form.Show();
+            form.Show();*/
+            List<string> ord = new List<string> { "Bank", "LGPE", "SWSH", "BDSP", "PLA", "SV" };
+            for (int i = 0; i < PkmData.Count; i++)
+            {
+                if (PkmData[i].movepools != null)
+                {
+                    PkmData[i].movepools = PkmData[i].movepools.OrderByDescending(i => ord.IndexOf(i.Key)).ToDictionary(d => d.Key, d => d.Value);
+                }
+            }
         }
 
         private void homeSwShToolStripMenuItem_Click(object sender, EventArgs e)

@@ -14,12 +14,23 @@
     <None Remove="Resources\cries\1009.wav" />
     <None Remove="Resources\cries\1010.wav" />
     <None Remove="Resources\img\go\rare\676-8.png" />
+    <None Remove="Resources\img\home\188.png" />
+    <None Remove="Resources\img\home\201-15.png" />
     <None Remove="Resources\img\home\201-4.png" />
     <None Remove="Resources\img\home\201-9.png" />
+    <None Remove="Resources\img\home\202f.png" />
+    <None Remove="Resources\img\home\202m.png" />
+    <None Remove="Resources\img\home\269f.png" />
     <None Remove="Resources\img\home\291.png" />
+    <None Remove="Resources\img\home\412-1.png" />
+    <None Remove="Resources\img\home\456m.png" />
     <None Remove="Resources\img\home\464m.png" />
+    <None Remove="Resources\img\home\665.png" />
     <None Remove="Resources\img\home\671-1.png" />
+    <None Remove="Resources\img\home\677.png" />
     <None Remove="Resources\img\home\678-1.png" />
+    <None Remove="Resources\img\home\731.png" />
+    <None Remove="Resources\img\home\740.png" />
     <None Remove="Resources\img\home\760.png" />
     <None Remove="Resources\img\home\802.png" />
     <None Remove="Resources\img\home\832.png" />
@@ -28,8 +39,11 @@
     <None Remove="Resources\img\home\912.png" />
     <None Remove="Resources\img\home\933.png" />
     <None Remove="Resources\img\home\953.png" />
+    <None Remove="Resources\img\home\969.png" />
+    <None Remove="Resources\img\home\972.png" />
     <None Remove="Resources\img\home\974.png" />
     <None Remove="Resources\img\home\999.png" />
+    <None Remove="Resources\img\home\rare\172.png" />
     <None Remove="Resources\img\home\rare\215m.png" />
     <None Remove="Resources\img\icons\1009.png" />
     <None Remove="Resources\img\icons\1010.png" />
@@ -10660,6 +10674,9 @@
     <Content Include="Resources\img\home\186m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\188.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\189.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -10699,6 +10716,9 @@
     <Content Include="Resources\img\home\201-14.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\201-15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\201-16.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -10733,6 +10753,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\201-9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\202f.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\202m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\203f.png">
@@ -10928,6 +10954,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\268.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\269f.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\269m.png">
@@ -11245,6 +11274,9 @@
     <Content Include="Resources\img\home\411.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\412-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\412.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -11336,6 +11368,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\455.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\456m.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\457f.png">
@@ -13333,6 +13368,9 @@
     <Content Include="Resources\img\home\675.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\677.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\678-1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -13498,6 +13536,9 @@
     <Content Include="Resources\img\home\73.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\731.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\732.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -13517,6 +13558,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\74.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\740.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\741-2.png">
@@ -14041,6 +14085,12 @@
     <Content Include="Resources\img\home\96.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\img\home\969.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\972.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\img\home\974.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -14078,6 +14128,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\rare\142.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\img\home\rare\172.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\home\rare\204.png">
@@ -28514,6 +28567,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\img\yw\96.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img\home\665.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
