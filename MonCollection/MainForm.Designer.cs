@@ -121,7 +121,6 @@ namespace MonCollection
             speciesToolStripMenuItem = new ToolStripMenuItem();
             levelToolStripMenuItem = new ToolStripMenuItem();
             presetsToolStripMenuItem = new ToolStripMenuItem();
-            homeSwShToolStripMenuItem = new ToolStripMenuItem();
             textBoxHP = new TextBox();
             textBoxAttack = new TextBox();
             textBoxDefense = new TextBox();
@@ -178,6 +177,7 @@ namespace MonCollection
             pictureBoxAlpha = new PictureBox();
             buttonIdealTransfer = new Button();
             comboBoxTeraType = new ComboBox();
+            homeSwShToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBall).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bpkx30).BeginInit();
@@ -1266,13 +1266,6 @@ namespace MonCollection
             presetsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             presetsToolStripMenuItem.Text = "Presets";
             // 
-            // homeSwShToolStripMenuItem
-            // 
-            homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
-            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            homeSwShToolStripMenuItem.Text = "Home->SwSh";
-            homeSwShToolStripMenuItem.Click += homeSwShToolStripMenuItem_Click;
-            // 
             // textBoxHP
             // 
             textBoxHP.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
@@ -1889,6 +1882,13 @@ namespace MonCollection
             comboBoxTeraType.Size = new System.Drawing.Size(95, 28);
             comboBoxTeraType.TabIndex = 203;
             // 
+            // homeSwShToolStripMenuItem
+            // 
+            homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
+            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            homeSwShToolStripMenuItem.Text = "Home->SwSh";
+            homeSwShToolStripMenuItem.Click += homeSwShToolStripMenuItem_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -2236,7 +2236,6 @@ namespace MonCollection
         private Button buttonGameOriginSort;
         private Button buttonAssignOrigin;
         private ToolStripMenuItem presetsToolStripMenuItem;
-        private ToolStripMenuItem homeSwShToolStripMenuItem;
         private ToolStripMenuItem originToolStripMenuItem;
         private PictureBox bpkx1;
         private Button buttonSortOrder;
@@ -2247,6 +2246,7 @@ namespace MonCollection
         private PictureBox pictureBoxAlpha;
         private Button buttonIdealTransfer;
         private ComboBox comboBoxTeraType;
+        private ToolStripMenuItem homeSwShToolStripMenuItem;
     }
 }
 

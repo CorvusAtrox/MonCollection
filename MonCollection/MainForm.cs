@@ -1266,6 +1266,7 @@ namespace MonCollection
             PkmData = PkmData.OrderBy(mon => monOrder[mon.Species])
                              .ThenBy(mon => visibleAltForm(mon))
                              .ThenBy(mon => mon.Shiny)
+                             .ThenBy(mon => OriginIndex(mon.Origin))
                              .ThenBy(mon => GameIndex(mon.Game))
                              .ThenBy(mon => mon.Level)
                              .ThenBy(mon => mon.Nickname)
@@ -2171,6 +2172,19 @@ namespace MonCollection
                                 moves.Add(m);
                             }
                         }
+
+                        if (gv == GameVersion.VL)
+                        {
+                            LearnSource9SV lsv = new LearnSource9SV();
+                            var reminder = lsv.GetReminderMoves(mon.Species, mon.AltForm);
+                            foreach (var r in reminder)
+                            {
+                                if (!moves.Contains(r))
+                                {
+                                    moves.Add(r);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -2255,6 +2269,19 @@ namespace MonCollection
                     if (learn.GetLevelLearnMove(m) <= mon.Level && !moves.Contains(m))
                     {
                         moves.Add(m);
+                    }
+                }
+
+                if (gv == GameVersion.VL)
+                {
+                    LearnSource9SV lsv = new LearnSource9SV();
+                    var reminder = lsv.GetReminderMoves(mon.Species, mon.AltForm);
+                    foreach (var r in reminder)
+                    {
+                        if (!moves.Contains(r))
+                        {
+                            moves.Add(r);
+                        }
                     }
                 }
             }

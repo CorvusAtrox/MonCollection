@@ -41,12 +41,12 @@
             labelCategory = new System.Windows.Forms.Label();
             buttonSetCategory = new System.Windows.Forms.Button();
             buttonSave = new System.Windows.Forms.Button();
-            listBoxMoves = new System.Windows.Forms.ListBox();
+            listBoxRelearn = new System.Windows.Forms.ListBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(207, 315);
+            button1.Location = new System.Drawing.Point(30, 313);
             button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(100, 35);
@@ -197,26 +197,26 @@
             buttonSave.UseVisualStyleBackColor = true;
             buttonSave.Click += buttonSave_Click;
             // 
-            // listBoxMoves
+            // listBoxRelearn
             // 
-            listBoxMoves.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            listBoxMoves.FormattingEnabled = true;
-            listBoxMoves.ItemHeight = 20;
-            listBoxMoves.Location = new System.Drawing.Point(207, 115);
-            listBoxMoves.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            listBoxMoves.MultiColumn = true;
-            listBoxMoves.Name = "listBoxMoves";
-            listBoxMoves.Size = new System.Drawing.Size(248, 124);
-            listBoxMoves.Sorted = true;
-            listBoxMoves.TabIndex = 186;
+            listBoxRelearn.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            listBoxRelearn.FormattingEnabled = true;
+            listBoxRelearn.ItemHeight = 20;
+            listBoxRelearn.Location = new System.Drawing.Point(207, 115);
+            listBoxRelearn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            listBoxRelearn.MultiColumn = true;
+            listBoxRelearn.Name = "listBoxRelearn";
+            listBoxRelearn.Size = new System.Drawing.Size(248, 124);
+            listBoxRelearn.Sorted = true;
+            listBoxRelearn.TabIndex = 186;
             // 
             // FormMovepools
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            ClientSize = new System.Drawing.Size(479, 364);
-            Controls.Add(listBoxMoves);
+            ClientSize = new System.Drawing.Size(479, 362);
+            Controls.Add(listBoxRelearn);
             Controls.Add(buttonSave);
             Controls.Add(buttonSetCategory);
             Controls.Add(labelCategory);
@@ -250,6 +250,6 @@
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Button buttonSetCategory;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.ListBox listBoxMoves;
+        private System.Windows.Forms.ListBox listBoxRelearn;
     }
 }

@@ -108,18 +108,7 @@ namespace MonCollection
 
                 relearn = new List<ushort>();
 
-                if (gv == GameVersion.Any)
-                {
-                    for (int i = 0; i < 4; i++)
-                    {
-                        ushort m = (ushort)movepools[comboBoxCategory.Text].moves[i];
-                        if (m != 0 && !relearn.Contains(m))
-                        {
-                            relearn.Add(m);
-                        }
-                    }
-                }
-                else
+                if (gv != GameVersion.Any)
                 {
                     SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
 
@@ -127,9 +116,6 @@ namespace MonCollection
 
                     switch (gv)
                     {
-                        case GameVersion.GE:
-                            pkmn = new PB7();
-                            break;
                         case GameVersion.SH:
                             pkmn = new PK8();
                             break;
@@ -156,20 +142,16 @@ namespace MonCollection
                     var learn = ls.GetLearnset(mon.Species, mon.AltForm);
                     var mv = learn.GetAllMoves();
 
-                    for (int i = 0; i < 4; i++)
+                    if (gv == GameVersion.VL)
                     {
-                        ushort m = (ushort)movepools[comboBoxCategory.Text].moves[i];
-                        if (m != 0 && !relearn.Contains(m) && LegalMoveSource.Info.CanLearn(m))
-                        {
-                            relearn.Add(m);
-                        }
+
                     }
 
                     if (movepools[comboBoxCategory.Text].special != null)
                     {
                         foreach (ushort s in movepools[comboBoxCategory.Text].special)
                         {
-                            if (s != 0 && !relearn.Contains(s) && LegalMoveSource.Info.CanLearn(s))
+                            if (s != 0 && !relearn.Contains(s) && !movepools[comboBoxCategory.Text].moves.Contains(s) && LegalMoveSource.Info.CanLearn(s))
                             {
                                 relearn.Add(s);
                             }
@@ -178,20 +160,33 @@ namespace MonCollection
 
                     foreach (var m in mv)
                     {
-                        if (learn.GetLevelLearnMove(m) <= mon.Level && !relearn.Contains(m))
+                        if (learn.GetLevelLearnMove(m) <= mon.Level && !relearn.Contains(m) && !movepools[comboBoxCategory.Text].moves.Contains(m))
                         {
                             relearn.Add(m);
+                        }
+                    }
+
+                    if (gv == GameVersion.VL)
+                    {
+                        LearnSource9SV lsv = new LearnSource9SV();
+                        var reminder = lsv.GetReminderMoves(mon.Species, mon.AltForm);
+                        foreach (var r in reminder)
+                        {
+                            if (!relearn.Contains(r) && !movepools[comboBoxCategory.Text].moves.Contains(r))
+                            {
+                                relearn.Add(r);
+                            }
                         }
                     }
                 }
             }
 
-            listBoxMoves.Items.Clear();
+            listBoxRelearn.Items.Clear();
             var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
             foreach (var r in relearn)
             {
                 if (r != 0)
-                    listBoxMoves.Items.Add(moveNames.Find(p => p.Value == r).Text);
+                    listBoxRelearn.Items.Add(moveNames.Find(p => p.Value == r).Text);
             }
 
             comboBoxMove1.SelectedValue = movepools[comboBoxCategory.Text].moves[0];
