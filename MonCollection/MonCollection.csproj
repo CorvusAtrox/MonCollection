@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <OutputType>WinExe</OutputType>
     <LangVersion>10</LangVersion>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -13,6 +13,22 @@
   <ItemGroup>
     <None Remove="Resources\cries\1009.wav" />
     <None Remove="Resources\cries\1010.wav" />
+    <None Remove="Resources\cries\1011.wav" />
+    <None Remove="Resources\cries\1012.wav" />
+    <None Remove="Resources\cries\1013.wav" />
+    <None Remove="Resources\cries\1014.wav" />
+    <None Remove="Resources\cries\1015.wav" />
+    <None Remove="Resources\cries\1016.wav" />
+    <None Remove="Resources\cries\1017.wav" />
+    <None Remove="Resources\cries\1018.wav" />
+    <None Remove="Resources\cries\1019.wav" />
+    <None Remove="Resources\cries\1020.wav" />
+    <None Remove="Resources\cries\1021.wav" />
+    <None Remove="Resources\cries\1022.wav" />
+    <None Remove="Resources\cries\1023.wav" />
+    <None Remove="Resources\cries\1024.wav" />
+    <None Remove="Resources\cries\1025.wav" />
+    <None Remove="Resources\cries\901-1.wav" />
     <None Remove="Resources\img\go\rare\676-8.png" />
     <None Remove="Resources\img\home\188.png" />
     <None Remove="Resources\img\home\201-15.png" />
@@ -49,6 +65,7 @@
     <None Remove="Resources\img\icons\1009.png" />
     <None Remove="Resources\img\icons\1010.png" />
     <None Remove="Resources\img\pla\198m.png" />
+    <None Remove="Resources\img\ribbons\charismatic.png" />
     <None Remove="Resources\img\ribbons\destiny.png" />
     <None Remove="Resources\img\ribbons\mightiest.png" />
     <None Remove="Resources\img\sv\1008.png" />
@@ -173,7 +190,52 @@
     <Content Include="Resources\cries\1010.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\cries\1011.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1012.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1013.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1014.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1015.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1016.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1017.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1018.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1019.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\cries\102.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1020.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1021.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1022.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1023.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1024.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\1025.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\cries\103.wav">
@@ -3084,6 +3146,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\cries\900.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\cries\901-1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\cries\901.wav">
@@ -28590,13 +28655,18 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
     <PackageReference Include="System.Memory" Version="4.5.5" />
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.355802">
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\ribbons\charismatic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="FormMovepools.cs" />

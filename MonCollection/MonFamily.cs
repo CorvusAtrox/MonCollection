@@ -455,7 +455,7 @@ namespace MonCollection
             families.Add(new ushort[] { 833, 834 }); // Chewtle
             families.Add(new ushort[] { 835, 836 }); // Yamper
             families.Add(new ushort[] { 837, 838, 839 }); // Rolycoly
-            families.Add(new ushort[] { 840, 841, 842 }); // Applin
+            families.Add(new ushort[] { 840, 841, 842, 1011, 1019 }); // Applin
             families.Add(new ushort[] { 843, 844 }); // Silicobra
             families.Add(new ushort[] { 845 }); // Cramorant
             families.Add(new ushort[] { 846, 847 }); // Arrokuda
@@ -478,7 +478,7 @@ namespace MonCollection
             families.Add(new ushort[] { 881 }); // Arctozolt
             families.Add(new ushort[] { 882 }); // Dracovish
             families.Add(new ushort[] { 883 }); // Arctovish
-            families.Add(new ushort[] { 884 }); // Duraludon
+            families.Add(new ushort[] { 884, 1018 }); // Duraludon
             families.Add(new ushort[] { 885, 886, 887 }); // Dreepy
             families.Add(new ushort[] { 888 }); // Zacian
             families.Add(new ushort[] { 889 }); // Zamazenta
@@ -550,6 +550,19 @@ namespace MonCollection
             families.Add(new ushort[] { 1006 }); // Iron Valiant
             families.Add(new ushort[] { 1007 }); // Koraidon
             families.Add(new ushort[] { 1008 }); // Miraidon
+            families.Add(new ushort[] { 1009 }); // Walking Wake
+            families.Add(new ushort[] { 1010 }); // Iron Leaves
+            families.Add(new ushort[] { 1012, 1013 }); // Poltchageist
+            families.Add(new ushort[] { 1014 }); // Okidogi
+            families.Add(new ushort[] { 1015 }); // Munkidori
+            families.Add(new ushort[] { 1016 }); // Fezandipiti
+            families.Add(new ushort[] { 1017 }); // Ogerpon
+            families.Add(new ushort[] { 1020 }); // Gouging Fire
+            families.Add(new ushort[] { 1021 }); // Raging Bolt
+            families.Add(new ushort[] { 1022 }); // Iron Boulder
+            families.Add(new ushort[] { 1023 }); // Iron Crown
+            families.Add(new ushort[] { 1024 }); // Terapagos
+            families.Add(new ushort[] { 1025 }); // Pecharunt
         }
     }
 }

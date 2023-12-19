@@ -102,7 +102,14 @@ namespace MonCollection
             int num = 1;
             foreach (int s in species)
             {
-                listSpecies.Items.Add(num.ToString() + ": " + s.ToString());
+                if (s < PkmListSorted.Count)
+                {
+                    listSpecies.Items.Add(num.ToString() + ": " + PkmListSorted[s].Text);
+                }
+                else
+                {
+                    listSpecies.Items.Add(num.ToString() + ": " + s.ToString());
+                }
                 num++;
             }
         }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonCollection", "MonCollection\MonCollection.csproj", "{AC2C16B1-8DC9-4267-9E8A-D252B723AABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonCollection", "MonCollection\MonCollection.csproj", "{AC2C16B1-8DC9-4267-9E8A-D252B723AABE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{458F541C-D8C1-4567-8770-E7CA9465AED1} = {458F541C-D8C1-4567-8770-E7CA9465AED1}
 		{E2168DC0-DB75-45AB-B625-ECA675C0ADE7} = {E2168DC0-DB75-45AB-B625-ECA675C0ADE7}

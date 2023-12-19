@@ -3225,6 +3225,8 @@ namespace MonCollection
                 else if ((vers == GameVersion.SL || vers == GameVersion.VL))
                 {
                     if ((dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(monData[index].Species) ||
+                         dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(monData[index].Species) ||
+                         dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)))
                     {
                         int num = 0;
@@ -3350,6 +3352,8 @@ namespace MonCollection
                 }
 
                 if (dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(hm.Species) ||
+                    dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(hm.Species) ||
+                    dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(hm.Species) ||
                     dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species))
                 {
                     sv++;
