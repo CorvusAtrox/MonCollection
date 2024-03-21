@@ -133,7 +133,7 @@ namespace MonCollection
                     pkmn.Species = mon.Species;
                     pkmn.Form = mon.AltForm;
                     pkmn.CurrentLevel = 100;
-                    pkmn.Version = (int)gv;
+                    pkmn.Version = gv;
 
                     legal = new LegalityAnalysis(pkmn, sf.Personal);
                     LegalMoveSource.ReloadMoves(legal);

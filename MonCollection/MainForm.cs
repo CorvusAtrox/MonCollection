@@ -199,7 +199,7 @@ namespace MonCollection
                                          396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473, 521, 592, 593, 668 };
-            noDiff = new ushort[] { 414, 664, 665 };
+            noDiff = new ushort[] { 414, 664, 665, 744 };
             alolan = new Dictionary<ushort, byte>()
             {
                 {19, 1}, {20, 1}, {26, 1}, {27, 1}, {28, 1}, {37, 1}, {38, 1}, {50, 1}, {51, 1},
@@ -302,7 +302,7 @@ namespace MonCollection
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
-            if (gv == GameVersion.Unknown || gv == GameVersion.HOME)
+            if (gv == GameVersion.HOME)
                 gv = GameVersion.SH;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
@@ -492,24 +492,24 @@ namespace MonCollection
             mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
                 mon.Form = (byte)(mon.Form / 7);
-            mon.CurrentLevel = data.Level;
+            mon.CurrentLevel = (byte)data.Level;
             if (gameDict.TryGetValue(data.Game, out SaveInfo val))
-                mon.Version = (int)val.version;
-            if (mon.Version == (int)GameVersion.HOME)
+                mon.Version = val.version;
+            if (mon.Version == GameVersion.HOME)
             {
                 switch (data.Gen)
                 {
                     case 7:
-                        mon.Version = (byte)GameVersion.GE;
+                        mon.Version = GameVersion.GE;
                         break;
                     case 8:
-                        mon.Version = (byte)GameVersion.SH;
+                        mon.Version = GameVersion.SH;
                         break;
                     case 9:
-                        mon.Version = (byte)GameVersion.VL;
+                        mon.Version = GameVersion.VL;
                         break;
                     default:
-                        mon.Version = (byte)GameVersion.SH;
+                        mon.Version = GameVersion.SH;
                         break;
                 }
             }
@@ -947,11 +947,6 @@ namespace MonCollection
             string ext = "";
             switch (version)
             {
-                case GameVersion.Unknown:
-                    game = "icons";
-                    ext = ".png";
-                    shiny = false; //Shiny not visible
-                    break;
                 case GameVersion.RD:
                 case GameVersion.GN:
                     game = "rb";
@@ -1571,7 +1566,7 @@ namespace MonCollection
 
         private bool GetGameMons(GameVersion version, int species)
         {
-            if (version == GameVersion.Unknown || version == GameVersion.HOME)
+            if (version == GameVersion.HOME)
                 return monInGame[new Tuple<GameVersion, int>(GameVersion.HOME, species)];
             else
                 return monInGame[new Tuple<GameVersion, int>(version, species)];
@@ -2146,8 +2141,8 @@ namespace MonCollection
 
                         pkmn.Species = mon.Species;
                         pkmn.Form = mon.AltForm;
-                        pkmn.CurrentLevel = mon.Level;
-                        pkmn.Version = (int)gv;
+                        pkmn.CurrentLevel = (byte)mon.Level;
+                        pkmn.Version = gv;
 
                         legal = new LegalityAnalysis(pkmn, sf.Personal);
                         LegalMoveSource.ReloadMoves(legal);
@@ -2234,8 +2229,8 @@ namespace MonCollection
 
                 pkmn.Species = mon.Species;
                 pkmn.Form = mon.AltForm;
-                pkmn.CurrentLevel = mon.Level;
-                pkmn.Version = (int)gv;
+                pkmn.CurrentLevel = (byte)mon.Level;
+                pkmn.Version = gv;
 
                 legal = new LegalityAnalysis(pkmn, sf.Personal);
                 LegalMoveSource.ReloadMoves(legal);

@@ -113,7 +113,7 @@ namespace MonCollection
         {
             MonData mon = PkmDB[ind];
             gameDict.TryGetValue(game, out SaveInfo si);
-            if (si.version == GameVersion.Unknown || si.version == GameVersion.HOME)
+            if (si.version == GameVersion.HOME)
                 si.version = GameVersion.SH;
             SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
@@ -352,9 +352,9 @@ namespace MonCollection
             mon.Form = data.AltForm;
             if (mon.Species == 869) //Alcremie
                 mon.Form = (byte)(mon.Form / 7);
-            mon.CurrentLevel = data.Level;
+            mon.CurrentLevel = (byte)data.Level;
             if (gameDict.TryGetValue(data.Game, out SaveInfo val))
-                mon.Version = (int)val.version;
+                mon.Version = val.version;
             return mon;
         }
 
