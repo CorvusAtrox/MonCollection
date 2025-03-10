@@ -129,7 +129,7 @@ namespace MonCollection
             List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
             PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
 
-            comboBoxSpecies.Text = PkmListSorted[nationalToSv(mon.Species)].Text;
+            comboBoxSpecies.Text = PkmListSorted[mon.Species].Text;
 
             bool gd = true;
             bool nd = false;

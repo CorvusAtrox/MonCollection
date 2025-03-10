@@ -42,6 +42,7 @@
             buttonSetCategory = new System.Windows.Forms.Button();
             buttonSave = new System.Windows.Forms.Button();
             listBoxRelearn = new System.Windows.Forms.ListBox();
+            comboBoxMove5 = new System.Windows.Forms.ComboBox();
             SuspendLayout();
             // 
             // button1
@@ -57,19 +58,18 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new System.Drawing.Point(207, 251);
+            buttonAdd.Location = new System.Drawing.Point(207, 281);
             buttonAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new System.Drawing.Size(100, 35);
             buttonAdd.TabIndex = 4;
             buttonAdd.Text = "Add";
             buttonAdd.UseVisualStyleBackColor = true;
-            buttonAdd.Visible = false;
             buttonAdd.Click += buttonAdd_Click;
             // 
             // buttonRemove
             // 
-            buttonRemove.Location = new System.Drawing.Point(355, 251);
+            buttonRemove.Location = new System.Drawing.Point(355, 281);
             buttonRemove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             buttonRemove.Name = "buttonRemove";
             buttonRemove.Size = new System.Drawing.Size(100, 35);
@@ -139,7 +139,7 @@
             // 
             labelMoves.AutoSize = true;
             labelMoves.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelMoves.ForeColor = System.Drawing.Color.Black;
             labelMoves.Location = new System.Drawing.Point(14, 88);
             labelMoves.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -166,7 +166,7 @@
             // 
             labelCategory.AutoSize = true;
             labelCategory.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelCategory.ForeColor = System.Drawing.Color.Black;
             labelCategory.Location = new System.Drawing.Point(10, 32);
             labelCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -201,7 +201,6 @@
             // 
             listBoxRelearn.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             listBoxRelearn.FormattingEnabled = true;
-            listBoxRelearn.ItemHeight = 20;
             listBoxRelearn.Location = new System.Drawing.Point(207, 115);
             listBoxRelearn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             listBoxRelearn.MultiColumn = true;
@@ -210,12 +209,27 @@
             listBoxRelearn.Sorted = true;
             listBoxRelearn.TabIndex = 186;
             // 
+            // comboBoxMove5
+            // 
+            comboBoxMove5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            comboBoxMove5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            comboBoxMove5.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
+            comboBoxMove5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            comboBoxMove5.ForeColor = System.Drawing.Color.Black;
+            comboBoxMove5.FormattingEnabled = true;
+            comboBoxMove5.Location = new System.Drawing.Point(249, 248);
+            comboBoxMove5.Margin = new System.Windows.Forms.Padding(0);
+            comboBoxMove5.Name = "comboBoxMove5";
+            comboBoxMove5.Size = new System.Drawing.Size(153, 28);
+            comboBoxMove5.TabIndex = 187;
+            // 
             // FormMovepools
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
             ClientSize = new System.Drawing.Size(479, 362);
+            Controls.Add(comboBoxMove5);
             Controls.Add(listBoxRelearn);
             Controls.Add(buttonSave);
             Controls.Add(buttonSetCategory);
@@ -251,5 +265,6 @@
         private System.Windows.Forms.Button buttonSetCategory;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.ListBox listBoxRelearn;
+        private System.Windows.Forms.ComboBox comboBoxMove5;
     }
 }

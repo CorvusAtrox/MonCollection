@@ -42,7 +42,7 @@ namespace MonCollection
                 comboBoxCategory.Items.Add(entry.Key);
             }
 
-            moveBoxes = new[] { comboBoxMove1, comboBoxMove2, comboBoxMove3, comboBoxMove4 };
+            moveBoxes = new[] { comboBoxMove1, comboBoxMove2, comboBoxMove3, comboBoxMove4, comboBoxMove5 };
 
             foreach (var cb in moveBoxes)
             {
@@ -63,10 +63,16 @@ namespace MonCollection
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            if (movepools[comboBoxCategory.Text].special == null)
+                movepools[comboBoxCategory.Text].special = new List<int>();
+            movepools[comboBoxCategory.Text].special.Add((int)comboBoxMove5.SelectedValue);
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
+            if (movepools[comboBoxCategory.Text].special == null)
+                movepools[comboBoxCategory.Text].special = new List<int>();
+            movepools[comboBoxCategory.Text].special.Remove((int)comboBoxMove5.SelectedValue);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)

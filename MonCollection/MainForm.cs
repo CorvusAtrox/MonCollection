@@ -47,7 +47,7 @@ namespace MonCollection
         private const int RES_MIN = 6;
         private int maxIndex = 0;
 
-        private const int numPokemon = 1010;
+        private const int numPokemon = 1025;
 
         private const int SV_PRIORITY = 1;
         private const int PLA_PRIORITY = 2;
@@ -114,7 +114,7 @@ namespace MonCollection
             InitializeComponent();
             InitializeGameDict();
             InitializeMonLists();
-            InitializeStrings("en", GameVersion.SH, "blank");
+            InitializeStrings("en", GameVersion.SV, "blank");
             InitializeBinding();
             InitializePkxBoxes();
             PopulateFilteredDataSources();
@@ -199,7 +199,7 @@ namespace MonCollection
                                          396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 407, 415,
                                          417, 418, 419, 424, 443, 444, 445, 449, 450, 453, 454, 456,
                                          457, 459, 460, 461, 464, 465, 473, 521, 592, 593, 668 };
-            noDiff = new ushort[] { 414, 664, 665, 744 };
+            noDiff = new ushort[] { 414, 658, 664, 665, 744 };
             alolan = new Dictionary<ushort, byte>()
             {
                 {19, 1}, {20, 1}, {26, 1}, {27, 1}, {28, 1}, {37, 1}, {38, 1}, {50, 1}, {51, 1},
@@ -303,20 +303,20 @@ namespace MonCollection
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
             if (gv == GameVersion.HOME)
-                gv = GameVersion.SH;
+                gv = GameVersion.VL;
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
             //PKMConverter.SetPrimaryTrainer(ver);
-            GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources);
+            GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources, true);
 
             // Update Legality Strings
             Task.Run(() =>
-            {
-                var lang = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.Substring(0, 2);
-                LocalizationUtil.SetLocalization(typeof(LegalityCheckStrings), lang);
-                LocalizationUtil.SetLocalization(typeof(MessageStrings), lang);
-                RibbonStrings.ResetDictionary(GameInfo.Strings.ribbons);
-            });
+                {
+                    var lang = Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName.Substring(0, 2);
+                    LocalizationUtil.SetLocalization(typeof(LegalityCheckStrings), lang);
+                    LocalizationUtil.SetLocalization(typeof(MessageStrings), lang);
+                    RibbonStrings.ResetDictionary(GameInfo.Strings.ribbons);
+                });
 
             // Update Legality Analysis strings
             /*LegalityAnalysis.MoveStrings = GameInfo.Strings.movelist;
@@ -838,7 +838,7 @@ namespace MonCollection
             SetShiny(pk.Shiny);
             if (pk.PKRS_Infected)
             {
-                pictureBoxPkrs.Visible = true;
+                pictureBoxPkrs.Visible = comboBoxPkrs.Visible;
                 if (pk.PKRS_Cured)
                 {
                     comboBoxPkrs.SelectedIndex = 2;
@@ -856,12 +856,12 @@ namespace MonCollection
                 comboBoxPkrs.SelectedIndex = 0;
             }
 
-            if (pk.gMax)
+            if (pk.gMax && (pk.Game.Contains("HOME") || pk.Game.Contains("Sword") || pk.Game.Contains("Shield")))
                 pictureBoxGMax.Image = RetrieveImage("Resources/img/gMax.png");
             else
                 pictureBoxGMax.Image = null;
             textBoxDynaLv.Text = pk.dynaLevel.ToString();
-            if (pk.alpha)
+            if (pk.alpha && (pk.Game.Contains("HOME") || pk.Game.Contains("Arceus")))
                 pictureBoxAlpha.Image = RetrieveImage("Resources/img/alpha.png");
             else
                 pictureBoxAlpha.Image = null;
@@ -2762,6 +2762,19 @@ namespace MonCollection
                 if (PkmData[i].movepools != null)
                 {
                     PkmData[i].movepools = PkmData[i].movepools.OrderByDescending(i => ord.IndexOf(i.Key)).ToDictionary(d => d.Key, d => d.Value);
+                    if (PkmData[i].movepools.ContainsKey("SWSH") && !PkmData[i].availableVersions.Contains("SWSH"))
+                        PkmData[i].availableVersions.Add("SWSH");
+                    if (PkmData[i].movepools.ContainsKey("SWSH") && PkmData[i].movepools.ContainsKey("Bank"))
+                        PkmData[i].movepools["Bank"] = PkmData[i].movepools["SWSH"];
+                    foreach (KeyValuePair<string, Movepools> m in PkmData[i].movepools)
+                    {
+                        if (m.Value.special != null)
+                            m.Value.special.Sort();
+                    }
+                }
+                if (PkmData[i].availableVersions != null)
+                {
+                    PkmData[i].availableVersions = PkmData[i].availableVersions.OrderBy(i => ord.IndexOf(i)).Distinct().ToList();
                 }
             }
         }
@@ -2992,9 +3005,7 @@ namespace MonCollection
         {
             bool t = true;
 
-            string[] noTransfer = {
-                "Rejuvenation", "Pink Meteor"
-            };
+            string[] noTransfer = { };
 
             foreach (string nt in noTransfer)
             {
@@ -3038,7 +3049,7 @@ namespace MonCollection
                             dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(monData[index].Species) ||
                             dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(monData[index].Species)) &&
                             !(monData[index].Species == 290 && monData[index].Origin == "Sinnoh (BDSP)") &&
-                            !isHisuianForm(monData[index]))
+                            !isHisuianForm(monData[index]) && !isPaldeanForm(monData[index]))
                         {
                             outHome = true;
                         }
@@ -3050,7 +3061,7 @@ namespace MonCollection
                              monData[index].Species != 355 &&
                              !(monData[index].Species == 290 && monData[index].Origin != "Sinnoh (BDSP)") &&
                              !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)) &&
-                            !isHatPikachu(monData[index]) && !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]))
+                            !isHatPikachu(monData[index]) && !isAlolanForm(monData[index]) && !isGalarianForm(monData[index]) && !isHisuianForm(monData[index]) && !isPaldeanForm(monData[index]))
                         {
                             outHome = true;
                         }
@@ -3064,6 +3075,17 @@ namespace MonCollection
                             (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
                             !isGalarianForm(monData[index]) &&
                             (isHisuianForm(monData[index]) || !hasHisuianForm(monData[index]) || monData[index].Species == 215))
+                        {
+                            outHome = true;
+                        }
+                    }
+                    else if (vers == GameVersion.SL || vers == GameVersion.VL)
+                    {
+                        if ((dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(monData[index].Species) ||
+                             dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(monData[index].Species) ||
+                             dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(monData[index].Species) ||
+                             dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)) &&
+                             !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)))
                         {
                             outHome = true;
                         }
@@ -3153,6 +3175,7 @@ namespace MonCollection
                     if ((dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Dexes["Sinnoh"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.BrilliantDiamondShiningPearlDex].Foreign.Contains(monData[index].Species)) &&
                          (monData[index].Species != 290 && monData[index].Species != 355) &&
+                         !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)) &&
                         !isHatPikachu(monData[index]) &&
                         !isAlolanForm(monData[index]) &&
                         !isGalarianForm(monData[index]) &&
@@ -3187,6 +3210,7 @@ namespace MonCollection
                 {
                     if ((dexes[(int)Dexes.LegendsArceusDex].Dexes["Hisui"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.LegendsArceusDex].Foreign.Contains(monData[index].Species)) &&
+                         !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 133)) &&
                         !isHatPikachu(monData[index]) &&
                         (!isAlolanForm(monData[index]) || monData[index].Species == 37 || monData[index].Species == 38) &&
                         !isGalarianForm(monData[index]) &&
@@ -3222,7 +3246,8 @@ namespace MonCollection
                     if ((dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(monData[index].Species) ||
-                         dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)))
+                         dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)) &&
+                         !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)))
                     {
                         int num = 0;
                         float spec = 0;
@@ -3321,7 +3346,8 @@ namespace MonCollection
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Isle of Armor"].Contains(hm.Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Dexes["Crown Tundra"].Contains(hm.Species) ||
                         dexes[(int)Dexes.SwordShieldDex].Foreign.Contains(hm.Species)) &&
-                        !isHisuianForm(hm))
+                        !isHisuianForm(hm) &&
+                        !isPaldeanForm(hm))
                 {
                     swsh++;
                 }
@@ -3331,7 +3357,9 @@ namespace MonCollection
                     !isHatPikachu(hm) &&
                     !isAlolanForm(hm) &&
                     !isGalarianForm(hm) &&
-                    !isHisuianForm(hm))
+                    !isHisuianForm(hm) &&
+                    !isPaldeanForm(hm) &&
+                    !(hm.gMax && (hm.Species == 25 || hm.Species == 52 || hm.Species == 133)))
                 {
                     bdsp++;
                 }
@@ -3341,7 +3369,9 @@ namespace MonCollection
                     !isHatPikachu(hm) &&
                     (!isAlolanForm(hm) || hm.Species == 37 || hm.Species == 38) &&
                     !isGalarianForm(hm) &&
-                    (isHisuianForm(hm) || !hasHisuianForm(hm) || hm.Species == 215))
+                    (isHisuianForm(hm) || !hasHisuianForm(hm) || hm.Species == 215) &&
+                    !isPaldeanForm(hm) &&
+                    !(hm.gMax && (hm.Species == 25 || hm.Species == 133)))
                 {
                     pla++;
                 }
@@ -3349,7 +3379,8 @@ namespace MonCollection
                 if (dexes[(int)Dexes.ScarletVioletDex].Dexes["Paldea"].Contains(hm.Species) ||
                     dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(hm.Species) ||
                     dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(hm.Species) ||
-                    dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species))
+                    dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(hm.Species) &&
+                    !(hm.gMax && (hm.Species == 25 || hm.Species == 52 || hm.Species == 133)))
                 {
                     sv++;
                 }
