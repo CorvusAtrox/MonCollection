@@ -16,6 +16,7 @@ using Newtonsoft.Json.Linq;
 using PKHeX.Core;
 using PKHeX.WinForms;
 using TrueRandomGenerator;
+using System.Text;
 
 namespace MonCollection
 {
@@ -42,6 +43,7 @@ namespace MonCollection
 
         private List<ComboItem> PkmListAny;
         private Dictionary<Tuple<GameVersion, int>, bool> monInGame;
+        private string currentGame;
 
         private const int RES_MAX = 30;
         private const int RES_MIN = 6;
@@ -114,7 +116,7 @@ namespace MonCollection
             InitializeComponent();
             InitializeGameDict();
             InitializeMonLists();
-            InitializeStrings("en", GameVersion.SV, "blank");
+            InitializeStrings("en", GameVersion.HOME, "blank");
             InitializeBinding();
             InitializePkxBoxes();
             PopulateFilteredDataSources();
@@ -302,12 +304,20 @@ namespace MonCollection
 
         private void InitializeStrings(string spr, GameVersion gv, string trainer)
         {
+            bool isHome = false;
             if (gv == GameVersion.HOME)
+            {
                 gv = GameVersion.VL;
+                isHome = true;
+            }
+                
             GameInfo.Strings = GameInfo.GetStrings(spr);
             ver = SaveUtil.GetBlankSAV(gv, trainer);
             //PKMConverter.SetPrimaryTrainer(ver);
-            GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources, true);
+            if (isHome || gv == GameVersion.GO)
+                GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources, true);
+            else
+                GameInfo.FilteredSources = new FilteredGameDataSource(ver, GameInfo.Sources);
 
             // Update Legality Strings
             Task.Run(() =>
@@ -390,13 +400,17 @@ namespace MonCollection
             foreach (var cb in moveBoxes)
                 cb.DataSource = new BindingSource(source.Moves, null);
 
-            comboBoxGame.Items.Clear();
-            foreach (var entry in gameDict)
-                comboBoxGame.Items.Add(entry.Key.ToString());
+            if (comboBoxGame.Items.Count == 0)
+            {
+                foreach (var entry in gameDict)
+                    comboBoxGame.Items.Add(entry.Key.ToString());
+            }
 
-            comboBoxOrigin.Items.Clear();
-            foreach (var entry in regionDict)
-                comboBoxOrigin.Items.Add(entry.Key.ToString());
+            if (comboBoxOrigin.Items.Count == 0)
+            {
+                foreach (var entry in regionDict)
+                    comboBoxOrigin.Items.Add(entry.Key.ToString());
+            }
 
             comboBoxTeraType.InitializeBinding();
             var types = GameInfo.Strings.types;
@@ -408,7 +422,8 @@ namespace MonCollection
         {
             if (pk == null)
                 return false;
-            SetVersion(pk.Game);
+            if (currentGame != pk.Game)
+                SetVersion(pk.Game);
             PopulateFields(pk);
             return true;
         }
@@ -419,14 +434,12 @@ namespace MonCollection
                 identifier = "";
 
             if (!gameDict.TryGetValue(identifier, out SaveInfo info))
-                InitializeStrings("en", GameVersion.VL, "blank");
-            else if (info.version == GameVersion.HOME)
-                InitializeStrings(info.language, GameVersion.SV, GetTrainer(identifier));
+                InitializeStrings("en", GameVersion.HOME, "blank");
             else
                 InitializeStrings(info.language, info.version, GetTrainer(identifier));
 
             PopulateFilteredDataSources();
-
+            currentGame = identifier;
         }
 
         private int GameIndex(string identifier)
@@ -1753,7 +1766,8 @@ namespace MonCollection
             mon.SPE = int.Parse(textBoxSpeed.Text);
             mon.dynaLevel = int.Parse(textBoxDynaLv.Text);
             mon.gMax = (pictureBoxGMax.Image != null);
-            mon.alpha = (pictureBoxAlpha.Image != null);
+            if (mon.Game.Contains("HOME") || mon.Game.Contains("Arceus"))
+                mon.alpha = (pictureBoxAlpha.Image != null);
             if (comboBoxTeraType.SelectedValue != null)
                 mon.teraType = (byte)((int)comboBoxTeraType.SelectedValue);
             if (comboBoxBalls.SelectedValue != null)
@@ -2769,7 +2783,11 @@ namespace MonCollection
                     foreach (KeyValuePair<string, Movepools> m in PkmData[i].movepools)
                     {
                         if (m.Value.special != null)
+                        {
                             m.Value.special.Sort();
+                            m.Value.special = m.Value.special.Distinct().ToList<int>();
+                        }
+
                     }
                 }
                 if (PkmData[i].availableVersions != null)
@@ -3085,7 +3103,7 @@ namespace MonCollection
                              dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(monData[index].Species) ||
                              dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)) &&
-                             !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)))
+                             !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133 || monData[index].Species == 884)))
                         {
                             outHome = true;
                         }
@@ -3247,7 +3265,7 @@ namespace MonCollection
                          dexes[(int)Dexes.ScarletVioletDex].Dexes["Kitakami"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.ScarletVioletDex].Dexes["Blueberry"].Contains(monData[index].Species) ||
                          dexes[(int)Dexes.ScarletVioletDex].Foreign.Contains(monData[index].Species)) &&
-                         !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133)))
+                         !(monData[index].gMax && (monData[index].Species == 25 || monData[index].Species == 52 || monData[index].Species == 133 || monData[index].Species == 884)))
                     {
                         int num = 0;
                         float spec = 0;
@@ -3410,5 +3428,34 @@ namespace MonCollection
                 spForm += "-" + (PkmData[slotSelected].AltForm / 7).ToString();
             MessageBox.Show(String.Format("{0} ({1}, {2}) -> [{3}]", PkmData[slotSelected].Nickname, spForm, PkmData[slotSelected].OT, idealTransfer(PkmData, slotSelected)));
         }
+
+        private void homeAccessOnlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<string> tempList = new List<string> { };
+            List<string> versionList = new List<string> { 
+                "HOME", "Let's Go Pikachu", "Let's Go Eevee", "Sword", "Shield",
+                "Brilliant Diamond", "Shining Pearl", "Legends Arceus",
+                "Scarlet", "Violet", "Legends Z-A"
+            };
+            foreach (string game in filterGames)
+            {
+                foreach(string v in versionList)
+                {
+                    if (game.Contains(v))
+                        tempList.Add(game);
+                }
+            }
+            filterGames = tempList;
+            LoadDatabase();
+        }
+
+        private void paldeaDexEligibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterOrigins = new List<string> { "Paldea (SV)" };
+            List<bool> bl = new List<bool> { false, true, false };
+            setDexOrder((int)Dexes.ScarletVioletDex, VisibleSpecies.Native, bl);
+            LoadDatabase();
+        }
+        
     }
 }

@@ -121,6 +121,8 @@ namespace MonCollection
             speciesToolStripMenuItem = new ToolStripMenuItem();
             levelToolStripMenuItem = new ToolStripMenuItem();
             presetsToolStripMenuItem = new ToolStripMenuItem();
+            paldeaDexEligibleToolStripMenuItem = new ToolStripMenuItem();
+            hOMEToolStripMenuItem = new ToolStripMenuItem();
             textBoxHP = new TextBox();
             textBoxAttack = new TextBox();
             textBoxDefense = new TextBox();
@@ -177,7 +179,6 @@ namespace MonCollection
             pictureBoxAlpha = new PictureBox();
             buttonIdealTransfer = new Button();
             comboBoxTeraType = new ComboBox();
-            homeSwShToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBall).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIcon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bpkx30).BeginInit();
@@ -241,7 +242,7 @@ namespace MonCollection
             // 
             labelNickname.AutoSize = true;
             labelNickname.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
-            labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelNickname.ForeColor = System.Drawing.Color.White;
             labelNickname.Location = new System.Drawing.Point(235, 57);
             labelNickname.Margin = new Padding(5, 0, 5, 0);
@@ -254,7 +255,7 @@ namespace MonCollection
             // 
             labelBall.AutoSize = true;
             labelBall.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
-            labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelBall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelBall.ForeColor = System.Drawing.Color.White;
             labelBall.Location = new System.Drawing.Point(41, 57);
             labelBall.Margin = new Padding(5, 0, 5, 0);
@@ -303,7 +304,7 @@ namespace MonCollection
             // 
             labelSpecies.AutoSize = true;
             labelSpecies.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelSpecies.ForeColor = System.Drawing.Color.Black;
             labelSpecies.Location = new System.Drawing.Point(101, 152);
             labelSpecies.Margin = new Padding(5, 0, 5, 0);
@@ -326,7 +327,7 @@ namespace MonCollection
             // 
             labelLevel.AutoSize = true;
             labelLevel.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
-            labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelLevel.ForeColor = System.Drawing.Color.White;
             labelLevel.Location = new System.Drawing.Point(421, 57);
             labelLevel.Margin = new Padding(5, 0, 5, 0);
@@ -350,7 +351,7 @@ namespace MonCollection
             // 
             labelGender.AutoSize = true;
             labelGender.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
-            labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             labelGender.ForeColor = System.Drawing.Color.White;
             labelGender.Location = new System.Drawing.Point(504, 57);
             labelGender.Margin = new Padding(5, 0, 5, 0);
@@ -377,7 +378,7 @@ namespace MonCollection
             // 
             labelLanguage.AutoSize = true;
             labelLanguage.BackColor = System.Drawing.Color.FromArgb(162, 132, 218);
-            labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelLanguage.ForeColor = System.Drawing.Color.White;
             labelLanguage.Location = new System.Drawing.Point(529, 57);
             labelLanguage.Margin = new Padding(5, 0, 5, 0);
@@ -403,7 +404,7 @@ namespace MonCollection
             // 
             labelAbility.AutoSize = true;
             labelAbility.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelAbility.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelAbility.ForeColor = System.Drawing.Color.Black;
             labelAbility.Location = new System.Drawing.Point(9, 191);
             labelAbility.Margin = new Padding(5, 0, 5, 0);
@@ -430,7 +431,7 @@ namespace MonCollection
             // 
             labelNature.AutoSize = true;
             labelNature.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelNature.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelNature.ForeColor = System.Drawing.Color.Black;
             labelNature.Location = new System.Drawing.Point(9, 223);
             labelNature.Margin = new Padding(5, 0, 5, 0);
@@ -458,7 +459,7 @@ namespace MonCollection
             // 
             labelMoves.AutoSize = true;
             labelMoves.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelMoves.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelMoves.ForeColor = System.Drawing.Color.Black;
             labelMoves.Location = new System.Drawing.Point(511, 409);
             labelMoves.Margin = new Padding(5, 0, 5, 0);
@@ -927,7 +928,7 @@ namespace MonCollection
             // 
             labelHP.AutoSize = true;
             labelHP.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelHP.ForeColor = System.Drawing.Color.Black;
             labelHP.Location = new System.Drawing.Point(9, 327);
             labelHP.Margin = new Padding(5, 0, 5, 0);
@@ -940,7 +941,7 @@ namespace MonCollection
             // 
             labelAttack.AutoSize = true;
             labelAttack.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelAttack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelAttack.ForeColor = System.Drawing.Color.Black;
             labelAttack.Location = new System.Drawing.Point(9, 367);
             labelAttack.Margin = new Padding(5, 0, 5, 0);
@@ -953,7 +954,7 @@ namespace MonCollection
             // 
             labelDefense.AutoSize = true;
             labelDefense.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelDefense.ForeColor = System.Drawing.Color.Black;
             labelDefense.Location = new System.Drawing.Point(9, 407);
             labelDefense.Margin = new Padding(5, 0, 5, 0);
@@ -966,7 +967,7 @@ namespace MonCollection
             // 
             labelSpAtk.AutoSize = true;
             labelSpAtk.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpAtk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelSpAtk.ForeColor = System.Drawing.Color.Black;
             labelSpAtk.Location = new System.Drawing.Point(9, 447);
             labelSpAtk.Margin = new Padding(5, 0, 5, 0);
@@ -979,7 +980,7 @@ namespace MonCollection
             // 
             labelSpDef.AutoSize = true;
             labelSpDef.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpDef.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelSpDef.ForeColor = System.Drawing.Color.Black;
             labelSpDef.Location = new System.Drawing.Point(8, 487);
             labelSpDef.Margin = new Padding(5, 0, 5, 0);
@@ -992,7 +993,7 @@ namespace MonCollection
             // 
             labelSpeed.AutoSize = true;
             labelSpeed.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelSpeed.ForeColor = System.Drawing.Color.Black;
             labelSpeed.Location = new System.Drawing.Point(8, 527);
             labelSpeed.Margin = new Padding(5, 0, 5, 0);
@@ -1005,7 +1006,7 @@ namespace MonCollection
             // 
             labelOT.AutoSize = true;
             labelOT.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelOT.ForeColor = System.Drawing.Color.Black;
             labelOT.Location = new System.Drawing.Point(453, 589);
             labelOT.Margin = new Padding(5, 0, 5, 0);
@@ -1029,7 +1030,7 @@ namespace MonCollection
             // 
             labelGame.AutoSize = true;
             labelGame.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelGame.ForeColor = System.Drawing.Color.Black;
             labelGame.Location = new System.Drawing.Point(453, 667);
             labelGame.Margin = new Padding(5, 0, 5, 0);
@@ -1261,10 +1262,24 @@ namespace MonCollection
             // 
             // presetsToolStripMenuItem
             // 
-            presetsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { homeSwShToolStripMenuItem });
+            presetsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { paldeaDexEligibleToolStripMenuItem, hOMEToolStripMenuItem });
             presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
             presetsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             presetsToolStripMenuItem.Text = "Presets";
+            // 
+            // paldeaDexEligibleToolStripMenuItem
+            // 
+            paldeaDexEligibleToolStripMenuItem.Name = "paldeaDexEligibleToolStripMenuItem";
+            paldeaDexEligibleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            paldeaDexEligibleToolStripMenuItem.Text = "Paldea Dex Eligible";
+            paldeaDexEligibleToolStripMenuItem.Click += paldeaDexEligibleToolStripMenuItem_Click;
+            // 
+            // hOMEToolStripMenuItem
+            // 
+            hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
+            hOMEToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            hOMEToolStripMenuItem.Text = "HOME Accessible";
+            hOMEToolStripMenuItem.Click += homeAccessOnlyToolStripMenuItem_Click;
             // 
             // textBoxHP
             // 
@@ -1354,7 +1369,7 @@ namespace MonCollection
             // 
             labelID.AutoSize = true;
             labelID.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelID.ForeColor = System.Drawing.Color.Black;
             labelID.Location = new System.Drawing.Point(627, 592);
             labelID.Margin = new Padding(5, 0, 5, 0);
@@ -1454,7 +1469,7 @@ namespace MonCollection
             // 
             labelRibbons.AutoSize = true;
             labelRibbons.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelRibbons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelRibbons.ForeColor = System.Drawing.Color.Black;
             labelRibbons.Location = new System.Drawing.Point(288, 287);
             labelRibbons.Margin = new Padding(5, 0, 5, 0);
@@ -1538,7 +1553,7 @@ namespace MonCollection
             // 
             labelGimmick.AutoSize = true;
             labelGimmick.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelGimmick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelGimmick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelGimmick.ForeColor = System.Drawing.Color.Black;
             labelGimmick.Location = new System.Drawing.Point(235, 191);
             labelGimmick.Margin = new Padding(5, 0, 5, 0);
@@ -1759,7 +1774,7 @@ namespace MonCollection
             // 
             labelOrigin.AutoSize = true;
             labelOrigin.BackColor = System.Drawing.Color.FromArgb(223, 199, 251);
-            labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            labelOrigin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             labelOrigin.ForeColor = System.Drawing.Color.Black;
             labelOrigin.Location = new System.Drawing.Point(453, 631);
             labelOrigin.Margin = new Padding(5, 0, 5, 0);
@@ -1881,13 +1896,6 @@ namespace MonCollection
             comboBoxTeraType.Name = "comboBoxTeraType";
             comboBoxTeraType.Size = new System.Drawing.Size(95, 28);
             comboBoxTeraType.TabIndex = 203;
-            // 
-            // homeSwShToolStripMenuItem
-            // 
-            homeSwShToolStripMenuItem.Name = "homeSwShToolStripMenuItem";
-            homeSwShToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            homeSwShToolStripMenuItem.Text = "Home->SwSh";
-            homeSwShToolStripMenuItem.Click += homeSwShToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -2246,7 +2254,8 @@ namespace MonCollection
         private PictureBox pictureBoxAlpha;
         private Button buttonIdealTransfer;
         private ComboBox comboBoxTeraType;
-        private ToolStripMenuItem homeSwShToolStripMenuItem;
+        private ToolStripMenuItem paldeaDexEligibleToolStripMenuItem;
+        private ToolStripMenuItem hOMEToolStripMenuItem;
     }
 }
 

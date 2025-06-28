@@ -114,7 +114,7 @@ namespace MonCollection
 
                 relearn = new List<ushort>();
 
-                if (gv != GameVersion.Any)
+                if (gv != GameVersion.Any && gv != GameVersion.GE)
                 {
                     SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
 
