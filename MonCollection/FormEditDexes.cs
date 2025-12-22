@@ -96,7 +96,7 @@ namespace MonCollection
             }
 
             textBoxSpecies.Text = string.Join(",", species);
-            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.Sources.SpeciesDataSource);
             PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
             listSpecies.Items.Clear();
             int num = 1;

@@ -115,7 +115,7 @@ namespace MonCollection
             gameDict.TryGetValue(game, out SaveInfo si);
             if (si.version == GameVersion.HOME)
                 si.version = GameVersion.SH;
-            SaveFile sf = SaveUtil.GetBlankSAV(si.version, "blank");
+            SaveFile sf = BlankSaveFile.Get(si.version, "blank");
             LegalityAnalysis legal = new LegalityAnalysis(MonDataToPKM(mon), sf.Personal);
 
             //LegalMoveSource.ReloadMoves(legal);
@@ -126,7 +126,7 @@ namespace MonCollection
             labelName.Text = String.Format("Name: {0}",mon.Nickname);
             labelGame.Text = String.Format("Game: {0}",game);
 
-            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.SpeciesDataSource);
+            List<ComboItem> PkmListSorted = new List<ComboItem>(GameInfo.Sources.SpeciesDataSource);
             PkmListSorted = PkmListSorted.OrderBy(i => i.Value).ToList();
 
             comboBoxSpecies.Text = PkmListSorted[mon.Species].Text;

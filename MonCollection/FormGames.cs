@@ -14,7 +14,7 @@ namespace MonCollection
     {
 
         public Dictionary<string, SaveInfo> gameDict;
-        private string[] languages = { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2"};
+        private string[] languages = { "", "ja", "en", "fr", "it", "de", "", "es", "ko", "zh", "zh2", "es-419"};
 
         public FormGames()
         {
@@ -66,9 +66,9 @@ namespace MonCollection
         private void InitializeBindings()
         {
             comboBoxVersion.InitializeBinding();
-            comboBoxVersion.DataSource = GameInfo.VersionDataSource;
+            comboBoxVersion.DataSource = GameInfo.Sources.VersionDataSource;
             comboBoxLanguage.InitializeBinding();
-            comboBoxLanguage.DataSource = GameInfo.LanguageDataSource(7);
+            comboBoxLanguage.DataSource = GameInfo.LanguageDataSource(9,EntityContext.Gen9a);
         } 
 
         public void updateGameIni()

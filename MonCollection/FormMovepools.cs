@@ -116,7 +116,7 @@ namespace MonCollection
 
                 if (gv != GameVersion.Any && gv != GameVersion.GE)
                 {
-                    SaveFile sf = SaveUtil.GetBlankSAV(gv, "blank");
+                    SaveFile sf = BlankSaveFile.Get(gv, "blank");
 
                     PKM pkmn = new PK8();
 
@@ -166,7 +166,7 @@ namespace MonCollection
 
                     foreach (var m in mv)
                     {
-                        if (learn.GetLevelLearnMove(m) <= mon.Level && !relearn.Contains(m) && !movepools[comboBoxCategory.Text].moves.Contains(m))
+                        if ((learn.TryGetLevelLearnMove(m, out var learnLevel) && mon.Level < learnLevel) && !relearn.Contains(m) && !movepools[comboBoxCategory.Text].moves.Contains(m))
                         {
                             relearn.Add(m);
                         }
@@ -188,7 +188,7 @@ namespace MonCollection
             }
 
             listBoxRelearn.Items.Clear();
-            var moveNames = new List<ComboItem>(GameInfo.MoveDataSource);
+            var moveNames = new List<ComboItem>(GameInfo.Sources.LegalMoveDataSource);
             foreach (var r in relearn)
             {
                 if (r != 0)

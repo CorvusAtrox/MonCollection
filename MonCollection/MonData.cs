@@ -37,6 +37,7 @@ namespace MonCollection
         public bool gMax { get; set; }
         public bool alpha { get; set; }
         public byte teraType { get; set; }
+        public HomeGroup homeGroup { get; set; }
         public List<string> availableVersions { get; set; }
         public Dictionary<string,Movepools> movepools { get; set; }
     }
@@ -45,5 +46,12 @@ namespace MonCollection
     {
         public List<int> moves;
         public List<int> special;
+    }
+
+    public enum HomeGroup
+    {
+        LGPE,
+        SWSH,
+        LZA
     }
 }
